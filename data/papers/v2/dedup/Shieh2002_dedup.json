@@ -1,0 +1,992 @@
+{
+  "paper_id": "Shieh2002",
+  "pipeline_step": "intra_paper_dedup",
+  "pipeline_version": "v2",
+  "step_version": "step1_v1.0",
+  "dedup_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "dedup_prompt_v1.0",
+    "source_file": "papers/v2/cq_output/Shieh2002_ext-qw-35b_g-ge4-31b_v-der1-32b_r-qw-35b_cq_v2.json",
+    "source_pipeline_version": "v2.1"
+  },
+  "paper_metadata": {
+    "title": "Solubility of CO2 in Glassy PMMA and PS over a Wide Pressure Range: The Effect of Carbonyl Groups",
+    "first_author_lastname": "Shieh",
+    "year": 2002,
+    "journal": "Journal of Polymer Research",
+    "doi": null,
+    "keywords": [
+      "Henry's law",
+      "interaction",
+      "Langmuir sorption",
+      "power law",
+      "supercritical CO2 fluid"
+    ],
+    "polymer_systems": [
+      "PMMA",
+      "PS"
+    ],
+    "polymerization_methods": [],
+    "paper_type": "research article",
+    "paper_id": "Shieh2002",
+    "source_filename": "Solubility of CO2 in Glassy PMMA and PS over a Wide Pressure Range- The Effect of Carbonyl Groups.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 7,
+    "n_figures": 7,
+    "n_tables": 1,
+    "file_size_kb": 121.5,
+    "char_count": 26679,
+    "estimated_tokens": 6669,
+    "n_sections": 0
+  },
+  "dedup_stats": {
+    "n_input_personas": 7,
+    "n_input_cqs": 48,
+    "n_representative_cqs": 33,
+    "n_merged_groups": 9,
+    "n_singletons": 24,
+    "n_discarded": 15,
+    "reduction_rate": 0.312,
+    "archetype_breakdown": {
+      "CAUSAL": {
+        "n_input": 7,
+        "n_output": 6
+      },
+      "COMPARATIVE": {
+        "n_input": 7,
+        "n_output": 2
+      },
+      "CONDITION_FOR_PROCESS": {
+        "n_input": 5,
+        "n_output": 4
+      },
+      "ENTITY_LOOKUP": {
+        "n_input": 10,
+        "n_output": 6
+      },
+      "ENUMERATION": {
+        "n_input": 3,
+        "n_output": 2
+      },
+      "GAP_OR_LIMITATION": {
+        "n_input": 1,
+        "n_output": 1
+      },
+      "METHOD_OF_MEASUREMENT": {
+        "n_input": 5,
+        "n_output": 3
+      },
+      "MOTIVATION": {
+        "n_input": 7,
+        "n_output": 6
+      },
+      "ONTOLOGY_TRIPLE": {
+        "n_input": 3,
+        "n_output": 3
+      }
+    },
+    "parse_fallback_used": false,
+    "accounting_ok": true,
+    "grouping_ok": true,
+    "vague_answer_warnings": [
+      {
+        "id": "Shieh2002_CHAR_Q001",
+        "persona_code": "CHAR",
+        "expected_answer": "Mw = 396,000 and Mw/Mn = 3.72.",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Shieh2002_CHAR_GAP002",
+        "persona_code": "CHAR",
+        "expected_answer": "Fourier transform infrared (FTIR) spectroscopy",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Shieh2002_PROC_GAP001",
+        "persona_code": "PROC",
+        "expected_answer": "60 minutes of exposure.",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Shieh2002_ONTO_Q001",
+        "persona_code": "ONTO",
+        "expected_answer": "(PMMA, hasProperty, carbonyl groups)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Shieh2002_ONTO_Q002",
+        "persona_code": "ONTO",
+        "expected_answer": "CO2 sorption isobars",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Shieh2002_ONTO_Q003",
+        "persona_code": "ONTO",
+        "expected_answer": "A subclass of Instrument",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Shieh2002_ONTO_Q004",
+        "persona_code": "ONTO",
+        "expected_answer": "PMMA (Poly(methyl methacrylate)) and PS (Polystyrene)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Shieh2002_ONTO_GAP001",
+        "persona_code": "ONTO",
+        "expected_answer": "(polymers containing carbonyl groups, hasInteractionWith, CO2)",
+        "flags": [
+          "answer_too_short"
+        ]
+      }
+    ]
+  },
+  "execution_stats": {
+    "total_wall_time": "58s 623ms",
+    "llm_calls": [
+      {
+        "model": "deepseek-r1:32b",
+        "think": true,
+        "wall_time": "58s 619ms",
+        "prompt_tokens": 5770,
+        "generated_tokens": 1278,
+        "thinking_chars": 0
+      }
+    ]
+  },
+  "representative_questions": [
+    {
+      "id": "Shieh2002_DEDUP_001",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_SYNTH_Q001",
+      "question": "What were the weight-average molecular weight (Mw) and dispersity (Mw/Mn) of the poly(methyl methacrylate) (PMMA) used in this study?",
+      "expected_answer": "The PMMA had a Mw = 396,000 and a Mw/Mn = 3.72.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (comprehension) and provides specific values for Mw and dispersity.",
+      "merged_from": [
+        {
+          "id": "Shieh2002_CHAR_Q001",
+          "paper_id": "Shieh2002",
+          "persona_code": "CHAR",
+          "question": "What were the weight-average molecular weight (Mw) and the polydispersity index (Mw/Mn) of the PMMA used in the study?",
+          "expected_answer": "Mw = 396,000 and Mw/Mn = 3.72.",
+          "reason_discarded": "This question has the highest Bloom level (comprehension) and provides specific values for Mw and dispersity."
+        },
+        {
+          "id": "Shieh2002_CHAR_GAP001",
+          "paper_id": "Shieh2002",
+          "persona_code": "CHAR",
+          "question": "What were the weight-average molecular weight (Mw) and the polydispersity index (Mw/Mn) of the PMMA used in the sorption measurements?",
+          "expected_answer": "The PMMA had a Mw = 396,000 and a Mw/Mn = 3.72.",
+          "reason_discarded": "This question has the highest Bloom level (comprehension) and provides specific values for Mw and dispersity."
+        }
+      ],
+      "merge_reasoning": "All questions ask about the molecular weight and dispersity of PMMA used in the study."
+    },
+    {
+      "id": "Shieh2002_DEDUP_002",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_SYNTH_Q002",
+      "question": "How does the presence of carbonyl groups in PMMA affect the CO2 sorption ability compared to the phenyl groups in PS?",
+      "expected_answer": "The carbonyl groups in PMMA exhibit a much higher sorption ability than the phenyl groups in PS, leading to a higher equilibrium sorption concentration.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_003",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_SYNTH_Q004",
+      "question": "What thermal and vacuum treatment was applied to the polymer samples after the sorption experiments to ensure the removal of dissolved CO2?",
+      "expected_answer": "The samples were heated at 110 °C and vacuumed for 30 min.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) compared to CHAR_GAP001.",
+      "merged_from": [
+        {
+          "id": "Shieh2002_CHAR_Q005",
+          "paper_id": "Shieh2002",
+          "persona_code": "CHAR",
+          "question": "What post-measurement treatment was applied to the samples to ensure all dissolved CO2 was evacuated?",
+          "expected_answer": "The samples were heated at 110 °C and vacuumed for 30 min.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) compared to CHAR_GAP001."
+        }
+      ],
+      "merge_reasoning": "Both questions inquire about the post-measurement treatment for CO2 evacuation."
+    },
+    {
+      "id": "Shieh2002_DEDUP_004",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_SYNTH_GAP001",
+      "question": "How does the presence of carbonyl groups in PMMA affect the temperature required for chemisorption of CO2 compared to the phenyl groups in PS?",
+      "expected_answer": "The presence of carbonyl groups in PMMA results in a lower temperature necessary for chemisorption to occur compared to the phenyl groups in PS, due to a specific interaction that leads to a relatively low activation energy.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_005",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_SYNTH_GAP002",
+      "question": "What were the molecular weight (Mw) and dispersity (Mw/Mn) of the poly(methyl methacrylate) (PMMA) used in the sorption measurements?",
+      "expected_answer": "The PMMA had a molecular weight (Mw) of 396,000 and a dispersity (Mw/Mn) of 3.72.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_006",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_CHAR_Q004",
+      "question": "At what temperature range was the transition from physisorption to chemisorption observed for PMMA?",
+      "expected_answer": "In a temperature range of ~31 to ~37 °C.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides specific temperature range.",
+      "merged_from": [
+        {
+          "id": "Shieh2002_PROC_Q002",
+          "paper_id": "Shieh2002",
+          "persona_code": "PROC",
+          "question": "How does the temperature required for chemisorption to occur in PMMA compare to that of PS?",
+          "expected_answer": "The temperature necessary for chemisorption to occur is lower for PMMA than for PS due to the specific interaction of the carbonyl groups of PMMA with CO2.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific temperature range."
+        },
+        {
+          "id": "Shieh2002_PROC_GAP002",
+          "paper_id": "Shieh2002",
+          "persona_code": "PROC",
+          "question": "How does the temperature required for the onset of chemisorption compare between PMMA and PS?",
+          "expected_answer": "The temperature necessary for chemisorption to occur is lower for PMMA than for PS due to the specific interaction of the carbonyl groups of PMMA with CO2.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific temperature range."
+        }
+      ],
+      "merge_reasoning": "All questions ask about the temperature required for chemisorption in PMMA compared to PS."
+    },
+    {
+      "id": "Shieh2002_DEDUP_007",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_CHAR_GAP002",
+      "question": "Which analytical technique was cited in the Introduction as being used to investigate the interactions of CO2 with polymers?",
+      "expected_answer": "Fourier transform infrared (FTIR) spectroscopy",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_008",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_PROC_Q001",
+      "question": "What exposure time was required for PMMA and PS sheet samples to reach equilibrium CO2 sorption concentration?",
+      "expected_answer": "60 minutes of exposure time was required to reach equilibrium solubility for both polymers.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (application) and provides specific exposure time.",
+      "merged_from": [
+        {
+          "id": "Shieh2002_PROC_GAP001",
+          "paper_id": "Shieh2002",
+          "persona_code": "PROC",
+          "question": "What exposure time was required for PMMA and PS sheet samples to reach equilibrium CO2 solubility?",
+          "expected_answer": "60 minutes of exposure.",
+          "reason_discarded": "This question has a higher Bloom level (application) and provides specific exposure time."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the exposure time required for equilibrium CO2 sorption."
+    },
+    {
+      "id": "Shieh2002_DEDUP_009",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_PROC_Q004",
+      "question": "Why were sheet samples used for sorption measurements instead of thin films in this study?",
+      "expected_answer": "Sheet samples were used to investigate equilibrium sorption isotherms and to explore a wider pressure range (up to 340 atm), as previous studies using thin films were limited to lower pressures (up to ~30 or 100 atm) which had lower potential to drive CO2 molecules into the polymers.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_010",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_PROC_Q005",
+      "question": "What post-sorption heat treatment was applied to the samples to ensure the evacuation of dissolved CO2?",
+      "expected_answer": "Samples were heated at 110 °C and vacuumed for 30 minutes.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Experimental Section",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_011",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_COMP_Q001",
+      "question": "Which mathematical model was found to describe the CO2 sorption concentration isotherms better than the dual-mode model for PMMA and PS?",
+      "expected_answer": "Two power laws written as C = kaP^na (for above critical pressure) and C = kbP^nb (for below critical pressure).",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (analysis) and provides specific model details.",
+      "merged_from": [
+        {
+          "id": "Shieh2002_ONTO_GAP002",
+          "paper_id": "Shieh2002",
+          "persona_code": "ONTO",
+          "question": "Which specific sorption models are mentioned in the text that should be represented as subclasses of a 'SorptionModel' class?",
+          "expected_answer": "Henry's law dissolution, Langmuir sorption, and power law (Freundlich adsorption model).",
+          "reason_discarded": "This question has a higher Bloom level (analysis) and provides specific model details."
+        }
+      ],
+      "merge_reasoning": "Both questions inquire about the models used to describe CO2 sorption."
+    },
+    {
+      "id": "Shieh2002_DEDUP_012",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_COMP_Q003",
+      "question": "What is the effect of increasing temperature on the sorption intensity constant (na) in the high-pressure region for both polymers?",
+      "expected_answer": "The na increases with increasing temperature, indicating a positive apparent activation energy.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_013",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_COMP_Q004",
+      "question": "What specific feature normalization was applied to the dissolved-CO2 concentration data to facilitate the comparison between PMMA and PS?",
+      "expected_answer": "The concentration was normalized on the basis of the content of the carbonyl groups in PMMA and the content of the phenyl groups in PS (unit of cm3 CO2 (STP) per gram carbonyl group/phenyl group).",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_014",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_COMP_Q005",
+      "question": "What are the calculated negative apparent activation energies for the sorption process in the low-pressure region for PMMA and PS?",
+      "expected_answer": "PMMA: -8.7 x 10^3 J/mol; PS: -5.1 x 10^3 J/mol.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_015",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_COMP_GAP002",
+      "question": "What is the effect of the carbonyl groups in PMMA compared to the phenyl groups in PS on the sorption intensity (n) of CO2?",
+      "expected_answer": "The carbonyl groups in PMMA result in a sorption intensity (n) that is 1 to 2 times higher than that of the phenyl groups in PS for a given temperature, indicating a higher level of interaction with CO2.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Abstract",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_016",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_ONTO_Q001",
+      "question": "Which triple represents the relationship between PMMA and the functional groups that influence its CO2 sorption behavior?",
+      "expected_answer": "(PMMA, hasProperty, carbonyl groups)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Abstract",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_017",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_ONTO_Q002",
+      "question": "Which method was used to determine the physisorption transition temperature of PS?",
+      "expected_answer": "CO2 sorption isobars",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_018",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_ONTO_Q004",
+      "question": "Which Material entities are reported as the primary polymers under investigation in this study?",
+      "expected_answer": "PMMA (Poly(methyl methacrylate)) and PS (Polystyrene)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Section",
+      "is_singleton": false,
+      "why_kept": "This question is an ONTO persona with a higher Bloom level (synthesis).",
+      "merged_from": [
+        {
+          "id": "Shieh2002_COMP_GAP001",
+          "paper_id": "Shieh2002",
+          "persona_code": "COMP",
+          "question": "How does the power law model compare to the dual-mode sorption model in describing CO2 sorption concentration isotherms for PMMA and PS?",
+          "expected_answer": "The two power laws (C = kaP^na and C = kbP^nb) describe the sorption behaviors for above and below critical pressure better than the dual-mode model, as neither the Langmuir-type sorption mode nor the Henry's law dissolution mode could satisfactorily describe the behavior.",
+          "reason_discarded": "This question is an ONTO persona with a higher Bloom level (synthesis)."
+        }
+      ],
+      "merge_reasoning": "Both questions inquire about the models used to describe CO2 sorption."
+    },
+    {
+      "id": "Shieh2002_DEDUP_019",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_ONTO_Q005",
+      "question": "Which triple captures the relationship between the 'sorption intensity' and the interaction between CO2 and the polymer?",
+      "expected_answer": "(sorption intensity, isMeasureOf, interaction between CO2 and polymer)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Abstract",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_020",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_ONTO_GAP001",
+      "question": "Which triple represents the relationship between polymers containing carbonyl groups and the CO2 molecule based on the described intermolecular interaction?",
+      "expected_answer": "(polymers containing carbonyl groups, hasInteractionWith, CO2)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_021",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_STU_Q001",
+      "question": "What specific chemical groups are present in PMMA and PS that influence their CO2 sorption behavior?",
+      "expected_answer": "PMMA contains carbonyl groups and PS contains phenyl groups.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_022",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_STU_Q002",
+      "question": "Why did the researchers normalize the dissolved-CO2 concentration based on the content of carbonyl groups for PMMA and phenyl groups for PS?",
+      "expected_answer": "This normalization treatment was used to facilitate the examination of the effects of the carbonyl groups and the phenyl groups on the sorption behavior.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_023",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_STU_Q003",
+      "question": "Which equipment was used to perform the CO2 sorption measurements for the PMMA and PS samples?",
+      "expected_answer": "The measurements were performed in a supercritical extractor supplied by ISCO, model SFX 2-10.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "source_section": "Experimental Section",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (recall) and provides specific equipment details.",
+      "merged_from": [
+        {
+          "id": "Shieh2002_CHAR_Q002",
+          "paper_id": "Shieh2002",
+          "persona_code": "CHAR",
+          "question": "Which instrument and model were used to perform the CO2 sorption measurements for the glassy polymers?",
+          "expected_answer": "A supercritical extractor supplied by ISCO, model SFX 2-10.",
+          "reason_discarded": "This question has a higher Bloom level (recall) and provides specific equipment details."
+        },
+        {
+          "id": "Shieh2002_ONTO_Q003",
+          "paper_id": "Shieh2002",
+          "persona_code": "ONTO",
+          "question": "What ontology class should the 'supercritical extractor model SFX 2-10' be represented as?",
+          "expected_answer": "A subclass of Instrument",
+          "reason_discarded": "This question has a higher Bloom level (recall) and provides specific equipment details."
+        }
+      ],
+      "merge_reasoning": "All questions ask about the instrument used for CO2 sorption measurements."
+    },
+    {
+      "id": "Shieh2002_DEDUP_024",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_STU_Q004",
+      "question": "According to the study, below what temperature does physisorption occur for Polystyrene (PS) at a pressure of 204 atm?",
+      "expected_answer": "The physisorption for PS is found to be below 32 °C for a pressure of 204 atm.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_025",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_STU_Q005",
+      "question": "Why is the temperature necessary for chemisorption to occur lower for PMMA than for PS?",
+      "expected_answer": "This is due to the specific interaction of the carbonyl groups of PMMA with CO2, which results in a relatively low activation energy for chemisorption in PMMA compared to PS.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides specific reasoning.",
+      "merged_from": [
+        {
+          "id": "Shieh2002_SYNTH_Q003",
+          "paper_id": "Shieh2002",
+          "persona_code": "SYNTH",
+          "question": "Why is the temperature required for chemisorption to occur lower for PMMA than for PS?",
+          "expected_answer": "This is due to the specific interaction of the carbonyl groups of PMMA with CO2, which results in a relatively low activation energy for chemisorption.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific reasoning."
+        },
+        {
+          "id": "Shieh2002_PROC_Q003",
+          "paper_id": "Shieh2002",
+          "persona_code": "PROC",
+          "question": "How does the presence of carbonyl groups in PMMA affect the CO2 sorption concentration compared to the phenyl groups in PS?",
+          "expected_answer": "The carbonyl groups in PMMA exhibit a much higher sorption ability than the phenyl groups in PS, leading to a considerably higher equilibrium sorption concentration in PMMA.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific reasoning."
+        }
+      ],
+      "merge_reasoning": "All questions ask why the temperature for chemisorption is lower in PMMA than PS."
+    },
+    {
+      "id": "Shieh2002_DEDUP_026",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_STU_GAP002",
+      "question": "Why did the authors use power laws instead of the dual-mode sorption model or Henry's law to describe the CO2 sorption concentration isotherms?",
+      "expected_answer": "The authors found that neither the Langmuir-type sorption (part of the dual-mode model) nor the Henry's law dissolution model could satisfactorily describe the CO2 sorption behavior over the wide pressure range studied, whereas the power laws described the two distinct regions (below and above critical pressure) fairly well.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_027",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_PHD_Q001",
+      "question": "How does the sorption intensity (n) of CO2 in PMMA compare to that in PS at a given temperature?",
+      "expected_answer": "The n value for PMMA is 1 to 2 times higher than that for PS, which is attributed to the specific interaction of CO2 with the carbonyl groups in PMMA compared to the phenyl groups in PS.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "source_section": "Abstract",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (evaluation) and provides specific comparison details.",
+      "merged_from": [
+        {
+          "id": "Shieh2002_CHAR_Q003",
+          "paper_id": "Shieh2002",
+          "persona_code": "CHAR",
+          "question": "How does the sorption intensity (n) of CO2 in PMMA compare to that in PS at a given temperature?",
+          "expected_answer": "The n value for PMMA is 1 to 2 times higher than that for PS.",
+          "reason_discarded": "This question has a higher Bloom level (evaluation) and provides specific comparison details."
+        },
+        {
+          "id": "Shieh2002_STU_GAP001",
+          "paper_id": "Shieh2002",
+          "persona_code": "STU",
+          "question": "What is the effect of carbonyl groups in PMMA on the sorption of CO2 compared to the phenyl groups in PS?",
+          "expected_answer": "The carbonyl groups in PMMA exhibit a higher level of interaction and a much higher sorption ability for CO2 than the phenyl groups in PS.",
+          "reason_discarded": "This question has a higher Bloom level (evaluation) and provides specific comparison details."
+        }
+      ],
+      "merge_reasoning": "All questions compare the sorption intensity of CO2 in PMMA and PS."
+    },
+    {
+      "id": "Shieh2002_DEDUP_028",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_PHD_Q002",
+      "question": "How does the presence of carbonyl groups in PMMA affect the temperature required for chemisorption of CO2 compared to the phenyl groups in PS?",
+      "expected_answer": "The presence of carbonyl groups in PMMA results in a relatively low activation energy for chemisorption, causing chemisorption to occur at a lower temperature than in PS.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_029",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_PHD_Q003",
+      "question": "Why did the authors propose using power law equations (C = kP^n) instead of the dual-mode sorption model to describe CO2 sorption in PMMA and PS?",
+      "expected_answer": "The authors found that the dual-mode model could not satisfactorily describe the sorption behavior over the wide pressure range studied, and proposed the power law because the dissolution locations inside polymers can be considered a heterogeneous environment, consistent with Freundlich adsorption theory.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_030",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_PHD_Q004",
+      "question": "What limitation of existing literature regarding the pressure range of CO2 sorption measurements in glassy polymers does this study address?",
+      "expected_answer": "The authors note that many previously reported CO2 sorption isotherms for glassy polymers were measured in a limited pressure range between 0 and up to 30 atm (or 100 atm), whereas this study extends the range from 20 to 340 atm to investigate the applicability of the Henry law dissolution model above 30 atm.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_031",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_PHD_Q005",
+      "question": "How does the interaction between CO2 and the polymer change relative to the critical pressure (Pc)?",
+      "expected_answer": "There is a negligible interaction between CO2 and the polymer in the sorption process below the critical pressure, whereas the interaction becomes significant above the critical pressure.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Abstract",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_032",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_PHD_GAP001",
+      "question": "Why do the authors argue that the dual-mode sorption model and Henry's law dissolution model are insufficient for describing CO2 sorption in glassy polymers over a wide pressure range?",
+      "expected_answer": "The authors state that neither model is universal because the nature of the polymer and the pressure range affect the isotherms; specifically, CO2 is not an ideal gas at high pressures (especially near critical conditions), and its affinity varies considerably depending on the type of polymer.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Shieh2002_DEDUP_033",
+      "paper_id": "Shieh2002",
+      "source_id": "Shieh2002_PHD_GAP002",
+      "question": "How does the interaction between CO2 and the carbonyl groups in PMMA compare to the interaction between CO2 and the phenyl groups in PS in terms of sorption intensity and chemisorption temperature?",
+      "expected_answer": "The carbonyl groups in PMMA exhibit a higher level of interaction with CO2 than the phenyl groups of PS, resulting in a sorption intensity (n value) that is 1 to 2 times higher and a lower temperature necessary for chemisorption to occur compared to PS.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    }
+  ],
+  "discarded_questions": [
+    {
+      "id": "Shieh2002_SYNTH_Q003",
+      "paper_id": "Shieh2002",
+      "question": "Why is the temperature required for chemisorption to occur lower for PMMA than for PS?",
+      "expected_answer": "This is due to the specific interaction of the carbonyl groups of PMMA with CO2, which results in a relatively low activation energy for chemisorption.",
+      "persona_code": "SYNTH",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Shieh2002_DEDUP_025"
+    },
+    {
+      "id": "Shieh2002_CHAR_Q001",
+      "paper_id": "Shieh2002",
+      "question": "What were the weight-average molecular weight (Mw) and the polydispersity index (Mw/Mn) of the PMMA used in the study?",
+      "expected_answer": "Mw = 396,000 and Mw/Mn = 3.72.",
+      "persona_code": "CHAR",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "absorbed_into": "Shieh2002_DEDUP_001"
+    },
+    {
+      "id": "Shieh2002_CHAR_Q002",
+      "paper_id": "Shieh2002",
+      "question": "Which instrument and model were used to perform the CO2 sorption measurements for the glassy polymers?",
+      "expected_answer": "A supercritical extractor supplied by ISCO, model SFX 2-10.",
+      "persona_code": "CHAR",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "absorbed_into": "Shieh2002_DEDUP_023"
+    },
+    {
+      "id": "Shieh2002_CHAR_Q003",
+      "paper_id": "Shieh2002",
+      "question": "How does the sorption intensity (n) of CO2 in PMMA compare to that in PS at a given temperature?",
+      "expected_answer": "The n value for PMMA is 1 to 2 times higher than that for PS.",
+      "persona_code": "CHAR",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "source_section": "Abstract",
+      "absorbed_into": "Shieh2002_DEDUP_027"
+    },
+    {
+      "id": "Shieh2002_CHAR_Q005",
+      "paper_id": "Shieh2002",
+      "question": "What post-measurement treatment was applied to the samples to ensure all dissolved CO2 was evacuated?",
+      "expected_answer": "The samples were heated at 110 °C and vacuumed for 30 min.",
+      "persona_code": "CHAR",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "absorbed_into": "Shieh2002_DEDUP_003"
+    },
+    {
+      "id": "Shieh2002_CHAR_GAP001",
+      "paper_id": "Shieh2002",
+      "question": "What were the weight-average molecular weight (Mw) and the polydispersity index (Mw/Mn) of the PMMA used in the sorption measurements?",
+      "expected_answer": "The PMMA had a Mw = 396,000 and a Mw/Mn = 3.72.",
+      "persona_code": "CHAR",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "absorbed_into": "Shieh2002_DEDUP_001"
+    },
+    {
+      "id": "Shieh2002_PROC_Q002",
+      "paper_id": "Shieh2002",
+      "question": "How does the temperature required for chemisorption to occur in PMMA compare to that of PS?",
+      "expected_answer": "The temperature necessary for chemisorption to occur is lower for PMMA than for PS due to the specific interaction of the carbonyl groups of PMMA with CO2.",
+      "persona_code": "PROC",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Shieh2002_DEDUP_006"
+    },
+    {
+      "id": "Shieh2002_PROC_Q003",
+      "paper_id": "Shieh2002",
+      "question": "How does the presence of carbonyl groups in PMMA affect the CO2 sorption concentration compared to the phenyl groups in PS?",
+      "expected_answer": "The carbonyl groups in PMMA exhibit a much higher sorption ability than the phenyl groups in PS, leading to a considerably higher equilibrium sorption concentration in PMMA.",
+      "persona_code": "PROC",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Shieh2002_DEDUP_025"
+    },
+    {
+      "id": "Shieh2002_PROC_GAP001",
+      "paper_id": "Shieh2002",
+      "question": "What exposure time was required for PMMA and PS sheet samples to reach equilibrium CO2 solubility?",
+      "expected_answer": "60 minutes of exposure.",
+      "persona_code": "PROC",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Shieh2002_DEDUP_008"
+    },
+    {
+      "id": "Shieh2002_PROC_GAP002",
+      "paper_id": "Shieh2002",
+      "question": "How does the temperature required for the onset of chemisorption compare between PMMA and PS?",
+      "expected_answer": "The temperature necessary for chemisorption to occur is lower for PMMA than for PS due to the specific interaction of the carbonyl groups of PMMA with CO2.",
+      "persona_code": "PROC",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Shieh2002_DEDUP_006"
+    },
+    {
+      "id": "Shieh2002_COMP_Q002",
+      "paper_id": "Shieh2002",
+      "question": "How does the sorption intensity constant (nb) in the low-pressure region for PMMA compare to that of PS at a given temperature?",
+      "expected_answer": "The nb for PMMA is about twice as high as that for PS.",
+      "persona_code": "COMP",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "(source: Shieh2002_CHAR_Q003)"
+    },
+    {
+      "id": "Shieh2002_COMP_GAP001",
+      "paper_id": "Shieh2002",
+      "question": "How does the power law model compare to the dual-mode sorption model in describing CO2 sorption concentration isotherms for PMMA and PS?",
+      "expected_answer": "The two power laws (C = kaP^na and C = kbP^nb) describe the sorption behaviors for above and below critical pressure better than the dual-mode model, as neither the Langmuir-type sorption mode nor the Henry's law dissolution mode could satisfactorily describe the behavior.",
+      "persona_code": "COMP",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Shieh2002_DEDUP_018"
+    },
+    {
+      "id": "Shieh2002_ONTO_Q003",
+      "paper_id": "Shieh2002",
+      "question": "What ontology class should the 'supercritical extractor model SFX 2-10' be represented as?",
+      "expected_answer": "A subclass of Instrument",
+      "persona_code": "ONTO",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Section",
+      "absorbed_into": "Shieh2002_DEDUP_023"
+    },
+    {
+      "id": "Shieh2002_ONTO_GAP002",
+      "paper_id": "Shieh2002",
+      "question": "Which specific sorption models are mentioned in the text that should be represented as subclasses of a 'SorptionModel' class?",
+      "expected_answer": "Henry's law dissolution, Langmuir sorption, and power law (Freundlich adsorption model).",
+      "persona_code": "ONTO",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "source_section": "Introduction",
+      "absorbed_into": "Shieh2002_DEDUP_011"
+    },
+    {
+      "id": "Shieh2002_STU_GAP001",
+      "paper_id": "Shieh2002",
+      "question": "What is the effect of carbonyl groups in PMMA on the sorption of CO2 compared to the phenyl groups in PS?",
+      "expected_answer": "The carbonyl groups in PMMA exhibit a higher level of interaction and a much higher sorption ability for CO2 than the phenyl groups in PS.",
+      "persona_code": "STU",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Shieh2002_DEDUP_027"
+    }
+  ]
+}

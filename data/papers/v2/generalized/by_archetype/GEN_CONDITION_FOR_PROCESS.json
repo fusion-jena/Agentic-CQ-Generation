@@ -1,0 +1,996 @@
+{
+  "archetype": "CONDITION_FOR_PROCESS",
+  "pipeline_step": "cross_paper_generalization",
+  "pipeline_version": "v2",
+  "step_version": "step2_v1.0",
+  "generalize_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "generalize_prompt_v1.0",
+    "source_dir": "data/papers/v2/dedup/"
+  },
+  "arch_stats": {
+    "n_input_cqs": 46,
+    "n_gen_cqs": 23,
+    "n_papers": 14,
+    "wall_time": "1m 46s 3ms"
+  },
+  "generalized_cqs": [
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_001",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "generalized_question": "Under what pressure and temperature conditions were the polymer samples saturated with CO2 prior to foaming?",
+      "abstraction_reasoning": "PATTERN: How are saturation conditions (pressure, temperature) set for CO2 sorption? | ENTITY MAPPING: PPE/SAN blend -> copolymer, PS60/PMMA40 -> copolymer, SBM triblock terpolymer -> copolymer | WHY BROAD: Covers multiple papers discussing different polymers and their saturation conditions.",
+      "is_singleton_group": false,
+      "coverage_breadth": "broad",
+      "n_papers_covered": 13,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013",
+        "Costeux2014",
+        "Di Maio2018",
+        "Dumon2012",
+        "Guo2015",
+        "Liu2019",
+        "Otsuka2008",
+        "Reglero2011",
+        "Ruiz2011",
+        "Shah2025",
+        "Shieh2002",
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_002",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_SYNTH_Q002",
+          "question": "Under what pressure, temperature, and duration conditions were the PPE/SAN blend specimens saturated with CO2 prior to the foaming experiments?",
+          "expected_answer": "The samples were saturated with CO2 at 40 bar and 40 °C for at least 24 hours.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        },
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_011",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PROC_Q001",
+          "question": "Under what saturation pressure and temperature conditions were the PPE/SAN blends loaded with CO2 prior to foaming?",
+          "expected_answer": "The specimens were placed in a high-pressure vessel at 40 bar and 40 °C.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental Section"
+        },
+        {
+          "step1_id": "Costeux2013_DEDUP_002",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_SYNTH_Q002",
+          "question": "Under what reference conditions (temperature, pressure, and time) was the initial foaming step carried out?",
+          "expected_answer": "Tsoak = 30 °C, Psoak = 33 MPa, and tsoak = 10 h.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Costeux2014_DEDUP_005",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_SYNTH_Q005",
+          "question": "In the two-step foaming process for high Tg engineering plastics like PEI, what is the purpose of the second thermal conditioning step?",
+          "expected_answer": "The second thermal conditioning step is essential to get the nuclei to expand, as the initial sorption occurs at temperatures much lower than the Tg where plasticization is insufficient to render the polymer rubbery.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Costeux2014_DEDUP_006",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_SYNTH_GAP001",
+          "question": "For the synthesis of high-porosity nanocellular foams using a P(MMA-co-EMA) copolymer, what were the specific sorption pressure and temperature conditions used prior to the two-step foaming process?",
+          "expected_answer": "The sorption conditions were 30 MPa and 35 °C.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Costeux2014_DEDUP_014",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PROC_Q002",
+          "question": "Under what sorption conditions and process type were the nanocellular foams with 345 nm cells and 79% porosity produced for PEMA?",
+          "expected_answer": "PEMA was processed under sorption conditions of 33 MPa and 30°C using a two-step (2S) process with thermal conditioning at 60°C.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Costeux2014_DEDUP_018",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PROC_GAP002",
+          "question": "What were the sorption pressure and temperature conditions used to produce nanocellular foams with 80-82% porosity in P(MMA-co-EMA) using a two-step process?",
+          "expected_answer": "The sorption conditions were 30 MPa and 35 °C, followed by a second thermal conditioning step at 50–70 °C.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Di Maio2018_DEDUP_003",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_SYNTH_Q003",
+          "question": "In the foaming of epoxy resins, what synthesis parameter must be maintained at a minimum level to allow for bubble nucleation?",
+          "expected_answer": "A minimum molecular weight between crosslinks (Mc) is needed to allow the bubble to nucleate.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Dumon2012_DEDUP_002",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_SYNTH_Q002",
+          "question": "What were the saturation pressure and duration used to saturate the polymer samples with supercritical CO2?",
+          "expected_answer": "The samples were saturated at a pressure of 300 bar for 24 hours.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_002",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_SYNTH_Q002",
+          "question": "Under what pressure and temperature conditions was the maximum reported CO2 solubility of 39.3 wt% achieved in PMMA?",
+          "expected_answer": "A saturation pressure of 5 MPa and a saturation temperature of -30 °C.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_006",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_SYNTH_GAP001",
+          "question": "Under what saturation pressure and temperature range was the CO2 sorption process carried out for the PMMA samples?",
+          "expected_answer": "The saturation pressure was fixed at 5 MPa and the saturation temperature (T sat) varied from -30 °C to 100 °C.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_010",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PROC_Q001",
+          "question": "What saturation pressure and temperature range were used to determine the CO2 solubility in PMMA?",
+          "expected_answer": "The saturation pressure was fixed at 5 MPa, and the saturation temperature (T sat) varied from -30 °C to 100 °C.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Liu2019_DEDUP_002",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_SYNTH_Q002",
+          "question": "What saturation pressures were investigated for the PS60/PMMA40 blend samples in this study?",
+          "expected_answer": "The saturation pressures investigated were 1.5, 2, 3, 3.5, and 4 MPa.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Liu2019_DEDUP_012",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_PROC_Q001",
+          "question": "What saturation pressure and time were used to prepare the PS60/PMMA40 blend samples for batch foaming?",
+          "expected_answer": "The saturation pressure was set at 1.5, 2, 3, 3.5, and 4 MPa, and the samples were kept in a CO2 atmosphere for 48 hours.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Liu2019_DEDUP_015",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_PROC_GAP002",
+          "question": "Under what saturation pressure and time conditions were the PS60/PMMA40 blend samples processed in the batch foaming process to study the desorption diffusion coefficient?",
+          "expected_answer": "The samples were kept in a CO2 atmosphere in a high pressure vessel at room temperature for 48h, with saturation pressures set at 1.5, 2, 3, 3.5, and 4 MPa.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_002",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_SYNTH_Q002",
+          "question": "What initiator and concentration were used for the polymerization of MMA within the PS matrix?",
+          "expected_answer": "2,2'-Azoisobutyronitrile (AIBN) at a concentration of 1 wt.-%.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Part"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_005",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_SYNTH_GAP001",
+          "question": "What initiator and temperature conditions were used for the polymerization of MMA monomers within the PS matrix?",
+          "expected_answer": "1 wt.-% AIBN was used as the initiator, with the mold heated to 80 °C for 1 h, followed by incubation at 90 °C for 24 h and vacuum annealing at 170 °C for 24 h.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Part"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_013",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PROC_Q001",
+          "question": "What were the saturation pressure and temperature conditions used to dissolve CO2 into the PS/PMMA blend before foaming?",
+          "expected_answer": "The samples were heated up to 40 °C and pressurized by CO2 up to 8.6 MPa for 2 hours.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental Part"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_017",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PROC_Q005",
+          "question": "What annealing process was applied to the PS/PMMA blend to ensure complete polymerization of MMA monomers?",
+          "expected_answer": "The samples were kept at 90 °C for 24 h in a temperature-controlled incubator, followed by annealing at 170 °C in a vacuum for 24 h.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental Part"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_018",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PROC_GAP001",
+          "question": "Under what temperature and pressure conditions was the PS/PMMA blend saturated with CO2 in the high pressure autoclave prior to foaming?",
+          "expected_answer": "The sample was heated up to 40 °C and pressurized by CO2 up to 8.6 MPa for 2 hours.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental Part"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_002",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_SYNTH_Q002",
+          "question": "What were the saturation pressure and saturation time used for the microcellular foaming process?",
+          "expected_answer": "The saturation pressure was 300 bar and the saturation time was 16 to 24 hours.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_006",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_SYNTH_GAP002",
+          "question": "In the batch one-step scCO2 foaming process, what were the constant saturation pressure and depressurization rate used?",
+          "expected_answer": "The saturation pressure was 300 bar and the depressurization rate was 60 bar/min.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Abstract"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_013",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PROC_Q001",
+          "question": "Under what saturation pressure and depressurization rate were the microcellular foaming experiments conducted for the amorphous polymers and blends?",
+          "expected_answer": "The saturation pressure was maintained at 300 bar and the depressurization rate was fixed at 60 bar/min.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_002",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_SYNTH_Q002",
+          "question": "What was the temperature profile and screw velocity used during the extrusion blending of the polymer blends?",
+          "expected_answer": "A temperature profile from 165 °C to 225 °C and a screw velocity of 60 rpm.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_006",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_SYNTH_GAP001",
+          "question": "What were the temperature profile and screw velocity used during the extrusion blending of the PS + SBM and PMMA + MAM blends?",
+          "expected_answer": "The temperature profile ranged from 165 °C to 225 °C and the screw velocity was 60 rpm.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_015",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PROC_Q001",
+          "question": "Under what saturation pressure and time conditions were the PMMA and PS samples processed to ensure CO2 equilibrium?",
+          "expected_answer": "The samples were saturated at a pressure of 300 bar for 16 hours.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "2.3. scCO2 foaming"
+        },
+        {
+          "step1_id": "Shah2025_DEDUP_002",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_SYNTH_Q002",
+          "question": "What were the optimal processing parameters (pressure, temperature, and residence time) used to achieve the minimum foam density of 50 kg/m3?",
+          "expected_answer": "A pressure of 170 bar, a temperature of 187 °C, and a residence time of 20 min.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Conclusions"
+        },
+        {
+          "step1_id": "Shah2025_DEDUP_009",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PROC_Q001",
+          "question": "What were the optimal processing parameters used to achieve the lowest recorded foam density of 50 kg/m³ for polyamide 12?",
+          "expected_answer": "The lowest density was achieved using a pressure of 170 bar, a temperature of 187 °C, and a residence time of 20 min.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Conclusions"
+        },
+        {
+          "step1_id": "Shieh2002_DEDUP_003",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_SYNTH_Q004",
+          "question": "What thermal and vacuum treatment was applied to the polymer samples after the sorption experiments to ensure the removal of dissolved CO2?",
+          "expected_answer": "The samples were heated at 110 °C and vacuumed for 30 min.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Shieh2002_DEDUP_005",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_SYNTH_GAP002",
+          "question": "What were the molecular weight (Mw) and dispersity (Mw/Mn) of the poly(methyl methacrylate) (PMMA) used in the sorption measurements?",
+          "expected_answer": "The PMMA had a molecular weight (Mw) of 396,000 and a dispersity (Mw/Mn) of 3.72.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Shieh2002_DEDUP_008",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PROC_Q001",
+          "question": "What exposure time was required for PMMA and PS sheet samples to reach equilibrium CO2 sorption concentration?",
+          "expected_answer": "60 minutes of exposure time was required to reach equilibrium solubility for both polymers.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Shieh2002_DEDUP_010",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PROC_Q005",
+          "question": "What post-sorption heat treatment was applied to the samples to ensure the evacuation of dissolved CO2?",
+          "expected_answer": "Samples were heated at 110 °C and vacuumed for 30 minutes.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental Section"
+        },
+        {
+          "step1_id": "Wu2021_DEDUP_002",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_SYNTH_Q002",
+          "question": "At what pressure were the mass fractions of CO2 and the polymers determined in the simulation model?",
+          "expected_answer": "The mass fractions were determined at 19.0 MPa.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Wu2021_DEDUP_007",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_SYNTH_GAP002",
+          "question": "At what temperature were the calculated interfacial tension values for the PP-PP/CO2 system examined against experimental data?",
+          "expected_answer": "452.15 K",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Wu2021_DEDUP_015",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_PROC_Q001",
+          "question": "At what temperature was the bubble nucleation process analyzed to reveal the foaming mechanism of the PP/PS blend system?",
+          "expected_answer": "452.15 K",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_002",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "generalized_question": "What were the melt temperature and screw speed used during the compounding of the PPE/SAN blend systems in the twin-screw extruder?",
+      "abstraction_reasoning": "PATTERN: What are the processing parameters (temperature, screw speed) for polymer blending? | ENTITY MAPPING: PPE/SAN blend -> copolymer | WHY NARROW: Specific to twin-screw extruder setup not detailed elsewhere.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_015",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PROC_GAP001",
+          "question": "What were the melt temperature and screw speed used during the compounding of the PPE/SAN blend systems in the twin-screw extruder?",
+          "expected_answer": "The average melt temperature was set at 250 °C and the screw speed was set at 85 rpm.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_003",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the weight composition of the SBM triblock terpolymer (polystyrene-b-polybutadiene-b-polymethylmethacrylate)?",
+      "abstraction_reasoning": "PATTERN: What are the compositional details of a specific copolymer? | ENTITY MAPPING: SBM triblock terpolymer -> copolymer | WHY NARROW: Specific to SBM composition not discussed in other papers.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_005",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_SYNTH_Q005",
+          "question": "What is the weight composition of the SBM triblock terpolymer (polystyrene-b-polybutadiene-b-polymethylmethacrylate)?",
+          "expected_answer": "The SBM copolymer consists of 52 wt% styrene, 30 wt% butadiene, and 18 wt% methylmethacrylate.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_004",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "What initiator and concentration were used for the polymerization of MMA within the PS matrix?",
+      "abstraction_reasoning": "PATTERN: What are the initiation conditions (initiator, concentration) for copolymer synthesis? | ENTITY MAPPING: MMA -> monomer, PS -> polymer | WHY NARROW: Specific to AIBN initiator and PS/MMA system.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_002",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_SYNTH_Q002",
+          "question": "What initiator and concentration were used for the polymerization of MMA within the PS matrix?",
+          "expected_answer": "2,2'-Azoisobutyronitrile (AIBN) at a concentration of 1 wt.-%.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_005",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "What were the number-average molecular weight (Mn) and polydispersity of the SMMA copolymer?",
+      "abstraction_reasoning": "PATTERN: What are the molecular properties (Mn, polydispersity) of a specific copolymer? | ENTITY MAPPING: SMMA -> copolymer | WHY NARROW: Specific to SMMA's molecular characteristics.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_002",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_SYNTH_Q002",
+          "question": "What were the number-average molecular weight (Mn) and polydispersity of the SMMA copolymer?",
+          "expected_answer": "The Mn was 76 kg/mol and the polydispersity was 2.2.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_006",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "What were the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in the study, and which standard was used for the GPC analysis?",
+      "abstraction_reasoning": "PATTERN: What are the molecular properties and analytical standards for a specific copolymer? | ENTITY MAPPING: poly(styrene-co-MMA) -> copolymer | WHY NARROW: Specific to PMMA's Mn, polydispersity, and GPC standard.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_006",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_SYNTH_GAP001",
+          "question": "What were the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in the study, and which standard was used for the GPC analysis?",
+          "expected_answer": "The Mn was 76 kg/mol and the polydispersity was 2.2, determined using a polystyrene standard.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_007",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "What was the temperature profile and screw velocity used during the extrusion blending of the polymer blends?",
+      "abstraction_reasoning": "PATTERN: What are the processing parameters (temperature, screw speed) for extrusion blending? | ENTITY MAPPING: PS + SBM, PMMA + MAM -> copolymers | WHY NARROW: Specific to Ruiz2011's extrusion setup.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_002",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_SYNTH_Q002",
+          "question": "What was the temperature profile and screw velocity used during the extrusion blending of the polymer blends?",
+          "expected_answer": "A temperature profile from 165 °C to 225 °C and a screw velocity of 60 rpm.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_008",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "What were the temperature profile and screw velocity used during the extrusion blending of the PS + SBM and PMMA + MAM blends?",
+      "abstraction_reasoning": "PATTERN: What are the processing parameters (temperature, screw speed) for specific polymer blends? | ENTITY MAPPING: PS + SBM, PMMA + MAM -> copolymers | WHY NARROW: Specific to Ruiz2011's detailed extrusion conditions.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_006",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_SYNTH_GAP001",
+          "question": "What were the temperature profile and screw velocity used during the extrusion blending of the PS + SBM and PMMA + MAM blends?",
+          "expected_answer": "The temperature profile ranged from 165 °C to 225 °C and the screw velocity was 60 rpm.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_009",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "What were the optimal processing parameters (pressure, temperature, and residence time) used to achieve the minimum foam density of 50 kg/m3?",
+      "abstraction_reasoning": "PATTERN: What are the optimal conditions for achieving a specific foam property? | ENTITY MAPPING: polyamide 12 -> polymer | WHY NARROW: Specific to Shah2025's study on polyamide 12.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_002",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_SYNTH_Q002",
+          "question": "What were the optimal processing parameters (pressure, temperature, and residence time) used to achieve the minimum foam density of 50 kg/m3?",
+          "expected_answer": "A pressure of 170 bar, a temperature of 187 °C, and a residence time of 20 min.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_010",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "generalized_question": "What were the optimal processing parameters used to achieve the lowest recorded foam density of 50 kg/m³ for polyamide 12?",
+      "abstraction_reasoning": "PATTERN: What are the optimal conditions for achieving a specific foam property? | ENTITY MAPPING: polyamide 12 -> polymer | WHY NARROW: Specific to Shah2025's detailed processing parameters.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_009",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PROC_Q001",
+          "question": "What were the optimal processing parameters used to achieve the lowest recorded foam density of 50 kg/m³ for polyamide 12?",
+          "expected_answer": "The lowest density was achieved using a pressure of 170 bar, a temperature of 187 °C, and a residence time of 20 min.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_011",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "What were the molecular weight (Mw) and dispersity (Mw/Mn) of the poly(methyl methacrylate) (PMMA) used in the sorption measurements?",
+      "abstraction_reasoning": "PATTERN: What are the molecular properties (Mw, dispersity) of a specific polymer? | ENTITY MAPPING: PMMA -> polymer | WHY NARROW: Specific to Shieh2002's PMMA characteristics.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_005",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_SYNTH_GAP002",
+          "question": "What were the molecular weight (Mw) and dispersity (Mw/Mn) of the poly(methyl methacrylate) (PMMA) used in the sorption measurements?",
+          "expected_answer": "The PMMA had a molecular weight (Mw) of 396,000 and a dispersity (Mw/Mn) of 3.72.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_012",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "generalized_question": "What exposure time was required for PMMA and PS sheet samples to reach equilibrium CO2 sorption concentration?",
+      "abstraction_reasoning": "PATTERN: What is the saturation time needed for specific polymers? | ENTITY MAPPING: PMMA, PS -> polymers | WHY NARROW: Specific to Shieh2002's study on PMMA and PS.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_008",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PROC_Q001",
+          "question": "What exposure time was required for PMMA and PS sheet samples to reach equilibrium CO2 sorption concentration?",
+          "expected_answer": "60 minutes of exposure time was required to reach equilibrium solubility for both polymers.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_013",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "generalized_question": "What post-sorption heat treatment was applied to the samples to ensure the evacuation of dissolved CO2?",
+      "abstraction_reasoning": "PATTERN: What are the post-sorption treatments for polymer samples? | ENTITY MAPPING: PMMA, PS -> polymers | WHY NARROW: Specific to Shieh2002's heat treatment procedure.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_010",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PROC_Q005",
+          "question": "What post-sorption heat treatment was applied to the samples to ensure the evacuation of dissolved CO2?",
+          "expected_answer": "Samples were heated at 110 °C and vacuumed for 30 minutes.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_014",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "At what pressure were the mass fractions of CO2 and the polymers determined in the simulation model?",
+      "abstraction_reasoning": "PATTERN: What are the simulation conditions for determining mass fractions? | ENTITY MAPPING: PP-PP/CO2 -> polymer system | WHY NARROW: Specific to Wu2021's simulation setup.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_002",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_SYNTH_Q002",
+          "question": "At what pressure were the mass fractions of CO2 and the polymers determined in the simulation model?",
+          "expected_answer": "The mass fractions were determined at 19.0 MPa.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_015",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "At what temperature were the calculated interfacial tension values for the PP-PP/CO2 system examined against experimental data?",
+      "abstraction_reasoning": "PATTERN: What are the simulation conditions for interfacial tension analysis? | ENTITY MAPPING: PP-PP/CO2 -> polymer system | WHY NARROW: Specific to Wu2021's temperature setting.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_007",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_SYNTH_GAP002",
+          "question": "At what temperature were the calculated interfacial tension values for the PP-PP/CO2 system examined against experimental data?",
+          "expected_answer": "452.15 K",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_016",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "generalized_question": "At what temperature was the bubble nucleation process analyzed to reveal the foaming mechanism of the PP/PS blend system?",
+      "abstraction_reasoning": "PATTERN: What are the analysis conditions for bubble nucleation? | ENTITY MAPPING: PP/PS -> copolymer | WHY NARROW: Specific to Wu2021's study on PP/PS blends.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_015",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_PROC_Q001",
+          "question": "At what temperature was the bubble nucleation process analyzed to reveal the foaming mechanism of the PP/PS blend system?",
+          "expected_answer": "452.15 K",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_017",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "generalized_question": "What were the reference conditions for the initial foaming and postfoaming steps used to produce the nanocellular foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_014",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_PROC_Q001",
+          "question": "What were the reference conditions for the initial foaming and postfoaming steps used to produce the nanocellular foams?",
+          "expected_answer": "The initial foaming conditions were a soaking temperature (Tsoak) of 30 °C, a soaking pressure (Psoak) of 33 MPa, and a soaking time (tsoak) of 10 h; the postfoaming (PF) step was performed at 60 °C for 3 min.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_018",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "According to the review, what were the specific soaking pressure and temperature conditions used by Yokoyama et al. to produce nanocellular foams from PS-b-PFMA diblock copolymers?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_002",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_SYNTH_Q002",
+          "question": "According to the review, what were the specific soaking pressure and temperature conditions used by Yokoyama et al. to produce nanocellular foams from PS-b-PFMA diblock copolymers?",
+          "expected_answer": "Soaking pressure between 7.5–30 MPa at 60°C, followed by quenching to 0°C.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_019",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "For thermosetting polymers like epoxies, how can the polymerization reaction be manipulated to ensure complete CO2 sorption occurs before curing?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_005",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_SYNTH_Q005",
+          "question": "For thermosetting polymers like epoxies, how can the polymerization reaction be manipulated to ensure complete CO2 sorption occurs before curing?",
+          "expected_answer": "By reducing the curing temperature, it is possible to slow down the polymerization reaction to provide sufficient time for sorption.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_020",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "generalized_question": "Under what pressure conditions is the glass transition temperature (Tg) of polystyrene reduced by approximately 50 °C when exposed to carbon dioxide?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_007",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_SYNTH_GAP002",
+          "question": "Under what pressure conditions is the glass transition temperature (Tg) of polystyrene reduced by approximately 50 °C when exposed to carbon dioxide?",
+          "expected_answer": "The Tg is reduced by about 50 °C when polystyrene is exposed to CO2 at about 50 bar.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_021",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "generalized_question": "What were the saturation pressure and time used to achieve the CO2 weight gain ratios for the polymers and blends?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_014",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PROC_Q002",
+          "question": "What were the saturation pressure and time used to achieve the CO2 weight gain ratios for the polymers and blends?",
+          "expected_answer": "The saturation conditions were 300 bar for 16 hours.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_022",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "generalized_question": "What method was used to determine the minimum foaming temperature of the PMMA-CO2 system?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_014",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PROC_Q005",
+          "question": "What method was used to determine the minimum foaming temperature of the PMMA-CO2 system?",
+          "expected_answer": "Saturated samples were immersed in a silicone oil bath at foaming temperatures (Tf) ranging from -20 °C to 120 °C in 5 °C intervals; the minimum foaming temperature was identified as the average of the two adjacent temperatures where the sample transitioned from transparent (no foaming) to opaque (bubble formation).",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CONDITION_FOR_PROCESS_023",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "generalized_question": "What were the saturation temperature and pressure used to evaluate the effect of varying depressurization times from 30 s to 600 s?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_011",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_PROC_Q003",
+          "question": "What were the saturation temperature and pressure used to evaluate the effect of varying depressurization times from 30 s to 600 s?",
+          "expected_answer": "The experiments were performed at a constant saturation temperature of 118 °C and a pressure of 200 bar.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "reverse_index": {
+    "Bärwinkel2016_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_001",
+    "Bärwinkel2016_DEDUP_011": "GEN_CONDITION_FOR_PROCESS_001",
+    "Costeux2013_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_001",
+    "Costeux2014_DEDUP_005": "GEN_CONDITION_FOR_PROCESS_001",
+    "Costeux2014_DEDUP_006": "GEN_CONDITION_FOR_PROCESS_001",
+    "Costeux2014_DEDUP_014": "GEN_CONDITION_FOR_PROCESS_001",
+    "Costeux2014_DEDUP_018": "GEN_CONDITION_FOR_PROCESS_001",
+    "Di Maio2018_DEDUP_003": "GEN_CONDITION_FOR_PROCESS_001",
+    "Dumon2012_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_001",
+    "Guo2015_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_001",
+    "Guo2015_DEDUP_006": "GEN_CONDITION_FOR_PROCESS_001",
+    "Guo2015_DEDUP_010": "GEN_CONDITION_FOR_PROCESS_001",
+    "Liu2019_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_001",
+    "Liu2019_DEDUP_012": "GEN_CONDITION_FOR_PROCESS_001",
+    "Liu2019_DEDUP_015": "GEN_CONDITION_FOR_PROCESS_001",
+    "Otsuka2008_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_004",
+    "Otsuka2008_DEDUP_005": "GEN_CONDITION_FOR_PROCESS_001",
+    "Otsuka2008_DEDUP_013": "GEN_CONDITION_FOR_PROCESS_001",
+    "Otsuka2008_DEDUP_017": "GEN_CONDITION_FOR_PROCESS_001",
+    "Otsuka2008_DEDUP_018": "GEN_CONDITION_FOR_PROCESS_001",
+    "Reglero2011_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_001",
+    "Reglero2011_DEDUP_006": "GEN_CONDITION_FOR_PROCESS_001",
+    "Reglero2011_DEDUP_013": "GEN_CONDITION_FOR_PROCESS_001",
+    "Ruiz2011_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_007",
+    "Ruiz2011_DEDUP_006": "GEN_CONDITION_FOR_PROCESS_008",
+    "Ruiz2011_DEDUP_015": "GEN_CONDITION_FOR_PROCESS_001",
+    "Shah2025_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_009",
+    "Shah2025_DEDUP_009": "GEN_CONDITION_FOR_PROCESS_010",
+    "Shieh2002_DEDUP_003": "GEN_CONDITION_FOR_PROCESS_001",
+    "Shieh2002_DEDUP_005": "GEN_CONDITION_FOR_PROCESS_011",
+    "Shieh2002_DEDUP_008": "GEN_CONDITION_FOR_PROCESS_012",
+    "Shieh2002_DEDUP_010": "GEN_CONDITION_FOR_PROCESS_013",
+    "Wu2021_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_014",
+    "Wu2021_DEDUP_007": "GEN_CONDITION_FOR_PROCESS_015",
+    "Wu2021_DEDUP_015": "GEN_CONDITION_FOR_PROCESS_016",
+    "Bärwinkel2016_DEDUP_015": "GEN_CONDITION_FOR_PROCESS_002",
+    "Dumon2012_DEDUP_005": "GEN_CONDITION_FOR_PROCESS_003",
+    "Jacobs2007_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_005",
+    "Jacobs2007_DEDUP_006": "GEN_CONDITION_FOR_PROCESS_006",
+    "Costeux2013_DEDUP_014": "GEN_CONDITION_FOR_PROCESS_017",
+    "Costeux2014_DEDUP_002": "GEN_CONDITION_FOR_PROCESS_018",
+    "Di Maio2018_DEDUP_005": "GEN_CONDITION_FOR_PROCESS_019",
+    "Di Maio2018_DEDUP_007": "GEN_CONDITION_FOR_PROCESS_020",
+    "Dumon2012_DEDUP_014": "GEN_CONDITION_FOR_PROCESS_021",
+    "Guo2015_DEDUP_014": "GEN_CONDITION_FOR_PROCESS_022",
+    "Jacobs2007_DEDUP_011": "GEN_CONDITION_FOR_PROCESS_023"
+  }
+}

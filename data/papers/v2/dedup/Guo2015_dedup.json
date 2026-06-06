@@ -1,0 +1,971 @@
+{
+  "paper_id": "Guo2015",
+  "pipeline_step": "intra_paper_dedup",
+  "pipeline_version": "v2",
+  "step_version": "step1_v1.0",
+  "dedup_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "dedup_prompt_v1.0",
+    "source_file": "papers/v2/cq_output/Guo2015_ext-qw-35b_g-ge4-31b_v-der1-32b_r-qw-35b_cq_v2.json",
+    "source_pipeline_version": "v2.1"
+  },
+  "paper_metadata": {
+    "title": "Solid-state poly(methyl methacrylate) (PMMA) nanofoams. Part I: Low-temperature CO2 sorption, diffusion, and the depression in PMMA glass transition",
+    "first_author_lastname": "Guo",
+    "year": 2015,
+    "journal": "Polymer",
+    "doi": "10.1016/j.polymer.2014.12.029",
+    "keywords": [
+      "Solubility",
+      "Diffusivity",
+      "Glass transition temperature"
+    ],
+    "polymer_systems": [
+      "PMMA"
+    ],
+    "polymerization_methods": [],
+    "paper_type": "research article",
+    "paper_id": "Guo2015",
+    "source_filename": "Solid-state poly(methyl methacrylate) (PMMA) nanofoams. Part I- Low-temperature CO2 sorption, diffusion, and the depression in PMMA glass transition.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 7,
+    "n_figures": 3,
+    "n_tables": 1,
+    "file_size_kb": 688.8,
+    "char_count": 31434,
+    "estimated_tokens": 7858,
+    "n_sections": 0
+  },
+  "dedup_stats": {
+    "n_input_personas": 7,
+    "n_input_cqs": 49,
+    "n_representative_cqs": 41,
+    "n_merged_groups": 8,
+    "n_singletons": 33,
+    "n_discarded": 8,
+    "reduction_rate": 0.163,
+    "archetype_breakdown": {
+      "CAUSAL": {
+        "n_input": 10,
+        "n_output": 9
+      },
+      "COMPARATIVE": {
+        "n_input": 2,
+        "n_output": 2
+      },
+      "CONDITION_FOR_PROCESS": {
+        "n_input": 4,
+        "n_output": 4
+      },
+      "ENTITY_LOOKUP": {
+        "n_input": 10,
+        "n_output": 7
+      },
+      "ENUMERATION": {
+        "n_input": 3,
+        "n_output": 2
+      },
+      "GAP_OR_LIMITATION": {
+        "n_input": 3,
+        "n_output": 3
+      },
+      "METHOD_OF_MEASUREMENT": {
+        "n_input": 6,
+        "n_output": 4
+      },
+      "MOTIVATION": {
+        "n_input": 7,
+        "n_output": 6
+      },
+      "ONTOLOGY_TRIPLE": {
+        "n_input": 3,
+        "n_output": 3
+      },
+      "PROCESS_FOR_MATERIAL": {
+        "n_input": 1,
+        "n_output": 1
+      }
+    },
+    "parse_fallback_used": false,
+    "accounting_ok": true,
+    "grouping_ok": true,
+    "vague_answer_warnings": [
+      {
+        "id": "Guo2015_CHAR_Q004",
+        "persona_code": "CHAR",
+        "expected_answer": "39.3 wt%.",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Guo2015_CHAR_Q005",
+        "persona_code": "CHAR",
+        "expected_answer": "22.8 kJ/mol.",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Guo2015_ONTO_Q001",
+        "persona_code": "ONTO",
+        "expected_answer": "(PMMA, hasProperty, glass transition temperature)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Guo2015_ONTO_Q002",
+        "persona_code": "ONTO",
+        "expected_answer": "Differential scanning calorimeter (DSC)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Guo2015_ONTO_Q005",
+        "persona_code": "ONTO",
+        "expected_answer": "(CO2, hasProperty, heat of sorption)",
+        "flags": [
+          "answer_too_short"
+        ]
+      }
+    ]
+  },
+  "execution_stats": {
+    "total_wall_time": "57s 84ms",
+    "llm_calls": [
+      {
+        "model": "deepseek-r1:32b",
+        "think": true,
+        "wall_time": "57s 80ms",
+        "prompt_tokens": 6038,
+        "generated_tokens": 1230,
+        "thinking_chars": 0
+      }
+    ]
+  },
+  "representative_questions": [
+    {
+      "id": "Guo2015_DEDUP_001",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_SYNTH_Q001",
+      "question": "What are the number-average (Mn) and weight-average (Mw) molecular weights of the PMMA used in this study?",
+      "expected_answer": "Mn = 71,000 g/mol and Mw = 134,000 g/mol.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (comprehension) and provides specific numerical values for Mn and Mw.",
+      "merged_from": [
+        {
+          "id": "Guo2015_CHAR_Q002",
+          "paper_id": "Guo2015",
+          "persona_code": "CHAR",
+          "question": "What were the reported weight-average molecular weight (Mw) and number-average molecular weight (Mn) for the PMMA used in this study?",
+          "expected_answer": "Mw = 134,000 g/mol and Mn = 71,000 g/mol.",
+          "reason_discarded": "This question has the highest Bloom level (comprehension) and provides specific numerical values for Mn and Mw."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the molecular weights of PMMA, just phrased differently."
+    },
+    {
+      "id": "Guo2015_DEDUP_002",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_SYNTH_Q002",
+      "question": "Under what pressure and temperature conditions was the maximum reported CO2 solubility of 39.3 wt% achieved in PMMA?",
+      "expected_answer": "A saturation pressure of 5 MPa and a saturation temperature of -30 °C.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_003",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_SYNTH_Q003",
+      "question": "How does the incorporation of 39.3% CO2 affect the glass transition temperature (Tg) of PMMA?",
+      "expected_answer": "It decreases the Tg from 103 °C to -12.5 °C.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_004",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_SYNTH_Q004",
+      "question": "Why is PMMA considered to have very high CO2 solubility compared to other polymers under similar conditions?",
+      "expected_answer": "It is probably due to the high mass density of carbonyl groups in PMMA.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides a specific explanation.",
+      "merged_from": [
+        {
+          "id": "Guo2015_CHAR_Q003",
+          "paper_id": "Guo2015",
+          "persona_code": "CHAR",
+          "question": "How was the glass transition temperature (Tg) of the PMMA-CO2 mixture determined experimentally?",
+          "expected_answer": "It was determined by a minimum foaming temperature approach, where the average value of two adjacent foaming temperatures (one where the sample remains transparent and one where it becomes opaque) was used, with SEM images used to confirm cell formation.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides a specific explanation."
+        }
+      ],
+      "merge_reasoning": "Both questions inquire about the method used to determine Tg, though from different personas."
+    },
+    {
+      "id": "Guo2015_DEDUP_005",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_SYNTH_Q005",
+      "question": "How does the saturation temperature affect the sorption diffusivity of CO2 in PMMA?",
+      "expected_answer": "Temperature has a profound effect; diffusivity increases with temperature, ranging from 2.5 x 10^-8 cm2/s at -30 °C to 3.65 x 10^-7 cm2/s at 10 °C.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides detailed information on temperature effects.",
+      "merged_from": [
+        {
+          "id": "Guo2015_CHAR_Q004",
+          "paper_id": "Guo2015",
+          "persona_code": "CHAR",
+          "question": "What is the reported solubility of CO2 in PMMA at a saturation temperature of -30 °C and a pressure of 5 MPa?",
+          "expected_answer": "39.3 wt%.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides detailed information on temperature effects."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss the effect of saturation temperature on diffusivity."
+    },
+    {
+      "id": "Guo2015_DEDUP_006",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_SYNTH_GAP001",
+      "question": "Under what saturation pressure and temperature range was the CO2 sorption process carried out for the PMMA samples?",
+      "expected_answer": "The saturation pressure was fixed at 5 MPa and the saturation temperature (T sat) varied from -30 °C to 100 °C.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_007",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_SYNTH_GAP002",
+      "question": "How does the incorporation of CO2 into PMMA affect the glass transition temperature (Tg) of the polymer?",
+      "expected_answer": "The dissolution of CO2 plasticizes the polymer, lowering its glass transition temperature; specifically, the incorporation of 39.3% CO2 decreases the Tg from 103 °C to -12.5 °C.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_008",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_CHAR_Q001",
+      "question": "Which method was used to determine the glass transition temperature (Tg) of the PMMA-CO2 system, and what specific visual criteria were used to identify the minimum foaming temperature?",
+      "expected_answer": "The minimum foaming temperature approach was used. The Tg was identified as the average of two adjacent foaming temperatures where the sample remains transparent at the lower temperature and becomes opaque (indicating bubble formation) at the higher temperature.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Section",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_009",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_CHAR_GAP002",
+      "question": "What are the activation energies (DHD) for CO2 diffusion in PMMA for the four identified diffusion regions?",
+      "expected_answer": "The activation energies are 22.8 kJ/mol for Region 1, -12.6 kJ/mol for Region 2, -57.6 kJ/mol for Region 3, and 39.8 kJ/mol for Region 4.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_010",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PROC_Q001",
+      "question": "What saturation pressure and temperature range were used to determine the CO2 solubility in PMMA?",
+      "expected_answer": "The saturation pressure was fixed at 5 MPa, and the saturation temperature (T sat) varied from -30 °C to 100 °C.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_011",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PROC_Q002",
+      "question": "How does the amount of absorbed CO2 affect the glass transition temperature (Tg) of PMMA?",
+      "expected_answer": "The absorption of CO2 plasticizes the polymer and reduces the Tg; specifically, it decreases from 103 °C to -12.5 °C when 39.3% CO2 is incorporated, averaging a 3 °C reduction for every 1% increase in CO2 absorbed.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_012",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PROC_Q003",
+      "question": "Why was a saturation pressure of 5 MPa selected for the CO2 sorption experiments in PMMA?",
+      "expected_answer": "5 MPa was chosen to maximize CO2 sorption in the polymer while eliminating the need for a pressure boosting device, as it is slightly below the pressure of a full CO2 gas cylinder at room temperature.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "source_section": "Experimental",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (application) and provides specific reasoning for choosing 5 MPa.",
+      "merged_from": [
+        {
+          "id": "Guo2015_CHAR_GAP001",
+          "paper_id": "Guo2015",
+          "persona_code": "CHAR",
+          "question": "How was the glass transition temperature (Tg) of the PMMA-CO2 system determined in this study, and what equipment was used to control the foaming temperature?",
+          "expected_answer": "Tg was determined using the minimum foaming temperature approach, where samples were immersed in a silicone oil bath (Thermo Haake B5) set at specific foaming temperatures; the Tg was taken as the average of the temperatures where the sample transitions from transparent to opaque.",
+          "reason_discarded": "This question has a higher Bloom level (application) and provides specific reasoning for choosing 5 MPa."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the motivation behind selecting 5 MPa pressure."
+    },
+    {
+      "id": "Guo2015_DEDUP_013",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PROC_Q004",
+      "question": "How does the relationship between saturation temperature (Tsat) and glass transition temperature (Tg) determine the physical state of the PMMA-CO2 mixture?",
+      "expected_answer": "The system is in a rubbery state when the saturation temperature is greater than the glass transition temperature (Tsat > Tg), and it is in a glassy state when the saturation temperature is below the glass transition temperature (Tsat < Tg).",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_014",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PROC_Q005",
+      "question": "What method was used to determine the minimum foaming temperature of the PMMA-CO2 system?",
+      "expected_answer": "Saturated samples were immersed in a silicone oil bath at foaming temperatures (Tf) ranging from -20 °C to 120 °C in 5 °C intervals; the minimum foaming temperature was identified as the average of the two adjacent temperatures where the sample transitioned from transparent (no foaming) to opaque (bubble formation).",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_015",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PROC_GAP002",
+      "question": "Why was a low-temperature CO2 saturation process explored for the production of PMMA nanofoams?",
+      "expected_answer": "It was explored to determine if the higher gas solubility achieved at lower saturation temperatures could be used in a solid-state process to reduce the cell size from the order of 100 nm to the order of 10 nm.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_016",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_COMP_Q001",
+      "question": "Which empirical and theoretical models were used to predict the glass transition temperature (Tg) of the PMMA-CO2 mixture?",
+      "expected_answer": "The Fox equation, Jenckel & Heusch (J&H) equation, Gordon & Taylor (G&T) equation, and Chow's model.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_017",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_COMP_Q002",
+      "question": "How does the equilibrium mass percentage of CO2 absorbed into PMMA affect its glass transition temperature (Tg)?",
+      "expected_answer": "The Tg decreases as the mass% of CO2 increases; specifically, it reduces from 103 °C to -12.5 °C when CO2 absorption increases to 39.3%, averaging a 3 °C reduction per 1% increase in CO2.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_018",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_COMP_Q003",
+      "question": "What specific parameters were used for the implementation of Chow's model to predict the Tg of the PMMA-CO2 system?",
+      "expected_answer": "The lattice coordination number z = 2 and the excess transition isobaric specific heat of the polymer DCpp = 0.265 J K-1 g-1.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_019",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_COMP_Q004",
+      "question": "How does the predictive performance of Chow's model compare to the experimental Tg data for the PMMA-CO2 system?",
+      "expected_answer": "Chow's model predicts the general decreasing trend of Tg but performs poorly in absolute values, consistently underestimating the Tg compared to experimental data.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (analysis) and provides comparative insights.",
+      "merged_from": [
+        {
+          "id": "Guo2015_ONTO_Q004",
+          "paper_id": "Guo2015",
+          "persona_code": "ONTO",
+          "question": "Which empirical models for predicting glass transition temperature are reported in this paper?",
+          "expected_answer": "Fox equation, Jenckel & Heusche equation, Gordon & Taylor equation, and Chow's model.",
+          "reason_discarded": "This question has a higher Bloom level (analysis) and provides comparative insights."
+        }
+      ],
+      "merge_reasoning": "Both questions enumerate models used for Tg prediction."
+    },
+    {
+      "id": "Guo2015_DEDUP_020",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_COMP_Q005",
+      "question": "What is the relationship between saturation temperature (Tsat) and the solubility of CO2 in PMMA?",
+      "expected_answer": "Solubility increases as saturation temperature decreases, showing a ten-fold increase from 3.9% at 100 °C to 39.3% at -30 °C, and can be described with an Arrhenius relationship.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_021",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_COMP_GAP001",
+      "question": "What are the specific activation energy values for CO2 diffusion in PMMA across the four identified diffusion regions?",
+      "expected_answer": "The specific activation energy values for each region are not provided in the text; however, the text identifies four distinct regions where diffusivity varies differently with temperature, characterized by different activation energies, with negative activation energy observed in regions 2 and 3.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_022",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_COMP_GAP002",
+      "question": "Which empirical models were used to fit the experimental data for the glass transition temperature (Tg) of the PMMA-CO2 mixture?",
+      "expected_answer": "The Fox equation, Jenckel & Heusche equation, Gordon & Taylor equation, and Chow's model.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_023",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_ONTO_Q001",
+      "question": "Which triple represents the relationship between the material PMMA and its glass transition temperature measurement?",
+      "expected_answer": "(PMMA, hasProperty, glass transition temperature)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_024",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_ONTO_Q002",
+      "question": "Which method was used to measure the glass transition temperature (Tg) of the PMMA material?",
+      "expected_answer": "Differential scanning calorimeter (DSC)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_025",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_ONTO_Q003",
+      "question": "What ontology class should the 'rubbery state' and 'glassy state' of the PMMA-CO2 system be represented as?",
+      "expected_answer": "They should be represented as subclasses of a 'Physical State' or 'Material State' class.",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_026",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_ONTO_Q005",
+      "question": "Which triple captures the relationship between CO2 and the property 'heat of sorption'?",
+      "expected_answer": "(CO2, hasProperty, heat of sorption)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_027",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_ONTO_GAP001",
+      "question": "Which triple represents the relationship between the 'solid-state foaming' process and the resulting 'PMMA nanofoams'?",
+      "expected_answer": "(solid-state foaming, producedBy, PMMA nanofoams) or (PMMA nanofoams, producedBy, solid-state foaming)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Abstract",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_028",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_ONTO_GAP002",
+      "question": "What ontology class should the 'Arrhenius equation' be assigned to when representing the temperature dependence of diffusivity?",
+      "expected_answer": "A subclass of Method or Model (specifically a mathematical model used to characterize a property).",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_029",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_STU_Q001",
+      "question": "What is the glass transition temperature (Tg) of neat PMMA?",
+      "expected_answer": "The glass transition temperature (Tg) of neat PMMA was measured to be 103 °C.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_030",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_STU_Q002",
+      "question": "Which method was used to determine the glass transition temperature of the PMMA-CO2 mixture?",
+      "expected_answer": "The glass transition temperature was determined by a minimum foaming temperature approach.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "source_section": "Experimental Section",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_031",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_STU_Q003",
+      "question": "Why was a saturation pressure of 5 MPa chosen for the CO2 sorption experiments?",
+      "expected_answer": "5 MPa was chosen to maximize CO2 sorption in the polymer and eliminate the need for a pressure boosting device, as it is slightly below the pressure of a full CO2 gas cylinder at room temperature.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "recall",
+      "source_section": "Experimental Section",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides specific reasoning.",
+      "merged_from": [
+        {
+          "id": "Guo2015_PHD_Q004",
+          "paper_id": "Guo2015",
+          "persona_code": "PHD",
+          "question": "Why was a saturation pressure of 5 MPa selected for the sorption experiments?",
+          "expected_answer": "5 MPa was chosen to maximize CO2 sorption in the polymer while eliminating the need for a pressure boosting device, as it is slightly below the pressure of a full CO2 gas cylinder at room temperature.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific reasoning."
+        }
+      ],
+      "merge_reasoning": "Both questions inquire about the motivation for choosing 5 MPa pressure."
+    },
+    {
+      "id": "Guo2015_DEDUP_032",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_STU_Q004",
+      "question": "What is the relationship between the saturation temperature and the solubility of CO2 in PMMA?",
+      "expected_answer": "Solubility increases as the saturation temperature decreases; for example, it increases ten-fold from 3.9% at 100 °C to 39.3% at -30 °C.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides specific data on solubility vs. temperature.",
+      "merged_from": [
+        {
+          "id": "Guo2015_PROC_GAP001",
+          "paper_id": "Guo2015",
+          "persona_code": "PROC",
+          "question": "How does decreasing the saturation temperature from 100 °C to -30 °C affect the solubility of CO2 in PMMA?",
+          "expected_answer": "The solubility of CO2 in PMMA increases ten-fold, from 3.9% at 100 °C to 39.3% at -30 °C.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific data on solubility vs. temperature."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss the relationship between saturation temperature and CO2 solubility."
+    },
+    {
+      "id": "Guo2015_DEDUP_033",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_STU_Q005",
+      "question": "Which method was used to determine the diffusivity of CO2 from the sorption plots?",
+      "expected_answer": "The hybrid method was used to determine diffusivity because it is more accurate, fitting data from the whole sorption curve including both short-time and long-time data.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_034",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_STU_GAP001",
+      "question": "Why was low-temperature CO2 saturation explored as a method for producing PMMA nanofoams?",
+      "expected_answer": "Low-temperature CO2 saturation was explored because gas solubility in polymers generally increases as the saturation temperature decreases, and a higher amount of absorbed gas leads to a higher number of cells to nucleate, which can drive down the cell size from the order of 100 nm to 10 nm.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "recall",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_035",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_STU_GAP002",
+      "question": "By which process were the PMMA nanofoams with 30-40 nm cells produced?",
+      "expected_answer": "The PMMA nanofoams with 30-40 nm cells were produced using a solid-state foaming process based on low-temperature CO2 saturation.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "source_section": "Abstract",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_036",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PHD_Q001",
+      "question": "What limitation is acknowledged regarding the predictive accuracy of Chow's model for the glass transition temperature of the PMMA-CO2 system?",
+      "expected_answer": "Chow's model predicts the general decreasing trend of Tg, but it predicts the values poorly, with the predictions always being lower than the experimental data.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_037",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PHD_Q002",
+      "question": "How does the maximum CO2 solubility reported in this study compare to previously reported values for PMMA?",
+      "expected_answer": "The study reports a solubility of 39.3% at -30 °C, which the authors state is the highest amount of CO2 ever reported absorbed in PMMA.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_038",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PHD_Q003",
+      "question": "How does the change in the heat of sorption (DHs) around the CO2 vaporization temperature affect the solubility of CO2 in PMMA at very low temperatures?",
+      "expected_answer": "The drop in DHs leads to a slower increase in solubility with decreasing temperature; without this change, the solubility at -30 °C would have been approximately 70% instead of the measured 39.3%.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (evaluation) and provides detailed causal reasoning.",
+      "merged_from": [
+        {
+          "id": "Guo2015_CHAR_Q005",
+          "paper_id": "Guo2015",
+          "persona_code": "CHAR",
+          "question": "What is the activation energy for diffusion (DHD) of CO2 in PMMA in region 1?",
+          "expected_answer": "22.8 kJ/mol.",
+          "reason_discarded": "This question has a higher Bloom level (evaluation) and provides detailed causal reasoning."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss the effect of heat of sorption on solubility."
+    },
+    {
+      "id": "Guo2015_DEDUP_039",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PHD_Q005",
+      "question": "What remains unknown regarding the physical mechanism of the negative activation energy of diffusion observed in the PMMA-CO2 system?",
+      "expected_answer": "The authors state that the physical mechanism for the negative activation energy of diffusion in the PMMA-CO2 system is currently under investigation, as mechanisms proposed for other systems (like Ag in Ni or pHEMA-based hydrogels) are not applicable.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_040",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PHD_GAP001",
+      "question": "Why was low-temperature CO2 saturation selected as the primary mechanism to reduce the cell size of PMMA nanofoams compared to traditional high-pressure methods?",
+      "expected_answer": "Low-temperature CO2 saturation was used because gas solubility in polymers generally increases as the saturation temperature decreases; higher gas solubility leads to a higher number of cells nucleating in a unit volume, which can drive the cell size down from the order of 100 nm to the order of 10 nm.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Guo2015_DEDUP_041",
+      "paper_id": "Guo2015",
+      "source_id": "Guo2015_PHD_GAP002",
+      "question": "What limitation does the paper acknowledge regarding the current understanding of the physical mechanism for negative activation energy of diffusion in the PMMA-CO2 system?",
+      "expected_answer": "The paper acknowledges that the physical mechanism for negative activation energy of diffusion in the PMMA-CO2 system is currently under investigation, as previously proposed mechanisms for other systems (such as complex defects in Ag-Ni or temperature-dependent swelling in pHEMA-based hydrogels) are not applicable to this polymer-gas system.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    }
+  ],
+  "discarded_questions": [
+    {
+      "id": "Guo2015_CHAR_Q002",
+      "paper_id": "Guo2015",
+      "question": "What were the reported weight-average molecular weight (Mw) and number-average molecular weight (Mn) for the PMMA used in this study?",
+      "expected_answer": "Mw = 134,000 g/mol and Mn = 71,000 g/mol.",
+      "persona_code": "CHAR",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "absorbed_into": "Guo2015_DEDUP_001"
+    },
+    {
+      "id": "Guo2015_CHAR_Q003",
+      "paper_id": "Guo2015",
+      "question": "How was the glass transition temperature (Tg) of the PMMA-CO2 mixture determined experimentally?",
+      "expected_answer": "It was determined by a minimum foaming temperature approach, where the average value of two adjacent foaming temperatures (one where the sample remains transparent and one where it becomes opaque) was used, with SEM images used to confirm cell formation.",
+      "persona_code": "CHAR",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "absorbed_into": "Guo2015_DEDUP_004"
+    },
+    {
+      "id": "Guo2015_CHAR_Q004",
+      "paper_id": "Guo2015",
+      "question": "What is the reported solubility of CO2 in PMMA at a saturation temperature of -30 °C and a pressure of 5 MPa?",
+      "expected_answer": "39.3 wt%.",
+      "persona_code": "CHAR",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Guo2015_DEDUP_005"
+    },
+    {
+      "id": "Guo2015_CHAR_Q005",
+      "paper_id": "Guo2015",
+      "question": "What is the activation energy for diffusion (DHD) of CO2 in PMMA in region 1?",
+      "expected_answer": "22.8 kJ/mol.",
+      "persona_code": "CHAR",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Guo2015_DEDUP_038"
+    },
+    {
+      "id": "Guo2015_CHAR_GAP001",
+      "paper_id": "Guo2015",
+      "question": "How was the glass transition temperature (Tg) of the PMMA-CO2 system determined in this study, and what equipment was used to control the foaming temperature?",
+      "expected_answer": "Tg was determined using the minimum foaming temperature approach, where samples were immersed in a silicone oil bath (Thermo Haake B5) set at specific foaming temperatures; the Tg was taken as the average of the temperatures where the sample transitions from transparent to opaque.",
+      "persona_code": "CHAR",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Section",
+      "absorbed_into": "Guo2015_DEDUP_012"
+    },
+    {
+      "id": "Guo2015_PROC_GAP001",
+      "paper_id": "Guo2015",
+      "question": "How does decreasing the saturation temperature from 100 °C to -30 °C affect the solubility of CO2 in PMMA?",
+      "expected_answer": "The solubility of CO2 in PMMA increases ten-fold, from 3.9% at 100 °C to 39.3% at -30 °C.",
+      "persona_code": "PROC",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Abstract",
+      "absorbed_into": "Guo2015_DEDUP_032"
+    },
+    {
+      "id": "Guo2015_ONTO_Q004",
+      "paper_id": "Guo2015",
+      "question": "Which empirical models for predicting glass transition temperature are reported in this paper?",
+      "expected_answer": "Fox equation, Jenckel & Heusche equation, Gordon & Taylor equation, and Chow's model.",
+      "persona_code": "ONTO",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Guo2015_DEDUP_019"
+    },
+    {
+      "id": "Guo2015_PHD_Q004",
+      "paper_id": "Guo2015",
+      "question": "Why was a saturation pressure of 5 MPa selected for the sorption experiments?",
+      "expected_answer": "5 MPa was chosen to maximize CO2 sorption in the polymer while eliminating the need for a pressure boosting device, as it is slightly below the pressure of a full CO2 gas cylinder at room temperature.",
+      "persona_code": "PHD",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "source_section": "Experimental Section",
+      "absorbed_into": "Guo2015_DEDUP_031"
+    }
+  ]
+}

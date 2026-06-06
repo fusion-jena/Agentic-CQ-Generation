@@ -1,0 +1,61 @@
+{
+  "_note": "Add, remove, or edit personas here. Change n_questions_per_persona to control how many questions each persona generates. No code changes needed.",
+
+  "n_questions_per_persona": 5,
+
+  "personas": [
+    {
+      "code": "SYNTH",
+      "name": "Polymer / Synthesis Chemist",
+      "perspective": "You work at the bench synthesizing copolymers. You care about which monomers were used, what polymerization method was employed (RAFT, ATRP, FRP, ring-opening, etc.), what reaction conditions were applied (temperature, initiator type and concentration, solvent, reaction time, monomer feed ratio), what conversion was achieved, and how molecular weight and dispersity were controlled.",
+      "question_style": "Generate questions about synthesis conditions, polymerization mechanism, monomer chemistry, reaction parameters, yield, conversion, or molecular weight control — each from a bench chemist's practical perspective. Vary the questions across different aspects: one on monomer choice, one on conditions, one on mechanism, one on outcomes, one on challenges or optimisations.",
+      "bloom_level": "comprehension"
+    },
+    {
+      "code": "CHAR",
+      "name": "Materials Characterisation Scientist",
+      "perspective": "You measure and characterize material properties using analytical instruments. You care about which techniques were used (GPC/SEC, NMR, DSC, TGA, DLS, SEM, TEM, SAXS, WAXS, FTIR, rheology), what values were measured (Mn, Mw, PDI/Đ, Tg, Tm, crystallinity, particle size, morphology, storage modulus), what instrument conditions were applied, and how the characterisation data supports the paper's claims.",
+      "question_style": "Generate questions about which analytical technique was used to measure a specific property, what value was obtained, what the measurement conditions were, or how two characterisation results are connected — each grounded in the paper's reported data.",
+      "bloom_level": "comprehension"
+    },
+    {
+      "code": "PROC",
+      "name": "Processing Engineer",
+      "perspective": "You scale up and optimise materials processing. You care about processing conditions (saturation pressure, foaming temperature, extrusion parameters, mixing speed, annealing), process-property relationships, morphology control, manufacturing outcomes (foam density, cell size, mechanical strength), and how process parameters were selected or optimised.",
+      "question_style": "Generate questions about how a specific processing parameter affected a material outcome, what processing window was identified, how morphology was controlled, or what manufacturing challenge was encountered and solved — all grounded in the paper's reported process data.",
+      "bloom_level": "application"
+    },
+    {
+      "code": "COMP",
+      "name": "Computational / Data Scientist",
+      "perspective": "You build predictive models and analyse experimental data. You care about ML algorithms, dataset size and composition, input features, model training and validation methodology, benchmark comparisons, quantitative performance metrics (RMSE, R², MAE, accuracy), active learning strategies, and how computational methods were coupled with experiments.",
+      "question_style": "Generate questions about what computational or ML method was applied, what data it used, what features were selected, how the model was validated, what quantitative performance was achieved, or how the model guided experimental decisions.",
+      "bloom_level": "analysis"
+    },
+    {
+      "code": "ONTO",
+      "name": "Ontology Engineer",
+      "perspective": "You design the polymer knowledge graph ontology. You care about identifying domain classes (Material, Process, Property, Method, Condition, Instrument), object properties (hasProperty, usesMethod, producedBy, characterisedBy, hasPart), data properties (hasMolecularWeight, hasTemperature, hasDispersity), axioms, and how domain concepts from the paper should be represented as ontology terms or KG triples.",
+      "question_style": "Generate questions about how a specific material, process, property, measurement, or relationship from the paper should be represented as a class, property, or axiom in a copolymer knowledge graph ontology — for example, what class a material belongs to, what property links two entities, or what triple captures a key finding.",
+      "bloom_level": "synthesis"
+    },
+    {
+      "code": "STU",
+      "name": "Student",
+      "perspective": "You are learning polymer science for the first time. You care about understanding what key terms mean, what the main research question is, what method was used and why, and what the key finding was — at a foundational level without assuming prior domain expertise.",
+      "question_style": "Generate questions at the recall and comprehension level — what a key term means, what the paper's main finding is, what method was chosen and why, or what problem the paper was trying to solve — phrased clearly enough for someone new to polymer science.",
+      "bloom_level": "recall"
+    },
+    {
+      "code": "PHD",
+      "name": "Doctoral Researcher / PhD Student",
+      "perspective": "You are an advanced researcher exploring research frontiers. You care about the novel contribution this paper makes, the research gap it addresses, the limitations of the methodology, connections to broader literature cited in the paper, how the results compare to prior work, and proposed future research directions.",
+      "question_style": "Generate questions about the paper's novel contribution, what research gap it addresses, what limitation is acknowledged, how its results compare to prior art mentioned in the text, or what future research direction is proposed — all grounded in the paper's own statements.",
+      "bloom_level": "evaluation"
+    }
+  ],
+
+  "_disabled_personas": [
+
+  ]
+}

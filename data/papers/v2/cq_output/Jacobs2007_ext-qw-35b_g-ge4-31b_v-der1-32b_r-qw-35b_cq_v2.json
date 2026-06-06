@@ -1,0 +1,3284 @@
+{
+  "paper_id": "Jacobs2007",
+  "paper_metadata": {
+    "title": "A parametric study into the morphology of polystyrene- co-methyl methacrylate foams using supercritical carbon dioxide as a blowing agent",
+    "first_author_lastname": "Jacobs",
+    "year": 2007,
+    "journal": "Polymer",
+    "doi": "10.1016/j.polymer.2007.05.002",
+    "keywords": [
+      "Poly(styrene-co-methyl methacrylate)",
+      "Supercritical carbon dioxide",
+      "Foam morphology"
+    ],
+    "polymer_systems": [
+      "Poly(styrene-co-methyl methacrylate)"
+    ],
+    "polymerization_methods": null,
+    "paper_type": "research article",
+    "paper_id": "Jacobs2007",
+    "source_filename": "A parametric study into the morphology of polystyrene-co-methyl methacrylate foams using supercritical carbon dioxide as a blowing agent.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 10,
+    "n_figures": 9,
+    "n_tables": 1,
+    "file_size_kb": 2732.8,
+    "char_count": 29324,
+    "estimated_tokens": 7331,
+    "n_sections": 0
+  },
+  "pipeline_config": {
+    "pipeline_version": "v2.1",
+    "extraction_method": "plain",
+    "metadata_extractor": "qwen3.5:27b",
+    "iterative_extractor": "qwen3.6:35b-a3b",
+    "cq_generator": "gemma4:31b",
+    "cq_validator": "deepseek-r1:32b",
+    "cq_refiner": "qwen3.5:35b",
+    "embedding_model": "BAAI/bge-small-en-v1.5"
+  },
+  "execution_stats": {
+    "text_extraction_secs": 7.43,
+    "total_wall_secs": 1008.8,
+    "stage_seconds": {
+      "chunk": 0.0,
+      "index": 0.23,
+      "extract": 317.41,
+      "retrieve": 0.23,
+      "generate": 429.02,
+      "validate": 213.88,
+      "refine": 40.11,
+      "evaluate": 0.4
+    }
+  },
+  "pipeline_version": "v2.1",
+  "n_personas": 7,
+  "n_questions": 49,
+  "was_refined": true,
+  "persona_questions": {
+    "SYNTH": [
+      {
+        "id": "Jacobs2007_SYNTH_Q001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "What is the monomer composition of the poly(styrene-co-methyl methacrylate) (SMMA) used in this study?",
+        "expected_answer": "The SMMA contains 40 wt% styrene.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-methyl methacrylate)"
+          },
+          {
+            "role": "property",
+            "term": "monomer feed ratio"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_SYNTH_Q002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the number-average molecular weight (Mn) and polydispersity of the SMMA copolymer?",
+        "expected_answer": "The Mn was 76 kg/mol and the polydispersity was 2.2.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "number-average molecular weight (Mn)"
+          },
+          {
+            "role": "property",
+            "term": "polydispersity"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_SYNTH_Q003",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "How does the depressurization rate affect the density and cell wall thickness of the resulting SMMA foams?",
+        "expected_answer": "A lower depressurization rate leads to higher foam densities and thicker cell walls.",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_SYNTH_Q004",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of increasing the foaming temperature on the homogeneity of the SMMA foam morphology?",
+        "expected_answer": "Foam homogeneity decreases with increasing temperature.",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "homogeneity"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_SYNTH_Q005",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was supercritical carbon dioxide (scCO2) selected as the blowing agent for the production of these glassy polymer foams?",
+        "expected_answer": "It was selected as a green technology replacement for volatile organic compounds (VOCs) because it is relatively inert, nonflammable, cheap, and generally regarded as safe (GRAS-status).",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "supercritical carbon dioxide"
+          },
+          {
+            "role": "class",
+            "term": "blowing agent"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_SYNTH_GAP001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in the study, and which standard was used for the GPC analysis?",
+        "expected_answer": "The Mn was 76 kg/mol and the polydispersity was 2.2, determined using a polystyrene standard.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "number-average molecular weight (Mn)"
+          },
+          {
+            "role": "property",
+            "term": "polydispersity"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene standard"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_SYNTH_GAP002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the depressurization rate affect the cell size and foam density of the SMMA foams?",
+        "expected_answer": "An increase in depressurization time (lower rate) leads to a dramatic increase in cell size and results in higher foam densities due to thicker cell walls.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "density"
+          },
+          {
+            "role": "class",
+            "term": "depressurization rate"
+          }
+        ]
+      }
+    ],
+    "CHAR": [
+      {
+        "id": "Jacobs2007_CHAR_Q001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What were the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in this study?",
+        "expected_answer": "The Mn was 76 kg/mol and the polydispersity was 2.2.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-methyl methacrylate)"
+          },
+          {
+            "role": "property",
+            "term": "number-average molecular weight (Mn)"
+          },
+          {
+            "role": "property",
+            "term": "polydispersity"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_CHAR_Q002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which analytical technique was used to determine the glass transition temperature (Tg) of the SMMA polymer, and what was the resulting value?",
+        "expected_answer": "DSC analysis (Perkin Elmer Pyris Diamond DSC) was used, revealing a Tg of 101 °C.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SMMA"
+          },
+          {
+            "role": "property",
+            "term": "glass transition temperature"
+          },
+          {
+            "role": "class",
+            "term": "DSC"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_CHAR_Q003",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "How was the cell structure and morphology of the polymeric foams characterized, and what sample preparation was required?",
+        "expected_answer": "The cell structure was determined by Scanning Electron Microscopy (SEM) (Jeol, JSM-500) after cryofracturing and sputter coating the sample with a gold layer of approximately 55 nm.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SMMA foam"
+          },
+          {
+            "role": "property",
+            "term": "foam morphology"
+          },
+          {
+            "role": "class",
+            "term": "SEM"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_CHAR_Q004",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What instrument was used to perform the CO2 sorption measurements to determine solubility in SMMA?",
+        "expected_answer": "A magnetic suspension balance (MSB) (Rubotherm, Germany) was used.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SMMA"
+          },
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          },
+          {
+            "role": "class",
+            "term": "magnetic suspension balance"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_CHAR_Q005",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "COMPARATIVE",
+        "question": "According to the SEM analysis of SMMA foams, how does the thickness of cell walls in foams produced at low temperatures compare to those produced at higher temperatures?",
+        "expected_answer": "The cell walls of the foams produced at low temperatures are much thicker as compared to the foams produced at higher temperatures.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SMMA foam"
+          },
+          {
+            "role": "property",
+            "term": "cell wall thickness"
+          },
+          {
+            "role": "property",
+            "term": "temperature"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly reference the SEM analysis mentioned in the evidence, ensuring the answer is directly extractable from the text without requiring multi-step inference."
+      },
+      {
+        "id": "Jacobs2007_CHAR_GAP001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What were the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in this study?",
+        "expected_answer": "The Mn was 76 kg/mol and the polydispersity was 2.2.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-methyl methacrylate)"
+          },
+          {
+            "role": "property",
+            "term": "number-average molecular weight (Mn)"
+          },
+          {
+            "role": "property",
+            "term": "polydispersity"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_CHAR_GAP002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which analytical technique and standard were used to determine the molecular weight properties of the SMMA polymer?",
+        "expected_answer": "GPC analysis with polystyrene standard was used.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "GPC"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene standard"
+          },
+          {
+            "role": "property",
+            "term": "molecular weight"
+          }
+        ]
+      }
+    ],
+    "PROC": [
+      {
+        "id": "Jacobs2007_PROC_Q001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the foaming temperature affect the homogeneity and cell wall thickness of SMMA foams?",
+        "expected_answer": "Increasing the temperature leads to a decrease in foam homogeneity and results in thinner cell walls compared to foams produced at lower temperatures.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "homogeneity"
+          },
+          {
+            "role": "property",
+            "term": "cell wall thickness"
+          },
+          {
+            "role": "class",
+            "term": "foaming temperature"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PROC_Q002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of the depressurization rate on the cell size and density of the resulting SMMA foam?",
+        "expected_answer": "The cell size increases with an increasing depressurization rate; conversely, longer depressurization times (lower rates) lead to higher foam densities.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PROC_Q003",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the saturation temperature and pressure used to evaluate the effect of varying depressurization times from 30 s to 600 s?",
+        "expected_answer": "The experiments were performed at a constant saturation temperature of 118 °C and a pressure of 200 bar.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "saturation temperature"
+          },
+          {
+            "role": "class",
+            "term": "saturation pressure"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PROC_Q004",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the saturation pressure influence the foam density and morphology homogeneity of SMMA foams?",
+        "expected_answer": "Increasing the pressure decreases the foam density and results in a broader cell area distribution, which decreases the homogeneity of the foam morphology.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "saturation pressure"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          },
+          {
+            "role": "property",
+            "term": "homogeneity"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PROC_Q005",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "MOTIVATION",
+        "question": "Why is the control of the glass transition temperature (Tg) and CO2 solubility critical for obtaining a desired foam morphology in SMMA?",
+        "expected_answer": "Because the vitrification of the polymer matrix (where Tg increases until growth stops), combined with saturation pressure, temperature, and depressurization rate, determines the final morphology of the foam.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "glass transition temperature"
+          },
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          },
+          {
+            "role": "property",
+            "term": "foam morphology"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PROC_GAP001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the depressurization time affect the cell size and foam density of SMMA foams produced at 200 bar and 118 °C?",
+        "expected_answer": "Increasing the depressurization time leads to a dramatic increase in cell size (e.g., from 2806 mm2 at <1s to 27,614 mm2 at 100s) and results in higher foam densities compared to rapid expansion experiments.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PROC_GAP002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What equipment was used to perform the CO2 sorption measurements for the SMMA polymer?",
+        "expected_answer": "The sorption measurements were performed using a magnetic suspension balance (MSB) from Rubotherm, Germany.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Rubotherm MSB"
+          },
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          }
+        ]
+      }
+    ],
+    "COMP": [
+      {
+        "id": "Jacobs2007_COMP_Q001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "Which equation of state (EOS) was used to estimate polymer swelling and correct the CO2 sorption isotherms?",
+        "expected_answer": "The Sanchez-Lacombe equation of state (SL-EOS).",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "equation of state"
+          },
+          {
+            "role": "individual",
+            "term": "Sanchez-Lacombe equation of state"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_COMP_Q002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "According to the analysis of SMMA foams produced at 110 °C and 118 °C, how does increasing the temperature affect the homogeneity of the foam morphology?",
+        "expected_answer": "Homogeneity decreases with increasing temperature because the cell walls become thinner, cells interfere with each other by obstruction, and the cell size distribution broadens.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "homogeneity"
+          },
+          {
+            "role": "property",
+            "term": "temperature"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to specify the exact temperature conditions (110 °C and 118 °C) and the expected answer was expanded to include the mechanistic details (cell wall thickness, obstruction, distribution broadening) explicitly stated in the evidence passages."
+      },
+      {
+        "id": "Jacobs2007_COMP_Q003",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of increasing the depressurization rate on the average cell size of the foam?",
+        "expected_answer": "The cell size increases with increasing depressurization rate.",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_COMP_Q004",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENUMERATION",
+        "question": "Which quantitative parameters were derived from the Voronoi diagrams to characterize the foam morphology?",
+        "expected_answer": "The average cell area, cell area distribution, and the dimensionless homogeneity number (HPA).",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Voronoi diagram"
+          },
+          {
+            "role": "property",
+            "term": "homogeneity number"
+          },
+          {
+            "role": "property",
+            "term": "cell area distribution"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_COMP_Q005",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in the study?",
+        "expected_answer": "Mn is 76 kg/mol and the polydispersity is 2.2.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "number-average molecular weight"
+          },
+          {
+            "role": "property",
+            "term": "polydispersity"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_COMP_GAP001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "Based on the experiments at a constant saturation temperature of 110 °C, how does increasing the saturation pressure affect the homogeneity of the SMMA foam morphology?",
+        "expected_answer": "Increasing the pressure results in a decrease of the homogeneity because the cell area distribution broadens, even though the average cell area remains of the same order of magnitude.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "homogeneity"
+          },
+          {
+            "role": "property",
+            "term": "cell area distribution"
+          },
+          {
+            "role": "class",
+            "term": "pressure"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to specify the constant saturation temperature (110 °C) used in the pressure experiments, and the expected answer was refined to explicitly mention the 'cell area distribution broadening' as the cause, which is the specific evidence provided in the text."
+      },
+      {
+        "id": "Jacobs2007_COMP_GAP002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "Which equation of state (EOS) was used to correct the CO2 sorption measurements for polymer swelling?",
+        "expected_answer": "The Sanchez-Lacombe equation of state (SL-EOS).",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Sanchez-Lacombe equation of state"
+          },
+          {
+            "role": "property",
+            "term": "swelling"
+          }
+        ]
+      }
+    ],
+    "ONTO": [
+      {
+        "id": "Jacobs2007_ONTO_Q001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the material poly(styrene-co-methyl methacrylate) and its glass transition temperature?",
+        "expected_answer": "(poly(styrene-co-methyl methacrylate), hasProperty, glass transition temperature)",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-methyl methacrylate)"
+          },
+          {
+            "role": "property",
+            "term": "hasProperty"
+          },
+          {
+            "role": "individual",
+            "term": "glass transition temperature"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the relationship is explicitly stated in the Experimental Section where the Tg is determined by DSC analysis."
+      },
+      {
+        "id": "Jacobs2007_ONTO_Q002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to measure the number-average molecular weight (Mn) of the poly(styrene-co-methyl methacrylate) copolymer?",
+        "expected_answer": "GPC",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Method"
+          },
+          {
+            "role": "property",
+            "term": "characterisedBy"
+          },
+          {
+            "role": "individual",
+            "term": "GPC"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the Experimental Section explicitly states 'GPC analysis' was used to determine Mn."
+      },
+      {
+        "id": "Jacobs2007_ONTO_Q003",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What ontology class should the 'depressurization rate' be assigned to based on its role in controlling foam morphology?",
+        "expected_answer": "Condition",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Condition"
+          },
+          {
+            "role": "individual",
+            "term": "depressurization rate"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the Abstract explicitly lists 'depressurization rate' alongside temperature and pressure as foaming parameters used to control morphology."
+      },
+      {
+        "id": "Jacobs2007_ONTO_Q004",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENUMERATION",
+        "question": "Which entities categorized as 'Property' are used to describe the resulting SMMA foam morphology in this study?",
+        "expected_answer": "foam morphology, cell area distribution, and homogeneity",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Property"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Jacobs2007_ONTO_Q005",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple captures the relationship between the SMMA foam and the analytical technique used to visualize its cell structure?",
+        "expected_answer": "(SMMA foam, characterisedBy, SEM)",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SMMA foam"
+          },
+          {
+            "role": "property",
+            "term": "characterisedBy"
+          },
+          {
+            "role": "individual",
+            "term": "SEM"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the Experimental Section explicitly states the cell structure was determined by Scanning Electron Microscopy (SEM)."
+      },
+      {
+        "id": "Jacobs2007_ONTO_GAP001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which instrument or method was used to determine the CO2 solubility (sorption) of the SMMA polymer?",
+        "expected_answer": "A magnetic suspension balance (MSB) from Rubotherm, Germany.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Instrument"
+          },
+          {
+            "role": "property",
+            "term": "characterisedBy"
+          },
+          {
+            "role": "individual",
+            "term": "Rubotherm MSB"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the Experimental Section explicitly identifies the use of a magnetic suspension balance (MSB) from Rubotherm for sorption experiments."
+      },
+      {
+        "id": "Jacobs2007_ONTO_GAP002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the SMMA polymer and the polystyrene standard used during GPC analysis?",
+        "expected_answer": "(poly(styrene-co-methyl methacrylate), usesReferenceMaterial, polystyrene standard)",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-methyl methacrylate)"
+          },
+          {
+            "role": "property",
+            "term": "usesReferenceMaterial"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene standard"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the Experimental Section explicitly states that GPC analysis was performed with a polystyrene standard."
+      }
+    ],
+    "STU": [
+      {
+        "id": "Jacobs2007_STU_Q001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the number-average molecular weight (Mn) of the poly(styrene-co-methyl methacrylate) used in this study?",
+        "expected_answer": "The number-average molecular weight (Mn) is 76 kg/mol (or 76,000 g/mol).",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-methyl methacrylate)"
+          },
+          {
+            "role": "property",
+            "term": "number-average molecular weight (Mn)"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_STU_Q002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to characterize the cell structure and morphology of the SMMA foams?",
+        "expected_answer": "Scanning Electron Microscopy (SEM) was used to determine the cell structure of the polymeric foam.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SMMA foam"
+          },
+          {
+            "role": "property",
+            "term": "foam morphology"
+          },
+          {
+            "role": "class",
+            "term": "SEM"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_STU_Q003",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was supercritical carbon dioxide (scCO2) chosen as a blowing agent instead of volatile organic compounds (VOCs)?",
+        "expected_answer": "scCO2 was chosen because it is a green technology alternative to VOCs; it is relatively inert, nonflammable, cheap, generally regarded as safe (GRAS-status), and has mild critical conditions.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "supercritical carbon dioxide"
+          },
+          {
+            "role": "class",
+            "term": "blowing agent"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_STU_Q004",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "By which process were the SMMA foams produced in this study?",
+        "expected_answer": "The foams were produced using supercritical carbon dioxide (scCO2) as a blowing agent, involving a saturation step followed by a depressurization step.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SMMA foam"
+          },
+          {
+            "role": "class",
+            "term": "supercritical carbon dioxide"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_STU_Q005",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the glass transition temperature (Tg) of the poly(styrene-co-methyl methacrylate) used in the experiments?",
+        "expected_answer": "The glass transition temperature (Tg) is 101 °C.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-methyl methacrylate)"
+          },
+          {
+            "role": "property",
+            "term": "glass transition temperature"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_STU_GAP001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to determine the cell structure and morphology of the SMMA foams?",
+        "expected_answer": "Scanning Electron Microscopy (SEM) was used to determine the cell structure, and the resulting pictures were converted into Voronoi diagrams to analyze cell area and homogeneity.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SMMA foam"
+          },
+          {
+            "role": "property",
+            "term": "foam morphology"
+          },
+          {
+            "role": "class",
+            "term": "SEM"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_STU_GAP002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why is supercritical carbon dioxide (scCO2) considered a promising alternative to volatile organic compounds (VOCs) for producing polymer foams?",
+        "expected_answer": "Supercritical carbon dioxide is preferred because it is relatively inert, nonflammable, cheap, generally regarded as safe (GRAS-status), and more environmentally friendly than VOCs, which often disappear into the environment.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "supercritical carbon dioxide"
+          },
+          {
+            "role": "class",
+            "term": "VOCs"
+          }
+        ]
+      }
+    ],
+    "PHD": [
+      {
+        "id": "Jacobs2007_PHD_Q001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "MOTIVATION",
+        "question": "What research gap in the existing literature on scCO2-based foaming motivated the quantitative and systematic approach taken in this study?",
+        "expected_answer": "While previous publications on foaming with CO2 usually only present SEM pictures and general density/cell size information, the specific foaming conditions required to yield economically required foam densities for larger-scale application are hardly available in the literature.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "scCO2-based foaming"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PHD_Q002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "How does the depressurization rate influence the cell size and foam density of SMMA foams?",
+        "expected_answer": "The cell size increases with an increasing depressurization rate; however, long depressurization times (lower rates) lead to higher foam densities because the cell walls are thicker compared to foams produced via rapid expansion.",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PHD_Q003",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of increasing saturation temperature on the homogeneity and cell wall thickness of the resulting SMMA foams?",
+        "expected_answer": "Increasing temperature leads to a decrease in foam homogeneity (due to cells competing for growth via obstruction) and results in thinner cell walls compared to foams produced at lower temperatures.",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          },
+          {
+            "role": "property",
+            "term": "homogeneity"
+          },
+          {
+            "role": "property",
+            "term": "cell wall thickness"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PHD_Q004",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "GAP_OR_LIMITATION",
+        "question": "What limitation is acknowledged regarding the SEM analysis of SMMA foams produced with depressurization times exceeding 230 seconds?",
+        "expected_answer": "Foams produced with depressurization times above 230 s have cells that are too large to be analyzed with SEM, even at the minimum magnification.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PHD_Q005",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "COMPARATIVE",
+        "question": "How does the effect of increasing saturation pressure on foam morphology compare to the effect of increasing saturation temperature?",
+        "expected_answer": "The effect of increasing pressure is considered similar to the effect of increasing temperature, as both lead to a decrease in density and homogeneity; however, the effect of pressure is less pronounced because the difference in solubility is relatively small.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation pressure"
+          },
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          },
+          {
+            "role": "property",
+            "term": "homogeneity"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PHD_GAP001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the saturation temperature affect the homogeneity and cell size distribution of SMMA foams?",
+        "expected_answer": "Increasing the temperature leads to a broader cell size distribution and a decrease in homogeneity because cells reach a size where they interfere with each other by obstruction and compete for growth.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "homogeneity"
+          },
+          {
+            "role": "property",
+            "term": "cell size distribution"
+          },
+          {
+            "role": "class",
+            "term": "SMMA foam"
+          }
+        ]
+      },
+      {
+        "id": "Jacobs2007_PHD_GAP002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "GAP_OR_LIMITATION",
+        "question": "What limitation is acknowledged regarding the statistical significance of the morphology analysis for foams produced with slower depressurization rates?",
+        "expected_answer": "The authors state that due to the limited number of analyzed cells in foams produced with slower depressurization rates, the results for average area and the homogeneity number have less statistical meaning.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "homogeneity"
+          },
+          {
+            "role": "class",
+            "term": "depressurization rate"
+          }
+        ]
+      }
+    ]
+  },
+  "final_questions": [
+    {
+      "id": "Jacobs2007_SYNTH_Q001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "What is the monomer composition of the poly(styrene-co-methyl methacrylate) (SMMA) used in this study?",
+      "expected_answer": "The SMMA contains 40 wt% styrene.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(styrene-co-methyl methacrylate)"
+        },
+        {
+          "role": "property",
+          "term": "monomer feed ratio"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_SYNTH_Q002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What were the number-average molecular weight (Mn) and polydispersity of the SMMA copolymer?",
+      "expected_answer": "The Mn was 76 kg/mol and the polydispersity was 2.2.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "number-average molecular weight (Mn)"
+        },
+        {
+          "role": "property",
+          "term": "polydispersity"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_SYNTH_Q003",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CAUSAL",
+      "question": "How does the depressurization rate affect the density and cell wall thickness of the resulting SMMA foams?",
+      "expected_answer": "A lower depressurization rate leads to higher foam densities and thicker cell walls.",
+      "source_section": "Results and discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "depressurization rate"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_SYNTH_Q004",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CAUSAL",
+      "question": "What is the effect of increasing the foaming temperature on the homogeneity of the SMMA foam morphology?",
+      "expected_answer": "Foam homogeneity decreases with increasing temperature.",
+      "source_section": "Results and discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "homogeneity"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_SYNTH_Q005",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was supercritical carbon dioxide (scCO2) selected as the blowing agent for the production of these glassy polymer foams?",
+      "expected_answer": "It was selected as a green technology replacement for volatile organic compounds (VOCs) because it is relatively inert, nonflammable, cheap, and generally regarded as safe (GRAS-status).",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "supercritical carbon dioxide"
+        },
+        {
+          "role": "class",
+          "term": "blowing agent"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_SYNTH_GAP001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What were the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in the study, and which standard was used for the GPC analysis?",
+      "expected_answer": "The Mn was 76 kg/mol and the polydispersity was 2.2, determined using a polystyrene standard.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "number-average molecular weight (Mn)"
+        },
+        {
+          "role": "property",
+          "term": "polydispersity"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene standard"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_SYNTH_GAP002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the depressurization rate affect the cell size and foam density of the SMMA foams?",
+      "expected_answer": "An increase in depressurization time (lower rate) leads to a dramatic increase in cell size and results in higher foam densities due to thicker cell walls.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "density"
+        },
+        {
+          "role": "class",
+          "term": "depressurization rate"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_CHAR_Q001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What were the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in this study?",
+      "expected_answer": "The Mn was 76 kg/mol and the polydispersity was 2.2.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(styrene-co-methyl methacrylate)"
+        },
+        {
+          "role": "property",
+          "term": "number-average molecular weight (Mn)"
+        },
+        {
+          "role": "property",
+          "term": "polydispersity"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_CHAR_Q002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which analytical technique was used to determine the glass transition temperature (Tg) of the SMMA polymer, and what was the resulting value?",
+      "expected_answer": "DSC analysis (Perkin Elmer Pyris Diamond DSC) was used, revealing a Tg of 101 °C.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SMMA"
+        },
+        {
+          "role": "property",
+          "term": "glass transition temperature"
+        },
+        {
+          "role": "class",
+          "term": "DSC"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_CHAR_Q003",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "How was the cell structure and morphology of the polymeric foams characterized, and what sample preparation was required?",
+      "expected_answer": "The cell structure was determined by Scanning Electron Microscopy (SEM) (Jeol, JSM-500) after cryofracturing and sputter coating the sample with a gold layer of approximately 55 nm.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SMMA foam"
+        },
+        {
+          "role": "property",
+          "term": "foam morphology"
+        },
+        {
+          "role": "class",
+          "term": "SEM"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_CHAR_Q004",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What instrument was used to perform the CO2 sorption measurements to determine solubility in SMMA?",
+      "expected_answer": "A magnetic suspension balance (MSB) (Rubotherm, Germany) was used.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SMMA"
+        },
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        },
+        {
+          "role": "class",
+          "term": "magnetic suspension balance"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_CHAR_Q005",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "COMPARATIVE",
+      "question": "According to the SEM analysis of SMMA foams, how does the thickness of cell walls in foams produced at low temperatures compare to those produced at higher temperatures?",
+      "expected_answer": "The cell walls of the foams produced at low temperatures are much thicker as compared to the foams produced at higher temperatures.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SMMA foam"
+        },
+        {
+          "role": "property",
+          "term": "cell wall thickness"
+        },
+        {
+          "role": "property",
+          "term": "temperature"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to explicitly reference the SEM analysis mentioned in the evidence, ensuring the answer is directly extractable from the text without requiring multi-step inference."
+    },
+    {
+      "id": "Jacobs2007_CHAR_GAP001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What were the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in this study?",
+      "expected_answer": "The Mn was 76 kg/mol and the polydispersity was 2.2.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(styrene-co-methyl methacrylate)"
+        },
+        {
+          "role": "property",
+          "term": "number-average molecular weight (Mn)"
+        },
+        {
+          "role": "property",
+          "term": "polydispersity"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_CHAR_GAP002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which analytical technique and standard were used to determine the molecular weight properties of the SMMA polymer?",
+      "expected_answer": "GPC analysis with polystyrene standard was used.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "GPC"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene standard"
+        },
+        {
+          "role": "property",
+          "term": "molecular weight"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PROC_Q001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the foaming temperature affect the homogeneity and cell wall thickness of SMMA foams?",
+      "expected_answer": "Increasing the temperature leads to a decrease in foam homogeneity and results in thinner cell walls compared to foams produced at lower temperatures.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "homogeneity"
+        },
+        {
+          "role": "property",
+          "term": "cell wall thickness"
+        },
+        {
+          "role": "class",
+          "term": "foaming temperature"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PROC_Q002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "What is the effect of the depressurization rate on the cell size and density of the resulting SMMA foam?",
+      "expected_answer": "The cell size increases with an increasing depressurization rate; conversely, longer depressurization times (lower rates) lead to higher foam densities.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "depressurization rate"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PROC_Q003",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What were the saturation temperature and pressure used to evaluate the effect of varying depressurization times from 30 s to 600 s?",
+      "expected_answer": "The experiments were performed at a constant saturation temperature of 118 °C and a pressure of 200 bar.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "saturation temperature"
+        },
+        {
+          "role": "class",
+          "term": "saturation pressure"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PROC_Q004",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the saturation pressure influence the foam density and morphology homogeneity of SMMA foams?",
+      "expected_answer": "Increasing the pressure decreases the foam density and results in a broader cell area distribution, which decreases the homogeneity of the foam morphology.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "saturation pressure"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        },
+        {
+          "role": "property",
+          "term": "homogeneity"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PROC_Q005",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "MOTIVATION",
+      "question": "Why is the control of the glass transition temperature (Tg) and CO2 solubility critical for obtaining a desired foam morphology in SMMA?",
+      "expected_answer": "Because the vitrification of the polymer matrix (where Tg increases until growth stops), combined with saturation pressure, temperature, and depressurization rate, determines the final morphology of the foam.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "glass transition temperature"
+        },
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        },
+        {
+          "role": "property",
+          "term": "foam morphology"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PROC_GAP001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the depressurization time affect the cell size and foam density of SMMA foams produced at 200 bar and 118 °C?",
+      "expected_answer": "Increasing the depressurization time leads to a dramatic increase in cell size (e.g., from 2806 mm2 at <1s to 27,614 mm2 at 100s) and results in higher foam densities compared to rapid expansion experiments.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "depressurization rate"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PROC_GAP002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What equipment was used to perform the CO2 sorption measurements for the SMMA polymer?",
+      "expected_answer": "The sorption measurements were performed using a magnetic suspension balance (MSB) from Rubotherm, Germany.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Rubotherm MSB"
+        },
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_COMP_Q001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "Which equation of state (EOS) was used to estimate polymer swelling and correct the CO2 sorption isotherms?",
+      "expected_answer": "The Sanchez-Lacombe equation of state (SL-EOS).",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "equation of state"
+        },
+        {
+          "role": "individual",
+          "term": "Sanchez-Lacombe equation of state"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_COMP_Q002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "According to the analysis of SMMA foams produced at 110 °C and 118 °C, how does increasing the temperature affect the homogeneity of the foam morphology?",
+      "expected_answer": "Homogeneity decreases with increasing temperature because the cell walls become thinner, cells interfere with each other by obstruction, and the cell size distribution broadens.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "homogeneity"
+        },
+        {
+          "role": "property",
+          "term": "temperature"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to specify the exact temperature conditions (110 °C and 118 °C) and the expected answer was expanded to include the mechanistic details (cell wall thickness, obstruction, distribution broadening) explicitly stated in the evidence passages."
+    },
+    {
+      "id": "Jacobs2007_COMP_Q003",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "What is the effect of increasing the depressurization rate on the average cell size of the foam?",
+      "expected_answer": "The cell size increases with increasing depressurization rate.",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "depressurization rate"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_COMP_Q004",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENUMERATION",
+      "question": "Which quantitative parameters were derived from the Voronoi diagrams to characterize the foam morphology?",
+      "expected_answer": "The average cell area, cell area distribution, and the dimensionless homogeneity number (HPA).",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Voronoi diagram"
+        },
+        {
+          "role": "property",
+          "term": "homogeneity number"
+        },
+        {
+          "role": "property",
+          "term": "cell area distribution"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_COMP_Q005",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in the study?",
+      "expected_answer": "Mn is 76 kg/mol and the polydispersity is 2.2.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "number-average molecular weight"
+        },
+        {
+          "role": "property",
+          "term": "polydispersity"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_COMP_GAP001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "Based on the experiments at a constant saturation temperature of 110 °C, how does increasing the saturation pressure affect the homogeneity of the SMMA foam morphology?",
+      "expected_answer": "Increasing the pressure results in a decrease of the homogeneity because the cell area distribution broadens, even though the average cell area remains of the same order of magnitude.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "homogeneity"
+        },
+        {
+          "role": "property",
+          "term": "cell area distribution"
+        },
+        {
+          "role": "class",
+          "term": "pressure"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to specify the constant saturation temperature (110 °C) used in the pressure experiments, and the expected answer was refined to explicitly mention the 'cell area distribution broadening' as the cause, which is the specific evidence provided in the text."
+    },
+    {
+      "id": "Jacobs2007_COMP_GAP002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "Which equation of state (EOS) was used to correct the CO2 sorption measurements for polymer swelling?",
+      "expected_answer": "The Sanchez-Lacombe equation of state (SL-EOS).",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Sanchez-Lacombe equation of state"
+        },
+        {
+          "role": "property",
+          "term": "swelling"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_ONTO_Q001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between the material poly(styrene-co-methyl methacrylate) and its glass transition temperature?",
+      "expected_answer": "(poly(styrene-co-methyl methacrylate), hasProperty, glass transition temperature)",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(styrene-co-methyl methacrylate)"
+        },
+        {
+          "role": "property",
+          "term": "hasProperty"
+        },
+        {
+          "role": "individual",
+          "term": "glass transition temperature"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "The question is valid as the relationship is explicitly stated in the Experimental Section where the Tg is determined by DSC analysis."
+    },
+    {
+      "id": "Jacobs2007_ONTO_Q002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method was used to measure the number-average molecular weight (Mn) of the poly(styrene-co-methyl methacrylate) copolymer?",
+      "expected_answer": "GPC",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Method"
+        },
+        {
+          "role": "property",
+          "term": "characterisedBy"
+        },
+        {
+          "role": "individual",
+          "term": "GPC"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "The question is valid as the Experimental Section explicitly states 'GPC analysis' was used to determine Mn."
+    },
+    {
+      "id": "Jacobs2007_ONTO_Q003",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What ontology class should the 'depressurization rate' be assigned to based on its role in controlling foam morphology?",
+      "expected_answer": "Condition",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Condition"
+        },
+        {
+          "role": "individual",
+          "term": "depressurization rate"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "The question is valid as the Abstract explicitly lists 'depressurization rate' alongside temperature and pressure as foaming parameters used to control morphology."
+    },
+    {
+      "id": "Jacobs2007_ONTO_Q004",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENUMERATION",
+      "question": "Which entities categorized as 'Property' are used to describe the resulting SMMA foam morphology in this study?",
+      "expected_answer": "foam morphology, cell area distribution, and homogeneity",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Property"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+    },
+    {
+      "id": "Jacobs2007_ONTO_Q005",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple captures the relationship between the SMMA foam and the analytical technique used to visualize its cell structure?",
+      "expected_answer": "(SMMA foam, characterisedBy, SEM)",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SMMA foam"
+        },
+        {
+          "role": "property",
+          "term": "characterisedBy"
+        },
+        {
+          "role": "individual",
+          "term": "SEM"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "The question is valid as the Experimental Section explicitly states the cell structure was determined by Scanning Electron Microscopy (SEM)."
+    },
+    {
+      "id": "Jacobs2007_ONTO_GAP001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which instrument or method was used to determine the CO2 solubility (sorption) of the SMMA polymer?",
+      "expected_answer": "A magnetic suspension balance (MSB) from Rubotherm, Germany.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Instrument"
+        },
+        {
+          "role": "property",
+          "term": "characterisedBy"
+        },
+        {
+          "role": "individual",
+          "term": "Rubotherm MSB"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "The question is valid as the Experimental Section explicitly identifies the use of a magnetic suspension balance (MSB) from Rubotherm for sorption experiments."
+    },
+    {
+      "id": "Jacobs2007_ONTO_GAP002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between the SMMA polymer and the polystyrene standard used during GPC analysis?",
+      "expected_answer": "(poly(styrene-co-methyl methacrylate), usesReferenceMaterial, polystyrene standard)",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(styrene-co-methyl methacrylate)"
+        },
+        {
+          "role": "property",
+          "term": "usesReferenceMaterial"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene standard"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "The question is valid as the Experimental Section explicitly states that GPC analysis was performed with a polystyrene standard."
+    },
+    {
+      "id": "Jacobs2007_STU_Q001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the number-average molecular weight (Mn) of the poly(styrene-co-methyl methacrylate) used in this study?",
+      "expected_answer": "The number-average molecular weight (Mn) is 76 kg/mol (or 76,000 g/mol).",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(styrene-co-methyl methacrylate)"
+        },
+        {
+          "role": "property",
+          "term": "number-average molecular weight (Mn)"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_STU_Q002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method was used to characterize the cell structure and morphology of the SMMA foams?",
+      "expected_answer": "Scanning Electron Microscopy (SEM) was used to determine the cell structure of the polymeric foam.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SMMA foam"
+        },
+        {
+          "role": "property",
+          "term": "foam morphology"
+        },
+        {
+          "role": "class",
+          "term": "SEM"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_STU_Q003",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was supercritical carbon dioxide (scCO2) chosen as a blowing agent instead of volatile organic compounds (VOCs)?",
+      "expected_answer": "scCO2 was chosen because it is a green technology alternative to VOCs; it is relatively inert, nonflammable, cheap, generally regarded as safe (GRAS-status), and has mild critical conditions.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "supercritical carbon dioxide"
+        },
+        {
+          "role": "class",
+          "term": "blowing agent"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_STU_Q004",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "By which process were the SMMA foams produced in this study?",
+      "expected_answer": "The foams were produced using supercritical carbon dioxide (scCO2) as a blowing agent, involving a saturation step followed by a depressurization step.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SMMA foam"
+        },
+        {
+          "role": "class",
+          "term": "supercritical carbon dioxide"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_STU_Q005",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the glass transition temperature (Tg) of the poly(styrene-co-methyl methacrylate) used in the experiments?",
+      "expected_answer": "The glass transition temperature (Tg) is 101 °C.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(styrene-co-methyl methacrylate)"
+        },
+        {
+          "role": "property",
+          "term": "glass transition temperature"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_STU_GAP001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method was used to determine the cell structure and morphology of the SMMA foams?",
+      "expected_answer": "Scanning Electron Microscopy (SEM) was used to determine the cell structure, and the resulting pictures were converted into Voronoi diagrams to analyze cell area and homogeneity.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SMMA foam"
+        },
+        {
+          "role": "property",
+          "term": "foam morphology"
+        },
+        {
+          "role": "class",
+          "term": "SEM"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_STU_GAP002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why is supercritical carbon dioxide (scCO2) considered a promising alternative to volatile organic compounds (VOCs) for producing polymer foams?",
+      "expected_answer": "Supercritical carbon dioxide is preferred because it is relatively inert, nonflammable, cheap, generally regarded as safe (GRAS-status), and more environmentally friendly than VOCs, which often disappear into the environment.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "supercritical carbon dioxide"
+        },
+        {
+          "role": "class",
+          "term": "VOCs"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PHD_Q001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "MOTIVATION",
+      "question": "What research gap in the existing literature on scCO2-based foaming motivated the quantitative and systematic approach taken in this study?",
+      "expected_answer": "While previous publications on foaming with CO2 usually only present SEM pictures and general density/cell size information, the specific foaming conditions required to yield economically required foam densities for larger-scale application are hardly available in the literature.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "scCO2-based foaming"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PHD_Q002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "CAUSAL",
+      "question": "How does the depressurization rate influence the cell size and foam density of SMMA foams?",
+      "expected_answer": "The cell size increases with an increasing depressurization rate; however, long depressurization times (lower rates) lead to higher foam densities because the cell walls are thicker compared to foams produced via rapid expansion.",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "depressurization rate"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PHD_Q003",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "CAUSAL",
+      "question": "What is the effect of increasing saturation temperature on the homogeneity and cell wall thickness of the resulting SMMA foams?",
+      "expected_answer": "Increasing temperature leads to a decrease in foam homogeneity (due to cells competing for growth via obstruction) and results in thinner cell walls compared to foams produced at lower temperatures.",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation temperature"
+        },
+        {
+          "role": "property",
+          "term": "homogeneity"
+        },
+        {
+          "role": "property",
+          "term": "cell wall thickness"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PHD_Q004",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "GAP_OR_LIMITATION",
+      "question": "What limitation is acknowledged regarding the SEM analysis of SMMA foams produced with depressurization times exceeding 230 seconds?",
+      "expected_answer": "Foams produced with depressurization times above 230 s have cells that are too large to be analyzed with SEM, even at the minimum magnification.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PHD_Q005",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "COMPARATIVE",
+      "question": "How does the effect of increasing saturation pressure on foam morphology compare to the effect of increasing saturation temperature?",
+      "expected_answer": "The effect of increasing pressure is considered similar to the effect of increasing temperature, as both lead to a decrease in density and homogeneity; however, the effect of pressure is less pronounced because the difference in solubility is relatively small.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation pressure"
+        },
+        {
+          "role": "property",
+          "term": "saturation temperature"
+        },
+        {
+          "role": "property",
+          "term": "homogeneity"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PHD_GAP001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the saturation temperature affect the homogeneity and cell size distribution of SMMA foams?",
+      "expected_answer": "Increasing the temperature leads to a broader cell size distribution and a decrease in homogeneity because cells reach a size where they interfere with each other by obstruction and compete for growth.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "homogeneity"
+        },
+        {
+          "role": "property",
+          "term": "cell size distribution"
+        },
+        {
+          "role": "class",
+          "term": "SMMA foam"
+        }
+      ]
+    },
+    {
+      "id": "Jacobs2007_PHD_GAP002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "GAP_OR_LIMITATION",
+      "question": "What limitation is acknowledged regarding the statistical significance of the morphology analysis for foams produced with slower depressurization rates?",
+      "expected_answer": "The authors state that due to the limited number of analyzed cells in foams produced with slower depressurization rates, the results for average area and the homogeneity number have less statistical meaning.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "homogeneity"
+        },
+        {
+          "role": "class",
+          "term": "depressurization rate"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "quality_score": 0.827,
+    "pass_score_threshold": 0.75,
+    "active_checks": [
+      "persona_coverage",
+      "question_count",
+      "answerability",
+      "specificity",
+      "section_validity",
+      "concept_usage",
+      "redundancy"
+    ],
+    "issues": [
+      "Near-duplicate questions: Jacobs2007_SYNTH_Q003 ~ Jacobs2007_SYNTH_GAP002 (cos=0.98)",
+      "Near-duplicate questions: Jacobs2007_SYNTH_Q003 ~ Jacobs2007_PROC_Q002 (cos=0.97)",
+      "Near-duplicate questions: Jacobs2007_SYNTH_Q003 ~ Jacobs2007_PROC_GAP001 (cos=0.94)",
+      "Near-duplicate questions: Jacobs2007_SYNTH_Q003 ~ Jacobs2007_PHD_Q002 (cos=0.98)",
+      "Near-duplicate questions: Jacobs2007_SYNTH_Q004 ~ Jacobs2007_PROC_Q001 (cos=0.96)",
+      "Near-duplicate questions: Jacobs2007_SYNTH_Q004 ~ Jacobs2007_COMP_Q002 (cos=0.98)",
+      "Near-duplicate questions: Jacobs2007_SYNTH_Q004 ~ Jacobs2007_COMP_GAP001 (cos=0.93)",
+      "Near-duplicate questions: Jacobs2007_SYNTH_Q004 ~ Jacobs2007_PHD_Q003 (cos=0.93)",
+      "Near-duplicate questions: Jacobs2007_SYNTH_Q004 ~ Jacobs2007_PHD_GAP001 (cos=0.93)",
+      "Near-duplicate questions: Jacobs2007_SYNTH_GAP001 ~ Jacobs2007_CHAR_Q001 (cos=0.94)",
+      "[CHAR] Jacobs2007_CHAR_Q005: fail (score=0.30) - The answer can be derived from the passages with a short inference (e.g., 'premature stop in cell growth' and 'increase in cell size'), but it requires connecting multiple pieces of information.",
+      "[COMP] Jacobs2007_COMP_Q002: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+      "[COMP] Jacobs2007_COMP_GAP001: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+      "[ONTO] Jacobs2007_ONTO_Q001: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+      "[ONTO] Jacobs2007_ONTO_Q002: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+      "[ONTO] Jacobs2007_ONTO_Q003: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+      "[ONTO] Jacobs2007_ONTO_Q004: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+      "[ONTO] Jacobs2007_ONTO_Q005: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+      "[ONTO] Jacobs2007_ONTO_GAP001: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+      "[ONTO] Jacobs2007_ONTO_GAP002: borderline (score=0.50) - The answer can be derived from the passages with a short inference."
+    ],
+    "issues_by_persona": {
+      "CHAR": [
+        "[CHAR] Jacobs2007_CHAR_Q005: fail (score=0.30) - The answer can be derived from the passages with a short inference (e.g., 'premature stop in cell growth' and 'increase in cell size'), but it requires connecting multiple pieces of information."
+      ],
+      "COMP": [
+        "[COMP] Jacobs2007_COMP_Q002: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+        "[COMP] Jacobs2007_COMP_GAP001: borderline (score=0.50) - The answer can be derived from the passages with a short inference."
+      ],
+      "ONTO": [
+        "[ONTO] Jacobs2007_ONTO_Q001: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+        "[ONTO] Jacobs2007_ONTO_Q002: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+        "[ONTO] Jacobs2007_ONTO_Q003: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+        "[ONTO] Jacobs2007_ONTO_Q004: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+        "[ONTO] Jacobs2007_ONTO_Q005: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+        "[ONTO] Jacobs2007_ONTO_GAP001: borderline (score=0.50) - The answer can be derived from the passages with a short inference.",
+        "[ONTO] Jacobs2007_ONTO_GAP002: borderline (score=0.50) - The answer can be derived from the passages with a short inference."
+      ]
+    },
+    "per_question": {
+      "Jacobs2007_SYNTH_Q001": {
+        "id": "Jacobs2007_SYNTH_Q001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_SYNTH_Q002": {
+        "id": "Jacobs2007_SYNTH_Q002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_SYNTH_Q003": {
+        "id": "Jacobs2007_SYNTH_Q003",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_SYNTH_Q004": {
+        "id": "Jacobs2007_SYNTH_Q004",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_SYNTH_Q005": {
+        "id": "Jacobs2007_SYNTH_Q005",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_SYNTH_GAP001": {
+        "id": "Jacobs2007_SYNTH_GAP001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_SYNTH_GAP002": {
+        "id": "Jacobs2007_SYNTH_GAP002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_CHAR_Q001": {
+        "id": "Jacobs2007_CHAR_Q001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_CHAR_Q002": {
+        "id": "Jacobs2007_CHAR_Q002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_CHAR_Q003": {
+        "id": "Jacobs2007_CHAR_Q003",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_CHAR_Q004": {
+        "id": "Jacobs2007_CHAR_Q004",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_CHAR_Q005": {
+        "id": "Jacobs2007_CHAR_Q005",
+        "score": 0.3,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., 'premature stop in cell growth' and 'increase in cell size'), but it requires connecting multiple pieces of information."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "fail"
+      },
+      "Jacobs2007_CHAR_GAP001": {
+        "id": "Jacobs2007_CHAR_GAP001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_CHAR_GAP002": {
+        "id": "Jacobs2007_CHAR_GAP002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PROC_Q001": {
+        "id": "Jacobs2007_PROC_Q001",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21886
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PROC_Q002": {
+        "id": "Jacobs2007_PROC_Q002",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21886
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PROC_Q003": {
+        "id": "Jacobs2007_PROC_Q003",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21886
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PROC_Q004": {
+        "id": "Jacobs2007_PROC_Q004",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21886
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PROC_Q005": {
+        "id": "Jacobs2007_PROC_Q005",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21886
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PROC_GAP001": {
+        "id": "Jacobs2007_PROC_GAP001",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21886
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PROC_GAP002": {
+        "id": "Jacobs2007_PROC_GAP002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21886
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_COMP_Q001": {
+        "id": "Jacobs2007_COMP_Q001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_COMP_Q002": {
+        "id": "Jacobs2007_COMP_Q002",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "borderline"
+      },
+      "Jacobs2007_COMP_Q003": {
+        "id": "Jacobs2007_COMP_Q003",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_COMP_Q004": {
+        "id": "Jacobs2007_COMP_Q004",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_COMP_Q005": {
+        "id": "Jacobs2007_COMP_Q005",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_COMP_GAP001": {
+        "id": "Jacobs2007_COMP_GAP001",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "borderline"
+      },
+      "Jacobs2007_COMP_GAP002": {
+        "id": "Jacobs2007_COMP_GAP002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_ONTO_Q001": {
+        "id": "Jacobs2007_ONTO_Q001",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23643
+        },
+        "verdict": "borderline"
+      },
+      "Jacobs2007_ONTO_Q002": {
+        "id": "Jacobs2007_ONTO_Q002",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23643
+        },
+        "verdict": "borderline"
+      },
+      "Jacobs2007_ONTO_Q003": {
+        "id": "Jacobs2007_ONTO_Q003",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23643
+        },
+        "verdict": "borderline"
+      },
+      "Jacobs2007_ONTO_Q004": {
+        "id": "Jacobs2007_ONTO_Q004",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23643
+        },
+        "verdict": "borderline"
+      },
+      "Jacobs2007_ONTO_Q005": {
+        "id": "Jacobs2007_ONTO_Q005",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23643
+        },
+        "verdict": "borderline"
+      },
+      "Jacobs2007_ONTO_GAP001": {
+        "id": "Jacobs2007_ONTO_GAP001",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23643
+        },
+        "verdict": "borderline"
+      },
+      "Jacobs2007_ONTO_GAP002": {
+        "id": "Jacobs2007_ONTO_GAP002",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23643
+        },
+        "verdict": "borderline"
+      },
+      "Jacobs2007_STU_Q001": {
+        "id": "Jacobs2007_STU_Q001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_STU_Q002": {
+        "id": "Jacobs2007_STU_Q002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_STU_Q003": {
+        "id": "Jacobs2007_STU_Q003",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_STU_Q004": {
+        "id": "Jacobs2007_STU_Q004",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_STU_Q005": {
+        "id": "Jacobs2007_STU_Q005",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_STU_GAP001": {
+        "id": "Jacobs2007_STU_GAP001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_STU_GAP002": {
+        "id": "Jacobs2007_STU_GAP002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 23653
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PHD_Q001": {
+        "id": "Jacobs2007_PHD_Q001",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21910
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PHD_Q002": {
+        "id": "Jacobs2007_PHD_Q002",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21910
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PHD_Q003": {
+        "id": "Jacobs2007_PHD_Q003",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21910
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PHD_Q004": {
+        "id": "Jacobs2007_PHD_Q004",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21910
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PHD_Q005": {
+        "id": "Jacobs2007_PHD_Q005",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21910
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PHD_GAP001": {
+        "id": "Jacobs2007_PHD_GAP001",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21910
+        },
+        "verdict": "pass"
+      },
+      "Jacobs2007_PHD_GAP002": {
+        "id": "Jacobs2007_PHD_GAP002",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 9,
+          "evidence_chars": 21910
+        },
+        "verdict": "pass"
+      }
+    },
+    "questions_to_refine": [
+      "Jacobs2007_CHAR_Q005",
+      "Jacobs2007_COMP_Q002",
+      "Jacobs2007_COMP_GAP001",
+      "Jacobs2007_ONTO_Q001",
+      "Jacobs2007_ONTO_Q002",
+      "Jacobs2007_ONTO_Q003",
+      "Jacobs2007_ONTO_Q004",
+      "Jacobs2007_ONTO_Q005",
+      "Jacobs2007_ONTO_GAP001",
+      "Jacobs2007_ONTO_GAP002"
+    ],
+    "n_total": 49,
+    "n_pass": 39,
+    "n_borderline": 9,
+    "n_fail": 1
+  },
+  "refined_questions": {
+    "CHAR": [
+      {
+        "id": "Jacobs2007_CHAR_Q005",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "COMPARATIVE",
+        "question": "According to the SEM analysis of SMMA foams, how does the thickness of cell walls in foams produced at low temperatures compare to those produced at higher temperatures?",
+        "expected_answer": "The cell walls of the foams produced at low temperatures are much thicker as compared to the foams produced at higher temperatures.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SMMA foam"
+          },
+          {
+            "role": "property",
+            "term": "cell wall thickness"
+          },
+          {
+            "role": "property",
+            "term": "temperature"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly reference the SEM analysis mentioned in the evidence, ensuring the answer is directly extractable from the text without requiring multi-step inference."
+      }
+    ],
+    "COMP": [
+      {
+        "id": "Jacobs2007_COMP_Q002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "According to the analysis of SMMA foams produced at 110 °C and 118 °C, how does increasing the temperature affect the homogeneity of the foam morphology?",
+        "expected_answer": "Homogeneity decreases with increasing temperature because the cell walls become thinner, cells interfere with each other by obstruction, and the cell size distribution broadens.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "homogeneity"
+          },
+          {
+            "role": "property",
+            "term": "temperature"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to specify the exact temperature conditions (110 °C and 118 °C) and the expected answer was expanded to include the mechanistic details (cell wall thickness, obstruction, distribution broadening) explicitly stated in the evidence passages."
+      },
+      {
+        "id": "Jacobs2007_COMP_GAP001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "Based on the experiments at a constant saturation temperature of 110 °C, how does increasing the saturation pressure affect the homogeneity of the SMMA foam morphology?",
+        "expected_answer": "Increasing the pressure results in a decrease of the homogeneity because the cell area distribution broadens, even though the average cell area remains of the same order of magnitude.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "homogeneity"
+          },
+          {
+            "role": "property",
+            "term": "cell area distribution"
+          },
+          {
+            "role": "class",
+            "term": "pressure"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to specify the constant saturation temperature (110 °C) used in the pressure experiments, and the expected answer was refined to explicitly mention the 'cell area distribution broadening' as the cause, which is the specific evidence provided in the text."
+      }
+    ],
+    "ONTO": [
+      {
+        "id": "Jacobs2007_ONTO_Q001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the material poly(styrene-co-methyl methacrylate) and its glass transition temperature?",
+        "expected_answer": "(poly(styrene-co-methyl methacrylate), hasProperty, glass transition temperature)",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-methyl methacrylate)"
+          },
+          {
+            "role": "property",
+            "term": "hasProperty"
+          },
+          {
+            "role": "individual",
+            "term": "glass transition temperature"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the relationship is explicitly stated in the Experimental Section where the Tg is determined by DSC analysis."
+      },
+      {
+        "id": "Jacobs2007_ONTO_Q002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to measure the number-average molecular weight (Mn) of the poly(styrene-co-methyl methacrylate) copolymer?",
+        "expected_answer": "GPC",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Method"
+          },
+          {
+            "role": "property",
+            "term": "characterisedBy"
+          },
+          {
+            "role": "individual",
+            "term": "GPC"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the Experimental Section explicitly states 'GPC analysis' was used to determine Mn."
+      },
+      {
+        "id": "Jacobs2007_ONTO_Q003",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What ontology class should the 'depressurization rate' be assigned to based on its role in controlling foam morphology?",
+        "expected_answer": "Condition",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Condition"
+          },
+          {
+            "role": "individual",
+            "term": "depressurization rate"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the Abstract explicitly lists 'depressurization rate' alongside temperature and pressure as foaming parameters used to control morphology."
+      },
+      {
+        "id": "Jacobs2007_ONTO_Q004",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENUMERATION",
+        "question": "Which entities categorized as 'Property' are used to describe the resulting SMMA foam morphology in this study?",
+        "expected_answer": "foam morphology, cell area distribution, and homogeneity",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Property"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Jacobs2007_ONTO_Q005",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple captures the relationship between the SMMA foam and the analytical technique used to visualize its cell structure?",
+        "expected_answer": "(SMMA foam, characterisedBy, SEM)",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SMMA foam"
+          },
+          {
+            "role": "property",
+            "term": "characterisedBy"
+          },
+          {
+            "role": "individual",
+            "term": "SEM"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the Experimental Section explicitly states the cell structure was determined by Scanning Electron Microscopy (SEM)."
+      },
+      {
+        "id": "Jacobs2007_ONTO_GAP001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which instrument or method was used to determine the CO2 solubility (sorption) of the SMMA polymer?",
+        "expected_answer": "A magnetic suspension balance (MSB) from Rubotherm, Germany.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Instrument"
+          },
+          {
+            "role": "property",
+            "term": "characterisedBy"
+          },
+          {
+            "role": "individual",
+            "term": "Rubotherm MSB"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the Experimental Section explicitly identifies the use of a magnetic suspension balance (MSB) from Rubotherm for sorption experiments."
+      },
+      {
+        "id": "Jacobs2007_ONTO_GAP002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the SMMA polymer and the polystyrene standard used during GPC analysis?",
+        "expected_answer": "(poly(styrene-co-methyl methacrylate), usesReferenceMaterial, polystyrene standard)",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-methyl methacrylate)"
+          },
+          {
+            "role": "property",
+            "term": "usesReferenceMaterial"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene standard"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question is valid as the Experimental Section explicitly states that GPC analysis was performed with a polystyrene standard."
+      }
+    ]
+  },
+  "evaluation": {
+    "status": "reference_free",
+    "schema_version": "v2.1",
+    "paper_id": "Jacobs2007",
+    "n_questions": 49,
+    "overall_score": 0.764,
+    "weights": {
+      "coverage": 0.38,
+      "question_faithfulness": 0.44,
+      "diversity": 0.12,
+      "triplifiability": 0.06
+    },
+    "families": {
+      "coverage": {
+        "score": 0.652,
+        "concepts": {
+          "total": 68,
+          "referenced": 46,
+          "ratio": 0.676
+        },
+        "properties": {
+          "total": 13,
+          "referenced": 9,
+          "ratio": 0.692
+        },
+        "relations": {
+          "total": 49,
+          "referenced": 26,
+          "ratio": 0.531
+        },
+        "uncovered_concept_examples": [
+          "cell growth",
+          "comfort cushioning",
+          "high pressure vessel",
+          "interaction parameter (kij)",
+          "packaging",
+          "pmma",
+          "polymer-co2 mixture",
+          "pressure sensor",
+          "pump",
+          "pycnometer"
+        ]
+      },
+      "question_faithfulness": {
+        "score": 0.99,
+        "mean_cosine": 0.807,
+        "min_cosine": 0.684,
+        "n_well_faithful": 48,
+        "n_weak": 1,
+        "n_off_paper": 0,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        },
+        "weakest_example": {
+          "question_id": "Jacobs2007_PROC_Q003",
+          "question": "What were the saturation temperature and pressure used to evaluate the effect of varying depressurization times from 30 s to 600 s?",
+          "max_cosine": 0.683914065361023
+        }
+      },
+      "diversity": {
+        "score": 0.292,
+        "mean_pairwise_cos": 0.708,
+        "max_pairwise_cos": 1.0,
+        "n_near_duplicates": 40,
+        "dup_threshold": 0.92
+      },
+      "triplifiability": {
+        "score": 0.755,
+        "pct_full_triples": 0.51,
+        "pct_partial": 0.49
+      }
+    },
+    "diagnostics": {
+      "answer_verifiability": {
+        "mean_cosine": 0.718,
+        "min_cosine": 0.529,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        }
+      },
+      "specificity": {
+        "score": 0.753,
+        "avg_question_chars": 118.8,
+        "pct_with_numeric_value": 0.306,
+        "pct_with_unit": 0.082,
+        "pct_referencing_concept": 1.0
+      }
+    },
+    "reproducibility": {
+      "pipeline_version": "v2.1",
+      "models": {
+        "metadata_extractor": "qwen3.5:27b",
+        "iterative_extractor": "qwen3.6:35b-a3b",
+        "cq_generator": "gemma4:31b",
+        "cq_validator": "deepseek-r1:32b",
+        "cq_refiner": "qwen3.5:35b",
+        "_embedding_model": "BAAI/bge-small-en-v1.5",
+        "_embedding_backend": "local (sentence-transformers)",
+        "_embedding_dim": 384,
+        "_note": "Three distinct LLM families (Qwen / Gemma / DeepSeek) across stages for cross-family diversity. Embeddings via LOCAL sentence-transformers (deterministic, no network) because the shared Ollama bge-m3 endpoint is unreliable from inside long-running pipeline processes (see history v1.3). All LLM calls use think=false + format=json on the client.",
+        "_history": [
+          "v0: cq_generator=llama4:scout -> failed to produce JSON output; switched to qwen3:32b + format=json.",
+          "v0.5: all stages on qwen3:32b/deepseek-r1:32b; embedder local BAAI/bge-small-en-v1.5.",
+          "v1.0: per-stage model selection, bge-m3 via Ollama, refiner added, evaluator reduced to 5 reference-free families.",
+          "v1.1: reverted embedder to local BAAI/bge-small-en-v1.5 because the shared Ollama bge-m3 endpoint was returning 500s. Added per-question evidence retrieval in validator + refiner to fix a truncation bug (was capping evidence at 7000 chars regardless of how many passages were available).",
+          "v1.2: switched embedder back to bge-m3 via Ollama after a probe showed the endpoint was responsive when called with proper exponential-backoff retry. Added 1s process-wide throttling between embed calls.",
+          "v1.3 (this version): reverted to local BAAI/bge-small-en-v1.5. The bge-m3 Ollama path stays healthy in isolation (standalone curl + Python) but the long-running pipeline process gets sustained 500s in stages 5-6, even with exponential backoff, 1s throttling, AND Connection: close to force fresh TCP per call. Most likely cause is the shared upstream evicting bge-m3 from memory while the heavy LLMs (gemma4:31b, deepseek-r1:32b) are loaded, with the eviction window outlasting our 230s retry budget. Local sentence-transformers is slightly lower quality (384-dim vs 1024) but always finishes."
+        ]
+      },
+      "validator_pass_threshold_per_question": null,
+      "coverage_gap_pass": {
+        "enabled": true,
+        "max_gap_concepts": 8
+      },
+      "rolling_state_caps": {
+        "concepts": 80,
+        "relations": 60,
+        "properties": 60,
+        "findings": 40
+      },
+      "embedder_dim": 384
+    }
+  }
+}

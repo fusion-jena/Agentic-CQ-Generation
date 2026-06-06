@@ -1,0 +1,84 @@
+{
+  "_note": "JSON schema describing the structured knowledge fields that the iterative extractor produces per chunk. The extractor outputs a dict with four keys; the rolling state merges them across chunks. This matches the v2.1 extraction schema — v2.1 renamed 'axioms' to 'findings' and dropped 'use_cases' from the prior version.",
+
+  "concepts": {
+    "_description": "Named entities that should become ontology individuals or classes (materials, methods, instruments, applications).",
+    "fields": {
+      "name":               "Canonical name as it appears in the paper (string, required)",
+      "category":           "One of: Material | Process | Property | Method | Condition | Instrument | Application",
+      "aliases":            "Alternative names or abbreviations used in the paper (list of strings, optional)",
+      "evidence_sentence":  "Full verbatim sentence from the chunk that mentions this concept (string, required)",
+      "evidence_context":   "1-2 sentences either side of evidence_sentence for context (string, required)",
+      "confidence":         "high | medium | low — calibrated to how explicitly the chunk states this (string, required)",
+      "mentions":           "Count of how many times this concept has appeared across chunks (integer, auto-managed)"
+    },
+    "example": {
+      "name":              "poly(styrene-co-methyl methacrylate)",
+      "category":          "Material",
+      "aliases":           ["P(S-co-MMA)", "PS-MMA copolymer"],
+      "evidence_sentence": "We synthesised poly(styrene-co-methyl methacrylate) via RAFT polymerization at 70 °C.",
+      "evidence_context":  "The copolymer was prepared in bulk. We synthesised poly(styrene-co-methyl methacrylate) via RAFT polymerization at 70 °C. The resulting material had Mn = 24,500 g/mol.",
+      "confidence":        "high"
+    }
+  },
+
+  "relations": {
+    "_description": "Subject-predicate-object triples linking concepts. Predicates should come from the relation_types list in domain_priors.json when possible.",
+    "fields": {
+      "subject":            "Concept name (string, required)",
+      "predicate":          "Relation type from domain_priors.relation_types (string, required)",
+      "object":             "Concept name or literal value (string, required)",
+      "evidence_sentence":  "Full verbatim sentence from chunk supporting this relation (string, required)",
+      "evidence_context":   "1-2 sentences either side for context (string, required)",
+      "confidence":         "high | medium | low (string, required)"
+    },
+    "example": {
+      "subject":            "poly(styrene-co-methyl methacrylate)",
+      "predicate":          "producedBy",
+      "object":             "RAFT polymerization",
+      "evidence_sentence":  "We synthesised poly(styrene-co-methyl methacrylate) via RAFT polymerization at 70 °C.",
+      "evidence_context":   "The copolymer was prepared in bulk. We synthesised poly(styrene-co-methyl methacrylate) via RAFT polymerization at 70 °C. The resulting material had Mn = 24,500 g/mol.",
+      "confidence":         "high"
+    }
+  },
+
+  "properties": {
+    "_description": "Measured numeric properties with their values, units, and the material they characterise.",
+    "fields": {
+      "material":           "Concept name the property belongs to (string, required)",
+      "property_name":      "Property name from concept_categories.Property in domain_priors.json (string, required)",
+      "numeric_value":      "Number reported, or null if qualitative (number or null)",
+      "unit":               "Unit string (e.g. 'g/mol', '°C', 'wt%') or null",
+      "method":             "Concept name of the method used to measure this, or null",
+      "evidence_sentence":  "Full verbatim sentence from chunk (string, required)",
+      "evidence_context":   "1-2 sentences either side for context (string, required)",
+      "confidence":         "high | medium | low (string, required)"
+    },
+    "example": {
+      "material":           "poly(styrene-co-methyl methacrylate)",
+      "property_name":      "number-average molecular weight (Mn)",
+      "numeric_value":      24500,
+      "unit":               "g/mol",
+      "method":             "GPC",
+      "evidence_sentence":  "Mn = 24,500 g/mol as determined by GPC using PS standards.",
+      "evidence_context":   "The resulting material was characterized thoroughly. Mn = 24,500 g/mol as determined by GPC using PS standards. Dispersity Đ was 1.14.",
+      "confidence":         "high"
+    }
+  },
+
+  "findings": {
+    "_description": "Empirical observations, conclusions, or cause-effect statements reported in the paper. Named 'findings' (not 'axioms') because papers report experimental results, not formal OWL axioms.",
+    "fields": {
+      "statement":          "Natural-language finding or conclusion (string, required)",
+      "evidence_sentence":  "Full verbatim sentence from chunk (string, required)",
+      "evidence_context":   "1-2 sentences either side for context (string, required)",
+      "confidence":         "high | medium | low (string, required)"
+    },
+    "example": {
+      "statement":          "Increasing the MMA feed ratio decreases the glass transition temperature of the copolymer.",
+      "evidence_sentence":  "Tg decreased monotonically as the MMA feed fraction rose from 0.2 to 0.8.",
+      "evidence_context":   "DSC measurements were performed at 10 °C/min. Tg decreased monotonically as the MMA feed fraction rose from 0.2 to 0.8. This trend was consistent across all molecular weights tested.",
+      "confidence":         "high"
+    }
+  }
+}

@@ -1,0 +1,960 @@
+{
+  "paper_id": "Costeux2014",
+  "pipeline_step": "intra_paper_dedup",
+  "pipeline_version": "v2",
+  "step_version": "step1_v1.0",
+  "dedup_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "dedup_prompt_v1.0",
+    "source_file": "papers/v2/cq_output/Costeux2014_ext-qw-35b_g-ge4-31b_v-der1-32b_r-qw-35b_cq_v2.json",
+    "source_pipeline_version": "v2.1"
+  },
+  "paper_metadata": {
+    "title": "CO2-Blown Nanocellular Foams",
+    "first_author_lastname": "Costeux",
+    "year": 2014,
+    "journal": "Journal of Applied Polymer Science",
+    "doi": "10.1002/app.41293",
+    "keywords": [
+      "foams",
+      "nanostructured polymers",
+      "porous materials",
+      "thermal properties"
+    ],
+    "polymer_systems": [],
+    "polymerization_methods": [],
+    "paper_type": "review article",
+    "paper_id": "Costeux2014",
+    "source_filename": "CO2-blown nanocellular foams.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 16,
+    "n_figures": 6,
+    "n_tables": 1,
+    "file_size_kb": 1143.4,
+    "char_count": 82104,
+    "estimated_tokens": 20526,
+    "n_sections": 0
+  },
+  "dedup_stats": {
+    "n_input_personas": 7,
+    "n_input_cqs": 48,
+    "n_representative_cqs": 40,
+    "n_merged_groups": 6,
+    "n_singletons": 21,
+    "n_discarded": 8,
+    "reduction_rate": 0.167,
+    "archetype_breakdown": {
+      "CAUSAL": {
+        "n_input": 10,
+        "n_output": 10
+      },
+      "COMPARATIVE": {
+        "n_input": 5,
+        "n_output": 2
+      },
+      "CONDITION_FOR_PROCESS": {
+        "n_input": 5,
+        "n_output": 5
+      },
+      "ENTITY_LOOKUP": {
+        "n_input": 10,
+        "n_output": 6
+      },
+      "ENUMERATION": {
+        "n_input": 3,
+        "n_output": 3
+      },
+      "GAP_OR_LIMITATION": {
+        "n_input": 2,
+        "n_output": 2
+      },
+      "METHOD_OF_MEASUREMENT": {
+        "n_input": 2,
+        "n_output": 2
+      },
+      "MOTIVATION": {
+        "n_input": 5,
+        "n_output": 4
+      },
+      "ONTOLOGY_TRIPLE": {
+        "n_input": 3,
+        "n_output": 3
+      },
+      "PROCESS_FOR_MATERIAL": {
+        "n_input": 3,
+        "n_output": 3
+      }
+    },
+    "parse_fallback_used": false,
+    "accounting_ok": true,
+    "grouping_ok": false,
+    "vague_answer_warnings": [
+      {
+        "id": "Costeux2014_CHAR_GAP001",
+        "persona_code": "CHAR",
+        "expected_answer": "1.6 x 10^16/cm3",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Costeux2014_ONTO_Q001",
+        "persona_code": "ONTO",
+        "expected_answer": "(polymeric nanocellular foams, producedBy, physical foaming)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Costeux2014_ONTO_Q003",
+        "persona_code": "ONTO",
+        "expected_answer": "Slow [SD], Fast [FD], and Intermediate [ID].",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Costeux2014_ONTO_Q004",
+        "persona_code": "ONTO",
+        "expected_answer": "(PEMA, hasProperty, cell size: 345 nm)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Costeux2014_ONTO_GAP001",
+        "persona_code": "ONTO",
+        "expected_answer": "(microcellular foams, producedBy, injection molding)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Costeux2014_STU_Q001",
+        "persona_code": "STU",
+        "expected_answer": "The cell size is 345 nm.",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Costeux2014_STU_Q005",
+        "persona_code": "STU",
+        "expected_answer": "The porosity is 79%.",
+        "flags": [
+          "answer_too_short"
+        ]
+      }
+    ]
+  },
+  "execution_stats": {
+    "total_wall_time": "1m 31s 725ms",
+    "llm_calls": [
+      {
+        "model": "deepseek-r1:32b",
+        "think": true,
+        "wall_time": "1m 31s 721ms",
+        "prompt_tokens": 6184,
+        "generated_tokens": 2056,
+        "thinking_chars": 0
+      }
+    ]
+  },
+  "representative_questions": [
+    {
+      "id": "Costeux2014_DEDUP_001",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_SYNTH_Q001",
+      "question": "Which foaming process was used to produce nanocellular foams from PEMA thick sheets with a cell size of 345 nm?",
+      "expected_answer": "A two-step (2S) foaming process with a second step at 60C, following fast depressurization [FD] and soaking at 33 MPa/30C.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_002",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_SYNTH_Q002",
+      "question": "According to the review, what were the specific soaking pressure and temperature conditions used by Yokoyama et al. to produce nanocellular foams from PS-b-PFMA diblock copolymers?",
+      "expected_answer": "Soaking pressure between 7.5–30 MPa at 60°C, followed by quenching to 0°C.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_003",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_SYNTH_Q003",
+      "question": "How does increasing the pressure drop rate affect the efficiency of cell nucleation in polymeric foams?",
+      "expected_answer": "Increasing the pressure drop rate may allow for the survival of a larger number of stable nuclei by reducing the time available for nuclei coalescence and ripening caused by gas diffusion.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_004",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_SYNTH_Q004",
+      "question": "What specific morphological outcome and cell size range were achieved by Dutriez et al. when using PMMA-b-PFMA diblock copolymers to produce nanocellular foams?",
+      "expected_answer": "They produced nanocellular foams with cell sizes in the range of 20–70 nm and porosities below 25%.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_005",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_SYNTH_Q005",
+      "question": "In the two-step foaming process for high Tg engineering plastics like PEI, what is the purpose of the second thermal conditioning step?",
+      "expected_answer": "The second thermal conditioning step is essential to get the nuclei to expand, as the initial sorption occurs at temperatures much lower than the Tg where plasticization is insufficient to render the polymer rubbery.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_006",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_SYNTH_GAP001",
+      "question": "For the synthesis of high-porosity nanocellular foams using a P(MMA-co-EMA) copolymer, what were the specific sorption pressure and temperature conditions used prior to the two-step foaming process?",
+      "expected_answer": "The sorption conditions were 30 MPa and 35 °C.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_007",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_SYNTH_GAP002",
+      "question": "How does the rate of pressure drop (depressurization) affect the final cell size and the survival of stable nuclei in CO2-blown polymeric foams?",
+      "expected_answer": "A very fast pressure drop rate is beneficial to minimize cell coalescence and ripening by gas diffusion, allowing a larger number of stable nuclei to survive and resulting in smaller cell sizes.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_008",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_CHAR_Q002",
+      "question": "Which analytical techniques were used by Condo et al. and Handa et al. to experimentally confirm the retrograde vitrification behavior of PMMA/CO2?",
+      "expected_answer": "Condo et al. used creep compliance measurements and Handa et al. used step-wise DSC experiments.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_009",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_CHAR_Q004",
+      "question": "What is the reported cell nucleation density (N0) for the PMMA foams produced by Handa et al. using the retrograde vitrification strategy?",
+      "expected_answer": "The cell density N0 was near 4 x 10^13/cm3.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_010",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_CHAR_Q005",
+      "question": "Which instrument was used by Dutriez et al. to observe the Tg behavior of PMMA/CO2, and what was the resulting Tg value compared to polystyrene (PS)?",
+      "expected_answer": "A quartz crystal resonator (QCM) was used; the Tg for PMMA/CO2 was depressed to about 10 °C, compared to about 35 °C for PS.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (comprehension) and provides specific numerical data.",
+      "merged_from": [
+        {
+          "id": "Costeux2014_STU_Q003",
+          "paper_id": "Costeux2014",
+          "persona_code": "STU",
+          "question": "Why is it necessary for polymeric nanocellular foams to have a cell size of 100 nm or less?",
+          "expected_answer": "Cell sizes of 100 nm or less are required for the foams to exhibit unique thermal, dielectric, optical, or mechanical properties due to gas or polymer confinement.",
+          "reason_discarded": "This question has the highest Bloom level (comprehension) and provides specific numerical data."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the cell nucleation density of PMMA foams."
+    },
+    {
+      "id": "Costeux2014_DEDUP_011",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_CHAR_GAP001",
+      "question": "What was the reported cell nucleation density for the high porosity foam produced from high molecular weight MMA-co-EMA copolymer using an optimized 2S process?",
+      "expected_answer": "1.6 x 10^16/cm3",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (comprehension) and provides specific numerical data.",
+      "merged_from": [
+        {
+          "id": "Costeux2014_STU_Q004",
+          "paper_id": "Costeux2014",
+          "persona_code": "STU",
+          "question": "What is the typical cell nucleation density range required to successfully produce nanocellular CO2-blown foams?",
+          "expected_answer": "The required cell nucleation density is 10^15 to 10^16 cells/cm^3.",
+          "reason_discarded": "This question has the highest Bloom level (comprehension) and provides specific numerical data."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about cell nucleation density for high porosity foams."
+    },
+    {
+      "id": "Costeux2014_DEDUP_012",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_CHAR_GAP002",
+      "question": "How does the cell size of PEMA foams compare to that of MMA-co-EMA copolymer foams when produced under similar conditions?",
+      "expected_answer": "PEMA produced foams with 345 nm cells, whereas MMA-co-EMA copolymers produced foams with 80 nm cells.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (analysis) and provides specific numerical data.",
+      "merged_from": [
+        {
+          "id": "Costeux2014_PROC_Q003",
+          "paper_id": "Costeux2014",
+          "persona_code": "PROC",
+          "question": "How does the cell size of nanofoams produced from MMA-co-EMA copolymers compare to those produced from PEMA under similar conditions?",
+          "expected_answer": "MMA-co-EMA copolymers produced foams with 80 nm cells, whereas PEMA produced foams with larger cells of 345 nm.",
+          "reason_discarded": "This question has the highest Bloom level (analysis) and provides specific numerical data."
+        }
+      ],
+      "merge_reasoning": "Both questions compare cell sizes of PEMA and MMA-co-EMA copolymer foams."
+    },
+    {
+      "id": "Costeux2014_DEDUP_013",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PROC_Q001",
+      "question": "How does the rate of depressurization affect the cell size and porosity of the resulting nanofoam?",
+      "expected_answer": "Slow depressurization increases cell size, presumably due to coalescence, while very fast pressure drop rates are beneficial for achieving high porosities.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_014",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PROC_Q002",
+      "question": "Under what sorption conditions and process type were the nanocellular foams with 345 nm cells and 79% porosity produced for PEMA?",
+      "expected_answer": "PEMA was processed under sorption conditions of 33 MPa and 30°C using a two-step (2S) process with thermal conditioning at 60°C.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_015",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PROC_Q004",
+      "question": "Why is a two-step (2S) foaming process used when soaking is performed at temperatures lower than the glass transition temperature (Tg) of an amorphous polymer?",
+      "expected_answer": "Because at these temperatures, depressurization triggers nucleation but little expansion is observed (the specimen may remain transparent); a second thermal conditioning step is required to increase the temperature and allow the nuclei to expand into cells.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_016",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PROC_Q005",
+      "question": "What is the effect of CO2 concentration levels (wt %) on the nucleation and growth of nanocellular foams?",
+      "expected_answer": "CO2 levels in excess of 25 wt % are essential to provide a high level of nucleation while maintaining enough dissolved CO2 to plasticize the polymer and allow cell growth.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (application) and provides specific numerical data.",
+      "merged_from": [
+        {
+          "id": "Costeux2014_CHAR_Q003",
+          "paper_id": "Costeux2014",
+          "persona_code": "CHAR",
+          "question": "How does the cell size of PMMA foams produced by Goel et al. using a one-step process compare to the cell size of PMMA foams produced by Handa et al. using a two-step process involving thermal annealing?",
+          "expected_answer": "The one-step process produced foams with an average cell size of 550 nm, whereas the two-step process with thermal annealing produced cell sizes as low as 350 nm.",
+          "reason_discarded": "This question has the highest Bloom level (application) and provides specific numerical data."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss the effect of CO2 concentration on nucleation and growth."
+    },
+    {
+      "id": "Costeux2014_DEDUP_017",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PROC_GAP001",
+      "question": "According to the study by Costeux et al., what is the effect of a slow pressure drop rate on cell size and porosity in nanofoams, and what is the proposed mechanism?",
+      "expected_answer": "Choosing conditions promoting expansion such as a slow depressurization rate leads to an increase in cell size, presumably due to coalescence.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (application) and provides specific numerical data.",
+      "merged_from": [
+        {
+          "id": "Costeux2014_CHAR_Q003",
+          "paper_id": "Costeux2014",
+          "persona_code": "CHAR",
+          "question": "How does the cell size of PMMA foams produced by Goel et al. using a one-step process compare to the cell size of PMMA foams produced by Handa et al. using a two-step process involving thermal annealing?",
+          "expected_answer": "The one-step process produced foams with an average cell size of 550 nm, whereas the two-step process with thermal annealing produced cell sizes as low as 350 nm.",
+          "reason_discarded": "This question has the highest Bloom level (application) and provides specific numerical data."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss the effect of pressure drop rate on cell size and porosity."
+    },
+    {
+      "id": "Costeux2014_DEDUP_018",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PROC_GAP002",
+      "question": "What were the sorption pressure and temperature conditions used to produce nanocellular foams with 80-82% porosity in P(MMA-co-EMA) using a two-step process?",
+      "expected_answer": "The sorption conditions were 30 MPa and 35 °C, followed by a second thermal conditioning step at 50–70 °C.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_019",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_COMP_Q003",
+      "question": "In PLA nanocomposites, how did the choice of organically modified clay (SBE vs ODA) affect the resulting cell size under optimal foaming temperature and 10 MPa CO2 pressure?",
+      "expected_answer": "The SBE modified clay, which showed better dispersion, produced foams with 360 nm cells, while the ODA nanocomposite produced larger cells of 2.6 um.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_020",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_COMP_Q004",
+      "question": "What effect did increasing the CO2 pressure to 28 MPa and lowering the temperature to 100–110C have on the cell size and porosity of PLA nanocomposites compared to the 10 MPa/165C process?",
+      "expected_answer": "It reduced the cell size to 200 nm, but significantly prevented foam expansion, resulting in very low porosities and sparse cells (N0 = 3 * 10^13/cm3).",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_021",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_COMP_Q005",
+      "question": "Which specific materials or nanocomposite systems are reported to produce cell sizes below 500 nm in the provided text?",
+      "expected_answer": "PEMA (345 nm), PMMA/PMMA-b-PBA-b-PMMA blend (200-300 nm), PLA nanocomposites with SBE (360 nm) or at 28MPa/100-110C (200 nm), HDPE nanocomposites (ca. 250 nm), SAN containing modified clays (300 nm), and PC nanocomposites with SiO2 (300-500 nm).",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_022",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_COMP_GAP001",
+      "question": "How does the pressure drop rate affect the cell nucleation density and the resulting foam structure in nanocellular foams?",
+      "expected_answer": "Increasing the pressure drop rate (fast depressurization) is beneficial to minimize cell coalescence and ripening by gas diffusion, allowing a larger number of stable nuclei to survive and resulting in higher cell nucleation densities.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_023",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_COMP_GAP002",
+      "question": "What theoretical framework is used to describe the rate of bubble formation in polymer/CO2 systems, and what are its quantitative limitations?",
+      "expected_answer": "The Classical Nucleation Theory (CNT) is used; however, it performs poorly in quantitatively predicting the absolute nuclei production rate, the absolute free energy barrier, or the maximum cell density due to failure to capture polymer/CO2 interactions at the interface of nanoscale bubbles.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_024",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_ONTO_Q001",
+      "question": "Which triple represents the relationship between polymeric nanocellular foams and the process of physical foaming with CO2?",
+      "expected_answer": "(polymeric nanocellular foams, producedBy, physical foaming)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This is an ONTO question, which takes priority.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_025",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_ONTO_Q002",
+      "question": "What ontology class should the term 'cell nucleation density' be assigned to, and what is its definition in the context of this domain?",
+      "expected_answer": "It should be assigned to the class Property; it refers to the number of effective nuclei that will result in an actual cell in the final foam.",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This is an ONTO question, which takes priority.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_026",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_ONTO_Q003",
+      "question": "Which types of depressurization methods are reported in the paper that should be represented as subclasses of a Depressurization process?",
+      "expected_answer": "Slow [SD], Fast [FD], and Intermediate [ID].",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This is an ONTO question, which takes priority.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_027",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_ONTO_Q004",
+      "question": "How should the relationship between the material PEMA and its measured cell size of 345 nm be represented as a KG triple?",
+      "expected_answer": "(PEMA, hasProperty, cell size: 345 nm)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This is an ONTO question, which takes priority.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_028",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_ONTO_Q005",
+      "question": "What class and property should be used to represent the 'sample type' descriptors such as [CF] solvent cast film and [SF] self-standing film?",
+      "expected_answer": "They should be represented as a class 'SampleType' or 'MaterialForm' linked via a property such as 'hasForm'.",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This is an ONTO question, which takes priority.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_029",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_ONTO_GAP001",
+      "question": "Which triple represents the relationship between microcellular foams and the production method of injection molding?",
+      "expected_answer": "(microcellular foams, producedBy, injection molding)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_030",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_ONTO_GAP002",
+      "question": "Which entities mentioned in the text should be categorized under the class 'Process' for the purpose of foam production?",
+      "expected_answer": "batch foaming process, injection molding, physical foaming, one-step process (1S), and two-step process (2S).",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_031",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_STU_Q001",
+      "question": "According to Table I, what is the cell size of PEMA nanocellular foams produced using a two-step process at 60°C?",
+      "expected_answer": "The cell size is 345 nm.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (recall) and provides specific numerical data.",
+      "merged_from": [
+        {
+          "id": "Costeux2014_CHAR_Q001",
+          "paper_id": "Costeux2014",
+          "persona_code": "CHAR",
+          "question": "What was the average cell size and porosity reported for PEMA foams produced using a two-step process at 60°C?",
+          "expected_answer": "The average cell size was 345 nm and the porosity was 79%.",
+          "reason_discarded": "This question has the highest Bloom level (recall) and provides specific numerical data."
+        },
+        {
+          "id": "Costeux2014_COMP_Q001",
+          "paper_id": "Costeux2014",
+          "persona_code": "COMP",
+          "question": "What is the reported cell size and porosity for PEMA foams produced using a 2S process at 60C with 33 MPa/30C saturation?",
+          "expected_answer": "The cell size is 345 nm and the porosity is 79%.",
+          "reason_discarded": "This question has the highest Bloom level (recall) and provides specific numerical data."
+        }
+      ],
+      "merge_reasoning": "All questions ask about the cell size of PEMA foams."
+    },
+    {
+      "id": "Costeux2014_DEDUP_032",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_STU_Q002",
+      "question": "By which physical foaming agent were the polymeric nanocellular foams in this study produced?",
+      "expected_answer": "They were produced using CO2 as the blowing agent.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Costeux2014_DEDUP_033",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_STU_GAP001",
+      "question": "By which process were microcellular foams initially produced before the technology was converted to a continuous process via injection molding?",
+      "expected_answer": "Microcellular foams were initially produced by a batch foaming process.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (recall) and provides specific process information.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_034",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_STU_GAP002",
+      "question": "What is a significant challenge remaining for the commercial manufacture of nanocellular foams?",
+      "expected_answer": "A significant challenge is the lack of scalability of the widely used solid-state batch foaming process.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (comprehension) and provides specific challenges.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_035",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PHD_Q001",
+      "question": "According to Costeux et al., how does the cell size and nucleation density of foams produced from SAN blended with MMA-co-EA compare to those produced from the individual blend components?",
+      "expected_answer": "Foams produced from the SAN/MMA-co-EA blends had more homogeneous cell size distribution and smaller cells (around 90–100 nm) with significantly higher cell nucleation densities (increased by several orders of magnitude) compared to foams obtained from either blend component alone.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (evaluation) and provides specific comparative data.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_036",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PHD_Q002",
+      "question": "What specific cell size threshold and expansion ratio are cited in the text as necessary to exploit the Knudsen effect for nanocellular superinsulation applications?",
+      "expected_answer": "The text states that producing foams with cell sizes as small as 100 nm and porosities as high as 85% (seven-fold expansion) is necessary to exploit the Knudsen effect for nanocellular superinsulation.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (evaluation) and provides specific thresholds.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_037",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PHD_Q003",
+      "question": "Why is it necessary to generate and stabilize approximately 10^15 to 10^16 cells/cm^3 when producing nanocellular CO2-blown foams, as opposed to the 10^9 to 10^12 cells/cm^3 required for microcellular foams?",
+      "expected_answer": "This high cell nucleation density is required to successfully produce nanocellular foams with cell sizes as small as 100 nm, which are expected to rival the properties of solvent-based nanoporous materials for applications like low-density lightweighting and thermal insulation.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (evaluation) and provides specific motivation.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_038",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PHD_Q004",
+      "question": "What limitation regarding porosity was observed in the dense foams produced by Nawaby et al. using ABS, and how does this compare to the porosity achieved by Costeux et al. using SAN/MMA-co-EA blends?",
+      "expected_answer": "Nawaby et al. observed that foams produced using ABS remained dense with a porosity of less than 25%, whereas Costeux et al. achieved porosities between 60% and 69% using SAN blended with MMA-co-EA.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (evaluation) and provides specific limitations.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_039",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PHD_GAP001",
+      "question": "What limitation does the paper acknowledge regarding the scalability of the batch foaming process used to produce nanocellular foams?",
+      "expected_answer": "The paper states that the lack of scalability of the widely used solid-state batch foaming process is one of the most substantial remaining challenges for the commercial manufacture of nanocellular foams.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (evaluation) and provides specific limitations.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    },
+    {
+      "id": "Costeux2014_DEDUP_040",
+      "paper_id": "Costeux2014",
+      "source_id": "Costeux2014_PHD_GAP002",
+      "question": "How does the use of a two-step (2S) foaming process with thermal conditioning below the Tg affect the porosity of foams produced from high Tg polymers like PES, PEI, and PI compared to the limitations of homogeneous nucleation?",
+      "expected_answer": "While homogeneous nucleation struggles to produce sufficient nuclei for expansion, the 2S process with thermal conditioning allows for the expansion of nuclei, achieving porosities of about 30% for 30 nm cells and up to 53% for 120 nm cells in PEI, though the outer surfaces often remain unfoamed.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (analysis) and provides specific process details.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this question."
+    }
+  ],
+  "discarded_questions": [
+    {
+      "id": "Costeux2014_CHAR_Q001",
+      "paper_id": "Costeux2014",
+      "question": "What was the average cell size and porosity reported for PEMA foams produced using a two-step process at 60°C?",
+      "expected_answer": "The average cell size was 345 nm and the porosity was 79%.",
+      "persona_code": "CHAR",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "absorbed_into": "(source: Costeux2014_STU_Q005)"
+    },
+    {
+      "id": "Costeux2014_CHAR_Q003",
+      "paper_id": "Costeux2014",
+      "question": "How does the cell size of PMMA foams produced by Goel et al. using a one-step process compare to the cell size of PMMA foams produced by Handa et al. using a two-step process involving thermal annealing?",
+      "expected_answer": "The one-step process produced foams with an average cell size of 550 nm, whereas the two-step process with thermal annealing produced cell sizes as low as 350 nm.",
+      "persona_code": "CHAR",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "absorbed_into": "Costeux2014_DEDUP_017"
+    },
+    {
+      "id": "Costeux2014_PROC_Q003",
+      "paper_id": "Costeux2014",
+      "question": "How does the cell size of nanofoams produced from MMA-co-EMA copolymers compare to those produced from PEMA under similar conditions?",
+      "expected_answer": "MMA-co-EMA copolymers produced foams with 80 nm cells, whereas PEMA produced foams with larger cells of 345 nm.",
+      "persona_code": "PROC",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "absorbed_into": "Costeux2014_DEDUP_012"
+    },
+    {
+      "id": "Costeux2014_COMP_Q001",
+      "paper_id": "Costeux2014",
+      "question": "What is the reported cell size and porosity for PEMA foams produced using a 2S process at 60C with 33 MPa/30C saturation?",
+      "expected_answer": "The cell size is 345 nm and the porosity is 79%.",
+      "persona_code": "COMP",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "absorbed_into": "(source: Costeux2014_STU_Q005)"
+    },
+    {
+      "id": "Costeux2014_COMP_Q002",
+      "paper_id": "Costeux2014",
+      "question": "How does the cell size of PEMA foams (345 nm) compare to the cell size of PMMA/PMMA-b-PBA-b-PMMA blend foams produced using a 2S process?",
+      "expected_answer": "PEMA foams have a cell size of 345 nm, whereas PMMA/PMMA-b-PBA-b-PMMA blend foams have a smaller cell size of 200–300 nm.",
+      "persona_code": "COMP",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "absorbed_into": "(source: Costeux2014_CHAR_Q003)"
+    },
+    {
+      "id": "Costeux2014_STU_Q003",
+      "paper_id": "Costeux2014",
+      "question": "Why is it necessary for polymeric nanocellular foams to have a cell size of 100 nm or less?",
+      "expected_answer": "Cell sizes of 100 nm or less are required for the foams to exhibit unique thermal, dielectric, optical, or mechanical properties due to gas or polymer confinement.",
+      "persona_code": "STU",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "absorbed_into": "Costeux2014_DEDUP_010"
+    },
+    {
+      "id": "Costeux2014_STU_Q004",
+      "paper_id": "Costeux2014",
+      "question": "What is the typical cell nucleation density range required to successfully produce nanocellular CO2-blown foams?",
+      "expected_answer": "The required cell nucleation density is 10^15 to 10^16 cells/cm^3.",
+      "persona_code": "STU",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Body",
+      "absorbed_into": "Costeux2014_DEDUP_011"
+    },
+    {
+      "id": "Costeux2014_STU_Q005",
+      "paper_id": "Costeux2014",
+      "question": "According to Table I, what is the porosity of PEMA foams produced via a two-step process at 60°C?",
+      "expected_answer": "The porosity is 79%.",
+      "persona_code": "STU",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Body",
+      "absorbed_into": "(source: Costeux2014_CHAR_Q001)"
+    }
+  ]
+}

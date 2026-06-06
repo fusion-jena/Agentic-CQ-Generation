@@ -1,0 +1,1661 @@
+{
+  "archetype": "MOTIVATION",
+  "pipeline_step": "cross_paper_generalization",
+  "pipeline_version": "v2",
+  "step_version": "step2_v1.0",
+  "generalize_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "generalize_prompt_v1.0",
+    "source_dir": "data/papers/v2/dedup/"
+  },
+  "arch_stats": {
+    "n_input_cqs": 68,
+    "n_gen_cqs": 59,
+    "n_papers": 14,
+    "wall_time": "59s 761ms"
+  },
+  "generalized_cqs": [
+    {
+      "gen_id": "GEN_MOTIVATION_001",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why was a specific foaming temperature selected for the process?",
+      "abstraction_reasoning": "PATTERN: Why was a specific temperature chosen? | ENTITY MAPPING: Bärwinkel2016_DEDUP_012 (140 °C) -> optimal processing parameter, Otsuka2008_DEDUP_016 (20 °C) -> localized nucleation in PMMA domains, Otsuka2008_DEDUP_032 (20 °C) -> same as above | WHY MEDIUM: Covers multiple papers discussing temperature selection for different reasons.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_012",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PROC_Q003",
+          "question": "Why was a foaming temperature of 140 °C and a foaming time of 10 s identified as the optimum combination for the compatibilized blends?",
+          "expected_answer": "This combination was selected to obtain homogeneous foams, as 140 °C provided the highest density reduction for SAN and 10 s prevented cell coalescence and collapsed cells.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_016",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PROC_Q004",
+          "question": "Why was the foaming temperature set to 20 °C to achieve localized bubble nucleation in the PMMA domains?",
+          "expected_answer": "At 20 °C, the foaming temperature is lower than the glass transition temperature (Tg) of PS (which levels out at 30 °C under 8.6 MPa CO2), ensuring the PS phase has high viscoelasticity while nucleation and growth are localized in the PMMA domains.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_032",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_STU_Q003",
+          "question": "Why was a foaming temperature of 20 °C chosen to localize bubble nucleation in the PMMA domains?",
+          "expected_answer": "Foaming at 20 °C was chosen because this temperature is lower than the glass transition temperature (Tg) of PS, meaning the viscoelasticity of the PS phase remained high, which confined nucleation and growth to the PMMA domains.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_002",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why was a specific polymer blend chosen for the study?",
+      "abstraction_reasoning": "PATTERN: Why this polymer blend? | ENTITY MAPPING: Liu2019_DEDUP_028 (PS60/PMMA40) -> wide range of phase domain sizes, Reglero2011_DEDUP_004 (PS+MAM and PMMA+SBM) -> immiscibility issues | WHY MEDIUM: Multiple papers discuss polymer blend selection for different reasons.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Liu2019",
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_028",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_STU_GAP002",
+          "question": "Why was the PS60/PMMA40 blend specifically chosen for this study on phase domain size?",
+          "expected_answer": "It was chosen because the dispersed phase domains (PMMA phase) can grow across a much wider range—from less than 2μm before annealing to around 15μm after 100-min annealing—compared to PS20/PMMA80 and PS80/PMMA20 blends.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_004",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_SYNTH_Q004",
+          "question": "Why were the PS+MAM and PMMA+SBM blends rejected for micro-foaming purposes?",
+          "expected_answer": "They were rejected due to complete immiscibility with the homopolymers, resulting in macro-scale phase separation and a heterogeneous structure.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_003",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why was a specific blowing agent parameter chosen?",
+      "abstraction_reasoning": "PATTERN: Why this blowing agent condition? | ENTITY MAPPING: Bärwinkel2016_DEDUP_004 (foaming time of 10s) -> optimal processing, Costeux2013_DEDUP_007 (ethyl acrylate copolymers) -> thermal stability | WHY MEDIUM: Covers different blowing agent aspects across papers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_004",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_SYNTH_Q004",
+          "question": "Why was a foaming time of 10 seconds selected as the optimum processing parameter compared to 30 seconds?",
+          "expected_answer": "A shorter foaming time of 10 s resulted in lower foam densities, whereas 30 s was expected to lead to further cell growth and cell coalescence, resulting in thicker cell walls and collapsed cells.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Costeux2013_DEDUP_007",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_SYNTH_GAP002",
+          "question": "Why were copolymers containing ethyl acrylate (EA) used in the blends instead of poly(methyl methacrylate) (PMMA) homopolymer?",
+          "expected_answer": "PMMA has poor thermal stability and may undergo partial degradation during blend processing, whereas copolymers with ethyl acrylate are more thermally stable.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_004",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why was a specific polymer additive used?",
+      "abstraction_reasoning": "PATTERN: Why this additive? | ENTITY MAPPING: Di Maio2018_DEDUP_002 (triblock copolymer) -> nucleation agent, Reglero2011_DEDUP_040 (SBM and MAM) -> CO2-philic blocks | WHY MEDIUM: Multiple papers discuss additive selection for foaming.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Di Maio2018",
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_002",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_SYNTH_Q002",
+          "question": "Why is a triblock copolymer of poly(methyl methacrylate)-b-poly(butyl acrylate)-b-poly(methyl methacrylate) used as a nucleation agent in PMMA foams?",
+          "expected_answer": "It is used because of its high CO2-philicity, lowered surface tension, and morphology, where the poly(butyl acrylate) block acts as the effective nucleation agent in a core-shell structure.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_040",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PHD_Q003",
+          "question": "Why were triblock copolymer additives (SBM and MAM) incorporated into the PS and PMMA matrices?",
+          "expected_answer": "They were used to analyze their influence on CO2 solubility and foaming behavior, specifically because they are able to induce phase separation at a nano-meter or submicrometer level.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_005",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why was a specific processing parameter chosen?",
+      "abstraction_reasoning": "PATTERN: Why this processing condition? | ENTITY MAPPING: Costeux2013_DEDUP_004 (postfoaming annealing) -> avoid cell changes, Shieh2002_DEDUP_009 (sheet samples) -> wider pressure range | WHY MEDIUM: Covers various processing parameters across papers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2013",
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_004",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_SYNTH_Q004",
+          "question": "Why was a postfoaming (PF) annealing step performed after the initial rapid depressurization?",
+          "expected_answer": "To avoid uncontrolled changes in cell dimensions and fracturing of the foam samples caused by high residual levels of CO2 trapped at high pressure, which plasticize the polymer matrix and create high internal stresses.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Shieh2002_DEDUP_009",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PROC_Q004",
+          "question": "Why were sheet samples used for sorption measurements instead of thin films in this study?",
+          "expected_answer": "Sheet samples were used to investigate equilibrium sorption isotherms and to explore a wider pressure range (up to 340 atm), as previous studies using thin films were limited to lower pressures (up to ~30 or 100 atm) which had lower potential to drive CO2 molecules into the polymers.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_006",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why was a specific CO2 sorption pressure chosen?",
+      "abstraction_reasoning": "PATTERN: Why this pressure? | ENTITY MAPPING: Guo2015_DEDUP_012 (5 MPa) -> maximize sorption, Guo2015_DEDUP_031 (same as above) | WHY NARROW: Only Guo2015 discusses this specific pressure choice.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_012",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PROC_Q003",
+          "question": "Why was a saturation pressure of 5 MPa selected for the CO2 sorption experiments in PMMA?",
+          "expected_answer": "5 MPa was chosen to maximize CO2 sorption in the polymer while eliminating the need for a pressure boosting device, as it is slightly below the pressure of a full CO2 gas cylinder at room temperature.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_031",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_STU_Q003",
+          "question": "Why was a saturation pressure of 5 MPa chosen for the CO2 sorption experiments?",
+          "expected_answer": "5 MPa was chosen to maximize CO2 sorption in the polymer and eliminate the need for a pressure boosting device, as it is slightly below the pressure of a full CO2 gas cylinder at room temperature.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_007",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why was a specific polymer's thermal stability considered?",
+      "abstraction_reasoning": "PATTERN: Why this polymer's stability? | ENTITY MAPPING: Costeux2013_DEDUP_017 (PMMA) -> poor thermal stability, Costeux2013_DEDUP_033 (same as above) | WHY NARROW: Only Costeux2013 discusses PMMA's thermal issues.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_017",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_PROC_GAP002",
+          "question": "Why were copolymers with ethyl acrylate (EA) selected for the blend study instead of poly(methyl methacrylate) (PMMA) homopolymer?",
+          "expected_answer": "PMMA has poor thermal stability and may undergo partial degradation during blend processing, which could affect foaming performance; copolymers with ethyl acrylate (EA) are more thermally stable and provide an additional degree of freedom to improve nanofoam structure due to the strong affinity of EA for CO2.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Costeux2013_DEDUP_033",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_STU_GAP002",
+          "question": "Why were copolymers with ethyl acrylate (EA) used in the blend study instead of poly(methyl methacrylate) (PMMA) homopolymer?",
+          "expected_answer": "PMMA has poor thermal stability and can undergo partial degradation during blend processing, which could affect foaming performance; copolymers with ethyl acrylate are more thermally stable.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_008",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why was a specific polymer blend's phase domain size tuned?",
+      "abstraction_reasoning": "PATTERN: Why tune phase domains? | ENTITY MAPPING: Liu2019_DEDUP_026 (thermal annealing) -> morphological evolution, Liu2019_DEDUP_029 (same as above) | WHY NARROW: Only Liu2019 discusses this specific tuning method.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_026",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_STU_Q003",
+          "question": "Why was thermal annealing at the melt state chosen as a method to tune the phase domain size in this study?",
+          "expected_answer": "It provides a feasible approach that is easy to conduct to prepare polymer blends of the exact same composition with gradually increased phase domain in a broad range via morphological evolution in time scale driven by phase separation.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Liu2019_DEDUP_029",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_PHD_Q001",
+          "question": "Why was thermal annealing at the melt state selected as the method to tune the phase domain size for the PS60/PMMA40 blend?",
+          "expected_answer": "Thermal annealing was chosen because it is a feasible approach that is easy to conduct and allows for the preparation of polymer blends of the exact same composition with gradually increased phase domains in a broad range via morphological evolution in a time scale driven by phase separation.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_009",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why were Janus nanoparticles used as compatibilizers for the immiscible PPE/SAN blend instead of other alternatives?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_029",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_STU_GAP002",
+          "question": "Why were Janus nanoparticles used as compatibilizers for the immiscible PPE/SAN blend instead of other alternatives?",
+          "expected_answer": "Janus nanoparticles were used because they provide finer morphologies compared to other compatibilizer alternatives and possess higher interfacial activities.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_010",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why was the temperature for the CO2 mass uptake experiments specifically set to 40 °C?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_032",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PHD_Q003",
+          "question": "Why was the temperature for the CO2 mass uptake experiments specifically set to 40 °C?",
+          "expected_answer": "This temperature was chosen due to the lower critical solution temperature (LCST) behavior of PMMA, which is partially present in the Janus particles and at the blend interface.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_011",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why was a 'postfoaming' (PF) process necessary after the initial rapid depressurization in the batch foaming experiments?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_029",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_STU_Q003",
+          "question": "Why was a 'postfoaming' (PF) process necessary after the initial rapid depressurization in the batch foaming experiments?",
+          "expected_answer": "Postfoaming was necessary to avoid uncontrolled changes in cell dimensions and fracturing of the foam samples, as high residual levels of CO2 trapped at high pressure cause high internal stresses and plasticize the polymer matrix.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_012",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "What specific morphological outcome and cell size range were achieved by Dutriez et al. when using PMMA-b-PFMA diblock copolymers to produce nanocellular foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_004",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_SYNTH_Q004",
+          "question": "What specific morphological outcome and cell size range were achieved by Dutriez et al. when using PMMA-b-PFMA diblock copolymers to produce nanocellular foams?",
+          "expected_answer": "They produced nanocellular foams with cell sizes in the range of 20–70 nm and porosities below 25%.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_013",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why is a two-step (2S) foaming process used when soaking is performed at temperatures lower than the glass transition temperature (Tg) of an amorphous polymer?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_015",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PROC_Q004",
+          "question": "Why is a two-step (2S) foaming process used when soaking is performed at temperatures lower than the glass transition temperature (Tg) of an amorphous polymer?",
+          "expected_answer": "Because at these temperatures, depressurization triggers nucleation but little expansion is observed (the specimen may remain transparent); a second thermal conditioning step is required to increase the temperature and allow the nuclei to expand into cells.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_014",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is a significant challenge remaining for the commercial manufacture of nanocellular foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_034",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_STU_GAP002",
+          "question": "What is a significant challenge remaining for the commercial manufacture of nanocellular foams?",
+          "expected_answer": "A significant challenge is the lack of scalability of the widely used solid-state batch foaming process.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_015",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why is it necessary to generate and stabilize approximately 10^15 to 10^16 cells/cm^3 when producing nanocellular CO2-blown foams, as opposed to the 10^9 to 10^12 cells/cm^3 required for microcellular foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_037",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PHD_Q003",
+          "question": "Why is it necessary to generate and stabilize approximately 10^15 to 10^16 cells/cm^3 when producing nanocellular CO2-blown foams, as opposed to the 10^9 to 10^12 cells/cm^3 required for microcellular foams?",
+          "expected_answer": "This high cell nucleation density is required to successfully produce nanocellular foams with cell sizes as small as 100 nm, which are expected to rival the properties of solvent-based nanoporous materials for applications like low-density lightweighting and thermal insulation.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_016",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why must the viscosity of the polymer matrix be sufficiently high during the decompression process of foaming?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_014",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PROC_Q003",
+          "question": "Why must the viscosity of the polymer matrix be sufficiently high during the decompression process of foaming?",
+          "expected_answer": "The viscosity must be sufficiently high to prevent the escape of CO2 from the outer boundaries, which would otherwise lead to cell collapse, and to prevent surface protrusions (blisters) from rupturing.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_017",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why is accurate determination of CO2 sorption in polymers considered an outstanding problem requiring a broadly usable solution?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_018",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PROC_GAP002",
+          "question": "Why is accurate determination of CO2 sorption in polymers considered an outstanding problem requiring a broadly usable solution?",
+          "expected_answer": "It is an outstanding problem because swelling accompanies CO2 sorption, making buoyancy corrections difficult, and existing techniques like magnetic suspension balances face complications such as non-uniform shape changes, potential extraction of low molecular weight fractions, and the need for independent verification of modeling.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_018",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why is the use of nucleating agents considered vital in the industrial practice of thermoplastic foaming?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_032",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_STU_Q002",
+          "question": "Why is the use of nucleating agents considered vital in the industrial practice of thermoplastic foaming?",
+          "expected_answer": "Nucleating agents are used to control the final foam morphology by providing heterogeneities that reduce the free energy threshold required to form nuclei.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_019",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "What are the detrimental consequences of cell coalescence and foam collapse on the final foam properties?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_035",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_STU_Q005",
+          "question": "What are the detrimental consequences of cell coalescence and foam collapse on the final foam properties?",
+          "expected_answer": "Cell coalescence and foam collapse lead to morphology coarsening and densification, which are generally detrimental to the foam properties and represent major causes of foaming failure.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_020",
+      "archetype": "MOTIVATION",
+      "bloom_level": "recall",
+      "generalized_question": "Why is injection molding foaming considered a practical method for fabricating polymer foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_036",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_STU_GAP001",
+          "question": "Why is injection molding foaming considered a practical method for fabricating polymer foams?",
+          "expected_answer": "It is regarded as a cost-effective and practical method for fabricating foams with complex, three-dimensional geometries.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_021",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why is the use of crosslinking or blending with hard domains proposed for the foaming of rubbery polymers with Tg below room temperature?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_041",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PHD_Q004",
+          "question": "Why is the use of crosslinking or blending with hard domains proposed for the foaming of rubbery polymers with Tg below room temperature?",
+          "expected_answer": "These strategies are used to bring rigidity and dimensional stability to the polymer matrix and the resulting foam, preventing the coalescence of growing bubbles and hindering post-expansion or post-foaming shrinkage.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Foaming of polymers with low glass transition temperatures"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_022",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why was a perfluorodecyl acrylate (PFDA) block selected for the synthesis of the PS-b-PFDA copolymer in the context of CO2 foaming?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_004",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_SYNTH_Q004",
+          "question": "Why was a perfluorodecyl acrylate (PFDA) block selected for the synthesis of the PS-b-PFDA copolymer in the context of CO2 foaming?",
+          "expected_answer": "Fluorinated polymers were selected because they present the highest CO2-philicity, which is valuable for obtaining nanocellular porous films.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_023",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why was a CO2-philic block, such as the one in the MAM copolymer, selected to control the foaming of amorphous polymers?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_016",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PROC_Q004",
+          "question": "Why was a CO2-philic block, such as the one in the MAM copolymer, selected to control the foaming of amorphous polymers?",
+          "expected_answer": "A highly CO2-philic block allows the nanostructures to act as CO2 reservoirs, enabling control over microcellular or nanocellular foaming and drastically reducing the average cell size.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_024",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why is supercritical CO2 used as a physical foaming agent for amorphous polymers?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_033",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_STU_Q002",
+          "question": "Why is supercritical CO2 used as a physical foaming agent for amorphous polymers?",
+          "expected_answer": "Supercritical CO2 is used because its low critical conditions (31.1°C and 73.8 bar) offer advantages such as tuneable solvent power, plasticization of glassy amorphous polymers, and high diffusion rates.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_025",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why does the addition of a highly CO2-philic block copolymer, such as MAM, lead to a drastic reduction in average cell size?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_035",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_STU_Q004",
+          "question": "Why does the addition of a highly CO2-philic block copolymer, such as MAM, lead to a drastic reduction in average cell size?",
+          "expected_answer": "The CO2-philic dispersed entities act as CO2 reservoirs and provide a compromise between CO2 philicity, nano sized dispersion of the additive (acting as nuclei), and cell growth limitation due to surrounding glassy PMMA blocks.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_026",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why is a highly CO2-philic block chosen for the nanostructures in the foaming of amorphous polymers?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_038",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_STU_GAP002",
+          "question": "Why is a highly CO2-philic block chosen for the nanostructures in the foaming of amorphous polymers?",
+          "expected_answer": "A highly CO2-philic block is chosen so that the resulting nanostructures can act as CO2 reservoirs, which enables control over the microcellular or nanocellular foaming of the polymers.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_027",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why is the use of supercritical CO2 specifically advantageous for the foaming of glassy amorphous polymers?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_041",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PHD_Q003",
+          "question": "Why is the use of supercritical CO2 specifically advantageous for the foaming of glassy amorphous polymers?",
+          "expected_answer": "Supercritical CO2 offers low critical conditions (31.1°C and 73.8 bar), a tuneable solvent power, high diffusion rates, and the ability to plasticize glassy amorphous polymers.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_028",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why is PMMA considered to have very high CO2 solubility compared to other polymers under similar conditions?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_004",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_SYNTH_Q004",
+          "question": "Why is PMMA considered to have very high CO2 solubility compared to other polymers under similar conditions?",
+          "expected_answer": "It is probably due to the high mass density of carbonyl groups in PMMA.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_029",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why was a low-temperature CO2 saturation process explored for the production of PMMA nanofoams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_015",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PROC_GAP002",
+          "question": "Why was a low-temperature CO2 saturation process explored for the production of PMMA nanofoams?",
+          "expected_answer": "It was explored to determine if the higher gas solubility achieved at lower saturation temperatures could be used in a solid-state process to reduce the cell size from the order of 100 nm to the order of 10 nm.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_030",
+      "archetype": "MOTIVATION",
+      "bloom_level": "recall",
+      "generalized_question": "Why was low-temperature CO2 saturation explored as a method for producing PMMA nanofoams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_034",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_STU_GAP001",
+          "question": "Why was low-temperature CO2 saturation explored as a method for producing PMMA nanofoams?",
+          "expected_answer": "Low-temperature CO2 saturation was explored because gas solubility in polymers generally increases as the saturation temperature decreases, and a higher amount of absorbed gas leads to a higher number of cells to nucleate, which can drive down the cell size from the order of 100 nm to 10 nm.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_031",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why was low-temperature CO2 saturation selected as the primary mechanism to reduce the cell size of PMMA nanofoams compared to traditional high-pressure methods?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_040",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PHD_GAP001",
+          "question": "Why was low-temperature CO2 saturation selected as the primary mechanism to reduce the cell size of PMMA nanofoams compared to traditional high-pressure methods?",
+          "expected_answer": "Low-temperature CO2 saturation was used because gas solubility in polymers generally increases as the saturation temperature decreases; higher gas solubility leads to a higher number of cells nucleating in a unit volume, which can drive the cell size down from the order of 100 nm to the order of 10 nm.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_032",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why was supercritical carbon dioxide (scCO2) selected as the blowing agent for the production of these glassy polymer foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_005",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_SYNTH_Q005",
+          "question": "Why was supercritical carbon dioxide (scCO2) selected as the blowing agent for the production of these glassy polymer foams?",
+          "expected_answer": "It was selected as a green technology replacement for volatile organic compounds (VOCs) because it is relatively inert, nonflammable, cheap, and generally regarded as safe (GRAS-status).",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_033",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why is the control of the glass transition temperature (Tg) and CO2 solubility critical for obtaining a desired foam morphology in SMMA?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_012",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_PROC_Q005",
+          "question": "Why is the control of the glass transition temperature (Tg) and CO2 solubility critical for obtaining a desired foam morphology in SMMA?",
+          "expected_answer": "Because the vitrification of the polymer matrix (where Tg increases until growth stops), combined with saturation pressure, temperature, and depressurization rate, determines the final morphology of the foam.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_034",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What research gap in the existing literature on scCO2-based foaming motivated the quantitative and systematic approach taken in this study?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_028",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_PHD_Q001",
+          "question": "What research gap in the existing literature on scCO2-based foaming motivated the quantitative and systematic approach taken in this study?",
+          "expected_answer": "While previous publications on foaming with CO2 usually only present SEM pictures and general density/cell size information, the specific foaming conditions required to yield economically required foam densities for larger-scale application are hardly available in the literature.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_035",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why is the difference in viscoelasticity between the dispersed phase and the matrix considered a critical factor for the foaming window of blends with large phase domains?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_005",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_SYNTH_Q005",
+          "question": "Why is the difference in viscoelasticity between the dispersed phase and the matrix considered a critical factor for the foaming window of blends with large phase domains?",
+          "expected_answer": "The difference in viscoelasticity is believed to be responsible for the narrowing of the suitable foaming temperature window, particularly when combined with large phase domains and high saturation pressures, which can lead to heterogeneity in cell structures or interface detachment.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_036",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why is a lower foaming temperature or smaller phase domain size recommended to prevent interface detachment in PS60/PMMA40 blend foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_013",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_PROC_Q005",
+          "question": "Why is a lower foaming temperature or smaller phase domain size recommended to prevent interface detachment in PS60/PMMA40 blend foams?",
+          "expected_answer": "Interface detachment occurs when there is a combination of big phase domains, high saturation pressure, and high foaming temperature, likely due to the difference in viscoelasticity between the two components; therefore, reducing any of these factors helps the dispersed phase coordinate better with the matrix.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_037",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why was the PS60/PMMA40 blend specifically selected for this study to investigate the relationship between phase structure and foaming behavior?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_033",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_PHD_GAP002",
+          "question": "Why was the PS60/PMMA40 blend specifically selected for this study to investigate the relationship between phase structure and foaming behavior?",
+          "expected_answer": "The PS60/PMMA40 blend was chosen because its dispersed phase domains (PMMA phase) can grow from less than 2μm before annealing to around 15μm after 100-min annealing, providing a much wider range of phase domain sizes than PS20/PMMA80 and PS80/PMMA20 blends.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_038",
+      "archetype": "MOTIVATION",
+      "bloom_level": "recall",
+      "generalized_question": "Why was acetic acid used during the characterization of the PS/PMMA polymer blend?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_034",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_STU_GAP001",
+          "question": "Why was acetic acid used during the characterization of the PS/PMMA polymer blend?",
+          "expected_answer": "Acetic acid was used to remove the PMMA domains from the PS matrix, allowing the phase morphology (the size and distribution of PMMA domains) to be observed as holes via scanning electron microscopy.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_039",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why did the authors choose to use a polymer blend of PS/PMMA instead of the self-assembled block copolymers used in prior nanocellular foaming research?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_035",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PHD_Q001",
+          "question": "Why did the authors choose to use a polymer blend of PS/PMMA instead of the self-assembled block copolymers used in prior nanocellular foaming research?",
+          "expected_answer": "The authors argue that the morphology of self-assembled block copolymers is very sensitive to molecular weight distribution, surface energy, and film thickness, making it difficult to use for creating industrial products. Additionally, they wanted to incorporate viscoelasticity differences between the disperse domain and the matrix into the foaming mechanism.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_040",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why were the PS+MAM and PMMA+SBM blends rejected for micro-foaming purposes?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_017",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PROC_Q005",
+          "question": "Why were the PS+MAM and PMMA+SBM blends rejected for micro-foaming purposes?",
+          "expected_answer": "They were rejected because of complete immiscibility with the homopolymers, which resulted in macro-scale phase separation and a heterogeneous structure lacking transparency.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Materials"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_041",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why is the quantity of CO2 uptake (w1) considered an important thermodynamic parameter in the gas foaming process?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_035",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_STU_Q004",
+          "question": "Why is the quantity of CO2 uptake (w1) considered an important thermodynamic parameter in the gas foaming process?",
+          "expected_answer": "It quantifies the affinity of CO2 for the material and influences the final foam density and the plasticization of the polymer, which lowers the glass transition temperature (Tg) and allows more time for cell growth.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_042",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why was supercritical CO2 (scCO2) selected as the medium for foaming these amorphous polymers?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_037",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_STU_GAP002",
+          "question": "Why was supercritical CO2 (scCO2) selected as the medium for foaming these amorphous polymers?",
+          "expected_answer": "Supercritical CO2 was selected because of its low critical conditions (31.1 °C and 73.8 bar), which provide advantageous properties such as tuneable solvent power, plasticization of glassy polymers, and higher diffusion rates.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_043",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why were the SBM and MAM block copolymers selected as additives for the PS and PMMA matrices in the foaming process?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_004",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_SYNTH_Q004",
+          "question": "Why were the SBM and MAM block copolymers selected as additives for the PS and PMMA matrices in the foaming process?",
+          "expected_answer": "They provide CO2-philic blocks that create nanostructured domains, which offer advantages over classical blends in terms of cell size control and reduction of cell size.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_044",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why is the presence of a dense outer skin suppressed in foams produced at saturation temperatures above 50 °C?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_019",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PROC_Q005",
+          "question": "Why is the presence of a dense outer skin suppressed in foams produced at saturation temperatures above 50 °C?",
+          "expected_answer": "At higher initial temperatures, the material takes longer to enter the glassy zone (vitrification), allowing more time for CO2 to diffuse out of the sample while generating cells, rather than escaping by diffusion without nucleation and growth.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "3.2.1. Behaviour of homopolymers – PMMA and PS"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_045",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why was the use of triblock copolymers (SBM and MAM) in PS or PMMA considered advantageous compared to classical PS-PMMA polymer blends?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_033",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_STU_Q004",
+          "question": "Why was the use of triblock copolymers (SBM and MAM) in PS or PMMA considered advantageous compared to classical PS-PMMA polymer blends?",
+          "expected_answer": "They showed advantages in terms of cell size control and the reduction of cell size.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_046",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why was a one-step supercritical CO2 process used instead of a two-step process in this study?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_035",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_STU_GAP002",
+          "question": "Why was a one-step supercritical CO2 process used instead of a two-step process in this study?",
+          "expected_answer": "The one-step process was used to investigate the possibility of enlarging the accessible cell-size range towards ultramicro-cellular or nano-cellular polymers using nano dispersed CO2-philic additives.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_047",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What specific justification did the authors provide for applying Hwang's model to multiphase polymer blends despite the model omitting the glass transition temperature of soft blocks?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_038",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PHD_Q003",
+          "question": "What specific justification did the authors provide for applying Hwang's model to multiphase polymer blends despite the model omitting the glass transition temperature of soft blocks?",
+          "expected_answer": "The authors justified the application by stating that the model provides reasonable data due to the low content of copolymer (10%) in the blends.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_048",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "generalized_question": "Why was the residence time kept constant at 30 min during the investigation of the maximum spectrum of possible morphology?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_012",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PROC_Q004",
+          "question": "Why was the residence time kept constant at 30 min during the investigation of the maximum spectrum of possible morphology?",
+          "expected_answer": "Residence time was kept constant at 30 min to ensure a state of equilibrium blowing agent sorption.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Cell morphology"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_049",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why was an inverse design approach implemented in this study?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_026",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_STU_Q005",
+          "question": "Why was an inverse design approach implemented in this study?",
+          "expected_answer": "The inverse design approach was used to check the robustness of the model by identifying the specific processing parameters required to achieve a desired target foam density.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_050",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why was an Active Learning (AL) strategy integrated into the Bayesian Optimization (BO) process for minimizing foam density?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_029",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PHD_Q004",
+          "question": "Why was an Active Learning (AL) strategy integrated into the Bayesian Optimization (BO) process for minimizing foam density?",
+          "expected_answer": "The AL strategy was integrated to propose uncorrelated processing parameters, which serves to further refine and enhance the Gaussian Process (GP) model in subsequent iterations.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_051",
+      "archetype": "MOTIVATION",
+      "bloom_level": "analysis",
+      "generalized_question": "Why was a Gaussian Process (GP) model selected as the surrogate model for the Bayesian optimization of PA-12 foam density?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_031",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PHD_GAP001",
+          "question": "Why was a Gaussian Process (GP) model selected as the surrogate model for the Bayesian optimization of PA-12 foam density?",
+          "expected_answer": "Gaussian Processes were selected because they are considered the best model for this type of optimization due to their ability to provide predictions automatically with corresponding uncertainties (used in the acquisition function) and their strong performance with small datasets.",
+          "persona_code": "PHD",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_052",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why did the researchers normalize the dissolved-CO2 concentration based on the content of carbonyl groups for PMMA and phenyl groups for PS?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_022",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_STU_Q002",
+          "question": "Why did the researchers normalize the dissolved-CO2 concentration based on the content of carbonyl groups for PMMA and phenyl groups for PS?",
+          "expected_answer": "This normalization treatment was used to facilitate the examination of the effects of the carbonyl groups and the phenyl groups on the sorption behavior.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_053",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why is the temperature necessary for chemisorption to occur lower for PMMA than for PS?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_025",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_STU_Q005",
+          "question": "Why is the temperature necessary for chemisorption to occur lower for PMMA than for PS?",
+          "expected_answer": "This is due to the specific interaction of the carbonyl groups of PMMA with CO2, which results in a relatively low activation energy for chemisorption in PMMA compared to PS.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_054",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why did the authors use power laws instead of the dual-mode sorption model or Henry's law to describe the CO2 sorption concentration isotherms?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_026",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_STU_GAP002",
+          "question": "Why did the authors use power laws instead of the dual-mode sorption model or Henry's law to describe the CO2 sorption concentration isotherms?",
+          "expected_answer": "The authors found that neither the Langmuir-type sorption (part of the dual-mode model) nor the Henry's law dissolution model could satisfactorily describe the CO2 sorption behavior over the wide pressure range studied, whereas the power laws described the two distinct regions (below and above critical pressure) fairly well.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_055",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why did the authors propose using power law equations (C = kP^n) instead of the dual-mode sorption model to describe CO2 sorption in PMMA and PS?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_029",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PHD_Q003",
+          "question": "Why did the authors propose using power law equations (C = kP^n) instead of the dual-mode sorption model to describe CO2 sorption in PMMA and PS?",
+          "expected_answer": "The authors found that the dual-mode model could not satisfactorily describe the sorption behavior over the wide pressure range studied, and proposed the power law because the dissolution locations inside polymers can be considered a heterogeneous environment, consistent with Freundlich adsorption theory.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_056",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "Why do the authors argue that the dual-mode sorption model and Henry's law dissolution model are insufficient for describing CO2 sorption in glassy polymers over a wide pressure range?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_032",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PHD_GAP001",
+          "question": "Why do the authors argue that the dual-mode sorption model and Henry's law dissolution model are insufficient for describing CO2 sorption in glassy polymers over a wide pressure range?",
+          "expected_answer": "The authors state that neither model is universal because the nature of the polymer and the pressure range affect the isotherms; specifically, CO2 is not an ideal gas at high pressures (especially near critical conditions), and its affinity varies considerably depending on the type of polymer.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_057",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why was polymer blending selected as a strategy for improving the properties of single-polymer foaming systems?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_004",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_SYNTH_Q004",
+          "question": "Why was polymer blending selected as a strategy for improving the properties of single-polymer foaming systems?",
+          "expected_answer": "Polymer blending was selected because it is a simple, effective, and economical means to make up for the deficiencies of single-polymer systems (such as low melt strength and heat-resistance temperature) and remarkably enhance foaming ability.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_058",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Why is polymer blending used as a method to improve the properties of single-polymer systems in foaming applications?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_032",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_STU_GAP002",
+          "question": "Why is polymer blending used as a method to improve the properties of single-polymer systems in foaming applications?",
+          "expected_answer": "Polymer blending is used because it is a simple, effective, and economical way to obtain materials with desired properties, allowing it to compensate for the deficiencies of single-polymer systems (such as low melt strength or heat-resistance temperature) and remarkably enhance foaming ability.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_MOTIVATION_059",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What research gap in the study of polymer blend foaming does this 3D-DFT approach aim to address compared to existing experimental research?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_033",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_PHD_Q001",
+          "question": "What research gap in the study of polymer blend foaming does this 3D-DFT approach aim to address compared to existing experimental research?",
+          "expected_answer": "Existing experimental research typically analyzes the polymer blend foaming process at the macrolevel, which cannot quantitatively calculate the contribution of each polymer of the blend to the CO2 dissolution and bubble nucleation processes.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    }
+  ],
+  "reverse_index": {
+    "Bärwinkel2016_DEDUP_012": "GEN_MOTIVATION_001",
+    "Otsuka2008_DEDUP_016": "GEN_MOTIVATION_001",
+    "Otsuka2008_DEDUP_032": "GEN_MOTIVATION_001",
+    "Liu2019_DEDUP_028": "GEN_MOTIVATION_002",
+    "Reglero2011_DEDUP_004": "GEN_MOTIVATION_002",
+    "Bärwinkel2016_DEDUP_004": "GEN_MOTIVATION_003",
+    "Costeux2013_DEDUP_007": "GEN_MOTIVATION_003",
+    "Di Maio2018_DEDUP_002": "GEN_MOTIVATION_004",
+    "Reglero2011_DEDUP_040": "GEN_MOTIVATION_004",
+    "Costeux2013_DEDUP_004": "GEN_MOTIVATION_005",
+    "Shieh2002_DEDUP_009": "GEN_MOTIVATION_005",
+    "Guo2015_DEDUP_012": "GEN_MOTIVATION_006",
+    "Guo2015_DEDUP_031": "GEN_MOTIVATION_006",
+    "Costeux2013_DEDUP_017": "GEN_MOTIVATION_007",
+    "Costeux2013_DEDUP_033": "GEN_MOTIVATION_007",
+    "Liu2019_DEDUP_026": "GEN_MOTIVATION_008",
+    "Liu2019_DEDUP_029": "GEN_MOTIVATION_008",
+    "Bärwinkel2016_DEDUP_029": "GEN_MOTIVATION_009",
+    "Bärwinkel2016_DEDUP_032": "GEN_MOTIVATION_010",
+    "Costeux2013_DEDUP_029": "GEN_MOTIVATION_011",
+    "Costeux2014_DEDUP_004": "GEN_MOTIVATION_012",
+    "Costeux2014_DEDUP_015": "GEN_MOTIVATION_013",
+    "Costeux2014_DEDUP_034": "GEN_MOTIVATION_014",
+    "Costeux2014_DEDUP_037": "GEN_MOTIVATION_015",
+    "Di Maio2018_DEDUP_014": "GEN_MOTIVATION_016",
+    "Di Maio2018_DEDUP_018": "GEN_MOTIVATION_017",
+    "Di Maio2018_DEDUP_032": "GEN_MOTIVATION_018",
+    "Di Maio2018_DEDUP_035": "GEN_MOTIVATION_019",
+    "Di Maio2018_DEDUP_036": "GEN_MOTIVATION_020",
+    "Di Maio2018_DEDUP_041": "GEN_MOTIVATION_021",
+    "Dumon2012_DEDUP_004": "GEN_MOTIVATION_022",
+    "Dumon2012_DEDUP_016": "GEN_MOTIVATION_023",
+    "Dumon2012_DEDUP_033": "GEN_MOTIVATION_024",
+    "Dumon2012_DEDUP_035": "GEN_MOTIVATION_025",
+    "Dumon2012_DEDUP_038": "GEN_MOTIVATION_026",
+    "Dumon2012_DEDUP_041": "GEN_MOTIVATION_027",
+    "Guo2015_DEDUP_004": "GEN_MOTIVATION_028",
+    "Guo2015_DEDUP_015": "GEN_MOTIVATION_029",
+    "Guo2015_DEDUP_034": "GEN_MOTIVATION_030",
+    "Guo2015_DEDUP_040": "GEN_MOTIVATION_031",
+    "Jacobs2007_DEDUP_005": "GEN_MOTIVATION_032",
+    "Jacobs2007_DEDUP_012": "GEN_MOTIVATION_033",
+    "Jacobs2007_DEDUP_028": "GEN_MOTIVATION_034",
+    "Liu2019_DEDUP_005": "GEN_MOTIVATION_035",
+    "Liu2019_DEDUP_013": "GEN_MOTIVATION_036",
+    "Liu2019_DEDUP_033": "GEN_MOTIVATION_037",
+    "Otsuka2008_DEDUP_034": "GEN_MOTIVATION_038",
+    "Otsuka2008_DEDUP_035": "GEN_MOTIVATION_039",
+    "Reglero2011_DEDUP_017": "GEN_MOTIVATION_040",
+    "Reglero2011_DEDUP_035": "GEN_MOTIVATION_041",
+    "Reglero2011_DEDUP_037": "GEN_MOTIVATION_042",
+    "Ruiz2011_DEDUP_004": "GEN_MOTIVATION_043",
+    "Ruiz2011_DEDUP_019": "GEN_MOTIVATION_044",
+    "Ruiz2011_DEDUP_033": "GEN_MOTIVATION_045",
+    "Ruiz2011_DEDUP_035": "GEN_MOTIVATION_046",
+    "Ruiz2011_DEDUP_038": "GEN_MOTIVATION_047",
+    "Shah2025_DEDUP_012": "GEN_MOTIVATION_048",
+    "Shah2025_DEDUP_026": "GEN_MOTIVATION_049",
+    "Shah2025_DEDUP_029": "GEN_MOTIVATION_050",
+    "Shah2025_DEDUP_031": "GEN_MOTIVATION_051",
+    "Shieh2002_DEDUP_022": "GEN_MOTIVATION_052",
+    "Shieh2002_DEDUP_025": "GEN_MOTIVATION_053",
+    "Shieh2002_DEDUP_026": "GEN_MOTIVATION_054",
+    "Shieh2002_DEDUP_029": "GEN_MOTIVATION_055",
+    "Shieh2002_DEDUP_032": "GEN_MOTIVATION_056",
+    "Wu2021_DEDUP_004": "GEN_MOTIVATION_057",
+    "Wu2021_DEDUP_032": "GEN_MOTIVATION_058",
+    "Wu2021_DEDUP_033": "GEN_MOTIVATION_059"
+  }
+}

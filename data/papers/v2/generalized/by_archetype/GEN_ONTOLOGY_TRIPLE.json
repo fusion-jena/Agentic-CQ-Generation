@@ -1,0 +1,1327 @@
+{
+  "archetype": "ONTOLOGY_TRIPLE",
+  "pipeline_step": "cross_paper_generalization",
+  "pipeline_version": "v2",
+  "step_version": "step2_v1.0",
+  "generalize_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "generalize_prompt_v1.0",
+    "source_dir": "data/papers/v2/dedup/"
+  },
+  "arch_stats": {
+    "n_input_cqs": 38,
+    "n_gen_cqs": 48,
+    "n_papers": 14,
+    "wall_time": "2m 57s 522ms"
+  },
+  "generalized_cqs": [
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_001",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a copolymer and its constituent monomer blocks?",
+      "abstraction_reasoning": "PATTERN: (copolymer, hasMonomer, monomer) | ENTITY MAPPING: MAM copolymer -> copolymer, polybutylacrylate -> monomer; SBM triblock copolymer -> copolymer, styrene -> monomer; etc. | WHY BROAD: Covers multiple papers discussing different copolymers and their monomers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Dumon2012",
+        "Reglero2011",
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_030",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_ONTO_Q005",
+          "question": "Which triple captures the relationship between the PS-b-PFDA copolymer and the synthesis method used to create it?",
+          "expected_answer": "(PS-b-PFDA, producedBy, Atom Transfer Radical Polymerization (ATRP))",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_029",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_ONTO_Q005",
+          "question": "Which triple captures the relationship between the SBM copolymer and its constituent monomer styrene?",
+          "expected_answer": "(styrene-co-butadiene-co-methylmethacrylate, hasComonomer, styrene)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_024",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_ONTO_Q001",
+          "question": "Which triple represents the relationship between the SBM triblock copolymer and its constituent monomers?",
+          "expected_answer": "(SBM, hasComonomer, styrene), (SBM, hasComonomer, butadiene), (SBM, hasComonomer, methylmethacrylate)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_002",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a polymer and its glass transition temperature?",
+      "abstraction_reasoning": "PATTERN: (polymer, hasProperty, Tg) | ENTITY MAPPING: poly(methyl methacrylate) -> polymer, Glass transition temperature (Tg) -> property; PMMA -> polymer, glass transition temperature -> property; etc. | WHY BROAD: Multiple papers discuss different polymers and their Tg.",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Di Maio2018",
+        "Guo2015",
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_025",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_ONTO_Q002",
+          "question": "Which triple represents the relationship between the material 'poly(methyl methacrylate)' and its 'Glass transition temperature (Tg)' as mentioned in the context of CO2 sorption data?",
+          "expected_answer": "(poly(methyl methacrylate), hasProperty, Glass transition temperature (Tg))",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_023",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_ONTO_Q001",
+          "question": "Which triple represents the relationship between the material PMMA and its glass transition temperature measurement?",
+          "expected_answer": "(PMMA, hasProperty, glass transition temperature)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Jacobs2007_DEDUP_018",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_Q001",
+          "question": "Which triple represents the relationship between the material poly(styrene-co-methyl methacrylate) and its glass transition temperature?",
+          "expected_answer": "(poly(styrene-co-methyl methacrylate), hasProperty, glass transition temperature)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_003",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer and its application in thermal insulation?",
+      "abstraction_reasoning": "PATTERN: (polymer, appliedIn, Thermal insulation) | ENTITY MAPPING: Polymeric foams -> polymer, Thermal insulation -> application. | WHY NARROW: Only one paper discusses this specific application.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_028",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_ONTO_Q005",
+          "question": "How should the relationship between 'Polymeric foams' and their application in 'Thermal insulation' be represented as a KG triple?",
+          "expected_answer": "(Polymeric foams, appliedIn, Thermal insulation)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_004",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a blowing agent and its property related to sorption?",
+      "abstraction_reasoning": "PATTERN: (blowingAgent, hasProperty, sorptionProperty) | ENTITY MAPPING: CO2 -> blowing agent, heat of sorption -> property; etc. | WHY BROAD: Multiple papers discuss different blowing agents and their sorption properties.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Guo2015",
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_026",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_ONTO_Q005",
+          "question": "Which triple captures the relationship between CO2 and the property 'heat of sorption'?",
+          "expected_answer": "(CO2, hasProperty, heat of sorption)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Shieh2002_DEDUP_019",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_ONTO_Q005",
+          "question": "Which triple captures the relationship between the 'sorption intensity' and the interaction between CO2 and the polymer?",
+          "expected_answer": "(sorption intensity, isMeasureOf, interaction between CO2 and polymer)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_005",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer blending process and the resulting blend?",
+      "abstraction_reasoning": "PATTERN: (blend, producedBy, blendingProcess) | ENTITY MAPPING: PS60/PMMA40 blend -> blend, compression molding -> process; etc. | WHY BROAD: Covers different blending processes across papers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Liu2019",
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_019",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_ONTO_Q001",
+          "question": "Which triple represents the relationship between the PS60/PMMA40 blend and the method used to prepare the samples?",
+          "expected_answer": "(PS60/PMMA40 blend, producedBy, compression molding)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        },
+        {
+          "step1_id": "Wu2021_DEDUP_022",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_ONTO_Q001",
+          "question": "Which triple represents the relationship between the 'polymer blend' and the 'polymer blending' process?",
+          "expected_answer": "(polymer blend, producedBy, polymer blending)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_006",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer and its melt strength deficiency?",
+      "abstraction_reasoning": "PATTERN: (polymer, hasProperty, melt strength) | ENTITY MAPPING: polypropylene -> polymer. | WHY NARROW: Only one paper discusses this specific property.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_026",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_ONTO_Q005",
+          "question": "Which triple captures the relationship between polypropylene and its inherent deficiency in melt strength?",
+          "expected_answer": "(polypropylene, hasProperty, melt strength)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_007",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its resulting material property?",
+      "abstraction_reasoning": "PATTERN: (process, resultsIn, materialProperty) | ENTITY MAPPING: extrusion foaming -> process, expanded melt processing window -> property. | WHY NARROW: Only one paper discusses this specific process-property pair.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_029",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the process 'extrusion foaming' and the resulting material property 'expanded melt processing window' described in the text?",
+          "expected_answer": "(extrusion foaming, resultsIn, expanded melt processing window)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_008",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer and its functional groups influencing sorption behavior?",
+      "abstraction_reasoning": "PATTERN: (polymer, hasProperty, functionalGroups) | ENTITY MAPPING: PMMA -> polymer, carbonyl groups -> property. | WHY NARROW: Only one paper discusses this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_016",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_ONTO_Q001",
+          "question": "Which triple represents the relationship between PMMA and the functional groups that influence its CO2 sorption behavior?",
+          "expected_answer": "(PMMA, hasProperty, carbonyl groups)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_009",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a design approach and its optimization method?",
+      "abstraction_reasoning": "PATTERN: (designApproach, usesMethod, optimizationMethod) | ENTITY MAPPING: inverse design -> design approach, Bayesian optimization -> method. | WHY NARROW: Only one paper discusses this specific method.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_020",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_ONTO_Q001",
+          "question": "Which triple represents the relationship between the inverse design approach and Bayesian optimization as described in the paper?",
+          "expected_answer": "(inverse design, usesMethod, Bayesian optimization)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_010",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer and its interaction with CO2?",
+      "abstraction_reasoning": "PATTERN: (polymer, hasInteractionWith, CO2) | ENTITY MAPPING: polymers containing carbonyl groups -> polymer. | WHY NARROW: Only one paper discusses this specific interaction.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_020",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_ONTO_GAP001",
+          "question": "Which triple represents the relationship between polymers containing carbonyl groups and the CO2 molecule based on the described intermolecular interaction?",
+          "expected_answer": "(polymers containing carbonyl groups, hasInteractionWith, CO2)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_011",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its method of production?",
+      "abstraction_reasoning": "PATTERN: (process, usedIn, productionMethod) | ENTITY MAPPING: high pressure autoclave -> process, pressure quench method -> production method. | WHY NARROW: Only one paper discusses this specific method.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_028",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the high pressure autoclave and the pressure quench method used to prepare the nanocellular foam?",
+          "expected_answer": "(high pressure autoclave, usedIn, pressure quench method)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_012",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer blend and its form after blending?",
+      "abstraction_reasoning": "PATTERN: (blend, hasForm, materialForm) | ENTITY MAPPING: PS+SBM/PMMA+MAM -> blend, pellets -> form. | WHY NARROW: Only one paper discusses this specific form.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_028",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_ONTO_Q005",
+          "question": "Which triple captures the relationship between the blending process and the resulting material form for the PS + SBM and PMMA + MAM blends?",
+          "expected_answer": "(PS+SBM/PMMA+MAM, producedBy, extrusion), (PS+SBM/PMMA+MAM, hasForm, pellets)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_013",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its blowing agent?",
+      "abstraction_reasoning": "PATTERN: (process, usesBlowingAgent, gas) | ENTITY MAPPING: two-step batch foaming process -> process, carbon dioxide -> gas. | WHY NARROW: Only one paper discusses this specific process-gas pair.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_026",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_ONTO_Q004",
+          "question": "How should the relationship between nanocellular foams and carbon dioxide be represented as a triple to indicate the role of the gas?",
+          "expected_answer": "(nanocellular foams, usesMethod, carbon dioxide) or (two-step batch foaming process, usesBlowingAgent, carbon dioxide)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_014",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer and its cell size measurement?",
+      "abstraction_reasoning": "PATTERN: (polymer, hasProperty, cellSize) | ENTITY MAPPING: PEMA -> polymer, 345 nm -> cell size. | WHY NARROW: Only one paper discusses this specific measurement.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_027",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_ONTO_Q004",
+          "question": "How should the relationship between the material PEMA and its measured cell size of 345 nm be represented as a KG triple?",
+          "expected_answer": "(PEMA, hasProperty, cell size: 345 nm)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_015",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its resulting foam structure?",
+      "abstraction_reasoning": "PATTERN: (process, producesMorphology, foamStructure) | ENTITY MAPPING: Janus particles -> process, raspberry morphology -> structure. | WHY NARROW: Only one paper discusses this specific structure.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_026",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the Janus particles and the 'raspberry morphology' described in the paper?",
+          "expected_answer": "(Janus particles, producesMorphology, raspberry morphology)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_016",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer blend and its production method?",
+      "abstraction_reasoning": "PATTERN: (blend, producedBy, productionMethod) | ENTITY MAPPING: PPE/SAN blend -> blend, temperature-induced batch foaming -> method. | WHY NARROW: Only one paper discusses this specific blend-method pair.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_022",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_ONTO_Q001",
+          "question": "Which triple represents the relationship between the PPE/SAN blend and the process used to create the foam structure?",
+          "expected_answer": "(PPE/SAN blend, producedBy, temperature-induced batch foaming)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_017",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a polymer and its core composition?",
+      "abstraction_reasoning": "PATTERN: (polymer, hasComposition, coreMaterial) | ENTITY MAPPING: Janus particles -> polymer, PB core -> core material. | WHY NARROW: Only one paper discusses this specific composition.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_025",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_ONTO_Q005",
+          "question": "Which triple captures the structural composition of the Janus particles regarding their core?",
+          "expected_answer": "(Janus particles, hasComposition, PB core)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_018",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a process and its resulting nanofoams?",
+      "abstraction_reasoning": "PATTERN: (process, producedBy, foamType) | ENTITY MAPPING: solid-state foaming -> process, PMMA nanofoams -> foam type. | WHY NARROW: Only one paper discusses this specific process-foam pair.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_027",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the 'solid-state foaming' process and the resulting 'PMMA nanofoams'?",
+          "expected_answer": "(solid-state foaming, producedBy, PMMA nanofoams) or (PMMA nanofoams, producedBy, solid-state foaming)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_019",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a polymer and its reference material during analysis?",
+      "abstraction_reasoning": "PATTERN: (polymer, usesReferenceMaterial, reference) | ENTITY MAPPING: poly(styrene-co-methyl methacrylate) -> polymer, polystyrene standard -> reference. | WHY NARROW: Only one paper discusses this specific reference.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_024",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_GAP002",
+          "question": "Which triple represents the relationship between the SMMA polymer and the polystyrene standard used during GPC analysis?",
+          "expected_answer": "(poly(styrene-co-methyl methacrylate), usesReferenceMaterial, polystyrene standard)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_020",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer and its characterization technique?",
+      "abstraction_reasoning": "PATTERN: (polymer, characterisedBy, technique) | ENTITY MAPPING: SMMA foam -> polymer, SEM -> technique. | WHY NARROW: Only one paper discusses this specific technique.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_022",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_Q005",
+          "question": "Which triple captures the relationship between the SMMA foam and the analytical technique used to visualize its cell structure?",
+          "expected_answer": "(SMMA foam, characterisedBy, SEM)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_021",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its method of production?",
+      "abstraction_reasoning": "PATTERN: (process, producedBy, productionMethod) | ENTITY MAPPING: microcellular foams -> process, injection molding -> method. | WHY NARROW: Only one paper discusses this specific method.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_029",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_ONTO_GAP001",
+          "question": "Which triple represents the relationship between microcellular foams and the production method of injection molding?",
+          "expected_answer": "(microcellular foams, producedBy, injection molding)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_022",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer blend and its production method?",
+      "abstraction_reasoning": "PATTERN: (blend, producedBy, productionMethod) | ENTITY MAPPING: PS/PMMA polymer blend -> blend, diffusion mixing -> method. | WHY NARROW: Only one paper discusses this specific blend-method pair.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_023",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_ONTO_Q001",
+          "question": "Which triple represents the relationship between the PS/PMMA polymer blend and the method used to create its dispersed morphology?",
+          "expected_answer": "(PS/PMMA polymer blend, producedBy, diffusion mixing)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_023",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its resulting foam structure?",
+      "abstraction_reasoning": "PATTERN: (process, producedBy, foamStructure) | ENTITY MAPPING: nanocellular foams -> process, two-step batch foaming process -> structure. | WHY NARROW: Only one paper discusses this specific structure.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_024",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_ONTO_Q001",
+          "question": "Which triple represents the relationship between nanocellular foams and the two-step batch foaming process?",
+          "expected_answer": "(nanocellular foams, producedBy, two-step batch foaming process)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_024",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer and its production method?",
+      "abstraction_reasoning": "PATTERN: (polymer, producedBy, productionMethod) | ENTITY MAPPING: PMMA + MAM blend -> polymer, extrusion -> method. | WHY NARROW: Only one paper discusses this specific method.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_031",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the 'extrusion' process and the resulting 'PMMA + MAM' blend?",
+          "expected_answer": "(PMMA + MAM blend, producedBy, extrusion)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_025",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its resulting material property?",
+      "abstraction_reasoning": "PATTERN: (process, resultsIn, materialProperty) | ENTITY MAPPING: extrusion foaming -> process, expanded melt processing window -> property. | WHY NARROW: Only one paper discusses this specific property.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_029",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the process 'extrusion foaming' and the resulting material property 'expanded melt processing window' described in the text?",
+          "expected_answer": "(extrusion foaming, resultsIn, expanded melt processing window)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_026",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer and its interaction with CO2?",
+      "abstraction_reasoning": "PATTERN: (polymer, hasInteractionWith, CO2) | ENTITY MAPPING: polymers containing carbonyl groups -> polymer. | WHY NARROW: Only one paper discusses this specific interaction.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_020",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_ONTO_GAP001",
+          "question": "Which triple represents the relationship between polymers containing carbonyl groups and the CO2 molecule based on the described intermolecular interaction?",
+          "expected_answer": "(polymers containing carbonyl groups, hasInteractionWith, CO2)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_027",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its method of production?",
+      "abstraction_reasoning": "PATTERN: (process, usedIn, productionMethod) | ENTITY MAPPING: high pressure autoclave -> process, pressure quench method -> method. | WHY NARROW: Only one paper discusses this specific method.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_028",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the high pressure autoclave and the pressure quench method used to prepare the nanocellular foam?",
+          "expected_answer": "(high pressure autoclave, usedIn, pressure quench method)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_028",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer blend and its form after blending?",
+      "abstraction_reasoning": "PATTERN: (blend, hasForm, materialForm) | ENTITY MAPPING: PS+SBM/PMMA+MAM -> blend, pellets -> form. | WHY NARROW: Only one paper discusses this specific form.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_028",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_ONTO_Q005",
+          "question": "Which triple captures the relationship between the blending process and the resulting material form for the PS + SBM and PMMA + MAM blends?",
+          "expected_answer": "(PS+SBM/PMMA+MAM, producedBy, extrusion), (PS+SBM/PMMA+MAM, hasForm, pellets)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_029",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its blowing agent?",
+      "abstraction_reasoning": "PATTERN: (process, usesBlowingAgent, gas) | ENTITY MAPPING: two-step batch foaming process -> process, carbon dioxide -> gas. | WHY NARROW: Only one paper discusses this specific process-gas pair.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_026",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_ONTO_Q004",
+          "question": "How should the relationship between nanocellular foams and carbon dioxide be represented as a triple to indicate the role of the gas?",
+          "expected_answer": "(nanocellular foams, usesMethod, carbon dioxide) or (two-step batch foaming process, usesBlowingAgent, carbon dioxide)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_030",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer and its cell size measurement?",
+      "abstraction_reasoning": "PATTERN: (polymer, hasProperty, cellSize) | ENTITY MAPPING: PEMA -> polymer, 345 nm -> cell size. | WHY NARROW: Only one paper discusses this specific measurement.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_027",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_ONTO_Q004",
+          "question": "How should the relationship between the material PEMA and its measured cell size of 345 nm be represented as a KG triple?",
+          "expected_answer": "(PEMA, hasProperty, cell size: 345 nm)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_031",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its resulting foam structure?",
+      "abstraction_reasoning": "PATTERN: (process, producesMorphology, foamStructure) | ENTITY MAPPING: Janus particles -> process, raspberry morphology -> structure. | WHY NARROW: Only one paper discusses this specific structure.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_026",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the Janus particles and the 'raspberry morphology' described in the paper?",
+          "expected_answer": "(Janus particles, producesMorphology, raspberry morphology)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_032",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer blend and its production method?",
+      "abstraction_reasoning": "PATTERN: (blend, producedBy, productionMethod) | ENTITY MAPPING: PPE/SAN blend -> blend, temperature-induced batch foaming -> method. | WHY NARROW: Only one paper discusses this specific blend-method pair.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_022",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_ONTO_Q001",
+          "question": "Which triple represents the relationship between the PPE/SAN blend and the process used to create the foam structure?",
+          "expected_answer": "(PPE/SAN blend, producedBy, temperature-induced batch foaming)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_033",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a polymer and its core composition?",
+      "abstraction_reasoning": "PATTERN: (polymer, hasComposition, coreMaterial) | ENTITY MAPPING: Janus particles -> polymer, PB core -> core material. | WHY NARROW: Only one paper discusses this specific composition.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_025",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_ONTO_Q005",
+          "question": "Which triple captures the structural composition of the Janus particles regarding their core?",
+          "expected_answer": "(Janus particles, hasComposition, PB core)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_034",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a process and its resulting nanofoams?",
+      "abstraction_reasoning": "PATTERN: (process, producedBy, foamType) | ENTITY MAPPING: solid-state foaming -> process, PMMA nanofoams -> foam type. | WHY NARROW: Only one paper discusses this specific process-foam pair.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_027",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the 'solid-state foaming' process and the resulting 'PMMA nanofoams'?",
+          "expected_answer": "(solid-state foaming, producedBy, PMMA nanofoams) or (PMMA nanofoams, producedBy, solid-state foaming)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_035",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a polymer and its reference material during analysis?",
+      "abstraction_reasoning": "PATTERN: (polymer, usesReferenceMaterial, reference) | ENTITY MAPPING: poly(styrene-co-methyl methacrylate) -> polymer, polystyrene standard -> reference. | WHY NARROW: Only one paper discusses this specific reference.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_024",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_GAP002",
+          "question": "Which triple represents the relationship between the SMMA polymer and the polystyrene standard used during GPC analysis?",
+          "expected_answer": "(poly(styrene-co-methyl methacrylate), usesReferenceMaterial, polystyrene standard)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_036",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer and its characterization technique?",
+      "abstraction_reasoning": "PATTERN: (polymer, characterisedBy, technique) | ENTITY MAPPING: SMMA foam -> polymer, SEM -> technique. | WHY NARROW: Only one paper discusses this specific technique.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_022",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_Q005",
+          "question": "Which triple captures the relationship between the SMMA foam and the analytical technique used to visualize its cell structure?",
+          "expected_answer": "(SMMA foam, characterisedBy, SEM)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_037",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its method of production?",
+      "abstraction_reasoning": "PATTERN: (process, producedBy, productionMethod) | ENTITY MAPPING: microcellular foams -> process, injection molding -> method. | WHY NARROW: Only one paper discusses this specific method.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_029",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_ONTO_GAP001",
+          "question": "Which triple represents the relationship between microcellular foams and the production method of injection molding?",
+          "expected_answer": "(microcellular foams, producedBy, injection molding)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_038",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer blend and its production method?",
+      "abstraction_reasoning": "PATTERN: (blend, producedBy, productionMethod) | ENTITY MAPPING: PS/PMMA polymer blend -> blend, diffusion mixing -> method. | WHY NARROW: Only one paper discusses this specific blend-method pair.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_023",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_ONTO_Q001",
+          "question": "Which triple represents the relationship between the PS/PMMA polymer blend and the method used to create its dispersed morphology?",
+          "expected_answer": "(PS/PMMA polymer blend, producedBy, diffusion mixing)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_039",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between a process and its resulting foam structure?",
+      "abstraction_reasoning": "PATTERN: (process, producedBy, foamStructure) | ENTITY MAPPING: nanocellular foams -> process, two-step batch foaming process -> structure. | WHY NARROW: Only one paper discusses this specific structure.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_024",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_ONTO_Q001",
+          "question": "Which triple represents the relationship between nanocellular foams and the two-step batch foaming process?",
+          "expected_answer": "(nanocellular foams, producedBy, two-step batch foaming process)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_040",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between a polymer and its production method?",
+      "abstraction_reasoning": "PATTERN: (polymer, producedBy, productionMethod) | ENTITY MAPPING: PMMA + MAM blend -> polymer, extrusion -> method. | WHY NARROW: Only one paper discusses this specific method.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_031",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the 'extrusion' process and the resulting 'PMMA + MAM' blend?",
+          "expected_answer": "(PMMA + MAM blend, producedBy, extrusion)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_041",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between polymeric nanocellular foams and the process of physical foaming with CO2?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_024",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_ONTO_Q001",
+          "question": "Which triple represents the relationship between polymeric nanocellular foams and the process of physical foaming with CO2?",
+          "expected_answer": "(polymeric nanocellular foams, producedBy, physical foaming)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_042",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between the MAM copolymer and its constituent monomer blocks?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_026",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_ONTO_Q001",
+          "question": "Which triple represents the relationship between the MAM copolymer and its constituent monomer blocks?",
+          "expected_answer": "(MAM copolymer, hasMonomer, polybutylacrylate)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_043",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between the PS60/PMMA40 blend and the thermal annealing process?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_023",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_ONTO_Q005",
+          "question": "Which triple captures the relationship between the PS60/PMMA40 blend and the thermal annealing process?",
+          "expected_answer": "(PS60/PMMA40 blend, undergoes, thermal annealing)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_044",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between the nanocellular foam and the specific process used to induce its cellular structure?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_027",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_ONTO_Q005",
+          "question": "Which triple captures the relationship between the nanocellular foam and the specific process used to induce its cellular structure?",
+          "expected_answer": "(nanocellular foam, producedBy, pressure quench method)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_045",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between the MAM triblock copolymer and its specific weight percentage of butylacrylate?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_025",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_ONTO_Q001",
+          "question": "Which triple represents the relationship between the MAM triblock copolymer and its specific weight percentage of butylacrylate?",
+          "expected_answer": "(poly methylmethacrylate-block-polybutylacrylate-block-polymethylmethacrylate, hasComposition, 30 wt% butylacrylate)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Materials"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_046",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between the 'batch one-step scCO2 process' and the 'supercritical CO2' used in the foaming procedure?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_030",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the 'batch one-step scCO2 process' and the 'supercritical CO2' used in the foaming procedure?",
+          "expected_answer": "(batch one-step scCO2 process, usesMaterial, supercritical CO2)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_047",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple captures the relationship between Bayesian optimization and Active Learning?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_022",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_ONTO_Q005",
+          "question": "Which triple captures the relationship between Bayesian optimization and Active Learning?",
+          "expected_answer": "(Bayesian optimization, usesMethod, Active Learning)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ONTOLOGY_TRIPLE_048",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which triple represents the relationship between the '3D-DFT approach' and the 'nucleation number density' of the polymer blend?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_027",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_ONTO_GAP001",
+          "question": "Which triple represents the relationship between the '3D-DFT approach' and the 'nucleation number density' of the polymer blend?",
+          "expected_answer": "(3D-DFT approach, predicts, nucleation number density)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Conclusions"
+        }
+      ]
+    }
+  ],
+  "reverse_index": {
+    "Dumon2012_DEDUP_030": "GEN_ONTOLOGY_TRIPLE_001",
+    "Reglero2011_DEDUP_029": "GEN_ONTOLOGY_TRIPLE_001",
+    "Ruiz2011_DEDUP_024": "GEN_ONTOLOGY_TRIPLE_001",
+    "Di Maio2018_DEDUP_025": "GEN_ONTOLOGY_TRIPLE_002",
+    "Guo2015_DEDUP_023": "GEN_ONTOLOGY_TRIPLE_002",
+    "Jacobs2007_DEDUP_018": "GEN_ONTOLOGY_TRIPLE_002",
+    "Di Maio2018_DEDUP_028": "GEN_ONTOLOGY_TRIPLE_003",
+    "Guo2015_DEDUP_026": "GEN_ONTOLOGY_TRIPLE_004",
+    "Shieh2002_DEDUP_019": "GEN_ONTOLOGY_TRIPLE_004",
+    "Liu2019_DEDUP_019": "GEN_ONTOLOGY_TRIPLE_005",
+    "Wu2021_DEDUP_022": "GEN_ONTOLOGY_TRIPLE_005",
+    "Wu2021_DEDUP_026": "GEN_ONTOLOGY_TRIPLE_006",
+    "Di Maio2018_DEDUP_029": "GEN_ONTOLOGY_TRIPLE_025",
+    "Shieh2002_DEDUP_016": "GEN_ONTOLOGY_TRIPLE_008",
+    "Shah2025_DEDUP_020": "GEN_ONTOLOGY_TRIPLE_009",
+    "Shieh2002_DEDUP_020": "GEN_ONTOLOGY_TRIPLE_026",
+    "Otsuka2008_DEDUP_028": "GEN_ONTOLOGY_TRIPLE_027",
+    "Ruiz2011_DEDUP_028": "GEN_ONTOLOGY_TRIPLE_028",
+    "Costeux2013_DEDUP_026": "GEN_ONTOLOGY_TRIPLE_029",
+    "Costeux2014_DEDUP_027": "GEN_ONTOLOGY_TRIPLE_030",
+    "Bärwinkel2016_DEDUP_026": "GEN_ONTOLOGY_TRIPLE_031",
+    "Bärwinkel2016_DEDUP_022": "GEN_ONTOLOGY_TRIPLE_032",
+    "Bärwinkel2016_DEDUP_025": "GEN_ONTOLOGY_TRIPLE_033",
+    "Guo2015_DEDUP_027": "GEN_ONTOLOGY_TRIPLE_034",
+    "Jacobs2007_DEDUP_024": "GEN_ONTOLOGY_TRIPLE_035",
+    "Jacobs2007_DEDUP_022": "GEN_ONTOLOGY_TRIPLE_036",
+    "Costeux2014_DEDUP_029": "GEN_ONTOLOGY_TRIPLE_037",
+    "Otsuka2008_DEDUP_023": "GEN_ONTOLOGY_TRIPLE_038",
+    "Costeux2013_DEDUP_024": "GEN_ONTOLOGY_TRIPLE_039",
+    "Dumon2012_DEDUP_031": "GEN_ONTOLOGY_TRIPLE_040",
+    "Costeux2014_DEDUP_024": "GEN_ONTOLOGY_TRIPLE_041",
+    "Dumon2012_DEDUP_026": "GEN_ONTOLOGY_TRIPLE_042",
+    "Liu2019_DEDUP_023": "GEN_ONTOLOGY_TRIPLE_043",
+    "Otsuka2008_DEDUP_027": "GEN_ONTOLOGY_TRIPLE_044",
+    "Reglero2011_DEDUP_025": "GEN_ONTOLOGY_TRIPLE_045",
+    "Reglero2011_DEDUP_030": "GEN_ONTOLOGY_TRIPLE_046",
+    "Shah2025_DEDUP_022": "GEN_ONTOLOGY_TRIPLE_047",
+    "Wu2021_DEDUP_027": "GEN_ONTOLOGY_TRIPLE_048"
+  }
+}

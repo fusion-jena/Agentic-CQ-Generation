@@ -1,0 +1,1014 @@
+{
+  "paper_id": "Dumon2012",
+  "pipeline_step": "intra_paper_dedup",
+  "pipeline_version": "v2",
+  "step_version": "step1_v1.0",
+  "dedup_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "dedup_prompt_v1.0",
+    "source_file": "papers/v2/cq_output/Dumon2012_ext-qw-35b_g-ge4-31b_v-der1-32b_r-qw-35b_cq_v2.json",
+    "source_pipeline_version": "v2.1"
+  },
+  "paper_metadata": {
+    "title": "Block Copolymer-Assisted Microcellular Supercritical CO2 Foaming of Polymers and Blends",
+    "first_author_lastname": "Dumon",
+    "year": 2012,
+    "journal": "Cellular Polymers",
+    "doi": null,
+    "keywords": [
+      "block copolymers",
+      "supercritical CO2",
+      "microcellular foaming",
+      "polystyrene",
+      "polymethylmethacrylate",
+      "nanostructuring"
+    ],
+    "polymer_systems": [
+      "Polystyrene",
+      "Polymethylmethacrylate",
+      "Styrenic-butadiene block copolymers",
+      "Styrenic-methacrylic block copolymers",
+      "Styrenic-perfluoroalkyl block copolymers"
+    ],
+    "polymerization_methods": [],
+    "paper_type": "research article",
+    "paper_id": "Dumon2012",
+    "source_filename": "Block Copolymer-AssistedMicrocellular Supercritical CO 2Foaming of Polymers and Blends.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 16,
+    "n_figures": 20,
+    "n_tables": 1,
+    "file_size_kb": 374.5,
+    "char_count": 30453,
+    "estimated_tokens": 7613,
+    "n_sections": 0
+  },
+  "dedup_stats": {
+    "n_input_personas": 7,
+    "n_input_cqs": 49,
+    "n_representative_cqs": 44,
+    "n_merged_groups": 5,
+    "n_singletons": 39,
+    "n_discarded": 5,
+    "reduction_rate": 0.102,
+    "archetype_breakdown": {
+      "CAUSAL": {
+        "n_input": 11,
+        "n_output": 10
+      },
+      "COMPARATIVE": {
+        "n_input": 4,
+        "n_output": 4
+      },
+      "CONDITION_FOR_PROCESS": {
+        "n_input": 4,
+        "n_output": 3
+      },
+      "ENTITY_LOOKUP": {
+        "n_input": 6,
+        "n_output": 4
+      },
+      "ENUMERATION": {
+        "n_input": 5,
+        "n_output": 5
+      },
+      "GAP_OR_LIMITATION": {
+        "n_input": 2,
+        "n_output": 2
+      },
+      "METHOD_OF_MEASUREMENT": {
+        "n_input": 4,
+        "n_output": 4
+      },
+      "MOTIVATION": {
+        "n_input": 6,
+        "n_output": 6
+      },
+      "ONTOLOGY_TRIPLE": {
+        "n_input": 3,
+        "n_output": 3
+      },
+      "PROCESS_FOR_MATERIAL": {
+        "n_input": 4,
+        "n_output": 3
+      }
+    },
+    "parse_fallback_used": false,
+    "accounting_ok": true,
+    "grouping_ok": true,
+    "vague_answer_warnings": [
+      {
+        "id": "Dumon2012_SYNTH_Q001",
+        "persona_code": "SYNTH",
+        "expected_answer": "Atom Transfer Radical Polymerization (ATRP).",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Dumon2012_SYNTH_GAP001",
+        "persona_code": "SYNTH",
+        "expected_answer": "Atom Transfer Radical Polymerization (ATRP).",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Dumon2012_CHAR_Q003",
+        "persona_code": "CHAR",
+        "expected_answer": "70000 g/mol",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Dumon2012_CHAR_GAP002",
+        "persona_code": "CHAR",
+        "expected_answer": "70000 g/mol",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Dumon2012_ONTO_Q001",
+        "persona_code": "ONTO",
+        "expected_answer": "(MAM copolymer, hasMonomer, polybutylacrylate)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Dumon2012_ONTO_Q002",
+        "persona_code": "ONTO",
+        "expected_answer": "Scanning Electron Microscopy (SEM)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Dumon2012_ONTO_Q003",
+        "persona_code": "ONTO",
+        "expected_answer": "Condition",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Dumon2012_ONTO_Q004",
+        "persona_code": "ONTO",
+        "expected_answer": "SBM, MAM, SM, and PS-b-PFDA",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Dumon2012_ONTO_Q005",
+        "persona_code": "ONTO",
+        "expected_answer": "(PS-b-PFDA, producedBy, Atom Transfer Radical Polymerization (ATRP))",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Dumon2012_ONTO_GAP001",
+        "persona_code": "ONTO",
+        "expected_answer": "(PMMA + MAM blend, producedBy, extrusion)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Dumon2012_ONTO_GAP002",
+        "persona_code": "ONTO",
+        "expected_answer": "micelles, vesicles, lamellas, and worm-like structures",
+        "flags": [
+          "answer_too_short"
+        ]
+      }
+    ]
+  },
+  "execution_stats": {
+    "total_wall_time": "46s 940ms",
+    "llm_calls": [
+      {
+        "model": "deepseek-r1:32b",
+        "think": true,
+        "wall_time": "46s 939ms",
+        "prompt_tokens": 6081,
+        "generated_tokens": 979,
+        "thinking_chars": 0
+      }
+    ]
+  },
+  "representative_questions": [
+    {
+      "id": "Dumon2012_DEDUP_001",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_SYNTH_Q001",
+      "question": "Which polymerization method is suggested for the synthesis of the PS-b-PFDA diblock copolymer?",
+      "expected_answer": "Atom Transfer Radical Polymerization (ATRP).",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": false,
+      "why_kept": "This question has the same content as Dumon2012_SYNTH_GAP001 but with a more specific answer.",
+      "merged_from": [
+        {
+          "id": "Dumon2012_SYNTH_GAP001",
+          "paper_id": "Dumon2012",
+          "persona_code": "SYNTH",
+          "question": "Which polymerization method is suggested for the synthesis of the PS-b-PFDA diblock copolymer consisting of polystyrene and perfluorodecyl acrylate blocks?",
+          "expected_answer": "Atom Transfer Radical Polymerization (ATRP).",
+          "reason_discarded": "This question has the same content as Dumon2012_SYNTH_GAP001 but with a more specific answer."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the polymerization method for PS-b-PFDA diblock copolymer."
+    },
+    {
+      "id": "Dumon2012_DEDUP_002",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_SYNTH_Q002",
+      "question": "What were the saturation pressure and duration used to saturate the polymer samples with supercritical CO2?",
+      "expected_answer": "The samples were saturated at a pressure of 300 bar for 24 hours.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_003",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_SYNTH_Q003",
+      "question": "How does the use of a highly CO2-philic block in a block copolymer affect the resulting foam structure compared to a poorly CO2-philic additive?",
+      "expected_answer": "A highly CO2-philic block (such as in the MAM copolymer) leads to a drastic reduction of the average cell size, producing ultra-microcellular foams, whereas a poorly CO2-philic additive (such as SBM) only provides a slight improvement in cell size reduction and homogeneity.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Conclusions",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_004",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_SYNTH_Q004",
+      "question": "Why was a perfluorodecyl acrylate (PFDA) block selected for the synthesis of the PS-b-PFDA copolymer in the context of CO2 foaming?",
+      "expected_answer": "Fluorinated polymers were selected because they present the highest CO2-philicity, which is valuable for obtaining nanocellular porous films.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_005",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_SYNTH_Q005",
+      "question": "What is the weight composition of the SBM triblock terpolymer (polystyrene-b-polybutadiene-b-polymethylmethacrylate)?",
+      "expected_answer": "The SBM copolymer consists of 52 wt% styrene, 30 wt% butadiene, and 18 wt% methylmethacrylate.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_006",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_SYNTH_GAP002",
+      "question": "How does the choice of a highly CO2-philic block in a block copolymer affect the resulting nanostructures during the gas dissolution process?",
+      "expected_answer": "The nanostructures act as CO2 reservoirs, which enables control over the microcellular or nanocellular foaming of amorphous polymers.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_007",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_CHAR_Q001",
+      "question": "Which analytical technique was used to characterize the cellular structure of the foams?",
+      "expected_answer": "Scanning Electron Microscopy (SEM) on liquid nitrogen fractured samples.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_008",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_CHAR_Q002",
+      "question": "What technique was used to observe the dense solid nanostructures of the copolymers and blends, and how were the samples prepared?",
+      "expected_answer": "Transmission Electron Microscopy (TEM) was used on ultra microtomed thin films (≈80 nm) treated with either RuO4 or phosphotungstic acid.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_009",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_CHAR_Q003",
+      "question": "What is the reported molar mass (Mw) of the PMMA homopolymer used in the study?",
+      "expected_answer": "70000 g/mol",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": false,
+      "why_kept": "This question has a more specific answer than Dumon2012_CHAR_GAP002.",
+      "merged_from": [
+        {
+          "id": "Dumon2012_CHAR_GAP002",
+          "paper_id": "Dumon2012",
+          "persona_code": "CHAR",
+          "question": "What is the reported molar mass (Mw) of the PMMA homopolymer used in the blends?",
+          "expected_answer": "70000 g/mol",
+          "reason_discarded": "This question has a more specific answer than Dumon2012_CHAR_GAP002."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the molar mass of PMMA homopolymer."
+    },
+    {
+      "id": "Dumon2012_DEDUP_010",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_CHAR_Q004",
+      "question": "How does the CO2-philicity of fluoro-based polymers (e.g., PS-PFDA) compare to that of PMMA-based systems?",
+      "expected_answer": "Fluoro based polymers (PS-PFDA) are the most CO2-philic polymers in the list, while PMMA and PMMA-based copolymers are among the best CO2-philic systems compared to neat PS or polyolefins.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "source_section": "Results",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_011",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_CHAR_Q005",
+      "question": "Which block copolymers were used in this study to assist the microcellular foaming process?",
+      "expected_answer": "SBM (polystyrene-b-polybutadiene-b-polymethylmethacrylate), MAM (polymethylmethacrylate-b-polybutylacrylate-b-polymethylmethacrylate), SM (polystyrene-b-polymethylmethacrylate), and a di block fluoro copolymer PS-b-PFDA.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENUMERATION",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_012",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_CHAR_GAP001",
+      "question": "Which analytical technique was used to observe the nanostructures, such as micelles and lamellas, in the MAM copolymer and its blends?",
+      "expected_answer": "Transmission Electron Microscopy (TEM) on ultra microtomed thin films (≈80 nm) treated with RuO4 or phosphotungstic acid.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Results",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_013",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PROC_Q001",
+      "question": "How does the depressurization rate affect the cell density (Nc) of PS+SBM foams at a fixed saturation temperature?",
+      "expected_answer": "Increasing the depressurization rate from 12 bar/min to 150 bar/min increases the cell density from 10^7 cells/cm3 to 10^13 cells/cm3.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_014",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PROC_Q002",
+      "question": "What were the saturation pressure and time used to achieve the CO2 weight gain ratios for the polymers and blends?",
+      "expected_answer": "The saturation conditions were 300 bar for 16 hours.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has a more specific answer than Dumon2012_PROC_GAP002.",
+      "merged_from": [
+        {
+          "id": "Dumon2012_PROC_GAP002",
+          "paper_id": "Dumon2012",
+          "persona_code": "PROC",
+          "question": "Under what saturation conditions (pressure and time) were the polymer samples processed to ensure CO2 absorption reached a stable maximum for 1.5 mm thick specimens?",
+          "expected_answer": "The samples were saturated with supercritical CO2 at a maintained pressure of 300 bar for 24 hours.",
+          "reason_discarded": "This question has a more specific answer than Dumon2012_PROC_GAP002."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the saturation conditions for polymer samples."
+    },
+    {
+      "id": "Dumon2012_DEDUP_015",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PROC_Q003",
+      "question": "How does the CO2 weight gain of the PMMA+MAM blend compare to that of the PS+SBM blend at a saturation temperature of 25°C?",
+      "expected_answer": "The PMMA+MAM blend has a weight gain of 22.3%, while the PS+SBM blend has a weight gain of 12.1%.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_016",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PROC_Q004",
+      "question": "Why was a CO2-philic block, such as the one in the MAM copolymer, selected to control the foaming of amorphous polymers?",
+      "expected_answer": "A highly CO2-philic block allows the nanostructures to act as CO2 reservoirs, enabling control over microcellular or nanocellular foaming and drastically reducing the average cell size.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_017",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PROC_Q005",
+      "question": "What is the effect of increasing the saturation temperature from 25°C to 80°C on the cell size of PS+SBM foams at a fixed depressurization rate of 60 bar/min?",
+      "expected_answer": "The average cell size increases from 1 µm at 25°C to 30 µm at 80°C.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_018",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PROC_GAP001",
+      "question": "How does the depressurization rate affect the cell size and cell density of PS+SBM foams at a fixed saturation temperature of 40°C?",
+      "expected_answer": "Increasing the depressurization rate from 12 bar/min to 150 bar/min reduces the average cell size from 20 µm to 0.3 µm and increases the cell density from 10^7 cells/cm3 to 2.1 x 10^13 cells/cm3.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_019",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_COMP_Q001",
+      "question": "How does the depressurization rate affect the average cell size (F) in PMMA + 10% MAM foams?",
+      "expected_answer": "As the depressurization rate decreases from 150 bar/min to 12 bar/min, the average cell size (F) increases from 0.3 mm to 20 mm.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_020",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_COMP_Q002",
+      "question": "How does the CO2 weight gain ratio (w) at 40°C compare between neat PS and the PMMA + MAM blend?",
+      "expected_answer": "Neat PS has a weight gain ratio of 10.3%, while the PMMA + MAM blend has a significantly higher weight gain ratio of 21.2%.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_021",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_COMP_Q003",
+      "question": "What is the reported average cell size range for microcellular polymeric foams as a general definition?",
+      "expected_answer": "Microcellular polymeric foams are defined as porous materials having average cell sizes in the range of 1-10 µm.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has a more specific answer than Dumon2012_STU_Q001.",
+      "merged_from": [
+        {
+          "id": "Dumon2012_STU_Q001",
+          "paper_id": "Dumon2012",
+          "persona_code": "STU",
+          "question": "What is the average cell size range that defines microcellular polymeric foams?",
+          "expected_answer": "Microcellular polymeric foams are defined as porous materials having average cell sizes in the range of 1-10 µm.",
+          "reason_discarded": "This question has a more specific answer than Dumon2012_STU_Q001."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the average cell size range for microcellular polymeric foams."
+    },
+    {
+      "id": "Dumon2012_DEDUP_022",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_COMP_Q004",
+      "question": "Which block copolymer additives were used to modify the foaming behavior of the amorphous polymers?",
+      "expected_answer": "The block copolymers used were SBM (polystyrene-b-polybutadiene-b-polymethylmethacrylate), MAM, SM, and a lab-synthesized fluoro acrylate copolymer (PS-PFDA).",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "source_section": "Experimental Section",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_023",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_COMP_Q005",
+      "question": "How does varying the saturation temperature (Tsat) from 25°C to 80°C affect the cell density (Nc) of PMMA + 10% MAM foams at a fixed depressurization rate of 60 bar/min?",
+      "expected_answer": "The cell density (Nc) changes from 10^10 cells/cm3 at 25°C to 10^9 cells/cm3 at 80°C.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_024",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_COMP_GAP001",
+      "question": "How does the depressurization rate affect the average cell size and cell density for PS + SBM 10% foams?",
+      "expected_answer": "As the depressurization rate decreases from 150 bar/min to 12 bar/min, the average cell size increases from 0.3 mm to 20 mm, while the cell density decreases from 2.1 x 10^13 cells/cm3 to 4.5 x 10^7 cells/cm3.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_025",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_COMP_GAP002",
+      "question": "According to the Summary section, which specific nanostructures are generated in block copolymers depending on the block type and concentration?",
+      "expected_answer": "The generated nanostructures include micelles, vesicles, lamellas, or worm-like structures.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "source_section": "Summary",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_026",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_ONTO_Q001",
+      "question": "Which triple represents the relationship between the MAM copolymer and its constituent monomer blocks?",
+      "expected_answer": "(MAM copolymer, hasMonomer, polybutylacrylate)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Section",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_027",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_ONTO_Q002",
+      "question": "Which method was used to characterize the cellular structure (cell size) of the foams?",
+      "expected_answer": "Scanning Electron Microscopy (SEM)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Section",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_028",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_ONTO_Q003",
+      "question": "What ontology class should 'saturation temperature' and 'depressurization rate' be assigned to?",
+      "expected_answer": "Condition",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_029",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_ONTO_Q004",
+      "question": "Which block copolymer materials are reported as being used in the foaming experiments?",
+      "expected_answer": "SBM, MAM, SM, and PS-b-PFDA",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Section",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_030",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_ONTO_Q005",
+      "question": "Which triple captures the relationship between the PS-b-PFDA copolymer and the synthesis method used to create it?",
+      "expected_answer": "(PS-b-PFDA, producedBy, Atom Transfer Radical Polymerization (ATRP))",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Section",
+      "is_singleton": false,
+      "why_kept": "This question is from the ONTO persona and has a more specific answer than Dumon2012_PHD_GAP001.",
+      "merged_from": [
+        {
+          "id": "Dumon2012_PHD_GAP001",
+          "paper_id": "Dumon2012",
+          "persona_code": "PHD",
+          "question": "How does the choice of a highly CO2-philic block in a block copolymer affect the resulting cellular structure of amorphous polymers like PMMA and PS?",
+          "expected_answer": "When one block is highly CO2-philic, the resulting nanostructures act as CO2 reservoirs, which enables the control of microcellular or even nanocellular foaming of the amorphous polymers.",
+          "reason_discarded": "This question is from the ONTO persona and has a more specific answer than Dumon2012_PHD_GAP001."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the relationship between PS-b-PFDA copolymer and its synthesis method."
+    },
+    {
+      "id": "Dumon2012_DEDUP_031",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_ONTO_GAP001",
+      "question": "Which triple represents the relationship between the 'extrusion' process and the resulting 'PMMA + MAM' blend?",
+      "expected_answer": "(PMMA + MAM blend, producedBy, extrusion)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Section",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_032",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_ONTO_GAP002",
+      "question": "Which specific nanostructure morphologies are reported as resulting from the self-assembly of block copolymers in this study?",
+      "expected_answer": "micelles, vesicles, lamellas, and worm-like structures",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_033",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_STU_Q002",
+      "question": "Why is supercritical CO2 used as a physical foaming agent for amorphous polymers?",
+      "expected_answer": "Supercritical CO2 is used because its low critical conditions (31.1°C and 73.8 bar) offer advantages such as tuneable solvent power, plasticization of glassy amorphous polymers, and high diffusion rates.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_034",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_STU_Q003",
+      "question": "By which process were the microcellular foams of PS and PMMA produced in this study?",
+      "expected_answer": "They were produced via a batch single step-process where the polymer is saturated with CO2 in the supercritical regime and then depressurized to atmospheric pressure.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_035",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_STU_Q004",
+      "question": "Why does the addition of a highly CO2-philic block copolymer, such as MAM, lead to a drastic reduction in average cell size?",
+      "expected_answer": "The CO2-philic dispersed entities act as CO2 reservoirs and provide a compromise between CO2 philicity, nano sized dispersion of the additive (acting as nuclei), and cell growth limitation due to surrounding glassy PMMA blocks.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Conclusions",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_036",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_STU_Q005",
+      "question": "What are the critical temperature and pressure conditions for supercritical CO2 mentioned in the text?",
+      "expected_answer": "The critical conditions for supercritical CO2 are 31.1°C and 73.8 bar.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_037",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_STU_GAP001",
+      "question": "By which process were the blends of PS + SBM and PMMA + MAM produced?",
+      "expected_answer": "The blends were produced by extrusion, followed by injection moulding to obtain bulk specimens.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "source_section": "Experimental",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_038",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_STU_GAP002",
+      "question": "Why is a highly CO2-philic block chosen for the nanostructures in the foaming of amorphous polymers?",
+      "expected_answer": "A highly CO2-philic block is chosen so that the resulting nanostructures can act as CO2 reservoirs, which enables control over the microcellular or nanocellular foaming of the polymers.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_039",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PHD_Q001",
+      "question": "How does the use of a highly CO2-philic block in a block copolymer affect the foaming of amorphous polymers like PMMA and PS?",
+      "expected_answer": "When one block is highly CO2-philic, the resulting nanostructures act as CO2 reservoirs, which enables control over the microcellular or nanocellular foaming of these amorphous polymers.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_040",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PHD_Q002",
+      "question": "How does the CO2 mass uptake of PMMA-based copolymers compare to that of neat polystyrene (PS) and polyolefins?",
+      "expected_answer": "PMMA and PMMA-based copolymers are among the best CO2-philic systems compared to neat PS or polyolefins, exhibiting higher CO2 uptake.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "source_section": "Results",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_041",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PHD_Q003",
+      "question": "Why is the use of supercritical CO2 specifically advantageous for the foaming of glassy amorphous polymers?",
+      "expected_answer": "Supercritical CO2 offers low critical conditions (31.1°C and 73.8 bar), a tuneable solvent power, high diffusion rates, and the ability to plasticize glassy amorphous polymers.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_042",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PHD_Q004",
+      "question": "What specific relationship between the initial copolymer structure and the resulting foam is identified as still being under study?",
+      "expected_answer": "The authors state that a direct relation between the initial structure, specifically in a PS-b-PFDA copolymer, and the resulting foam is still under study.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Results",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_043",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PHD_Q005",
+      "question": "How does the depressurization rate influence the vitrification onset and the resulting cell size in the one-step CO2 process?",
+      "expected_answer": "An increase in the depressurization rate (e.g., up to 150 bar/min) causes a greater temperature drop (down to -50°C), which modifies the onset of vitrification so that it arrives earlier, thereby freezing the cells in at different times and affecting the final cell size.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Results",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Dumon2012_DEDUP_044",
+      "paper_id": "Dumon2012",
+      "source_id": "Dumon2012_PHD_GAP002",
+      "question": "What future research directions are proposed regarding the relationship between initial copolymer nanostructures and the final foam morphology?",
+      "expected_answer": "The authors identify two points still under study: establishing a direct relation between the initial structure (e.g., in a PS-b-PFDA copolymer) and the resulting foam, and the generation of unconventional foams, such as lamellar foams, under specific conditions (low temperature of 40°C and MAM content > 50 wt%).",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    }
+  ],
+  "discarded_questions": [
+    {
+      "id": "Dumon2012_SYNTH_GAP001",
+      "paper_id": "Dumon2012",
+      "question": "Which polymerization method is suggested for the synthesis of the PS-b-PFDA diblock copolymer consisting of polystyrene and perfluorodecyl acrylate blocks?",
+      "expected_answer": "Atom Transfer Radical Polymerization (ATRP).",
+      "persona_code": "SYNTH",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "absorbed_into": "Dumon2012_DEDUP_001"
+    },
+    {
+      "id": "Dumon2012_CHAR_GAP002",
+      "paper_id": "Dumon2012",
+      "question": "What is the reported molar mass (Mw) of the PMMA homopolymer used in the blends?",
+      "expected_answer": "70000 g/mol",
+      "persona_code": "CHAR",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental",
+      "absorbed_into": "Dumon2012_DEDUP_009"
+    },
+    {
+      "id": "Dumon2012_PROC_GAP002",
+      "paper_id": "Dumon2012",
+      "question": "Under what saturation conditions (pressure and time) were the polymer samples processed to ensure CO2 absorption reached a stable maximum for 1.5 mm thick specimens?",
+      "expected_answer": "The samples were saturated with supercritical CO2 at a maintained pressure of 300 bar for 24 hours.",
+      "persona_code": "PROC",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Experimental Section",
+      "absorbed_into": "Dumon2012_DEDUP_014"
+    },
+    {
+      "id": "Dumon2012_STU_Q001",
+      "paper_id": "Dumon2012",
+      "question": "What is the average cell size range that defines microcellular polymeric foams?",
+      "expected_answer": "Microcellular polymeric foams are defined as porous materials having average cell sizes in the range of 1-10 µm.",
+      "persona_code": "STU",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Introduction",
+      "absorbed_into": "Dumon2012_DEDUP_021"
+    },
+    {
+      "id": "Dumon2012_PHD_GAP001",
+      "paper_id": "Dumon2012",
+      "question": "How does the choice of a highly CO2-philic block in a block copolymer affect the resulting cellular structure of amorphous polymers like PMMA and PS?",
+      "expected_answer": "When one block is highly CO2-philic, the resulting nanostructures act as CO2 reservoirs, which enables the control of microcellular or even nanocellular foaming of the amorphous polymers.",
+      "persona_code": "PHD",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "absorbed_into": "Dumon2012_DEDUP_030"
+    }
+  ]
+}

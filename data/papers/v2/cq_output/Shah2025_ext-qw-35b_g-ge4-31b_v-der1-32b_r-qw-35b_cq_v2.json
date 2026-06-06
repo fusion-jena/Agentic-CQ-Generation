@@ -1,0 +1,3050 @@
+{
+  "paper_id": "Shah2025",
+  "paper_metadata": {
+    "title": "Low-density polyamide 12 foams using Bayesian optimization and inverse design",
+    "first_author_lastname": "Shah",
+    "year": 2025,
+    "journal": "Polymer",
+    "doi": "10.1016/j.polymer.2025.128096",
+    "keywords": [
+      "Bead foams",
+      "Polyamide 12",
+      "Batch foaming",
+      "Machine learning",
+      "Bayesian optimization",
+      "Active learning",
+      "Inverse design"
+    ],
+    "polymer_systems": [
+      "Polyamide 12"
+    ],
+    "polymerization_methods": [],
+    "paper_type": "research article",
+    "paper_id": "Shah2025",
+    "source_filename": "1-s2.0-S0032386125000825-main.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 10,
+    "n_figures": 6,
+    "n_tables": 1,
+    "file_size_kb": 2057.5,
+    "char_count": 52860,
+    "estimated_tokens": 13215,
+    "n_sections": 0
+  },
+  "pipeline_config": {
+    "pipeline_version": "v2.1",
+    "extraction_method": "plain",
+    "metadata_extractor": "qwen3.5:27b",
+    "iterative_extractor": "qwen3.6:35b-a3b",
+    "cq_generator": "gemma4:31b",
+    "cq_validator": "deepseek-r1:32b",
+    "cq_refiner": "qwen3.5:35b",
+    "embedding_model": "BAAI/bge-small-en-v1.5"
+  },
+  "execution_stats": {
+    "text_extraction_secs": 7.31,
+    "total_wall_secs": 1096.93,
+    "stage_seconds": {
+      "chunk": 0.0,
+      "index": 0.52,
+      "extract": 358.46,
+      "retrieve": 0.39,
+      "generate": 417.9,
+      "validate": 278.01,
+      "refine": 33.82,
+      "evaluate": 0.35
+    }
+  },
+  "pipeline_version": "v2.1",
+  "n_personas": 7,
+  "n_questions": 49,
+  "was_refined": true,
+  "persona_questions": {
+    "SYNTH": [
+      {
+        "id": "Shah2025_SYNTH_Q001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "By which process were the low-density polyamide 12 foams produced?",
+        "expected_answer": "Autoclave batch foaming using supercritical carbon dioxide (CO2).",
+        "source_section": "Materials and methods",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "polyamide 12"
+          },
+          {
+            "role": "class",
+            "term": "batch foaming"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_SYNTH_Q002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the optimal processing parameters (pressure, temperature, and residence time) used to achieve the minimum foam density of 50 kg/m3?",
+        "expected_answer": "A pressure of 170 bar, a temperature of 187 °C, and a residence time of 20 min.",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "pressure"
+          },
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "residence time"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_SYNTH_Q003",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the saturation pressure affect the average cell size and cell density of the PA 12 foam at similar temperatures?",
+        "expected_answer": "Higher pressures result in a smaller average cell size and increased cell density.",
+        "source_section": "Cell morphology",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "pressure"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_SYNTH_Q004",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was the residence time kept constant at 30 min during the investigation of the maximum spectrum of possible morphology?",
+        "expected_answer": "To ensure a state of equilibrium blowing agent sorption.",
+        "source_section": "Cell morphology",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "residence time"
+          },
+          {
+            "role": "class",
+            "term": "blowing agent sorption"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_SYNTH_Q005",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of elevating the temperature to 190.0 °C on the stability of the cell growth and the resulting cell distribution compared to foaming at 188 °C?",
+        "expected_answer": "Elevated temperature reduces the viscosity of the polymer matrix, leading to more unstable growth of cells and possible coalescence by partial rupture of cell walls, resulting in a more irregular distribution.",
+        "source_section": "Cell morphology",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "viscosity"
+          },
+          {
+            "role": "property",
+            "term": "cell distribution"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_SYNTH_GAP001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "By which process were the low-density polyamide 12 foams produced?",
+        "expected_answer": "Batch foaming under pressure using a high-pressure autoclave with supercritical carbon dioxide (CO2) as the blowing agent.",
+        "source_section": "Materials and methods",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "polyamide 12"
+          },
+          {
+            "role": "class",
+            "term": "batch foaming"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_SYNTH_GAP002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the saturation pressure affect the cell morphology of the PA 12 foams at similar temperatures?",
+        "expected_answer": "Higher pressures lead to a smaller average cell size and increased cell density, while simultaneously narrowing the cell size distribution.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "pressure"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      }
+    ],
+    "CHAR": [
+      {
+        "id": "Shah2025_CHAR_Q001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to determine the density of the PA 12 bead foams?",
+        "expected_answer": "The Archimedes principle using a precision density balance, where samples were weighed in air and then submerged in water.",
+        "source_section": "Density measurement",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foam density"
+          },
+          {
+            "role": "class",
+            "term": "Archimedes principle"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_CHAR_Q002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the lowest recorded foam density achieved for the polyamide 12 foams?",
+        "expected_answer": "50 kg/m^3",
+        "source_section": "Minimizing foam density",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polyamide 12"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_CHAR_Q003",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which analytical technique was used to examine the cell morphology and structure of the PA 12 beads?",
+        "expected_answer": "Scanning electron microscope (SEM), specifically a JEOL JSM 6510, with ImageJ software used for subsequent analysis.",
+        "source_section": "Morphology",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "scanning electron microscope"
+          },
+          {
+            "role": "property",
+            "term": "morphology"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_CHAR_Q004",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENUMERATION",
+        "question": "Which processing parameters were systematically varied to identify the optimal conditions for the PA 12 foams?",
+        "expected_answer": "Saturation time, pressure, and temperature.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "processing parameters"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_CHAR_Q005",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What specific parameter combination was identified as the best for achieving the minimum density of 50 kg/m^3 in PA 12 foams?",
+        "expected_answer": "A pressure of 170 bar, a temperature range of 187 °C–188 °C, and a residence time of 20 min.",
+        "source_section": "Minimizing foam density",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "pressure"
+          },
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "residence time"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_CHAR_GAP001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to determine the density of the polyamide 12 bead foams?",
+        "expected_answer": "The Archimedes principle using a precision density balance, where samples were weighed in air and then submerged in water.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foam density"
+          },
+          {
+            "role": "class",
+            "term": "Archimedes principle"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_CHAR_GAP002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the average cell size achieved for the PA 12 foam when processed at a saturation pressure of 180 bar?",
+        "expected_answer": "A fine morphology with cell sizes around 31 μm was achieved.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "individual",
+            "term": "polyamide 12"
+          }
+        ]
+      }
+    ],
+    "PROC": [
+      {
+        "id": "Shah2025_PROC_Q001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the optimal processing parameters used to achieve the lowest recorded foam density of 50 kg/m³ for polyamide 12?",
+        "expected_answer": "The lowest density was achieved using a pressure of 170 bar, a temperature of 187 °C, and a residence time of 20 min.",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polyamide 12"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          },
+          {
+            "role": "class",
+            "term": "processing parameters"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PROC_Q002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the saturation pressure affect the cell morphology of PA 12 foams at similar temperatures?",
+        "expected_answer": "Higher pressures result in a smaller average cell size and increased cell density while simultaneously narrowing the cell size distribution.",
+        "source_section": "Cell morphology",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation pressure"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PROC_Q003",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of increasing the foaming temperature from 187.5 °C to 190.0 °C on the stability of the PA 12 foam morphology at a constant pressure of 140 bar?",
+        "expected_answer": "Increasing the temperature to 190.0 °C leads to a more irregular cell distribution, attributed to reduced polymer matrix viscosity which causes unstable cell growth and possible coalescence via partial rupture of cell walls.",
+        "source_section": "Cell morphology",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "viscosity"
+          },
+          {
+            "role": "property",
+            "term": "cell morphology"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PROC_Q004",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "MOTIVATION",
+        "question": "Why was the residence time kept constant at 30 min during the investigation of the maximum spectrum of possible morphology?",
+        "expected_answer": "Residence time was kept constant at 30 min to ensure a state of equilibrium blowing agent sorption.",
+        "source_section": "Cell morphology",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "residence time"
+          },
+          {
+            "role": "class",
+            "term": "blowing agent sorption"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PROC_Q005",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "What is the identified relationship between foaming temperature and foam density in the PA 12 autoclave process?",
+        "expected_answer": "Temperature is inversely correlated with density, meaning higher temperatures generally lead to lower densities, although there is a narrow low-density foaming range between 185 °C and 192.5 °C.",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PROC_GAP001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the saturation pressure affect the cell size and cell density of PA 12 foams at similar temperatures?",
+        "expected_answer": "Higher saturation pressures lead to a smaller average cell size (e.g., around 31 μm at 180 bar) and increased cell density, while simultaneously narrowing the cell size distribution.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation pressure"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PROC_GAP002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the optimal processing parameters identified to achieve the minimum foam density of 50 kg/m³ for polyamide 12?",
+        "expected_answer": "The best parameter combination was a pressure of 170 bar, a temperature range of 187 °C–188 °C, and a residence time of 20 min.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polyamide 12"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          },
+          {
+            "role": "property",
+            "term": "pressure"
+          },
+          {
+            "role": "property",
+            "term": "temperature"
+          }
+        ]
+      }
+    ],
+    "COMP": [
+      {
+        "id": "Shah2025_COMP_Q001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "Which surrogate model and kernel were used within the Bayesian optimization framework to minimize foam density?",
+        "expected_answer": "Gaussian Processes (GP) were used as the surrogate model, employing either the RBF or Matérn kernel.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Gaussian Processes"
+          },
+          {
+            "role": "property",
+            "term": "kernel"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_COMP_Q002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENUMERATION",
+        "question": "Which machine learning models were compared to determine the most effective predictor for foam density after the Bayesian optimization process?",
+        "expected_answer": "The models considered were Linear Regression (LR), Decision Trees (DT), Random Forest (RF), Gradient Boosting Regression (GBR), Gaussian Processes (GP), Lasso Regression (LASSO), Stochastic Gradient Descent Regression (SGDR), and Ridge Regression (RR).",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Machine Learning Model"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_COMP_Q003",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the variation of temperature and pressure affect the achievement of a target foam density of 110 kg/m3?",
+        "expected_answer": "The target density of 110 kg/m3 can be achieved with different combinations of pressure (e.g., 80 bars and 145 bars) and temperature (e.g., 186 °C and 192 °C) while maintaining the same residence time.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "pressure"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_COMP_Q004",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What acquisition function was employed in the Bayesian optimization process to balance exploration and exploitation?",
+        "expected_answer": "The maximum Expected Improvement (EI) acquisition function was used.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "acquisition function"
+          },
+          {
+            "role": "individual",
+            "term": "Expected Improvement"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_COMP_Q005",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How did the inverse design model's performance vary across different target density regions?",
+        "expected_answer": "The model performed particularly well for lower-density targets, exhibiting a low standard deviation, which is attributed to the model's prior exposure to data from the lower-density region.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "inverse design"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_COMP_GAP001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "Which surrogate model and kernel were used in the Bayesian optimization process to predict foam density?",
+        "expected_answer": "A Gaussian Process (GP) model was used as the regressor, employing the Matérn kernel (and RBF kernel as an alternative) to enhance flexibility and performance.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Gaussian Process model"
+          },
+          {
+            "role": "property",
+            "term": "kernel"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_COMP_GAP002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the variation of processing temperature affect the foam density of polyamide 12 according to the correlation analysis?",
+        "expected_answer": "Temperature exhibits a negative correlation with density, meaning that higher temperatures generally lead to lower densities, although excessively high temperatures can hinder achieving lower densities.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          },
+          {
+            "role": "property",
+            "term": "Pearson correlation coefficient"
+          }
+        ]
+      }
+    ],
+    "ONTO": [
+      {
+        "id": "Shah2025_ONTO_Q001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the inverse design approach and Bayesian optimization as described in the paper?",
+        "expected_answer": "(inverse design, usesMethod, Bayesian optimization)",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Method"
+          },
+          {
+            "role": "property",
+            "term": "usesMethod"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_ONTO_Q002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What ontology class should the processing parameters 'temperature', 'pressure', and 'saturation time' be assigned to?",
+        "expected_answer": "Condition",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Condition"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_ONTO_Q003",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which instrument or method was used to characterize the cellular structures and morphology of the PA 12 foams?",
+        "expected_answer": "SEM (Scanning Electron Microscopy)",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "characterisedBy"
+          },
+          {
+            "role": "class",
+            "term": "Instrument"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_ONTO_Q004",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENUMERATION",
+        "question": "Which specific processing parameters are identified as the key dimensions of the three-dimensional parameter space optimized for PA 12 foam density?",
+        "expected_answer": "temperature, pressure, and residence time",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Property"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question asked for properties not explicitly listed in the text, so it was revised to ask for the specific processing parameters (temperature, pressure, residence time) explicitly mentioned as the optimization dimensions in the Conclusions section."
+      },
+      {
+        "id": "Shah2025_ONTO_Q005",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple captures the relationship between Bayesian optimization and Active Learning?",
+        "expected_answer": "(Bayesian optimization, usesMethod, Active Learning)",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Bayesian optimization"
+          },
+          {
+            "role": "property",
+            "term": "usesMethod"
+          },
+          {
+            "role": "individual",
+            "term": "Active Learning"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_ONTO_GAP001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the Bayesian optimization process and the Gaussian Process model used as its surrogate?",
+        "expected_answer": "(Bayesian optimization, usesMethod, Gaussian Process model)",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Method"
+          },
+          {
+            "role": "property",
+            "term": "usesMethod"
+          },
+          {
+            "role": "individual",
+            "term": "Gaussian Process model"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_ONTO_GAP002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENUMERATION",
+        "question": "Which specific polymer bead foam types are mentioned in the Introduction as examples of materials developed to meet diverse industry needs alongside expanded polystyrene?",
+        "expected_answer": "expanded polypropylene (PP) and expanded thermoplastic polyurethane (TPU)",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Material"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polyurethane"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question included polyurethane (PU) which is not explicitly named as a bead foam in the text (only TPU is), so the question was revised to ask for the specific examples (PP and TPU) explicitly listed in the Introduction."
+      }
+    ],
+    "STU": [
+      {
+        "id": "Shah2025_STU_Q001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the lowest foam density achieved for polyamide 12 in this study?",
+        "expected_answer": "The lowest recorded foam density for polyamide 12 was 50 kg/m^3.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polyamide 12"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_STU_Q002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was Bayesian optimization used in the production of these polyamide 12 foams?",
+        "expected_answer": "Bayesian optimization was used to minimize the foam density and to efficiently optimize material properties with minimal experimental trials.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Bayesian optimization"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_STU_Q003",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "By which process were the low-density polyamide 12 foams produced?",
+        "expected_answer": "The foams were produced using the autoclave batch foaming process.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polyamide 12"
+          },
+          {
+            "role": "class",
+            "term": "batch foaming"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_STU_Q004",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What are the primary processing parameters used to influence the density of PA 12 foams?",
+        "expected_answer": "The primary processing parameters are temperature, pressure, and saturation time (or residence time).",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "temperature"
+          },
+          {
+            "role": "class",
+            "term": "pressure"
+          },
+          {
+            "role": "class",
+            "term": "saturation time"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_STU_Q005",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was an inverse design approach implemented in this study?",
+        "expected_answer": "The inverse design approach was used to check the robustness of the model by identifying the specific processing parameters required to achieve a desired target foam density.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "inverse design"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_STU_GAP001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "MOTIVATION",
+        "question": "Why was a Gaussian Process (GP) model chosen as the surrogate model for the Bayesian optimization process?",
+        "expected_answer": "A Gaussian Process model was chosen because it is considered the best model for this kind of optimization as its predictions automatically include corresponding uncertainties and it performs well with small datasets.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Gaussian Process model"
+          },
+          {
+            "role": "class",
+            "term": "Bayesian optimization"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_STU_GAP002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the lowest foam density achieved for polyamide 12 in this study?",
+        "expected_answer": "The lowest recorded foam density for polyamide 12 was 50 kg/m^3.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polyamide 12"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      }
+    ],
+    "PHD": [
+      {
+        "id": "Shah2025_PHD_Q001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "GAP_OR_LIMITATION",
+        "question": "What limitation does the paper acknowledge regarding the predictive capabilities of the trained machine learning model in relation to foam characteristics?",
+        "expected_answer": "The authors state that while the ML model can suggest new low-density foams, it cannot predict cellular structures.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "machine learning model"
+          },
+          {
+            "role": "property",
+            "term": "cellular structures"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PHD_Q002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the saturation pressure affect the cell morphology and nucleation density of PA 12 foams?",
+        "expected_answer": "Higher pressures lead to a smaller average cell size, increased cell density with a narrower distribution, and an increase in the density-corrected nucleation density.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "pressure"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "nucleation density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PHD_Q003",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "COMPARATIVE",
+        "question": "How does the relationship between temperature and foam density in this study compare to the findings of previous literature cited by the authors?",
+        "expected_answer": "In this study, temperature exhibits a negative correlation with density (higher temperatures generally lead to lower densities), whereas previous studies often describe a local maximum where excessively high temperatures can hinder achieving lower densities.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PHD_Q004",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "MOTIVATION",
+        "question": "Why was an Active Learning (AL) strategy integrated into the Bayesian Optimization (BO) process for minimizing foam density?",
+        "expected_answer": "The AL strategy was integrated to propose uncorrelated processing parameters, which serves to further refine and enhance the Gaussian Process (GP) model in subsequent iterations.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Active Learning"
+          },
+          {
+            "role": "class",
+            "term": "Bayesian optimization"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PHD_Q005",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "What effect does elevating the temperature to 190.0 ◦C have on the stability of the foam morphology compared to foaming at 188 ◦C?",
+        "expected_answer": "Elevating the temperature to 190.0 ◦C results in a more irregular cell distribution due to reduced viscosity of the polymer matrix, which can lead to unstable cell growth and possible coalescence by partial rupture of cell walls; foaming at 188 ◦C is more stable and controllable.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "viscosity"
+          },
+          {
+            "role": "property",
+            "term": "foam morphology"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PHD_GAP001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "analysis",
+        "archetype": "MOTIVATION",
+        "question": "Why was a Gaussian Process (GP) model selected as the surrogate model for the Bayesian optimization of PA-12 foam density?",
+        "expected_answer": "Gaussian Processes were selected because they are considered the best model for this type of optimization due to their ability to provide predictions automatically with corresponding uncertainties (used in the acquisition function) and their strong performance with small datasets.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Gaussian Process model"
+          },
+          {
+            "role": "class",
+            "term": "Bayesian optimization"
+          }
+        ]
+      },
+      {
+        "id": "Shah2025_PHD_GAP002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "GAP_OR_LIMITATION",
+        "question": "What limitation does the paper acknowledge regarding the predictive capabilities of the trained machine learning model in relation to foam morphology?",
+        "expected_answer": "The authors explicitly state that while the trained ML model can be used to suggest new low-density foams, the model cannot predict cellular structures (morphology).",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foam density"
+          },
+          {
+            "role": "class",
+            "term": "cell morphology"
+          }
+        ]
+      }
+    ]
+  },
+  "final_questions": [
+    {
+      "id": "Shah2025_SYNTH_Q001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "By which process were the low-density polyamide 12 foams produced?",
+      "expected_answer": "Autoclave batch foaming using supercritical carbon dioxide (CO2).",
+      "source_section": "Materials and methods",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "polyamide 12"
+        },
+        {
+          "role": "class",
+          "term": "batch foaming"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_SYNTH_Q002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What were the optimal processing parameters (pressure, temperature, and residence time) used to achieve the minimum foam density of 50 kg/m3?",
+      "expected_answer": "A pressure of 170 bar, a temperature of 187 °C, and a residence time of 20 min.",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "pressure"
+        },
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "residence time"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_SYNTH_Q003",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the saturation pressure affect the average cell size and cell density of the PA 12 foam at similar temperatures?",
+      "expected_answer": "Higher pressures result in a smaller average cell size and increased cell density.",
+      "source_section": "Cell morphology",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "pressure"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_SYNTH_Q004",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was the residence time kept constant at 30 min during the investigation of the maximum spectrum of possible morphology?",
+      "expected_answer": "To ensure a state of equilibrium blowing agent sorption.",
+      "source_section": "Cell morphology",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "residence time"
+        },
+        {
+          "role": "class",
+          "term": "blowing agent sorption"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_SYNTH_Q005",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CAUSAL",
+      "question": "What is the effect of elevating the temperature to 190.0 °C on the stability of the cell growth and the resulting cell distribution compared to foaming at 188 °C?",
+      "expected_answer": "Elevated temperature reduces the viscosity of the polymer matrix, leading to more unstable growth of cells and possible coalescence by partial rupture of cell walls, resulting in a more irregular distribution.",
+      "source_section": "Cell morphology",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "viscosity"
+        },
+        {
+          "role": "property",
+          "term": "cell distribution"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_SYNTH_GAP001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "By which process were the low-density polyamide 12 foams produced?",
+      "expected_answer": "Batch foaming under pressure using a high-pressure autoclave with supercritical carbon dioxide (CO2) as the blowing agent.",
+      "source_section": "Materials and methods",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "polyamide 12"
+        },
+        {
+          "role": "class",
+          "term": "batch foaming"
+        },
+        {
+          "role": "property",
+          "term": "producedBy"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_SYNTH_GAP002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the saturation pressure affect the cell morphology of the PA 12 foams at similar temperatures?",
+      "expected_answer": "Higher pressures lead to a smaller average cell size and increased cell density, while simultaneously narrowing the cell size distribution.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "pressure"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_CHAR_Q001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method was used to determine the density of the PA 12 bead foams?",
+      "expected_answer": "The Archimedes principle using a precision density balance, where samples were weighed in air and then submerged in water.",
+      "source_section": "Density measurement",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foam density"
+        },
+        {
+          "role": "class",
+          "term": "Archimedes principle"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_CHAR_Q002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the lowest recorded foam density achieved for the polyamide 12 foams?",
+      "expected_answer": "50 kg/m^3",
+      "source_section": "Minimizing foam density",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polyamide 12"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_CHAR_Q003",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which analytical technique was used to examine the cell morphology and structure of the PA 12 beads?",
+      "expected_answer": "Scanning electron microscope (SEM), specifically a JEOL JSM 6510, with ImageJ software used for subsequent analysis.",
+      "source_section": "Morphology",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "scanning electron microscope"
+        },
+        {
+          "role": "property",
+          "term": "morphology"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_CHAR_Q004",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENUMERATION",
+      "question": "Which processing parameters were systematically varied to identify the optimal conditions for the PA 12 foams?",
+      "expected_answer": "Saturation time, pressure, and temperature.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "processing parameters"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_CHAR_Q005",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What specific parameter combination was identified as the best for achieving the minimum density of 50 kg/m^3 in PA 12 foams?",
+      "expected_answer": "A pressure of 170 bar, a temperature range of 187 °C–188 °C, and a residence time of 20 min.",
+      "source_section": "Minimizing foam density",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "pressure"
+        },
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "residence time"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_CHAR_GAP001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method was used to determine the density of the polyamide 12 bead foams?",
+      "expected_answer": "The Archimedes principle using a precision density balance, where samples were weighed in air and then submerged in water.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foam density"
+        },
+        {
+          "role": "class",
+          "term": "Archimedes principle"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_CHAR_GAP002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the average cell size achieved for the PA 12 foam when processed at a saturation pressure of 180 bar?",
+      "expected_answer": "A fine morphology with cell sizes around 31 μm was achieved.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "individual",
+          "term": "polyamide 12"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PROC_Q001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What were the optimal processing parameters used to achieve the lowest recorded foam density of 50 kg/m³ for polyamide 12?",
+      "expected_answer": "The lowest density was achieved using a pressure of 170 bar, a temperature of 187 °C, and a residence time of 20 min.",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polyamide 12"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        },
+        {
+          "role": "class",
+          "term": "processing parameters"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PROC_Q002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the saturation pressure affect the cell morphology of PA 12 foams at similar temperatures?",
+      "expected_answer": "Higher pressures result in a smaller average cell size and increased cell density while simultaneously narrowing the cell size distribution.",
+      "source_section": "Cell morphology",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation pressure"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PROC_Q003",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "What is the effect of increasing the foaming temperature from 187.5 °C to 190.0 °C on the stability of the PA 12 foam morphology at a constant pressure of 140 bar?",
+      "expected_answer": "Increasing the temperature to 190.0 °C leads to a more irregular cell distribution, attributed to reduced polymer matrix viscosity which causes unstable cell growth and possible coalescence via partial rupture of cell walls.",
+      "source_section": "Cell morphology",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "viscosity"
+        },
+        {
+          "role": "property",
+          "term": "cell morphology"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PROC_Q004",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "MOTIVATION",
+      "question": "Why was the residence time kept constant at 30 min during the investigation of the maximum spectrum of possible morphology?",
+      "expected_answer": "Residence time was kept constant at 30 min to ensure a state of equilibrium blowing agent sorption.",
+      "source_section": "Cell morphology",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "residence time"
+        },
+        {
+          "role": "class",
+          "term": "blowing agent sorption"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PROC_Q005",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "What is the identified relationship between foaming temperature and foam density in the PA 12 autoclave process?",
+      "expected_answer": "Temperature is inversely correlated with density, meaning higher temperatures generally lead to lower densities, although there is a narrow low-density foaming range between 185 °C and 192.5 °C.",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PROC_GAP001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the saturation pressure affect the cell size and cell density of PA 12 foams at similar temperatures?",
+      "expected_answer": "Higher saturation pressures lead to a smaller average cell size (e.g., around 31 μm at 180 bar) and increased cell density, while simultaneously narrowing the cell size distribution.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation pressure"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PROC_GAP002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What were the optimal processing parameters identified to achieve the minimum foam density of 50 kg/m³ for polyamide 12?",
+      "expected_answer": "The best parameter combination was a pressure of 170 bar, a temperature range of 187 °C–188 °C, and a residence time of 20 min.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polyamide 12"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        },
+        {
+          "role": "property",
+          "term": "pressure"
+        },
+        {
+          "role": "property",
+          "term": "temperature"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_COMP_Q001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "Which surrogate model and kernel were used within the Bayesian optimization framework to minimize foam density?",
+      "expected_answer": "Gaussian Processes (GP) were used as the surrogate model, employing either the RBF or Matérn kernel.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Gaussian Processes"
+        },
+        {
+          "role": "property",
+          "term": "kernel"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_COMP_Q002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENUMERATION",
+      "question": "Which machine learning models were compared to determine the most effective predictor for foam density after the Bayesian optimization process?",
+      "expected_answer": "The models considered were Linear Regression (LR), Decision Trees (DT), Random Forest (RF), Gradient Boosting Regression (GBR), Gaussian Processes (GP), Lasso Regression (LASSO), Stochastic Gradient Descent Regression (SGDR), and Ridge Regression (RR).",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Machine Learning Model"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_COMP_Q003",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the variation of temperature and pressure affect the achievement of a target foam density of 110 kg/m3?",
+      "expected_answer": "The target density of 110 kg/m3 can be achieved with different combinations of pressure (e.g., 80 bars and 145 bars) and temperature (e.g., 186 °C and 192 °C) while maintaining the same residence time.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "pressure"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_COMP_Q004",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What acquisition function was employed in the Bayesian optimization process to balance exploration and exploitation?",
+      "expected_answer": "The maximum Expected Improvement (EI) acquisition function was used.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "acquisition function"
+        },
+        {
+          "role": "individual",
+          "term": "Expected Improvement"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_COMP_Q005",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How did the inverse design model's performance vary across different target density regions?",
+      "expected_answer": "The model performed particularly well for lower-density targets, exhibiting a low standard deviation, which is attributed to the model's prior exposure to data from the lower-density region.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "inverse design"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_COMP_GAP001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "Which surrogate model and kernel were used in the Bayesian optimization process to predict foam density?",
+      "expected_answer": "A Gaussian Process (GP) model was used as the regressor, employing the Matérn kernel (and RBF kernel as an alternative) to enhance flexibility and performance.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Gaussian Process model"
+        },
+        {
+          "role": "property",
+          "term": "kernel"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_COMP_GAP002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the variation of processing temperature affect the foam density of polyamide 12 according to the correlation analysis?",
+      "expected_answer": "Temperature exhibits a negative correlation with density, meaning that higher temperatures generally lead to lower densities, although excessively high temperatures can hinder achieving lower densities.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        },
+        {
+          "role": "property",
+          "term": "Pearson correlation coefficient"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_ONTO_Q001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between the inverse design approach and Bayesian optimization as described in the paper?",
+      "expected_answer": "(inverse design, usesMethod, Bayesian optimization)",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Method"
+        },
+        {
+          "role": "property",
+          "term": "usesMethod"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_ONTO_Q002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What ontology class should the processing parameters 'temperature', 'pressure', and 'saturation time' be assigned to?",
+      "expected_answer": "Condition",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Condition"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_ONTO_Q003",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which instrument or method was used to characterize the cellular structures and morphology of the PA 12 foams?",
+      "expected_answer": "SEM (Scanning Electron Microscopy)",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "characterisedBy"
+        },
+        {
+          "role": "class",
+          "term": "Instrument"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_ONTO_Q004",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENUMERATION",
+      "question": "Which specific processing parameters are identified as the key dimensions of the three-dimensional parameter space optimized for PA 12 foam density?",
+      "expected_answer": "temperature, pressure, and residence time",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Property"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question asked for properties not explicitly listed in the text, so it was revised to ask for the specific processing parameters (temperature, pressure, residence time) explicitly mentioned as the optimization dimensions in the Conclusions section."
+    },
+    {
+      "id": "Shah2025_ONTO_Q005",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple captures the relationship between Bayesian optimization and Active Learning?",
+      "expected_answer": "(Bayesian optimization, usesMethod, Active Learning)",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Bayesian optimization"
+        },
+        {
+          "role": "property",
+          "term": "usesMethod"
+        },
+        {
+          "role": "individual",
+          "term": "Active Learning"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_ONTO_GAP001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between the Bayesian optimization process and the Gaussian Process model used as its surrogate?",
+      "expected_answer": "(Bayesian optimization, usesMethod, Gaussian Process model)",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Method"
+        },
+        {
+          "role": "property",
+          "term": "usesMethod"
+        },
+        {
+          "role": "individual",
+          "term": "Gaussian Process model"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_ONTO_GAP002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENUMERATION",
+      "question": "Which specific polymer bead foam types are mentioned in the Introduction as examples of materials developed to meet diverse industry needs alongside expanded polystyrene?",
+      "expected_answer": "expanded polypropylene (PP) and expanded thermoplastic polyurethane (TPU)",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Material"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polyurethane"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question included polyurethane (PU) which is not explicitly named as a bead foam in the text (only TPU is), so the question was revised to ask for the specific examples (PP and TPU) explicitly listed in the Introduction."
+    },
+    {
+      "id": "Shah2025_STU_Q001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the lowest foam density achieved for polyamide 12 in this study?",
+      "expected_answer": "The lowest recorded foam density for polyamide 12 was 50 kg/m^3.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polyamide 12"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_STU_Q002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was Bayesian optimization used in the production of these polyamide 12 foams?",
+      "expected_answer": "Bayesian optimization was used to minimize the foam density and to efficiently optimize material properties with minimal experimental trials.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Bayesian optimization"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_STU_Q003",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "By which process were the low-density polyamide 12 foams produced?",
+      "expected_answer": "The foams were produced using the autoclave batch foaming process.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polyamide 12"
+        },
+        {
+          "role": "class",
+          "term": "batch foaming"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_STU_Q004",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What are the primary processing parameters used to influence the density of PA 12 foams?",
+      "expected_answer": "The primary processing parameters are temperature, pressure, and saturation time (or residence time).",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "temperature"
+        },
+        {
+          "role": "class",
+          "term": "pressure"
+        },
+        {
+          "role": "class",
+          "term": "saturation time"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_STU_Q005",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was an inverse design approach implemented in this study?",
+      "expected_answer": "The inverse design approach was used to check the robustness of the model by identifying the specific processing parameters required to achieve a desired target foam density.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "inverse design"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_STU_GAP001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "MOTIVATION",
+      "question": "Why was a Gaussian Process (GP) model chosen as the surrogate model for the Bayesian optimization process?",
+      "expected_answer": "A Gaussian Process model was chosen because it is considered the best model for this kind of optimization as its predictions automatically include corresponding uncertainties and it performs well with small datasets.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Gaussian Process model"
+        },
+        {
+          "role": "class",
+          "term": "Bayesian optimization"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_STU_GAP002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the lowest foam density achieved for polyamide 12 in this study?",
+      "expected_answer": "The lowest recorded foam density for polyamide 12 was 50 kg/m^3.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polyamide 12"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PHD_Q001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "GAP_OR_LIMITATION",
+      "question": "What limitation does the paper acknowledge regarding the predictive capabilities of the trained machine learning model in relation to foam characteristics?",
+      "expected_answer": "The authors state that while the ML model can suggest new low-density foams, it cannot predict cellular structures.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "machine learning model"
+        },
+        {
+          "role": "property",
+          "term": "cellular structures"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PHD_Q002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the saturation pressure affect the cell morphology and nucleation density of PA 12 foams?",
+      "expected_answer": "Higher pressures lead to a smaller average cell size, increased cell density with a narrower distribution, and an increase in the density-corrected nucleation density.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "pressure"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "nucleation density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PHD_Q003",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "COMPARATIVE",
+      "question": "How does the relationship between temperature and foam density in this study compare to the findings of previous literature cited by the authors?",
+      "expected_answer": "In this study, temperature exhibits a negative correlation with density (higher temperatures generally lead to lower densities), whereas previous studies often describe a local maximum where excessively high temperatures can hinder achieving lower densities.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PHD_Q004",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "MOTIVATION",
+      "question": "Why was an Active Learning (AL) strategy integrated into the Bayesian Optimization (BO) process for minimizing foam density?",
+      "expected_answer": "The AL strategy was integrated to propose uncorrelated processing parameters, which serves to further refine and enhance the Gaussian Process (GP) model in subsequent iterations.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Active Learning"
+        },
+        {
+          "role": "class",
+          "term": "Bayesian optimization"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PHD_Q005",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "CAUSAL",
+      "question": "What effect does elevating the temperature to 190.0 ◦C have on the stability of the foam morphology compared to foaming at 188 ◦C?",
+      "expected_answer": "Elevating the temperature to 190.0 ◦C results in a more irregular cell distribution due to reduced viscosity of the polymer matrix, which can lead to unstable cell growth and possible coalescence by partial rupture of cell walls; foaming at 188 ◦C is more stable and controllable.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "viscosity"
+        },
+        {
+          "role": "property",
+          "term": "foam morphology"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PHD_GAP001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "analysis",
+      "archetype": "MOTIVATION",
+      "question": "Why was a Gaussian Process (GP) model selected as the surrogate model for the Bayesian optimization of PA-12 foam density?",
+      "expected_answer": "Gaussian Processes were selected because they are considered the best model for this type of optimization due to their ability to provide predictions automatically with corresponding uncertainties (used in the acquisition function) and their strong performance with small datasets.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Gaussian Process model"
+        },
+        {
+          "role": "class",
+          "term": "Bayesian optimization"
+        }
+      ]
+    },
+    {
+      "id": "Shah2025_PHD_GAP002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "GAP_OR_LIMITATION",
+      "question": "What limitation does the paper acknowledge regarding the predictive capabilities of the trained machine learning model in relation to foam morphology?",
+      "expected_answer": "The authors explicitly state that while the trained ML model can be used to suggest new low-density foams, the model cannot predict cellular structures (morphology).",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foam density"
+        },
+        {
+          "role": "class",
+          "term": "cell morphology"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "quality_score": 0.885,
+    "pass_score_threshold": 0.75,
+    "active_checks": [
+      "persona_coverage",
+      "question_count",
+      "answerability",
+      "specificity",
+      "section_validity",
+      "concept_usage",
+      "redundancy"
+    ],
+    "issues": [
+      "[PHD] Shah2025_PHD_Q001: question does not reference any extracted concept (possible hallucination)",
+      "[PHD] Shah2025_PHD_GAP002: question does not reference any extracted concept (possible hallucination)",
+      "Near-duplicate questions: Shah2025_SYNTH_Q001 ~ Shah2025_SYNTH_GAP001 (cos=1.00)",
+      "Near-duplicate questions: Shah2025_SYNTH_Q001 ~ Shah2025_STU_Q003 (cos=1.00)",
+      "Near-duplicate questions: Shah2025_SYNTH_Q003 ~ Shah2025_SYNTH_GAP002 (cos=0.97)",
+      "Near-duplicate questions: Shah2025_SYNTH_Q003 ~ Shah2025_PROC_Q002 (cos=0.96)",
+      "Near-duplicate questions: Shah2025_SYNTH_Q003 ~ Shah2025_PROC_GAP001 (cos=0.99)",
+      "Near-duplicate questions: Shah2025_SYNTH_Q003 ~ Shah2025_PHD_Q002 (cos=0.95)",
+      "Near-duplicate questions: Shah2025_SYNTH_Q004 ~ Shah2025_PROC_Q004 (cos=1.00)",
+      "Near-duplicate questions: Shah2025_SYNTH_GAP001 ~ Shah2025_STU_Q003 (cos=1.00)",
+      "Near-duplicate questions: Shah2025_SYNTH_GAP002 ~ Shah2025_PROC_Q002 (cos=1.00)",
+      "Near-duplicate questions: Shah2025_SYNTH_GAP002 ~ Shah2025_PROC_GAP001 (cos=0.98)",
+      "[ONTO] Shah2025_ONTO_Q004: fail (score=0.30) - The answer requires outside knowledge as the properties mentioned are not explicitly stated in the passages.",
+      "[ONTO] Shah2025_ONTO_GAP002: fail (score=0.30) - The answer requires outside knowledge as the polymer foam materials mentioned are not explicitly stated in the passages."
+    ],
+    "issues_by_persona": {
+      "PHD": [
+        "[PHD] Shah2025_PHD_Q001: question does not reference any extracted concept (possible hallucination)",
+        "[PHD] Shah2025_PHD_GAP002: question does not reference any extracted concept (possible hallucination)"
+      ],
+      "ONTO": [
+        "[ONTO] Shah2025_ONTO_Q004: fail (score=0.30) - The answer requires outside knowledge as the properties mentioned are not explicitly stated in the passages.",
+        "[ONTO] Shah2025_ONTO_GAP002: fail (score=0.30) - The answer requires outside knowledge as the polymer foam materials mentioned are not explicitly stated in the passages."
+      ]
+    },
+    "per_question": {
+      "Shah2025_SYNTH_Q001": {
+        "id": "Shah2025_SYNTH_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in passage 4 under the abstract and passage 6 where autoclave batch foaming with CO2 is described."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 22906
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_SYNTH_Q002": {
+        "id": "Shah2025_SYNTH_Q002",
+        "score": 1.0,
+        "reasons": [
+          "The answer is explicitly stated in passage 2 under the Conclusions section."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 22906
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_SYNTH_Q003": {
+        "id": "Shah2025_SYNTH_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from passage 5, which discusses how higher pressures affect cell size and density at similar temperatures."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 22906
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_SYNTH_Q004": {
+        "id": "Shah2025_SYNTH_Q004",
+        "score": 1.0,
+        "reasons": [
+          "The answer is explicitly stated in passage 5 under the Cell morphology section."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 22906
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_SYNTH_Q005": {
+        "id": "Shah2025_SYNTH_Q005",
+        "score": 1.0,
+        "reasons": [
+          "The answer is explicitly stated in passage 5 under the discussion of elevated temperatures and cell distribution."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 22906
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_SYNTH_GAP001": {
+        "id": "Shah2025_SYNTH_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in passage 4 under the abstract and passage 6 where autoclave batch foaming with CO2 is described."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 22906
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_SYNTH_GAP002": {
+        "id": "Shah2025_SYNTH_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from passage 5, which discusses how higher pressures affect cell size and density at similar temperatures."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 22906
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_CHAR_Q001": {
+        "id": "Shah2025_CHAR_Q001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_CHAR_Q002": {
+        "id": "Shah2025_CHAR_Q002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_CHAR_Q003": {
+        "id": "Shah2025_CHAR_Q003",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_CHAR_Q004": {
+        "id": "Shah2025_CHAR_Q004",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_CHAR_Q005": {
+        "id": "Shah2025_CHAR_Q005",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_CHAR_GAP001": {
+        "id": "Shah2025_CHAR_GAP001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_CHAR_GAP002": {
+        "id": "Shah2025_CHAR_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PROC_Q001": {
+        "id": "Shah2025_PROC_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the Conclusions section.",
+          "The question is specific with exact parameters."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PROC_Q002": {
+        "id": "Shah2025_PROC_Q002",
+        "score": 0.75,
+        "reasons": [
+          "Answer can be derived from Cell morphology section with short inference.",
+          "Question specifies material and effect on cell morphology."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PROC_Q003": {
+        "id": "Shah2025_PROC_Q003",
+        "score": 0.75,
+        "reasons": [
+          "Answer is explicitly stated in the Cell morphology section.",
+          "The question is specific with exact temperature range."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PROC_Q004": {
+        "id": "Shah2025_PROC_Q004",
+        "score": 0.75,
+        "reasons": [
+          "Answer is explicitly stated in the Cell morphology section.",
+          "Question specifies reason for constant residence time."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PROC_Q005": {
+        "id": "Shah2025_PROC_Q005",
+        "score": 0.75,
+        "reasons": [
+          "Answer is explicitly stated in the Conclusions section.",
+          "The question is specific about temperature and density relationship."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PROC_GAP001": {
+        "id": "Shah2025_PROC_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "Answer can be derived from Results and Discussion with short inference.",
+          "Question specifies material and effect on cell size/density."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PROC_GAP002": {
+        "id": "Shah2025_PROC_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "Answer is explicitly stated in the Results and Discussion section.",
+          "The question is specific with exact parameters."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_COMP_Q001": {
+        "id": "Shah2025_COMP_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The question is answerable as the passages explicitly mention Gaussian Processes (GP) and the RBF or Matérn kernel.",
+          "The question is specific, naming the surrogate model and kernel used."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21971
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_COMP_Q002": {
+        "id": "Shah2025_COMP_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The question is answerable as the passages list all the ML models considered.",
+          "The question is specific, enumerating each model by name."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21971
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_COMP_Q003": {
+        "id": "Shah2025_COMP_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The question is answerable as the passages describe how different pressure and temperature combinations achieve a target density.",
+          "The question is specific, referencing a particular density value."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21971
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_COMP_Q004": {
+        "id": "Shah2025_COMP_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The question is answerable as the passages specify the use of Expected Improvement (EI) acquisition function.",
+          "The question is specific, naming the acquisition function."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21971
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_COMP_Q005": {
+        "id": "Shah2025_COMP_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The question is answerable as the passages discuss model performance across different density regions.",
+          "The question is specific, focusing on lower-density targets."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21971
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_COMP_GAP001": {
+        "id": "Shah2025_COMP_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The question is answerable as the passages detail the use of GP with RBF or Matérn kernel.",
+          "The question is specific, naming both the model and kernels."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21971
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_COMP_GAP002": {
+        "id": "Shah2025_COMP_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The question is answerable as the passages mention temperature's correlation with density.",
+          "The question is specific, referencing processing temperature and foam density."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21971
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_ONTO_Q001": {
+        "id": "Shah2025_ONTO_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., inverse design uses Bayesian optimization).",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21939
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_ONTO_Q002": {
+        "id": "Shah2025_ONTO_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., temperature, pressure, and saturation time are conditions).",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21939
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_ONTO_Q003": {
+        "id": "Shah2025_ONTO_Q003",
+        "score": 1.0,
+        "reasons": [
+          "The answer is explicitly stated in the passages (e.g., SEM).",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21939
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_ONTO_Q004": {
+        "id": "Shah2025_ONTO_Q004",
+        "score": 0.3,
+        "reasons": [
+          "The answer requires outside knowledge as the properties mentioned are not explicitly stated in the passages.",
+          "The question is somewhat specific but uses generic terms."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21939
+        },
+        "verdict": "fail"
+      },
+      "Shah2025_ONTO_Q005": {
+        "id": "Shah2025_ONTO_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., Bayesian optimization uses Active Learning).",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21939
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_ONTO_GAP001": {
+        "id": "Shah2025_ONTO_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., Bayesian optimization uses Gaussian Process model).",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21939
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_ONTO_GAP002": {
+        "id": "Shah2025_ONTO_GAP002",
+        "score": 0.3,
+        "reasons": [
+          "The answer requires outside knowledge as the polymer foam materials mentioned are not explicitly stated in the passages.",
+          "The question is somewhat specific but uses generic terms."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21939
+        },
+        "verdict": "fail"
+      },
+      "Shah2025_STU_Q001": {
+        "id": "Shah2025_STU_Q001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_STU_Q002": {
+        "id": "Shah2025_STU_Q002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_STU_Q003": {
+        "id": "Shah2025_STU_Q003",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_STU_Q004": {
+        "id": "Shah2025_STU_Q004",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_STU_Q005": {
+        "id": "Shah2025_STU_Q005",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_STU_GAP001": {
+        "id": "Shah2025_STU_GAP001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_STU_GAP002": {
+        "id": "Shah2025_STU_GAP002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21908
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PHD_Q001": {
+        "id": "Shah2025_PHD_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The question is answerable as the limitation is explicitly stated in the evidence.",
+          "The question is specific, referencing the ML model's predictive capabilities."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21897
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PHD_Q002": {
+        "id": "Shah2025_PHD_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference regarding pressure effects.",
+          "The question is specific, focusing on cell morphology and nucleation density."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21897
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PHD_Q003": {
+        "id": "Shah2025_PHD_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The comparison between temperature-density relationship in the study and previous literature is explicitly stated.",
+          "The question is specific, comparing findings with prior studies."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21897
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PHD_Q004": {
+        "id": "Shah2025_PHD_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The reason for integrating AL strategy is clearly explained in the evidence.",
+          "The question is specific, focusing on the integration of AL into BO."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21897
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PHD_Q005": {
+        "id": "Shah2025_PHD_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The effect of elevated temperature on foam stability is explicitly discussed in the evidence.",
+          "The question is specific, addressing temperature effects on cell distribution."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21897
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PHD_GAP001": {
+        "id": "Shah2025_PHD_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The selection of GP model is explained in detail within the evidence.",
+          "The question is specific, focusing on the choice of surrogate model."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21897
+        },
+        "verdict": "pass"
+      },
+      "Shah2025_PHD_GAP002": {
+        "id": "Shah2025_PHD_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The limitation regarding ML model's predictive capabilities is explicitly stated in the evidence.",
+          "The question is specific, referencing foam morphology prediction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 16,
+          "evidence_chars": 21897
+        },
+        "verdict": "pass"
+      }
+    },
+    "questions_to_refine": [
+      "Shah2025_ONTO_Q004",
+      "Shah2025_ONTO_GAP002"
+    ],
+    "n_total": 49,
+    "n_pass": 47,
+    "n_borderline": 0,
+    "n_fail": 2
+  },
+  "refined_questions": {
+    "ONTO": [
+      {
+        "id": "Shah2025_ONTO_Q004",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENUMERATION",
+        "question": "Which specific processing parameters are identified as the key dimensions of the three-dimensional parameter space optimized for PA 12 foam density?",
+        "expected_answer": "temperature, pressure, and residence time",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Property"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question asked for properties not explicitly listed in the text, so it was revised to ask for the specific processing parameters (temperature, pressure, residence time) explicitly mentioned as the optimization dimensions in the Conclusions section."
+      },
+      {
+        "id": "Shah2025_ONTO_GAP002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENUMERATION",
+        "question": "Which specific polymer bead foam types are mentioned in the Introduction as examples of materials developed to meet diverse industry needs alongside expanded polystyrene?",
+        "expected_answer": "expanded polypropylene (PP) and expanded thermoplastic polyurethane (TPU)",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Material"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polyurethane"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question included polyurethane (PU) which is not explicitly named as a bead foam in the text (only TPU is), so the question was revised to ask for the specific examples (PP and TPU) explicitly listed in the Introduction."
+      }
+    ]
+  },
+  "evaluation": {
+    "status": "reference_free",
+    "schema_version": "v2.1",
+    "paper_id": "Shah2025",
+    "n_questions": 49,
+    "overall_score": 0.679,
+    "weights": {
+      "coverage": 0.38,
+      "question_faithfulness": 0.44,
+      "diversity": 0.12,
+      "triplifiability": 0.06
+    },
+    "families": {
+      "coverage": {
+        "score": 0.451,
+        "concepts": {
+          "total": 80,
+          "referenced": 40,
+          "ratio": 0.5
+        },
+        "properties": {
+          "total": 12,
+          "referenced": 6,
+          "ratio": 0.5
+        },
+        "relations": {
+          "total": 59,
+          "referenced": 15,
+          "ratio": 0.254
+        },
+        "uncovered_concept_examples": [
+          "advanced optimization algorithms",
+          "autoclave bead foaming",
+          "automotive sector",
+          "bulk polymer density",
+          "chemical resistance",
+          "cold chain logistics",
+          "construction materials",
+          "consumer products",
+          "density of the foamed sample",
+          "durability"
+        ]
+      },
+      "question_faithfulness": {
+        "score": 0.969,
+        "mean_cosine": 0.807,
+        "min_cosine": 0.636,
+        "n_well_faithful": 46,
+        "n_weak": 3,
+        "n_off_paper": 0,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        },
+        "weakest_example": {
+          "question_id": "Shah2025_SYNTH_Q004",
+          "question": "Why was the residence time kept constant at 30 min during the investigation of the maximum spectrum of possible morphology?",
+          "max_cosine": 0.635771632194519
+        }
+      },
+      "diversity": {
+        "score": 0.319,
+        "mean_pairwise_cos": 0.681,
+        "max_pairwise_cos": 1.0,
+        "n_near_duplicates": 23,
+        "dup_threshold": 0.92
+      },
+      "triplifiability": {
+        "score": 0.714,
+        "pct_full_triples": 0.469,
+        "pct_partial": 0.49
+      }
+    },
+    "diagnostics": {
+      "answer_verifiability": {
+        "mean_cosine": 0.698,
+        "min_cosine": 0.517,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        }
+      },
+      "specificity": {
+        "score": 0.844,
+        "avg_question_chars": 112.9,
+        "pct_with_numeric_value": 0.673,
+        "pct_with_unit": 0.449,
+        "pct_referencing_concept": 0.939
+      }
+    },
+    "reproducibility": {
+      "pipeline_version": "v2.1",
+      "models": {
+        "metadata_extractor": "qwen3.5:27b",
+        "iterative_extractor": "qwen3.6:35b-a3b",
+        "cq_generator": "gemma4:31b",
+        "cq_validator": "deepseek-r1:32b",
+        "cq_refiner": "qwen3.5:35b",
+        "_embedding_model": "BAAI/bge-small-en-v1.5",
+        "_embedding_backend": "local (sentence-transformers)",
+        "_embedding_dim": 384,
+        "_note": "Three distinct LLM families (Qwen / Gemma / DeepSeek) across stages for cross-family diversity. Embeddings via LOCAL sentence-transformers (deterministic, no network) because the shared Ollama bge-m3 endpoint is unreliable from inside long-running pipeline processes (see history v1.3). All LLM calls use think=false + format=json on the client.",
+        "_history": [
+          "v0: cq_generator=llama4:scout -> failed to produce JSON output; switched to qwen3:32b + format=json.",
+          "v0.5: all stages on qwen3:32b/deepseek-r1:32b; embedder local BAAI/bge-small-en-v1.5.",
+          "v1.0: per-stage model selection, bge-m3 via Ollama, refiner added, evaluator reduced to 5 reference-free families.",
+          "v1.1: reverted embedder to local BAAI/bge-small-en-v1.5 because the shared Ollama bge-m3 endpoint was returning 500s. Added per-question evidence retrieval in validator + refiner to fix a truncation bug (was capping evidence at 7000 chars regardless of how many passages were available).",
+          "v1.2: switched embedder back to bge-m3 via Ollama after a probe showed the endpoint was responsive when called with proper exponential-backoff retry. Added 1s process-wide throttling between embed calls.",
+          "v1.3 (this version): reverted to local BAAI/bge-small-en-v1.5. The bge-m3 Ollama path stays healthy in isolation (standalone curl + Python) but the long-running pipeline process gets sustained 500s in stages 5-6, even with exponential backoff, 1s throttling, AND Connection: close to force fresh TCP per call. Most likely cause is the shared upstream evicting bge-m3 from memory while the heavy LLMs (gemma4:31b, deepseek-r1:32b) are loaded, with the eviction window outlasting our 230s retry budget. Local sentence-transformers is slightly lower quality (384-dim vs 1024) but always finishes."
+        ]
+      },
+      "validator_pass_threshold_per_question": null,
+      "coverage_gap_pass": {
+        "enabled": true,
+        "max_gap_concepts": 8
+      },
+      "rolling_state_caps": {
+        "concepts": 80,
+        "relations": 60,
+        "properties": 60,
+        "findings": 40
+      },
+      "embedder_dim": 384
+    }
+  }
+}

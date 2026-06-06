@@ -1,0 +1,747 @@
+{
+  "archetype": "ENUMERATION",
+  "pipeline_step": "cross_paper_generalization",
+  "pipeline_version": "v2",
+  "step_version": "step2_v1.0",
+  "generalize_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "generalize_prompt_v1.0",
+    "source_dir": "data/papers/v2/dedup/"
+  },
+  "arch_stats": {
+    "n_input_cqs": 32,
+    "n_gen_cqs": 23,
+    "n_papers": 14,
+    "wall_time": "1m 56s 658ms"
+  },
+  "generalized_cqs": [
+    {
+      "gen_id": "GEN_ENUMERATION_001",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which microscopy techniques are used to analyze the morphology of cellular structures in polymer blend foams?",
+      "abstraction_reasoning": "PATTERN: Questions about microscopy techniques for foam structure analysis. | ENTITY MAPPING: Bärwinkel2016_DEDUP_010 -> SEM, FESEM; Costeux2013_DEDUP_025 -> SAN, MMA-EA9, PEMA; Costeux2014_DEDUP_021 -> PEMA, PMMA/PMMA-b-PBA-b-PMMA blend, PLA nanocomposites, HDPE nanocomposites, SAN with modified clays, PC nanocomposites. | WHY MEDIUM: Multiple papers discuss microscopy techniques for foam analysis.",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013",
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_010",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_CHAR_Q005",
+          "question": "Which microscopy techniques were employed to analyze the morphology of the cellular structure of the polymer blend foams?",
+          "expected_answer": "Normal scanning electron microscopy (SEM, Jeol JSM-IC 848) and field emission scanning electron microscopy (FESEM, Zeiss Leo 1530 Gemini).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        },
+        {
+          "step1_id": "Costeux2013_DEDUP_025",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_ONTO_Q003",
+          "question": "Which Material entities are identified as base polymers used for foaming in this study?",
+          "expected_answer": "SAN (including SAN8, SAN16L, SAN16H, SAN28, SAN32), MMA-EA9, and PEMA.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Costeux2014_DEDUP_021",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_COMP_Q005",
+          "question": "Which specific materials or nanocomposite systems are reported to produce cell sizes below 500 nm in the provided text?",
+          "expected_answer": "PEMA (345 nm), PMMA/PMMA-b-PBA-b-PMMA blend (200-300 nm), PLA nanocomposites with SBE (360 nm) or at 28MPa/100-110C (200 nm), HDPE nanocomposites (ca. 250 nm), SAN containing modified clays (300 nm), and PC nanocomposites with SiO2 (300-500 nm).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_002",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "generalized_question": "Which quantitative parameters are used to characterize the cellular structure of polymer blend foams?",
+      "abstraction_reasoning": "PATTERN: Questions about quantitative characterization of foam cellular structures. | ENTITY MAPPING: Bärwinkel2016_DEDUP_019 -> average cell diameter, cell size distribution, foam density; Costeux2014_DEDUP_021 -> PEMA (345 nm), PMMA/PMMA-b-PBA-b-PMMA blend (200-300 nm), PLA nanocomposites with SBE (360 nm) or at 28MPa/100-110C (200 nm), HDPE nanocomposites (ca. 250 nm), SAN containing modified clays (300 nm), PC nanocomposites with SiO2 (300-500 nm); Ruiz2011_DEDUP_023 -> average cell size, foam density, cell density. | WHY MEDIUM: Multiple papers discuss quantitative parameters for foam characterization.",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2014",
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_019",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_COMP_Q004",
+          "question": "Which quantitative parameters were used to characterize the cellular structure of the polymer blend foams?",
+          "expected_answer": "The cellular structure was characterized by the average cell diameter, cell size distribution, and foam density.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental Section"
+        },
+        {
+          "step1_id": "Costeux2014_DEDUP_021",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_COMP_Q005",
+          "question": "Which specific materials or nanocomposite systems are reported to produce cell sizes below 500 nm in the provided text?",
+          "expected_answer": "PEMA (345 nm), PMMA/PMMA-b-PBA-b-PMMA blend (200-300 nm), PLA nanocomposites with SBE (360 nm) or at 28MPa/100-110C (200 nm), HDPE nanocomposites (ca. 250 nm), SAN containing modified clays (300 nm), and PC nanocomposites with SiO2 (300-500 nm).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_023",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_COMP_Q005",
+          "question": "Which quantitative metrics were used to characterize the cellular structure of the produced foams?",
+          "expected_answer": "The metrics used were average cell size (RS), foam density (SUBf), and cell density (Nc).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_003",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which materials are identified as base polymers used for foaming?",
+      "abstraction_reasoning": "PATTERN: Questions about base polymers in foaming processes. | ENTITY MAPPING: Costeux2013_DEDUP_025 -> SAN, MMA-EA9, PEMA; Reglero2011_DEDUP_028 -> Polystyrene (PS), PMMA; Otsuka2008_DEDUP_026 -> PS, PMMA, MMA monomer, AIBN, CO2. | WHY MEDIUM: Multiple papers discuss base polymers in foaming.",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Costeux2013",
+        "Otsuka2008",
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_025",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_ONTO_Q003",
+          "question": "Which Material entities are identified as base polymers used for foaming in this study?",
+          "expected_answer": "SAN (including SAN8, SAN16L, SAN16H, SAN28, SAN32), MMA-EA9, and PEMA.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_028",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_ONTO_Q004",
+          "question": "Which Material entities are identified as amorphous polymers in this study?",
+          "expected_answer": "Polystyrene (PS) and polymethylmethacrylate (PMMA)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Introduction"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_026",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_ONTO_Q004",
+          "question": "Which Material entities are identified as components or agents in the preparation of the nanocellular foam?",
+          "expected_answer": "PS (polystyrene), PMMA (poly(methyl methacrylate)), MMA monomer, AIBN (initiator), and CO2 (foaming agent).",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_004",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "generalized_question": "Which block copolymers were used in the study to assist microcellular foaming?",
+      "abstraction_reasoning": "PATTERN: Questions about block copolymers in microcellular foaming. | ENTITY MAPPING: Dumon2012_DEDUP_011 -> SBM, MAM, SM, PS-b-PFDA; Dumon2012_DEDUP_022 -> SBM, MAM, SM, lab-synthesized fluoro acrylate copolymer. | WHY NARROW: Only two papers discuss block copolymers in this context.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_011",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_CHAR_Q005",
+          "question": "Which block copolymers were used in this study to assist the microcellular foaming process?",
+          "expected_answer": "SBM (polystyrene-b-polybutadiene-b-polymethylmethacrylate), MAM (polymethylmethacrylate-b-polybutylacrylate-b-polymethylmethacrylate), SM (polystyrene-b-polymethylmethacrylate), and a di block fluoro copolymer PS-b-PFDA.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Dumon2012_DEDUP_022",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_COMP_Q004",
+          "question": "Which block copolymer additives were used to modify the foaming behavior of the amorphous polymers?",
+          "expected_answer": "The block copolymers used were SBM (polystyrene-b-polybutadiene-b-polymethylmethacrylate), MAM, SM, and a lab-synthesized fluoro acrylate copolymer (PS-PFDA).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_005",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which nanostructures are generated in block copolymers depending on the block type and concentration?",
+      "abstraction_reasoning": "PATTERN: Questions about nanostructure generation in block copolymers. | ENTITY MAPPING: Dumon2012_DEDUP_025 -> micelles, vesicles, lamellas, worm-like structures; Dumon2012_DEDUP_032 -> same as above. | WHY NARROW: Only two papers discuss this specific aspect.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_025",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_COMP_GAP002",
+          "question": "According to the Summary section, which specific nanostructures are generated in block copolymers depending on the block type and concentration?",
+          "expected_answer": "The generated nanostructures include micelles, vesicles, lamellas, or worm-like structures.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Summary"
+        },
+        {
+          "step1_id": "Dumon2012_DEDUP_032",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_ONTO_GAP002",
+          "question": "Which specific nanostructure morphologies are reported as resulting from the self-assembly of block copolymers in this study?",
+          "expected_answer": "micelles, vesicles, lamellas, and worm-like structures",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_006",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "generalized_question": "Which empirical and theoretical models were used to predict the glass transition temperature (Tg) of polymer-CO2 mixtures?",
+      "abstraction_reasoning": "PATTERN: Questions about models predicting Tg in polymer-CO2 systems. | ENTITY MAPPING: Guo2015_DEDUP_016 -> Fox equation, Jenckel & Heusch equation, Gordon & Taylor equation, Chow's model; Guo2015_DEDUP_022 -> same as above. | WHY NARROW: Only two papers discuss these models.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_016",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_COMP_Q001",
+          "question": "Which empirical and theoretical models were used to predict the glass transition temperature (Tg) of the PMMA-CO2 mixture?",
+          "expected_answer": "The Fox equation, Jenckel & Heusch (J&H) equation, Gordon & Taylor (G&T) equation, and Chow's model.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_022",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_COMP_GAP002",
+          "question": "Which empirical models were used to fit the experimental data for the glass transition temperature (Tg) of the PMMA-CO2 mixture?",
+          "expected_answer": "The Fox equation, Jenckel & Heusche equation, Gordon & Taylor equation, and Chow's model.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_007",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "generalized_question": "Which foaming conditions (temperature and depressurization rate) were tested in batch foaming experiments?",
+      "abstraction_reasoning": "PATTERN: Questions about testing foaming conditions. | ENTITY MAPPING: Otsuka2008_DEDUP_021 -> 40 °C at 0.1 MPa/min, etc.; Otsuka2008_DEDUP_022 -> same as above. | WHY NARROW: Only two papers discuss these specific conditions.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_021",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_COMP_Q004",
+          "question": "Which specific foaming conditions (temperature and depressurization rate) were tested in the batch foaming experiments?",
+          "expected_answer": "Four conditions were tested: (A) 40 °C at 0.1 MPa/min, (B) 20 °C at 0.1 MPa/min, (C) 20 °C at 0.5 MPa/min, and (D) 40 °C at 0.5 MPa/min.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental Part"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_022",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_COMP_GAP002",
+          "question": "Which experimental conditions (temperature and depressurization rate) were used to evaluate the cellular structure of the PS/PMMA blends?",
+          "expected_answer": "Four conditions were used: (A) 40 °C and 0.1 MPa/min, (B) 20 °C and 0.1 MPa/min, (C) 20 °C and 0.5 MPa/min, and (D) 40 °C and 0.5 MPa/min.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_008",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "generalized_question": "Which machine learning models were compared to determine the most effective predictor for foam density?",
+      "abstraction_reasoning": "PATTERN: Questions about comparing machine learning models for foam density prediction. | ENTITY MAPPING: Shah2025_DEDUP_016 -> Linear Regression, Decision Trees, Random Forest, Gradient Boosting Regression, Gaussian Processes, Lasso Regression, Stochastic Gradient Descent Regression, Ridge Regression. | WHY NARROW: Only one paper discusses this.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_016",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_COMP_Q002",
+          "question": "Which machine learning models were compared to determine the most effective predictor for foam density after the Bayesian optimization process?",
+          "expected_answer": "The models considered were Linear Regression (LR), Decision Trees (DT), Random Forest (RF), Gradient Boosting Regression (GBR), Gaussian Processes (GP), Lasso Regression (LASSO), Stochastic Gradient Descent Regression (SGDR), and Ridge Regression (RR).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_009",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "generalized_question": "Which theoretical framework was used to calculate the influence of experimental conditions and interfacial structures on bubble nucleation?",
+      "abstraction_reasoning": "PATTERN: Questions about theoretical frameworks for bubble nucleation. | ENTITY MAPPING: Wu2021_DEDUP_019 -> Density functional theory (DFT). | WHY NARROW: Only one paper discusses this.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_019",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_COMP_Q005",
+          "question": "Which theoretical framework was used to calculate the influence of experimental conditions and interfacial structures on bubble nucleation by minimizing the grand potential?",
+          "expected_answer": "Density functional theory (DFT), specifically a constructed 3D-DFT approach.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_010",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which materials are identified as subclasses of the 'Material' class, specifically distinguishing between petroleum-based polymers and biopolymers?",
+      "abstraction_reasoning": "PATTERN: Questions about material classification. | ENTITY MAPPING: Di Maio2018_DEDUP_024 -> Petroleum-based polymers (polystyrene, polypropylene, polyethylene), Biopolymers (poly(lactic acid)). | WHY NARROW: Only one paper discusses this specific classification.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_024",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_ONTO_Q001",
+          "question": "Which materials mentioned in the paper should be categorized as subclasses of the 'Material' class, specifically distinguishing between petroleum-based polymers and biopolymers?",
+          "expected_answer": "Petroleum-based polymers: polystyrene, polypropylene, and polyethylene; Biopolymers: poly(lactic acid).",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_011",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which polymers are cited as having frequently reported Tg and Tm data as a function of temperature and pressure in the presence of CO2?",
+      "abstraction_reasoning": "PATTERN: Questions about polymers with specific thermal properties under CO2. | ENTITY MAPPING: Di Maio2018_DEDUP_030 -> poly(methyl methacrylate), polystyrene, poly(ε-caprolactone), poly(lactic acid). | WHY NARROW: Only one paper discusses this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_030",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_ONTO_GAP002",
+          "question": "Which specific polymers are cited in the text as having frequently reported Tg and Tm data as a function of temperature and pressure in the presence of CO2?",
+          "expected_answer": "The polymers are: poly(methyl methacrylate), polystyrene, poly(ε-caprolactone), and poly(lactic acid).",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_012",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which entities are categorized as 'Property' classes in the copolymer knowledge graph?",
+      "abstraction_reasoning": "PATTERN: Questions about property classification. | ENTITY MAPPING: Jacobs2007_DEDUP_021 -> foam morphology, cell area distribution, homogeneity; Liu2019_DEDUP_022 -> expansion ratio, desorption diffusion coefficient. | WHY NARROW: Only two papers discuss this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Jacobs2007",
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_021",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_Q004",
+          "question": "Which entities categorized as 'Property' are used to describe the resulting SMMA foam morphology in this study?",
+          "expected_answer": "foam morphology, cell area distribution, and homogeneity",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Liu2019_DEDUP_022",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_ONTO_Q004",
+          "question": "Which entities in the paper should be categorized as 'Property' classes in the copolymer knowledge graph?",
+          "expected_answer": "Expansion ratio and desorption diffusion coefficient",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_013",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which materials are identified as 'homopolymers' and which as 'block copolymers' in the study?",
+      "abstraction_reasoning": "PATTERN: Questions about polymer classification. | ENTITY MAPPING: Ruiz2011_DEDUP_027 -> Homopolymers (PMMA, PS), Block copolymers (SBM, MAM). | WHY NARROW: Only one paper discusses this specific classification.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_027",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_ONTO_Q004",
+          "question": "Which materials are identified as 'homopolymers' and which as 'block copolymers' in the study?",
+          "expected_answer": "Homopolymers: PMMA and PS. Block copolymers: SBM and MAM.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_014",
+      "archetype": "ENUMERATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which processing parameters were systematically varied to identify optimal conditions for PA 12 foams?",
+      "abstraction_reasoning": "PATTERN: Questions about optimizing foam production parameters. | ENTITY MAPPING: Shah2025_DEDUP_006 -> Saturation time, pressure, temperature. | WHY NARROW: Only one paper discusses this specific optimization.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_006",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_CHAR_Q004",
+          "question": "Which processing parameters were systematically varied to identify the optimal conditions for the PA 12 foams?",
+          "expected_answer": "Saturation time, pressure, and temperature.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_015",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which polymer bead foam types are mentioned as examples of materials developed to meet diverse industry needs?",
+      "abstraction_reasoning": "PATTERN: Questions about polymer bead foams in industry. | ENTITY MAPPING: Shah2025_DEDUP_023 -> expanded polypropylene (PP), expanded thermoplastic polyurethane (TPU). | WHY NARROW: Only one paper discusses this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_023",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_ONTO_GAP002",
+          "question": "Which specific polymer bead foam types are mentioned in the Introduction as examples of materials developed to meet diverse industry needs alongside expanded polystyrene?",
+          "expected_answer": "expanded polypropylene (PP) and expanded thermoplastic polyurethane (TPU)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_016",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "generalized_question": "Which feature normalization was applied to dissolved-CO2 concentration data to facilitate comparison between PMMA and PS?",
+      "abstraction_reasoning": "PATTERN: Questions about data normalization in polymer studies. | ENTITY MAPPING: Shieh2002_DEDUP_013 -> Normalized on carbonyl groups (PMMA) and phenyl groups (PS). | WHY NARROW: Only one paper discusses this specific normalization.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_013",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_COMP_Q004",
+          "question": "What specific feature normalization was applied to the dissolved-CO2 concentration data to facilitate the comparison between PMMA and PS?",
+          "expected_answer": "The concentration was normalized on the basis of the content of the carbonyl groups in PMMA and the content of the phenyl groups in PS (unit of cm3 CO2 (STP) per gram carbonyl group/phenyl group).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_017",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which materials are reported as the primary polymers under investigation?",
+      "abstraction_reasoning": "PATTERN: Questions about primary polymers in studies. | ENTITY MAPPING: Shieh2002_DEDUP_018 -> PMMA, PS. | WHY NARROW: Only one paper discusses this specific focus.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_018",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_ONTO_Q004",
+          "question": "Which Material entities are reported as the primary polymers under investigation in this study?",
+          "expected_answer": "PMMA (Poly(methyl methacrylate)) and PS (Polystyrene)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_018",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which materials are identified as components of the blend system?",
+      "abstraction_reasoning": "PATTERN: Questions about blend system components. | ENTITY MAPPING: Wu2021_DEDUP_025 -> polypropylene (PP), polystyrene (PS), CO2. | WHY NARROW: Only one paper discusses this specific blend.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_025",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_ONTO_Q004",
+          "question": "Which Material entities are identified as components of the blend system in this study?",
+          "expected_answer": "polypropylene (PP), polystyrene (PS), and CO2",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_019",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which types of depressurization methods are reported in the paper that should be represented as subclasses of a Depressurization process?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_026",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_ONTO_Q003",
+          "question": "Which types of depressurization methods are reported in the paper that should be represented as subclasses of a Depressurization process?",
+          "expected_answer": "Slow [SD], Fast [FD], and Intermediate [ID].",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_020",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which entities mentioned in the text should be categorized under the class 'Process' for the purpose of foam production?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_030",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_ONTO_GAP002",
+          "question": "Which entities mentioned in the text should be categorized under the class 'Process' for the purpose of foam production?",
+          "expected_answer": "batch foaming process, injection molding, physical foaming, one-step process (1S), and two-step process (2S).",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_021",
+      "archetype": "ENUMERATION",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which instruments are mentioned for assessing CO2 sorption and the resulting swelling of polymers?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_010",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_CHAR_Q003",
+          "question": "Which instruments are mentioned for assessing CO2 sorption and the resulting swelling of polymers?",
+          "expected_answer": "The Rubotherm magnetic suspension balance (often modified with a cathetometer or camera) and a spectroscopic reflectometer for thin films.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_022",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "generalized_question": "Which specific modeling approaches are mentioned for predicting cell wall morphology and bubble nucleation in polymer foaming?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_021",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_COMP_Q003",
+          "question": "Which specific modeling approaches are mentioned for predicting cell wall morphology and bubble nucleation in polymer foaming?",
+          "expected_answer": "Tammaro et al. developed a model to predict cell wall morphology (and open/closed cells) based on polymer viscoelasticity, while Taki employed experimental nucleation results to extrapolate and predict other cases in lieu of a practical nucleation model.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENUMERATION_023",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which block copolymer materials are reported as being used in the foaming experiments?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_029",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_ONTO_Q004",
+          "question": "Which block copolymer materials are reported as being used in the foaming experiments?",
+          "expected_answer": "SBM, MAM, SM, and PS-b-PFDA",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    }
+  ],
+  "reverse_index": {
+    "Bärwinkel2016_DEDUP_010": "GEN_ENUMERATION_001",
+    "Costeux2013_DEDUP_025": "GEN_ENUMERATION_003",
+    "Costeux2014_DEDUP_021": "GEN_ENUMERATION_002",
+    "Bärwinkel2016_DEDUP_019": "GEN_ENUMERATION_002",
+    "Ruiz2011_DEDUP_023": "GEN_ENUMERATION_002",
+    "Reglero2011_DEDUP_028": "GEN_ENUMERATION_003",
+    "Otsuka2008_DEDUP_026": "GEN_ENUMERATION_003",
+    "Dumon2012_DEDUP_011": "GEN_ENUMERATION_004",
+    "Dumon2012_DEDUP_022": "GEN_ENUMERATION_004",
+    "Dumon2012_DEDUP_025": "GEN_ENUMERATION_005",
+    "Dumon2012_DEDUP_032": "GEN_ENUMERATION_005",
+    "Guo2015_DEDUP_016": "GEN_ENUMERATION_006",
+    "Guo2015_DEDUP_022": "GEN_ENUMERATION_006",
+    "Otsuka2008_DEDUP_021": "GEN_ENUMERATION_007",
+    "Otsuka2008_DEDUP_022": "GEN_ENUMERATION_007",
+    "Shah2025_DEDUP_016": "GEN_ENUMERATION_008",
+    "Wu2021_DEDUP_019": "GEN_ENUMERATION_009",
+    "Di Maio2018_DEDUP_024": "GEN_ENUMERATION_010",
+    "Di Maio2018_DEDUP_030": "GEN_ENUMERATION_011",
+    "Jacobs2007_DEDUP_021": "GEN_ENUMERATION_012",
+    "Liu2019_DEDUP_022": "GEN_ENUMERATION_012",
+    "Ruiz2011_DEDUP_027": "GEN_ENUMERATION_013",
+    "Shah2025_DEDUP_006": "GEN_ENUMERATION_014",
+    "Shah2025_DEDUP_023": "GEN_ENUMERATION_015",
+    "Shieh2002_DEDUP_013": "GEN_ENUMERATION_016",
+    "Shieh2002_DEDUP_018": "GEN_ENUMERATION_017",
+    "Wu2021_DEDUP_025": "GEN_ENUMERATION_018",
+    "Costeux2014_DEDUP_026": "GEN_ENUMERATION_019",
+    "Costeux2014_DEDUP_030": "GEN_ENUMERATION_020",
+    "Di Maio2018_DEDUP_010": "GEN_ENUMERATION_021",
+    "Di Maio2018_DEDUP_021": "GEN_ENUMERATION_022",
+    "Dumon2012_DEDUP_029": "GEN_ENUMERATION_023"
+  }
+}

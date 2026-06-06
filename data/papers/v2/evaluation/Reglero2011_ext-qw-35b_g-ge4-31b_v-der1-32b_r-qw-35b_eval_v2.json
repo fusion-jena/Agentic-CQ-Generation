@@ -1,0 +1,138 @@
+{
+  "paper_id": "Reglero2011",
+  "pipeline_config": {
+    "pipeline_version": "v2.1",
+    "extraction_method": "plain",
+    "metadata_extractor": "qwen3.5:27b",
+    "iterative_extractor": "qwen3.6:35b-a3b",
+    "cq_generator": "gemma4:31b",
+    "cq_validator": "deepseek-r1:32b",
+    "cq_refiner": "qwen3.5:35b",
+    "embedding_model": "BAAI/bge-small-en-v1.5"
+  },
+  "evaluation": {
+    "status": "reference_free",
+    "schema_version": "v2.1",
+    "paper_id": "Reglero2011",
+    "n_questions": 49,
+    "overall_score": 0.674,
+    "weights": {
+      "coverage": 0.38,
+      "question_faithfulness": 0.44,
+      "diversity": 0.12,
+      "triplifiability": 0.06
+    },
+    "families": {
+      "coverage": {
+        "score": 0.426,
+        "concepts": {
+          "total": 71,
+          "referenced": 41,
+          "ratio": 0.577
+        },
+        "properties": {
+          "total": 31,
+          "referenced": 11,
+          "ratio": 0.355
+        },
+        "relations": {
+          "total": 58,
+          "referenced": 9,
+          "ratio": 0.155
+        },
+        "uncovered_concept_examples": [
+          "batch single step-process",
+          "butyl acrylate block",
+          "cell growth limitation",
+          "cell size homogeneity",
+          "co2 mass uptake",
+          "co2 phicility",
+          "glassy blocks",
+          "high precision balance",
+          "high pressure reactor",
+          "injection moulding"
+        ]
+      },
+      "question_faithfulness": {
+        "score": 0.98,
+        "mean_cosine": 0.801,
+        "min_cosine": 0.642,
+        "n_well_faithful": 47,
+        "n_weak": 2,
+        "n_off_paper": 0,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        },
+        "weakest_example": {
+          "question_id": "Reglero2011_ONTO_Q002",
+          "question": "What ontology class should the 'depressurization rate' be assigned to, and what data property would capture its value of 60 bar/min?",
+          "max_cosine": 0.64152592420578
+        }
+      },
+      "diversity": {
+        "score": 0.313,
+        "mean_pairwise_cos": 0.687,
+        "max_pairwise_cos": 1.0,
+        "n_near_duplicates": 21,
+        "dup_threshold": 0.92
+      },
+      "triplifiability": {
+        "score": 0.724,
+        "pct_full_triples": 0.449,
+        "pct_partial": 0.551
+      }
+    },
+    "diagnostics": {
+      "answer_verifiability": {
+        "mean_cosine": 0.71,
+        "min_cosine": 0.554,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        }
+      },
+      "specificity": {
+        "score": 0.832,
+        "avg_question_chars": 108.6,
+        "pct_with_numeric_value": 0.531,
+        "pct_with_unit": 0.286,
+        "pct_referencing_concept": 1.0
+      }
+    },
+    "reproducibility": {
+      "pipeline_version": "v2.1",
+      "models": {
+        "metadata_extractor": "qwen3.5:27b",
+        "iterative_extractor": "qwen3.6:35b-a3b",
+        "cq_generator": "gemma4:31b",
+        "cq_validator": "deepseek-r1:32b",
+        "cq_refiner": "qwen3.5:35b",
+        "_embedding_model": "BAAI/bge-small-en-v1.5",
+        "_embedding_backend": "local (sentence-transformers)",
+        "_embedding_dim": 384,
+        "_note": "Three distinct LLM families (Qwen / Gemma / DeepSeek) across stages for cross-family diversity. Embeddings via LOCAL sentence-transformers (deterministic, no network) because the shared Ollama bge-m3 endpoint is unreliable from inside long-running pipeline processes (see history v1.3). All LLM calls use think=false + format=json on the client.",
+        "_history": [
+          "v0: cq_generator=llama4:scout -> failed to produce JSON output; switched to qwen3:32b + format=json.",
+          "v0.5: all stages on qwen3:32b/deepseek-r1:32b; embedder local BAAI/bge-small-en-v1.5.",
+          "v1.0: per-stage model selection, bge-m3 via Ollama, refiner added, evaluator reduced to 5 reference-free families.",
+          "v1.1: reverted embedder to local BAAI/bge-small-en-v1.5 because the shared Ollama bge-m3 endpoint was returning 500s. Added per-question evidence retrieval in validator + refiner to fix a truncation bug (was capping evidence at 7000 chars regardless of how many passages were available).",
+          "v1.2: switched embedder back to bge-m3 via Ollama after a probe showed the endpoint was responsive when called with proper exponential-backoff retry. Added 1s process-wide throttling between embed calls.",
+          "v1.3 (this version): reverted to local BAAI/bge-small-en-v1.5. The bge-m3 Ollama path stays healthy in isolation (standalone curl + Python) but the long-running pipeline process gets sustained 500s in stages 5-6, even with exponential backoff, 1s throttling, AND Connection: close to force fresh TCP per call. Most likely cause is the shared upstream evicting bge-m3 from memory while the heavy LLMs (gemma4:31b, deepseek-r1:32b) are loaded, with the eviction window outlasting our 230s retry budget. Local sentence-transformers is slightly lower quality (384-dim vs 1024) but always finishes."
+        ]
+      },
+      "validator_pass_threshold_per_question": null,
+      "coverage_gap_pass": {
+        "enabled": true,
+        "max_gap_concepts": 8
+      },
+      "rolling_state_caps": {
+        "concepts": 80,
+        "relations": 60,
+        "properties": 60,
+        "findings": 40
+      },
+      "embedder_dim": 384
+    }
+  }
+}

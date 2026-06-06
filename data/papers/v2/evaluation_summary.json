@@ -1,0 +1,244 @@
+{
+  "n_papers": 14,
+  "per_metric": {
+    "overall_score": {
+      "mean": 0.6915,
+      "sd": 0.03214420632089085,
+      "min": 0.621,
+      "max": 0.764,
+      "n": 14
+    },
+    "coverage": {
+      "mean": 0.48085714285714287,
+      "sd": 0.08012388367206047,
+      "min": 0.318,
+      "max": 0.652,
+      "n": 14
+    },
+    "question_faithfulness": {
+      "mean": 0.9832857142857143,
+      "sd": 0.011441956447519759,
+      "min": 0.959,
+      "max": 1.0,
+      "n": 14
+    },
+    "diversity": {
+      "mean": 0.2917142857142857,
+      "sd": 0.022565550771755007,
+      "min": 0.25,
+      "max": 0.319,
+      "n": 14
+    },
+    "triplifiability": {
+      "mean": 0.6837857142857143,
+      "sd": 0.03600828986185694,
+      "min": 0.625,
+      "max": 0.755,
+      "n": 14
+    },
+    "concept_coverage_ratio": {
+      "mean": 0.5382857142857143,
+      "sd": 0.09444305054326849,
+      "min": 0.362,
+      "max": 0.689,
+      "n": 14
+    },
+    "faithfulness_mean_cosine": {
+      "mean": 0.8136428571428571,
+      "sd": 0.0103964770328163,
+      "min": 0.801,
+      "max": 0.839,
+      "n": 14
+    }
+  },
+  "totals": {
+    "n_papers": 14,
+    "total_questions": 682,
+    "total_off_paper": 0,
+    "total_near_dupes": 337
+  },
+  "per_paper": [
+    {
+      "paper_id": "B\u00e4rwinkel2016",
+      "n_questions": 49,
+      "overall": 0.691,
+      "coverage": 0.459,
+      "faithfulness": 1.0,
+      "diversity": 0.315,
+      "triplifiability": 0.643,
+      "concept_cov": 0.537,
+      "faith_cosine": 0.804,
+      "n_off_paper": 0,
+      "n_near_dupes": 19
+    },
+    {
+      "paper_id": "Costeux2013",
+      "n_questions": 49,
+      "overall": 0.621,
+      "coverage": 0.318,
+      "faithfulness": 0.959,
+      "diversity": 0.319,
+      "triplifiability": 0.663,
+      "concept_cov": 0.45,
+      "faith_cosine": 0.804,
+      "n_off_paper": 0,
+      "n_near_dupes": 12
+    },
+    {
+      "paper_id": "Costeux2014",
+      "n_questions": 48,
+      "overall": 0.667,
+      "coverage": 0.436,
+      "faithfulness": 0.969,
+      "diversity": 0.283,
+      "triplifiability": 0.677,
+      "concept_cov": 0.388,
+      "faith_cosine": 0.814,
+      "n_off_paper": 0,
+      "n_near_dupes": 6
+    },
+    {
+      "paper_id": "Di Maio2018",
+      "n_questions": 48,
+      "overall": 0.702,
+      "coverage": 0.504,
+      "faithfulness": 0.99,
+      "diversity": 0.291,
+      "triplifiability": 0.667,
+      "concept_cov": 0.362,
+      "faith_cosine": 0.818,
+      "n_off_paper": 0,
+      "n_near_dupes": 20
+    },
+    {
+      "paper_id": "Dumon2012",
+      "n_questions": 49,
+      "overall": 0.686,
+      "coverage": 0.449,
+      "faithfulness": 0.99,
+      "diversity": 0.305,
+      "triplifiability": 0.714,
+      "concept_cov": 0.5,
+      "faith_cosine": 0.803,
+      "n_off_paper": 0,
+      "n_near_dupes": 15
+    },
+    {
+      "paper_id": "Guo2015",
+      "n_questions": 49,
+      "overall": 0.735,
+      "coverage": 0.62,
+      "faithfulness": 0.98,
+      "diversity": 0.25,
+      "triplifiability": 0.633,
+      "concept_cov": 0.66,
+      "faith_cosine": 0.825,
+      "n_off_paper": 0,
+      "n_near_dupes": 31
+    },
+    {
+      "paper_id": "Jacobs2007",
+      "n_questions": 49,
+      "overall": 0.764,
+      "coverage": 0.652,
+      "faithfulness": 0.99,
+      "diversity": 0.292,
+      "triplifiability": 0.755,
+      "concept_cov": 0.676,
+      "faith_cosine": 0.807,
+      "n_off_paper": 0,
+      "n_near_dupes": 40
+    },
+    {
+      "paper_id": "Liu2019",
+      "n_questions": 49,
+      "overall": 0.685,
+      "coverage": 0.468,
+      "faithfulness": 0.99,
+      "diversity": 0.25,
+      "triplifiability": 0.694,
+      "concept_cov": 0.537,
+      "faith_cosine": 0.839,
+      "n_off_paper": 0,
+      "n_near_dupes": 33
+    },
+    {
+      "paper_id": "Otsuka2008",
+      "n_questions": 49,
+      "overall": 0.713,
+      "coverage": 0.531,
+      "faithfulness": 0.99,
+      "diversity": 0.277,
+      "triplifiability": 0.714,
+      "concept_cov": 0.689,
+      "faith_cosine": 0.82,
+      "n_off_paper": 0,
+      "n_near_dupes": 28
+    },
+    {
+      "paper_id": "Reglero2011",
+      "n_questions": 49,
+      "overall": 0.674,
+      "coverage": 0.426,
+      "faithfulness": 0.98,
+      "diversity": 0.313,
+      "triplifiability": 0.724,
+      "concept_cov": 0.577,
+      "faith_cosine": 0.801,
+      "n_off_paper": 0,
+      "n_near_dupes": 21
+    },
+    {
+      "paper_id": "Ruiz2011",
+      "n_questions": 49,
+      "overall": 0.669,
+      "coverage": 0.422,
+      "faithfulness": 0.98,
+      "diversity": 0.308,
+      "triplifiability": 0.673,
+      "concept_cov": 0.519,
+      "faith_cosine": 0.809,
+      "n_off_paper": 0,
+      "n_near_dupes": 16
+    },
+    {
+      "paper_id": "Shah2025",
+      "n_questions": 49,
+      "overall": 0.679,
+      "coverage": 0.451,
+      "faithfulness": 0.969,
+      "diversity": 0.319,
+      "triplifiability": 0.714,
+      "concept_cov": 0.5,
+      "faith_cosine": 0.807,
+      "n_off_paper": 0,
+      "n_near_dupes": 23
+    },
+    {
+      "paper_id": "Shieh2002",
+      "n_questions": 48,
+      "overall": 0.692,
+      "coverage": 0.494,
+      "faithfulness": 0.979,
+      "diversity": 0.271,
+      "triplifiability": 0.677,
+      "concept_cov": 0.566,
+      "faith_cosine": 0.824,
+      "n_off_paper": 0,
+      "n_near_dupes": 43
+    },
+    {
+      "paper_id": "Wu2021",
+      "n_questions": 48,
+      "overall": 0.703,
+      "coverage": 0.502,
+      "faithfulness": 1.0,
+      "diversity": 0.291,
+      "triplifiability": 0.625,
+      "concept_cov": 0.575,
+      "faith_cosine": 0.816,
+      "n_off_paper": 0,
+      "n_near_dupes": 30
+    }
+  ]
+}

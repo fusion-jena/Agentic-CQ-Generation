@@ -1,0 +1,67 @@
+{
+  "_note": "Competency question archetype patterns drawn from ontology-engineering practice (PMDco / MaterialsMine / LinkML CQ conventions). The CQ generator aims to produce questions across multiple archetypes per persona. Each persona's question_style in personas.json picks the dominant archetypes naturally; this file lists them explicitly so the generator can spread coverage.",
+
+  "archetypes": [
+    {
+      "id":      "ENTITY_LOOKUP",
+      "pattern": "What is the {property} of {material}?",
+      "purpose": "Asks for a single attribute of a named entity. Foundational CQ shape - maps to a single triple."
+    },
+    {
+      "id":      "METHOD_OF_MEASUREMENT",
+      "pattern": "Which method was used to measure the {property} of {material}?",
+      "purpose": "Connects a material-property pair to the analytical technique. Maps to characterisedBy."
+    },
+    {
+      "id":      "PROCESS_FOR_MATERIAL",
+      "pattern": "By which {process} was {material} produced?",
+      "purpose": "Connects a material to its synthesis route. Maps to producedBy."
+    },
+    {
+      "id":      "CONDITION_FOR_PROCESS",
+      "pattern": "Under what {condition_type} was {process} carried out for {material}?",
+      "purpose": "Captures process conditions (T, time, concentration). Maps to performedAt and related condition links."
+    },
+    {
+      "id":      "COMPARATIVE",
+      "pattern": "How does {property} of {material_A} compare with that of {material_B}?",
+      "purpose": "Forces comparative reasoning across two entities in the paper."
+    },
+    {
+      "id":      "CAUSAL",
+      "pattern": "How does varying {parameter} affect {outcome}?",
+      "purpose": "Asks about structure-property or process-property relationships. Maps to axioms."
+    },
+    {
+      "id":      "ENUMERATION",
+      "pattern": "Which {category} entities are reported in this paper?",
+      "purpose": "Bulk listing - useful for ONTO persona (class membership) and CHAR persona (technique inventory)."
+    },
+    {
+      "id":      "ONTOLOGY_TRIPLE",
+      "pattern": "Which triple (subject, predicate, object) represents the relationship between {entity_A} and {entity_B}?",
+      "purpose": "Direct KG construction CQ. Primary archetype for the ONTO persona."
+    },
+    {
+      "id":      "MOTIVATION",
+      "pattern": "Why was {choice} selected for {target}?",
+      "purpose": "Captures rationale. Useful for STU (learning) and PHD (research framing) personas."
+    },
+    {
+      "id":      "GAP_OR_LIMITATION",
+      "pattern": "What limitation or future direction does the paper acknowledge regarding {topic}?",
+      "purpose": "Frontiers CQ. Primary archetype for the PHD persona."
+    }
+  ],
+
+  "persona_archetype_affinity": {
+    "_note": "Soft guidance: each persona should favour these archetypes but is not restricted to them.",
+    "SYNTH": ["PROCESS_FOR_MATERIAL", "CONDITION_FOR_PROCESS", "CAUSAL", "MOTIVATION"],
+    "CHAR":  ["METHOD_OF_MEASUREMENT", "ENTITY_LOOKUP", "ENUMERATION", "COMPARATIVE"],
+    "PROC":  ["CONDITION_FOR_PROCESS", "CAUSAL", "COMPARATIVE", "MOTIVATION"],
+    "COMP":  ["CAUSAL", "COMPARATIVE", "ENUMERATION", "ENTITY_LOOKUP"],
+    "ONTO":  ["ONTOLOGY_TRIPLE", "ENUMERATION", "ENTITY_LOOKUP", "METHOD_OF_MEASUREMENT"],
+    "STU":   ["ENTITY_LOOKUP", "MOTIVATION", "PROCESS_FOR_MATERIAL", "METHOD_OF_MEASUREMENT"],
+    "PHD":   ["GAP_OR_LIMITATION", "COMPARATIVE", "MOTIVATION", "CAUSAL"]
+  }
+}

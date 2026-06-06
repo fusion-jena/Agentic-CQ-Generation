@@ -1,0 +1,104 @@
+{
+  "_note": "Few-shot competency-question examples per persona. Drawn from PMDco / MaterialsMine CQ patterns and adapted to copolymer research. These prime the LLM with the right tone, depth, and grounding style. Aim: 2-3 high-quality examples per persona, each anchored on a hypothetical paper so the LLM mimics the form without copying the content.",
+
+  "examples": {
+    "SYNTH": [
+      {
+        "question":        "Which polymerization mechanism was used to synthesise the styrene-acrylate copolymer reported in the paper?",
+        "expected_answer": "RAFT polymerization with a trithiocarbonate chain-transfer agent.",
+        "archetype":       "PROCESS_FOR_MATERIAL",
+        "grounding_note":  "Anchored on a named material and a named mechanism."
+      },
+      {
+        "question":        "What initiator concentration was used for the bulk polymerization step?",
+        "expected_answer": "AIBN at 0.5 mol% relative to total monomer.",
+        "archetype":       "CONDITION_FOR_PROCESS",
+        "grounding_note":  "Specific named reagent + numeric value with unit."
+      }
+    ],
+    "CHAR": [
+      {
+        "question":        "Which technique was used to determine the dispersity of the block copolymer?",
+        "expected_answer": "Size-exclusion chromatography (SEC) with PS standards.",
+        "archetype":       "METHOD_OF_MEASUREMENT",
+        "grounding_note":  "Named property -> named method."
+      },
+      {
+        "question":        "What glass transition temperature was reported for the random copolymer by DSC?",
+        "expected_answer": "Tg = 78 °C measured at 10 °C/min.",
+        "archetype":       "ENTITY_LOOKUP",
+        "grounding_note":  "Numeric value with unit and measurement condition."
+      }
+    ],
+    "PROC": [
+      {
+        "question":        "How did the foaming temperature influence the cell size of the copolymer foam?",
+        "expected_answer": "Increasing the foaming temperature from 110 to 140 °C reduced the average cell size from 85 to 35 µm.",
+        "archetype":       "CAUSAL",
+        "grounding_note":  "Parameter sweep with numeric outcomes."
+      },
+      {
+        "question":        "What CO2 saturation pressure was used to produce the lowest-density foam?",
+        "expected_answer": "18 MPa for 4 hours.",
+        "archetype":       "CONDITION_FOR_PROCESS",
+        "grounding_note":  "Specific process parameter linked to a target outcome."
+      }
+    ],
+    "COMP": [
+      {
+        "question":        "Which machine-learning algorithm was used to predict the copolymer composition from the feed ratio?",
+        "expected_answer": "A gradient-boosted regression model trained on 142 data points; RMSE = 4.1 wt% on the held-out test set.",
+        "archetype":       "ENTITY_LOOKUP",
+        "grounding_note":  "Named algorithm + dataset size + quantitative metric."
+      },
+      {
+        "question":        "How many training samples were used for the predictive model and what validation strategy was applied?",
+        "expected_answer": "142 samples; 5-fold cross-validation with a 20% held-out test set.",
+        "archetype":       "ENUMERATION",
+        "grounding_note":  "Captures dataset and validation methodology."
+      }
+    ],
+    "ONTO": [
+      {
+        "question":        "Which triple captures the relationship between poly(styrene-co-MMA) and the RAFT process described in the paper?",
+        "expected_answer": "(poly(styrene-co-MMA), producedBy, RAFT polymerization).",
+        "archetype":       "ONTOLOGY_TRIPLE",
+        "grounding_note":  "Subject-predicate-object form, predicates drawn from the relation_types list."
+      },
+      {
+        "question":        "What ontology class should the analytical technique 'SEC with PS standards' be represented as?",
+        "expected_answer": "A subclass of Method, with hasInstrument linking to a GPC system instance.",
+        "archetype":       "ENTITY_LOOKUP",
+        "grounding_note":  "Ties a paper entity to an ontology class + property."
+      }
+    ],
+    "STU": [
+      {
+        "question":        "What does the term 'dispersity' (Ð) mean in the context of this polymer characterization?",
+        "expected_answer": "Dispersity is the ratio Mw/Mn, indicating how broad the molecular weight distribution is; a value near 1 means a narrow distribution.",
+        "archetype":       "ENTITY_LOOKUP",
+        "grounding_note":  "Recall-level definitional question."
+      },
+      {
+        "question":        "Why was RAFT polymerization chosen over free radical polymerization for this copolymer?",
+        "expected_answer": "RAFT provides better control over molecular weight and dispersity, which the paper required for downstream applications.",
+        "archetype":       "MOTIVATION",
+        "grounding_note":  "Explains the choice in plain terms."
+      }
+    ],
+    "PHD": [
+      {
+        "question":        "What limitation does the paper acknowledge regarding the scalability of the reported synthesis route?",
+        "expected_answer": "The authors note that RAFT polymerization at this scale is sensitive to oxygen contamination and requires further work for industrial translation.",
+        "archetype":       "GAP_OR_LIMITATION",
+        "grounding_note":  "Frontiers-style question drawn from limitation/discussion sections."
+      },
+      {
+        "question":        "How does the dispersity reported here compare with prior work on the same monomer system cited in the introduction?",
+        "expected_answer": "The reported Ð of 1.12 is lower than the 1.35-1.45 range reported by Smith et al. (cited as ref. 12), reflecting the improved CTA design.",
+        "archetype":       "COMPARATIVE",
+        "grounding_note":  "Comparative across cited prior art."
+      }
+    ]
+  }
+}

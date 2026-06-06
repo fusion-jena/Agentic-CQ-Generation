@@ -1,0 +1,3358 @@
+{
+  "paper_id": "Wu2021",
+  "paper_metadata": {
+    "title": "Mechanism of Heterogeneous Bubble Nucleation in Polymer Blend Foaming",
+    "first_author_lastname": "Wu",
+    "year": 2021,
+    "journal": "J. Phys. Chem. B",
+    "doi": "10.1021/acs.jpcb.1c03087",
+    "keywords": [
+      "heterogeneous bubble nucleation",
+      "polymer blend foaming",
+      "polypropylene",
+      "polystyrene",
+      "density functional theory",
+      "CO2 solubility"
+    ],
+    "polymer_systems": [
+      "polypropylene/polystyrene blend",
+      "PP/PS blend"
+    ],
+    "polymerization_methods": [],
+    "paper_type": "research article",
+    "paper_id": "Wu2021",
+    "source_filename": "Mechanism of Heterogeneous Bubble Nucleation in Polymer Blend Foaming.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 8,
+    "n_figures": 11,
+    "n_tables": 0,
+    "file_size_kb": 2899.1,
+    "char_count": 38746,
+    "estimated_tokens": 9686,
+    "n_sections": 0
+  },
+  "pipeline_config": {
+    "pipeline_version": "v2.1",
+    "extraction_method": "plain",
+    "metadata_extractor": "qwen3.5:27b",
+    "iterative_extractor": "qwen3.6:35b-a3b",
+    "cq_generator": "gemma4:31b",
+    "cq_validator": "deepseek-r1:32b",
+    "cq_refiner": "qwen3.5:35b",
+    "embedding_model": "BAAI/bge-small-en-v1.5"
+  },
+  "execution_stats": {
+    "text_extraction_secs": 7.67,
+    "total_wall_secs": 1038.57,
+    "stage_seconds": {
+      "chunk": 0.0,
+      "index": 0.5,
+      "extract": 324.16,
+      "retrieve": 0.25,
+      "generate": 396.45,
+      "validate": 255.0,
+      "refine": 54.07,
+      "evaluate": 0.23
+    }
+  },
+  "pipeline_version": "v2.1",
+  "n_personas": 7,
+  "n_questions": 48,
+  "was_refined": true,
+  "persona_questions": {
+    "SYNTH": [
+      {
+        "id": "Wu2021_SYNTH_Q001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "What method is described in the text as a simple, effective, and economical means for obtaining polymer blends with desired properties?",
+        "expected_answer": "Polymer blending",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question asked for a specific production process not detailed in the text, so it was revised to ask about the general method explicitly described as effective in the Introduction."
+      },
+      {
+        "id": "Wu2021_SYNTH_Q002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "At what pressure were the mass fractions of CO2 and the polymers determined in the simulation model?",
+        "expected_answer": "The mass fractions were determined at 19.0 MPa.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "pressure"
+          },
+          {
+            "role": "individual",
+            "term": "CO2"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_SYNTH_Q003",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "How does the difference in chain fluidity between polypropylene (PP) and polystyrene (PS) affect the adsorption capacity of CO2?",
+        "expected_answer": "Since the PP chain has better fluidity than the PS chain, the adsorption capacity of CO2 in the PP system is enhanced.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "fluidity"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_SYNTH_Q004",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was polymer blending selected as a strategy for improving the properties of single-polymer foaming systems?",
+        "expected_answer": "Polymer blending was selected because it is a simple, effective, and economical means to make up for the deficiencies of single-polymer systems (such as low melt strength and heat-resistance temperature) and remarkably enhance foaming ability.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "melt strength"
+          },
+          {
+            "role": "class",
+            "term": "polymer blend"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_SYNTH_Q005",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of CO2 enrichment in the blend interfacial region on the thermodynamic driving force for bubble nucleation?",
+        "expected_answer": "CO2 enrichment in the blend interfacial region greatly reduces the interfacial tension, which provides a more powerful thermodynamic driving force for bubble nucleation.",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "interfacial tension"
+          },
+          {
+            "role": "individual",
+            "term": "CO2"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_SYNTH_GAP001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "How does the presence of the benzene ring in polystyrene (PS) affect the solubility of CO2 compared to polypropylene (PP)?",
+        "expected_answer": "The benzene ring in PS occupies a large volume, which compresses the available free volume in the PS matrix, making it less conducive to the dissolution of CO2 molecules compared to PP.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "free volume"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_SYNTH_GAP002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "At what temperature were the calculated interfacial tension values for the PP-PP/CO2 system examined against experimental data?",
+        "expected_answer": "452.15 K",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "nucleation number density"
+          },
+          {
+            "role": "property",
+            "term": "temperature"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question incorrectly linked the temperature to the study of the foaming mechanism generally, whereas the text specifies this temperature only in the context of validating the calculated interfacial tension for the PP-PP/CO2 system."
+      }
+    ],
+    "CHAR": [
+      {
+        "id": "Wu2021_CHAR_Q001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to determine the chain length of the polypropylene (PP) and polystyrene (PS) chains in this study?",
+        "expected_answer": "Molecular dynamic (MD) simulation.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "chain length"
+          },
+          {
+            "role": "class",
+            "term": "molecular dynamic (MD) simulation"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_CHAR_Q002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What were the average molecular masses of PP and PS used in the experimental references cited in the study?",
+        "expected_answer": "The average molecular mass of PP was 1.05 × 10^5 g/mol and for PS it was 1.71 × 10^5 g/mol.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "average molecular mass"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_CHAR_Q003",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "COMPARATIVE",
+        "question": "How does the CO2 solubility in polypropylene (PP) compare to the CO2 solubility in polystyrene (PS) under the same conditions?",
+        "expected_answer": "CO2 solubility in PP is higher than that in PS.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "solubility"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_CHAR_Q004",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the reported deviation between the predicted values and experimental data for polypropylene (PP) at 453.15 K?",
+        "expected_answer": "The deviation was 3.49%.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "deviation from experimental data"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question specified an incorrect temperature (373.15 K) where no PP deviation was reported; the question was revised to 453.15 K where the text explicitly states a 3.49% deviation for PP-PP/CO2."
+      },
+      {
+        "id": "Wu2021_CHAR_Q005",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What specific chain length was assigned to the PP and PS chains for the molecular dynamic simulations?",
+        "expected_answer": "200 repeat units.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "chain length"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_CHAR_GAP001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "COMPARATIVE",
+        "question": "How do the contact angles of bubbles nucleated in the PP and PS domains compare to those nucleated in the blend interfacial regions?",
+        "expected_answer": "The contact angles in the PP and PS domains are 118° and 108° respectively (both > 90°), whereas the contact angles in the blend interfacial regions are lower, specifically 85° for PS-PP/CO2 and 78° for PP-PS/CO2 (both < 90°).",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "contact angle"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Wu2021_CHAR_GAP002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What are the reported critical nucleation barriers and critical radii for bubbles in the PP-PP/CO2 and PS-PS/CO2 domains?",
+        "expected_answer": "For PP-PP/CO2, the critical nucleation barrier is 15.02 and the critical radius is 3.89 nm; for PS-PS/CO2, the barrier is 11.17 and the radius is 2.96 nm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "nucleation number density"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question asked for nucleation number density values not present in the text; the question was revised to ask for the explicitly stated critical nucleation barriers and radii values found in the evidence."
+      }
+    ],
+    "PROC": [
+      {
+        "id": "Wu2021_PROC_Q001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "At what temperature was the bubble nucleation process analyzed to reveal the foaming mechanism of the PP/PS blend system?",
+        "expected_answer": "452.15 K",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foaming temperature"
+          },
+          {
+            "role": "individual",
+            "term": "PP/PS blend"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_PROC_Q002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "COMPARATIVE",
+        "question": "How does the CO2 solubility in polypropylene (PP) compare to the CO2 solubility in polystyrene (PS) under the same conditions?",
+        "expected_answer": "CO2 solubility in PP is higher than that in PS.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_PROC_Q003",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does the location of bubble nucleation within the PP/PS blend affect the resulting cell size and number density?",
+        "expected_answer": "Bubbles that nucleate in the PP and PS blend interfacial region attached to the PS-rich phase achieve the smallest size and largest number density.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "number density"
+          },
+          {
+            "role": "class",
+            "term": "interfacial region"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_PROC_Q004",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "MOTIVATION",
+        "question": "Why is polymer blending used as a processing strategy to improve the foaming of single-polymer systems like polypropylene?",
+        "expected_answer": "Polymer blending is used to make up for the deficiencies of single-polymer systems, such as the low melt strength and heat-resistance temperature of polypropylene, and to remarkably enhance the foaming ability.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "melt strength"
+          },
+          {
+            "role": "class",
+            "term": "polymer blending"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_PROC_GAP001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the pressure affect the nucleation free-energy barriers and critical radii of bubbles in the PP/PS blend system?",
+        "expected_answer": "Both the nucleation free-energy barrier and the critical radius decrease as pressure increases, although the rate of decrease declines at high pressure due to the improving amplitude of local supersaturation.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "critical radii"
+          },
+          {
+            "role": "property",
+            "term": "free-energy barriers"
+          },
+          {
+            "role": "property",
+            "term": "local supersaturation"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Wu2021_PROC_GAP002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "COMPARATIVE",
+        "question": "How does the nucleation number density of bubbles in the PP/PS blend interfacial region compare to that in the pure PP domain at a given pressure?",
+        "expected_answer": "The nucleation number density in the PP/PS blend interfacial region can increase five to six orders of magnitude compared to the PP domain, which only reaches 3.25 x 10^6 cell/cm3 at a given pressure.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "nucleation number density"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The evidence passages explicitly provide the specific numerical values (3.25 × 10^6 cell/cm³ for PP and a five to six orders of magnitude increase for the blend interface) and the comparison logic, confirming the question is answerable based on the provided text."
+      }
+    ],
+    "COMP": [
+      {
+        "id": "Wu2021_COMP_Q001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What computational method was used to construct the amorphous polypropylene (PP) and polystyrene (PS) surfaces?",
+        "expected_answer": "A molecular dynamic (MD) simulation method was applied.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "method"
+          },
+          {
+            "role": "class",
+            "term": "molecular dynamic (MD) simulation"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_COMP_Q002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the specified chain length for the PP and PS chains used in the MD simulations?",
+        "expected_answer": "The PP and PS chains consist of 200 repeat units.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "chain length"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_COMP_Q003",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the CO2 enrichment in the blend interfacial region affect the thermodynamic driving force for bubble nucleation?",
+        "expected_answer": "CO2 enrichment in the blend interfacial region greatly reduces the interfacial tension, which provides a more powerful thermodynamic driving force for bubble nucleation.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "interfacial tension"
+          },
+          {
+            "role": "property",
+            "term": "thermodynamic driving force"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_COMP_Q004",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How does the deviation between theoretical predictions and experimental data for the interfacial tension of the PP-PP/CO2 system at 453.15 K compare to the deviation for the PS-PS/CO2 system at 373.15 K?",
+        "expected_answer": "The deviation for the PP-PP/CO2 system at 453.15 K is 3.49%, while the deviation for the PS-PS/CO2 system at 373.15 K is 2.535%.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "deviation from experimental data"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question referenced a temperature and property (PP at 373.15 K) not supported by the text; the revision corrects the temperature to 453.15 K and the property to interfacial tension, which are explicitly detailed in the evidence passages."
+      },
+      {
+        "id": "Wu2021_COMP_Q005",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENUMERATION",
+        "question": "Which theoretical framework was used to calculate the influence of experimental conditions and interfacial structures on bubble nucleation by minimizing the grand potential?",
+        "expected_answer": "Density functional theory (DFT), specifically a constructed 3D-DFT approach.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "density functional theory (DFT)"
+          },
+          {
+            "role": "property",
+            "term": "grand potential"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_COMP_GAP001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the presence of the benzene ring in polystyrene (PS) affect the CO2 solubility compared to polypropylene (PP)?",
+        "expected_answer": "The benzene ring in PS occupies a large volume, which compresses the available free volume in the PS matrix, making it less conducive to the dissolution of CO2 molecules compared to the PP matrix.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "free volume"
+          },
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_COMP_GAP002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How do the predicted nucleation free-energy barriers and critical radii of bubbles in the PP domain compare to those in the PP/PS blend interfacial region attached to the PS-rich phase?",
+        "expected_answer": "The nucleation free-energy barrier in the PP domain is 15.02 (units implied) with a critical radius of 3.89 nm, whereas in the PP/PS blend interfacial region attached to the PS-rich phase, the barrier is 2.53 and the critical radius is 1.57 nm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "nucleation number density"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polymer blend"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question asked for specific nucleation number density values that are not provided in the text; the revision shifts the focus to the explicitly stated free-energy barriers and critical radii found in the evidence passages."
+      }
+    ],
+    "ONTO": [
+      {
+        "id": "Wu2021_ONTO_Q001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the 'polymer blend' and the 'polymer blending' process?",
+        "expected_answer": "(polymer blend, producedBy, polymer blending)",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Material"
+          },
+          {
+            "role": "class",
+            "term": "Process"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_ONTO_Q002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to determine the chain length of the polypropylene (PP) and polystyrene (PS) chains in the theoretical model?",
+        "expected_answer": "molecular dynamic (MD) simulation",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Method"
+          },
+          {
+            "role": "property",
+            "term": "characterisedBy"
+          },
+          {
+            "role": "property",
+            "term": "hasChainLength"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_ONTO_Q003",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What ontology class should 'interfacial tension' be assigned to based on its role in the bubble nucleation mechanism?",
+        "expected_answer": "Property",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Property"
+          },
+          {
+            "role": "individual",
+            "term": "interfacial tension"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_ONTO_Q004",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENUMERATION",
+        "question": "Which Material entities are identified as components of the blend system in this study?",
+        "expected_answer": "polypropylene (PP), polystyrene (PS), and CO2",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Material"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_ONTO_Q005",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple captures the relationship between polypropylene and its inherent deficiency in melt strength?",
+        "expected_answer": "(polypropylene, hasProperty, melt strength)",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "property",
+            "term": "hasProperty"
+          },
+          {
+            "role": "individual",
+            "term": "melt strength"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_ONTO_GAP001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the '3D-DFT approach' and the 'nucleation number density' of the polymer blend?",
+        "expected_answer": "(3D-DFT approach, predicts, nucleation number density)",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Method"
+          },
+          {
+            "role": "property",
+            "term": "predicts"
+          },
+          {
+            "role": "class",
+            "term": "Property"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_ONTO_GAP002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What ontology class should 'critical radius' and 'nucleation free-energy barrier' be assigned to within the polymer foaming domain?",
+        "expected_answer": "They should be represented as subclasses of Property (specifically thermodynamic or nucleation properties).",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Property"
+          },
+          {
+            "role": "individual",
+            "term": "critical radius"
+          },
+          {
+            "role": "individual",
+            "term": "nucleation free-energy barrier"
+          }
+        ]
+      }
+    ],
+    "STU": [
+      {
+        "id": "Wu2021_STU_Q001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "What method is described as a simple, effective, and economical means for obtaining materials with desired properties in polymer foaming?",
+        "expected_answer": "Polymer blending",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "polymer blend"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          },
+          {
+            "role": "class",
+            "term": "polymer blending"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question was too vague as the text does not detail the specific industrial process steps, but it explicitly describes 'polymer blending' as the method used to obtain materials with desired properties."
+      },
+      {
+        "id": "Wu2021_STU_Q002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which theoretical approach was constructed to investigate the foaming mechanism of the PP/PS/CO2 blend system?",
+        "expected_answer": "Three-dimensional density functional theory (3D-DFT)",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "property",
+            "term": "chain length"
+          },
+          {
+            "role": "class",
+            "term": "molecular dynamic (MD) simulation"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question incorrectly assumed a method for determining chain length, whereas the text states that a three-dimensional density functional theory (3D-DFT) approach was constructed to investigate the foaming mechanism."
+      },
+      {
+        "id": "Wu2021_STU_Q003",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why is polymer blending used instead of using single-polymer systems for foaming materials?",
+        "expected_answer": "Polymer blending is used because it makes up for the deficiencies of single-polymer systems (such as low melt strength and heat-resistance temperature in polypropylene) and remarkably enhances the foaming ability.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "polymer blending"
+          },
+          {
+            "role": "class",
+            "term": "single-polymer systems"
+          },
+          {
+            "role": "property",
+            "term": "foaming ability"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_STU_Q004",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the chain length of the PS chains used in the molecular dynamic simulation?",
+        "expected_answer": "The PS chains consist of 200 repeat units.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          },
+          {
+            "role": "property",
+            "term": "chain length"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_STU_Q005",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is a known inherent drawback of polypropylene (PP) mentioned in the context of polymer foams?",
+        "expected_answer": "Polypropylene has inherent drawbacks such as low melt strength and heat-resistance temperature.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "property",
+            "term": "melt strength"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_STU_GAP001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the effect of the benzene ring in polystyrene (PS) on the solubility of CO2 in the polymer matrix?",
+        "expected_answer": "The benzene ring in the PS system occupies a large volume, which compresses the available free volume in the PS matrix, making it less conducive to the dissolution of CO2 molecules.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          },
+          {
+            "role": "property",
+            "term": "free volume"
+          },
+          {
+            "role": "property",
+            "term": "solubility"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_STU_GAP002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why is polymer blending used as a method to improve the properties of single-polymer systems in foaming applications?",
+        "expected_answer": "Polymer blending is used because it is a simple, effective, and economical way to obtain materials with desired properties, allowing it to compensate for the deficiencies of single-polymer systems (such as low melt strength or heat-resistance temperature) and remarkably enhance foaming ability.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "polymer blend"
+          },
+          {
+            "role": "property",
+            "term": "melt strength"
+          },
+          {
+            "role": "property",
+            "term": "foaming ability"
+          }
+        ]
+      }
+    ],
+    "PHD": [
+      {
+        "id": "Wu2021_PHD_Q001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "MOTIVATION",
+        "question": "What research gap in the study of polymer blend foaming does this 3D-DFT approach aim to address compared to existing experimental research?",
+        "expected_answer": "Existing experimental research typically analyzes the polymer blend foaming process at the macrolevel, which cannot quantitatively calculate the contribution of each polymer of the blend to the CO2 dissolution and bubble nucleation processes.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "polymer blend"
+          },
+          {
+            "role": "property",
+            "term": "bubble nucleation"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_PHD_Q002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "COMPARATIVE",
+        "question": "How does the CO2 solubility in the polypropylene (PP) domain compare to that in the polystyrene (PS) domain within the blend system?",
+        "expected_answer": "More CO2 molecules are dissolved in the PP domain than in the PS domain.",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          },
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_PHD_Q003",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "How does the CO2 enrichment in the blend interfacial region affect the thermodynamic driving force for bubble nucleation?",
+        "expected_answer": "The CO2 enrichment in the blend interfacial region greatly reduces the interfacial tension, which provides a more powerful thermodynamic driving force for bubble nucleation.",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "interfacial tension"
+          },
+          {
+            "role": "property",
+            "term": "bubble nucleation"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_PHD_Q004",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "GAP_OR_LIMITATION",
+        "question": "What physical phenomena in polymer foaming experiments are acknowledged as reasons for the deviation between the theoretical predictions and experimental measurements of nucleation number densities?",
+        "expected_answer": "The authors consider that bubble rupture and coalescence in polymer foaming experiments contribute to the deviation between predicted values and experimental data.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "nucleation number densities"
+          },
+          {
+            "role": "property",
+            "term": "bubble rupture"
+          },
+          {
+            "role": "property",
+            "term": "coalescence"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_PHD_Q005",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "COMPARATIVE",
+        "question": "In terms of bubble characteristics, how do bubbles nucleating in the blend interfacial region attached to the PS-rich phase compare to those in other regions?",
+        "expected_answer": "Bubbles that nucleate in the PP and PS blend interfacial region attached to the PS-rich phase achieve the smallest size and largest number density.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "critical radii"
+          },
+          {
+            "role": "property",
+            "term": "nucleation number densities"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_PHD_GAP001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How does the nucleation number density of bubbles in the PP/PS blend interfacial region compare to that in the pure PP and PS domains at 20 MPa?",
+        "expected_answer": "The nucleation number density in the PP/PS blend interfacial region can increase five to six orders of magnitude compared to the other domains; specifically, the PP domain only reaches 3.25 x 10^6 cell/cm3, while the PS domain is about two orders of magnitude larger than the PP domain.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "nucleation number density"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ]
+      },
+      {
+        "id": "Wu2021_PHD_GAP002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "GAP_OR_LIMITATION",
+        "question": "What limitation does the paper acknowledge regarding the comparison between the theoretical model's predictions and experimental measurements of bubble nucleation?",
+        "expected_answer": "The authors acknowledge that the deviation between theoretical predictions and experimental measurements is within one order of magnitude, noting that this is reasonable because bubble rupture and coalescence occur in actual polymer foaming experiments.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "deviation from experimental data"
+          },
+          {
+            "role": "class",
+            "term": "theoretical model"
+          }
+        ]
+      }
+    ]
+  },
+  "final_questions": [
+    {
+      "id": "Wu2021_SYNTH_Q001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "What method is described in the text as a simple, effective, and economical means for obtaining polymer blends with desired properties?",
+      "expected_answer": "Polymer blending",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        },
+        {
+          "role": "property",
+          "term": "producedBy"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question asked for a specific production process not detailed in the text, so it was revised to ask about the general method explicitly described as effective in the Introduction."
+    },
+    {
+      "id": "Wu2021_SYNTH_Q002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "At what pressure were the mass fractions of CO2 and the polymers determined in the simulation model?",
+      "expected_answer": "The mass fractions were determined at 19.0 MPa.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "pressure"
+        },
+        {
+          "role": "individual",
+          "term": "CO2"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_SYNTH_Q003",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CAUSAL",
+      "question": "How does the difference in chain fluidity between polypropylene (PP) and polystyrene (PS) affect the adsorption capacity of CO2?",
+      "expected_answer": "Since the PP chain has better fluidity than the PS chain, the adsorption capacity of CO2 in the PP system is enhanced.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "fluidity"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_SYNTH_Q004",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was polymer blending selected as a strategy for improving the properties of single-polymer foaming systems?",
+      "expected_answer": "Polymer blending was selected because it is a simple, effective, and economical means to make up for the deficiencies of single-polymer systems (such as low melt strength and heat-resistance temperature) and remarkably enhance foaming ability.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "melt strength"
+        },
+        {
+          "role": "class",
+          "term": "polymer blend"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_SYNTH_Q005",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CAUSAL",
+      "question": "What is the effect of CO2 enrichment in the blend interfacial region on the thermodynamic driving force for bubble nucleation?",
+      "expected_answer": "CO2 enrichment in the blend interfacial region greatly reduces the interfacial tension, which provides a more powerful thermodynamic driving force for bubble nucleation.",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "interfacial tension"
+        },
+        {
+          "role": "individual",
+          "term": "CO2"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_SYNTH_GAP001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CAUSAL",
+      "question": "How does the presence of the benzene ring in polystyrene (PS) affect the solubility of CO2 compared to polypropylene (PP)?",
+      "expected_answer": "The benzene ring in PS occupies a large volume, which compresses the available free volume in the PS matrix, making it less conducive to the dissolution of CO2 molecules compared to PP.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "free volume"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_SYNTH_GAP002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "At what temperature were the calculated interfacial tension values for the PP-PP/CO2 system examined against experimental data?",
+      "expected_answer": "452.15 K",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "nucleation number density"
+        },
+        {
+          "role": "property",
+          "term": "temperature"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question incorrectly linked the temperature to the study of the foaming mechanism generally, whereas the text specifies this temperature only in the context of validating the calculated interfacial tension for the PP-PP/CO2 system."
+    },
+    {
+      "id": "Wu2021_CHAR_Q001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method was used to determine the chain length of the polypropylene (PP) and polystyrene (PS) chains in this study?",
+      "expected_answer": "Molecular dynamic (MD) simulation.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "chain length"
+        },
+        {
+          "role": "class",
+          "term": "molecular dynamic (MD) simulation"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_CHAR_Q002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What were the average molecular masses of PP and PS used in the experimental references cited in the study?",
+      "expected_answer": "The average molecular mass of PP was 1.05 × 10^5 g/mol and for PS it was 1.71 × 10^5 g/mol.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "average molecular mass"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_CHAR_Q003",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "COMPARATIVE",
+      "question": "How does the CO2 solubility in polypropylene (PP) compare to the CO2 solubility in polystyrene (PS) under the same conditions?",
+      "expected_answer": "CO2 solubility in PP is higher than that in PS.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "solubility"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_CHAR_Q004",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the reported deviation between the predicted values and experimental data for polypropylene (PP) at 453.15 K?",
+      "expected_answer": "The deviation was 3.49%.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "deviation from experimental data"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question specified an incorrect temperature (373.15 K) where no PP deviation was reported; the question was revised to 453.15 K where the text explicitly states a 3.49% deviation for PP-PP/CO2."
+    },
+    {
+      "id": "Wu2021_CHAR_Q005",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What specific chain length was assigned to the PP and PS chains for the molecular dynamic simulations?",
+      "expected_answer": "200 repeat units.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "chain length"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_CHAR_GAP001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "COMPARATIVE",
+      "question": "How do the contact angles of bubbles nucleated in the PP and PS domains compare to those nucleated in the blend interfacial regions?",
+      "expected_answer": "The contact angles in the PP and PS domains are 118° and 108° respectively (both > 90°), whereas the contact angles in the blend interfacial regions are lower, specifically 85° for PS-PP/CO2 and 78° for PP-PS/CO2 (both < 90°).",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "contact angle"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+    },
+    {
+      "id": "Wu2021_CHAR_GAP002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What are the reported critical nucleation barriers and critical radii for bubbles in the PP-PP/CO2 and PS-PS/CO2 domains?",
+      "expected_answer": "For PP-PP/CO2, the critical nucleation barrier is 15.02 and the critical radius is 3.89 nm; for PS-PS/CO2, the barrier is 11.17 and the radius is 2.96 nm.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "nucleation number density"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question asked for nucleation number density values not present in the text; the question was revised to ask for the explicitly stated critical nucleation barriers and radii values found in the evidence."
+    },
+    {
+      "id": "Wu2021_PROC_Q001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "At what temperature was the bubble nucleation process analyzed to reveal the foaming mechanism of the PP/PS blend system?",
+      "expected_answer": "452.15 K",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foaming temperature"
+        },
+        {
+          "role": "individual",
+          "term": "PP/PS blend"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_PROC_Q002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "COMPARATIVE",
+      "question": "How does the CO2 solubility in polypropylene (PP) compare to the CO2 solubility in polystyrene (PS) under the same conditions?",
+      "expected_answer": "CO2 solubility in PP is higher than that in PS.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_PROC_Q003",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How does the location of bubble nucleation within the PP/PS blend affect the resulting cell size and number density?",
+      "expected_answer": "Bubbles that nucleate in the PP and PS blend interfacial region attached to the PS-rich phase achieve the smallest size and largest number density.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "number density"
+        },
+        {
+          "role": "class",
+          "term": "interfacial region"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_PROC_Q004",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "MOTIVATION",
+      "question": "Why is polymer blending used as a processing strategy to improve the foaming of single-polymer systems like polypropylene?",
+      "expected_answer": "Polymer blending is used to make up for the deficiencies of single-polymer systems, such as the low melt strength and heat-resistance temperature of polypropylene, and to remarkably enhance the foaming ability.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "melt strength"
+        },
+        {
+          "role": "class",
+          "term": "polymer blending"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_PROC_GAP001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the pressure affect the nucleation free-energy barriers and critical radii of bubbles in the PP/PS blend system?",
+      "expected_answer": "Both the nucleation free-energy barrier and the critical radius decrease as pressure increases, although the rate of decrease declines at high pressure due to the improving amplitude of local supersaturation.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "critical radii"
+        },
+        {
+          "role": "property",
+          "term": "free-energy barriers"
+        },
+        {
+          "role": "property",
+          "term": "local supersaturation"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+    },
+    {
+      "id": "Wu2021_PROC_GAP002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "COMPARATIVE",
+      "question": "How does the nucleation number density of bubbles in the PP/PS blend interfacial region compare to that in the pure PP domain at a given pressure?",
+      "expected_answer": "The nucleation number density in the PP/PS blend interfacial region can increase five to six orders of magnitude compared to the PP domain, which only reaches 3.25 x 10^6 cell/cm3 at a given pressure.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "nucleation number density"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "The evidence passages explicitly provide the specific numerical values (3.25 × 10^6 cell/cm³ for PP and a five to six orders of magnitude increase for the blend interface) and the comparison logic, confirming the question is answerable based on the provided text."
+    },
+    {
+      "id": "Wu2021_COMP_Q001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What computational method was used to construct the amorphous polypropylene (PP) and polystyrene (PS) surfaces?",
+      "expected_answer": "A molecular dynamic (MD) simulation method was applied.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "method"
+        },
+        {
+          "role": "class",
+          "term": "molecular dynamic (MD) simulation"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_COMP_Q002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the specified chain length for the PP and PS chains used in the MD simulations?",
+      "expected_answer": "The PP and PS chains consist of 200 repeat units.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "chain length"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_COMP_Q003",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the CO2 enrichment in the blend interfacial region affect the thermodynamic driving force for bubble nucleation?",
+      "expected_answer": "CO2 enrichment in the blend interfacial region greatly reduces the interfacial tension, which provides a more powerful thermodynamic driving force for bubble nucleation.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "interfacial tension"
+        },
+        {
+          "role": "property",
+          "term": "thermodynamic driving force"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_COMP_Q004",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "COMPARATIVE",
+      "question": "How does the deviation between theoretical predictions and experimental data for the interfacial tension of the PP-PP/CO2 system at 453.15 K compare to the deviation for the PS-PS/CO2 system at 373.15 K?",
+      "expected_answer": "The deviation for the PP-PP/CO2 system at 453.15 K is 3.49%, while the deviation for the PS-PS/CO2 system at 373.15 K is 2.535%.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "deviation from experimental data"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question referenced a temperature and property (PP at 373.15 K) not supported by the text; the revision corrects the temperature to 453.15 K and the property to interfacial tension, which are explicitly detailed in the evidence passages."
+    },
+    {
+      "id": "Wu2021_COMP_Q005",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENUMERATION",
+      "question": "Which theoretical framework was used to calculate the influence of experimental conditions and interfacial structures on bubble nucleation by minimizing the grand potential?",
+      "expected_answer": "Density functional theory (DFT), specifically a constructed 3D-DFT approach.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "density functional theory (DFT)"
+        },
+        {
+          "role": "property",
+          "term": "grand potential"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_COMP_GAP001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the presence of the benzene ring in polystyrene (PS) affect the CO2 solubility compared to polypropylene (PP)?",
+      "expected_answer": "The benzene ring in PS occupies a large volume, which compresses the available free volume in the PS matrix, making it less conducive to the dissolution of CO2 molecules compared to the PP matrix.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "free volume"
+        },
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_COMP_GAP002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "COMPARATIVE",
+      "question": "How do the predicted nucleation free-energy barriers and critical radii of bubbles in the PP domain compare to those in the PP/PS blend interfacial region attached to the PS-rich phase?",
+      "expected_answer": "The nucleation free-energy barrier in the PP domain is 15.02 (units implied) with a critical radius of 3.89 nm, whereas in the PP/PS blend interfacial region attached to the PS-rich phase, the barrier is 2.53 and the critical radius is 1.57 nm.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "nucleation number density"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polymer blend"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question asked for specific nucleation number density values that are not provided in the text; the revision shifts the focus to the explicitly stated free-energy barriers and critical radii found in the evidence passages."
+    },
+    {
+      "id": "Wu2021_ONTO_Q001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between the 'polymer blend' and the 'polymer blending' process?",
+      "expected_answer": "(polymer blend, producedBy, polymer blending)",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Material"
+        },
+        {
+          "role": "class",
+          "term": "Process"
+        },
+        {
+          "role": "property",
+          "term": "producedBy"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_ONTO_Q002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method was used to determine the chain length of the polypropylene (PP) and polystyrene (PS) chains in the theoretical model?",
+      "expected_answer": "molecular dynamic (MD) simulation",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Method"
+        },
+        {
+          "role": "property",
+          "term": "characterisedBy"
+        },
+        {
+          "role": "property",
+          "term": "hasChainLength"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_ONTO_Q003",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What ontology class should 'interfacial tension' be assigned to based on its role in the bubble nucleation mechanism?",
+      "expected_answer": "Property",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Property"
+        },
+        {
+          "role": "individual",
+          "term": "interfacial tension"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_ONTO_Q004",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENUMERATION",
+      "question": "Which Material entities are identified as components of the blend system in this study?",
+      "expected_answer": "polypropylene (PP), polystyrene (PS), and CO2",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Material"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_ONTO_Q005",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple captures the relationship between polypropylene and its inherent deficiency in melt strength?",
+      "expected_answer": "(polypropylene, hasProperty, melt strength)",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "property",
+          "term": "hasProperty"
+        },
+        {
+          "role": "individual",
+          "term": "melt strength"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_ONTO_GAP001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between the '3D-DFT approach' and the 'nucleation number density' of the polymer blend?",
+      "expected_answer": "(3D-DFT approach, predicts, nucleation number density)",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Method"
+        },
+        {
+          "role": "property",
+          "term": "predicts"
+        },
+        {
+          "role": "class",
+          "term": "Property"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_ONTO_GAP002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What ontology class should 'critical radius' and 'nucleation free-energy barrier' be assigned to within the polymer foaming domain?",
+      "expected_answer": "They should be represented as subclasses of Property (specifically thermodynamic or nucleation properties).",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Property"
+        },
+        {
+          "role": "individual",
+          "term": "critical radius"
+        },
+        {
+          "role": "individual",
+          "term": "nucleation free-energy barrier"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_STU_Q001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "What method is described as a simple, effective, and economical means for obtaining materials with desired properties in polymer foaming?",
+      "expected_answer": "Polymer blending",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "polymer blend"
+        },
+        {
+          "role": "property",
+          "term": "producedBy"
+        },
+        {
+          "role": "class",
+          "term": "polymer blending"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question was too vague as the text does not detail the specific industrial process steps, but it explicitly describes 'polymer blending' as the method used to obtain materials with desired properties."
+    },
+    {
+      "id": "Wu2021_STU_Q002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which theoretical approach was constructed to investigate the foaming mechanism of the PP/PS/CO2 blend system?",
+      "expected_answer": "Three-dimensional density functional theory (3D-DFT)",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "property",
+          "term": "chain length"
+        },
+        {
+          "role": "class",
+          "term": "molecular dynamic (MD) simulation"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question incorrectly assumed a method for determining chain length, whereas the text states that a three-dimensional density functional theory (3D-DFT) approach was constructed to investigate the foaming mechanism."
+    },
+    {
+      "id": "Wu2021_STU_Q003",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why is polymer blending used instead of using single-polymer systems for foaming materials?",
+      "expected_answer": "Polymer blending is used because it makes up for the deficiencies of single-polymer systems (such as low melt strength and heat-resistance temperature in polypropylene) and remarkably enhances the foaming ability.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "polymer blending"
+        },
+        {
+          "role": "class",
+          "term": "single-polymer systems"
+        },
+        {
+          "role": "property",
+          "term": "foaming ability"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_STU_Q004",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the chain length of the PS chains used in the molecular dynamic simulation?",
+      "expected_answer": "The PS chains consist of 200 repeat units.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        },
+        {
+          "role": "property",
+          "term": "chain length"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_STU_Q005",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is a known inherent drawback of polypropylene (PP) mentioned in the context of polymer foams?",
+      "expected_answer": "Polypropylene has inherent drawbacks such as low melt strength and heat-resistance temperature.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "property",
+          "term": "melt strength"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_STU_GAP001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the effect of the benzene ring in polystyrene (PS) on the solubility of CO2 in the polymer matrix?",
+      "expected_answer": "The benzene ring in the PS system occupies a large volume, which compresses the available free volume in the PS matrix, making it less conducive to the dissolution of CO2 molecules.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        },
+        {
+          "role": "property",
+          "term": "free volume"
+        },
+        {
+          "role": "property",
+          "term": "solubility"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_STU_GAP002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why is polymer blending used as a method to improve the properties of single-polymer systems in foaming applications?",
+      "expected_answer": "Polymer blending is used because it is a simple, effective, and economical way to obtain materials with desired properties, allowing it to compensate for the deficiencies of single-polymer systems (such as low melt strength or heat-resistance temperature) and remarkably enhance foaming ability.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "polymer blend"
+        },
+        {
+          "role": "property",
+          "term": "melt strength"
+        },
+        {
+          "role": "property",
+          "term": "foaming ability"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_PHD_Q001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "MOTIVATION",
+      "question": "What research gap in the study of polymer blend foaming does this 3D-DFT approach aim to address compared to existing experimental research?",
+      "expected_answer": "Existing experimental research typically analyzes the polymer blend foaming process at the macrolevel, which cannot quantitatively calculate the contribution of each polymer of the blend to the CO2 dissolution and bubble nucleation processes.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "polymer blend"
+        },
+        {
+          "role": "property",
+          "term": "bubble nucleation"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_PHD_Q002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "COMPARATIVE",
+      "question": "How does the CO2 solubility in the polypropylene (PP) domain compare to that in the polystyrene (PS) domain within the blend system?",
+      "expected_answer": "More CO2 molecules are dissolved in the PP domain than in the PS domain.",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        },
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_PHD_Q003",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "CAUSAL",
+      "question": "How does the CO2 enrichment in the blend interfacial region affect the thermodynamic driving force for bubble nucleation?",
+      "expected_answer": "The CO2 enrichment in the blend interfacial region greatly reduces the interfacial tension, which provides a more powerful thermodynamic driving force for bubble nucleation.",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "interfacial tension"
+        },
+        {
+          "role": "property",
+          "term": "bubble nucleation"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_PHD_Q004",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "GAP_OR_LIMITATION",
+      "question": "What physical phenomena in polymer foaming experiments are acknowledged as reasons for the deviation between the theoretical predictions and experimental measurements of nucleation number densities?",
+      "expected_answer": "The authors consider that bubble rupture and coalescence in polymer foaming experiments contribute to the deviation between predicted values and experimental data.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "nucleation number densities"
+        },
+        {
+          "role": "property",
+          "term": "bubble rupture"
+        },
+        {
+          "role": "property",
+          "term": "coalescence"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_PHD_Q005",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "COMPARATIVE",
+      "question": "In terms of bubble characteristics, how do bubbles nucleating in the blend interfacial region attached to the PS-rich phase compare to those in other regions?",
+      "expected_answer": "Bubbles that nucleate in the PP and PS blend interfacial region attached to the PS-rich phase achieve the smallest size and largest number density.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "critical radii"
+        },
+        {
+          "role": "property",
+          "term": "nucleation number densities"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_PHD_GAP001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "analysis",
+      "archetype": "COMPARATIVE",
+      "question": "How does the nucleation number density of bubbles in the PP/PS blend interfacial region compare to that in the pure PP and PS domains at 20 MPa?",
+      "expected_answer": "The nucleation number density in the PP/PS blend interfacial region can increase five to six orders of magnitude compared to the other domains; specifically, the PP domain only reaches 3.25 x 10^6 cell/cm3, while the PS domain is about two orders of magnitude larger than the PP domain.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "nucleation number density"
+        },
+        {
+          "role": "individual",
+          "term": "polypropylene"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ]
+    },
+    {
+      "id": "Wu2021_PHD_GAP002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "GAP_OR_LIMITATION",
+      "question": "What limitation does the paper acknowledge regarding the comparison between the theoretical model's predictions and experimental measurements of bubble nucleation?",
+      "expected_answer": "The authors acknowledge that the deviation between theoretical predictions and experimental measurements is within one order of magnitude, noting that this is reasonable because bubble rupture and coalescence occur in actual polymer foaming experiments.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "deviation from experimental data"
+        },
+        {
+          "role": "class",
+          "term": "theoretical model"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "quality_score": 0.823,
+    "pass_score_threshold": 0.75,
+    "active_checks": [
+      "persona_coverage",
+      "question_count",
+      "answerability",
+      "specificity",
+      "section_validity",
+      "concept_usage",
+      "redundancy"
+    ],
+    "issues": [
+      "Near-duplicate questions: Wu2021_SYNTH_Q004 ~ Wu2021_PROC_Q004 (cos=0.95)",
+      "Near-duplicate questions: Wu2021_SYNTH_Q004 ~ Wu2021_STU_Q003 (cos=0.96)",
+      "Near-duplicate questions: Wu2021_SYNTH_Q004 ~ Wu2021_STU_GAP002 (cos=0.98)",
+      "Near-duplicate questions: Wu2021_SYNTH_Q005 ~ Wu2021_COMP_Q003 (cos=0.99)",
+      "Near-duplicate questions: Wu2021_SYNTH_Q005 ~ Wu2021_PHD_Q003 (cos=0.99)",
+      "Near-duplicate questions: Wu2021_SYNTH_GAP001 ~ Wu2021_CHAR_Q003 (cos=0.93)",
+      "Near-duplicate questions: Wu2021_SYNTH_GAP001 ~ Wu2021_PROC_Q002 (cos=0.93)",
+      "Near-duplicate questions: Wu2021_SYNTH_GAP001 ~ Wu2021_COMP_GAP001 (cos=1.00)",
+      "Near-duplicate questions: Wu2021_SYNTH_GAP001 ~ Wu2021_STU_GAP001 (cos=0.96)",
+      "Near-duplicate questions: Wu2021_SYNTH_GAP002 ~ Wu2021_PROC_Q001 (cos=0.95)",
+      "[SYNTH] Wu2021_SYNTH_Q001: fail (score=0.30) - The question asks about the production process of the PP and PS blend, but the passages only mention polymer blending as a strategy without specifying the exact method used.",
+      "[SYNTH] Wu2021_SYNTH_GAP002: fail (score=0.30) - The question asks about the temperature used for studying the foaming mechanism, but the passages do not explicitly mention a specific temperature for this purpose.",
+      "[CHAR] Wu2021_CHAR_Q004: fail (score=0.30) - The question asks for deviation between predicted values and experimental data at 373.15 K, which is not explicitly mentioned in the passages.",
+      "[CHAR] Wu2021_CHAR_GAP001: fail (score=0.30) - The question asks about contact angles of bubbles, which are not explicitly mentioned in the passages.",
+      "[CHAR] Wu2021_CHAR_GAP002: fail (score=0.30) - The question asks for nucleation number density, which is not explicitly mentioned in the passages.",
+      "[PROC] Wu2021_PROC_GAP001: fail (score=0.30) - The effect of pressure on nucleation barriers and critical radii is not explicitly stated in the evidence passages, requiring inference which may be incorrect.",
+      "[PROC] Wu2021_PROC_GAP002: borderline (score=0.50) - The comparison of nucleation number density between blend interfacial region and PP domain is somewhat specific but lacks explicit numerical values in the evidence passages.",
+      "[COMP] Wu2021_COMP_Q004: borderline (score=0.50) - The deviation for PP at 373.15 K is not explicitly stated in the passages.",
+      "[COMP] Wu2021_COMP_GAP002: borderline (score=0.50) - The exact nucleation number densities are not provided in the passages.",
+      "[STU] Wu2021_STU_Q001: fail (score=0.30) - The question asks about the process of producing a polymer blend, but the passages only mention 'polymer blending' as a method without specifying the exact process used.",
+      "[STU] Wu2021_STU_Q002: fail (score=0.30) - The question asks about the method to determine chain length, but the passages mention MD simulation for constructing surfaces, not specifically determining chain length."
+    ],
+    "issues_by_persona": {
+      "SYNTH": [
+        "[SYNTH] Wu2021_SYNTH_Q001: fail (score=0.30) - The question asks about the production process of the PP and PS blend, but the passages only mention polymer blending as a strategy without specifying the exact method used.",
+        "[SYNTH] Wu2021_SYNTH_GAP002: fail (score=0.30) - The question asks about the temperature used for studying the foaming mechanism, but the passages do not explicitly mention a specific temperature for this purpose."
+      ],
+      "CHAR": [
+        "[CHAR] Wu2021_CHAR_Q004: fail (score=0.30) - The question asks for deviation between predicted values and experimental data at 373.15 K, which is not explicitly mentioned in the passages.",
+        "[CHAR] Wu2021_CHAR_GAP001: fail (score=0.30) - The question asks about contact angles of bubbles, which are not explicitly mentioned in the passages.",
+        "[CHAR] Wu2021_CHAR_GAP002: fail (score=0.30) - The question asks for nucleation number density, which is not explicitly mentioned in the passages."
+      ],
+      "PROC": [
+        "[PROC] Wu2021_PROC_GAP001: fail (score=0.30) - The effect of pressure on nucleation barriers and critical radii is not explicitly stated in the evidence passages, requiring inference which may be incorrect.",
+        "[PROC] Wu2021_PROC_GAP002: borderline (score=0.50) - The comparison of nucleation number density between blend interfacial region and PP domain is somewhat specific but lacks explicit numerical values in the evidence passages."
+      ],
+      "COMP": [
+        "[COMP] Wu2021_COMP_Q004: borderline (score=0.50) - The deviation for PP at 373.15 K is not explicitly stated in the passages.",
+        "[COMP] Wu2021_COMP_GAP002: borderline (score=0.50) - The exact nucleation number densities are not provided in the passages."
+      ],
+      "STU": [
+        "[STU] Wu2021_STU_Q001: fail (score=0.30) - The question asks about the process of producing a polymer blend, but the passages only mention 'polymer blending' as a method without specifying the exact process used.",
+        "[STU] Wu2021_STU_Q002: fail (score=0.30) - The question asks about the method to determine chain length, but the passages mention MD simulation for constructing surfaces, not specifically determining chain length."
+      ]
+    },
+    "per_question": {
+      "Wu2021_SYNTH_Q001": {
+        "id": "Wu2021_SYNTH_Q001",
+        "score": 0.3,
+        "reasons": [
+          "The question asks about the production process of the PP and PS blend, but the passages only mention polymer blending as a strategy without specifying the exact method used."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "fail"
+      },
+      "Wu2021_SYNTH_Q002": {
+        "id": "Wu2021_SYNTH_Q002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_SYNTH_Q003": {
+        "id": "Wu2021_SYNTH_Q003",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_SYNTH_Q004": {
+        "id": "Wu2021_SYNTH_Q004",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_SYNTH_Q005": {
+        "id": "Wu2021_SYNTH_Q005",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_SYNTH_GAP001": {
+        "id": "Wu2021_SYNTH_GAP001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_SYNTH_GAP002": {
+        "id": "Wu2021_SYNTH_GAP002",
+        "score": 0.3,
+        "reasons": [
+          "The question asks about the temperature used for studying the foaming mechanism, but the passages do not explicitly mention a specific temperature for this purpose."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "fail"
+      },
+      "Wu2021_CHAR_Q001": {
+        "id": "Wu2021_CHAR_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The question asks about the method used to determine chain length, which is explicitly mentioned as MD simulation in passage 1.",
+          "The answer is specific and grounded in the evidence."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_CHAR_Q002": {
+        "id": "Wu2021_CHAR_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The question asks for average molecular masses, which are explicitly stated in passage 8.",
+          "The answer is specific and grounded in the evidence."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_CHAR_Q003": {
+        "id": "Wu2021_CHAR_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The question compares CO2 solubility in PP and PS, which is explicitly stated in passage 8.",
+          "The answer is specific and grounded in the evidence."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_CHAR_Q004": {
+        "id": "Wu2021_CHAR_Q004",
+        "score": 0.3,
+        "reasons": [
+          "The question asks for deviation between predicted values and experimental data at 373.15 K, which is not explicitly mentioned in the passages.",
+          "The answer requires outside knowledge or inference beyond the provided evidence."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "fail"
+      },
+      "Wu2021_CHAR_Q005": {
+        "id": "Wu2021_CHAR_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The question asks for chain length used in MD simulations, which is explicitly stated as 200 repeat units in passage 1.",
+          "The answer is specific and grounded in the evidence."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_CHAR_GAP001": {
+        "id": "Wu2021_CHAR_GAP001",
+        "score": 0.3,
+        "reasons": [
+          "The question asks about contact angles of bubbles, which are not explicitly mentioned in the passages.",
+          "The answer requires outside knowledge or inference beyond the provided evidence."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "fail"
+      },
+      "Wu2021_CHAR_GAP002": {
+        "id": "Wu2021_CHAR_GAP002",
+        "score": 0.3,
+        "reasons": [
+          "The question asks for nucleation number density, which is not explicitly mentioned in the passages.",
+          "The answer requires outside knowledge or inference beyond the provided evidence."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "fail"
+      },
+      "Wu2021_PROC_Q001": {
+        "id": "Wu2021_PROC_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The temperature of 452.15 K is explicitly mentioned in the evidence passages as part of the analysis for bubble nucleation."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22906
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_PROC_Q002": {
+        "id": "Wu2021_PROC_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The comparison between CO2 solubility in PP and PS is explicitly stated in the evidence passages, showing higher solubility in PP."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22906
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_PROC_Q003": {
+        "id": "Wu2021_PROC_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The effect of nucleation location on cell size and density is clearly described in the abstract, stating smaller size and higher density in the blend interfacial region."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22906
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_PROC_Q004": {
+        "id": "Wu2021_PROC_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The motivation for polymer blending is explicitly discussed in the introduction, highlighting弥补单聚合物系统的不足 and enhancing foaming ability."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22906
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_PROC_GAP001": {
+        "id": "Wu2021_PROC_GAP001",
+        "score": 0.3,
+        "reasons": [
+          "The effect of pressure on nucleation barriers and critical radii is not explicitly stated in the evidence passages, requiring inference which may be incorrect."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22906
+        },
+        "verdict": "fail"
+      },
+      "Wu2021_PROC_GAP002": {
+        "id": "Wu2021_PROC_GAP002",
+        "score": 0.5,
+        "reasons": [
+          "The comparison of nucleation number density between blend interfacial region and PP domain is somewhat specific but lacks explicit numerical values in the evidence passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22906
+        },
+        "verdict": "borderline"
+      },
+      "Wu2021_COMP_Q001": {
+        "id": "Wu2021_COMP_Q001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_COMP_Q002": {
+        "id": "Wu2021_COMP_Q002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_COMP_Q003": {
+        "id": "Wu2021_COMP_Q003",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_COMP_Q004": {
+        "id": "Wu2021_COMP_Q004",
+        "score": 0.5,
+        "reasons": [
+          "The deviation for PP at 373.15 K is not explicitly stated in the passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "borderline"
+      },
+      "Wu2021_COMP_Q005": {
+        "id": "Wu2021_COMP_Q005",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_COMP_GAP001": {
+        "id": "Wu2021_COMP_GAP001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_COMP_GAP002": {
+        "id": "Wu2021_COMP_GAP002",
+        "score": 0.5,
+        "reasons": [
+          "The exact nucleation number densities are not provided in the passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 22303
+        },
+        "verdict": "borderline"
+      },
+      "Wu2021_ONTO_Q001": {
+        "id": "Wu2021_ONTO_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., 'polymer blending' is mentioned as a process to create blends).",
+          "The question is specific, naming 'polymer blend' and 'polymer blending'."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23376
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_ONTO_Q002": {
+        "id": "Wu2021_ONTO_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the passages (e.g., 'molecular dynamic (MD) simulation method').",
+          "The question is specific, asking about the chain length of PP and PS."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23376
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_ONTO_Q003": {
+        "id": "Wu2021_ONTO_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages (e.g., 'interfacial tension' is a property related to bubble nucleation).",
+          "The question is specific, asking about the ontology class for 'interfacial tension'."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23376
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_ONTO_Q004": {
+        "id": "Wu2021_ONTO_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the passages (e.g., 'PP and PS blend system').",
+          "The question is specific, asking about Material entities."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23376
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_ONTO_Q005": {
+        "id": "Wu2021_ONTO_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages (e.g., 'low melt strength' is mentioned as a deficiency of single polymers).",
+          "The question is specific, asking about polypropylene's property."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23376
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_ONTO_GAP001": {
+        "id": "Wu2021_ONTO_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages (e.g., '3D-DFT approach' predicts nucleation number density).",
+          "The question is specific, asking about the relationship between a method and a property."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23376
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_ONTO_GAP002": {
+        "id": "Wu2021_ONTO_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages (e.g., 'critical radius' and 'nucleation free-energy barrier' are properties).",
+          "The question is specific, asking about ontology classes for these terms."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23376
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_STU_Q001": {
+        "id": "Wu2021_STU_Q001",
+        "score": 0.3,
+        "reasons": [
+          "The question asks about the process of producing a polymer blend, but the passages only mention 'polymer blending' as a method without specifying the exact process used."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 10,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23714
+        },
+        "verdict": "fail"
+      },
+      "Wu2021_STU_Q002": {
+        "id": "Wu2021_STU_Q002",
+        "score": 0.3,
+        "reasons": [
+          "The question asks about the method to determine chain length, but the passages mention MD simulation for constructing surfaces, not specifically determining chain length."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 10,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23714
+        },
+        "verdict": "fail"
+      },
+      "Wu2021_STU_Q003": {
+        "id": "Wu2021_STU_Q003",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 10,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23714
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_STU_Q004": {
+        "id": "Wu2021_STU_Q004",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 10,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23714
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_STU_Q005": {
+        "id": "Wu2021_STU_Q005",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 10,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23714
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_STU_GAP001": {
+        "id": "Wu2021_STU_GAP001",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 10,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23714
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_STU_GAP002": {
+        "id": "Wu2021_STU_GAP002",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 10,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 23714
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_PHD_Q001": {
+        "id": "Wu2021_PHD_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The question addresses a specific research gap in polymer blend foaming, which is clearly stated in the Introduction section of the evidence passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 24282
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_PHD_Q002": {
+        "id": "Wu2021_PHD_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The comparison between CO2 solubility in PP and PS domains is explicitly mentioned in the Conclusions section, making it answerable with high specificity."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 24282
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_PHD_Q003": {
+        "id": "Wu2021_PHD_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The effect of CO2 enrichment on interfacial tension is directly discussed in the Conclusions, providing a clear and specific answer."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 24282
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_PHD_Q004": {
+        "id": "Wu2021_PHD_Q004",
+        "score": 0.75,
+        "reasons": [
+          "Bubble rupture and coalescence are acknowledged as factors affecting experimental measurements, clearly stated in the Body section."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 24282
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_PHD_Q005": {
+        "id": "Wu2021_PHD_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The characteristics of bubbles nucleating in the blend interfacial region are explicitly detailed in the Abstract, providing a specific answer."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 24282
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_PHD_GAP001": {
+        "id": "Wu2021_PHD_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The comparison of nucleation number densities is provided with specific values in the Results and Discussion section, making it highly specific and answerable."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 24282
+        },
+        "verdict": "pass"
+      },
+      "Wu2021_PHD_GAP002": {
+        "id": "Wu2021_PHD_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The limitation regarding deviation between theoretical predictions and experimental measurements is clearly stated in the Results and Discussion section, with a specific acknowledgment of bubble rupture and coalescence."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 15,
+          "evidence_chars": 24282
+        },
+        "verdict": "pass"
+      }
+    },
+    "questions_to_refine": [
+      "Wu2021_SYNTH_Q001",
+      "Wu2021_SYNTH_GAP002",
+      "Wu2021_CHAR_Q004",
+      "Wu2021_CHAR_GAP001",
+      "Wu2021_CHAR_GAP002",
+      "Wu2021_PROC_GAP001",
+      "Wu2021_PROC_GAP002",
+      "Wu2021_COMP_Q004",
+      "Wu2021_COMP_GAP002",
+      "Wu2021_STU_Q001",
+      "Wu2021_STU_Q002"
+    ],
+    "n_total": 48,
+    "n_pass": 37,
+    "n_borderline": 3,
+    "n_fail": 8
+  },
+  "refined_questions": {
+    "SYNTH": [
+      {
+        "id": "Wu2021_SYNTH_Q001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "What method is described in the text as a simple, effective, and economical means for obtaining polymer blends with desired properties?",
+        "expected_answer": "Polymer blending",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question asked for a specific production process not detailed in the text, so it was revised to ask about the general method explicitly described as effective in the Introduction."
+      },
+      {
+        "id": "Wu2021_SYNTH_GAP002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "At what temperature were the calculated interfacial tension values for the PP-PP/CO2 system examined against experimental data?",
+        "expected_answer": "452.15 K",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "nucleation number density"
+          },
+          {
+            "role": "property",
+            "term": "temperature"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question incorrectly linked the temperature to the study of the foaming mechanism generally, whereas the text specifies this temperature only in the context of validating the calculated interfacial tension for the PP-PP/CO2 system."
+      }
+    ],
+    "CHAR": [
+      {
+        "id": "Wu2021_CHAR_Q004",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the reported deviation between the predicted values and experimental data for polypropylene (PP) at 453.15 K?",
+        "expected_answer": "The deviation was 3.49%.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "deviation from experimental data"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question specified an incorrect temperature (373.15 K) where no PP deviation was reported; the question was revised to 453.15 K where the text explicitly states a 3.49% deviation for PP-PP/CO2."
+      },
+      {
+        "id": "Wu2021_CHAR_GAP001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "COMPARATIVE",
+        "question": "How do the contact angles of bubbles nucleated in the PP and PS domains compare to those nucleated in the blend interfacial regions?",
+        "expected_answer": "The contact angles in the PP and PS domains are 118° and 108° respectively (both > 90°), whereas the contact angles in the blend interfacial regions are lower, specifically 85° for PS-PP/CO2 and 78° for PP-PS/CO2 (both < 90°).",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "contact angle"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Wu2021_CHAR_GAP002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What are the reported critical nucleation barriers and critical radii for bubbles in the PP-PP/CO2 and PS-PS/CO2 domains?",
+        "expected_answer": "For PP-PP/CO2, the critical nucleation barrier is 15.02 and the critical radius is 3.89 nm; for PS-PS/CO2, the barrier is 11.17 and the radius is 2.96 nm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "nucleation number density"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question asked for nucleation number density values not present in the text; the question was revised to ask for the explicitly stated critical nucleation barriers and radii values found in the evidence."
+      }
+    ],
+    "PROC": [
+      {
+        "id": "Wu2021_PROC_GAP001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the pressure affect the nucleation free-energy barriers and critical radii of bubbles in the PP/PS blend system?",
+        "expected_answer": "Both the nucleation free-energy barrier and the critical radius decrease as pressure increases, although the rate of decrease declines at high pressure due to the improving amplitude of local supersaturation.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "critical radii"
+          },
+          {
+            "role": "property",
+            "term": "free-energy barriers"
+          },
+          {
+            "role": "property",
+            "term": "local supersaturation"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Wu2021_PROC_GAP002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "COMPARATIVE",
+        "question": "How does the nucleation number density of bubbles in the PP/PS blend interfacial region compare to that in the pure PP domain at a given pressure?",
+        "expected_answer": "The nucleation number density in the PP/PS blend interfacial region can increase five to six orders of magnitude compared to the PP domain, which only reaches 3.25 x 10^6 cell/cm3 at a given pressure.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "nucleation number density"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The evidence passages explicitly provide the specific numerical values (3.25 × 10^6 cell/cm³ for PP and a five to six orders of magnitude increase for the blend interface) and the comparison logic, confirming the question is answerable based on the provided text."
+      }
+    ],
+    "COMP": [
+      {
+        "id": "Wu2021_COMP_Q004",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How does the deviation between theoretical predictions and experimental data for the interfacial tension of the PP-PP/CO2 system at 453.15 K compare to the deviation for the PS-PS/CO2 system at 373.15 K?",
+        "expected_answer": "The deviation for the PP-PP/CO2 system at 453.15 K is 3.49%, while the deviation for the PS-PS/CO2 system at 373.15 K is 2.535%.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "deviation from experimental data"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question referenced a temperature and property (PP at 373.15 K) not supported by the text; the revision corrects the temperature to 453.15 K and the property to interfacial tension, which are explicitly detailed in the evidence passages."
+      },
+      {
+        "id": "Wu2021_COMP_GAP002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How do the predicted nucleation free-energy barriers and critical radii of bubbles in the PP domain compare to those in the PP/PS blend interfacial region attached to the PS-rich phase?",
+        "expected_answer": "The nucleation free-energy barrier in the PP domain is 15.02 (units implied) with a critical radius of 3.89 nm, whereas in the PP/PS blend interfacial region attached to the PS-rich phase, the barrier is 2.53 and the critical radius is 1.57 nm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "nucleation number density"
+          },
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "individual",
+            "term": "polymer blend"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question asked for specific nucleation number density values that are not provided in the text; the revision shifts the focus to the explicitly stated free-energy barriers and critical radii found in the evidence passages."
+      }
+    ],
+    "STU": [
+      {
+        "id": "Wu2021_STU_Q001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "What method is described as a simple, effective, and economical means for obtaining materials with desired properties in polymer foaming?",
+        "expected_answer": "Polymer blending",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "polymer blend"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          },
+          {
+            "role": "class",
+            "term": "polymer blending"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question was too vague as the text does not detail the specific industrial process steps, but it explicitly describes 'polymer blending' as the method used to obtain materials with desired properties."
+      },
+      {
+        "id": "Wu2021_STU_Q002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which theoretical approach was constructed to investigate the foaming mechanism of the PP/PS/CO2 blend system?",
+        "expected_answer": "Three-dimensional density functional theory (3D-DFT)",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "polypropylene"
+          },
+          {
+            "role": "property",
+            "term": "chain length"
+          },
+          {
+            "role": "class",
+            "term": "molecular dynamic (MD) simulation"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question incorrectly assumed a method for determining chain length, whereas the text states that a three-dimensional density functional theory (3D-DFT) approach was constructed to investigate the foaming mechanism."
+      }
+    ]
+  },
+  "evaluation": {
+    "status": "reference_free",
+    "schema_version": "v2.1",
+    "paper_id": "Wu2021",
+    "n_questions": 48,
+    "overall_score": 0.703,
+    "weights": {
+      "coverage": 0.38,
+      "question_faithfulness": 0.44,
+      "diversity": 0.12,
+      "triplifiability": 0.06
+    },
+    "families": {
+      "coverage": {
+        "score": 0.502,
+        "concepts": {
+          "total": 80,
+          "referenced": 46,
+          "ratio": 0.575
+        },
+        "properties": {
+          "total": 28,
+          "referenced": 16,
+          "ratio": 0.571
+        },
+        "relations": {
+          "total": 60,
+          "referenced": 13,
+          "ratio": 0.217
+        },
+        "uncovered_concept_examples": [
+          "amorphous pp surface",
+          "amorphous ps surface",
+          "bubble number density",
+          "cartesian coordinate",
+          "cell density",
+          "chain conformation",
+          "chain connectivity",
+          "co2 diffusion coefficient",
+          "crystallization rate",
+          "density profile"
+        ]
+      },
+      "question_faithfulness": {
+        "score": 1.0,
+        "mean_cosine": 0.816,
+        "min_cosine": 0.709,
+        "n_well_faithful": 48,
+        "n_weak": 0,
+        "n_off_paper": 0,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        },
+        "weakest_example": {
+          "question_id": "Wu2021_SYNTH_Q001",
+          "question": "What method is described in the text as a simple, effective, and economical means for obtaining polymer blends with desired properties?",
+          "max_cosine": 0.7088108062744141
+        }
+      },
+      "diversity": {
+        "score": 0.291,
+        "mean_pairwise_cos": 0.709,
+        "max_pairwise_cos": 1.0,
+        "n_near_duplicates": 30,
+        "dup_threshold": 0.92
+      },
+      "triplifiability": {
+        "score": 0.625,
+        "pct_full_triples": 0.271,
+        "pct_partial": 0.708
+      }
+    },
+    "diagnostics": {
+      "answer_verifiability": {
+        "mean_cosine": 0.726,
+        "min_cosine": 0.506,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        }
+      },
+      "specificity": {
+        "score": 0.74,
+        "avg_question_chars": 125.8,
+        "pct_with_numeric_value": 0.292,
+        "pct_with_unit": 0.208,
+        "pct_referencing_concept": 0.979
+      }
+    },
+    "reproducibility": {
+      "pipeline_version": "v2.1",
+      "models": {
+        "metadata_extractor": "qwen3.5:27b",
+        "iterative_extractor": "qwen3.6:35b-a3b",
+        "cq_generator": "gemma4:31b",
+        "cq_validator": "deepseek-r1:32b",
+        "cq_refiner": "qwen3.5:35b",
+        "_embedding_model": "BAAI/bge-small-en-v1.5",
+        "_embedding_backend": "local (sentence-transformers)",
+        "_embedding_dim": 384,
+        "_note": "Three distinct LLM families (Qwen / Gemma / DeepSeek) across stages for cross-family diversity. Embeddings via LOCAL sentence-transformers (deterministic, no network) because the shared Ollama bge-m3 endpoint is unreliable from inside long-running pipeline processes (see history v1.3). All LLM calls use think=false + format=json on the client.",
+        "_history": [
+          "v0: cq_generator=llama4:scout -> failed to produce JSON output; switched to qwen3:32b + format=json.",
+          "v0.5: all stages on qwen3:32b/deepseek-r1:32b; embedder local BAAI/bge-small-en-v1.5.",
+          "v1.0: per-stage model selection, bge-m3 via Ollama, refiner added, evaluator reduced to 5 reference-free families.",
+          "v1.1: reverted embedder to local BAAI/bge-small-en-v1.5 because the shared Ollama bge-m3 endpoint was returning 500s. Added per-question evidence retrieval in validator + refiner to fix a truncation bug (was capping evidence at 7000 chars regardless of how many passages were available).",
+          "v1.2: switched embedder back to bge-m3 via Ollama after a probe showed the endpoint was responsive when called with proper exponential-backoff retry. Added 1s process-wide throttling between embed calls.",
+          "v1.3 (this version): reverted to local BAAI/bge-small-en-v1.5. The bge-m3 Ollama path stays healthy in isolation (standalone curl + Python) but the long-running pipeline process gets sustained 500s in stages 5-6, even with exponential backoff, 1s throttling, AND Connection: close to force fresh TCP per call. Most likely cause is the shared upstream evicting bge-m3 from memory while the heavy LLMs (gemma4:31b, deepseek-r1:32b) are loaded, with the eviction window outlasting our 230s retry budget. Local sentence-transformers is slightly lower quality (384-dim vs 1024) but always finishes."
+        ]
+      },
+      "validator_pass_threshold_per_question": null,
+      "coverage_gap_pass": {
+        "enabled": true,
+        "max_gap_concepts": 8
+      },
+      "rolling_state_caps": {
+        "concepts": 80,
+        "relations": 60,
+        "properties": 60,
+        "findings": 40
+      },
+      "embedder_dim": 384
+    }
+  }
+}

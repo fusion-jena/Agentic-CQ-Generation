@@ -1,0 +1,49 @@
+{
+  "_comment": "Validation checks for the v2 (chunked + RAG) persona pipeline. Mirrors v1 checks but adds concept-usage and cross-persona dedup checks since v2 generates from structured knowledge rather than raw paper text.",
+
+  "phase_1": {
+    "persona_coverage":   true,
+    "question_count":     true,
+    "answerability":      true,
+    "specificity":        true,
+    "section_validity":   true
+  },
+
+  "phase_2": {
+    "concept_usage":      true,
+    "archetype_balance":  true,
+    "redundancy":         true
+  },
+
+  "phase_3": {
+    "bloom_distribution":  false,
+    "kg_triplifiability":  false
+  },
+
+  "chunking": {
+    "chunk_chars":   3500,
+    "chunk_overlap":  200
+  },
+
+  "retrieval": {
+    "top_k_concepts":       20,
+    "passages_per_concept":  2
+  },
+
+  "rolling_state_caps": {
+    "concepts":   80,
+    "relations":  60,
+    "properties": 60,
+    "findings":   40
+  },
+
+  "coverage_gap_pass": {
+    "enabled":          true,
+    "max_gap_concepts": 8
+  },
+
+  "thresholds": {
+    "pass_score":  0.7,
+    "max_retries": 1
+  }
+}

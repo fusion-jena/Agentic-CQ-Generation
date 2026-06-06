@@ -1,0 +1,609 @@
+{
+  "archetype": "GAP_OR_LIMITATION",
+  "pipeline_step": "cross_paper_generalization",
+  "pipeline_version": "v2",
+  "step_version": "step2_v1.0",
+  "generalize_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "generalize_prompt_v1.0",
+    "source_dir": "data/papers/v2/dedup/"
+  },
+  "arch_stats": {
+    "n_input_cqs": 25,
+    "n_gen_cqs": 20,
+    "n_papers": 14,
+    "wall_time": "1m 23s 476ms"
+  },
+  "generalized_cqs": [
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_001",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What limitations are acknowledged regarding the use of specific polymers in blends for producing nanofoams?",
+      "abstraction_reasoning": "PATTERN: Limitations in polymer blend usage | ENTITY MAPPING: PMMA -> polymer, SAN/MMA-co-EA -> copolymer blend | WHY BROAD: Covers multiple papers discussing different polymers and their limitations.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2013",
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_038",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_PHD_GAP002",
+          "question": "What limitation is identified regarding the use of PMMA in blends with SAN for the production of nanofoams?",
+          "expected_answer": "PMMA has poor thermal stability, which can lead to partial degradation during blend processing and potentially affect the foaming performance.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Costeux2014_DEDUP_038",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PHD_Q004",
+          "question": "What limitation regarding porosity was observed in the dense foams produced by Nawaby et al. using ABS, and how does this compare to the porosity achieved by Costeux et al. using SAN/MMA-co-EA blends?",
+          "expected_answer": "Nawaby et al. observed that foams produced using ABS remained dense with a porosity of less than 25%, whereas Costeux et al. achieved porosities between 60% and 69% using SAN blended with MMA-co-EA.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_002",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What specific rheological properties of polymer + blowing agent systems are lacking both instrumental techniques and theoretical models?",
+      "abstraction_reasoning": "PATTERN: Rheological property gaps | ENTITY MAPPING: CO2 -> blowing agent, biaxial extensional viscoelasticity -> rheological property | WHY BROAD: Addresses a common issue across multiple studies on polymer foaming.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_042",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PHD_Q005",
+          "question": "What specific rheological property of the polymer + CO2 system is currently lacking both an instrumental technique and a theoretical model for assessment?",
+          "expected_answer": "The biaxial extensional viscoelasticity of the polymer + CO2 system at large deformations in the non-linear regime at high pressures.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Modeling"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_003",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What limitations are identified regarding the scalability of batch foaming processes for producing nanocellular foams?",
+      "abstraction_reasoning": "PATTERN: Scalability issues in foaming | ENTITY MAPPING: batch foaming process -> production method, nanocellular foams -> foam type | WHY BROAD: Multiple papers discuss challenges in scaling up production.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_039",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PHD_GAP001",
+          "question": "What limitation does the paper acknowledge regarding the scalability of the batch foaming process used to produce nanocellular foams?",
+          "expected_answer": "The paper states that the lack of scalability of the widely used solid-state batch foaming process is one of the most substantial remaining challenges for the commercial manufacture of nanocellular foams.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_004",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What knowledge gaps exist regarding the use of nanometric fillers as nucleating agents in polymer foaming?",
+      "abstraction_reasoning": "PATTERN: Nanofiller nucleation mechanisms | ENTITY MAPPING: nanometric fillers -> nucleating agent, polymer + CO2 system -> material system | WHY BROAD: Addresses a common research gap across multiple studies.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_043",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PHD_GAP001",
+          "question": "What specific knowledge gaps does the paper identify regarding the use of nanometric fillers as nucleating agents in polymer foaming?",
+          "expected_answer": "The paper identifies that a profound understanding is missing regarding the nucleating mechanisms, the interaction among particles and the polymer in the presence of the blowing agent, concurrent nucleation phenomena of polymer crystals or other phases, and how particle shape, size, and surface treatments affect nucleation. Additionally, there is disagreement on the efficiency of nanofillers, with the number of nucleated cells often orders of magnitude less than expected due to dispersion problems and specific polymer/nanoparticle interactions.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_005",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What limitations are acknowledged regarding the predictive accuracy of models for the glass transition temperature (Tg) in polymer-gas systems?",
+      "abstraction_reasoning": "PATTERN: Model accuracy issues | ENTITY MAPPING: PMMA-CO2 -> polymer-gas system, Chow's model -> theoretical model | WHY BROAD: Multiple papers discuss discrepancies between model predictions and experimental results.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_036",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PHD_Q001",
+          "question": "What limitation is acknowledged regarding the predictive accuracy of Chow's model for the glass transition temperature of the PMMA-CO2 system?",
+          "expected_answer": "Chow's model predicts the general decreasing trend of Tg, but it predicts the values poorly, with the predictions always being lower than the experimental data.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_041",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PHD_GAP002",
+          "question": "What limitation does the paper acknowledge regarding the current understanding of the physical mechanism for negative activation energy of diffusion in the PMMA-CO2 system?",
+          "expected_answer": "The paper acknowledges that the physical mechanism for negative activation energy of diffusion in the PMMA-CO2 system is currently under investigation, as previously proposed mechanisms for other systems (such as complex defects in Ag-Ni or temperature-dependent swelling in pHEMA-based hydrogels) are not applicable to this polymer-gas system.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_006",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What physical mechanisms remain unknown regarding the negative activation energy of diffusion in polymer-gas systems?",
+      "abstraction_reasoning": "PATTERN: Diffusion mechanism gaps | ENTITY MAPPING: PMMA-CO2 -> polymer-gas system, negative activation energy -> diffusion property | WHY BROAD: Addresses a common research gap across multiple studies.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_039",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PHD_Q005",
+          "question": "What remains unknown regarding the physical mechanism of the negative activation energy of diffusion observed in the PMMA-CO2 system?",
+          "expected_answer": "The authors state that the physical mechanism for the negative activation energy of diffusion in the PMMA-CO2 system is currently under investigation, as mechanisms proposed for other systems (like Ag in Ni or pHEMA-based hydrogels) are not applicable.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_041",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PHD_GAP002",
+          "question": "What limitation does the paper acknowledge regarding the current understanding of the physical mechanism for negative activation energy of diffusion in the PMMA-CO2 system?",
+          "expected_answer": "The paper acknowledges that the physical mechanism for negative activation energy of diffusion in the PMMA-CO2 system is currently under investigation, as previously proposed mechanisms for other systems (such as complex defects in Ag-Ni or temperature-dependent swelling in pHEMA-based hydrogels) are not applicable to this polymer-gas system.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_007",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What limitations are identified regarding the analysis of foam structures with SEM for foams produced under specific depressurization conditions?",
+      "abstraction_reasoning": "PATTERN: SEM analysis limitations | ENTITY MAPPING: SMMA -> polymer, SEM -> characterization technique | WHY BROAD: Multiple papers discuss challenges in analyzing foam structures.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_031",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_PHD_Q004",
+          "question": "What limitation is acknowledged regarding the SEM analysis of SMMA foams produced with depressurization times exceeding 230 seconds?",
+          "expected_answer": "Foams produced with depressurization times above 230 s have cells that are too large to be analyzed with SEM, even at the minimum magnification.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Jacobs2007_DEDUP_034",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_PHD_GAP002",
+          "question": "What limitation is acknowledged regarding the statistical significance of the morphology analysis for foams produced with slower depressurization rates?",
+          "expected_answer": "The authors state that due to the limited number of analyzed cells in foams produced with slower depressurization rates, the results for average area and the homogeneity number have less statistical meaning.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_008",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What quantitative research gaps exist regarding the relationship between phase morphology and foaming behavior in polymer blends?",
+      "abstraction_reasoning": "PATTERN: Phase morphology-foaming relationship | ENTITY MAPPING: phase domain size -> morphological feature, foamability -> foaming property | WHY BROAD: Addresses a common gap across multiple studies.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_032",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_PHD_Q004",
+          "question": "What quantitative research gap regarding phase morphology does this paper aim to address compared to previous qualitative understandings?",
+          "expected_answer": "While it is qualitatively accepted that phase morphology determines foaming behavior, it was not quantitatively clear how the phase domain size specifically affects the foamability and the foaming window of a polymer blend.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_009",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What limitations are acknowledged regarding the previous mechanisms of nanocellular foaming based on diblock copolymers?",
+      "abstraction_reasoning": "PATTERN: Foaming mechanism gaps | ENTITY MAPPING: diblock copolymers -> polymer structure, CO2 -> blowing agent | WHY BROAD: Multiple papers discuss issues with existing foaming mechanisms.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_037",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PHD_Q004",
+          "question": "What limitation does the paper identify regarding the previous mechanism of nanocellular foaming based on diblock copolymers?",
+          "expected_answer": "The previous mechanism relied only on the difference in affinity of the polymers for the foaming agent (CO2) and missed the important factor of viscoelasticity differences between the disperse domain and the matrix.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_010",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What limitations are identified regarding the use of self-assembled block copolymers for industrial production of nanocellular foams?",
+      "abstraction_reasoning": "PATTERN: Industrial application challenges | ENTITY MAPPING: polystyrene-block-poly(perfluorooctylethyl methacrylate) -> block copolymer, nanocellular foams -> product type | WHY BROAD: Addresses a common issue across multiple studies.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_039",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PHD_GAP001",
+          "question": "What limitation does the paper acknowledge regarding the use of self-assembled block copolymers, such as polystyrene-block-poly(perfluorooctylethyl methacrylate), for the industrial production of nanocellular foams?",
+          "expected_answer": "The authors state that the morphology of block copolymers is very sensitive to molecular weight distribution, surface energy between substrates and polymer, and film thickness, making it very difficult to use for creating nanocellular foams as industrial products.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_011",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What limitations are noted regarding the foaming of specific polymer blends compared to others?",
+      "abstraction_reasoning": "PATTERN: Blend foaming limitations | ENTITY MAPPING: PS+SBM -> polymer blend, PMMA+MAM -> polymer blend | WHY BROAD: Multiple papers discuss comparative limitations in blend foaming.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_042",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PHD_Q005",
+          "question": "What limitation is noted regarding the foaming of PS+SBM blends compared to PMMA+MAM blends?",
+          "expected_answer": "Foaming of PS+SBM blends is only possible above 60 °C and shows no remarkable improvements in cell size compared to neat PS foams, due to a weak CO2 solubility difference.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_012",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What limitations are acknowledged regarding the experimental determination of depressed glass transition temperatures (Tg) in polymer-gas systems?",
+      "abstraction_reasoning": "PATTERN: Tg measurement challenges | ENTITY MAPPING: Hwang's model -> theoretical model, magnetic suspension balances -> measurement technique | WHY BROAD: Addresses a common issue across multiple studies.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_039",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PHD_Q004",
+          "question": "What limitation regarding the experimental determination of the depressed glass transition temperature (Tg) is acknowledged in the study, and what alternative method is cited as necessary for direct measurement?",
+          "expected_answer": "The study acknowledges that the depressed Tg derived from Hwang's model is only an estimation, and states that direct measurement can only be performed using magnetic suspension balances.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_013",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What limitations does the paper acknowledge regarding the predictive capabilities of machine learning models in relation to foam characteristics?",
+      "abstraction_reasoning": "PATTERN: ML model limitations | ENTITY MAPPING: trained machine learning model -> predictive tool, cellular structures -> foam characteristic | WHY BROAD: Multiple papers discuss issues with model predictions.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_027",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PHD_Q001",
+          "question": "What limitation does the paper acknowledge regarding the predictive capabilities of the trained machine learning model in relation to foam characteristics?",
+          "expected_answer": "The authors state that while the ML model can suggest new low-density foams, it cannot predict cellular structures.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Shah2025_DEDUP_032",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PHD_GAP002",
+          "question": "What limitation does the paper acknowledge regarding the predictive capabilities of the trained machine learning model in relation to foam morphology?",
+          "expected_answer": "The authors explicitly state that while the trained ML model can be used to suggest new low-density foams, the model cannot predict cellular structures (morphology).",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_014",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What limitations are identified regarding the pressure range of CO2 sorption measurements in glassy polymers?",
+      "abstraction_reasoning": "PATTERN: Sorption measurement gaps | ENTITY MAPPING: CO2 -> blowing agent, Henry law dissolution model -> theoretical framework | WHY BROAD: Addresses a common gap across multiple studies.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_030",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PHD_Q004",
+          "question": "What limitation of existing literature regarding the pressure range of CO2 sorption measurements in glassy polymers does this study address?",
+          "expected_answer": "The authors note that many previously reported CO2 sorption isotherms for glassy polymers were measured in a limited pressure range between 0 and up to 30 atm (or 100 atm), whereas this study extends the range from 20 to 340 atm to investigate the applicability of the Henry law dissolution model above 30 atm.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_015",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What physical phenomena are acknowledged as reasons for deviations between theoretical predictions and experimental measurements of nucleation number densities?",
+      "abstraction_reasoning": "PATTERN: Nucleation prediction discrepancies | ENTITY MAPPING: bubble rupture -> physical phenomenon, coalescence -> physical phenomenon | WHY BROAD: Multiple papers discuss these issues.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_034",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_PHD_Q004",
+          "question": "What physical phenomena in polymer foaming experiments are acknowledged as reasons for the deviation between the theoretical predictions and experimental measurements of nucleation number densities?",
+          "expected_answer": "The authors consider that bubble rupture and coalescence in polymer foaming experiments contribute to the deviation between predicted values and experimental data.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Wu2021_DEDUP_037",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_PHD_GAP002",
+          "question": "What limitation does the paper acknowledge regarding the comparison between the theoretical model's predictions and experimental measurements of bubble nucleation?",
+          "expected_answer": "The authors acknowledge that the deviation between theoretical predictions and experimental measurements is within one order of magnitude, noting that this is reasonable because bubble rupture and coalescence occur in actual polymer foaming experiments.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_016",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What is identified as the primary current limitation in the modeling of the polymer foaming process?",
+      "abstraction_reasoning": "PATTERN: Modeling limitations | ENTITY MAPPING: polymer foaming process -> process type, bubble nucleation -> key phenomenon | WHY NARROW: Specific to one paper discussing modeling gaps.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_038",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PHD_Q001",
+          "question": "What is identified as the primary current limitation in the modeling of the polymer foaming process?",
+          "expected_answer": "The main actual limitation is the current lack of a full understanding of bubble nucleation, as nucleation drives the whole foam evolution.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Modeling"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_017",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What specific relationship between the initial copolymer structure and the resulting foam is identified as still being under study?",
+      "abstraction_reasoning": "PATTERN: Structure-foam relationship | ENTITY MAPPING: PS-b-PFDA -> copolymer, foam -> product | WHY NARROW: Specific to one paper discussing structural relationships.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_042",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PHD_Q004",
+          "question": "What specific relationship between the initial copolymer structure and the resulting foam is identified as still being under study?",
+          "expected_answer": "The authors state that a direct relation between the initial structure, specifically in a PS-b-PFDA copolymer, and the resulting foam is still under study.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_018",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What future research directions are proposed regarding the relationship between initial copolymer nanostructures and the final foam morphology?",
+      "abstraction_reasoning": "PATTERN: Research direction gaps | ENTITY MAPPING: PS-b-PFDA -> copolymer, unconventional foams -> product type | WHY NARROW: Specific to one paper discussing future research.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_044",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PHD_GAP002",
+          "question": "What future research directions are proposed regarding the relationship between initial copolymer nanostructures and the final foam morphology?",
+          "expected_answer": "The authors identify two points still under study: establishing a direct relation between the initial structure (e.g., in a PS-b-PFDA copolymer) and the resulting foam, and the generation of unconventional foams, such as lamellar foams, under specific conditions (low temperature of 40°C and MAM content > 50 wt%).",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_019",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What technical limitation did the authors acknowledge regarding the high-pressure DSC measurements of the polymer components?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_034",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PHD_Q005",
+          "question": "What technical limitation did the authors acknowledge regarding the high-pressure DSC measurements of the polymer components?",
+          "expected_answer": "Due to technical difficulties, it was not possible to measure SAN at 35 bar (because of its lower Tg) and the other materials at 40 bar, which was the actual CO2 mass uptake pressure.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_GAP_OR_LIMITATION_020",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "generalized_question": "What limitation does the paper acknowledge regarding the use of high-temperature viscosity measurements to represent the behavior of polymer/CO2 mixtures during foaming?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_036",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_PHD_Q003",
+          "question": "What limitation does the paper acknowledge regarding the use of high-temperature viscosity measurements to represent the behavior of polymer/CO2 mixtures during foaming?",
+          "expected_answer": "The authors acknowledge that high temperature viscosity measurements are not a direct representation of the low temperature viscosity of polymer/CO2 mixtures.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "reverse_index": {
+    "Costeux2013_DEDUP_038": "GEN_GAP_OR_LIMITATION_001",
+    "Costeux2014_DEDUP_038": "GEN_GAP_OR_LIMITATION_001",
+    "Di Maio2018_DEDUP_042": "GEN_GAP_OR_LIMITATION_002",
+    "Costeux2014_DEDUP_039": "GEN_GAP_OR_LIMITATION_003",
+    "Di Maio2018_DEDUP_043": "GEN_GAP_OR_LIMITATION_004",
+    "Guo2015_DEDUP_036": "GEN_GAP_OR_LIMITATION_005",
+    "Guo2015_DEDUP_041": "GEN_GAP_OR_LIMITATION_006",
+    "Guo2015_DEDUP_039": "GEN_GAP_OR_LIMITATION_006",
+    "Jacobs2007_DEDUP_031": "GEN_GAP_OR_LIMITATION_007",
+    "Jacobs2007_DEDUP_034": "GEN_GAP_OR_LIMITATION_007",
+    "Liu2019_DEDUP_032": "GEN_GAP_OR_LIMITATION_008",
+    "Otsuka2008_DEDUP_037": "GEN_GAP_OR_LIMITATION_009",
+    "Otsuka2008_DEDUP_039": "GEN_GAP_OR_LIMITATION_010",
+    "Reglero2011_DEDUP_042": "GEN_GAP_OR_LIMITATION_011",
+    "Ruiz2011_DEDUP_039": "GEN_GAP_OR_LIMITATION_012",
+    "Shah2025_DEDUP_027": "GEN_GAP_OR_LIMITATION_013",
+    "Shah2025_DEDUP_032": "GEN_GAP_OR_LIMITATION_013",
+    "Shieh2002_DEDUP_030": "GEN_GAP_OR_LIMITATION_014",
+    "Wu2021_DEDUP_034": "GEN_GAP_OR_LIMITATION_015",
+    "Wu2021_DEDUP_037": "GEN_GAP_OR_LIMITATION_015",
+    "Di Maio2018_DEDUP_038": "GEN_GAP_OR_LIMITATION_016",
+    "Dumon2012_DEDUP_042": "GEN_GAP_OR_LIMITATION_017",
+    "Dumon2012_DEDUP_044": "GEN_GAP_OR_LIMITATION_018",
+    "Bärwinkel2016_DEDUP_034": "GEN_GAP_OR_LIMITATION_019",
+    "Costeux2013_DEDUP_036": "GEN_GAP_OR_LIMITATION_020"
+  }
+}

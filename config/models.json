@@ -1,0 +1,41 @@
+{
+  "_comment": "Central model config for the v2.1 pipeline. Change any value here to update the whole pipeline — no code edits needed.",
+
+  "paper_persona_v2_pipeline": {
+    "metadata_extractor":  "qwen3.5:27b",
+    "iterative_extractor": "qwen3.6:35b-a3b",
+    "cq_generator":        "gemma4:31b",
+    "cq_validator":        "deepseek-r1:32b",
+    "cq_refiner":          "qwen3.5:35b",
+
+    "_embedding_model":    "BAAI/bge-small-en-v1.5",
+    "_embedding_backend":  "local (sentence-transformers)",
+    "_embedding_dim":      384,
+
+    "_note": "Three distinct LLM families (Qwen / Gemma / DeepSeek) across stages for cross-family diversity — reduces self-preference in LLM-as-judge evaluation. Embeddings run locally via sentence-transformers (deterministic, no network dependency). All LLM calls use think=false + format=json."
+  },
+
+  "cq_dedup_pipeline": {
+    "dedup_agent": "deepseek-r1:32b",
+    "_think":      true,
+    "_note":       "Step 1 — intra-paper deduplication. think=True so chain-of-thought merge reasoning is captured in the output. One LLM call per paper (~20-35 CQs per call)."
+  },
+
+  "cq_generalize_pipeline": {
+    "generalizer_agent": "deepseek-r1:32b",
+    "_think":            true,
+    "_note":             "Step 2 — cross-paper generalisation. think=True for careful cross-paper semantic grouping and domain-level abstraction. One LLM call per archetype (10 calls total)."
+  },
+
+  "cq_validate_pipeline": {
+    "validator_agent": "qwen3.6:35b-a3b",
+    "embed_model":     "BAAI/bge-small-en-v1.5",
+    "_think":          false,
+    "_note":           "Step 3 — RAG-based answer validation. think=False for speed — up to 80+ LLM calls (one per original CQ). Reuses FAISS indexes from v2/index/. Embed model must match the one used to build those indexes."
+  },
+
+  "cq_consolidation_pipeline": {
+    "model":  "llama4:128x17b",
+    "_note":  "Step 4 — cross-archetype consolidation + ontology schema extraction. N+1 LLM calls (one per archetype for Stage A, one for Stage B). Schema-constrained decoding via Pydantic v2."
+  }
+}

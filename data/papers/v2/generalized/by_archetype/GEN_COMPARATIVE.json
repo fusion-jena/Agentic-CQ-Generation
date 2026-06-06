@@ -1,0 +1,1167 @@
+{
+  "archetype": "COMPARATIVE",
+  "pipeline_step": "cross_paper_generalization",
+  "pipeline_version": "v2",
+  "step_version": "step2_v1.0",
+  "generalize_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "generalize_prompt_v1.0",
+    "source_dir": "data/papers/v2/dedup/"
+  },
+  "arch_stats": {
+    "n_input_cqs": 44,
+    "n_gen_cqs": 44,
+    "n_papers": 14,
+    "wall_time": "3m 25s 790ms"
+  },
+  "generalized_cqs": [
+    {
+      "gen_id": "GEN_COMPARATIVE_001",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "generalized_question": "How does the CO2-induced reduction in glass transition temperature (Tg) of a polymer compare to that of another polymer at the same pressure?",
+      "abstraction_reasoning": "PATTERN: How does X affect Y compared to Z? | ENTITY MAPPING: neat PPE -> polymer, polystyrene (PS) -> polymer | WHY BROAD: This pattern is common across studies comparing different polymers' responses to CO2.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_014",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PROC_Q005",
+          "question": "How does the CO2-induced reduction in glass transition temperature (Tg) of neat PPE compare to the reported reduction of polystyrene (PS) at 40 bar?",
+          "expected_answer": "The Tg of neat PPE is reduced by 24 °C at 40 bar, while the Tg of PS is reported to decrease by around 30 °C at the same pressure.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_002",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the effect of Janus particles on the morphology of a polymer blend compare to that of neat (uncompatibilized) blends?",
+      "abstraction_reasoning": "PATTERN: How does X affect Y compared to Z? | ENTITY MAPPING: PPE/SAN blends -> polymer blend, Janus particles -> additive | WHY BROAD: This question is about the impact of additives on polymer blend morphology.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_035",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PHD_GAP002",
+          "question": "How does the effect of Janus particles on the morphology of PPE/SAN blends compare to that of neat (uncompatibilized) blends as reported in the results?",
+          "expected_answer": "Janus particles result in finer morphologies with significantly reduced PPE droplet diameters (down to ~300 nm) and more homogeneous distributions compared to the irregular-shaped domains seen in neat blends.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_003",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the CO2 mass uptake of a polymer blend compare to that of another polymer blend?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PPE/SAN blends -> polymer blend, Janus particles -> additive | WHY BROAD: This is about comparing different polymer blends' CO2 uptake.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_021",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_COMP_GAP002",
+          "question": "How does the carbon dioxide (CO2) mass uptake of PPE/SAN blends with 1-2 wt% Janus particles compare to those with 5-10 wt% Janus particles?",
+          "expected_answer": "Blends with 1-2 wt% JPs exhibit higher CO2 mass uptake due to stress concentration and the formation of microcrazes/cracks that increase available surface area, whereas blends with 5-10 wt% JPs show lower uptake because the full coverage of PPE domains (raspberry morphology) acts as a barrier layer.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_004",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the foam porosity of a pure polymer compare to that of an acrylic polymer?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: pure SAN -> polymer, acrylic polymers -> polymer | WHY BROAD: This is about comparing different polymers' foaming properties.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_010",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_CHAR_Q003",
+          "question": "How does the foam porosity of pure SAN foams compare to that of acrylic polymers?",
+          "expected_answer": "The foam porosity for pure SAN foams is relatively low, not exceeding 70%, while it is close to 80% for the acrylic polymers.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_005",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "generalized_question": "How does the cell density of a polymer blend compare to that of pure polymer when produced at the same porosity?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: SAN28/MMA-EA9 (90/10 wt%) -> polymer blend, pure SAN28 -> polymer | WHY BROAD: This is about comparing cell density in blends vs. pure polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_015",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_PROC_Q004",
+          "question": "How does the cell density of the SAN28/MMA-EA9 (90/10 wt%) blend compare to that of pure SAN28 when produced at the same porosity?",
+          "expected_answer": "The addition of 10 wt% of acrylic polymer to SAN28 produced 100 times more cells than SAN28 alone at the same porosity.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_006",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the zero-shear viscosity of a polymer blend compare to the viscosity predicted by a mixing rule?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: MMA-EA9/SAN28 50/50 -> polymer blend, logarithmic mixing rule -> model | WHY BROAD: This is about comparing experimental vs. predicted viscosities.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_020",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_COMP_Q003",
+          "question": "How does the zero-shear viscosity of the MMA-EA9/SAN28 50/50 blend compare to the viscosity predicted by the logarithmic mixing rule?",
+          "expected_answer": "The viscosity of the blend predicted using the logarithmic mixing rule is approximately close to the experimental blend data.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_007",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the relationship between CO2 solubility and cell density in polymer blends compare to trends observed in previous studies?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: SAN-acrylic blends -> polymer blend, acrylic polymers -> polymer | WHY BROAD: This is about comparing current findings with prior research on CO2 solubility and cell density.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_034",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_PHD_Q001",
+          "question": "How does the relationship between CO2 solubility and cell density in SAN-acrylic blends compare to the trends observed in previous studies on acrylic polymers?",
+          "expected_answer": "Contrary to previous studies on acrylic polymers, which showed that increased CO2 solubility leads to smaller cells and higher nucleation rates, the SAN-acrylic blends showed that blends with lower CO2 solubility yielded higher cell density nanofoams.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_008",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the cell size and distribution of foams from styrenic-acrylic blends compare to those from individual polymers?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: styrenic-acrylic blends -> polymer blend, individual polymers -> polymer | WHY BROAD: This is about comparing foam properties of blends vs. individual polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_037",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_PHD_GAP001",
+          "question": "How does the cell size and cell size distribution of foams produced from styrenic-acrylic blends compare to those produced from the individual polymers?",
+          "expected_answer": "The addition of poly(ethyl methacrylate) or poly(methyl methacrylate-co-ethyl acrylate) to styrene-acrylonitrile copolymers results in foams with smaller cell size and a narrower cell size distribution compared to the individual polymers.",
+          "persona_code": "PHD",
+          "bloom_level": "analysis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_009",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the cell size of a polymer compare to that of another polymer when produced under similar conditions?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PEMA -> polymer, MMA-co-EMA copolymer -> polymer | WHY BROAD: This is about comparing different polymers' cell sizes.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_012",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_CHAR_GAP002",
+          "question": "How does the cell size of PEMA foams compare to that of MMA-co-EMA copolymer foams when produced under similar conditions?",
+          "expected_answer": "PEMA produced foams with 345 nm cells, whereas MMA-co-EMA copolymers produced foams with 80 nm cells.",
+          "persona_code": "CHAR",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_010",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the effect of carbon dioxide sorption on glass transition temperature differ between amorphous and semi-crystalline polymers?",
+      "abstraction_reasoning": "PATTERN: How does X affect Y compared to Z? | ENTITY MAPPING: amorphous polymers -> polymer type, semi-crystalline polymers -> polymer type | WHY BROAD: This is about comparing CO2 effects on different polymer types.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_040",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PHD_Q003",
+          "question": "How does the effect of carbon dioxide sorption on the glass transition temperature differ between amorphous polymers and semi-crystalline polymers?",
+          "expected_answer": "In amorphous polymers, carbon dioxide sorption simply lowers the glass transition temperature (Tg), whereas in semi-crystalline polymers, it expands the effective processing window between Tg and Tc/Tm.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_011",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the CO2-philicity of fluoro-based polymers compare to that of PMMA-based systems?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PS-PFDA -> polymer, PMMA-based systems -> polymer | WHY BROAD: This is about comparing different polymers' CO2 uptake.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_010",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_CHAR_Q004",
+          "question": "How does the CO2-philicity of fluoro-based polymers (e.g., PS-PFDA) compare to that of PMMA-based systems?",
+          "expected_answer": "Fluoro based polymers (PS-PFDA) are the most CO2-philic polymers in the list, while PMMA and PMMA-based copolymers are among the best CO2-philic systems compared to neat PS or polyolefins.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_012",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "generalized_question": "How does the CO2 weight gain of a polymer blend compare to that of another polymer blend at a given temperature?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PMMA+MAM -> polymer blend, PS+SBM -> polymer blend | WHY BROAD: This is about comparing CO2 uptake in different blends.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_015",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PROC_Q003",
+          "question": "How does the CO2 weight gain of the PMMA+MAM blend compare to that of the PS+SBM blend at a saturation temperature of 25°C?",
+          "expected_answer": "The PMMA+MAM blend has a weight gain of 22.3%, while the PS+SBM blend has a weight gain of 12.1%.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_013",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the CO2 weight gain ratio of a neat polymer compare to that of a polymer blend at a given temperature?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: neat PS -> polymer, PMMA + MAM blend -> polymer blend | WHY BROAD: This is about comparing CO2 uptake in pure vs. blended polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_020",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_COMP_Q002",
+          "question": "How does the CO2 weight gain ratio (w) at 40°C compare between neat PS and the PMMA + MAM blend?",
+          "expected_answer": "Neat PS has a weight gain ratio of 10.3%, while the PMMA + MAM blend has a significantly higher weight gain ratio of 21.2%.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_014",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the CO2 mass uptake of PMMA-based copolymers compare to that of neat polystyrene and polyolefins?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PMMA-based copolymers -> polymer, neat PS -> polymer, polyolefins -> polymer | WHY BROAD: This is about comparing CO2 uptake across different polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_040",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PHD_Q002",
+          "question": "How does the CO2 mass uptake of PMMA-based copolymers compare to that of neat polystyrene (PS) and polyolefins?",
+          "expected_answer": "PMMA and PMMA-based copolymers are among the best CO2-philic systems compared to neat PS or polyolefins, exhibiting higher CO2 uptake.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_015",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the predictive performance of a model compare to experimental Tg data for a polymer-CO2 system?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: Chow's model -> model, PMMA-CO2 system -> polymer-CO2 system | WHY BROAD: This is about comparing model predictions with experimental results.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_019",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_COMP_Q004",
+          "question": "How does the predictive performance of Chow's model compare to the experimental Tg data for the PMMA-CO2 system?",
+          "expected_answer": "Chow's model predicts the general decreasing trend of Tg but performs poorly in absolute values, consistently underestimating the Tg compared to experimental data.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_016",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the maximum CO2 solubility reported in this study compare to previously reported values for a polymer?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PMMA -> polymer, previous studies -> literature data | WHY BROAD: This is about comparing current findings with prior research on CO2 solubility.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_037",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PHD_Q002",
+          "question": "How does the maximum CO2 solubility reported in this study compare to previously reported values for PMMA?",
+          "expected_answer": "The study reports a solubility of 39.3% at -30 °C, which the authors state is the highest amount of CO2 ever reported absorbed in PMMA.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_017",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the thickness of cell walls in foams produced at low temperatures compare to those produced at higher temperatures?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: SMMA foams -> polymer foam, low vs. high temperatures -> temperature conditions | WHY BROAD: This is about comparing foam properties under different thermal conditions.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_009",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_CHAR_Q005",
+          "question": "According to the SEM analysis of SMMA foams, how does the thickness of cell walls in foams produced at low temperatures compare to those produced at higher temperatures?",
+          "expected_answer": "The cell walls of the foams produced at low temperatures are much thicker as compared to the foams produced at higher temperatures.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_018",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the effect of increasing saturation pressure on foam morphology compare to the effect of increasing saturation temperature?",
+      "abstraction_reasoning": "PATTERN: How does X affect Y compared to Z? | ENTITY MAPPING: saturation pressure -> processing parameter, saturation temperature -> processing parameter | WHY BROAD: This is about comparing effects of different processing parameters on foam structure.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_032",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_PHD_Q005",
+          "question": "How does the effect of increasing saturation pressure on foam morphology compare to the effect of increasing saturation temperature?",
+          "expected_answer": "The effect of increasing pressure is considered similar to the effect of increasing temperature, as both lead to a decrease in density and homogeneity; however, the effect of pressure is less pronounced because the difference in solubility is relatively small.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_019",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the foaming temperature window for a polymer blend differ between samples with short and long annealing times as saturation pressure increases?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PS60/PMMA40 blend -> polymer blend, 2 min vs. 100 min annealing -> processing conditions | WHY BROAD: This is about comparing effects of different annealing times on foaming behavior.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_010",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_CHAR_Q004",
+          "question": "How does the suitable foaming temperature window for the PS60/PMMA40 blend differ between samples annealed for 2 min versus 100 min as saturation pressure increases?",
+          "expected_answer": "For the 2 min annealed sample, the window turned slightly narrower (from 30°C to 25°C), whereas for the 100 min annealed sample, it gradually became much narrower (from 30°C to 5°C).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_020",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the sensitivity of the upper foaming temperature to saturation pressure compare between blend samples with short and long annealing times?",
+      "abstraction_reasoning": "PATTERN: How does X affect Y compared to Z? | ENTITY MAPPING: TU -> processing parameter, saturation pressure -> processing parameter | WHY BROAD: This is about comparing sensitivity of processing parameters in different conditions.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_016",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_COMP_Q002",
+          "question": "How does the sensitivity of the upper foaming temperature (TU) to saturation pressure compare between blend samples with short (2 min) and long (100 min) annealing times?",
+          "expected_answer": "The upper foaming temperature (TU) is much more vulnerable/sensitive to the increase in saturation pressure for the blend samples after long-period annealing (100 min) compared to those with short-period annealing (2 min).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_021",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the gas desorption diffusion coefficient of a polymer blend interface compare to those of pure polymers?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PS60/PMMA40 blend -> polymer blend, pure PS and PMMA -> pure polymers | WHY BROAD: This is about comparing diffusion coefficients in blends vs. pure polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_031",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_PHD_Q003",
+          "question": "How does the gas desorption diffusion coefficient of the PS60/PMMA40 blend interface compare to the coefficients of pure PS and pure PMMA?",
+          "expected_answer": "The desorption diffusion coefficient for the interface of the PS60/PMMA40 blend is significantly higher than those of pure PS (1.04 x 10^-12 m2/s) and pure PMMA (1.19 x 10^-12 m2/s), starting from 2.47 x 10^-11 m2/s.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_022",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the weight averaged molecular weight of a polymer polymerized in another polymer matrix compare to that produced by bulk polymerization?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PMMA -> polymer, PS matrix -> polymer matrix | WHY BROAD: This is about comparing molecular weights under different polymerization conditions.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_009",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_CHAR_Q003",
+          "question": "How does the weight averaged molecular weight of PMMA polymerized in the PS matrix compare to PMMA produced by bulk polymerization?",
+          "expected_answer": "The PMMA polymerized in the PS matrix has a higher weight averaged molecular weight (2.20 x 10^6 g/mol) than that of PMMA made by bulk polymerization (1.50 x 10^5 g/mol).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_023",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "generalized_question": "How does the effect of foaming temperature on cell size differ between a 1/1 PS/PMMA ratio and higher ratios?",
+      "abstraction_reasoning": "PATTERN: How does X affect Y compared to Z? | ENTITY MAPPING: foaming temperature -> processing parameter, PS/PMMA ratio -> blend composition | WHY BROAD: This is about comparing effects of temperature on cell size in different blend compositions.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_015",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PROC_Q003",
+          "question": "How does the effect of foaming temperature on cell size differ between a PS/PMMA ratio of 1/1 and ratios of 2/1 or 3/1?",
+          "expected_answer": "For a 1/1 ratio, cell size increased as temperature rose from 20 to 40 °C due to bubble coalescence in larger PMMA domains; however, for 2/1 and 3/1 ratios, the smaller PMMA domains confined bubble growth and suppressed coalescence, making cell size insensitive to the temperature increase.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_024",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the CO2 weight gain ratio of a polymer blend compare to that of neat PMMA at a given temperature?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PMMA + MAM -> polymer blend, neat PMMA -> pure polymer | WHY BROAD: This is about comparing CO2 uptake in blends vs. pure polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_009",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_CHAR_Q003",
+          "question": "How does the CO2 weight gain ratio (w1) of the PMMA + MAM blend compare to that of neat PMMA at a saturation temperature of 25 °C?",
+          "expected_answer": "The PMMA + MAM blend has a higher weight gain ratio of 22.3% compared to 16.9% for neat PMMA.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_025",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "generalized_question": "How does the foaming temperature threshold for neat polystyrene compare to that of neat polymethylmethacrylate?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PS -> polymer, PMMA -> polymer | WHY BROAD: This is about comparing foaming temperatures of different pure polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_015",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PROC_Q003",
+          "question": "How does the foaming temperature threshold for neat polystyrene (PS) compare to that of neat polymethylmethacrylate (PMMA)?",
+          "expected_answer": "Foaming of PS is only possible at higher saturation temperatures (above 50-60 °C), whereas PMMA is capable of foaming across the entire temperature range studied (25-80 °C), including quasi solid state foaming at 25 °C.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_026",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "generalized_question": "How does the average cell size of a polymer blend foam compare to that of neat PMMA foam across investigated temperatures?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PMMA + MAM -> polymer blend, neat PMMA -> pure polymer | WHY BROAD: This is about comparing cell sizes in blends vs. pure polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_018",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PROC_GAP002",
+          "question": "How does the average cell size of the PMMA + MAM blend foam compare to that of the neat PMMA foam across the investigated foaming temperatures?",
+          "expected_answer": "The PMMA + MAM blend foams show a noticeable reduction in average cell size compared to neat PMMA foams, with the average cell size for the blend lying between 1 and 8 µm, producing ultra-microcellular foam materials.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_027",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the CO2 weight gain ratio of a polymer blend compare to that of neat PS at a given temperature?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PMMA + MAM -> polymer blend, neat PS -> pure polymer | WHY BROAD: This is about comparing CO2 uptake in blends vs. pure polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_021",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_COMP_Q003",
+          "question": "How does the CO2 weight gain ratio of the PMMA + MAM blend compare to that of the neat PS homopolymer at 25 °C?",
+          "expected_answer": "The PMMA + MAM blend has a weight gain ratio of 22.3%, which is significantly higher than the 10.4% weight gain ratio of neat PS.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_028",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the CO2 affinity of methacrylate-based polymers compare to that of styrene-based polymers?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: methacrylate-based -> polymer type, styrene-based -> polymer type | WHY BROAD: This is about comparing CO2 uptake between different polymer types.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_024",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_COMP_GAP002",
+          "question": "How does the CO2 weight gain ratio of methacrylate-based polymers and blends compare to that of styrene-based polymers?",
+          "expected_answer": "Methacrylate based polymers and blends presented the highest CO2 affinity, with a weight gain ratio close to 20 wt%, whereas styrene based polymers presented lower CO2 absorption values, about 10 wt%.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_029",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the CO2 affinity of methacrylate-based polymers compare to that of styrene-based polymers in terms of weight gain ratio?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: methacrylate-based -> polymer type, styrene-based -> polymer type | WHY BROAD: This is about comparing CO2 uptake between different polymer types.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_038",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PHD_Q001",
+          "question": "How does the CO2 affinity of methacrylate-based polymers compare with that of styrene-based polymers in terms of weight gain ratio?",
+          "expected_answer": "Methacrylate-based polymers and blends exhibit the highest CO2 affinity with a weight gain ratio close to 20 wt%, whereas styrene-based polymers present lower absorption values of about 10 wt%.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_030",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the CO2 uptake of a triblock copolymer compare to that of another triblock copolymer at a given temperature?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: MAM -> triblock copolymer, SBM -> triblock copolymer | WHY BROAD: This is about comparing CO2 uptake in different copolymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_010",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_CHAR_Q003",
+          "question": "How does the CO2 uptake (w) of the MAM triblock copolymer compare to that of the SBM triblock copolymer at a saturation temperature of 40 °C?",
+          "expected_answer": "The MAM triblock copolymer has a significantly higher CO2 uptake (22.9%) compared to the SBM triblock copolymer (8.1%).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_031",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "generalized_question": "How does the CO2 uptake of a polymer blend compare to that of another polymer blend at a given temperature?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PMMA + MAM -> polymer blend, PS + SBM -> polymer blend | WHY BROAD: This is about comparing CO2 uptake in different blends.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_017",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PROC_Q003",
+          "question": "How does the CO2 uptake (weight gain ratio) of the PMMA + MAM blend compare to that of the PS + SBM blend at a saturation temperature of 40 °C?",
+          "expected_answer": "The PMMA + MAM blend has a higher CO2 uptake of 21.2% compared to the PS + SBM blend which has an uptake of 10.9%.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "3.1. Sorption of CO2/swelling and Tg depression vs. vitriﬁcation"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_032",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the use of triblock copolymers in PS or PMMA blends compare to classical PS-PMMA polymer blends regarding cell size control?",
+      "abstraction_reasoning": "PATTERN: How does X affect Y compared to Z? | ENTITY MAPPING: triblock copolymers -> additive, classical PS-PMMA blend -> polymer blend | WHY BROAD: This is about comparing the impact of different additives on foam properties.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_036",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PHD_Q001",
+          "question": "How does the use of triblock copolymers (SBM and MAM) in PS or PMMA blends compare to classical PS-PMMA polymer blends regarding cell size control?",
+          "expected_answer": "Triblock copolymers (SBM and MAM) blended to PS or PMMA via extrusion show advantages over classical PS-PMMA polymer blends in terms of cell size control and reduction of cell size.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_033",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the effect of adding a triblock copolymer to PS compare to adding another triblock copolymer to PMMA regarding cell size reduction?",
+      "abstraction_reasoning": "PATTERN: How does X affect Y compared to Z? | ENTITY MAPPING: SBM -> additive, MAM -> additive | WHY BROAD: This is about comparing the effects of different additives on cell size.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_041",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PHD_GAP001",
+          "question": "How does the effect of adding the SBM triblock copolymer to poly(styrene) compare to the effect of adding the MAM triblock copolymer to poly(methyl methacrylate) regarding the reduction of cell size?",
+          "expected_answer": "The addition of SBM to PS primarily increases the number of nucleation sites and cell density with only small variations in average cell size (e.g., 20 µm in blend vs 15 µm in neat PS at 40°C), whereas the addition of MAM to PMMA significantly improves the foaming process, enabling a substantial reduction in cell size down to ultra-microcellular levels (0.3 µm).",
+          "persona_code": "PHD",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_034",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the relationship between temperature and foam density in this study compare to previous literature?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: current study -> research, previous studies -> literature | WHY BROAD: This is about comparing findings with prior research on foam density.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_028",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PHD_Q003",
+          "question": "How does the relationship between temperature and foam density in this study compare to the findings of previous literature cited by the authors?",
+          "expected_answer": "In this study, temperature exhibits a negative correlation with density (higher temperatures generally lead to lower densities), whereas previous studies often describe a local maximum where excessively high temperatures can hinder achieving lower densities.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_035",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the sorption intensity of CO2 in PMMA compare to that in PS at a given temperature?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PMMA -> polymer, PS -> polymer | WHY BROAD: This is about comparing CO2 sorption between different polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_027",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PHD_Q001",
+          "question": "How does the sorption intensity (n) of CO2 in PMMA compare to that in PS at a given temperature?",
+          "expected_answer": "The n value for PMMA is 1 to 2 times higher than that for PS, which is attributed to the specific interaction of CO2 with the carbonyl groups in PMMA compared to the phenyl groups in PS.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_036",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the interaction of CO2 with carbonyl groups in PMMA compare to that with phenyl groups in PS?",
+      "abstraction_reasoning": "PATTERN: How does X affect Y compared to Z? | ENTITY MAPPING: carbonyl groups -> functional group, phenyl groups -> functional group | WHY BROAD: This is about comparing CO2 interactions with different functional groups.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_033",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PHD_GAP002",
+          "question": "How does the interaction between CO2 and the carbonyl groups in PMMA compare to the interaction between CO2 and the phenyl groups in PS in terms of sorption intensity and chemisorption temperature?",
+          "expected_answer": "The carbonyl groups in PMMA exhibit a higher level of interaction with CO2 than the phenyl groups of PS, resulting in a sorption intensity (n value) that is 1 to 2 times higher and a lower temperature necessary for chemisorption to occur compared to PS.",
+          "persona_code": "PHD",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_037",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the CO2 solubility in polypropylene compare to that in polystyrene under the same conditions?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PP -> polymer, PS -> polymer | WHY BROAD: This is about comparing CO2 solubility between different polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_010",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_CHAR_Q003",
+          "question": "How does the CO2 solubility in polypropylene (PP) compare to the CO2 solubility in polystyrene (PS) under the same conditions?",
+          "expected_answer": "CO2 solubility in PP is higher than that in PS.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_038",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "generalized_question": "How do the contact angles of bubbles nucleated in PP and PS domains compare to those in blend interfacial regions?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PP -> polymer, PS -> polymer, blend interfacial regions -> material interface | WHY BROAD: This is about comparing bubble contact angles in different regions.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_013",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_CHAR_GAP001",
+          "question": "How do the contact angles of bubbles nucleated in the PP and PS domains compare to those nucleated in the blend interfacial regions?",
+          "expected_answer": "The contact angles in the PP and PS domains are 118° and 108° respectively (both > 90°), whereas the contact angles in the blend interfacial regions are lower, specifically 85° for PS-PP/CO2 and 78° for PP-PS/CO2 (both < 90°).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_039",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "generalized_question": "How does the nucleation number density of bubbles in a blend interfacial region compare to that in a pure polymer domain at a given pressure?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PP/PS blend -> polymer blend, pure PP -> pure polymer | WHY BROAD: This is about comparing nucleation density in blends vs. pure polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_017",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_PROC_GAP002",
+          "question": "How does the nucleation number density of bubbles in the PP/PS blend interfacial region compare to that in the pure PP domain at a given pressure?",
+          "expected_answer": "The nucleation number density in the PP/PS blend interfacial region can increase five to six orders of magnitude compared to the PP domain, which only reaches 3.25 x 10^6 cell/cm3 at a given pressure.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_040",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How do the predicted nucleation free-energy barriers and critical radii of bubbles in a polymer domain compare to those in a blend interfacial region?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PP -> polymer, PP/PS blend interfacial region -> material interface | WHY BROAD: This is about comparing nucleation parameters in different regions.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_021",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_COMP_GAP002",
+          "question": "How do the predicted nucleation free-energy barriers and critical radii of bubbles in the PP domain compare to those in the PP/PS blend interfacial region attached to the PS-rich phase?",
+          "expected_answer": "The nucleation free-energy barrier in the PP domain is 15.02 (units implied) with a critical radius of 3.89 nm, whereas in the PP/PS blend interfacial region attached to the PS-rich phase, the barrier is 2.53 and the critical radius is 1.57 nm.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_041",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How do bubbles nucleating in a blend interfacial region compare to those in other regions in terms of size and number density?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PP/PS blend -> polymer blend, other regions -> material regions | WHY BROAD: This is about comparing bubble characteristics in different regions.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_035",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_PHD_Q005",
+          "question": "In terms of bubble characteristics, how do bubbles nucleating in the blend interfacial region attached to the PS-rich phase compare to those in other regions?",
+          "expected_answer": "Bubbles that nucleate in the PP and PS blend interfacial region attached to the PS-rich phase achieve the smallest size and largest number density.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_042",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the nucleation number density of bubbles in a blend interfacial region compare to that in pure polymer domains at 20 MPa?",
+      "abstraction_reasoning": "PATTERN: How does X compare to Y? | ENTITY MAPPING: PP/PS blend -> polymer blend, pure PP and PS -> pure polymers | WHY BROAD: This is about comparing nucleation density in blends vs. pure polymers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_036",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_PHD_GAP001",
+          "question": "How does the nucleation number density of bubbles in the PP/PS blend interfacial region compare to that in the pure PP and PS domains at 20 MPa?",
+          "expected_answer": "The nucleation number density in the PP/PS blend interfacial region can increase five to six orders of magnitude compared to the other domains; specifically, the PP domain only reaches 3.25 x 10^6 cell/cm3, while the PS domain is about two orders of magnitude larger than the PP domain.",
+          "persona_code": "PHD",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_043",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the foam morphology produced using Janus particles compare to that of the neat PPE/SAN blend?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_031",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PHD_Q002",
+          "question": "How does the foam morphology produced using Janus particles compare to that of the neat PPE/SAN blend?",
+          "expected_answer": "The neat blend nearly did not foam and could not be properly evaluated, whereas the use of Janus particles produced homogenous foams characterized by small cell sizes (down to below 1 mm with 5 wt% JP) and relatively high densities (350–650 kg m-3).",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_COMPARATIVE_044",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "generalized_question": "According to Costeux et al., how does the cell size and nucleation density of foams produced from SAN blended with MMA-co-EA compare to those produced from the individual blend components?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_035",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PHD_Q001",
+          "question": "According to Costeux et al., how does the cell size and nucleation density of foams produced from SAN blended with MMA-co-EA compare to those produced from the individual blend components?",
+          "expected_answer": "Foams produced from the SAN/MMA-co-EA blends had more homogeneous cell size distribution and smaller cells (around 90–100 nm) with significantly higher cell nucleation densities (increased by several orders of magnitude) compared to foams obtained from either blend component alone.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    }
+  ],
+  "reverse_index": {
+    "Bärwinkel2016_DEDUP_014": "GEN_COMPARATIVE_001",
+    "Bärwinkel2016_DEDUP_035": "GEN_COMPARATIVE_002",
+    "Bärwinkel2016_DEDUP_021": "GEN_COMPARATIVE_003",
+    "Costeux2013_DEDUP_010": "GEN_COMPARATIVE_004",
+    "Costeux2013_DEDUP_015": "GEN_COMPARATIVE_005",
+    "Costeux2013_DEDUP_020": "GEN_COMPARATIVE_006",
+    "Costeux2013_DEDUP_034": "GEN_COMPARATIVE_007",
+    "Costeux2013_DEDUP_037": "GEN_COMPARATIVE_008",
+    "Costeux2014_DEDUP_012": "GEN_COMPARATIVE_009",
+    "Di Maio2018_DEDUP_040": "GEN_COMPARATIVE_010",
+    "Dumon2012_DEDUP_010": "GEN_COMPARATIVE_011",
+    "Dumon2012_DEDUP_015": "GEN_COMPARATIVE_012",
+    "Dumon2012_DEDUP_020": "GEN_COMPARATIVE_013",
+    "Dumon2012_DEDUP_040": "GEN_COMPARATIVE_014",
+    "Guo2015_DEDUP_019": "GEN_COMPARATIVE_015",
+    "Guo2015_DEDUP_037": "GEN_COMPARATIVE_016",
+    "Jacobs2007_DEDUP_009": "GEN_COMPARATIVE_017",
+    "Jacobs2007_DEDUP_032": "GEN_COMPARATIVE_018",
+    "Liu2019_DEDUP_010": "GEN_COMPARATIVE_019",
+    "Liu2019_DEDUP_016": "GEN_COMPARATIVE_020",
+    "Liu2019_DEDUP_031": "GEN_COMPARATIVE_021",
+    "Otsuka2008_DEDUP_009": "GEN_COMPARATIVE_022",
+    "Otsuka2008_DEDUP_015": "GEN_COMPARATIVE_023",
+    "Reglero2011_DEDUP_009": "GEN_COMPARATIVE_024",
+    "Reglero2011_DEDUP_015": "GEN_COMPARATIVE_025",
+    "Reglero2011_DEDUP_018": "GEN_COMPARATIVE_026",
+    "Reglero2011_DEDUP_021": "GEN_COMPARATIVE_027",
+    "Reglero2011_DEDUP_024": "GEN_COMPARATIVE_028",
+    "Reglero2011_DEDUP_038": "GEN_COMPARATIVE_029",
+    "Ruiz2011_DEDUP_010": "GEN_COMPARATIVE_030",
+    "Ruiz2011_DEDUP_017": "GEN_COMPARATIVE_031",
+    "Ruiz2011_DEDUP_036": "GEN_COMPARATIVE_032",
+    "Ruiz2011_DEDUP_041": "GEN_COMPARATIVE_033",
+    "Shah2025_DEDUP_028": "GEN_COMPARATIVE_034",
+    "Shieh2002_DEDUP_027": "GEN_COMPARATIVE_035",
+    "Shieh2002_DEDUP_033": "GEN_COMPARATIVE_036",
+    "Wu2021_DEDUP_010": "GEN_COMPARATIVE_037",
+    "Wu2021_DEDUP_013": "GEN_COMPARATIVE_038",
+    "Wu2021_DEDUP_017": "GEN_COMPARATIVE_039",
+    "Wu2021_DEDUP_021": "GEN_COMPARATIVE_040",
+    "Wu2021_DEDUP_035": "GEN_COMPARATIVE_041",
+    "Wu2021_DEDUP_036": "GEN_COMPARATIVE_042",
+    "Bärwinkel2016_DEDUP_031": "GEN_COMPARATIVE_043",
+    "Costeux2014_DEDUP_035": "GEN_COMPARATIVE_044"
+  }
+}

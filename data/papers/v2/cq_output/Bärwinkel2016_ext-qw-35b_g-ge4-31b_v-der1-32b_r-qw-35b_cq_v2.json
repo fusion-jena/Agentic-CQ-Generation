@@ -1,0 +1,3371 @@
+{
+  "paper_id": "Bärwinkel2016",
+  "paper_metadata": {
+    "title": "Polymer Foams Made of Immiscible Polymer Blends Compatibilized by Janus Particles —Effect of Compatibilization on Foam Morphology",
+    "first_author_lastname": "Bärwinkel",
+    "year": 2016,
+    "journal": "Advanced Engineering Materials",
+    "doi": "10.1002/adem.201500387",
+    "keywords": [
+      "Janus particles",
+      "polymer blends",
+      "foaming",
+      "PPE/SAN",
+      "morphology",
+      "CO2"
+    ],
+    "polymer_systems": [
+      "PPE",
+      "SAN",
+      "PS-b-PB-b-PMMA"
+    ],
+    "polymerization_methods": [],
+    "paper_type": "research article",
+    "paper_id": "Bärwinkel2016",
+    "source_filename": "2_16_04_2026_Adv Eng Mater - 2015 - Bärwinkel - Polymer Foams Made of Immiscible Polymer Blends Compatibilized by Janus Particles Effect.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 12,
+    "n_figures": 11,
+    "n_tables": 1,
+    "file_size_kb": 3624.9,
+    "char_count": 53900,
+    "estimated_tokens": 13475,
+    "n_sections": 0
+  },
+  "pipeline_config": {
+    "pipeline_version": "v2.1",
+    "extraction_method": "plain",
+    "metadata_extractor": "qwen3.5:27b",
+    "iterative_extractor": "qwen3.6:35b-a3b",
+    "cq_generator": "gemma4:31b",
+    "cq_validator": "deepseek-r1:32b",
+    "cq_refiner": "qwen3.5:35b",
+    "embedding_model": "BAAI/bge-small-en-v1.5"
+  },
+  "execution_stats": {
+    "text_extraction_secs": 7.77,
+    "total_wall_secs": 1267.88,
+    "stage_seconds": {
+      "chunk": 0.0,
+      "index": 0.52,
+      "extract": 479.62,
+      "retrieve": 0.36,
+      "generate": 444.62,
+      "validate": 277.82,
+      "refine": 56.7,
+      "evaluate": 0.25
+    }
+  },
+  "pipeline_version": "v2.1",
+  "n_personas": 7,
+  "n_questions": 49,
+  "was_refined": true,
+  "persona_questions": {
+    "SYNTH": [
+      {
+        "id": "Bärwinkel2016_SYNTH_Q001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "How was the polybutadiene (PB) core of the Janus particles cross-linked during synthesis?",
+        "expected_answer": "The PB core was cross-linked using a UV cross-linker.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          },
+          {
+            "role": "property",
+            "term": "cross-linked"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_SYNTH_Q002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "Under what pressure, temperature, and duration conditions were the PPE/SAN blend specimens saturated with CO2 prior to the foaming experiments?",
+        "expected_answer": "The samples were saturated with CO2 at 40 bar and 40 °C for at least 24 hours.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation pressure"
+          },
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The specific saturation conditions (40 bar, 40 °C, 24 h) are explicitly stated in the text under the 'Foaming Experiments' and 'Mass Uptake' sections, correcting the validator's claim that they were not present."
+      },
+      {
+        "id": "Bärwinkel2016_SYNTH_Q003",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "How does the degree of coverage of the PPE phase by Janus particles affect the CO2 mass uptake of the blend?",
+        "expected_answer": "Partial coverage (1 and 2 wt% JPs) increases CO2 uptake due to stress concentration and the formation of microcrazes/cracks that increase available surface area, whereas full coverage (5 and 10 wt% JPs) reduces uptake as the JPs act as a barrier layer hindering diffusion into the PPE phase.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          },
+          {
+            "role": "property",
+            "term": "CO2 mass uptake"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_SYNTH_Q004",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was a foaming time of 10 seconds selected as the optimum processing parameter compared to 30 seconds?",
+        "expected_answer": "A shorter foaming time of 10 s resulted in lower foam densities, whereas 30 s was expected to lead to further cell growth and cell coalescence, resulting in thicker cell walls and collapsed cells.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foaming time"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Bärwinkel2016_SYNTH_Q005",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the weight-average molecular weight (Mw) and the composition of the SAN copolymer used in the blends?",
+        "expected_answer": "The SAN is a poly(styrene-co-acrylonitrile) with an Mw of 122 kg/mol.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-acrylonitrile)"
+          },
+          {
+            "role": "property",
+            "term": "weight-average molecular weight (Mw)"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_SYNTH_GAP001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "What was the precursor polymer used to synthesize the Janus nanoparticles, and what was its molecular weight?",
+        "expected_answer": "The Janus nanoparticles were synthesized from S40B31M29108 triblock terpolymers (PS-b-PB-b-PMMA) with a molecular weight (Mw) of 108 kg mol/mol.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus nanoparticles"
+          },
+          {
+            "role": "individual",
+            "term": "PS-b-PB-b-PMMA"
+          },
+          {
+            "role": "property",
+            "term": "weight-average molecular weight (Mw)"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_SYNTH_GAP002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the amount of Janus particles (JPs) affect the morphology of the PPE/SAN blend and the resulting CO2 mass uptake?",
+        "expected_answer": "Low amounts of JPs (1-2 wt%) result in partial coverage of PPE domains, creating stress concentration points and microcrazes that increase CO2 mass uptake. Higher amounts (5-10 wt%) lead to full coverage of PPE droplets (raspberry morphology), which acts as a barrier layer and decreases CO2 mass uptake.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus nanoparticles"
+          },
+          {
+            "role": "individual",
+            "term": "raspberry morphology"
+          },
+          {
+            "role": "individual",
+            "term": "carbon dioxide"
+          },
+          {
+            "role": "property",
+            "term": "mass uptake"
+          }
+        ]
+      }
+    ],
+    "CHAR": [
+      {
+        "id": "Bärwinkel2016_CHAR_Q001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which analytical technique was used to determine the weight-average molecular weight (Mw) and dispersity of the poly(styrene-co-acrylonitrile) (SAN)?",
+        "expected_answer": "Size exclusion chromatography (SEC) using THF as solvent and narrowly distributed PS standards.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "size exclusion chromatography"
+          },
+          {
+            "role": "property",
+            "term": "weight-average molecular weight"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_CHAR_Q002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the reported glass transition temperature (Tg) of the cross-linked polybutadiene (PB) core of the Janus particles?",
+        "expected_answer": "Around 0 °C.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          },
+          {
+            "role": "property",
+            "term": "glass transition temperature"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_CHAR_Q003",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "COMPARATIVE",
+        "question": "How does the glass transition temperature (Tg) of the PPE phase in the neat PPE/SAN blend compare to the Tg of the PPE phase in the blend compatibilized with 10 wt% Janus particles?",
+        "expected_answer": "The Tg of the PPE phase in the neat blend is 210 °C, whereas in the blend with 10 wt% JP, it is lower at 204 °C.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PPE/SAN blend"
+          },
+          {
+            "role": "property",
+            "term": "glass transition temperature"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_CHAR_Q004",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which instrument and conditions were used to measure the plasticizing effect of CO2 on the glass transition temperature of the specimens?",
+        "expected_answer": "A high-pressure DSC 204 HP Phoenix from Netzsch GmbH, with measurements performed from 25 to 260 °C at a heating rate of 10 K min-1 under nitrogen atmosphere.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "high-pressure DSC"
+          },
+          {
+            "role": "property",
+            "term": "glass transition temperature"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_CHAR_Q005",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENUMERATION",
+        "question": "Which microscopy techniques were employed to analyze the morphology of the cellular structure of the polymer blend foams?",
+        "expected_answer": "Normal scanning electron microscopy (SEM, Jeol JSM-IC 848) and field emission scanning electron microscopy (FESEM, Zeiss Leo 1530 Gemini).",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "scanning electron microscopy"
+          },
+          {
+            "role": "class",
+            "term": "field emission scanning electron microscopy"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_CHAR_GAP001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which analytical technique was used to determine the weight-average molecular weight (Mw) and dispersity of the poly(styrene-co-acrylonitrile) (SAN) used in the blends?",
+        "expected_answer": "Size exclusion chromatography (SEC) using THF as solvent and narrowly distributed PS standards.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "size exclusion chromatography"
+          },
+          {
+            "role": "property",
+            "term": "weight-average molecular weight"
+          },
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-acrylonitrile)"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_CHAR_GAP002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the reported weight-average molecular weight (Mw) of the poly(2,6-dimethyl-1,4-phenylene ether) (PPE) powder used in this study?",
+        "expected_answer": "12.9 kg mol/mol (or 12,900 g/mol).",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(2,6-dimethyl-1,4-phenylene ether)"
+          },
+          {
+            "role": "property",
+            "term": "weight-average molecular weight"
+          }
+        ]
+      }
+    ],
+    "PROC": [
+      {
+        "id": "Bärwinkel2016_PROC_Q001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "Under what saturation pressure and temperature conditions were the PPE/SAN blends loaded with CO2 prior to foaming?",
+        "expected_answer": "The specimens were placed in a high-pressure vessel at 40 bar and 40 °C.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation pressure"
+          },
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_PROC_Q002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How did the foaming time affect the resulting foam density of the PPE/SAN blend systems?",
+        "expected_answer": "Lower foam densities were correlated to the shorter foaming time of 10 s, whereas longer foaming times of 30 s were expected to lead to cell growth and coalescence, resulting in higher densities.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foaming time"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_PROC_Q003",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "MOTIVATION",
+        "question": "Why was a foaming temperature of 140 °C and a foaming time of 10 s identified as the optimum combination for the compatibilized blends?",
+        "expected_answer": "This combination was selected to obtain homogeneous foams, as 140 °C provided the highest density reduction for SAN and 10 s prevented cell coalescence and collapsed cells.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foaming temperature"
+          },
+          {
+            "role": "property",
+            "term": "foaming time"
+          },
+          {
+            "role": "property",
+            "term": "foam morphology"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_PROC_Q004",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does the concentration of Janus particles (JPs) influence the average cell size of PPE/SAN blend foams, and what is the specific JP content that yields the lowest cell size?",
+        "expected_answer": "The average foam cell size decreases with increasing amount of JP because smaller PPE domain sizes provide increased foam nucleation sites. The lowest cell size (900 nm) is achieved with the blend compatibilized with 5 wt% JPs.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          },
+          {
+            "role": "property",
+            "term": "average cell size"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question and answer were revised to explicitly include the specific value (900 nm) and condition (5 wt% JPs) which are stated in Passage 1, correcting the validator's claim that this information was missing."
+      },
+      {
+        "id": "Bärwinkel2016_PROC_Q005",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "COMPARATIVE",
+        "question": "How does the CO2-induced reduction in glass transition temperature (Tg) of neat PPE compare to the reported reduction of polystyrene (PS) at 40 bar?",
+        "expected_answer": "The Tg of neat PPE is reduced by 24 °C at 40 bar, while the Tg of PS is reported to decrease by around 30 °C at the same pressure.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "glass transition temperature"
+          },
+          {
+            "role": "individual",
+            "term": "PPE"
+          },
+          {
+            "role": "individual",
+            "term": "polystyrene"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_PROC_GAP001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the melt temperature and screw speed used during the compounding of the PPE/SAN blend systems in the twin-screw extruder?",
+        "expected_answer": "The average melt temperature was set at 250 °C and the screw speed was set at 85 rpm.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "melt temperature"
+          },
+          {
+            "role": "property",
+            "term": "screw speed"
+          },
+          {
+            "role": "class",
+            "term": "twin-screw extruder"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_PROC_GAP002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does the formation of a 'raspberry morphology' (full coverage of PPE droplets by Janus particles) affect the sorption of carbon dioxide during the saturation step?",
+        "expected_answer": "Full coverage of the PPE phase with Janus particles can hinder gas entrance into the PPE phase because the cross-linked PB core of the Janus particles has a significantly lower CO2 solubility and acts as a barrier layer.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "raspberry morphology"
+          },
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          },
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          }
+        ]
+      }
+    ],
+    "COMP": [
+      {
+        "id": "Bärwinkel2016_COMP_Q001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What mathematical model was used to calculate the diffusion coefficient (D) from the mass uptake data?",
+        "expected_answer": "The diffusion coefficient was calculated using Equation 1 and Equation 2 based on the method of Crank, where the ratio of mass at time t to mass at equilibrium (Mt/Meq) is plotted over the square root of desorption time to determine the slope (S).",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "diffusion coefficient"
+          },
+          {
+            "role": "class",
+            "term": "mathematical model"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_COMP_Q002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the weight percentage of Janus particles (JP) affect the mean cell size of the PPE/SAN blend foams?",
+        "expected_answer": "Increasing the JP content reduces the mean cell size; specifically, with 5 wt% and 10 wt% JP, the average cell diameter is reduced to 1 mm and even below 1 mm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "mean cell size"
+          },
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_COMP_Q003",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How does the CO2 mass uptake of the neat PPE/SAN blend compare to the mass uptake of the blend compatibilized with 1-2 wt% Janus particles?",
+        "expected_answer": "The CO2 mass uptake of the neat PPE/SAN blend is approximately 7.3 wt%, whereas the blends with 1 and 2 wt% Janus particles exhibit higher mass uptake values due to the formation of microcrazes/cracks that increase the available surface area.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "mass uptake"
+          },
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_COMP_Q004",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENUMERATION",
+        "question": "Which quantitative parameters were used to characterize the cellular structure of the polymer blend foams?",
+        "expected_answer": "The cellular structure was characterized by the average cell diameter, cell size distribution, and foam density.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "average cell diameter"
+          },
+          {
+            "role": "property",
+            "term": "cell size distribution"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_COMP_Q005",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the weight-average molecular weight (Mw) of the SBM triblock terpolymers used to synthesize the Janus particles?",
+        "expected_answer": "The Mw of the SBM triblock is 108 kg mol/mol.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "weight-average molecular weight"
+          },
+          {
+            "role": "individual",
+            "term": "SBM triblock terpolymers"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_COMP_GAP001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the weight percentage of Janus particles (JPs) affect the PPE droplet diameter in PPE/SAN blends, and what is the specific diameter at 10 wt% JP?",
+        "expected_answer": "Increasing the amount of JPs reduces the PPE droplet diameter and improves homogeneity. At 10 wt% JP, the PPE droplet diameter is decreased to around 300 nm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus nanoparticles"
+          },
+          {
+            "role": "property",
+            "term": "droplet diameter"
+          },
+          {
+            "role": "individual",
+            "term": "poly(2,6-dimethyl-1,4-phenylene ether)"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly ask for the specific diameter value (300 nm) mentioned in the text to ensure the answer is directly extractable without inference, and the source section was updated to reflect the location of the evidence."
+      },
+      {
+        "id": "Bärwinkel2016_COMP_GAP002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How does the carbon dioxide (CO2) mass uptake of PPE/SAN blends with 1-2 wt% Janus particles compare to those with 5-10 wt% Janus particles?",
+        "expected_answer": "Blends with 1-2 wt% JPs exhibit higher CO2 mass uptake due to stress concentration and the formation of microcrazes/cracks that increase available surface area, whereas blends with 5-10 wt% JPs show lower uptake because the full coverage of PPE domains (raspberry morphology) acts as a barrier layer.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "carbon dioxide"
+          },
+          {
+            "role": "property",
+            "term": "mass uptake"
+          },
+          {
+            "role": "individual",
+            "term": "raspberry morphology"
+          }
+        ]
+      }
+    ],
+    "ONTO": [
+      {
+        "id": "Bärwinkel2016_ONTO_Q001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the PPE/SAN blend and the process used to create the foam structure?",
+        "expected_answer": "(PPE/SAN blend, producedBy, temperature-induced batch foaming)",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Material"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          },
+          {
+            "role": "class",
+            "term": "Process"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_ONTO_Q002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to measure the glass transition temperature (Tg) of the cross-linked PB core in Janus particles?",
+        "expected_answer": "modulated DSC",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "characterisedBy"
+          },
+          {
+            "role": "class",
+            "term": "Method"
+          },
+          {
+            "role": "property",
+            "term": "hasTemperature"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_ONTO_Q003",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What ontology class should 'Janus particles' be assigned to, and what specific property links them to the PPE/SAN blend in the context of compatibilization as described in the text?",
+        "expected_answer": "Class: Material; Property: usedAsCompatibilizer (or hasRole: compatibilizer)",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Material"
+          },
+          {
+            "role": "property",
+            "term": "hasComonomer"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly reference the term 'compatibilizer' found in the text (e.g., 'used as compatibilizer') to ensure the answer is grounded in the evidence, and the source section was updated to reflect the location of the experimental details."
+      },
+      {
+        "id": "Bärwinkel2016_ONTO_Q004",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENUMERATION",
+        "question": "Which instruments are reported for the characterization of the cellular structure of the foams?",
+        "expected_answer": "SEM (Jeol JSM-IC 848), FESEM (Zeiss Leo 1530 Gemini), and AG245 from Mettler Toledo",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Instrument"
+          },
+          {
+            "role": "property",
+            "term": "usesInstrument"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_ONTO_Q005",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple captures the structural composition of the Janus particles regarding their core?",
+        "expected_answer": "(Janus particles, hasComposition, PB core)",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "hasComposition"
+          },
+          {
+            "role": "class",
+            "term": "Material"
+          },
+          {
+            "role": "property",
+            "term": "hasPart"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_ONTO_GAP001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the Janus particles and the 'raspberry morphology' described in the paper?",
+        "expected_answer": "(Janus particles, producesMorphology, raspberry morphology)",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus nanoparticles"
+          },
+          {
+            "role": "property",
+            "term": "producesMorphology"
+          },
+          {
+            "role": "individual",
+            "term": "raspberry morphology"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly include the term 'raspberry morphology' which is present in the text (Passage 4 and 5), correcting the validator's false claim that the term was missing."
+      },
+      {
+        "id": "Bärwinkel2016_ONTO_GAP002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to measure the weight-average molecular weight (Mw) of poly(styrene-co-acrylonitrile) (SAN)?",
+        "expected_answer": "Size exclusion chromatography (SEC) using THF as solvent and narrowly distributed PS standards.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-acrylonitrile)"
+          },
+          {
+            "role": "property",
+            "term": "hasMolecularWeight"
+          },
+          {
+            "role": "class",
+            "term": "Method"
+          }
+        ]
+      }
+    ],
+    "STU": [
+      {
+        "id": "Bärwinkel2016_STU_Q001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "By which process were the PPE/SAN blend foams produced in this study?",
+        "expected_answer": "The PPE/SAN blend foams were produced through temperature-induced batch foaming with CO2.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PPE/SAN blend"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          },
+          {
+            "role": "individual",
+            "term": "temperature-induced batch foaming"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_STU_Q002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to measure the foam density of the polymer blend foams?",
+        "expected_answer": "The foam density was measured by the buoyancy method according to ISO 1183.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foam density"
+          },
+          {
+            "role": "individual",
+            "term": "buoyancy method"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_STU_Q003",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was a foaming time of 10 seconds chosen as the optimum value compared to 30 seconds for the PPE/SAN blends?",
+        "expected_answer": "A foaming time of 10 seconds was chosen because it resulted in lower foam densities, whereas a 30-second exposure was expected to lead to further cell growth and coalescence, resulting in higher densities.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foaming time"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly mention the specific foaming times (10s vs 30s) and the resulting density trade-off, which is supported by the correlation data in the text."
+      },
+      {
+        "id": "Bärwinkel2016_STU_Q004",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the weight-average molecular weight (Mw) of the poly(styrene-co-acrylonitrile) (SAN) used in the experiments?",
+        "expected_answer": "The weight-average molecular weight (Mw) of the SAN is 122,000 g/mol (or 122 kg mol/C0 1).",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-acrylonitrile)"
+          },
+          {
+            "role": "property",
+            "term": "weight-average molecular weight (Mw)"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages do not contain the specific molecular weight value for SAN, making it impossible to answer based solely on the text.",
+        "unrepairable": true
+      },
+      {
+        "id": "Bärwinkel2016_STU_Q005",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What are the components that make up the structure of the Janus particles used as compatibilizers?",
+        "expected_answer": "The Janus particles consist of a PB core and a PS and PMMA side.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          },
+          {
+            "role": "property",
+            "term": "hasComposition"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_STU_GAP001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "By which process were the PPE/SAN polymer blend foams produced in this study?",
+        "expected_answer": "The PPE/SAN blend foams were produced through temperature-induced batch foaming with CO2.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PPE/SAN blend"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          },
+          {
+            "role": "individual",
+            "term": "temperature-induced batch foaming"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_STU_GAP002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why were Janus nanoparticles used as compatibilizers for the immiscible PPE/SAN blend instead of other alternatives?",
+        "expected_answer": "Janus nanoparticles were used because they provide finer morphologies compared to other compatibilizer alternatives and possess higher interfacial activities.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus nanoparticles"
+          },
+          {
+            "role": "class",
+            "term": "compatibilizer"
+          },
+          {
+            "role": "property",
+            "term": "interfacial activity"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      }
+    ],
+    "PHD": [
+      {
+        "id": "Bärwinkel2016_PHD_Q001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "How does the concentration of Janus particles (JPs) affect the CO2 mass uptake in PPE/SAN blends?",
+        "expected_answer": "CO2 uptake first increases at low concentrations (1 and 2 wt% JPs) due to stress concentration and the formation of microcrazes/cracks that increase available surface area, but then decreases at higher concentrations (5 and 10 wt% JPs) because the PPE phase is fully covered, eliminating stress points and creating a barrier layer via the PB core.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          },
+          {
+            "role": "property",
+            "term": "CO2 mass uptake"
+          },
+          {
+            "role": "individual",
+            "term": "PPE/SAN blend"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_PHD_Q002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "COMPARATIVE",
+        "question": "How does the foam morphology produced using Janus particles compare to that of the neat PPE/SAN blend?",
+        "expected_answer": "The neat blend nearly did not foam and could not be properly evaluated, whereas the use of Janus particles produced homogenous foams characterized by small cell sizes (down to below 1 mm with 5 wt% JP) and relatively high densities (350–650 kg m-3).",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          },
+          {
+            "role": "individual",
+            "term": "PPE/SAN blend"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_PHD_Q003",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "MOTIVATION",
+        "question": "Why was the temperature for the CO2 mass uptake experiments specifically set to 40 °C?",
+        "expected_answer": "This temperature was chosen due to the lower critical solution temperature (LCST) behavior of PMMA, which is partially present in the Janus particles and at the blend interface.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "lower critical solution temperature (LCST)"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_PHD_Q004",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "What is the relationship between the coverage of the PPE phase by Janus particles and the resulting foam cell size?",
+        "expected_answer": "Higher JP content (5 and 10 wt%) leads to full coverage of the PPE phase, which reduces the PPE domain size and increases the surface available for nucleation, resulting in a visible decrease in mean cell size compared to blends with lower JP amounts.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          },
+          {
+            "role": "individual",
+            "term": "PPE"
+          },
+          {
+            "role": "property",
+            "term": "mean cell size"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_PHD_Q005",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "GAP_OR_LIMITATION",
+        "question": "What technical limitation did the authors acknowledge regarding the high-pressure DSC measurements of the polymer components?",
+        "expected_answer": "Due to technical difficulties, it was not possible to measure SAN at 35 bar (because of its lower Tg) and the other materials at 40 bar, which was the actual CO2 mass uptake pressure.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SAN"
+          },
+          {
+            "role": "property",
+            "term": "glass transition temperature (Tg)"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_PHD_GAP001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the degree of coverage of the PPE phase by Janus nanoparticles affect the carbon dioxide sorption behavior and the resulting foam morphology?",
+        "expected_answer": "Partial coverage of the PPE phase results in stress concentration at the blend interface during saturation, leading to the formation of new surfaces via cleavage or microcrazes, which increases CO2 sorption. In contrast, full coverage (raspberry morphology) creates a barrier layer due to the lower CO2 solubility of the cross-linked PB core, hindering gas entrance into the PPE phase and resulting in homogenous foams with small cell sizes and relatively high densities.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus nanoparticles"
+          },
+          {
+            "role": "individual",
+            "term": "raspberry morphology"
+          },
+          {
+            "role": "individual",
+            "term": "carbon dioxide"
+          },
+          {
+            "role": "individual",
+            "term": "poly(2,6-dimethyl-1,4-phenylene ether)"
+          }
+        ]
+      },
+      {
+        "id": "Bärwinkel2016_PHD_GAP002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "COMPARATIVE",
+        "question": "How does the effect of Janus particles on the morphology of PPE/SAN blends compare to that of neat (uncompatibilized) blends as reported in the results?",
+        "expected_answer": "Janus particles result in finer morphologies with significantly reduced PPE droplet diameters (down to ~300 nm) and more homogeneous distributions compared to the irregular-shaped domains seen in neat blends.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus nanoparticles"
+          },
+          {
+            "role": "individual",
+            "term": "PS-b-PB-b-PMMA"
+          },
+          {
+            "role": "property",
+            "term": "interfacial tension"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question referenced SBM triblock terpolymers which are not the primary comparison in the provided evidence; the revision shifts the comparison to neat blends which are explicitly described in the text as having irregular domains versus the fine, homogeneous morphology achieved with Janus particles."
+      }
+    ]
+  },
+  "final_questions": [
+    {
+      "id": "Bärwinkel2016_SYNTH_Q001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "How was the polybutadiene (PB) core of the Janus particles cross-linked during synthesis?",
+      "expected_answer": "The PB core was cross-linked using a UV cross-linker.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus particles"
+        },
+        {
+          "role": "property",
+          "term": "cross-linked"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_SYNTH_Q002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "Under what pressure, temperature, and duration conditions were the PPE/SAN blend specimens saturated with CO2 prior to the foaming experiments?",
+      "expected_answer": "The samples were saturated with CO2 at 40 bar and 40 °C for at least 24 hours.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation pressure"
+        },
+        {
+          "role": "property",
+          "term": "saturation temperature"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The specific saturation conditions (40 bar, 40 °C, 24 h) are explicitly stated in the text under the 'Foaming Experiments' and 'Mass Uptake' sections, correcting the validator's claim that they were not present."
+    },
+    {
+      "id": "Bärwinkel2016_SYNTH_Q003",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CAUSAL",
+      "question": "How does the degree of coverage of the PPE phase by Janus particles affect the CO2 mass uptake of the blend?",
+      "expected_answer": "Partial coverage (1 and 2 wt% JPs) increases CO2 uptake due to stress concentration and the formation of microcrazes/cracks that increase available surface area, whereas full coverage (5 and 10 wt% JPs) reduces uptake as the JPs act as a barrier layer hindering diffusion into the PPE phase.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus particles"
+        },
+        {
+          "role": "property",
+          "term": "CO2 mass uptake"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_SYNTH_Q004",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was a foaming time of 10 seconds selected as the optimum processing parameter compared to 30 seconds?",
+      "expected_answer": "A shorter foaming time of 10 s resulted in lower foam densities, whereas 30 s was expected to lead to further cell growth and cell coalescence, resulting in thicker cell walls and collapsed cells.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foaming time"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+    },
+    {
+      "id": "Bärwinkel2016_SYNTH_Q005",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the weight-average molecular weight (Mw) and the composition of the SAN copolymer used in the blends?",
+      "expected_answer": "The SAN is a poly(styrene-co-acrylonitrile) with an Mw of 122 kg/mol.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(styrene-co-acrylonitrile)"
+        },
+        {
+          "role": "property",
+          "term": "weight-average molecular weight (Mw)"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_SYNTH_GAP001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "What was the precursor polymer used to synthesize the Janus nanoparticles, and what was its molecular weight?",
+      "expected_answer": "The Janus nanoparticles were synthesized from S40B31M29108 triblock terpolymers (PS-b-PB-b-PMMA) with a molecular weight (Mw) of 108 kg mol/mol.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus nanoparticles"
+        },
+        {
+          "role": "individual",
+          "term": "PS-b-PB-b-PMMA"
+        },
+        {
+          "role": "property",
+          "term": "weight-average molecular weight (Mw)"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_SYNTH_GAP002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the amount of Janus particles (JPs) affect the morphology of the PPE/SAN blend and the resulting CO2 mass uptake?",
+      "expected_answer": "Low amounts of JPs (1-2 wt%) result in partial coverage of PPE domains, creating stress concentration points and microcrazes that increase CO2 mass uptake. Higher amounts (5-10 wt%) lead to full coverage of PPE droplets (raspberry morphology), which acts as a barrier layer and decreases CO2 mass uptake.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus nanoparticles"
+        },
+        {
+          "role": "individual",
+          "term": "raspberry morphology"
+        },
+        {
+          "role": "individual",
+          "term": "carbon dioxide"
+        },
+        {
+          "role": "property",
+          "term": "mass uptake"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_CHAR_Q001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which analytical technique was used to determine the weight-average molecular weight (Mw) and dispersity of the poly(styrene-co-acrylonitrile) (SAN)?",
+      "expected_answer": "Size exclusion chromatography (SEC) using THF as solvent and narrowly distributed PS standards.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "size exclusion chromatography"
+        },
+        {
+          "role": "property",
+          "term": "weight-average molecular weight"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_CHAR_Q002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the reported glass transition temperature (Tg) of the cross-linked polybutadiene (PB) core of the Janus particles?",
+      "expected_answer": "Around 0 °C.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus particles"
+        },
+        {
+          "role": "property",
+          "term": "glass transition temperature"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_CHAR_Q003",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "COMPARATIVE",
+      "question": "How does the glass transition temperature (Tg) of the PPE phase in the neat PPE/SAN blend compare to the Tg of the PPE phase in the blend compatibilized with 10 wt% Janus particles?",
+      "expected_answer": "The Tg of the PPE phase in the neat blend is 210 °C, whereas in the blend with 10 wt% JP, it is lower at 204 °C.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PPE/SAN blend"
+        },
+        {
+          "role": "property",
+          "term": "glass transition temperature"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_CHAR_Q004",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which instrument and conditions were used to measure the plasticizing effect of CO2 on the glass transition temperature of the specimens?",
+      "expected_answer": "A high-pressure DSC 204 HP Phoenix from Netzsch GmbH, with measurements performed from 25 to 260 °C at a heating rate of 10 K min-1 under nitrogen atmosphere.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "high-pressure DSC"
+        },
+        {
+          "role": "property",
+          "term": "glass transition temperature"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_CHAR_Q005",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENUMERATION",
+      "question": "Which microscopy techniques were employed to analyze the morphology of the cellular structure of the polymer blend foams?",
+      "expected_answer": "Normal scanning electron microscopy (SEM, Jeol JSM-IC 848) and field emission scanning electron microscopy (FESEM, Zeiss Leo 1530 Gemini).",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "scanning electron microscopy"
+        },
+        {
+          "role": "class",
+          "term": "field emission scanning electron microscopy"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_CHAR_GAP001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which analytical technique was used to determine the weight-average molecular weight (Mw) and dispersity of the poly(styrene-co-acrylonitrile) (SAN) used in the blends?",
+      "expected_answer": "Size exclusion chromatography (SEC) using THF as solvent and narrowly distributed PS standards.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "size exclusion chromatography"
+        },
+        {
+          "role": "property",
+          "term": "weight-average molecular weight"
+        },
+        {
+          "role": "individual",
+          "term": "poly(styrene-co-acrylonitrile)"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_CHAR_GAP002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the reported weight-average molecular weight (Mw) of the poly(2,6-dimethyl-1,4-phenylene ether) (PPE) powder used in this study?",
+      "expected_answer": "12.9 kg mol/mol (or 12,900 g/mol).",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(2,6-dimethyl-1,4-phenylene ether)"
+        },
+        {
+          "role": "property",
+          "term": "weight-average molecular weight"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PROC_Q001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "Under what saturation pressure and temperature conditions were the PPE/SAN blends loaded with CO2 prior to foaming?",
+      "expected_answer": "The specimens were placed in a high-pressure vessel at 40 bar and 40 °C.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation pressure"
+        },
+        {
+          "role": "property",
+          "term": "saturation temperature"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PROC_Q002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How did the foaming time affect the resulting foam density of the PPE/SAN blend systems?",
+      "expected_answer": "Lower foam densities were correlated to the shorter foaming time of 10 s, whereas longer foaming times of 30 s were expected to lead to cell growth and coalescence, resulting in higher densities.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foaming time"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PROC_Q003",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "MOTIVATION",
+      "question": "Why was a foaming temperature of 140 °C and a foaming time of 10 s identified as the optimum combination for the compatibilized blends?",
+      "expected_answer": "This combination was selected to obtain homogeneous foams, as 140 °C provided the highest density reduction for SAN and 10 s prevented cell coalescence and collapsed cells.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foaming temperature"
+        },
+        {
+          "role": "property",
+          "term": "foaming time"
+        },
+        {
+          "role": "property",
+          "term": "foam morphology"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PROC_Q004",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How does the concentration of Janus particles (JPs) influence the average cell size of PPE/SAN blend foams, and what is the specific JP content that yields the lowest cell size?",
+      "expected_answer": "The average foam cell size decreases with increasing amount of JP because smaller PPE domain sizes provide increased foam nucleation sites. The lowest cell size (900 nm) is achieved with the blend compatibilized with 5 wt% JPs.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus particles"
+        },
+        {
+          "role": "property",
+          "term": "average cell size"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question and answer were revised to explicitly include the specific value (900 nm) and condition (5 wt% JPs) which are stated in Passage 1, correcting the validator's claim that this information was missing."
+    },
+    {
+      "id": "Bärwinkel2016_PROC_Q005",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "COMPARATIVE",
+      "question": "How does the CO2-induced reduction in glass transition temperature (Tg) of neat PPE compare to the reported reduction of polystyrene (PS) at 40 bar?",
+      "expected_answer": "The Tg of neat PPE is reduced by 24 °C at 40 bar, while the Tg of PS is reported to decrease by around 30 °C at the same pressure.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "glass transition temperature"
+        },
+        {
+          "role": "individual",
+          "term": "PPE"
+        },
+        {
+          "role": "individual",
+          "term": "polystyrene"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PROC_GAP001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What were the melt temperature and screw speed used during the compounding of the PPE/SAN blend systems in the twin-screw extruder?",
+      "expected_answer": "The average melt temperature was set at 250 °C and the screw speed was set at 85 rpm.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "melt temperature"
+        },
+        {
+          "role": "property",
+          "term": "screw speed"
+        },
+        {
+          "role": "class",
+          "term": "twin-screw extruder"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PROC_GAP002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How does the formation of a 'raspberry morphology' (full coverage of PPE droplets by Janus particles) affect the sorption of carbon dioxide during the saturation step?",
+      "expected_answer": "Full coverage of the PPE phase with Janus particles can hinder gas entrance into the PPE phase because the cross-linked PB core of the Janus particles has a significantly lower CO2 solubility and acts as a barrier layer.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "raspberry morphology"
+        },
+        {
+          "role": "individual",
+          "term": "Janus particles"
+        },
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_COMP_Q001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What mathematical model was used to calculate the diffusion coefficient (D) from the mass uptake data?",
+      "expected_answer": "The diffusion coefficient was calculated using Equation 1 and Equation 2 based on the method of Crank, where the ratio of mass at time t to mass at equilibrium (Mt/Meq) is plotted over the square root of desorption time to determine the slope (S).",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "diffusion coefficient"
+        },
+        {
+          "role": "class",
+          "term": "mathematical model"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_COMP_Q002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the weight percentage of Janus particles (JP) affect the mean cell size of the PPE/SAN blend foams?",
+      "expected_answer": "Increasing the JP content reduces the mean cell size; specifically, with 5 wt% and 10 wt% JP, the average cell diameter is reduced to 1 mm and even below 1 mm.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "mean cell size"
+        },
+        {
+          "role": "individual",
+          "term": "Janus particles"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_COMP_Q003",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "COMPARATIVE",
+      "question": "How does the CO2 mass uptake of the neat PPE/SAN blend compare to the mass uptake of the blend compatibilized with 1-2 wt% Janus particles?",
+      "expected_answer": "The CO2 mass uptake of the neat PPE/SAN blend is approximately 7.3 wt%, whereas the blends with 1 and 2 wt% Janus particles exhibit higher mass uptake values due to the formation of microcrazes/cracks that increase the available surface area.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "mass uptake"
+        },
+        {
+          "role": "individual",
+          "term": "Janus particles"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_COMP_Q004",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENUMERATION",
+      "question": "Which quantitative parameters were used to characterize the cellular structure of the polymer blend foams?",
+      "expected_answer": "The cellular structure was characterized by the average cell diameter, cell size distribution, and foam density.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "average cell diameter"
+        },
+        {
+          "role": "property",
+          "term": "cell size distribution"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_COMP_Q005",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the weight-average molecular weight (Mw) of the SBM triblock terpolymers used to synthesize the Janus particles?",
+      "expected_answer": "The Mw of the SBM triblock is 108 kg mol/mol.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "weight-average molecular weight"
+        },
+        {
+          "role": "individual",
+          "term": "SBM triblock terpolymers"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_COMP_GAP001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the weight percentage of Janus particles (JPs) affect the PPE droplet diameter in PPE/SAN blends, and what is the specific diameter at 10 wt% JP?",
+      "expected_answer": "Increasing the amount of JPs reduces the PPE droplet diameter and improves homogeneity. At 10 wt% JP, the PPE droplet diameter is decreased to around 300 nm.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus nanoparticles"
+        },
+        {
+          "role": "property",
+          "term": "droplet diameter"
+        },
+        {
+          "role": "individual",
+          "term": "poly(2,6-dimethyl-1,4-phenylene ether)"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to explicitly ask for the specific diameter value (300 nm) mentioned in the text to ensure the answer is directly extractable without inference, and the source section was updated to reflect the location of the evidence."
+    },
+    {
+      "id": "Bärwinkel2016_COMP_GAP002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "COMPARATIVE",
+      "question": "How does the carbon dioxide (CO2) mass uptake of PPE/SAN blends with 1-2 wt% Janus particles compare to those with 5-10 wt% Janus particles?",
+      "expected_answer": "Blends with 1-2 wt% JPs exhibit higher CO2 mass uptake due to stress concentration and the formation of microcrazes/cracks that increase available surface area, whereas blends with 5-10 wt% JPs show lower uptake because the full coverage of PPE domains (raspberry morphology) acts as a barrier layer.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "carbon dioxide"
+        },
+        {
+          "role": "property",
+          "term": "mass uptake"
+        },
+        {
+          "role": "individual",
+          "term": "raspberry morphology"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_ONTO_Q001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between the PPE/SAN blend and the process used to create the foam structure?",
+      "expected_answer": "(PPE/SAN blend, producedBy, temperature-induced batch foaming)",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Material"
+        },
+        {
+          "role": "property",
+          "term": "producedBy"
+        },
+        {
+          "role": "class",
+          "term": "Process"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_ONTO_Q002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method was used to measure the glass transition temperature (Tg) of the cross-linked PB core in Janus particles?",
+      "expected_answer": "modulated DSC",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "characterisedBy"
+        },
+        {
+          "role": "class",
+          "term": "Method"
+        },
+        {
+          "role": "property",
+          "term": "hasTemperature"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_ONTO_Q003",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What ontology class should 'Janus particles' be assigned to, and what specific property links them to the PPE/SAN blend in the context of compatibilization as described in the text?",
+      "expected_answer": "Class: Material; Property: usedAsCompatibilizer (or hasRole: compatibilizer)",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Material"
+        },
+        {
+          "role": "property",
+          "term": "hasComonomer"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to explicitly reference the term 'compatibilizer' found in the text (e.g., 'used as compatibilizer') to ensure the answer is grounded in the evidence, and the source section was updated to reflect the location of the experimental details."
+    },
+    {
+      "id": "Bärwinkel2016_ONTO_Q004",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENUMERATION",
+      "question": "Which instruments are reported for the characterization of the cellular structure of the foams?",
+      "expected_answer": "SEM (Jeol JSM-IC 848), FESEM (Zeiss Leo 1530 Gemini), and AG245 from Mettler Toledo",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Instrument"
+        },
+        {
+          "role": "property",
+          "term": "usesInstrument"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_ONTO_Q005",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple captures the structural composition of the Janus particles regarding their core?",
+      "expected_answer": "(Janus particles, hasComposition, PB core)",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "hasComposition"
+        },
+        {
+          "role": "class",
+          "term": "Material"
+        },
+        {
+          "role": "property",
+          "term": "hasPart"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_ONTO_GAP001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between the Janus particles and the 'raspberry morphology' described in the paper?",
+      "expected_answer": "(Janus particles, producesMorphology, raspberry morphology)",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus nanoparticles"
+        },
+        {
+          "role": "property",
+          "term": "producesMorphology"
+        },
+        {
+          "role": "individual",
+          "term": "raspberry morphology"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to explicitly include the term 'raspberry morphology' which is present in the text (Passage 4 and 5), correcting the validator's false claim that the term was missing."
+    },
+    {
+      "id": "Bärwinkel2016_ONTO_GAP002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method was used to measure the weight-average molecular weight (Mw) of poly(styrene-co-acrylonitrile) (SAN)?",
+      "expected_answer": "Size exclusion chromatography (SEC) using THF as solvent and narrowly distributed PS standards.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(styrene-co-acrylonitrile)"
+        },
+        {
+          "role": "property",
+          "term": "hasMolecularWeight"
+        },
+        {
+          "role": "class",
+          "term": "Method"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_STU_Q001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "By which process were the PPE/SAN blend foams produced in this study?",
+      "expected_answer": "The PPE/SAN blend foams were produced through temperature-induced batch foaming with CO2.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PPE/SAN blend"
+        },
+        {
+          "role": "property",
+          "term": "producedBy"
+        },
+        {
+          "role": "individual",
+          "term": "temperature-induced batch foaming"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_STU_Q002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method was used to measure the foam density of the polymer blend foams?",
+      "expected_answer": "The foam density was measured by the buoyancy method according to ISO 1183.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foam density"
+        },
+        {
+          "role": "individual",
+          "term": "buoyancy method"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_STU_Q003",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was a foaming time of 10 seconds chosen as the optimum value compared to 30 seconds for the PPE/SAN blends?",
+      "expected_answer": "A foaming time of 10 seconds was chosen because it resulted in lower foam densities, whereas a 30-second exposure was expected to lead to further cell growth and coalescence, resulting in higher densities.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foaming time"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to explicitly mention the specific foaming times (10s vs 30s) and the resulting density trade-off, which is supported by the correlation data in the text."
+    },
+    {
+      "id": "Bärwinkel2016_STU_Q004",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the weight-average molecular weight (Mw) of the poly(styrene-co-acrylonitrile) (SAN) used in the experiments?",
+      "expected_answer": "The weight-average molecular weight (Mw) of the SAN is 122,000 g/mol (or 122 kg mol/C0 1).",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(styrene-co-acrylonitrile)"
+        },
+        {
+          "role": "property",
+          "term": "weight-average molecular weight (Mw)"
+        }
+      ],
+      "refiner_action": "unrepairable",
+      "revise_reason": "The provided evidence passages do not contain the specific molecular weight value for SAN, making it impossible to answer based solely on the text.",
+      "unrepairable": true
+    },
+    {
+      "id": "Bärwinkel2016_STU_Q005",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What are the components that make up the structure of the Janus particles used as compatibilizers?",
+      "expected_answer": "The Janus particles consist of a PB core and a PS and PMMA side.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus particles"
+        },
+        {
+          "role": "property",
+          "term": "hasComposition"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_STU_GAP001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "By which process were the PPE/SAN polymer blend foams produced in this study?",
+      "expected_answer": "The PPE/SAN blend foams were produced through temperature-induced batch foaming with CO2.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PPE/SAN blend"
+        },
+        {
+          "role": "property",
+          "term": "producedBy"
+        },
+        {
+          "role": "individual",
+          "term": "temperature-induced batch foaming"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_STU_GAP002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why were Janus nanoparticles used as compatibilizers for the immiscible PPE/SAN blend instead of other alternatives?",
+      "expected_answer": "Janus nanoparticles were used because they provide finer morphologies compared to other compatibilizer alternatives and possess higher interfacial activities.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus nanoparticles"
+        },
+        {
+          "role": "class",
+          "term": "compatibilizer"
+        },
+        {
+          "role": "property",
+          "term": "interfacial activity"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+    },
+    {
+      "id": "Bärwinkel2016_PHD_Q001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "CAUSAL",
+      "question": "How does the concentration of Janus particles (JPs) affect the CO2 mass uptake in PPE/SAN blends?",
+      "expected_answer": "CO2 uptake first increases at low concentrations (1 and 2 wt% JPs) due to stress concentration and the formation of microcrazes/cracks that increase available surface area, but then decreases at higher concentrations (5 and 10 wt% JPs) because the PPE phase is fully covered, eliminating stress points and creating a barrier layer via the PB core.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus particles"
+        },
+        {
+          "role": "property",
+          "term": "CO2 mass uptake"
+        },
+        {
+          "role": "individual",
+          "term": "PPE/SAN blend"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PHD_Q002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "COMPARATIVE",
+      "question": "How does the foam morphology produced using Janus particles compare to that of the neat PPE/SAN blend?",
+      "expected_answer": "The neat blend nearly did not foam and could not be properly evaluated, whereas the use of Janus particles produced homogenous foams characterized by small cell sizes (down to below 1 mm with 5 wt% JP) and relatively high densities (350–650 kg m-3).",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus particles"
+        },
+        {
+          "role": "individual",
+          "term": "PPE/SAN blend"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PHD_Q003",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "MOTIVATION",
+      "question": "Why was the temperature for the CO2 mass uptake experiments specifically set to 40 °C?",
+      "expected_answer": "This temperature was chosen due to the lower critical solution temperature (LCST) behavior of PMMA, which is partially present in the Janus particles and at the blend interface.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "lower critical solution temperature (LCST)"
+        },
+        {
+          "role": "individual",
+          "term": "PMMA"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PHD_Q004",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "CAUSAL",
+      "question": "What is the relationship between the coverage of the PPE phase by Janus particles and the resulting foam cell size?",
+      "expected_answer": "Higher JP content (5 and 10 wt%) leads to full coverage of the PPE phase, which reduces the PPE domain size and increases the surface available for nucleation, resulting in a visible decrease in mean cell size compared to blends with lower JP amounts.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus particles"
+        },
+        {
+          "role": "individual",
+          "term": "PPE"
+        },
+        {
+          "role": "property",
+          "term": "mean cell size"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PHD_Q005",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "GAP_OR_LIMITATION",
+      "question": "What technical limitation did the authors acknowledge regarding the high-pressure DSC measurements of the polymer components?",
+      "expected_answer": "Due to technical difficulties, it was not possible to measure SAN at 35 bar (because of its lower Tg) and the other materials at 40 bar, which was the actual CO2 mass uptake pressure.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SAN"
+        },
+        {
+          "role": "property",
+          "term": "glass transition temperature (Tg)"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PHD_GAP001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the degree of coverage of the PPE phase by Janus nanoparticles affect the carbon dioxide sorption behavior and the resulting foam morphology?",
+      "expected_answer": "Partial coverage of the PPE phase results in stress concentration at the blend interface during saturation, leading to the formation of new surfaces via cleavage or microcrazes, which increases CO2 sorption. In contrast, full coverage (raspberry morphology) creates a barrier layer due to the lower CO2 solubility of the cross-linked PB core, hindering gas entrance into the PPE phase and resulting in homogenous foams with small cell sizes and relatively high densities.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus nanoparticles"
+        },
+        {
+          "role": "individual",
+          "term": "raspberry morphology"
+        },
+        {
+          "role": "individual",
+          "term": "carbon dioxide"
+        },
+        {
+          "role": "individual",
+          "term": "poly(2,6-dimethyl-1,4-phenylene ether)"
+        }
+      ]
+    },
+    {
+      "id": "Bärwinkel2016_PHD_GAP002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "COMPARATIVE",
+      "question": "How does the effect of Janus particles on the morphology of PPE/SAN blends compare to that of neat (uncompatibilized) blends as reported in the results?",
+      "expected_answer": "Janus particles result in finer morphologies with significantly reduced PPE droplet diameters (down to ~300 nm) and more homogeneous distributions compared to the irregular-shaped domains seen in neat blends.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Janus nanoparticles"
+        },
+        {
+          "role": "individual",
+          "term": "PS-b-PB-b-PMMA"
+        },
+        {
+          "role": "property",
+          "term": "interfacial tension"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question referenced SBM triblock terpolymers which are not the primary comparison in the provided evidence; the revision shifts the comparison to neat blends which are explicitly described in the text as having irregular domains versus the fine, homogeneous morphology achieved with Janus particles."
+    }
+  ],
+  "validation": {
+    "quality_score": 0.895,
+    "pass_score_threshold": 0.75,
+    "active_checks": [
+      "persona_coverage",
+      "question_count",
+      "answerability",
+      "specificity",
+      "section_validity",
+      "concept_usage",
+      "redundancy"
+    ],
+    "issues": [
+      "Near-duplicate questions: Bärwinkel2016_SYNTH_Q003 ~ Bärwinkel2016_SYNTH_GAP002 (cos=0.93)",
+      "Near-duplicate questions: Bärwinkel2016_SYNTH_Q003 ~ Bärwinkel2016_COMP_GAP002 (cos=0.92)",
+      "Near-duplicate questions: Bärwinkel2016_SYNTH_Q003 ~ Bärwinkel2016_PHD_Q001 (cos=0.93)",
+      "Near-duplicate questions: Bärwinkel2016_SYNTH_Q004 ~ Bärwinkel2016_STU_Q003 (cos=0.95)",
+      "Near-duplicate questions: Bärwinkel2016_SYNTH_GAP002 ~ Bärwinkel2016_COMP_Q003 (cos=0.93)",
+      "Near-duplicate questions: Bärwinkel2016_SYNTH_GAP002 ~ Bärwinkel2016_COMP_GAP002 (cos=0.95)",
+      "Near-duplicate questions: Bärwinkel2016_SYNTH_GAP002 ~ Bärwinkel2016_PHD_Q001 (cos=0.98)",
+      "Near-duplicate questions: Bärwinkel2016_CHAR_Q001 ~ Bärwinkel2016_CHAR_GAP001 (cos=0.98)",
+      "Near-duplicate questions: Bärwinkel2016_CHAR_Q001 ~ Bärwinkel2016_ONTO_GAP002 (cos=0.97)",
+      "Near-duplicate questions: Bärwinkel2016_CHAR_Q001 ~ Bärwinkel2016_STU_Q004 (cos=0.93)",
+      "[SYNTH] Bärwinkel2016_SYNTH_Q002: borderline (score=0.50) - The pressure and temperature conditions are not explicitly stated in the passages.",
+      "[SYNTH] Bärwinkel2016_SYNTH_Q004: borderline (score=0.50) - The reasoning for selecting 10 seconds is not explicitly stated in the passages.",
+      "[PROC] Bärwinkel2016_PROC_Q004: borderline (score=0.50) - The answer can be derived from passage 3, which shows that higher JP concentrations lead to smaller cell sizes.",
+      "[COMP] Bärwinkel2016_COMP_GAP001: borderline (score=0.50) - The effect of JP on PPE droplet diameter is discussed in the Results and Discussion section but requires some inference.",
+      "[ONTO] Bärwinkel2016_ONTO_Q003: borderline (score=0.50) - While Janus particles are mentioned, the exact property linking them to the PPE/SAN blend is not explicitly stated in the passages.",
+      "[ONTO] Bärwinkel2016_ONTO_GAP001: borderline (score=0.50) - The term 'raspberry morphology' is not explicitly mentioned in the passages.",
+      "[STU] Bärwinkel2016_STU_Q003: borderline (score=0.50) - The answer requires a short inference from passage 3, which discusses foaming times and densities.",
+      "[STU] Bärwinkel2016_STU_Q004: fail (score=0.00) - The passages do not mention the Mw of SAN.",
+      "[STU] Bärwinkel2016_STU_GAP002: borderline (score=0.50) - The answer requires a short inference from passage 4, which discusses Janus particles' interfacial activity.",
+      "[PHD] Bärwinkel2016_PHD_GAP002: fail (score=0.30) - The question refers to SBM triblock terpolymers, which are not explicitly discussed in the evidence passages."
+    ],
+    "issues_by_persona": {
+      "SYNTH": [
+        "[SYNTH] Bärwinkel2016_SYNTH_Q002: borderline (score=0.50) - The pressure and temperature conditions are not explicitly stated in the passages.",
+        "[SYNTH] Bärwinkel2016_SYNTH_Q004: borderline (score=0.50) - The reasoning for selecting 10 seconds is not explicitly stated in the passages."
+      ],
+      "PROC": [
+        "[PROC] Bärwinkel2016_PROC_Q004: borderline (score=0.50) - The answer can be derived from passage 3, which shows that higher JP concentrations lead to smaller cell sizes."
+      ],
+      "COMP": [
+        "[COMP] Bärwinkel2016_COMP_GAP001: borderline (score=0.50) - The effect of JP on PPE droplet diameter is discussed in the Results and Discussion section but requires some inference."
+      ],
+      "ONTO": [
+        "[ONTO] Bärwinkel2016_ONTO_Q003: borderline (score=0.50) - While Janus particles are mentioned, the exact property linking them to the PPE/SAN blend is not explicitly stated in the passages.",
+        "[ONTO] Bärwinkel2016_ONTO_GAP001: borderline (score=0.50) - The term 'raspberry morphology' is not explicitly mentioned in the passages."
+      ],
+      "STU": [
+        "[STU] Bärwinkel2016_STU_Q003: borderline (score=0.50) - The answer requires a short inference from passage 3, which discusses foaming times and densities.",
+        "[STU] Bärwinkel2016_STU_Q004: fail (score=0.00) - The passages do not mention the Mw of SAN.",
+        "[STU] Bärwinkel2016_STU_GAP002: borderline (score=0.50) - The answer requires a short inference from passage 4, which discusses Janus particles' interfacial activity."
+      ],
+      "PHD": [
+        "[PHD] Bärwinkel2016_PHD_GAP002: fail (score=0.30) - The question refers to SBM triblock terpolymers, which are not explicitly discussed in the evidence passages."
+      ]
+    },
+    "per_question": {
+      "Bärwinkel2016_SYNTH_Q001": {
+        "id": "Bärwinkel2016_SYNTH_Q001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24614
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_SYNTH_Q002": {
+        "id": "Bärwinkel2016_SYNTH_Q002",
+        "score": 0.5,
+        "reasons": [
+          "The pressure and temperature conditions are not explicitly stated in the passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24614
+        },
+        "verdict": "borderline"
+      },
+      "Bärwinkel2016_SYNTH_Q003": {
+        "id": "Bärwinkel2016_SYNTH_Q003",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24614
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_SYNTH_Q004": {
+        "id": "Bärwinkel2016_SYNTH_Q004",
+        "score": 0.5,
+        "reasons": [
+          "The reasoning for selecting 10 seconds is not explicitly stated in the passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24614
+        },
+        "verdict": "borderline"
+      },
+      "Bärwinkel2016_SYNTH_Q005": {
+        "id": "Bärwinkel2016_SYNTH_Q005",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24614
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_SYNTH_GAP001": {
+        "id": "Bärwinkel2016_SYNTH_GAP001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24614
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_SYNTH_GAP002": {
+        "id": "Bärwinkel2016_SYNTH_GAP002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24614
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_CHAR_Q001": {
+        "id": "Bärwinkel2016_CHAR_Q001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 21731
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_CHAR_Q002": {
+        "id": "Bärwinkel2016_CHAR_Q002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 21731
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_CHAR_Q003": {
+        "id": "Bärwinkel2016_CHAR_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The question is specific but the exact Tg values are not explicitly stated in the passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 21731
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_CHAR_Q004": {
+        "id": "Bärwinkel2016_CHAR_Q004",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 21731
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_CHAR_Q005": {
+        "id": "Bärwinkel2016_CHAR_Q005",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 21731
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_CHAR_GAP001": {
+        "id": "Bärwinkel2016_CHAR_GAP001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 21731
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_CHAR_GAP002": {
+        "id": "Bärwinkel2016_CHAR_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The question is specific but the exact Mw value of PPE is not explicitly stated in the passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 21731
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PROC_Q001": {
+        "id": "Bärwinkel2016_PROC_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in passage 2, which mentions the high-pressure vessel at 40 bar and 40 °C.",
+          "The question is specific about the conditions for CO2 loading."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24073
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PROC_Q002": {
+        "id": "Bärwinkel2016_PROC_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in passage 1, which discusses how shorter foaming times (10 s) resulted in lower densities.",
+          "The question is specific about the effect of foaming time on density."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24073
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PROC_Q003": {
+        "id": "Bärwinkel2016_PROC_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from passage 1, which states that 140 °C provided the highest density reduction for SAN and 10 s prevented cell coalescence.",
+          "The question is specific about the optimum combination of temperature and time."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24073
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PROC_Q004": {
+        "id": "Bärwinkel2016_PROC_Q004",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from passage 3, which shows that higher JP concentrations lead to smaller cell sizes.",
+          "The question is somewhat specific but uses generic terms like 'average cell size'.",
+          "The exact value of 900 nm with 5 wt% JPs is not explicitly stated in the passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24073
+        },
+        "verdict": "borderline"
+      },
+      "Bärwinkel2016_PROC_Q005": {
+        "id": "Bärwinkel2016_PROC_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from passage 1, which compares the Tg reduction of PPE (24 °C) and PS (30 °C) at 40 bar.",
+          "The question is specific about the comparison between PPE and PS."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24073
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PROC_GAP001": {
+        "id": "Bärwinkel2016_PROC_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in passage 6, which mentions the melt temperature of 250 °C and screw speed of 85 rpm.",
+          "The question is specific about the extruder parameters."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24073
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PROC_GAP002": {
+        "id": "Bärwinkel2016_PROC_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from passage 3, which discusses how full coverage of PPE by JPs hinders CO2 entrance due to the PB core's lower solubility.",
+          "The question is specific about the 'raspberry morphology' and its effect on sorption."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 24073
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_COMP_Q001": {
+        "id": "Bärwinkel2016_COMP_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The question can be answered using Equation 1 and Equation 2 from the passages, which are explicitly stated.",
+          "The question is specific about the method (Crank) and parameters (Mt/Meq, slope S)."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23149
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_COMP_Q002": {
+        "id": "Bärwinkel2016_COMP_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The effect of JP weight percentage on cell size is discussed in the Results and Discussion section.",
+          "The question specifies 'mean cell size' and mentions specific percentages (5 wt% and 10 wt%)."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23149
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_COMP_Q003": {
+        "id": "Bärwinkel2016_COMP_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The comparison of CO2 mass uptake is explicitly stated in the Results and Discussion section.",
+          "The question specifies 'neat PPE/SAN blend' vs. '1-2 wt% Janus particles'."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23149
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_COMP_Q004": {
+        "id": "Bärwinkel2016_COMP_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The parameters are listed in the Experimental Section under characterization.",
+          "The question is specific about 'cellular structure' and mentions quantitative parameters."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23149
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_COMP_Q005": {
+        "id": "Bärwinkel2016_COMP_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The Mw of SBM triblock terpolymers is explicitly stated in the Experimental Section.",
+          "The question specifies 'weight-average molecular weight (Mw)'."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23149
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_COMP_GAP001": {
+        "id": "Bärwinkel2016_COMP_GAP001",
+        "score": 0.5,
+        "reasons": [
+          "The effect of JP on PPE droplet diameter is discussed in the Results and Discussion section but requires some inference.",
+          "The question specifies 'PPE droplet diameter' and mentions specific percentages (10 wt%)."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23149
+        },
+        "verdict": "borderline"
+      },
+      "Bärwinkel2016_COMP_GAP002": {
+        "id": "Bärwinkel2016_COMP_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The comparison of CO2 mass uptake between different JP percentages is explicitly stated in the Results and Discussion section.",
+          "The question specifies '1-2 wt% JPs' vs. '5-10 wt% JPs'."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 9,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23149
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_ONTO_Q001": {
+        "id": "Bärwinkel2016_ONTO_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in passage 1, which describes the temperature-induced batch foaming process used for the PPE/SAN blend.",
+          "The question is specific and directly relates to the ontology triple structure."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23836
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_ONTO_Q002": {
+        "id": "Bärwinkel2016_ONTO_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in passage 4, where modulated DSC is used for measuring Tg of the cross-linked PB core.",
+          "The question is specific and relevant to the ontology context."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23836
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_ONTO_Q003": {
+        "id": "Bärwinkel2016_ONTO_Q003",
+        "score": 0.5,
+        "reasons": [
+          "While Janus particles are mentioned, the exact property linking them to the PPE/SAN blend is not explicitly stated in the passages.",
+          "The question uses somewhat generic terms ('compatibilizer property') which could be more specific."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23836
+        },
+        "verdict": "borderline"
+      },
+      "Bärwinkel2016_ONTO_Q004": {
+        "id": "Bärwinkel2016_ONTO_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The instruments are explicitly listed in passage 1 and 3.",
+          "The question is specific and useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23836
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_ONTO_Q005": {
+        "id": "Bärwinkel2016_ONTO_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The composition of Janus particles is described in passage 4, mentioning the PB core.",
+          "The question is specific and relevant to the ontology."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23836
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_ONTO_GAP001": {
+        "id": "Bärwinkel2016_ONTO_GAP001",
+        "score": 0.5,
+        "reasons": [
+          "The term 'raspberry morphology' is not explicitly mentioned in the passages.",
+          "The question uses a specific term but lacks explicit evidence."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23836
+        },
+        "verdict": "borderline"
+      },
+      "Bärwinkel2016_ONTO_GAP002": {
+        "id": "Bärwinkel2016_ONTO_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The method is explicitly stated in passage 4 as size exclusion chromatography (SEC).",
+          "The question is specific and relevant."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23836
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_STU_Q001": {
+        "id": "Bärwinkel2016_STU_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in passage 1, which describes the temperature-induced batch foaming process with CO2.",
+          "The question is specific about the process and materials involved."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23200
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_STU_Q002": {
+        "id": "Bärwinkel2016_STU_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in passage 1, mentioning the buoyancy method according to ISO 1183.",
+          "The question is specific about the measurement method."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23200
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_STU_Q003": {
+        "id": "Bärwinkel2016_STU_Q003",
+        "score": 0.5,
+        "reasons": [
+          "The answer requires a short inference from passage 3, which discusses foaming times and densities.",
+          "The question is somewhat specific but uses generic terms like 'foam densities'."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23200
+        },
+        "verdict": "borderline"
+      },
+      "Bärwinkel2016_STU_Q004": {
+        "id": "Bärwinkel2016_STU_Q004",
+        "score": 0.0,
+        "reasons": [
+          "The passages do not mention the Mw of SAN.",
+          "The question references a value not present in the evidence."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23200
+        },
+        "verdict": "fail"
+      },
+      "Bärwinkel2016_STU_Q005": {
+        "id": "Bärwinkel2016_STU_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in passage 3, describing the Janus particles as PS-PB-PMMA triblock terpolymers.",
+          "The question is specific about the components of the Janus particles."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23200
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_STU_GAP001": {
+        "id": "Bärwinkel2016_STU_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in passage 1, which describes the temperature-induced batch foaming process with CO2.",
+          "The question is specific about the process and materials involved."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23200
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_STU_GAP002": {
+        "id": "Bärwinkel2016_STU_GAP002",
+        "score": 0.5,
+        "reasons": [
+          "The answer requires a short inference from passage 4, which discusses Janus particles' interfacial activity.",
+          "The question is somewhat specific but uses generic terms like 'compatibilizers'."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23200
+        },
+        "verdict": "borderline"
+      },
+      "Bärwinkel2016_PHD_Q001": {
+        "id": "Bärwinkel2016_PHD_Q001",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23978
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PHD_Q002": {
+        "id": "Bärwinkel2016_PHD_Q002",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23978
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PHD_Q003": {
+        "id": "Bärwinkel2016_PHD_Q003",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23978
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PHD_Q004": {
+        "id": "Bärwinkel2016_PHD_Q004",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23978
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PHD_Q005": {
+        "id": "Bärwinkel2016_PHD_Q005",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23978
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PHD_GAP001": {
+        "id": "Bärwinkel2016_PHD_GAP001",
+        "score": 0.75,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23978
+        },
+        "verdict": "pass"
+      },
+      "Bärwinkel2016_PHD_GAP002": {
+        "id": "Bärwinkel2016_PHD_GAP002",
+        "score": 0.3,
+        "reasons": [
+          "The question refers to SBM triblock terpolymers, which are not explicitly discussed in the evidence passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 8,
+          "n_passages_in_pool": 19,
+          "evidence_chars": 23978
+        },
+        "verdict": "fail"
+      }
+    },
+    "questions_to_refine": [
+      "Bärwinkel2016_SYNTH_Q002",
+      "Bärwinkel2016_SYNTH_Q004",
+      "Bärwinkel2016_PROC_Q004",
+      "Bärwinkel2016_COMP_GAP001",
+      "Bärwinkel2016_ONTO_Q003",
+      "Bärwinkel2016_ONTO_GAP001",
+      "Bärwinkel2016_STU_Q003",
+      "Bärwinkel2016_STU_Q004",
+      "Bärwinkel2016_STU_GAP002",
+      "Bärwinkel2016_PHD_GAP002"
+    ],
+    "n_total": 49,
+    "n_pass": 39,
+    "n_borderline": 8,
+    "n_fail": 2
+  },
+  "refined_questions": {
+    "SYNTH": [
+      {
+        "id": "Bärwinkel2016_SYNTH_Q002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "Under what pressure, temperature, and duration conditions were the PPE/SAN blend specimens saturated with CO2 prior to the foaming experiments?",
+        "expected_answer": "The samples were saturated with CO2 at 40 bar and 40 °C for at least 24 hours.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation pressure"
+          },
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The specific saturation conditions (40 bar, 40 °C, 24 h) are explicitly stated in the text under the 'Foaming Experiments' and 'Mass Uptake' sections, correcting the validator's claim that they were not present."
+      },
+      {
+        "id": "Bärwinkel2016_SYNTH_Q004",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was a foaming time of 10 seconds selected as the optimum processing parameter compared to 30 seconds?",
+        "expected_answer": "A shorter foaming time of 10 s resulted in lower foam densities, whereas 30 s was expected to lead to further cell growth and cell coalescence, resulting in thicker cell walls and collapsed cells.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foaming time"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      }
+    ],
+    "PROC": [
+      {
+        "id": "Bärwinkel2016_PROC_Q004",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does the concentration of Janus particles (JPs) influence the average cell size of PPE/SAN blend foams, and what is the specific JP content that yields the lowest cell size?",
+        "expected_answer": "The average foam cell size decreases with increasing amount of JP because smaller PPE domain sizes provide increased foam nucleation sites. The lowest cell size (900 nm) is achieved with the blend compatibilized with 5 wt% JPs.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus particles"
+          },
+          {
+            "role": "property",
+            "term": "average cell size"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question and answer were revised to explicitly include the specific value (900 nm) and condition (5 wt% JPs) which are stated in Passage 1, correcting the validator's claim that this information was missing."
+      }
+    ],
+    "COMP": [
+      {
+        "id": "Bärwinkel2016_COMP_GAP001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the weight percentage of Janus particles (JPs) affect the PPE droplet diameter in PPE/SAN blends, and what is the specific diameter at 10 wt% JP?",
+        "expected_answer": "Increasing the amount of JPs reduces the PPE droplet diameter and improves homogeneity. At 10 wt% JP, the PPE droplet diameter is decreased to around 300 nm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus nanoparticles"
+          },
+          {
+            "role": "property",
+            "term": "droplet diameter"
+          },
+          {
+            "role": "individual",
+            "term": "poly(2,6-dimethyl-1,4-phenylene ether)"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly ask for the specific diameter value (300 nm) mentioned in the text to ensure the answer is directly extractable without inference, and the source section was updated to reflect the location of the evidence."
+      }
+    ],
+    "ONTO": [
+      {
+        "id": "Bärwinkel2016_ONTO_Q003",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What ontology class should 'Janus particles' be assigned to, and what specific property links them to the PPE/SAN blend in the context of compatibilization as described in the text?",
+        "expected_answer": "Class: Material; Property: usedAsCompatibilizer (or hasRole: compatibilizer)",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Material"
+          },
+          {
+            "role": "property",
+            "term": "hasComonomer"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly reference the term 'compatibilizer' found in the text (e.g., 'used as compatibilizer') to ensure the answer is grounded in the evidence, and the source section was updated to reflect the location of the experimental details."
+      },
+      {
+        "id": "Bärwinkel2016_ONTO_GAP001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the Janus particles and the 'raspberry morphology' described in the paper?",
+        "expected_answer": "(Janus particles, producesMorphology, raspberry morphology)",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus nanoparticles"
+          },
+          {
+            "role": "property",
+            "term": "producesMorphology"
+          },
+          {
+            "role": "individual",
+            "term": "raspberry morphology"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly include the term 'raspberry morphology' which is present in the text (Passage 4 and 5), correcting the validator's false claim that the term was missing."
+      }
+    ],
+    "STU": [
+      {
+        "id": "Bärwinkel2016_STU_Q003",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was a foaming time of 10 seconds chosen as the optimum value compared to 30 seconds for the PPE/SAN blends?",
+        "expected_answer": "A foaming time of 10 seconds was chosen because it resulted in lower foam densities, whereas a 30-second exposure was expected to lead to further cell growth and coalescence, resulting in higher densities.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foaming time"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly mention the specific foaming times (10s vs 30s) and the resulting density trade-off, which is supported by the correlation data in the text."
+      },
+      {
+        "id": "Bärwinkel2016_STU_Q004",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the weight-average molecular weight (Mw) of the poly(styrene-co-acrylonitrile) (SAN) used in the experiments?",
+        "expected_answer": "The weight-average molecular weight (Mw) of the SAN is 122,000 g/mol (or 122 kg mol/C0 1).",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(styrene-co-acrylonitrile)"
+          },
+          {
+            "role": "property",
+            "term": "weight-average molecular weight (Mw)"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages do not contain the specific molecular weight value for SAN, making it impossible to answer based solely on the text.",
+        "unrepairable": true
+      },
+      {
+        "id": "Bärwinkel2016_STU_GAP002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why were Janus nanoparticles used as compatibilizers for the immiscible PPE/SAN blend instead of other alternatives?",
+        "expected_answer": "Janus nanoparticles were used because they provide finer morphologies compared to other compatibilizer alternatives and possess higher interfacial activities.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus nanoparticles"
+          },
+          {
+            "role": "class",
+            "term": "compatibilizer"
+          },
+          {
+            "role": "property",
+            "term": "interfacial activity"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      }
+    ],
+    "PHD": [
+      {
+        "id": "Bärwinkel2016_PHD_GAP002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "COMPARATIVE",
+        "question": "How does the effect of Janus particles on the morphology of PPE/SAN blends compare to that of neat (uncompatibilized) blends as reported in the results?",
+        "expected_answer": "Janus particles result in finer morphologies with significantly reduced PPE droplet diameters (down to ~300 nm) and more homogeneous distributions compared to the irregular-shaped domains seen in neat blends.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Janus nanoparticles"
+          },
+          {
+            "role": "individual",
+            "term": "PS-b-PB-b-PMMA"
+          },
+          {
+            "role": "property",
+            "term": "interfacial tension"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question referenced SBM triblock terpolymers which are not the primary comparison in the provided evidence; the revision shifts the comparison to neat blends which are explicitly described in the text as having irregular domains versus the fine, homogeneous morphology achieved with Janus particles."
+      }
+    ]
+  },
+  "evaluation": {
+    "status": "reference_free",
+    "schema_version": "v2.1",
+    "paper_id": "Bärwinkel2016",
+    "n_questions": 49,
+    "overall_score": 0.691,
+    "weights": {
+      "coverage": 0.38,
+      "question_faithfulness": 0.44,
+      "diversity": 0.12,
+      "triplifiability": 0.06
+    },
+    "families": {
+      "coverage": {
+        "score": 0.459,
+        "concepts": {
+          "total": 80,
+          "referenced": 43,
+          "ratio": 0.537
+        },
+        "properties": {
+          "total": 45,
+          "referenced": 19,
+          "ratio": 0.422
+        },
+        "relations": {
+          "total": 60,
+          "referenced": 19,
+          "ratio": 0.317
+        },
+        "uncovered_concept_examples": [
+          "acoustic insulation",
+          "autoclave",
+          "basf ag",
+          "berens et al. method",
+          "brabender lab station",
+          "crank equation",
+          "energy absorption",
+          "field emission scanning electron microscope",
+          "hot hydraulic press",
+          "imagej software"
+        ]
+      },
+      "question_faithfulness": {
+        "score": 1.0,
+        "mean_cosine": 0.804,
+        "min_cosine": 0.71,
+        "n_well_faithful": 49,
+        "n_weak": 0,
+        "n_off_paper": 0,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        },
+        "weakest_example": {
+          "question_id": "Bärwinkel2016_ONTO_Q005",
+          "question": "Which triple captures the structural composition of the Janus particles regarding their core?",
+          "max_cosine": 0.7102111577987671
+        }
+      },
+      "diversity": {
+        "score": 0.315,
+        "mean_pairwise_cos": 0.685,
+        "max_pairwise_cos": 0.988,
+        "n_near_duplicates": 19,
+        "dup_threshold": 0.92
+      },
+      "triplifiability": {
+        "score": 0.643,
+        "pct_full_triples": 0.286,
+        "pct_partial": 0.714
+      }
+    },
+    "diagnostics": {
+      "answer_verifiability": {
+        "mean_cosine": 0.712,
+        "min_cosine": 0.564,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        }
+      },
+      "specificity": {
+        "score": 0.842,
+        "avg_question_chars": 121.7,
+        "pct_with_numeric_value": 0.673,
+        "pct_with_unit": 0.286,
+        "pct_referencing_concept": 1.0
+      }
+    },
+    "reproducibility": {
+      "pipeline_version": "v2.1",
+      "models": {
+        "metadata_extractor": "qwen3.5:27b",
+        "iterative_extractor": "qwen3.6:35b-a3b",
+        "cq_generator": "gemma4:31b",
+        "cq_validator": "deepseek-r1:32b",
+        "cq_refiner": "qwen3.5:35b",
+        "_embedding_model": "BAAI/bge-small-en-v1.5",
+        "_embedding_backend": "local (sentence-transformers)",
+        "_embedding_dim": 384,
+        "_note": "Three distinct LLM families (Qwen / Gemma / DeepSeek) across stages for cross-family diversity. Embeddings via LOCAL sentence-transformers (deterministic, no network) because the shared Ollama bge-m3 endpoint is unreliable from inside long-running pipeline processes (see history v1.3). All LLM calls use think=false + format=json on the client.",
+        "_history": [
+          "v0: cq_generator=llama4:scout -> failed to produce JSON output; switched to qwen3:32b + format=json.",
+          "v0.5: all stages on qwen3:32b/deepseek-r1:32b; embedder local BAAI/bge-small-en-v1.5.",
+          "v1.0: per-stage model selection, bge-m3 via Ollama, refiner added, evaluator reduced to 5 reference-free families.",
+          "v1.1: reverted embedder to local BAAI/bge-small-en-v1.5 because the shared Ollama bge-m3 endpoint was returning 500s. Added per-question evidence retrieval in validator + refiner to fix a truncation bug (was capping evidence at 7000 chars regardless of how many passages were available).",
+          "v1.2: switched embedder back to bge-m3 via Ollama after a probe showed the endpoint was responsive when called with proper exponential-backoff retry. Added 1s process-wide throttling between embed calls.",
+          "v1.3 (this version): reverted to local BAAI/bge-small-en-v1.5. The bge-m3 Ollama path stays healthy in isolation (standalone curl + Python) but the long-running pipeline process gets sustained 500s in stages 5-6, even with exponential backoff, 1s throttling, AND Connection: close to force fresh TCP per call. Most likely cause is the shared upstream evicting bge-m3 from memory while the heavy LLMs (gemma4:31b, deepseek-r1:32b) are loaded, with the eviction window outlasting our 230s retry budget. Local sentence-transformers is slightly lower quality (384-dim vs 1024) but always finishes."
+        ]
+      },
+      "validator_pass_threshold_per_question": null,
+      "coverage_gap_pass": {
+        "enabled": true,
+        "max_gap_concepts": 8
+      },
+      "rolling_state_caps": {
+        "concepts": 80,
+        "relations": 60,
+        "properties": 60,
+        "findings": 40
+      },
+      "embedder_dim": 384
+    }
+  }
+}

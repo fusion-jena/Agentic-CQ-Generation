@@ -1,0 +1,2614 @@
+{
+  "archetype": "ENTITY_LOOKUP",
+  "pipeline_step": "cross_paper_generalization",
+  "pipeline_version": "v2",
+  "step_version": "step2_v1.0",
+  "generalize_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "generalize_prompt_v1.0",
+    "source_dir": "data/papers/v2/dedup/"
+  },
+  "arch_stats": {
+    "n_input_cqs": 93,
+    "n_gen_cqs": 96,
+    "n_papers": 14,
+    "wall_time": "5m 54s 350ms"
+  },
+  "generalized_cqs": [
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_001",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the weight-average molecular weight (Mw) and composition of a specific copolymer used in blends?",
+      "abstraction_reasoning": "PATTERN: Questions asking for Mw and composition of a copolymer. | ENTITY MAPPING: SAN -> Copolymer, PMMA -> Copolymer. | WHY NARROW: Only two papers (Bärwinkel2016 and Reglero2011) ask about specific copolymers' Mw and composition.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_005",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_SYNTH_Q005",
+          "question": "What is the weight-average molecular weight (Mw) and the composition of the SAN copolymer used in the blends?",
+          "expected_answer": "The SAN is a poly(styrene-co-acrylonitrile) with an Mw of 122 kg/mol.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_007",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_CHAR_Q001",
+          "question": "What is the weight average molar mass (Mw) of the neat polystyrene (PS) used in the study?",
+          "expected_answer": "140,000 g/mol",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Materials"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_002",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the reported glass transition temperature (Tg) of a specific polymer or copolymer component?",
+      "abstraction_reasoning": "PATTERN: Questions about Tg of polymers. | ENTITY MAPPING: PB -> Copolymer, PEMA -> Polymer. | WHY NARROW: Only two papers (Bärwinkel2016 and Costeux2013) ask about specific polymers' Tg.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_009",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_CHAR_Q002",
+          "question": "What was the reported glass transition temperature (Tg) of the cross-linked polybutadiene (PB) core of the Janus particles?",
+          "expected_answer": "Around 0 °C.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Costeux2013_DEDUP_013",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_CHAR_GAP002",
+          "question": "What was the reported glass transition temperature (Tg) for the acrylic polymer PEMA?",
+          "expected_answer": "Tg = 76.6 °C",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_003",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the reported cell nucleation density (N0) for specific polymer foams?",
+      "abstraction_reasoning": "PATTERN: Questions about cell nucleation density. | ENTITY MAPPING: PMMA -> Polymer, MMA-co-EMA -> Copolymer. | WHY NARROW: Only two papers (Costeux2014 and Costeux2013) ask about specific polymers' N0.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_009",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_CHAR_Q004",
+          "question": "What is the reported cell nucleation density (N0) for the PMMA foams produced by Handa et al. using the retrograde vitrification strategy?",
+          "expected_answer": "The cell density N0 was near 4 x 10^13/cm3.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Costeux2014_DEDUP_011",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_CHAR_GAP001",
+          "question": "What was the reported cell nucleation density for the high porosity foam produced from high molecular weight MMA-co-EMA copolymer using an optimized 2S process?",
+          "expected_answer": "1.6 x 10^16/cm3",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_004",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What equation of state (EOS) was used to fit polymer-CO2 mixture density?",
+      "abstraction_reasoning": "PATTERN: Questions about EOS for CO2-polymer mixtures. | ENTITY MAPPING: PC-SAFT -> EOS, SL-EOS -> EOS. | WHY NARROW: Only two papers (Costeux2013 and Jacobs2007) use EOS in this context.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2013",
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_018",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_COMP_Q001",
+          "question": "Which equation of state (EOS) was used to fit the apparent mass and polymer-CO2 mixture density to determine CO2 solubility?",
+          "expected_answer": "The perturbed chain statistical associating fluid theory equation of state (PC-SAFT EOS).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental Section"
+        },
+        {
+          "step1_id": "Jacobs2007_DEDUP_014",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_COMP_Q001",
+          "question": "Which equation of state (EOS) was used to estimate polymer swelling and correct the CO2 sorption isotherms?",
+          "expected_answer": "The Sanchez-Lacombe equation of state (SL-EOS).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_005",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the typical range of porosity for nanocellular foams?",
+      "abstraction_reasoning": "PATTERN: Questions about porosity ranges. | ENTITY MAPPING: Nanocellular foams -> Foams. | WHY NARROW: Only one paper (Costeux2013) asks this.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_028",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_STU_Q002",
+          "question": "What is the typical range of porosity for the nanocellular foams reported in the conclusions?",
+          "expected_answer": "The porosities are in the range of 60–70%.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_006",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the expected application for nanocellular foams?",
+      "abstraction_reasoning": "PATTERN: Questions about applications of nanocellular foams. | ENTITY MAPPING: Nanocellular foams -> Foams. | WHY NARROW: Only one paper (Costeux2013) asks this.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_031",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_STU_Q005",
+          "question": "What is the expected application for nanocellular foams mentioned in the study?",
+          "expected_answer": "A major application expected from nanocellular foams is thermal insulation.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_007",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the cell size of specific polymer nanocellular foams?",
+      "abstraction_reasoning": "PATTERN: Questions about cell sizes. | ENTITY MAPPING: PEMA -> Polymer, PS60/PMMA40 -> Copolymer blend. | WHY NARROW: Only two papers (Costeux2014 and Liu2019) ask about specific polymers' cell sizes.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2014",
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_031",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_STU_Q001",
+          "question": "According to Table I, what is the cell size of PEMA nanocellular foams produced using a two-step process at 60°C?",
+          "expected_answer": "The cell size is 345 nm.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Liu2019_DEDUP_027",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_STU_Q004",
+          "question": "What was the saturation time used for the PS60/PMMA40 blend samples in the CO2 atmosphere?",
+          "expected_answer": "The samples were kept in CO2 atmosphere for 48h.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_008",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the effect of CO2 on the glass transition temperature (Tg) and melting temperature (Tm) of polymers?",
+      "abstraction_reasoning": "PATTERN: Questions about CO2 effects on Tg and Tm. | ENTITY MAPPING: PMMA -> Polymer, PS -> Polymer. | WHY NARROW: Only two papers (Di Maio2018 and Otsuka2008) discuss this effect.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Di Maio2018",
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_031",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_STU_Q001",
+          "question": "How does the presence of dissolved carbon dioxide affect the glass transition temperature (Tg) and melting temperature (Tm) of polymers?",
+          "expected_answer": "The presence of dissolved carbon dioxide lowers (depresses) both the glass transition temperature (Tg) and the melting temperature (Tm) of the polymer.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_011",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_CHAR_Q005",
+          "question": "What is the effect of CO2 sorption pressure of 8.6 MPa on the glass transition temperature (Tg) of PMMA compared to PS?",
+          "expected_answer": "At 8.6 MPa, the Tg of PMMA decreases to 0 °C, while the Tg of PS levels out at 30 °C.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_009",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What is the number-average molecular weight (Mn) and polydispersity of a specific copolymer?",
+      "abstraction_reasoning": "PATTERN: Questions about Mn and polydispersity. | ENTITY MAPPING: Poly(styrene-co-MMA) -> Copolymer, SBM -> Copolymer. | WHY NARROW: Only two papers (Jacobs2007 and Ruiz2011) ask about specific copolymers' Mn.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Jacobs2007",
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_015",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_COMP_Q005",
+          "question": "What is the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in the study?",
+          "expected_answer": "Mn is 76 kg/mol and the polydispersity is 2.2.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_009",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_CHAR_Q002",
+          "question": "What was the reported molecular weight (Mw) for the SBM triblock copolymer?",
+          "expected_answer": "The molecular weight for SBM was 30,000 g/mol.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_010",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the saturation pressure used in a one-step scCO2 foaming process?",
+      "abstraction_reasoning": "PATTERN: Questions about saturation pressures. | ENTITY MAPPING: PMMA + MAM -> Copolymer blend, PA 12 -> Polymer. | WHY NARROW: Only two papers (Reglero2011 and Shah2025) discuss this.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Reglero2011",
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_032",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_STU_Q001",
+          "question": "What is the saturation pressure used in the batch one-step scCO2 foaming process?",
+          "expected_answer": "The saturation pressure used is 300 bar.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Abstract"
+        },
+        {
+          "step1_id": "Shah2025_DEDUP_007",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_CHAR_Q005",
+          "question": "What specific parameter combination was identified as the best for achieving the minimum density of 50 kg/m^3 in PA 12 foams?",
+          "expected_answer": "A pressure of 170 bar, a temperature range of 187 °C–188 °C, and a residence time of 20 min.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Minimizing foam density"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_011",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the average cell size of ultra-microcellular foams?",
+      "abstraction_reasoning": "PATTERN: Questions about average cell sizes. | ENTITY MAPPING: PMMA + MAM -> Copolymer blend, PA 12 -> Polymer. | WHY NARROW: Only two papers (Ruiz2011 and Shah2025) ask this.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Ruiz2011",
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_030",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_STU_Q001",
+          "question": "What is the average cell size of the ultra-microcellular PMMA + MAM foam produced at a depressurization rate of 150 bar/min?",
+          "expected_answer": "The average cell size is 0.3 µm.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Shah2025_DEDUP_008",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_CHAR_GAP002",
+          "question": "What was the average cell size achieved for the PA 12 foam when processed at a saturation pressure of 180 bar?",
+          "expected_answer": "A fine morphology with cell sizes around 31 μm was achieved.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_012",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What mathematical model was used to calculate the diffusion coefficient (D) from mass uptake data?",
+      "abstraction_reasoning": "PATTERN: Questions about models for D calculation. | ENTITY MAPPING: Crank's method -> Mathematical model. | WHY NARROW: Only Bärwinkel2016 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_017",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_COMP_Q001",
+          "question": "What mathematical model was used to calculate the diffusion coefficient (D) from the mass uptake data?",
+          "expected_answer": "The diffusion coefficient was calculated using Equation 1 and Equation 2 based on the method of Crank, where the ratio of mass at time t to mass at equilibrium (Mt/Meq) is plotted over the square root of desorption time to determine the slope (S).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_013",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What ontology class should 'Janus particles' be assigned to?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Janus particles -> Material. | WHY NARROW: Only Bärwinkel2016 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_024",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_ONTO_Q003",
+          "question": "What ontology class should 'Janus particles' be assigned to, and what specific property links them to the PPE/SAN blend in the context of compatibilization as described in the text?",
+          "expected_answer": "Class: Material; Property: usedAsCompatibilizer (or hasRole: compatibilizer)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_014",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What accelerating voltage was used for TEM characterization?",
+      "abstraction_reasoning": "PATTERN: Questions about TEM settings. | ENTITY MAPPING: TEM -> Instrument. | WHY NARROW: Only Costeux2013 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_009",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_CHAR_Q002",
+          "question": "What was the accelerating voltage used for the Transmission electron microscopy (TEM) characterization of the SAN28/PEMA blends?",
+          "expected_answer": "120 kV",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_015",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What energy range was used for STXM x-ray absorption spectra?",
+      "abstraction_reasoning": "PATTERN: Questions about STXM settings. | ENTITY MAPPING: STXM -> Instrument. | WHY NARROW: Only Costeux2013 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_012",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_CHAR_Q005",
+          "question": "What energy range was used for the x-ray absorption spectra collection during Scanning transmission x-ray microscopy (STXM)?",
+          "expected_answer": "280–320 eV",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_016",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the typical range of porosity for nanocellular foams?",
+      "abstraction_reasoning": "PATTERN: Questions about porosity ranges. | ENTITY MAPPING: Nanocellular foams -> Foams. | WHY NARROW: Only Costeux2013 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_028",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_STU_Q002",
+          "question": "What is the typical range of porosity for the nanocellular foams reported in the conclusions?",
+          "expected_answer": "The porosities are in the range of 60–70%.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_017",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the expected application for nanocellular foams?",
+      "abstraction_reasoning": "PATTERN: Questions about applications. | ENTITY MAPPING: Nanocellular foams -> Foams. | WHY NARROW: Only Costeux2013 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_031",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_STU_Q005",
+          "question": "What is the expected application for nanocellular foams mentioned in the study?",
+          "expected_answer": "A major application expected from nanocellular foams is thermal insulation.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_018",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What theoretical framework describes bubble formation in polymer/CO2 systems?",
+      "abstraction_reasoning": "PATTERN: Questions about bubble formation theories. | ENTITY MAPPING: CNT -> Theoretical framework. | WHY NARROW: Only Costeux2014 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_023",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_COMP_GAP002",
+          "question": "What theoretical framework is used to describe the rate of bubble formation in polymer/CO2 systems, and what are its quantitative limitations?",
+          "expected_answer": "The Classical Nucleation Theory (CNT) is used; however, it performs poorly in quantitatively predicting the absolute nuclei production rate, the absolute free energy barrier, or the maximum cell density due to failure to capture polymer/CO2 interactions at the interface of nanoscale bubbles.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_019",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the definition of 'cell nucleation density'?",
+      "abstraction_reasoning": "PATTERN: Ontology definitions. | ENTITY MAPPING: Cell nucleation density -> Property. | WHY NARROW: Only Costeux2014 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_025",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_ONTO_Q002",
+          "question": "What ontology class should the term 'cell nucleation density' be assigned to, and what is its definition in the context of this domain?",
+          "expected_answer": "It should be assigned to the class Property; it refers to the number of effective nuclei that will result in an actual cell in the final foam.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_020",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What class represents 'sample type' descriptors?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Sample types -> Material forms. | WHY NARROW: Only Costeux2014 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_028",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_ONTO_Q005",
+          "question": "What class and property should be used to represent the 'sample type' descriptors such as [CF] solvent cast film and [SF] self-standing film?",
+          "expected_answer": "They should be represented as a class 'SampleType' or 'MaterialForm' linked via a property such as 'hasForm'.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_021",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What attributes constitute 'pore morphology'?",
+      "abstraction_reasoning": "PATTERN: Questions about pore attributes. | ENTITY MAPPING: Pore morphology -> Properties. | WHY NARROW: Only Di Maio2018 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_026",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_ONTO_Q003",
+          "question": "According to the text, what specific attributes constitute 'pore morphology' that influence final foam properties?",
+          "expected_answer": "The attributes are: size distribution, shape, number density, interconnectivity, the shape of the strut among the pores, and the shape of the wall between two pores.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_022",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the effect of CO2 on Tg and Tm?",
+      "abstraction_reasoning": "PATTERN: Questions about CO2 effects. | ENTITY MAPPING: PMMA, PS -> Polymers. | WHY NARROW: Only Di Maio2018 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_031",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_STU_Q001",
+          "question": "How does the presence of dissolved carbon dioxide affect the glass transition temperature (Tg) and melting temperature (Tm) of polymers?",
+          "expected_answer": "The presence of dissolved carbon dioxide lowers (depresses) both the glass transition temperature (Tg) and the melting temperature (Tm) of the polymer.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_023",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What are the most common foaming operations?",
+      "abstraction_reasoning": "PATTERN: Questions about foaming methods. | ENTITY MAPPING: Foaming operations -> Processes. | WHY NARROW: Only Di Maio2018 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_034",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_STU_Q004",
+          "question": "Which three foaming operations are identified as the most common methods for producing polymeric foams?",
+          "expected_answer": "The three most common foaming operations are batch foaming, extrusion foaming, and injection molding foaming.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_024",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the molar mass of PMMA homopolymer?",
+      "abstraction_reasoning": "PATTERN: Questions about PMMA properties. | ENTITY MAPPING: PMMA -> Polymer. | WHY NARROW: Only Dumon2012 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_009",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_CHAR_Q003",
+          "question": "What is the reported molar mass (Mw) of the PMMA homopolymer used in the study?",
+          "expected_answer": "70000 g/mol",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_025",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What is the definition of microcellular foams?",
+      "abstraction_reasoning": "PATTERN: Questions about foam definitions. | ENTITY MAPPING: Microcellular foams -> Foams. | WHY NARROW: Only Dumon2012 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_021",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_COMP_Q003",
+          "question": "What is the reported average cell size range for microcellular polymeric foams as a general definition?",
+          "expected_answer": "Microcellular polymeric foams are defined as porous materials having average cell sizes in the range of 1-10 µm.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_026",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the critical temperature and pressure for supercritical CO2?",
+      "abstraction_reasoning": "PATTERN: Questions about CO2 properties. | ENTITY MAPPING: Supercritical CO2 -> Fluid. | WHY NARROW: Only Dumon2012 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_036",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_STU_Q005",
+          "question": "What are the critical temperature and pressure conditions for supercritical CO2 mentioned in the text?",
+          "expected_answer": "The critical conditions for supercritical CO2 are 31.1°C and 73.8 bar.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_027",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What are the Mn and Mw of PMMA used in Guo2015?",
+      "abstraction_reasoning": "PATTERN: Questions about PMMA properties. | ENTITY MAPPING: PMMA -> Polymer. | WHY NARROW: Only Guo2015 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_001",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_SYNTH_Q001",
+          "question": "What are the number-average (Mn) and weight-average (Mw) molecular weights of the PMMA used in this study?",
+          "expected_answer": "Mn = 71,000 g/mol and Mw = 134,000 g/mol.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_028",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What are the activation energies for CO2 diffusion in PMMA?",
+      "abstraction_reasoning": "PATTERN: Questions about diffusion energies. | ENTITY MAPPING: PMMA -> Polymer. | WHY NARROW: Only Guo2015 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_009",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_CHAR_GAP002",
+          "question": "What are the activation energies (DHD) for CO2 diffusion in PMMA for the four identified diffusion regions?",
+          "expected_answer": "The activation energies are 22.8 kJ/mol for Region 1, -12.6 kJ/mol for Region 2, -57.6 kJ/mol for Region 3, and 39.8 kJ/mol for Region 4.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_029",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What parameters were used in Chow's model for Tg prediction?",
+      "abstraction_reasoning": "PATTERN: Questions about model parameters. | ENTITY MAPPING: Chow's model -> Mathematical model. | WHY NARROW: Only Guo2015 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_018",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_COMP_Q003",
+          "question": "What specific parameters were used for the implementation of Chow's model to predict the Tg of the PMMA-CO2 system?",
+          "expected_answer": "The lattice coordination number z = 2 and the excess transition isobaric specific heat of the polymer DCpp = 0.265 J K-1 g-1.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_030",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the 'rubbery state' and 'glassy state' in PMMA-CO2 systems?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: States -> Material states. | WHY NARROW: Only Guo2015 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_025",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_ONTO_Q003",
+          "question": "What ontology class should the 'rubbery state' and 'glassy state' of the PMMA-CO2 system be represented as?",
+          "expected_answer": "They should be represented as subclasses of a 'Physical State' or 'Material State' class.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_031",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What class represents the Arrhenius equation?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Arrhenius equation -> Mathematical model. | WHY NARROW: Only Guo2015 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_028",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_ONTO_GAP002",
+          "question": "What ontology class should the 'Arrhenius equation' be assigned to when representing the temperature dependence of diffusivity?",
+          "expected_answer": "A subclass of Method or Model (specifically a mathematical model used to characterize a property).",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_032",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the Tg of neat PMMA?",
+      "abstraction_reasoning": "PATTERN: Questions about Tg. | ENTITY MAPPING: PMMA -> Polymer. | WHY NARROW: Only Guo2015 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_029",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_STU_Q001",
+          "question": "What is the glass transition temperature (Tg) of neat PMMA?",
+          "expected_answer": "The glass transition temperature (Tg) of neat PMMA was measured to be 103 °C.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_033",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the relationship between saturation temperature and CO2 solubility?",
+      "abstraction_reasoning": "PATTERN: Questions about solubility relationships. | ENTITY MAPPING: Saturation temperature -> Condition. | WHY NARROW: Only Guo2015 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_032",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_STU_Q004",
+          "question": "What is the relationship between the saturation temperature and the solubility of CO2 in PMMA?",
+          "expected_answer": "Solubility increases as the saturation temperature decreases; for example, it increases ten-fold from 3.9% at 100 °C to 39.3% at -30 °C.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_034",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What is the Mn of poly(styrene-co-MMA)?",
+      "abstraction_reasoning": "PATTERN: Questions about copolymer properties. | ENTITY MAPPING: Poly(styrene-co-MMA) -> Copolymer. | WHY NARROW: Only Jacobs2007 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_015",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_COMP_Q005",
+          "question": "What is the number-average molecular weight (Mn) and polydispersity of the poly(styrene-co-methyl methacrylate) used in the study?",
+          "expected_answer": "Mn is 76 kg/mol and the polydispersity is 2.2.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_035",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What is the EOS used for CO2 sorption correction?",
+      "abstraction_reasoning": "PATTERN: Questions about EOS usage. | ENTITY MAPPING: SL-EOS -> EOS model. | WHY NARROW: Only Jacobs2007 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_014",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_COMP_Q001",
+          "question": "Which equation of state (EOS) was used to estimate polymer swelling and correct the CO2 sorption isotherms?",
+          "expected_answer": "The Sanchez-Lacombe equation of state (SL-EOS).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_036",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the 'depressurization rate' ontology class?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Depressurization rate -> Condition. | WHY NARROW: Only Jacobs2007 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_020",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_Q003",
+          "question": "What ontology class should the 'depressurization rate' be assigned to based on its role in controlling foam morphology?",
+          "expected_answer": "Condition",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_037",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the saturation time for CO2 treatment?",
+      "abstraction_reasoning": "PATTERN: Questions about saturation times. | ENTITY MAPPING: Saturation time -> Condition. | WHY NARROW: Only Liu2019 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_008",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_CHAR_Q002",
+          "question": "What was the saturation time and temperature used for the CO2 atmosphere treatment of the blend samples?",
+          "expected_answer": "The samples were kept at room temperature for 48h.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_038",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What SEM conditions were used?",
+      "abstraction_reasoning": "PATTERN: Questions about SEM settings. | ENTITY MAPPING: SEM -> Instrument. | WHY NARROW: Only Liu2019 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_011",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_CHAR_Q005",
+          "question": "What instrument conditions were applied during the SEM investigation of the cell structures of the PS60/PMMA40 foam samples?",
+          "expected_answer": "A Zeiss EVO18 SEM was used at an operating voltage of 20kV, with samples cryogenically fractured in liquid nitrogen and sputtered with a layer of gold.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_039",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the 'saturation pressure' ontology class?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Saturation pressure -> Condition. | WHY NARROW: Only Liu2019 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_021",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_ONTO_Q003",
+          "question": "In the study of PS60/PMMA40 blend foaming, 'saturation pressure' is a key parameter. Based on the text describing the 'suitable foaming temperature window' and the conditions required for well-foamed samples, which ontology class (Material, Process, Property, Method, Condition, or Instrument) should 'saturation pressure' be assigned to?",
+          "expected_answer": "Condition",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_040",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the 'lower foaming temperature (TL)' class?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Lower foaming temp -> Condition. | WHY NARROW: Only Liu2019 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_024",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_ONTO_GAP002",
+          "question": "The text defines the 'lower foaming temperature (TL)' as a limit determined by the stiffness of the polymer system to ensure well-foamed samples. Based on this description, what ontology class should 'lower foaming temperature (TL)' be assigned to, and which data property would capture its numeric value?",
+          "expected_answer": "It should be assigned to the Property class (or a subclass of TemperatureProperty), and a data property such as hasTemperature would capture its numeric value.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_041",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the saturation time for PS60/PMMA40 blends?",
+      "abstraction_reasoning": "PATTERN: Questions about saturation times. | ENTITY MAPPING: Saturation time -> Condition. | WHY NARROW: Only Liu2019 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_027",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_STU_Q004",
+          "question": "What was the saturation time used for the PS60/PMMA40 blend samples in the CO2 atmosphere?",
+          "expected_answer": "The samples were kept in CO2 atmosphere for 48h.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_042",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the Mn of PMMA polymerized in PS matrix?",
+      "abstraction_reasoning": "PATTERN: Questions about PMMA properties. | ENTITY MAPPING: PMMA -> Polymer. | WHY NARROW: Only Otsuka2008 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_008",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_CHAR_Q002",
+          "question": "What was the calculated weight averaged molecular weight of the PMMA polymerized within the PS matrix?",
+          "expected_answer": "2.20 x 10^6 g/mol.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_043",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the effect of CO2 pressure on Tg of PMMA vs PS?",
+      "abstraction_reasoning": "PATTERN: Questions about CO2 effects. | ENTITY MAPPING: PMMA, PS -> Polymers. | WHY NARROW: Only Otsuka2008 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_011",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_CHAR_Q005",
+          "question": "What is the effect of CO2 sorption pressure of 8.6 MPa on the glass transition temperature (Tg) of PMMA compared to PS?",
+          "expected_answer": "At 8.6 MPa, the Tg of PMMA decreases to 0 °C, while the Tg of PS levels out at 30 °C.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_044",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What chemical agent was used to treat non-foamed samples?",
+      "abstraction_reasoning": "PATTERN: Questions about treatment agents. | ENTITY MAPPING: Acetic acid -> Chemical agent. | WHY NARROW: Only Otsuka2008 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_012",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_CHAR_GAP002",
+          "question": "What chemical agent was used to treat the surface of the non-foamed samples to enable the observation of the phase morphology of the blended polymer?",
+          "expected_answer": "Acetic acid was used to remove the PMMA domains in the PS matrix.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_045",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What method was used to calculate cell diameter and density?",
+      "abstraction_reasoning": "PATTERN: Questions about calculation methods. | ENTITY MAPPING: Kumar et al.'s method -> Mathematical model. | WHY NARROW: Only Otsuka2008 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_020",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_COMP_Q003",
+          "question": "What quantitative method was used to calculate the average cell diameter and cell density from the SPM images?",
+          "expected_answer": "The calculation method proposed by Kumar et al. [9] was employed.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_046",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the 'depressurization rate' ontology class?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Depressurization rate -> Condition. | WHY NARROW: Only Otsuka2008 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_025",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_ONTO_Q003",
+          "question": "What ontology class should 'depressurization rate' be assigned to, and what data property would capture its value?",
+          "expected_answer": "It should be a subclass of Condition, and its value would be captured by a data property such as hasDepressurizationRate.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_047",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the 'acetic acid' ontology class?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Acetic acid -> Chemical agent. | WHY NARROW: Only Otsuka2008 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_029",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_ONTO_GAP002",
+          "question": "What ontology class should 'acetic acid' be assigned to, given its use in removing PMMA domains to observe phase morphology?",
+          "expected_answer": "It should be represented as a subclass of Material, specifically as a ChemicalAgent or Solvent, linked to the morphology observation process via a property such as 'usedForTreatment'.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_048",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the composition of MAM triblock copolymer?",
+      "abstraction_reasoning": "PATTERN: Questions about copolymer composition. | ENTITY MAPPING: MAM -> Copolymer. | WHY NARROW: Only Reglero2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_005",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_SYNTH_Q005",
+          "question": "What is the weight percentage composition of the MAM triblock copolymer?",
+          "expected_answer": "The MAM copolymer consists of 35 wt% methacrylate, 30 wt% butylacrylate, and 35 wt% methacrylate.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_049",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the Mw of neat PS?",
+      "abstraction_reasoning": "PATTERN: Questions about PS properties. | ENTITY MAPPING: PS -> Polymer. | WHY NARROW: Only Reglero2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_007",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_CHAR_Q001",
+          "question": "What is the weight average molar mass (Mw) of the neat polystyrene (PS) used in the study?",
+          "expected_answer": "140,000 g/mol",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Materials"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_050",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the 'depressurization rate' class?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Depressurization rate -> Condition. | WHY NARROW: Only Reglero2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_010",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_CHAR_Q004",
+          "question": "What was the constant depressurization rate applied during the foaming process?",
+          "expected_answer": "60 bar/min",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_051",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the Mw of neat PMMA?",
+      "abstraction_reasoning": "PATTERN: Questions about PMMA properties. | ENTITY MAPPING: PMMA -> Polymer. | WHY NARROW: Only Reglero2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_012",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_CHAR_GAP002",
+          "question": "What is the reported weight average molecular weight (Mw) of the neat poly(methyl methacrylate) (PMMA) used in the study?",
+          "expected_answer": "70,000 g/mol",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Materials"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_052",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What model estimates depressed Tg?",
+      "abstraction_reasoning": "PATTERN: Questions about Tg models. | ENTITY MAPPING: Hwang's model -> Theoretical framework. | WHY NARROW: Only Reglero2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_019",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_COMP_Q001",
+          "question": "Which theoretical model was used to estimate the depressed glass transition temperature (Tg) of the polymer-gas system?",
+          "expected_answer": "Hwang's model (developed by Hwang et al.).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_053",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What inputs are needed for Hwang's model?",
+      "abstraction_reasoning": "PATTERN: Questions about model inputs. | ENTITY MAPPING: Mp, w, Tg0, rs -> Parameters. | WHY NARROW: Only Reglero2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_022",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_COMP_Q004",
+          "question": "What input features (material constants) are required for the calculation of the depressed glass transition temperature in Hwang's model?",
+          "expected_answer": "The required inputs are the weight average molar mass of the polymer (Mp), the weight fraction of CO2 absorbed (w), the glass transition temperature of the polymer (Tg0), and the specific density of the polymer (rs).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_054",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the 'depressurization rate' class?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Depressurization rate -> Condition. | WHY NARROW: Only Reglero2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_026",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_ONTO_Q002",
+          "question": "What ontology class should the 'depressurization rate' be assigned to, and what data property would capture its value of 60 bar/min?",
+          "expected_answer": "It should be assigned to the class Condition, and the value would be captured by a data property such as hasDepressurizationRate.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_055",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What nano-structural morphology is observed in PMMA + MAM blends?",
+      "abstraction_reasoning": "PATTERN: Questions about morphologies. | ENTITY MAPPING: Worm-like micelles -> Morphology. | WHY NARROW: Only Reglero2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_031",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_ONTO_GAP002",
+          "question": "In the PMMA + MAM blend, what specific nano-structural morphology is observed in the unfoamed material that acts as a CO2 concentrator?",
+          "expected_answer": "Worm-like micelles",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_056",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the composition of SBM triblock copolymer?",
+      "abstraction_reasoning": "PATTERN: Questions about copolymer composition. | ENTITY MAPPING: SBM -> Copolymer. | WHY NARROW: Only Ruiz2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_005",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_SYNTH_Q005",
+          "question": "What is the monomer composition and the molar mass of the PS block for the SBM triblock copolymer?",
+          "expected_answer": "The composition is 52 wt% styrene, 30 wt% butadiene, and 18 wt% methylmethacrylate, with a PS block molar mass of 30,000 g/mol.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_057",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the Mn of SBM triblock copolymer?",
+      "abstraction_reasoning": "PATTERN: Questions about copolymer properties. | ENTITY MAPPING: SBM -> Copolymer. | WHY NARROW: Only Ruiz2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_009",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_CHAR_Q002",
+          "question": "What was the reported molecular weight (Mw) for the SBM triblock copolymer?",
+          "expected_answer": "The molecular weight for SBM was 30,000 g/mol.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_058",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the depressed Tg of PS + SBM blend?",
+      "abstraction_reasoning": "PATTERN: Questions about Tg depression. | ENTITY MAPPING: PS, SBM -> Polymers. | WHY NARROW: Only Ruiz2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_012",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_CHAR_Q005",
+          "question": "What was the depressed glass transition temperature (Tg) predicted for the PS + SBM blend under saturation conditions of 300 bar and 40 °C?",
+          "expected_answer": "The depressed glass transition temperature for PS + SBM was 39 °C.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_059",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the Tg of neat MAM terpolymer?",
+      "abstraction_reasoning": "PATTERN: Questions about Tg. | ENTITY MAPPING: MAM -> Polymer. | WHY NARROW: Only Ruiz2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_014",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_CHAR_GAP002",
+          "question": "What was the reported glass transition temperature (Tg0) for the MAM terpolymer as detected by DSC?",
+          "expected_answer": "95 °C",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_060",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the 'depressurization rate' class?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Depressurization rate -> Condition. | WHY NARROW: Only Ruiz2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_026",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_ONTO_Q003",
+          "question": "What ontology class should 'depressurization rate' be assigned to, and what is its reported value for the foaming process?",
+          "expected_answer": "It should be assigned to the class Condition; the reported value is 60 bar/min.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_061",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What phenomenon is 'swelling and plasticization'?",
+      "abstraction_reasoning": "PATTERN: Questions about phenomena. | ENTITY MAPPING: Swelling, plasticization -> Phenomena. | WHY NARROW: Only Ruiz2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_029",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_ONTO_GAP002",
+          "question": "What ontology class should the 'swelling and plasticization' phenomenon be assigned to, and which property would link it to the 'supercritical carbon dioxide' that induces it in the one-step process?",
+          "expected_answer": "The 'swelling and plasticization' phenomenon should be a subclass of Property (or Phenomenon), and the property linking it to supercritical carbon dioxide would be 'inducedBy' or 'causedBy'.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_062",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the average cell size of PMMA + MAM foam?",
+      "abstraction_reasoning": "PATTERN: Questions about cell sizes. | ENTITY MAPPING: PMMA, MAM -> Polymers. | WHY NARROW: Only Ruiz2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_030",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_STU_Q001",
+          "question": "What is the average cell size of the ultra-microcellular PMMA + MAM foam produced at a depressurization rate of 150 bar/min?",
+          "expected_answer": "The average cell size is 0.3 µm.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_063",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What are the components of SBM triblock copolymer?",
+      "abstraction_reasoning": "PATTERN: Questions about copolymer composition. | ENTITY MAPPING: SBM -> Copolymer. | WHY NARROW: Only Ruiz2011 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_034",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_STU_Q005",
+          "question": "What are the three components that make up the SBM triblock copolymer?",
+          "expected_answer": "The SBM triblock copolymer consists of styrene, butadiene, and methylmethacrylate.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_064",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the lowest foam density for PA 12?",
+      "abstraction_reasoning": "PATTERN: Questions about foam densities. | ENTITY MAPPING: PA 12 -> Polymer. | WHY NARROW: Only Shah2025 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_004",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_CHAR_Q002",
+          "question": "What was the lowest recorded foam density achieved for the polyamide 12 foams?",
+          "expected_answer": "50 kg/m^3",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Minimizing foam density"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_065",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What parameter combination minimizes foam density?",
+      "abstraction_reasoning": "PATTERN: Questions about optimization parameters. | ENTITY MAPPING: Pressure, temp, time -> Conditions. | WHY NARROW: Only Shah2025 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_007",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_CHAR_Q005",
+          "question": "What specific parameter combination was identified as the best for achieving the minimum density of 50 kg/m^3 in PA 12 foams?",
+          "expected_answer": "A pressure of 170 bar, a temperature range of 187 °C–188 °C, and a residence time of 20 min.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Minimizing foam density"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_066",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the cell size at 180 bar saturation pressure?",
+      "abstraction_reasoning": "PATTERN: Questions about cell sizes. | ENTITY MAPPING: PA 12 -> Polymer. | WHY NARROW: Only Shah2025 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_008",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_CHAR_GAP002",
+          "question": "What was the average cell size achieved for the PA 12 foam when processed at a saturation pressure of 180 bar?",
+          "expected_answer": "A fine morphology with cell sizes around 31 μm was achieved.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_067",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What surrogate model was used in Bayesian optimization?",
+      "abstraction_reasoning": "PATTERN: Questions about optimization models. | ENTITY MAPPING: Gaussian Processes -> Model. | WHY NARROW: Only Shah2025 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_015",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_COMP_Q001",
+          "question": "Which surrogate model and kernel were used within the Bayesian optimization framework to minimize foam density?",
+          "expected_answer": "Gaussian Processes (GP) were used as the surrogate model, employing either the RBF or Matérn kernel.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_068",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What acquisition function was used?",
+      "abstraction_reasoning": "PATTERN: Questions about optimization functions. | ENTITY MAPPING: EI -> Function. | WHY NARROW: Only Shah2025 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_018",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_COMP_Q004",
+          "question": "What acquisition function was employed in the Bayesian optimization process to balance exploration and exploitation?",
+          "expected_answer": "The maximum Expected Improvement (EI) acquisition function was used.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_069",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the 'temperature', 'pressure', and 'saturation time' class?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Conditions -> Parameters. | WHY NARROW: Only Shah2025 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_021",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_ONTO_Q002",
+          "question": "What ontology class should the processing parameters 'temperature', 'pressure', and 'saturation time' be assigned to?",
+          "expected_answer": "Condition",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_070",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What are the primary processing parameters for PA 12 foams?",
+      "abstraction_reasoning": "PATTERN: Questions about processing parameters. | ENTITY MAPPING: Temperature, pressure, time -> Conditions. | WHY NARROW: Only Shah2025 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_025",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_STU_Q004",
+          "question": "What are the primary processing parameters used to influence the density of PA 12 foams?",
+          "expected_answer": "The primary processing parameters are temperature, pressure, and saturation time (or residence time).",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_071",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What are the Mn and dispersity of PMMA?",
+      "abstraction_reasoning": "PATTERN: Questions about PMMA properties. | ENTITY MAPPING: PMMA -> Polymer. | WHY NARROW: Only Shieh2002 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_001",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_SYNTH_Q001",
+          "question": "What were the weight-average molecular weight (Mw) and dispersity (Mw/Mn) of the poly(methyl methacrylate) (PMMA) used in this study?",
+          "expected_answer": "The PMMA had a Mw = 396,000 and a Mw/Mn = 3.72.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_072",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "At what temperature does physisorption occur for PS?",
+      "abstraction_reasoning": "PATTERN: Questions about sorption temperatures. | ENTITY MAPPING: PS -> Polymer. | WHY NARROW: Only Shieh2002 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_006",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_CHAR_Q004",
+          "question": "At what temperature range was the transition from physisorption to chemisorption observed for PMMA?",
+          "expected_answer": "In a temperature range of ~31 to ~37 °C.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_073",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What model describes CO2 sorption isotherms?",
+      "abstraction_reasoning": "PATTERN: Questions about sorption models. | ENTITY MAPPING: Power laws -> Models. | WHY NARROW: Only Shieh2002 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_011",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_COMP_Q001",
+          "question": "Which mathematical model was found to describe the CO2 sorption concentration isotherms better than the dual-mode model for PMMA and PS?",
+          "expected_answer": "Two power laws written as C = kaP^na (for above critical pressure) and C = kbP^nb (for below critical pressure).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_074",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What are the negative apparent activation energies for sorption?",
+      "abstraction_reasoning": "PATTERN: Questions about activation energies. | ENTITY MAPPING: PMMA, PS -> Polymers. | WHY NARROW: Only Shieh2002 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_014",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_COMP_Q005",
+          "question": "What are the calculated negative apparent activation energies for the sorption process in the low-pressure region for PMMA and PS?",
+          "expected_answer": "PMMA: -8.7 x 10^3 J/mol; PS: -5.1 x 10^3 J/mol.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_075",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What chemical groups influence CO2 sorption?",
+      "abstraction_reasoning": "PATTERN: Questions about sorption influences. | ENTITY MAPPING: PMMA, PS -> Polymers. | WHY NARROW: Only Shieh2002 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_021",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_STU_Q001",
+          "question": "What specific chemical groups are present in PMMA and PS that influence their CO2 sorption behavior?",
+          "expected_answer": "PMMA contains carbonyl groups and PS contains phenyl groups.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_076",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the physisorption temperature for PS at 204 atm?",
+      "abstraction_reasoning": "PATTERN: Questions about sorption temperatures. | ENTITY MAPPING: PS -> Polymer. | WHY NARROW: Only Shieh2002 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_024",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_STU_Q004",
+          "question": "According to the study, below what temperature does physisorption occur for Polystyrene (PS) at a pressure of 204 atm?",
+          "expected_answer": "The physisorption for PS is found to be below 32 °C for a pressure of 204 atm.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_077",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What are the Mn and Mw of PP and PS?",
+      "abstraction_reasoning": "PATTERN: Questions about polymer properties. | ENTITY MAPPING: PP, PS -> Polymers. | WHY NARROW: Only Wu2021 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_009",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_CHAR_Q002",
+          "question": "What were the average molecular masses of PP and PS used in the experimental references cited in the study?",
+          "expected_answer": "The average molecular mass of PP was 1.05 × 10^5 g/mol and for PS it was 1.71 × 10^5 g/mol.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_078",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the deviation between predicted and experimental data for PP?",
+      "abstraction_reasoning": "PATTERN: Questions about model accuracy. | ENTITY MAPPING: PP -> Polymer. | WHY NARROW: Only Wu2021 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_011",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_CHAR_Q004",
+          "question": "What was the reported deviation between the predicted values and experimental data for polypropylene (PP) at 453.15 K?",
+          "expected_answer": "The deviation was 3.49%.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_079",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What chain length was used in MD simulations?",
+      "abstraction_reasoning": "PATTERN: Questions about simulation parameters. | ENTITY MAPPING: PP, PS -> Polymers. | WHY NARROW: Only Wu2021 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_012",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_CHAR_Q005",
+          "question": "What specific chain length was assigned to the PP and PS chains for the molecular dynamic simulations?",
+          "expected_answer": "200 repeat units.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_080",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "What are the critical nucleation barriers and radii?",
+      "abstraction_reasoning": "PATTERN: Questions about nucleation parameters. | ENTITY MAPPING: PP-PP/CO2, PS-PS/CO2 -> Systems. | WHY NARROW: Only Wu2021 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_014",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_CHAR_GAP002",
+          "question": "What are the reported critical nucleation barriers and critical radii for bubbles in the PP-PP/CO2 and PS-PS/CO2 domains?",
+          "expected_answer": "For PP-PP/CO2, the critical nucleation barrier is 15.02 and the critical radius is 3.89 nm; for PS-PS/CO2, the barrier is 11.17 and the radius is 2.96 nm.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_081",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What method was used to construct amorphous PP and PS surfaces?",
+      "abstraction_reasoning": "PATTERN: Questions about construction methods. | ENTITY MAPPING: MD simulation -> Method. | WHY NARROW: Only Wu2021 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_018",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_COMP_Q001",
+          "question": "What computational method was used to construct the amorphous polypropylene (PP) and polystyrene (PS) surfaces?",
+          "expected_answer": "A molecular dynamic (MD) simulation method was applied.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_082",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the 'interfacial tension' class?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Interfacial tension -> Property. | WHY NARROW: Only Wu2021 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_024",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_ONTO_Q003",
+          "question": "What ontology class should 'interfacial tension' be assigned to based on its role in the bubble nucleation mechanism?",
+          "expected_answer": "Property",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_083",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What is the 'critical radius' and 'nucleation barrier' class?",
+      "abstraction_reasoning": "PATTERN: Ontology classification. | ENTITY MAPPING: Critical radius, nucleation barrier -> Properties. | WHY NARROW: Only Wu2021 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_028",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_ONTO_GAP002",
+          "question": "What ontology class should 'critical radius' and 'nucleation free-energy barrier' be assigned to within the polymer foaming domain?",
+          "expected_answer": "They should be represented as subclasses of Property (specifically thermodynamic or nucleation properties).",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_084",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What are the drawbacks of PP in polymer foams?",
+      "abstraction_reasoning": "PATTERN: Questions about polymer limitations. | ENTITY MAPPING: PP -> Polymer. | WHY NARROW: Only Wu2021 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_030",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_STU_Q005",
+          "question": "What is a known inherent drawback of polypropylene (PP) mentioned in the context of polymer foams?",
+          "expected_answer": "Polypropylene has inherent drawbacks such as low melt strength and heat-resistance temperature.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_085",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "How does the benzene ring affect CO2 solubility in PS?",
+      "abstraction_reasoning": "PATTERN: Questions about solubility effects. | ENTITY MAPPING: Benzene ring -> Structure feature. | WHY NARROW: Only Wu2021 asks this.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_031",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_STU_GAP001",
+          "question": "What is the effect of the benzene ring in polystyrene (PS) on the solubility of CO2 in the polymer matrix?",
+          "expected_answer": "The benzene ring in the PS system occupies a large volume, which compresses the available free volume in the PS matrix, making it less conducive to the dissolution of CO2 molecules.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_086",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What computational equation of state (EOS) was used to fit the apparent mass and polymer-CO2 mixture density to determine CO2 solubility?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_023",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_COMP_GAP002",
+          "question": "What computational equation of state (EOS) was used to fit the apparent mass and polymer-CO2 mixture density to determine CO2 solubility?",
+          "expected_answer": "The perturbed chain statistical associating fluid theory equation of state (PC-SAFT EOS) was used.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_087",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What class and property should be used to represent the 'CO2 uptake' of a polymer material?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_027",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_ONTO_Q005",
+          "question": "What class and property should be used to represent the 'CO2 uptake' of a polymer material?",
+          "expected_answer": "The class should be Property, and the property should be a data property (e.g., hasCO2Uptake) linked to the Material class.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_088",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which specific polymers are frequently reported in the literature as having Tg and Tm values available as a function of temperature and pressure in the presence of CO2?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_008",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_CHAR_Q001",
+          "question": "Which specific polymers are frequently reported in the literature as having Tg and Tm values available as a function of temperature and pressure in the presence of CO2?",
+          "expected_answer": "Poly(methyl methacrylate), polystyrene, and polyesters such as poly(ε-caprolactone) and poly(lactic acid).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_089",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which specific nanometric fillers are mentioned as gaining increased attention as nucleating agents for gas foaming?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_012",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_CHAR_GAP002",
+          "question": "Which specific nanometric fillers are mentioned as gaining increased attention as nucleating agents for gas foaming?",
+          "expected_answer": "Carbon nanotubes, nanoclays, and graphene.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_090",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "Which thermodynamic model was used to estimate the swelling of polymers for buoyancy corrections in CO2 sorption measurements?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_019",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_COMP_Q001",
+          "question": "Which thermodynamic model was used to estimate the swelling of polymers for buoyancy corrections in CO2 sorption measurements?",
+          "expected_answer": "The Sanchez-Lacombe model.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_091",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "Which specific polymers are frequently cited in the literature as having their glass transition and melting temperatures measured as a function of CO2 pressure?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_037",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_STU_GAP002",
+          "question": "Which specific polymers are frequently cited in the literature as having their glass transition and melting temperatures measured as a function of CO2 pressure?",
+          "expected_answer": "Poly(methyl methacrylate), polystyrene, and polyesters such as poly(ε-caprolactone) and poly(lactic acid) are frequently reported.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_092",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "generalized_question": "What ontology class should 'saturation temperature' and 'depressurization rate' be assigned to?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_028",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_ONTO_Q003",
+          "question": "What ontology class should 'saturation temperature' and 'depressurization rate' be assigned to?",
+          "expected_answer": "Condition",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_093",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "Which equation of state (EOS) was used to correct the CO2 sorption measurements for polymer swelling?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_017",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_COMP_GAP002",
+          "question": "Which equation of state (EOS) was used to correct the CO2 sorption measurements for polymer swelling?",
+          "expected_answer": "The Sanchez-Lacombe equation of state (SL-EOS).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_094",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the number-average molecular weight (Mn) of the poly(styrene-co-methyl methacrylate) used in this study?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_025",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_STU_Q001",
+          "question": "What is the number-average molecular weight (Mn) of the poly(styrene-co-methyl methacrylate) used in this study?",
+          "expected_answer": "The number-average molecular weight (Mn) is 76 kg/mol (or 76,000 g/mol).",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_095",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "generalized_question": "What is the composition of the MAM triblock copolymer additive in terms of weight percentage?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_036",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_STU_Q005",
+          "question": "What is the composition of the MAM triblock copolymer additive in terms of weight percentage?",
+          "expected_answer": "The MAM copolymer consists of 35 wt% methacrylate, 30 wt% butylacrylate, and 35 wt% methacrylate.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_ENTITY_LOOKUP_096",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "generalized_question": "What is the depressed glass transition temperature of the PS + SBM blend under saturation conditions of 300 bar and 40 °C?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_022",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_COMP_Q003",
+          "question": "What is the depressed glass transition temperature of the PS + SBM blend under saturation conditions of 300 bar and 40 °C?",
+          "expected_answer": "The depressed glass transition temperature for PS + SBM is 39 °C.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "reverse_index": {
+    "Bärwinkel2016_DEDUP_005": "GEN_ENTITY_LOOKUP_001",
+    "Reglero2011_DEDUP_007": "GEN_ENTITY_LOOKUP_049",
+    "Bärwinkel2016_DEDUP_009": "GEN_ENTITY_LOOKUP_002",
+    "Costeux2013_DEDUP_013": "GEN_ENTITY_LOOKUP_002",
+    "Costeux2014_DEDUP_009": "GEN_ENTITY_LOOKUP_003",
+    "Costeux2014_DEDUP_011": "GEN_ENTITY_LOOKUP_003",
+    "Costeux2013_DEDUP_018": "GEN_ENTITY_LOOKUP_004",
+    "Jacobs2007_DEDUP_014": "GEN_ENTITY_LOOKUP_035",
+    "Costeux2013_DEDUP_028": "GEN_ENTITY_LOOKUP_016",
+    "Costeux2013_DEDUP_031": "GEN_ENTITY_LOOKUP_017",
+    "Costeux2014_DEDUP_031": "GEN_ENTITY_LOOKUP_007",
+    "Liu2019_DEDUP_027": "GEN_ENTITY_LOOKUP_041",
+    "Di Maio2018_DEDUP_031": "GEN_ENTITY_LOOKUP_022",
+    "Otsuka2008_DEDUP_011": "GEN_ENTITY_LOOKUP_043",
+    "Jacobs2007_DEDUP_015": "GEN_ENTITY_LOOKUP_034",
+    "Ruiz2011_DEDUP_009": "GEN_ENTITY_LOOKUP_057",
+    "Reglero2011_DEDUP_032": "GEN_ENTITY_LOOKUP_010",
+    "Shah2025_DEDUP_007": "GEN_ENTITY_LOOKUP_065",
+    "Ruiz2011_DEDUP_030": "GEN_ENTITY_LOOKUP_062",
+    "Shah2025_DEDUP_008": "GEN_ENTITY_LOOKUP_066",
+    "Bärwinkel2016_DEDUP_017": "GEN_ENTITY_LOOKUP_012",
+    "Bärwinkel2016_DEDUP_024": "GEN_ENTITY_LOOKUP_013",
+    "Costeux2013_DEDUP_009": "GEN_ENTITY_LOOKUP_014",
+    "Costeux2013_DEDUP_012": "GEN_ENTITY_LOOKUP_015",
+    "Costeux2014_DEDUP_023": "GEN_ENTITY_LOOKUP_018",
+    "Costeux2014_DEDUP_025": "GEN_ENTITY_LOOKUP_019",
+    "Costeux2014_DEDUP_028": "GEN_ENTITY_LOOKUP_020",
+    "Di Maio2018_DEDUP_026": "GEN_ENTITY_LOOKUP_021",
+    "Di Maio2018_DEDUP_034": "GEN_ENTITY_LOOKUP_023",
+    "Dumon2012_DEDUP_009": "GEN_ENTITY_LOOKUP_024",
+    "Dumon2012_DEDUP_021": "GEN_ENTITY_LOOKUP_025",
+    "Dumon2012_DEDUP_036": "GEN_ENTITY_LOOKUP_026",
+    "Guo2015_DEDUP_001": "GEN_ENTITY_LOOKUP_027",
+    "Guo2015_DEDUP_009": "GEN_ENTITY_LOOKUP_028",
+    "Guo2015_DEDUP_018": "GEN_ENTITY_LOOKUP_029",
+    "Guo2015_DEDUP_025": "GEN_ENTITY_LOOKUP_030",
+    "Guo2015_DEDUP_028": "GEN_ENTITY_LOOKUP_031",
+    "Guo2015_DEDUP_029": "GEN_ENTITY_LOOKUP_032",
+    "Guo2015_DEDUP_032": "GEN_ENTITY_LOOKUP_033",
+    "Jacobs2007_DEDUP_020": "GEN_ENTITY_LOOKUP_036",
+    "Liu2019_DEDUP_008": "GEN_ENTITY_LOOKUP_037",
+    "Liu2019_DEDUP_011": "GEN_ENTITY_LOOKUP_038",
+    "Liu2019_DEDUP_021": "GEN_ENTITY_LOOKUP_039",
+    "Liu2019_DEDUP_024": "GEN_ENTITY_LOOKUP_040",
+    "Otsuka2008_DEDUP_008": "GEN_ENTITY_LOOKUP_042",
+    "Otsuka2008_DEDUP_012": "GEN_ENTITY_LOOKUP_044",
+    "Otsuka2008_DEDUP_020": "GEN_ENTITY_LOOKUP_045",
+    "Otsuka2008_DEDUP_025": "GEN_ENTITY_LOOKUP_046",
+    "Otsuka2008_DEDUP_029": "GEN_ENTITY_LOOKUP_047",
+    "Reglero2011_DEDUP_005": "GEN_ENTITY_LOOKUP_048",
+    "Reglero2011_DEDUP_010": "GEN_ENTITY_LOOKUP_050",
+    "Reglero2011_DEDUP_012": "GEN_ENTITY_LOOKUP_051",
+    "Reglero2011_DEDUP_019": "GEN_ENTITY_LOOKUP_052",
+    "Reglero2011_DEDUP_022": "GEN_ENTITY_LOOKUP_053",
+    "Reglero2011_DEDUP_026": "GEN_ENTITY_LOOKUP_054",
+    "Reglero2011_DEDUP_031": "GEN_ENTITY_LOOKUP_055",
+    "Ruiz2011_DEDUP_005": "GEN_ENTITY_LOOKUP_056",
+    "Ruiz2011_DEDUP_012": "GEN_ENTITY_LOOKUP_058",
+    "Ruiz2011_DEDUP_014": "GEN_ENTITY_LOOKUP_059",
+    "Ruiz2011_DEDUP_026": "GEN_ENTITY_LOOKUP_060",
+    "Ruiz2011_DEDUP_029": "GEN_ENTITY_LOOKUP_061",
+    "Ruiz2011_DEDUP_034": "GEN_ENTITY_LOOKUP_063",
+    "Shah2025_DEDUP_004": "GEN_ENTITY_LOOKUP_064",
+    "Shah2025_DEDUP_015": "GEN_ENTITY_LOOKUP_067",
+    "Shah2025_DEDUP_018": "GEN_ENTITY_LOOKUP_068",
+    "Shah2025_DEDUP_021": "GEN_ENTITY_LOOKUP_069",
+    "Shah2025_DEDUP_025": "GEN_ENTITY_LOOKUP_070",
+    "Shieh2002_DEDUP_001": "GEN_ENTITY_LOOKUP_071",
+    "Shieh2002_DEDUP_006": "GEN_ENTITY_LOOKUP_072",
+    "Shieh2002_DEDUP_011": "GEN_ENTITY_LOOKUP_073",
+    "Shieh2002_DEDUP_014": "GEN_ENTITY_LOOKUP_074",
+    "Shieh2002_DEDUP_021": "GEN_ENTITY_LOOKUP_075",
+    "Shieh2002_DEDUP_024": "GEN_ENTITY_LOOKUP_076",
+    "Wu2021_DEDUP_009": "GEN_ENTITY_LOOKUP_077",
+    "Wu2021_DEDUP_011": "GEN_ENTITY_LOOKUP_078",
+    "Wu2021_DEDUP_012": "GEN_ENTITY_LOOKUP_079",
+    "Wu2021_DEDUP_014": "GEN_ENTITY_LOOKUP_080",
+    "Wu2021_DEDUP_018": "GEN_ENTITY_LOOKUP_081",
+    "Wu2021_DEDUP_024": "GEN_ENTITY_LOOKUP_082",
+    "Wu2021_DEDUP_028": "GEN_ENTITY_LOOKUP_083",
+    "Wu2021_DEDUP_030": "GEN_ENTITY_LOOKUP_084",
+    "Wu2021_DEDUP_031": "GEN_ENTITY_LOOKUP_085",
+    "Costeux2013_DEDUP_023": "GEN_ENTITY_LOOKUP_086",
+    "Costeux2013_DEDUP_027": "GEN_ENTITY_LOOKUP_087",
+    "Di Maio2018_DEDUP_008": "GEN_ENTITY_LOOKUP_088",
+    "Di Maio2018_DEDUP_012": "GEN_ENTITY_LOOKUP_089",
+    "Di Maio2018_DEDUP_019": "GEN_ENTITY_LOOKUP_090",
+    "Di Maio2018_DEDUP_037": "GEN_ENTITY_LOOKUP_091",
+    "Dumon2012_DEDUP_028": "GEN_ENTITY_LOOKUP_092",
+    "Jacobs2007_DEDUP_017": "GEN_ENTITY_LOOKUP_093",
+    "Jacobs2007_DEDUP_025": "GEN_ENTITY_LOOKUP_094",
+    "Reglero2011_DEDUP_036": "GEN_ENTITY_LOOKUP_095",
+    "Ruiz2011_DEDUP_022": "GEN_ENTITY_LOOKUP_096"
+  }
+}

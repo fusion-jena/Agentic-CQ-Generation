@@ -1,0 +1,740 @@
+{
+  "archetype": "PROCESS_FOR_MATERIAL",
+  "pipeline_step": "cross_paper_generalization",
+  "pipeline_version": "v2",
+  "step_version": "step2_v1.0",
+  "generalize_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "generalize_prompt_v1.0",
+    "source_dir": "data/papers/v2/dedup/"
+  },
+  "arch_stats": {
+    "n_input_cqs": 27,
+    "n_gen_cqs": 25,
+    "n_papers": 12,
+    "wall_time": "1m 30s 7ms"
+  },
+  "generalized_cqs": [
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_001",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the process used to produce polymer blends with desired properties?",
+      "abstraction_reasoning": "PATTERN: What method is described for producing polymer blends? | ENTITY MAPPING: Polymer blending -> polymer blending | WHY BROAD: This question is applicable across various studies on polymer blend production.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_001",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_SYNTH_Q001",
+          "question": "What method is described in the text as a simple, effective, and economical means for obtaining polymer blends with desired properties?",
+          "expected_answer": "Polymer blending",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_002",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "generalized_question": "What process was used to produce the polymer blends in this study?",
+      "abstraction_reasoning": "PATTERN: How were the polymer blends produced? | ENTITY MAPPING: extrusion -> blending method, compression molding -> blending method | WHY BROAD: This question is common across multiple studies focusing on different blending techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Reglero2011",
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_034",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_STU_Q003",
+          "question": "How were the nano-structuring triblock copolymers (SBM and MAM) blended as additives into the PS or PMMA polymers?",
+          "expected_answer": "The triblock copolymers were blended as additives to PS or PMMA by extrusion.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Abstract"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_032",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_STU_Q003",
+          "question": "How were the triblock copolymers blended with the PMMA and PS matrices?",
+          "expected_answer": "The triblock copolymers were blended to the PMMA and PS matrices by extrusion.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_003",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What polymerization method was used to synthesize the copolymers?",
+      "abstraction_reasoning": "PATTERN: Which polymerization method was used? | ENTITY MAPPING: ATRP -> controlled radical polymerization, conventional free radical polymerization -> polymerization method | WHY BROAD: This question is relevant across various studies detailing different polymerization techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2013",
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_001",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_SYNTH_Q001",
+          "question": "Which polymerization method is suggested for the synthesis of the PS-b-PFDA diblock copolymer?",
+          "expected_answer": "Atom Transfer Radical Polymerization (ATRP).",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Costeux2013_DEDUP_006",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_SYNTH_GAP001",
+          "question": "Which polymerization method was used to synthesize the styrene-acrylonitrile (SAN) copolymers with varying acrylonitrile compositions?",
+          "expected_answer": "Conventional free radical polymerization using continuous addition of the monomer.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_004",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "generalized_question": "What process was used to produce the foams in this study?",
+      "abstraction_reasoning": "PATTERN: By which process were the foams produced? | ENTITY MAPPING: batch foaming -> foam production method, supercritical CO2 saturation -> foam production method | WHY BROAD: This question is common across multiple studies detailing different foam production techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Dumon2012",
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_034",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_STU_Q003",
+          "question": "By which process were the microcellular foams of PS and PMMA produced in this study?",
+          "expected_answer": "They were produced via a batch single step-process where the polymer is saturated with CO2 in the supercritical regime and then depressurized to atmospheric pressure.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Introduction"
+        },
+        {
+          "step1_id": "Jacobs2007_DEDUP_026",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_STU_Q004",
+          "question": "By which process were the SMMA foams produced in this study?",
+          "expected_answer": "The foams were produced using supercritical carbon dioxide (scCO2) as a blowing agent, involving a saturation step followed by a depressurization step.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_005",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What blowing agent was used in the foaming process?",
+      "abstraction_reasoning": "PATTERN: Which blowing agent was used? | ENTITY MAPPING: CO2 -> blowing agent, scCO2 -> blowing agent | WHY BROAD: This question is relevant across various studies focusing on different blowing agents.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2014",
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_032",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_STU_Q002",
+          "question": "By which physical foaming agent were the polymeric nanocellular foams in this study produced?",
+          "expected_answer": "They were produced using CO2 as the blowing agent.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_035",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_STU_GAP002",
+          "question": "By which process were the PMMA nanofoams with 30-40 nm cells produced?",
+          "expected_answer": "The PMMA nanofoams with 30-40 nm cells were produced using a solid-state foaming process based on low-temperature CO2 saturation.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_006",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What process was used to prepare the polymer blend samples?",
+      "abstraction_reasoning": "PATTERN: How were the polymer blend samples prepared? | ENTITY MAPPING: compression molding -> sample preparation method, extrusion -> sample preparation method | WHY BROAD: This question is common across multiple studies detailing different sample preparation techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_001",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_SYNTH_Q001",
+          "question": "By which processing method were the polystyrene/poly(methyl methacrylate) blend samples prepared?",
+          "expected_answer": "The blend samples were prepared using a compression molding machine.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Abstract"
+        },
+        {
+          "step1_id": "Liu2019_DEDUP_006",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_SYNTH_GAP001",
+          "question": "By which process were the polystyrene/poly(methyl methacrylate) blend samples produced prior to thermal annealing?",
+          "expected_answer": "The blend samples were prepared using a compression molding machine.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_007",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What method was used to produce the nanocellular foams?",
+      "abstraction_reasoning": "PATTERN: By which process were the nanocellular foams produced? | ENTITY MAPPING: pressure quench method -> foam production method, two-step batch foaming -> foam production method | WHY BROAD: This question is relevant across various studies focusing on different nanocellular foam production methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2014",
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_031",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_STU_Q002",
+          "question": "Which method was used to produce the nanocellular foam from the annealed polymer blend?",
+          "expected_answer": "The nanocellular foam was produced using a pressure quench method with carbon dioxide (CO2).",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Part"
+        },
+        {
+          "step1_id": "Costeux2014_DEDUP_001",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_SYNTH_Q001",
+          "question": "Which foaming process was used to produce nanocellular foams from PEMA thick sheets with a cell size of 345 nm?",
+          "expected_answer": "A two-step (2S) foaming process with a second step at 60C, following fast depressurization [FD] and soaking at 33 MPa/30C.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_008",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What process was used to cross-link the polymer core during synthesis?",
+      "abstraction_reasoning": "PATTERN: How was the polymer core cross-linked? | ENTITY MAPPING: UV cross-linker -> cross-linking method | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_001",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_SYNTH_Q001",
+          "question": "How was the polybutadiene (PB) core of the Janus particles cross-linked during synthesis?",
+          "expected_answer": "The PB core was cross-linked using a UV cross-linker.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_009",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What was the precursor polymer used to synthesize the Janus nanoparticles?",
+      "abstraction_reasoning": "PATTERN: What was the precursor polymer for Janus nanoparticles? | ENTITY MAPPING: triblock terpolymers -> precursor polymer | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_006",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_SYNTH_GAP001",
+          "question": "What was the precursor polymer used to synthesize the Janus nanoparticles, and what was its molecular weight?",
+          "expected_answer": "The Janus nanoparticles were synthesized from S40B31M29108 triblock terpolymers (PS-b-PB-b-PMMA) with a molecular weight (Mw) of 108 kg mol/mol.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_010",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "generalized_question": "What process was used to produce the PPE/SAN blend foams?",
+      "abstraction_reasoning": "PATTERN: How were the PPE/SAN blend foams produced? | ENTITY MAPPING: temperature-induced batch foaming -> foam production method | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_028",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_STU_Q001",
+          "question": "By which process were the PPE/SAN blend foams produced in this study?",
+          "expected_answer": "The PPE/SAN blend foams were produced through temperature-induced batch foaming with CO2.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_011",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What process was used to produce the low-density polyamide 12 foams?",
+      "abstraction_reasoning": "PATTERN: How were the low-density polyamide 12 foams produced? | ENTITY MAPPING: autoclave batch foaming -> foam production method | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_001",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_SYNTH_Q001",
+          "question": "By which process were the low-density polyamide 12 foams produced?",
+          "expected_answer": "Autoclave batch foaming using supercritical carbon dioxide (CO2).",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Materials and methods"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_012",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What was the molecular weight of the precursor polymer used?",
+      "abstraction_reasoning": "PATTERN: What was the molecular weight of the precursor polymer? | ENTITY MAPPING: S40B31M29108 triblock terpolymers -> precursor polymer | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_006",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_SYNTH_GAP001",
+          "question": "What was the precursor polymer used to synthesize the Janus nanoparticles, and what was its molecular weight?",
+          "expected_answer": "The Janus nanoparticles were synthesized from S40B31M29108 triblock terpolymers (PS-b-PB-b-PMMA) with a molecular weight (Mw) of 108 kg mol/mol.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_013",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What was the monomer composition of the poly(styrene-co-methyl methacrylate) used?",
+      "abstraction_reasoning": "PATTERN: What is the monomer composition of the copolymer? | ENTITY MAPPING: SMMA -> copolymer | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_001",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_SYNTH_Q001",
+          "question": "What is the monomer composition of the poly(styrene-co-methyl methacrylate) (SMMA) used in this study?",
+          "expected_answer": "The SMMA contains 40 wt% styrene.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_014",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "generalized_question": "How were the triblock copolymers blended as additives into the PS or PMMA polymers?",
+      "abstraction_reasoning": "PATTERN: How were the triblock copolymers blended? | ENTITY MAPPING: extrusion -> blending method | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_034",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_STU_Q003",
+          "question": "How were the nano-structuring triblock copolymers (SBM and MAM) blended as additives into the PS or PMMA polymers?",
+          "expected_answer": "The triblock copolymers were blended as additives to PS or PMMA by extrusion.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_015",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "generalized_question": "How were the triblock copolymers blended with the PMMA and PS matrices?",
+      "abstraction_reasoning": "PATTERN: How were the triblock copolymers blended? | ENTITY MAPPING: extrusion -> blending method | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_032",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_STU_Q003",
+          "question": "How were the triblock copolymers blended with the PMMA and PS matrices?",
+          "expected_answer": "The triblock copolymers were blended to the PMMA and PS matrices by extrusion.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_016",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "generalized_question": "What process was used to produce the PMMA nanofoams with 30-40 nm cells?",
+      "abstraction_reasoning": "PATTERN: How were the PMMA nanofoams produced? | ENTITY MAPPING: solid-state foaming -> foam production method | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_035",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_STU_GAP002",
+          "question": "By which process were the PMMA nanofoams with 30-40 nm cells produced?",
+          "expected_answer": "The PMMA nanofoams with 30-40 nm cells were produced using a solid-state foaming process based on low-temperature CO2 saturation.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_017",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What process was used to produce the PS/PMMA polymer blend with dispersed nanoscale PMMA islands?",
+      "abstraction_reasoning": "PATTERN: How were the PS/PMMA blends produced? | ENTITY MAPPING: diffusion mixing -> blending method | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_001",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_SYNTH_Q001",
+          "question": "By what method was the PS/PMMA polymer blend with dispersed nanoscale PMMA islands synthesized?",
+          "expected_answer": "The blend was prepared by polymerizing MMA monomers in a PS matrix via diffusion mixing, where MMA monomers were dissolved into PS pellets before polymerization.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_018",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What process was used to produce the PS + SBM and PMMA + MAM blends?",
+      "abstraction_reasoning": "PATTERN: How were the PS + SBM and PMMA + MAM blends produced? | ENTITY MAPPING: extrusion -> blending method | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_001",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_SYNTH_Q001",
+          "question": "By which processing method were the PS+SBM and PMMA+MAM blends produced?",
+          "expected_answer": "The blends were produced by extrusion.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_019",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What process was used to produce the PS + SBM and PMMA + MAM blends?",
+      "abstraction_reasoning": "PATTERN: How were the PS + SBM and PMMA + MAM blends produced? | ENTITY MAPPING: extrusion -> blending method | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_001",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_SYNTH_Q001",
+          "question": "By which process were the PS + SBM and PMMA + MAM blends produced?",
+          "expected_answer": "Blending by extrusion using a Scamex CE02 extruder.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_020",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "generalized_question": "What process was used to produce the low-density polyamide 12 foams?",
+      "abstraction_reasoning": "PATTERN: How were the low-density polyamide 12 foams produced? | ENTITY MAPPING: autoclave batch foaming -> foam production method | WHY NARROW: This specific question is only asked in one study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_024",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_STU_Q003",
+          "question": "By which process were the low-density polyamide 12 foams produced?",
+          "expected_answer": "The foams were produced using the autoclave batch foaming process.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_021",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "By which process were the nanocellular foams from styrenic-acrylic polymer blends produced?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_001",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_SYNTH_Q001",
+          "question": "By which process were the nanocellular foams from styrenic-acrylic polymer blends produced?",
+          "expected_answer": "A two-step batch foaming process using carbon dioxide as the blowing agent.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_022",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "generalized_question": "By which process were microcellular foams initially produced before the technology was converted to a continuous process via injection molding?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_033",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_STU_GAP001",
+          "question": "By which process were microcellular foams initially produced before the technology was converted to a continuous process via injection molding?",
+          "expected_answer": "Microcellular foams were initially produced by a batch foaming process.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_023",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "generalized_question": "By which process were the blends of PS + SBM and PMMA + MAM produced?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_037",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_STU_GAP001",
+          "question": "By which process were the blends of PS + SBM and PMMA + MAM produced?",
+          "expected_answer": "The blends were produced by extrusion, followed by injection moulding to obtain bulk specimens.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_024",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "generalized_question": "By which process were the polystyrene/poly(methyl methacrylate) blend samples prepared for thermal annealing?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_025",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_STU_Q001",
+          "question": "By which process were the polystyrene/poly(methyl methacrylate) blend samples prepared for thermal annealing?",
+          "expected_answer": "A compression molding machine was used to prepare the blend samples.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_PROCESS_FOR_MATERIAL_025",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "generalized_question": "By which process was the PS/PMMA polymer blend produced to ensure highly dispersed PMMA domains?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_030",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_STU_Q001",
+          "question": "By which process was the PS/PMMA polymer blend produced to ensure highly dispersed PMMA domains?",
+          "expected_answer": "The PS/PMMA polymer blend was prepared by polymerizing MMA monomers in a PS matrix using diffusion mixing.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Part"
+        }
+      ]
+    }
+  ],
+  "reverse_index": {
+    "Wu2021_DEDUP_001": "GEN_PROCESS_FOR_MATERIAL_001",
+    "Reglero2011_DEDUP_034": "GEN_PROCESS_FOR_MATERIAL_014",
+    "Ruiz2011_DEDUP_032": "GEN_PROCESS_FOR_MATERIAL_015",
+    "Dumon2012_DEDUP_001": "GEN_PROCESS_FOR_MATERIAL_003",
+    "Costeux2013_DEDUP_006": "GEN_PROCESS_FOR_MATERIAL_003",
+    "Dumon2012_DEDUP_034": "GEN_PROCESS_FOR_MATERIAL_004",
+    "Jacobs2007_DEDUP_026": "GEN_PROCESS_FOR_MATERIAL_004",
+    "Costeux2014_DEDUP_032": "GEN_PROCESS_FOR_MATERIAL_005",
+    "Guo2015_DEDUP_035": "GEN_PROCESS_FOR_MATERIAL_016",
+    "Liu2019_DEDUP_001": "GEN_PROCESS_FOR_MATERIAL_006",
+    "Liu2019_DEDUP_006": "GEN_PROCESS_FOR_MATERIAL_006",
+    "Otsuka2008_DEDUP_031": "GEN_PROCESS_FOR_MATERIAL_007",
+    "Costeux2014_DEDUP_001": "GEN_PROCESS_FOR_MATERIAL_007",
+    "Bärwinkel2016_DEDUP_001": "GEN_PROCESS_FOR_MATERIAL_008",
+    "Bärwinkel2016_DEDUP_006": "GEN_PROCESS_FOR_MATERIAL_012",
+    "Bärwinkel2016_DEDUP_028": "GEN_PROCESS_FOR_MATERIAL_010",
+    "Shah2025_DEDUP_001": "GEN_PROCESS_FOR_MATERIAL_011",
+    "Jacobs2007_DEDUP_001": "GEN_PROCESS_FOR_MATERIAL_013",
+    "Otsuka2008_DEDUP_001": "GEN_PROCESS_FOR_MATERIAL_017",
+    "Reglero2011_DEDUP_001": "GEN_PROCESS_FOR_MATERIAL_018",
+    "Ruiz2011_DEDUP_001": "GEN_PROCESS_FOR_MATERIAL_019",
+    "Shah2025_DEDUP_024": "GEN_PROCESS_FOR_MATERIAL_020",
+    "Costeux2013_DEDUP_001": "GEN_PROCESS_FOR_MATERIAL_021",
+    "Costeux2014_DEDUP_033": "GEN_PROCESS_FOR_MATERIAL_022",
+    "Dumon2012_DEDUP_037": "GEN_PROCESS_FOR_MATERIAL_023",
+    "Liu2019_DEDUP_025": "GEN_PROCESS_FOR_MATERIAL_024",
+    "Otsuka2008_DEDUP_030": "GEN_PROCESS_FOR_MATERIAL_025"
+  }
+}

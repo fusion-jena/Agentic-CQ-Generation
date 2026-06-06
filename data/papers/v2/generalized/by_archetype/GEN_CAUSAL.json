@@ -1,0 +1,2678 @@
+{
+  "archetype": "CAUSAL",
+  "pipeline_step": "cross_paper_generalization",
+  "pipeline_version": "v2",
+  "step_version": "step2_v1.0",
+  "generalize_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "generalize_prompt_v1.0",
+    "source_dir": "data/papers/v2/dedup/"
+  },
+  "arch_stats": {
+    "n_input_cqs": 114,
+    "n_gen_cqs": 90,
+    "n_papers": 14,
+    "wall_time": "21m 20s 812ms"
+  },
+  "generalized_cqs": [
+    {
+      "gen_id": "GEN_CAUSAL_001",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the concentration of Janus particles affect the CO2 mass uptake in PPE/SAN blends?",
+      "abstraction_reasoning": "PATTERN: effect of blowing agent parameter on foam property | ENTITY MAPPING: Janus particles -> blowing agent, CO2 mass uptake -> foam property | WHY BROAD: Covers multiple aspects like concentration and coverage.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_003",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_SYNTH_Q003",
+          "question": "How does the degree of coverage of the PPE phase by Janus particles affect the CO2 mass uptake of the blend?",
+          "expected_answer": "Partial coverage (1 and 2 wt% JPs) increases CO2 uptake due to stress concentration and the formation of microcrazes/cracks that increase available surface area, whereas full coverage (5 and 10 wt% JPs) reduces uptake as the JPs act as a barrier layer hindering diffusion into the PPE phase.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_007",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_SYNTH_GAP002",
+          "question": "How does the amount of Janus particles (JPs) affect the morphology of the PPE/SAN blend and the resulting CO2 mass uptake?",
+          "expected_answer": "Low amounts of JPs (1-2 wt%) result in partial coverage of PPE domains, creating stress concentration points and microcrazes that increase CO2 mass uptake. Higher amounts (5-10 wt%) lead to full coverage of PPE droplets (raspberry morphology), which acts as a barrier layer and decreases CO2 mass uptake.",
+          "persona_code": "SYNTH",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_030",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PHD_Q001",
+          "question": "How does the concentration of Janus particles (JPs) affect the CO2 mass uptake in PPE/SAN blends?",
+          "expected_answer": "CO2 uptake first increases at low concentrations (1 and 2 wt% JPs) due to stress concentration and the formation of microcrazes/cracks that increase available surface area, but then decreases at higher concentrations (5 and 10 wt% JPs) because the PPE phase is fully covered, eliminating stress points and creating a barrier layer via the PB core.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_002",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the weight percentage of Janus particles affect the mean cell size of PPE/SAN blend foams?",
+      "abstraction_reasoning": "PATTERN: effect of blowing agent parameter on foam property | ENTITY MAPPING: Janus particles -> blowing agent, mean cell size -> foam property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_016",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PROC_GAP002",
+          "question": "How does the formation of a 'raspberry morphology' (full coverage of PPE droplets by Janus particles) affect the sorption of carbon dioxide during the saturation step?",
+          "expected_answer": "Full coverage of the PPE phase with Janus particles can hinder gas entrance into the PPE phase because the cross-linked PB core of the Janus particles has a significantly lower CO2 solubility and acts as a barrier layer.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_018",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_COMP_Q002",
+          "question": "How does the weight percentage of Janus particles (JP) affect the mean cell size of the PPE/SAN blend foams?",
+          "expected_answer": "Increasing the JP content reduces the mean cell size; specifically, with 5 wt% and 10 wt% JP, the average cell diameter is reduced to 1 mm and even below 1 mm.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_003",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the ethyl acrylate content in MMA-co-EA copolymers affect cell density and size in SAN28/MMA-co-EA nanofoams?",
+      "abstraction_reasoning": "PATTERN: effect of polymer composition on foam property | ENTITY MAPPING: ethyl acrylate -> polymer component, cell density/size -> foam property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_003",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_SYNTH_Q003",
+          "question": "How does the ethyl acrylate (EA) content in the MMA-co-EA copolymer affect the cell density of the resulting SAN28/MMA-co-EA (50/50 wt%) nanofoams?",
+          "expected_answer": "Increasing EA content from 0.4% (MMA-EA1) to 5.6% (MMA-EA6) increases cell density (from 3 x 10^14 to 4.0 x 10^15 cm^-3), but further increasing EA content to 12% (MMA-EA12) leads to a decrease in cell density (to 6.9 x 10^14 cm^-3).",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Costeux2013_DEDUP_016",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_PROC_Q005",
+          "question": "What effect does increasing the ethyl acrylate (EA) content in MMA-co-EA resins have on the cell size and density of SAN28/MMA-co-EA (50/50 wt%) blends?",
+          "expected_answer": "Increasing EA content initially leads to small and very uniform cell sizes (e.g., MMA-EA6), but further increasing the EA content (and thus the affinity for CO2) leads to cell size enlargement and lower cell density (e.g., MMA-EA12).",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Costeux2013_DEDUP_021",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_COMP_Q005",
+          "question": "What is the effect of increasing the ethyl acrylate (EA) content in MMA-co-EA resins on the cell density of SAN28/MMA-co-EA blends?",
+          "expected_answer": "Increasing EA content initially improves cell density (e.g., MMA-EA6), but further increasing the EA content (and thus the affinity for CO2) leads to cell size enlargement and lower cell density.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_004",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the rate of depressurization affect cell size and density in polymeric foams?",
+      "abstraction_reasoning": "PATTERN: effect of processing parameter on foam property | ENTITY MAPPING: depressurization rate -> processing parameter, cell size/density -> foam property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_003",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_SYNTH_Q003",
+          "question": "How does increasing the pressure drop rate affect the efficiency of cell nucleation in polymeric foams?",
+          "expected_answer": "Increasing the pressure drop rate may allow for the survival of a larger number of stable nuclei by reducing the time available for nuclei coalescence and ripening caused by gas diffusion.",
+          "persona_code": "SYNTH",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Costeux2014_DEDUP_007",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_SYNTH_GAP002",
+          "question": "How does the rate of pressure drop (depressurization) affect the final cell size and the survival of stable nuclei in CO2-blown polymeric foams?",
+          "expected_answer": "A very fast pressure drop rate is beneficial to minimize cell coalescence and ripening by gas diffusion, allowing a larger number of stable nuclei to survive and resulting in smaller cell sizes.",
+          "persona_code": "SYNTH",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Costeux2014_DEDUP_013",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PROC_Q001",
+          "question": "How does the rate of depressurization affect the cell size and porosity of the resulting nanofoam?",
+          "expected_answer": "Slow depressurization increases cell size, presumably due to coalescence, while very fast pressure drop rates are beneficial for achieving high porosities.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_005",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the presence of dissolved CO2 affect the glass transition temperature (Tg) of polymers?",
+      "abstraction_reasoning": "PATTERN: effect of blowing agent on polymer property | ENTITY MAPPING: CO2 -> blowing agent, Tg -> polymer property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_004",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_SYNTH_Q004",
+          "question": "What is the effect of carbon dioxide exposure at approximately 50 bar on the glass transition temperature (Tg) of polystyrene?",
+          "expected_answer": "The glass transition temperature of polystyrene is reduced by about 50 °C from its neat, ambient Tg.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Di Maio2018_DEDUP_020",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_COMP_Q002",
+          "question": "How does the presence of dissolved carbon dioxide affect the glass transition temperature (Tg) of polymers such as poly(methyl methacrylate), polystyrene, and polyesters?",
+          "expected_answer": "The presence of dissolved carbon dioxide lowers the glass transition temperature (Tg) of the polymer, thereby expanding the effective processing window for foaming.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Di Maio2018_DEDUP_039",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PHD_Q002",
+          "question": "How does the plasticization of semi-crystalline polymers with carbon dioxide affect their effective processing window for foaming?",
+          "expected_answer": "Plasticization with carbon dioxide expands the effective processing window, which is the temperature range between the glass transition temperature (Tg) and the crystallization or melting temperature (Tc/Tm).",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_006",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the use of a highly CO2-philic block in a block copolymer affect nanofoam structure?",
+      "abstraction_reasoning": "PATTERN: effect of polymer component on foam property | ENTITY MAPPING: CO2-philic block -> polymer component, nanofoam structure -> foam property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_003",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_SYNTH_Q003",
+          "question": "How does the use of a highly CO2-philic block in a block copolymer affect the resulting foam structure compared to a poorly CO2-philic additive?",
+          "expected_answer": "A highly CO2-philic block (such as in the MAM copolymer) leads to a drastic reduction of the average cell size, producing ultra-microcellular foams, whereas a poorly CO2-philic additive (such as SBM) only provides a slight improvement in cell size reduction and homogeneity.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Conclusions"
+        },
+        {
+          "step1_id": "Dumon2012_DEDUP_006",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_SYNTH_GAP002",
+          "question": "How does the choice of a highly CO2-philic block in a block copolymer affect the resulting nanostructures during the gas dissolution process?",
+          "expected_answer": "The nanostructures act as CO2 reservoirs, which enables control over the microcellular or nanocellular foaming of amorphous polymers.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Dumon2012_DEDUP_039",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PHD_Q001",
+          "question": "How does the use of a highly CO2-philic block in a block copolymer affect the foaming of amorphous polymers like PMMA and PS?",
+          "expected_answer": "When one block is highly CO2-philic, the resulting nanostructures act as CO2 reservoirs, which enables control over the microcellular or nanocellular foaming of these amorphous polymers.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_007",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the amount of CO2 absorbed into PMMA affect its glass transition temperature?",
+      "abstraction_reasoning": "PATTERN: effect of blowing agent on polymer property | ENTITY MAPPING: CO2 -> blowing agent, Tg -> polymer property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_003",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_SYNTH_Q003",
+          "question": "How does the incorporation of 39.3% CO2 affect the glass transition temperature (Tg) of PMMA?",
+          "expected_answer": "It decreases the Tg from 103 °C to -12.5 °C.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_007",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_SYNTH_GAP002",
+          "question": "How does the incorporation of CO2 into PMMA affect the glass transition temperature (Tg) of the polymer?",
+          "expected_answer": "The dissolution of CO2 plasticizes the polymer, lowering its glass transition temperature; specifically, the incorporation of 39.3% CO2 decreases the Tg from 103 °C to -12.5 °C.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_011",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PROC_Q002",
+          "question": "How does the amount of absorbed CO2 affect the glass transition temperature (Tg) of PMMA?",
+          "expected_answer": "The absorption of CO2 plasticizes the polymer and reduces the Tg; specifically, it decreases from 103 °C to -12.5 °C when 39.3% CO2 is incorporated, averaging a 3 °C reduction for every 1% increase in CO2 absorbed.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_008",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the depressurization rate affect cell size and density in SMMA foams?",
+      "abstraction_reasoning": "PATTERN: effect of processing parameter on foam property | ENTITY MAPPING: depressurization rate -> processing parameter, cell size/density -> foam property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_003",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_SYNTH_Q003",
+          "question": "How does the depressurization rate affect the density and cell wall thickness of the resulting SMMA foams?",
+          "expected_answer": "A lower depressurization rate leads to higher foam densities and thicker cell walls.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and discussion"
+        },
+        {
+          "step1_id": "Jacobs2007_DEDUP_007",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_SYNTH_GAP002",
+          "question": "How does the depressurization rate affect the cell size and foam density of the SMMA foams?",
+          "expected_answer": "An increase in depressurization time (lower rate) leads to a dramatic increase in cell size and results in higher foam densities due to thicker cell walls.",
+          "persona_code": "SYNTH",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Jacobs2007_DEDUP_013",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_PROC_GAP001",
+          "question": "How does increasing the depressurization time affect the cell size and foam density of SMMA foams produced at 200 bar and 118 °C?",
+          "expected_answer": "Increasing the depressurization time leads to a dramatic increase in cell size (e.g., from 2806 mm2 at <1s to 27,614 mm2 at 100s) and results in higher foam densities compared to rapid expansion experiments.",
+          "persona_code": "PROC",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_009",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the annealing time affect domain density and interface area in PS60/PMMA40 blends?",
+      "abstraction_reasoning": "PATTERN: effect of processing parameter on blend property | ENTITY MAPPING: annealing time -> processing parameter, domain density/interface area -> blend property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_007",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_SYNTH_GAP002",
+          "question": "How does increasing the thermal annealing time affect the desorption diffusion coefficient of the interface in the PS60/PMMA40 blend?",
+          "expected_answer": "Increasing the annealing time from 2 min to 100 min causes the desorption diffusion coefficient of the interface to increase from 2.47×10⁻¹¹ m²/s to 8.69×10⁻¹¹ m²/s.",
+          "persona_code": "SYNTH",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Liu2019_DEDUP_014",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_PROC_GAP001",
+          "question": "How does the duration of thermal annealing affect the domain density and interface area of the PS60/PMMA40 blend prior to foaming?",
+          "expected_answer": "Increasing the annealing time causes the average domain size to increase (from 1.69μm to 10.97μm), which results in a sharp decrease in domain density (from 1.43✕10^11 domains/cm3 to 3.54✕10^8 domains/cm3) and a reduction in interface area (from 12852cm2/cm3 to 1337cm2/cm3).",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Liu2019_DEDUP_018",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_COMP_GAP001",
+          "question": "What are the specific quantitative changes in domain density and interface area per unit volume for PS60/PMMA40 blends as annealing time increases from 2 min to 100 min?",
+          "expected_answer": "Domain density sharply decreased from 1.43×10^11 domains/cm³ to 3.54×10^8 domains/cm³, and the interface area was reduced from 12852 cm²/cm³ to 1337 cm²/cm³.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_010",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the PS/PMMA weight ratio affect PMMA domain size in blends?",
+      "abstraction_reasoning": "PATTERN: effect of blend composition on domain property | ENTITY MAPPING: PS/PMMA ratio -> blend composition, PMMA domain size -> domain property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_003",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_SYNTH_Q003",
+          "question": "How does the PS/PMMA weight ratio affect the average size of the PMMA domains in the resulting blend?",
+          "expected_answer": "As the ratio of PS to PMMA increases, the average size of the PMMA domains becomes smaller.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_006",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_SYNTH_GAP002",
+          "question": "How does the weight ratio of PS to PMMA in the blend affect the average size of the PMMA domains?",
+          "expected_answer": "As the ratio of PS to PMMA increases, the average size of the PMMA domains becomes smaller; for example, domains varied from 100 to 500 nm at a 1/1 ratio, while they became invisible at SEM at a 3/1 ratio.",
+          "persona_code": "SYNTH",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_011",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the saturation temperature affect CO2 weight gain ratio in polymers?",
+      "abstraction_reasoning": "PATTERN: effect of processing parameter on polymer property | ENTITY MAPPING: saturation temperature -> processing parameter, CO2 weight gain -> polymer property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_003",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_SYNTH_Q003",
+          "question": "How does the saturation temperature affect the weight gain ratio of CO2 in the polymers?",
+          "expected_answer": "The weight gain ratio of CO2 decreases as the saturation temperature increases.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_014",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PROC_Q002",
+          "question": "How does increasing the saturation temperature affect the average cell size of neat PMMA foams?",
+          "expected_answer": "Increasing the saturation temperature leads to bigger cell sizes, with a range from 2 to 25 micrometers, due to a larger plasticization interval of the polymer-gas system.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_020",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_COMP_Q002",
+          "question": "How does the saturation temperature affect the weight gain ratio of CO2 in the studied polymers?",
+          "expected_answer": "The weight gain ratio (w) decreases as the saturation temperature increases.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_012",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the addition of MAM block copolymer affect PMMA foam cell size?",
+      "abstraction_reasoning": "PATTERN: effect of polymer component on foam property | ENTITY MAPPING: MAM -> polymer component, cell size -> foam property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_016",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PROC_Q004",
+          "question": "What effect does the addition of the MAM block copolymer have on the CO2 absorption and resulting morphology of PMMA blends at low saturation temperatures?",
+          "expected_answer": "The addition of MAM increases CO2 absorption (weight gain ratio) and enables the production of ultra-microcellular structures with an average cell size close to 0.1 micrometers at low saturation temperatures.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_023",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_COMP_Q005",
+          "question": "What is the effect of adding the MAM block copolymer to the PMMA matrix on the average cell size of the resulting foam?",
+          "expected_answer": "The addition of MAM results in a noticeable reduction in the average cell size, producing ultra-microcellular foams with cell sizes between 1 and 8 micrometers (and in some cases close to 0.1 micrometers).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_041",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PHD_Q004",
+          "question": "What is the effect of adding the MAM block copolymer on the cellular structure of PMMA foams compared to neat PMMA?",
+          "expected_answer": "The addition of MAM results in a drastic reduction of the average cell size, producing ultra-microcellular foams with an average cell size between 1 and 8 micrometers for all foaming temperatures.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_013",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the saturation temperature affect PMMA foam cell size?",
+      "abstraction_reasoning": "PATTERN: effect of processing parameter on foam property | ENTITY MAPPING: saturation temperature -> processing parameter, cell size -> foam property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Reglero2011",
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_039",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PHD_Q002",
+          "question": "How does increasing the saturation temperature affect the average cell size in neat PMMA foams?",
+          "expected_answer": "Bigger cell sizes are obtained at higher saturation temperatures because of the larger plasticization interval of the polymer-gas system (the difference between saturation temperature and estimated Tg).",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_016",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PROC_Q002",
+          "question": "How does increasing the saturation temperature affect the average cell size of PMMA foams when the depressurization rate is held constant at 60 bar/min?",
+          "expected_answer": "Increasing the saturation temperature leads to bigger cell sizes because it results in a higher plasticized state.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "3.2.1. Behaviour of homopolymers – PMMA and PS"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_014",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the depressurization rate affect PMMA + MAM foam cell size?",
+      "abstraction_reasoning": "PATTERN: effect of processing parameter on foam property | ENTITY MAPPING: depressurization rate -> processing parameter, cell size -> foam property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_018",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PROC_Q004",
+          "question": "What is the effect of the depressurization rate on the cellular structure of PMMA + MAM blends at a fixed saturation temperature of 40 °C?",
+          "expected_answer": "Lowering the depressurization rate increases the average cell size; for example, at 150 bar/min the cell size is 0.3 µm, whereas at 12 bar/min it increases to 80 µm.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "3.2.2. Behaviour of blends/role of CO2 philic nano dispersed copolymers"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_020",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PROC_GAP002",
+          "question": "How does the depressurization rate affect the cell size of PMMA + MAM foams when the saturation temperature is fixed at 40 °C?",
+          "expected_answer": "A high depressurization rate of 150 bar/min produces an ultra-microcellular material with an average cell size of 0.3 µm, whereas a low depressurization rate of 12 bar/min results in an inhomogeneous cellular structure with cell sizes ranging from 10 µm to 50 µm.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_015",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the CO2 affinity of MAM compare to SBM in foaming?",
+      "abstraction_reasoning": "PATTERN: effect of polymer component on foaming property | ENTITY MAPPING: MAM/SBM -> polymer components, CO2 affinity -> foaming property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_040",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PHD_Q005",
+          "question": "How does the CO2 affinity (w) of the triblock copolymer MAM compare to SBM, and what is the resulting effect on the depressed glass transition temperature (Tg) at 300 bar and 40 °C?",
+          "expected_answer": "MAM presents the highest CO2 affinity (w = 22.9%) compared to SBM (w = 8.1%), resulting in a depressed Tg of 40 °C for MAM and 34 °C for SBM.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_016",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the saturation pressure affect PA 12 foam cell size and density?",
+      "abstraction_reasoning": "PATTERN: effect of processing parameter on foam property | ENTITY MAPPING: saturation pressure -> processing parameter, cell size/density -> foam property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_010",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PROC_Q002",
+          "question": "How does increasing the saturation pressure affect the cell morphology of PA 12 foams at similar temperatures?",
+          "expected_answer": "Higher pressures result in a smaller average cell size and increased cell density while simultaneously narrowing the cell size distribution.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Cell morphology"
+        },
+        {
+          "step1_id": "Shah2025_DEDUP_014",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PROC_GAP001",
+          "question": "How does increasing the saturation pressure affect the cell size and cell density of PA 12 foams at similar temperatures?",
+          "expected_answer": "Higher saturation pressures lead to a smaller average cell size (e.g., around 31 μm at 180 bar) and increased cell density, while simultaneously narrowing the cell size distribution.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_017",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the presence of carbonyl groups in PMMA affect CO2 sorption compared to PS?",
+      "abstraction_reasoning": "PATTERN: effect of polymer component on sorption property | ENTITY MAPPING: carbonyl groups -> polymer component, CO2 sorption -> sorption property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_002",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_SYNTH_Q002",
+          "question": "How does the presence of carbonyl groups in PMMA affect the CO2 sorption ability compared to the phenyl groups in PS?",
+          "expected_answer": "The carbonyl groups in PMMA exhibit a much higher sorption ability than the phenyl groups in PS, leading to a higher equilibrium sorption concentration.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Shieh2002_DEDUP_015",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_COMP_GAP002",
+          "question": "What is the effect of the carbonyl groups in PMMA compared to the phenyl groups in PS on the sorption intensity (n) of CO2?",
+          "expected_answer": "The carbonyl groups in PMMA result in a sorption intensity (n) that is 1 to 2 times higher than that of the phenyl groups in PS for a given temperature, indicating a higher level of interaction with CO2.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_018",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the chain fluidity of PP compared to PS affect CO2 adsorption?",
+      "abstraction_reasoning": "PATTERN: effect of polymer component on adsorption property | ENTITY MAPPING: PP/PS -> polymer components, CO2 adsorption -> adsorption property | WHY BROAD: Multiple studies show similar effects.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_003",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_SYNTH_Q003",
+          "question": "How does the difference in chain fluidity between polypropylene (PP) and polystyrene (PS) affect the adsorption capacity of CO2?",
+          "expected_answer": "Since the PP chain has better fluidity than the PS chain, the adsorption capacity of CO2 in the PP system is enhanced.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Wu2021_DEDUP_006",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_SYNTH_GAP001",
+          "question": "How does the presence of the benzene ring in polystyrene (PS) affect the solubility of CO2 compared to polypropylene (PP)?",
+          "expected_answer": "The benzene ring in PS occupies a large volume, which compresses the available free volume in the PS matrix, making it less conducive to the dissolution of CO2 molecules compared to PP.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_019",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the weight percentage of Janus particles affect the PPE droplet diameter in PPE/SAN blends?",
+      "abstraction_reasoning": "PATTERN: effect of blowing agent parameter on blend property | ENTITY MAPPING: Janus particles -> blowing agent, PPE droplet diameter -> blend property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_020",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_COMP_GAP001",
+          "question": "How does the weight percentage of Janus particles (JPs) affect the PPE droplet diameter in PPE/SAN blends, and what is the specific diameter at 10 wt% JP?",
+          "expected_answer": "Increasing the amount of JPs reduces the PPE droplet diameter and improves homogeneity. At 10 wt% JP, the PPE droplet diameter is decreased to around 300 nm.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_020",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the formation of a 'raspberry morphology' affect CO2 sorption during saturation?",
+      "abstraction_reasoning": "PATTERN: effect of blend structure on sorption property | ENTITY MAPPING: raspberry morphology -> blend structure, CO2 sorption -> sorption property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_016",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PROC_GAP002",
+          "question": "How does the formation of a 'raspberry morphology' (full coverage of PPE droplets by Janus particles) affect the sorption of carbon dioxide during the saturation step?",
+          "expected_answer": "Full coverage of the PPE phase with Janus particles can hinder gas entrance into the PPE phase because the cross-linked PB core of the Janus particles has a significantly lower CO2 solubility and acts as a barrier layer.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_021",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the relationship between coverage of PPE phase and foam cell size?",
+      "abstraction_reasoning": "PATTERN: effect of blend structure on foam property | ENTITY MAPPING: PPE phase coverage -> blend structure, foam cell size -> foam property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_033",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PHD_Q004",
+          "question": "What is the relationship between the coverage of the PPE phase by Janus particles and the resulting foam cell size?",
+          "expected_answer": "Higher JP content (5 and 10 wt%) leads to full coverage of the PPE phase, which reduces the PPE domain size and increases the surface available for nucleation, resulting in a visible decrease in mean cell size compared to blends with lower JP amounts.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_022",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the CO2 solubility of polymer blends affect nanofoam cell density?",
+      "abstraction_reasoning": "PATTERN: effect of polymer property on foam property | ENTITY MAPPING: CO2 solubility -> polymer property, cell density -> foam property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_005",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_SYNTH_Q005",
+          "question": "What is the relationship between CO2 solubility in the polymer blends and the resulting cell density of the nanofoams?",
+          "expected_answer": "Blends with lower CO2 solubility gave higher cell density nanofoams, suggesting that maximizing CO2 solubility does not provide maximum nucleation density.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Costeux2013_DEDUP_019",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_COMP_Q002",
+          "question": "How does the CO2 solubility of the polymer blends affect the resulting cell density of the nanofoams?",
+          "expected_answer": "Blends with lower CO2 solubility gave higher cell density nanofoams.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_023",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the addition of a miscible polymer like MMA-EA affect nanofoam cell density?",
+      "abstraction_reasoning": "PATTERN: effect of polymer component on foam property | ENTITY MAPPING: MMA-EA -> polymer component, cell density -> foam property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_035",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_PHD_Q002",
+          "question": "What is the effect of adding a low level (10 wt%) of a miscible polymer like MMA-EA to SAN28 on the resulting foam's cell density compared to pure SAN28?",
+          "expected_answer": "The addition of 10 wt% MMA-EA increases the cell density by two orders of magnitude compared to pure SAN28 foam, while maintaining the same porosity.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_024",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the use of a two-step foaming process affect porosity in high Tg polymers?",
+      "abstraction_reasoning": "PATTERN: effect of processing method on foam property | ENTITY MAPPING: two-step process -> processing method, porosity -> foam property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_040",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PHD_GAP002",
+          "question": "How does the use of a two-step (2S) foaming process with thermal conditioning below the Tg affect the porosity of foams produced from high Tg polymers like PES, PEI, and PI compared to the limitations of homogeneous nucleation?",
+          "expected_answer": "While homogeneous nucleation struggles to produce sufficient nuclei for expansion, the 2S process with thermal conditioning allows for the expansion of nuclei, achieving porosities of about 30% for 30 nm cells and up to 53% for 120 nm cells in PEI, though the outer surfaces often remain unfoamed.",
+          "persona_code": "PHD",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_025",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the presence of dissolved CO2 affect the effective foaming window in semi-crystalline polymers?",
+      "abstraction_reasoning": "PATTERN: effect of blowing agent on polymer property | ENTITY MAPPING: CO2 -> blowing agent, foaming window -> polymer property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_013",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PROC_Q002",
+          "question": "In semi-crystalline polymers, how does plasticization with carbon dioxide influence the effective processing window for foaming?",
+          "expected_answer": "Plasticization with carbon dioxide expands the effective processing window, which is the temperature range between the glass transition temperature (Tg) and the crystallization or melting temperature (Tc/Tm).",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Di Maio2018_DEDUP_022",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_COMP_Q004",
+          "question": "What is the effect of carbon dioxide plasticization on the processing window of semi-crystalline polymers?",
+          "expected_answer": "Plasticization with carbon dioxide expands the effective processing window, which is the temperature range between the glass transition temperature (Tg) and the crystallization or melting temperature (Tc/Tm).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_026",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the use of a two-step process with thermal conditioning affect foam expansion?",
+      "abstraction_reasoning": "PATTERN: effect of processing method on foam property | ENTITY MAPPING: two-step process -> processing method, foam expansion -> foam property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_040",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PHD_GAP002",
+          "question": "How does the use of a two-step (2S) foaming process with thermal conditioning below the Tg affect the porosity of foams produced from high Tg polymers like PES, PEI, and PI compared to the limitations of homogeneous nucleation?",
+          "expected_answer": "While homogeneous nucleation struggles to produce sufficient nuclei for expansion, the 2S process with thermal conditioning allows for the expansion of nuclei, achieving porosities of about 30% for 30 nm cells and up to 53% for 120 nm cells in PEI, though the outer surfaces often remain unfoamed.",
+          "persona_code": "PHD",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_027",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the use of a highly CO2-philic block affect ultra-microcellular foaming?",
+      "abstraction_reasoning": "PATTERN: effect of polymer component on foam property | ENTITY MAPPING: CO2-philic block -> polymer component, ultra-microcellular foaming -> foam property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_039",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PHD_Q001",
+          "question": "How does the use of a highly CO2-philic block in a block copolymer affect the foaming of amorphous polymers like PMMA and PS?",
+          "expected_answer": "When one block is highly CO2-philic, the resulting nanostructures act as CO2 reservoirs, which enables control over the microcellular or nanocellular foaming of these amorphous polymers.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_028",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the activation energy vary with CO2 diffusion regions in PMMA?",
+      "abstraction_reasoning": "PATTERN: effect of polymer property on diffusion behavior | ENTITY MAPPING: activation energy -> polymer property, CO2 diffusion -> diffusion behavior | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_021",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_COMP_GAP001",
+          "question": "What are the specific activation energy values for CO2 diffusion in PMMA across the four identified diffusion regions?",
+          "expected_answer": "The specific activation energy values for each region are not provided in the text; however, the text identifies four distinct regions where diffusivity varies differently with temperature, characterized by different activation energies, with negative activation energy observed in regions 2 and 3.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_029",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the heat of sorption affect CO2 solubility at low temperatures?",
+      "abstraction_reasoning": "PATTERN: effect of thermodynamic property on polymer behavior | ENTITY MAPPING: heat of sorption -> thermodynamic property, CO2 solubility -> polymer behavior | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_038",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PHD_Q003",
+          "question": "How does the change in the heat of sorption (DHs) around the CO2 vaporization temperature affect the solubility of CO2 in PMMA at very low temperatures?",
+          "expected_answer": "The drop in DHs leads to a slower increase in solubility with decreasing temperature; without this change, the solubility at -30 °C would have been approximately 70% instead of the measured 39.3%.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_030",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the foaming temperature affect SMMA foam homogeneity?",
+      "abstraction_reasoning": "PATTERN: effect of processing parameter on foam property | ENTITY MAPPING: foaming temperature -> processing parameter, homogeneity -> foam property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_004",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_SYNTH_Q004",
+          "question": "What is the effect of increasing the foaming temperature on the homogeneity of the SMMA foam morphology?",
+          "expected_answer": "Foam homogeneity decreases with increasing temperature.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_031",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the increase in phase domain size affect the foaming temperature window?",
+      "abstraction_reasoning": "PATTERN: effect of blend property on processing parameter | ENTITY MAPPING: phase domain size -> blend property, foaming temperature window -> processing parameter | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_030",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_PHD_Q002",
+          "question": "How does the increase in phase domain size and higher saturation pressure affect the foaming temperature window of the PS60/PMMA40 blend?",
+          "expected_answer": "The combination of large phase domains and high saturation pressure leads to a much narrower suitable foaming temperature window, as both the upper and lower foaming temperatures decrease, with the upper foaming temperature being particularly vulnerable.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_032",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the molecular weight of PMMA polymerized in PS compare to bulk polymerization?",
+      "abstraction_reasoning": "PATTERN: effect of processing method on polymer property | ENTITY MAPPING: processing method -> polymerization location, molecular weight -> polymer property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_004",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_SYNTH_Q005",
+          "question": "How does the molecular weight of PMMA polymerized within the PS matrix compare to PMMA produced via bulk polymerization under the same temperature conditions?",
+          "expected_answer": "The PMMA polymerized in the PS matrix has a higher weight averaged molecular weight (2.20 x 10^6 g/mol) than that of PMMA made by bulk polymerization (1.50 x 10^5 g/mol).",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_033",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the bubble density vary with PS composition in nanocellular foams?",
+      "abstraction_reasoning": "PATTERN: effect of blend composition on foam property | ENTITY MAPPING: PS composition -> blend composition, bubble density -> foam property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_038",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PHD_Q005",
+          "question": "How does the PS composition in the polymer blend influence the bubble density of the nanocellular foam?",
+          "expected_answer": "A higher PS composition in the blend results in a larger bubble density.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_034",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the interaction between foaming temperature and Tg affect bubble nucleation in nanocellular foams?",
+      "abstraction_reasoning": "PATTERN: effect of processing parameter on foam property | ENTITY MAPPING: foaming temperature -> processing parameter, bubble nucleation -> foam property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_040",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PHD_GAP002",
+          "question": "How does the interaction between foaming temperature and the glass transition temperatures (Tg) of PS and PMMA affect the localization of bubble nucleation in the resulting nanocellular foam?",
+          "expected_answer": "When foamed at 40 °C, bubble growth and coalescence are enhanced in both phases because the temperature is higher than the Tg of both polymers. However, when foamed at 20 °C, bubble nucleation and growth are localized in the PMMA domains because the foaming temperature is lower than the Tg of PS, meaning the viscoelasticity of the PS phase remains high.",
+          "persona_code": "PHD",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_035",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the addition of MAM affect CO2 absorption and ultra-microcellular structure?",
+      "abstraction_reasoning": "PATTERN: effect of polymer component on foam property | ENTITY MAPPING: MAM -> polymer component, CO2 absorption/structure -> foam property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_016",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PROC_Q004",
+          "question": "What effect does the addition of the MAM block copolymer have on the CO2 absorption and resulting morphology of PMMA blends at low saturation temperatures?",
+          "expected_answer": "The addition of MAM increases CO2 absorption (weight gain ratio) and enables the production of ultra-microcellular structures with an average cell size close to 0.1 micrometers at low saturation temperatures.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_036",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the presence of an outer dense skin affect PMMA foams at different saturation temperatures?",
+      "abstraction_reasoning": "PATTERN: effect of processing parameter on foam structure | ENTITY MAPPING: saturation temperature -> processing parameter, dense skin -> foam structure | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_037",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PHD_Q002",
+          "question": "How does the initial saturation temperature (Tsat) specifically affect the presence of an outer dense skin in PMMA foams produced via the one-step CO2 process?",
+          "expected_answer": "Dense skins are observed at saturation temperatures below 40 °C, while the skin is suppressed at temperatures above 50 °C.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_037",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the inverse design model perform across different target density regions?",
+      "abstraction_reasoning": "PATTERN: effect of modeling approach on foam property | ENTITY MAPPING: inverse design model -> modeling approach, target density -> foam property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_019",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_COMP_Q005",
+          "question": "How did the inverse design model's performance vary across different target density regions?",
+          "expected_answer": "The model performed particularly well for lower-density targets, exhibiting a low standard deviation, which is attributed to the model's prior exposure to data from the lower-density region.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_038",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the interaction between CO2 and polymer change relative to critical pressure?",
+      "abstraction_reasoning": "PATTERN: effect of thermodynamic condition on sorption behavior | ENTITY MAPPING: critical pressure -> thermodynamic condition, CO2-polymer interaction -> sorption behavior | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_031",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PHD_Q005",
+          "question": "How does the interaction between CO2 and the polymer change relative to the critical pressure (Pc)?",
+          "expected_answer": "There is a negligible interaction between CO2 and the polymer in the sorption process below the critical pressure, whereas the interaction becomes significant above the critical pressure.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_039",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the presence of benzene rings in PS affect CO2 solubility compared to PP?",
+      "abstraction_reasoning": "PATTERN: effect of polymer component on sorption property | ENTITY MAPPING: benzene rings -> polymer component, CO2 solubility -> sorption property | WHY NARROW: Only one paper covers this specific aspect.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_006",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_SYNTH_GAP001",
+          "question": "How does the presence of the benzene ring in polystyrene (PS) affect the solubility of CO2 compared to polypropylene (PP)?",
+          "expected_answer": "The benzene ring in PS occupies a large volume, which compresses the available free volume in the PS matrix, making it less conducive to the dissolution of CO2 molecules compared to PP.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_040",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the concentration of Janus particles (JPs) influence the average cell size of PPE/SAN blend foams, and what is the specific JP content that yields the lowest cell size?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_013",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_PROC_Q004",
+          "question": "How does the concentration of Janus particles (JPs) influence the average cell size of PPE/SAN blend foams, and what is the specific JP content that yields the lowest cell size?",
+          "expected_answer": "The average foam cell size decreases with increasing amount of JP because smaller PPE domain sizes provide increased foam nucleation sites. The lowest cell size (900 nm) is achieved with the blend compatibilized with 5 wt% JPs.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_041",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the composition of SAN28/MMA-EA9 blends, specifically the weight percentage of SAN28, affect the resulting cell density and average cell size of the nanofoams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_022",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_COMP_GAP001",
+          "question": "How does the composition of SAN28/MMA-EA9 blends, specifically the weight percentage of SAN28, affect the resulting cell density and average cell size of the nanofoams?",
+          "expected_answer": "As the SAN28 content increases from 20 wt% to 80 wt%, the average cell size generally decreases from 114 nm to 86 nm, and the cell density generally increases from 1.8 x 10^15 cm^-3 to 4.5 x 10^15 cm^-3; however, at 90 wt% SAN28, the cell size increases significantly to 210 nm and cell density drops to 5.0 x 10^14 cm^-3.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_042",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "What is the effect of CO2 concentration levels (wt %) on the nucleation and growth of nanocellular foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_016",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PROC_Q005",
+          "question": "What is the effect of CO2 concentration levels (wt %) on the nucleation and growth of nanocellular foams?",
+          "expected_answer": "CO2 levels in excess of 25 wt % are essential to provide a high level of nucleation while maintaining enough dissolved CO2 to plasticize the polymer and allow cell growth.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_043",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "According to the study by Costeux et al., what is the effect of a slow pressure drop rate on cell size and porosity in nanofoams, and what is the proposed mechanism?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_017",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PROC_GAP001",
+          "question": "According to the study by Costeux et al., what is the effect of a slow pressure drop rate on cell size and porosity in nanofoams, and what is the proposed mechanism?",
+          "expected_answer": "Choosing conditions promoting expansion such as a slow depressurization rate leads to an increase in cell size, presumably due to coalescence.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_044",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "In PLA nanocomposites, how did the choice of organically modified clay (SBE vs ODA) affect the resulting cell size under optimal foaming temperature and 10 MPa CO2 pressure?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_019",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_COMP_Q003",
+          "question": "In PLA nanocomposites, how did the choice of organically modified clay (SBE vs ODA) affect the resulting cell size under optimal foaming temperature and 10 MPa CO2 pressure?",
+          "expected_answer": "The SBE modified clay, which showed better dispersion, produced foams with 360 nm cells, while the ODA nanocomposite produced larger cells of 2.6 um.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_045",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "What effect did increasing the CO2 pressure to 28 MPa and lowering the temperature to 100–110C have on the cell size and porosity of PLA nanocomposites compared to the 10 MPa/165C process?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_020",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_COMP_Q004",
+          "question": "What effect did increasing the CO2 pressure to 28 MPa and lowering the temperature to 100–110C have on the cell size and porosity of PLA nanocomposites compared to the 10 MPa/165C process?",
+          "expected_answer": "It reduced the cell size to 200 nm, but significantly prevented foam expansion, resulting in very low porosities and sparse cells (N0 = 3 * 10^13/cm3).",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_046",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the pressure drop rate affect the cell nucleation density and the resulting foam structure in nanocellular foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_022",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_COMP_GAP001",
+          "question": "How does the pressure drop rate affect the cell nucleation density and the resulting foam structure in nanocellular foams?",
+          "expected_answer": "Increasing the pressure drop rate (fast depressurization) is beneficial to minimize cell coalescence and ripening by gas diffusion, allowing a larger number of stable nuclei to survive and resulting in higher cell nucleation densities.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_047",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "What specific cell size threshold and expansion ratio are cited in the text as necessary to exploit the Knudsen effect for nanocellular superinsulation applications?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_036",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_PHD_Q002",
+          "question": "What specific cell size threshold and expansion ratio are cited in the text as necessary to exploit the Knudsen effect for nanocellular superinsulation applications?",
+          "expected_answer": "The text states that producing foams with cell sizes as small as 100 nm and porosities as high as 85% (seven-fold expansion) is necessary to exploit the Knudsen effect for nanocellular superinsulation.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_048",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does altering the norbornene content in a copolymer of ethylene and norbornene affect the glass transition temperature (Tg) and the crystallization of the resulting polymer?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_001",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_SYNTH_Q001",
+          "question": "How does altering the norbornene content in a copolymer of ethylene and norbornene affect the glass transition temperature (Tg) and the crystallization of the resulting polymer?",
+          "expected_answer": "Altering the norbornene content allows for the creation of polymers with both low and high Tg, and the incorporation of norbornene prevents the crystallization of polyethylene.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_049",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the incorporation of norbornene into a copolymer of ethylene affect the crystallization and foaming properties of the resulting material?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_006",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_SYNTH_GAP001",
+          "question": "How does the incorporation of norbornene into a copolymer of ethylene affect the crystallization and foaming properties of the resulting material?",
+          "expected_answer": "The incorporation of norbornene prevents the crystallization of polyethylene, which allows for improved foaming.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_050",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "What is the effect of a large difference between the foaming temperature (Tfoaming) and the crystallization temperature (Tc) on the final foam density in semi-crystalline polymers?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_015",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PROC_Q004",
+          "question": "What is the effect of a large difference between the foaming temperature (Tfoaming) and the crystallization temperature (Tc) on the final foam density in semi-crystalline polymers?",
+          "expected_answer": "If the difference (Tfoaming - Tc) is large, solidification is slowed down, allowing for CO2 loss through extended diffusion, which leads to densification of the foam.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_051",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the rate of decompression affect the resulting pore size in polymeric foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_016",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PROC_Q005",
+          "question": "How does the rate of decompression affect the resulting pore size in polymeric foams?",
+          "expected_answer": "At a given temperature, faster decompression leads to smaller pore sizes or higher cell number densities.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_052",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the exposure of polymers such as polystyrene to dissolved carbon dioxide affect their glass transition temperature (Tg) and the effective processing window?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_017",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PROC_GAP001",
+          "question": "How does the exposure of polymers such as polystyrene to dissolved carbon dioxide affect their glass transition temperature (Tg) and the effective processing window?",
+          "expected_answer": "The presence of dissolved carbon dioxide lowers the glass transition temperature (Tg) and the crystallization/melting temperature (Tc/Tm), thereby expanding the effective processing window for foaming.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_053",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the presence of dissolved carbon dioxide affect the glass transition temperature (Tg) of polymers such as poly(methyl methacrylate), polystyrene, and polyesters?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_023",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_COMP_GAP001",
+          "question": "How does the presence of dissolved carbon dioxide affect the glass transition temperature (Tg) of polymers such as poly(methyl methacrylate), polystyrene, and polyesters?",
+          "expected_answer": "The presence of dissolved carbon dioxide lowers the glass transition temperature (Tg) of the polymer, thereby expanding the effective processing window for foaming.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_054",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the use of carbon dioxide as a plasticizing agent affect the processing window for foaming in semi-crystalline polymers?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_044",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_PHD_GAP002",
+          "question": "How does the use of carbon dioxide as a plasticizing agent affect the processing window for foaming in semi-crystalline polymers?",
+          "expected_answer": "Plasticization with carbon dioxide expands the effective processing window, which is the temperature range between the glass transition temperature (Tg) and the crystallization or melting temperature (Tc/Tm).",
+          "persona_code": "PHD",
+          "bloom_level": "analysis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_055",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the depressurization rate affect the cell density (Nc) of PS+SBM foams at a fixed saturation temperature?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_013",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PROC_Q001",
+          "question": "How does the depressurization rate affect the cell density (Nc) of PS+SBM foams at a fixed saturation temperature?",
+          "expected_answer": "Increasing the depressurization rate from 12 bar/min to 150 bar/min increases the cell density from 10^7 cells/cm3 to 10^13 cells/cm3.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_056",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "What is the effect of increasing the saturation temperature from 25°C to 80°C on the cell size of PS+SBM foams at a fixed depressurization rate of 60 bar/min?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_017",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PROC_Q005",
+          "question": "What is the effect of increasing the saturation temperature from 25°C to 80°C on the cell size of PS+SBM foams at a fixed depressurization rate of 60 bar/min?",
+          "expected_answer": "The average cell size increases from 1 µm at 25°C to 30 µm at 80°C.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_057",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the depressurization rate affect the cell size and cell density of PS+SBM foams at a fixed saturation temperature of 40°C?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_018",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PROC_GAP001",
+          "question": "How does the depressurization rate affect the cell size and cell density of PS+SBM foams at a fixed saturation temperature of 40°C?",
+          "expected_answer": "Increasing the depressurization rate from 12 bar/min to 150 bar/min reduces the average cell size from 20 µm to 0.3 µm and increases the cell density from 10^7 cells/cm3 to 2.1 x 10^13 cells/cm3.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_058",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the depressurization rate affect the average cell size (F) in PMMA + 10% MAM foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_019",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_COMP_Q001",
+          "question": "How does the depressurization rate affect the average cell size (F) in PMMA + 10% MAM foams?",
+          "expected_answer": "As the depressurization rate decreases from 150 bar/min to 12 bar/min, the average cell size (F) increases from 0.3 mm to 20 mm.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_059",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does varying the saturation temperature (Tsat) from 25°C to 80°C affect the cell density (Nc) of PMMA + 10% MAM foams at a fixed depressurization rate of 60 bar/min?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_023",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_COMP_Q005",
+          "question": "How does varying the saturation temperature (Tsat) from 25°C to 80°C affect the cell density (Nc) of PMMA + 10% MAM foams at a fixed depressurization rate of 60 bar/min?",
+          "expected_answer": "The cell density (Nc) changes from 10^10 cells/cm3 at 25°C to 10^9 cells/cm3 at 80°C.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_060",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the depressurization rate affect the average cell size and cell density for PS + SBM 10% foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_024",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_COMP_GAP001",
+          "question": "How does the depressurization rate affect the average cell size and cell density for PS + SBM 10% foams?",
+          "expected_answer": "As the depressurization rate decreases from 150 bar/min to 12 bar/min, the average cell size increases from 0.3 mm to 20 mm, while the cell density decreases from 2.1 x 10^13 cells/cm3 to 4.5 x 10^7 cells/cm3.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_061",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the depressurization rate influence the vitrification onset and the resulting cell size in the one-step CO2 process?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_043",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_PHD_Q005",
+          "question": "How does the depressurization rate influence the vitrification onset and the resulting cell size in the one-step CO2 process?",
+          "expected_answer": "An increase in the depressurization rate (e.g., up to 150 bar/min) causes a greater temperature drop (down to -50°C), which modifies the onset of vitrification so that it arrives earlier, thereby freezing the cells in at different times and affecting the final cell size.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_062",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the saturation temperature affect the sorption diffusivity of CO2 in PMMA?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_005",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_SYNTH_Q005",
+          "question": "How does the saturation temperature affect the sorption diffusivity of CO2 in PMMA?",
+          "expected_answer": "Temperature has a profound effect; diffusivity increases with temperature, ranging from 2.5 x 10^-8 cm2/s at -30 °C to 3.65 x 10^-7 cm2/s at 10 °C.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_063",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the relationship between saturation temperature (Tsat) and glass transition temperature (Tg) determine the physical state of the PMMA-CO2 mixture?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_013",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_PROC_Q004",
+          "question": "How does the relationship between saturation temperature (Tsat) and glass transition temperature (Tg) determine the physical state of the PMMA-CO2 mixture?",
+          "expected_answer": "The system is in a rubbery state when the saturation temperature is greater than the glass transition temperature (Tsat > Tg), and it is in a glassy state when the saturation temperature is below the glass transition temperature (Tsat < Tg).",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_064",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the equilibrium mass percentage of CO2 absorbed into PMMA affect its glass transition temperature (Tg)?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_017",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_COMP_Q002",
+          "question": "How does the equilibrium mass percentage of CO2 absorbed into PMMA affect its glass transition temperature (Tg)?",
+          "expected_answer": "The Tg decreases as the mass% of CO2 increases; specifically, it reduces from 103 °C to -12.5 °C when CO2 absorption increases to 39.3%, averaging a 3 °C reduction per 1% increase in CO2.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_065",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "What is the relationship between saturation temperature (Tsat) and the solubility of CO2 in PMMA?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_020",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_COMP_Q005",
+          "question": "What is the relationship between saturation temperature (Tsat) and the solubility of CO2 in PMMA?",
+          "expected_answer": "Solubility increases as saturation temperature decreases, showing a ten-fold increase from 3.9% at 100 °C to 39.3% at -30 °C, and can be described with an Arrhenius relationship.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_066",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "Based on the experiments at a constant saturation temperature of 110 °C, how does increasing the saturation pressure affect the homogeneity of the SMMA foam morphology?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_016",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_COMP_GAP001",
+          "question": "Based on the experiments at a constant saturation temperature of 110 °C, how does increasing the saturation pressure affect the homogeneity of the SMMA foam morphology?",
+          "expected_answer": "Increasing the pressure results in a decrease of the homogeneity because the cell area distribution broadens, even though the average cell area remains of the same order of magnitude.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_067",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the depressurization rate influence the cell size and foam density of SMMA foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_029",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_PHD_Q002",
+          "question": "How does the depressurization rate influence the cell size and foam density of SMMA foams?",
+          "expected_answer": "The cell size increases with an increasing depressurization rate; however, long depressurization times (lower rates) lead to higher foam densities because the cell walls are thicker compared to foams produced via rapid expansion.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_068",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "What is the effect of increasing saturation temperature on the homogeneity and cell wall thickness of the resulting SMMA foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_030",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_PHD_Q003",
+          "question": "What is the effect of increasing saturation temperature on the homogeneity and cell wall thickness of the resulting SMMA foams?",
+          "expected_answer": "Increasing temperature leads to a decrease in foam homogeneity (due to cells competing for growth via obstruction) and results in thinner cell walls compared to foams produced at lower temperatures.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_069",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does increasing the saturation temperature affect the homogeneity and cell size distribution of SMMA foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_033",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_PHD_GAP001",
+          "question": "How does increasing the saturation temperature affect the homogeneity and cell size distribution of SMMA foams?",
+          "expected_answer": "Increasing the temperature leads to a broader cell size distribution and a decrease in homogeneity because cells reach a size where they interfere with each other by obstruction and compete for growth.",
+          "persona_code": "PHD",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_070",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does increasing the annealing time affect the phase domain size and the subsequent expansion ratio of the PS60/PMMA40 blend foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_003",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_SYNTH_Q003",
+          "question": "How does increasing the annealing time affect the phase domain size and the subsequent expansion ratio of the PS60/PMMA40 blend foams?",
+          "expected_answer": "Increasing the annealing time increases the phase domain size, which increases the gas desorption diffusion coefficient at the interface, resulting in a decreased expansion ratio after foaming.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_071",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the effect of increasing saturation pressure on the upper and lower limits of the foaming temperature window (TU and TL)?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_004",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_SYNTH_Q004",
+          "question": "What is the effect of increasing saturation pressure on the upper and lower limits of the foaming temperature window (TU and TL)?",
+          "expected_answer": "Both the upper (TU) and lower (TL) foaming temperatures decrease as the saturation pressure increases from 1.5 MPa to 4 MPa, with the upper limit (TU) being more sensitive to the pressure increase.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_072",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the increase in the desorption diffusion coefficient of the interface in PS60/PMMA40 blends, driven by annealing, quantitatively affect the expansion ratio reduction at a saturation pressure of 3 MPa?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_017",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_COMP_Q003",
+          "question": "How does the increase in the desorption diffusion coefficient of the interface in PS60/PMMA40 blends, driven by annealing, quantitatively affect the expansion ratio reduction at a saturation pressure of 3 MPa?",
+          "expected_answer": "The increase in the desorption diffusion coefficient leads to easier gas escape, resulting in the largest reduction in expansion ratio (18.36) for samples annealed from 2 min to 100 min when saturated under 3 MPa.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_073",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the depressurization rate affect the cell diameter and cell density of the nanocellular foam?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_014",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PROC_Q002",
+          "question": "How does the depressurization rate affect the cell diameter and cell density of the nanocellular foam?",
+          "expected_answer": "A higher depressurization rate results in a smaller bubble diameter and a larger bubble density.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_074",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does the depressurization rate affect the cell diameter and cell density of the nanocellular foam when foaming is conducted at a lower temperature?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_019",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PROC_GAP002",
+          "question": "How does the depressurization rate affect the cell diameter and cell density of the nanocellular foam when foaming is conducted at a lower temperature?",
+          "expected_answer": "A higher depressurization rate at lower foaming temperature makes the bubble diameter smaller and the bubble density larger.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_075",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the depressurization rate affect the bubble diameter and bubble density in the resulting nanocellular foam?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_036",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_PHD_Q002",
+          "question": "How does the depressurization rate affect the bubble diameter and bubble density in the resulting nanocellular foam?",
+          "expected_answer": "A higher depressurization rate results in a smaller bubble diameter and a larger bubble density.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_076",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "What is the causal relationship between the nano-structuration of the MAM block copolymer in the PMMA matrix and the resulting foaming behavior?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_043",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_PHD_GAP002",
+          "question": "What is the causal relationship between the nano-structuration of the MAM block copolymer in the PMMA matrix and the resulting foaming behavior?",
+          "expected_answer": "The MAM copolymer forms worm-like micelles that act as CO2 concentrators, which improves the foaming behavior compared to neat PMMA and leads to a drastic reduction in average cell size.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_077",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does increasing the saturation temperature from 25 °C to 80 °C affect the weight gain ratio of CO2 in PMMA samples saturated at 300 bar for 16 hours?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_003",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_SYNTH_Q003",
+          "question": "How does increasing the saturation temperature from 25 °C to 80 °C affect the weight gain ratio of CO2 in PMMA samples saturated at 300 bar for 16 hours?",
+          "expected_answer": "The weight gain ratio (w) decreased as the saturation temperature increased; for example, PMMA uptake dropped from 16.9% at 25 °C to 15.6% at 80 °C.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_078",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the addition of the MAM triblock copolymer affect the cell size of PMMA foams compared to the addition of the SBM terpolymer in PS foams when using a one-step supercritical CO2 process?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_007",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_SYNTH_GAP002",
+          "question": "How does the addition of the MAM triblock copolymer affect the cell size of PMMA foams compared to the addition of the SBM terpolymer in PS foams when using a one-step supercritical CO2 process?",
+          "expected_answer": "The addition of MAM to PMMA significantly improves the foaming process, allowing for ultra-microcellular structures with cell sizes as low as 0.3 µm, whereas the addition of SBM to PS primarily increases the number of nucleation sites (cell density) with only small variations in the average cell size.",
+          "persona_code": "SYNTH",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_079",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does varying the saturation temperature affect the CO2 weight gain ratio in PS and PMMA?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_021",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_COMP_Q001",
+          "question": "How does varying the saturation temperature affect the CO2 weight gain ratio in PS and PMMA?",
+          "expected_answer": "The weight gain ratio (w) decreased as the saturation temperature increased; for example, in PS, it decreased from 10.4% at 25 °C to 8.9% at 80 °C, and in PMMA from 16.9% at 25 °C to 15.6% at 80 °C.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_080",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "In the one-step supercritical CO2 foaming process, how does the depressurization rate influence the resulting cellular structure of PMMA + MAM blends?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_042",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_PHD_GAP002",
+          "question": "In the one-step supercritical CO2 foaming process, how does the depressurization rate influence the resulting cellular structure of PMMA + MAM blends?",
+          "expected_answer": "High depressurization rates (e.g., 150 bar/min) combined with low saturation temperatures produce ultra-microcellular materials with an average cell size of 0.3 µm, while low depressurization rates (e.g., 12 bar/min) result in an inhomogeneous cellular structure with larger average cell sizes ranging from 10 µm to 50 µm due to a long growth phase and secondary nucleation.",
+          "persona_code": "PHD",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_081",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "What is the effect of increasing the foaming temperature from 187.5 °C to 190.0 °C on the stability of the PA 12 foam morphology at a constant pressure of 140 bar?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_011",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PROC_Q003",
+          "question": "What is the effect of increasing the foaming temperature from 187.5 °C to 190.0 °C on the stability of the PA 12 foam morphology at a constant pressure of 140 bar?",
+          "expected_answer": "Increasing the temperature to 190.0 °C leads to a more irregular cell distribution, attributed to reduced polymer matrix viscosity which causes unstable cell growth and possible coalescence via partial rupture of cell walls.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Cell morphology"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_082",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "What is the identified relationship between foaming temperature and foam density in the PA 12 autoclave process?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_013",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PROC_Q005",
+          "question": "What is the identified relationship between foaming temperature and foam density in the PA 12 autoclave process?",
+          "expected_answer": "Temperature is inversely correlated with density, meaning higher temperatures generally lead to lower densities, although there is a narrow low-density foaming range between 185 °C and 192.5 °C.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_083",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the variation of temperature and pressure affect the achievement of a target foam density of 110 kg/m3?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_017",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_COMP_Q003",
+          "question": "How does the variation of temperature and pressure affect the achievement of a target foam density of 110 kg/m3?",
+          "expected_answer": "The target density of 110 kg/m3 can be achieved with different combinations of pressure (e.g., 80 bars and 145 bars) and temperature (e.g., 186 °C and 192 °C) while maintaining the same residence time.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_084",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "What effect does elevating the temperature to 190.0 ◦C have on the stability of the foam morphology compared to foaming at 188 ◦C?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_030",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_PHD_Q005",
+          "question": "What effect does elevating the temperature to 190.0 ◦C have on the stability of the foam morphology compared to foaming at 188 ◦C?",
+          "expected_answer": "Elevating the temperature to 190.0 ◦C results in a more irregular cell distribution due to reduced viscosity of the polymer matrix, which can lead to unstable cell growth and possible coalescence by partial rupture of cell walls; foaming at 188 ◦C is more stable and controllable.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_085",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "How does the presence of carbonyl groups in PMMA affect the temperature required for chemisorption of CO2 compared to the phenyl groups in PS?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_004",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_SYNTH_GAP001",
+          "question": "How does the presence of carbonyl groups in PMMA affect the temperature required for chemisorption of CO2 compared to the phenyl groups in PS?",
+          "expected_answer": "The presence of carbonyl groups in PMMA results in a lower temperature necessary for chemisorption to occur compared to the phenyl groups in PS, due to a specific interaction that leads to a relatively low activation energy.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_086",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "What is the effect of increasing temperature on the sorption intensity constant (na) in the high-pressure region for both polymers?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_012",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_COMP_Q003",
+          "question": "What is the effect of increasing temperature on the sorption intensity constant (na) in the high-pressure region for both polymers?",
+          "expected_answer": "The na increases with increasing temperature, indicating a positive apparent activation energy.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_087",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "generalized_question": "How does the presence of carbonyl groups in PMMA affect the temperature required for chemisorption of CO2 compared to the phenyl groups in PS?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_028",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_PHD_Q002",
+          "question": "How does the presence of carbonyl groups in PMMA affect the temperature required for chemisorption of CO2 compared to the phenyl groups in PS?",
+          "expected_answer": "The presence of carbonyl groups in PMMA results in a relatively low activation energy for chemisorption, causing chemisorption to occur at a lower temperature than in PS.",
+          "persona_code": "PHD",
+          "bloom_level": "evaluation",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_088",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "generalized_question": "What is the effect of CO2 enrichment in the blend interfacial region on the thermodynamic driving force for bubble nucleation?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_005",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_SYNTH_Q005",
+          "question": "What is the effect of CO2 enrichment in the blend interfacial region on the thermodynamic driving force for bubble nucleation?",
+          "expected_answer": "CO2 enrichment in the blend interfacial region greatly reduces the interfacial tension, which provides a more powerful thermodynamic driving force for bubble nucleation.",
+          "persona_code": "SYNTH",
+          "bloom_level": "comprehension",
+          "source_section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_089",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "generalized_question": "How does increasing the pressure affect the nucleation free-energy barriers and critical radii of bubbles in the PP/PS blend system?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_016",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_PROC_GAP001",
+          "question": "How does increasing the pressure affect the nucleation free-energy barriers and critical radii of bubbles in the PP/PS blend system?",
+          "expected_answer": "Both the nucleation free-energy barrier and the critical radius decrease as pressure increases, although the rate of decrease declines at high pressure due to the improving amplitude of local supersaturation.",
+          "persona_code": "PROC",
+          "bloom_level": "application",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_CAUSAL_090",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "generalized_question": "How does the presence of the benzene ring in polystyrene (PS) affect the CO2 solubility compared to polypropylene (PP)?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_020",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_COMP_GAP001",
+          "question": "How does the presence of the benzene ring in polystyrene (PS) affect the CO2 solubility compared to polypropylene (PP)?",
+          "expected_answer": "The benzene ring in PS occupies a large volume, which compresses the available free volume in the PS matrix, making it less conducive to the dissolution of CO2 molecules compared to the PP matrix.",
+          "persona_code": "COMP",
+          "bloom_level": "analysis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "reverse_index": {
+    "Bärwinkel2016_DEDUP_003": "GEN_CAUSAL_001",
+    "Bärwinkel2016_DEDUP_007": "GEN_CAUSAL_001",
+    "Bärwinkel2016_DEDUP_030": "GEN_CAUSAL_001",
+    "Bärwinkel2016_DEDUP_016": "GEN_CAUSAL_020",
+    "Bärwinkel2016_DEDUP_018": "GEN_CAUSAL_002",
+    "Costeux2013_DEDUP_003": "GEN_CAUSAL_003",
+    "Costeux2013_DEDUP_016": "GEN_CAUSAL_003",
+    "Costeux2013_DEDUP_021": "GEN_CAUSAL_003",
+    "Costeux2014_DEDUP_003": "GEN_CAUSAL_004",
+    "Costeux2014_DEDUP_007": "GEN_CAUSAL_004",
+    "Costeux2014_DEDUP_013": "GEN_CAUSAL_004",
+    "Di Maio2018_DEDUP_004": "GEN_CAUSAL_005",
+    "Di Maio2018_DEDUP_020": "GEN_CAUSAL_005",
+    "Di Maio2018_DEDUP_039": "GEN_CAUSAL_005",
+    "Dumon2012_DEDUP_003": "GEN_CAUSAL_006",
+    "Dumon2012_DEDUP_006": "GEN_CAUSAL_006",
+    "Dumon2012_DEDUP_039": "GEN_CAUSAL_027",
+    "Guo2015_DEDUP_003": "GEN_CAUSAL_007",
+    "Guo2015_DEDUP_007": "GEN_CAUSAL_007",
+    "Guo2015_DEDUP_011": "GEN_CAUSAL_007",
+    "Jacobs2007_DEDUP_003": "GEN_CAUSAL_008",
+    "Jacobs2007_DEDUP_007": "GEN_CAUSAL_008",
+    "Jacobs2007_DEDUP_013": "GEN_CAUSAL_008",
+    "Liu2019_DEDUP_007": "GEN_CAUSAL_009",
+    "Liu2019_DEDUP_014": "GEN_CAUSAL_009",
+    "Liu2019_DEDUP_018": "GEN_CAUSAL_009",
+    "Otsuka2008_DEDUP_003": "GEN_CAUSAL_010",
+    "Otsuka2008_DEDUP_006": "GEN_CAUSAL_010",
+    "Reglero2011_DEDUP_003": "GEN_CAUSAL_011",
+    "Reglero2011_DEDUP_014": "GEN_CAUSAL_011",
+    "Reglero2011_DEDUP_020": "GEN_CAUSAL_011",
+    "Reglero2011_DEDUP_016": "GEN_CAUSAL_035",
+    "Reglero2011_DEDUP_023": "GEN_CAUSAL_012",
+    "Reglero2011_DEDUP_041": "GEN_CAUSAL_012",
+    "Reglero2011_DEDUP_039": "GEN_CAUSAL_013",
+    "Ruiz2011_DEDUP_016": "GEN_CAUSAL_013",
+    "Ruiz2011_DEDUP_018": "GEN_CAUSAL_014",
+    "Ruiz2011_DEDUP_020": "GEN_CAUSAL_014",
+    "Ruiz2011_DEDUP_040": "GEN_CAUSAL_015",
+    "Shah2025_DEDUP_010": "GEN_CAUSAL_016",
+    "Shah2025_DEDUP_014": "GEN_CAUSAL_016",
+    "Shieh2002_DEDUP_002": "GEN_CAUSAL_017",
+    "Shieh2002_DEDUP_015": "GEN_CAUSAL_017",
+    "Wu2021_DEDUP_003": "GEN_CAUSAL_018",
+    "Wu2021_DEDUP_006": "GEN_CAUSAL_039",
+    "Bärwinkel2016_DEDUP_020": "GEN_CAUSAL_019",
+    "Bärwinkel2016_DEDUP_033": "GEN_CAUSAL_021",
+    "Costeux2013_DEDUP_005": "GEN_CAUSAL_022",
+    "Costeux2013_DEDUP_019": "GEN_CAUSAL_022",
+    "Costeux2013_DEDUP_035": "GEN_CAUSAL_023",
+    "Costeux2014_DEDUP_040": "GEN_CAUSAL_026",
+    "Di Maio2018_DEDUP_013": "GEN_CAUSAL_025",
+    "Di Maio2018_DEDUP_022": "GEN_CAUSAL_025",
+    "Guo2015_DEDUP_021": "GEN_CAUSAL_028",
+    "Guo2015_DEDUP_038": "GEN_CAUSAL_029",
+    "Jacobs2007_DEDUP_004": "GEN_CAUSAL_030",
+    "Liu2019_DEDUP_030": "GEN_CAUSAL_031",
+    "Otsuka2008_DEDUP_004": "GEN_CAUSAL_032",
+    "Otsuka2008_DEDUP_038": "GEN_CAUSAL_033",
+    "Otsuka2008_DEDUP_040": "GEN_CAUSAL_034",
+    "Ruiz2011_DEDUP_037": "GEN_CAUSAL_036",
+    "Shah2025_DEDUP_019": "GEN_CAUSAL_037",
+    "Shieh2002_DEDUP_031": "GEN_CAUSAL_038",
+    "Bärwinkel2016_DEDUP_013": "GEN_CAUSAL_040",
+    "Costeux2013_DEDUP_022": "GEN_CAUSAL_041",
+    "Costeux2014_DEDUP_016": "GEN_CAUSAL_042",
+    "Costeux2014_DEDUP_017": "GEN_CAUSAL_043",
+    "Costeux2014_DEDUP_019": "GEN_CAUSAL_044",
+    "Costeux2014_DEDUP_020": "GEN_CAUSAL_045",
+    "Costeux2014_DEDUP_022": "GEN_CAUSAL_046",
+    "Costeux2014_DEDUP_036": "GEN_CAUSAL_047",
+    "Di Maio2018_DEDUP_001": "GEN_CAUSAL_048",
+    "Di Maio2018_DEDUP_006": "GEN_CAUSAL_049",
+    "Di Maio2018_DEDUP_015": "GEN_CAUSAL_050",
+    "Di Maio2018_DEDUP_016": "GEN_CAUSAL_051",
+    "Di Maio2018_DEDUP_017": "GEN_CAUSAL_052",
+    "Di Maio2018_DEDUP_023": "GEN_CAUSAL_053",
+    "Di Maio2018_DEDUP_044": "GEN_CAUSAL_054",
+    "Dumon2012_DEDUP_013": "GEN_CAUSAL_055",
+    "Dumon2012_DEDUP_017": "GEN_CAUSAL_056",
+    "Dumon2012_DEDUP_018": "GEN_CAUSAL_057",
+    "Dumon2012_DEDUP_019": "GEN_CAUSAL_058",
+    "Dumon2012_DEDUP_023": "GEN_CAUSAL_059",
+    "Dumon2012_DEDUP_024": "GEN_CAUSAL_060",
+    "Dumon2012_DEDUP_043": "GEN_CAUSAL_061",
+    "Guo2015_DEDUP_005": "GEN_CAUSAL_062",
+    "Guo2015_DEDUP_013": "GEN_CAUSAL_063",
+    "Guo2015_DEDUP_017": "GEN_CAUSAL_064",
+    "Guo2015_DEDUP_020": "GEN_CAUSAL_065",
+    "Jacobs2007_DEDUP_016": "GEN_CAUSAL_066",
+    "Jacobs2007_DEDUP_029": "GEN_CAUSAL_067",
+    "Jacobs2007_DEDUP_030": "GEN_CAUSAL_068",
+    "Jacobs2007_DEDUP_033": "GEN_CAUSAL_069",
+    "Liu2019_DEDUP_003": "GEN_CAUSAL_070",
+    "Liu2019_DEDUP_004": "GEN_CAUSAL_071",
+    "Liu2019_DEDUP_017": "GEN_CAUSAL_072",
+    "Otsuka2008_DEDUP_014": "GEN_CAUSAL_073",
+    "Otsuka2008_DEDUP_019": "GEN_CAUSAL_074",
+    "Otsuka2008_DEDUP_036": "GEN_CAUSAL_075",
+    "Reglero2011_DEDUP_043": "GEN_CAUSAL_076",
+    "Ruiz2011_DEDUP_003": "GEN_CAUSAL_077",
+    "Ruiz2011_DEDUP_007": "GEN_CAUSAL_078",
+    "Ruiz2011_DEDUP_021": "GEN_CAUSAL_079",
+    "Ruiz2011_DEDUP_042": "GEN_CAUSAL_080",
+    "Shah2025_DEDUP_011": "GEN_CAUSAL_081",
+    "Shah2025_DEDUP_013": "GEN_CAUSAL_082",
+    "Shah2025_DEDUP_017": "GEN_CAUSAL_083",
+    "Shah2025_DEDUP_030": "GEN_CAUSAL_084",
+    "Shieh2002_DEDUP_004": "GEN_CAUSAL_085",
+    "Shieh2002_DEDUP_012": "GEN_CAUSAL_086",
+    "Shieh2002_DEDUP_028": "GEN_CAUSAL_087",
+    "Wu2021_DEDUP_005": "GEN_CAUSAL_088",
+    "Wu2021_DEDUP_016": "GEN_CAUSAL_089",
+    "Wu2021_DEDUP_020": "GEN_CAUSAL_090"
+  }
+}

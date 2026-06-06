@@ -1,0 +1,24 @@
+[project]
+name = "copolymer-cq-pipeline"
+version = "1.0.0"
+description = "Agentic pipeline for grounded competency question generation from scientific literature"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langgraph>=1.0.8",
+    "langchain>=1.2.10",
+    "requests>=2.32.5",
+    "tqdm>=4.67.3",
+    "numpy>=2.4.2",
+    # PDF extraction
+    "pypdf>=5.0.0",
+    "pymupdf>=1.24.1",
+    # Embeddings + retrieval (v2 pipeline)
+    "sentence-transformers>=3.0.0",
+    "faiss-cpu>=1.8.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]

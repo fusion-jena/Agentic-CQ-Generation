@@ -1,0 +1,1019 @@
+{
+  "paper_id": "Liu2019",
+  "pipeline_step": "intra_paper_dedup",
+  "pipeline_version": "v2",
+  "step_version": "step1_v1.0",
+  "dedup_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "dedup_prompt_v1.0",
+    "source_file": "papers/v2/cq_output/Liu2019_ext-qw-35b_g-ge4-31b_v-der1-32b_r-qw-35b_cq_v2.json",
+    "source_pipeline_version": "v2.1"
+  },
+  "paper_metadata": {
+    "title": "Dependence of the foaming window of a polystyrene/poly(methyl methacrylate) blend on structural evolution driven by phase separation",
+    "first_author_lastname": "Liu",
+    "year": 2019,
+    "journal": "Polymer",
+    "doi": "10.1016/j.polymer.2019.01.050",
+    "keywords": [
+      "Foaming window",
+      "Structural evolution",
+      "Polystyrene/poly(methyl methacrylate) blend"
+    ],
+    "polymer_systems": [
+      "Polystyrene",
+      "Poly(methyl methacrylate)",
+      "PS/PMMA blend"
+    ],
+    "polymerization_methods": null,
+    "paper_type": "research article",
+    "paper_id": "Liu2019",
+    "source_filename": "3_16_04_2026_1-s2.0-S0032386119300643-main.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 9,
+    "n_figures": 10,
+    "n_tables": 0,
+    "file_size_kb": 5287.7,
+    "char_count": 53882,
+    "estimated_tokens": 13470,
+    "n_sections": 0
+  },
+  "dedup_stats": {
+    "n_input_personas": 7,
+    "n_input_cqs": 49,
+    "n_representative_cqs": 33,
+    "n_merged_groups": 14,
+    "n_singletons": 19,
+    "n_discarded": 16,
+    "reduction_rate": 0.327,
+    "archetype_breakdown": {
+      "CAUSAL": {
+        "n_input": 12,
+        "n_output": 7
+      },
+      "COMPARATIVE": {
+        "n_input": 4,
+        "n_output": 3
+      },
+      "CONDITION_FOR_PROCESS": {
+        "n_input": 3,
+        "n_output": 3
+      },
+      "ENTITY_LOOKUP": {
+        "n_input": 9,
+        "n_output": 5
+      },
+      "ENUMERATION": {
+        "n_input": 2,
+        "n_output": 1
+      },
+      "GAP_OR_LIMITATION": {
+        "n_input": 1,
+        "n_output": 1
+      },
+      "METHOD_OF_MEASUREMENT": {
+        "n_input": 5,
+        "n_output": 2
+      },
+      "MOTIVATION": {
+        "n_input": 6,
+        "n_output": 6
+      },
+      "ONTOLOGY_TRIPLE": {
+        "n_input": 3,
+        "n_output": 2
+      },
+      "PROCESS_FOR_MATERIAL": {
+        "n_input": 4,
+        "n_output": 3
+      }
+    },
+    "parse_fallback_used": false,
+    "accounting_ok": true,
+    "grouping_ok": true,
+    "vague_answer_warnings": [
+      {
+        "id": "Liu2019_ONTO_Q001",
+        "persona_code": "ONTO",
+        "expected_answer": "(PS60/PMMA40 blend, producedBy, compression molding)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Liu2019_ONTO_Q003",
+        "persona_code": "ONTO",
+        "expected_answer": "Condition",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Liu2019_ONTO_Q004",
+        "persona_code": "ONTO",
+        "expected_answer": "Expansion ratio and desorption diffusion coefficient",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Liu2019_ONTO_Q005",
+        "persona_code": "ONTO",
+        "expected_answer": "(PS60/PMMA40 blend, undergoes, thermal annealing)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Liu2019_ONTO_GAP001",
+        "persona_code": "ONTO",
+        "expected_answer": "(PS60/PMMA40 blend, producedBy, batch foaming process)",
+        "flags": [
+          "answer_too_short"
+        ]
+      }
+    ]
+  },
+  "execution_stats": {
+    "total_wall_time": "1m 7s 61ms",
+    "llm_calls": [
+      {
+        "model": "deepseek-r1:32b",
+        "think": true,
+        "wall_time": "1m 7s 57ms",
+        "prompt_tokens": 6245,
+        "generated_tokens": 1469,
+        "thinking_chars": 0
+      }
+    ]
+  },
+  "representative_questions": [
+    {
+      "id": "Liu2019_DEDUP_001",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_SYNTH_Q001",
+      "question": "By which processing method were the polystyrene/poly(methyl methacrylate) blend samples prepared?",
+      "expected_answer": "The blend samples were prepared using a compression molding machine.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "source_section": "Abstract",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (comprehension) among duplicates and provides a clear answer.",
+      "merged_from": [
+        {
+          "id": "Liu2019_CHAR_GAP001",
+          "paper_id": "Liu2019",
+          "persona_code": "CHAR",
+          "question": "Which analytical techniques were used to study the phase morphological changes of the PS60/PMMA40 blend?",
+          "expected_answer": "Phase contrast optical microscope (PCOM) and scanning electron microscopy (SEM).",
+          "reason_discarded": "This question has the highest Bloom level (comprehension) among duplicates and provides a clear answer."
+        },
+        {
+          "id": "Liu2019_STU_GAP001",
+          "paper_id": "Liu2019",
+          "persona_code": "STU",
+          "question": "By which process were the polystyrene/poly(methyl methacrylate) blend samples produced?",
+          "expected_answer": "The blend samples were produced using a compression molding machine.",
+          "reason_discarded": "This question has the highest Bloom level (comprehension) among duplicates and provides a clear answer."
+        }
+      ],
+      "merge_reasoning": "All questions ask about the process used to prepare the blend samples."
+    },
+    {
+      "id": "Liu2019_DEDUP_002",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_SYNTH_Q002",
+      "question": "What saturation pressures were investigated for the PS60/PMMA40 blend samples in this study?",
+      "expected_answer": "The saturation pressures investigated were 1.5, 2, 3, 3.5, and 4 MPa.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides specific saturation pressures.",
+      "merged_from": [
+        {
+          "id": "Liu2019_COMP_Q004",
+          "paper_id": "Liu2019",
+          "persona_code": "COMP",
+          "question": "What saturation pressures were used as input parameters to study the foaming window of the PS60/PMMA40 blend?",
+          "expected_answer": "The saturation pressures were set at 1.5, 2, 3, 3.5, and 4 MPa.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific saturation pressures."
+        }
+      ],
+      "merge_reasoning": "Both questions inquire about the saturation pressures investigated."
+    },
+    {
+      "id": "Liu2019_DEDUP_003",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_SYNTH_Q003",
+      "question": "How does increasing the annealing time affect the phase domain size and the subsequent expansion ratio of the PS60/PMMA40 blend foams?",
+      "expected_answer": "Increasing the annealing time increases the phase domain size, which increases the gas desorption diffusion coefficient at the interface, resulting in a decreased expansion ratio after foaming.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Abstract",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides detailed effects.",
+      "merged_from": [
+        {
+          "id": "Liu2019_PROC_Q004",
+          "paper_id": "Liu2019",
+          "persona_code": "PROC",
+          "question": "What is the effect of increasing the phase domain size (via annealing) on the expansion ratio of the PS60/PMMA40 blend foams?",
+          "expected_answer": "Increasing the phase domain size via longer annealing increases the gas desorption diffusion coefficient at the interface, which results in a decreased expansion ratio after foaming.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides detailed effects."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss the effect of increasing annealing time on phase domain size and expansion ratio."
+    },
+    {
+      "id": "Liu2019_DEDUP_004",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_SYNTH_Q004",
+      "question": "What is the effect of increasing saturation pressure on the upper and lower limits of the foaming temperature window (TU and TL)?",
+      "expected_answer": "Both the upper (TU) and lower (TL) foaming temperatures decrease as the saturation pressure increases from 1.5 MPa to 4 MPa, with the upper limit (TU) being more sensitive to the pressure increase.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides specific effects.",
+      "merged_from": [
+        {
+          "id": "Liu2019_COMP_Q001",
+          "paper_id": "Liu2019",
+          "persona_code": "COMP",
+          "question": "How does increasing the saturation pressure affect the upper and lower foaming temperature limits (TU and TL) of the PS60/PMMA40 blend?",
+          "expected_answer": "Both the upper (TU) and lower (TL) foaming temperatures decrease as the saturation pressure increases from 1.5 MPa to 4 MPa, with the upper foaming temperature (TU) being more sensitive to the pressure increase.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific effects."
+        },
+        {
+          "id": "Liu2019_PROC_Q002",
+          "paper_id": "Liu2019",
+          "persona_code": "PROC",
+          "question": "How does increasing the saturation pressure affect the upper (TU) and lower (TL) limits of the foaming temperature window for the PS60/PMMA40 blend?",
+          "expected_answer": "Both the upper and lower foaming temperatures decrease as the saturation pressure increases from 1.5 MPa to 4 MPa, with the upper limit (TU) being more sensitive to the pressure increase.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific effects."
+        }
+      ],
+      "merge_reasoning": "All questions ask about the effect of increasing saturation pressure on foaming temperature limits."
+    },
+    {
+      "id": "Liu2019_DEDUP_005",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_SYNTH_Q005",
+      "question": "Why is the difference in viscoelasticity between the dispersed phase and the matrix considered a critical factor for the foaming window of blends with large phase domains?",
+      "expected_answer": "The difference in viscoelasticity is believed to be responsible for the narrowing of the suitable foaming temperature window, particularly when combined with large phase domains and high saturation pressures, which can lead to heterogeneity in cell structures or interface detachment.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Abstract",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides a clear explanation.",
+      "merged_from": [
+        {
+          "id": "Liu2019_PHD_Q005",
+          "paper_id": "Liu2019",
+          "persona_code": "PHD",
+          "question": "What is the proposed cause for the detachment of the dispersed phase from the matrix during foaming in binary polymer blends?",
+          "expected_answer": "The detachment is attributed to the difference in viscoelasticity between the dispersed phase and the matrix, which prevents the dispersed phase from coordinating well with the matrix during foaming.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides a clear explanation."
+        }
+      ],
+      "merge_reasoning": "Both questions inquire about the critical factor for the foaming window."
+    },
+    {
+      "id": "Liu2019_DEDUP_006",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_SYNTH_GAP001",
+      "question": "By which process were the polystyrene/poly(methyl methacrylate) blend samples produced prior to thermal annealing?",
+      "expected_answer": "The blend samples were prepared using a compression molding machine.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "source_section": "Abstract",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_007",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_SYNTH_GAP002",
+      "question": "How does increasing the thermal annealing time affect the desorption diffusion coefficient of the interface in the PS60/PMMA40 blend?",
+      "expected_answer": "Increasing the annealing time from 2 min to 100 min causes the desorption diffusion coefficient of the interface to increase from 2.47×10⁻¹¹ m²/s to 8.69×10⁻¹¹ m²/s.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_008",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_CHAR_Q002",
+      "question": "What was the saturation time and temperature used for the CO2 atmosphere treatment of the blend samples?",
+      "expected_answer": "The samples were kept at room temperature for 48h.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Section",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_009",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_CHAR_Q003",
+      "question": "How was the expansion ratio of the PS60/PMMA40 foam samples determined?",
+      "expected_answer": "The expansion ratio was calculated using the mass density of the unfoamed and foamed samples, which were obtained through the water displacement method according to ISO 1183–1987.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Section",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides specific measurement details.",
+      "merged_from": [
+        {
+          "id": "Liu2019_STU_Q002",
+          "paper_id": "Liu2019",
+          "persona_code": "STU",
+          "question": "Which methods were used to study the phase morphological changes of the PS/PMMA blend?",
+          "expected_answer": "The phase contrast optical microscope (PCOM) and scanning electron microscopy (SEM) were used.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific measurement details."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the method to determine expansion ratio."
+    },
+    {
+      "id": "Liu2019_DEDUP_010",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_CHAR_Q004",
+      "question": "How does the suitable foaming temperature window for the PS60/PMMA40 blend differ between samples annealed for 2 min versus 100 min as saturation pressure increases?",
+      "expected_answer": "For the 2 min annealed sample, the window turned slightly narrower (from 30°C to 25°C), whereas for the 100 min annealed sample, it gradually became much narrower (from 30°C to 5°C).",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides detailed comparison.",
+      "merged_from": [
+        {
+          "id": "Liu2019_PROC_Q003",
+          "paper_id": "Liu2019",
+          "persona_code": "PROC",
+          "question": "How does the foaming temperature window of a PS60/PMMA40 blend with a long annealing time (100 min) compare to one with a short annealing time (2 min) under high saturation pressures?",
+          "expected_answer": "The suitable foaming temperature window for the 100-min annealed sample becomes much narrower (decreasing from 30°C to 5°C) compared to the 2-min annealed sample (decreasing from 30°C to 25°C) as saturation pressure increases.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides detailed comparison."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss the difference in foaming temperature windows between annealed samples."
+    },
+    {
+      "id": "Liu2019_DEDUP_011",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_CHAR_Q005",
+      "question": "What instrument conditions were applied during the SEM investigation of the cell structures of the PS60/PMMA40 foam samples?",
+      "expected_answer": "A Zeiss EVO18 SEM was used at an operating voltage of 20kV, with samples cryogenically fractured in liquid nitrogen and sputtered with a layer of gold.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Section",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides specific instrument conditions.",
+      "merged_from": [
+        {
+          "id": "Liu2019_COMP_Q005",
+          "paper_id": "Liu2019",
+          "persona_code": "COMP",
+          "question": "Which experimental characterization methods were used to analyze the phase morphological changes and cell structure of the blends?",
+          "expected_answer": "Phase contrast optical microscope (PCOM) and scanning electron microscopy (SEM) were used for phase morphological changes, and SEM was used for cell structure observation.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific instrument conditions."
+        }
+      ],
+      "merge_reasoning": "Both questions inquire about the SEM investigation conditions."
+    },
+    {
+      "id": "Liu2019_DEDUP_012",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_PROC_Q001",
+      "question": "What saturation pressure and time were used to prepare the PS60/PMMA40 blend samples for batch foaming?",
+      "expected_answer": "The saturation pressure was set at 1.5, 2, 3, 3.5, and 4 MPa, and the samples were kept in a CO2 atmosphere for 48 hours.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (application) and provides specific saturation pressure and time.",
+      "merged_from": [
+        {
+          "id": "Liu2019_CHAR_GAP002",
+          "paper_id": "Liu2019",
+          "persona_code": "CHAR",
+          "question": "What were the measured values for the average domain size and domain density of the PS60/PMMA40 blend after 100 minutes of annealing?",
+          "expected_answer": "The average domain size was 10.97 μm and the domain density was 3.54 x 10^8 domains/cm3.",
+          "reason_discarded": "This question has a higher Bloom level (application) and provides specific saturation pressure and time."
+        },
+        {
+          "id": "Liu2019_COMP_GAP002",
+          "paper_id": "Liu2019",
+          "persona_code": "COMP",
+          "question": "What quantitative criteria were used to define a 'well foamed' sample to determine the lower foaming temperature (TL) and upper foaming temperature (TU)?",
+          "expected_answer": "Well foamed samples were defined as those with an expansion ratio of more than 3 with no thick cell walls.",
+          "reason_discarded": "This question has a higher Bloom level (application) and provides specific saturation pressure and time."
+        }
+      ],
+      "merge_reasoning": "All questions ask about the conditions used in batch foaming."
+    },
+    {
+      "id": "Liu2019_DEDUP_013",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_PROC_Q005",
+      "question": "Why is a lower foaming temperature or smaller phase domain size recommended to prevent interface detachment in PS60/PMMA40 blend foams?",
+      "expected_answer": "Interface detachment occurs when there is a combination of big phase domains, high saturation pressure, and high foaming temperature, likely due to the difference in viscoelasticity between the two components; therefore, reducing any of these factors helps the dispersed phase coordinate better with the matrix.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (application) and provides a clear explanation.",
+      "merged_from": [
+        {
+          "id": "Liu2019_STU_Q005",
+          "paper_id": "Liu2019",
+          "persona_code": "STU",
+          "question": "What is the effect of an increased gas desorption diffusion coefficient at the interface with the phase domain on the resulting foam?",
+          "expected_answer": "An increased gas desorption diffusion coefficient results in a decreased expansion ratio after foaming.",
+          "reason_discarded": "This question has a higher Bloom level (application) and provides a clear explanation."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss the reasons for recommending lower foaming temperatures."
+    },
+    {
+      "id": "Liu2019_DEDUP_014",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_PROC_GAP001",
+      "question": "How does the duration of thermal annealing affect the domain density and interface area of the PS60/PMMA40 blend prior to foaming?",
+      "expected_answer": "Increasing the annealing time causes the average domain size to increase (from 1.69μm to 10.97μm), which results in a sharp decrease in domain density (from 1.43✕10^11 domains/cm3 to 3.54✕10^8 domains/cm3) and a reduction in interface area (from 12852cm2/cm3 to 1337cm2/cm3).",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_015",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_PROC_GAP002",
+      "question": "Under what saturation pressure and time conditions were the PS60/PMMA40 blend samples processed in the batch foaming process to study the desorption diffusion coefficient?",
+      "expected_answer": "The samples were kept in a CO2 atmosphere in a high pressure vessel at room temperature for 48h, with saturation pressures set at 1.5, 2, 3, 3.5, and 4 MPa.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_016",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_COMP_Q002",
+      "question": "How does the sensitivity of the upper foaming temperature (TU) to saturation pressure compare between blend samples with short (2 min) and long (100 min) annealing times?",
+      "expected_answer": "The upper foaming temperature (TU) is much more vulnerable/sensitive to the increase in saturation pressure for the blend samples after long-period annealing (100 min) compared to those with short-period annealing (2 min).",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_017",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_COMP_Q003",
+      "question": "How does the increase in the desorption diffusion coefficient of the interface in PS60/PMMA40 blends, driven by annealing, quantitatively affect the expansion ratio reduction at a saturation pressure of 3 MPa?",
+      "expected_answer": "The increase in the desorption diffusion coefficient leads to easier gas escape, resulting in the largest reduction in expansion ratio (18.36) for samples annealed from 2 min to 100 min when saturated under 3 MPa.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (analysis) and provides quantitative effects.",
+      "merged_from": [
+        {
+          "id": "Liu2019_PHD_GAP001",
+          "paper_id": "Liu2019",
+          "persona_code": "PHD",
+          "question": "How does the increase in phase domain size during thermal annealing affect the gas desorption diffusion coefficient and the resulting expansion ratio of the PS60/PMMA40 blend?",
+          "expected_answer": "An increase in phase domain size increases the gas desorption diffusion coefficient for the interface, which facilitates easier gas escape and results in a decreased expansion ratio after foaming.",
+          "reason_discarded": "This question has a higher Bloom level (analysis) and provides quantitative effects."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss the effect of desorption diffusion coefficient on expansion ratio."
+    },
+    {
+      "id": "Liu2019_DEDUP_018",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_COMP_GAP001",
+      "question": "What are the specific quantitative changes in domain density and interface area per unit volume for PS60/PMMA40 blends as annealing time increases from 2 min to 100 min?",
+      "expected_answer": "Domain density sharply decreased from 1.43×10^11 domains/cm³ to 3.54×10^8 domains/cm³, and the interface area was reduced from 12852 cm²/cm³ to 1337 cm²/cm³.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_019",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_ONTO_Q001",
+      "question": "Which triple represents the relationship between the PS60/PMMA40 blend and the method used to prepare the samples?",
+      "expected_answer": "(PS60/PMMA40 blend, producedBy, compression molding)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Abstract",
+      "is_singleton": false,
+      "why_kept": "This is an ONTO question with a clear triple representation.",
+      "merged_from": [
+        {
+          "id": "Liu2019_ONTO_GAP001",
+          "paper_id": "Liu2019",
+          "persona_code": "ONTO",
+          "question": "Which triple represents the relationship between the PS60/PMMA40 blend and the batch foaming process used in the study?",
+          "expected_answer": "(PS60/PMMA40 blend, producedBy, batch foaming process)",
+          "reason_discarded": "This is an ONTO question with a clear triple representation."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the relationship between the blend and production method."
+    },
+    {
+      "id": "Liu2019_DEDUP_020",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_ONTO_Q002",
+      "question": "Which instruments or methods were used to characterize the phase morphological changes of the polymer blend?",
+      "expected_answer": "Phase contrast optical microscope (PCOM) and scanning electron microscopy (SEM)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "source_section": "Abstract",
+      "is_singleton": false,
+      "why_kept": "This is an ONTO question with a clear triple representation.",
+      "merged_from": [
+        {
+          "id": "Liu2019_CHAR_Q001",
+          "paper_id": "Liu2019",
+          "persona_code": "CHAR",
+          "question": "Which analytical techniques were used to study the phase morphological changes of the PS60/PMMA40 blend?",
+          "expected_answer": "Phase contrast optical microscopy (PCOM) and scanning electron microscopy (SEM).",
+          "reason_discarded": "This is an ONTO question with a clear triple representation."
+        },
+        {
+          "id": "Liu2019_STU_Q002",
+          "paper_id": "Liu2019",
+          "persona_code": "STU",
+          "question": "Which methods were used to study the phase morphological changes of the PS/PMMA blend?",
+          "expected_answer": "The phase contrast optical microscope (PCOM) and scanning electron microscopy (SEM) were used.",
+          "reason_discarded": "This is an ONTO question with a clear triple representation."
+        }
+      ],
+      "merge_reasoning": "All questions ask about the methods used for characterization."
+    },
+    {
+      "id": "Liu2019_DEDUP_021",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_ONTO_Q003",
+      "question": "In the study of PS60/PMMA40 blend foaming, 'saturation pressure' is a key parameter. Based on the text describing the 'suitable foaming temperature window' and the conditions required for well-foamed samples, which ontology class (Material, Process, Property, Method, Condition, or Instrument) should 'saturation pressure' be assigned to?",
+      "expected_answer": "Condition",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_022",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_ONTO_Q004",
+      "question": "Which entities in the paper should be categorized as 'Property' classes in the copolymer knowledge graph?",
+      "expected_answer": "Expansion ratio and desorption diffusion coefficient",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "source_section": "Abstract",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_023",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_ONTO_Q005",
+      "question": "Which triple captures the relationship between the PS60/PMMA40 blend and the thermal annealing process?",
+      "expected_answer": "(PS60/PMMA40 blend, undergoes, thermal annealing)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Abstract",
+      "is_singleton": false,
+      "why_kept": "This is an ONTO question with a clear triple representation.",
+      "merged_from": [
+        {
+          "id": "Liu2019_STU_GAP001",
+          "paper_id": "Liu2019",
+          "persona_code": "STU",
+          "question": "By which process were the polystyrene/poly(methyl methacrylate) blend samples produced?",
+          "expected_answer": "The blend samples were produced using a compression molding machine.",
+          "reason_discarded": "This is an ONTO question with a clear triple representation."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the relationship between the blend and thermal annealing."
+    },
+    {
+      "id": "Liu2019_DEDUP_024",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_ONTO_GAP002",
+      "question": "The text defines the 'lower foaming temperature (TL)' as a limit determined by the stiffness of the polymer system to ensure well-foamed samples. Based on this description, what ontology class should 'lower foaming temperature (TL)' be assigned to, and which data property would capture its numeric value?",
+      "expected_answer": "It should be assigned to the Property class (or a subclass of TemperatureProperty), and a data property such as hasTemperature would capture its numeric value.",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_025",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_STU_Q001",
+      "question": "By which process were the polystyrene/poly(methyl methacrylate) blend samples prepared for thermal annealing?",
+      "expected_answer": "A compression molding machine was used to prepare the blend samples.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "source_section": "Experimental section",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_026",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_STU_Q003",
+      "question": "Why was thermal annealing at the melt state chosen as a method to tune the phase domain size in this study?",
+      "expected_answer": "It provides a feasible approach that is easy to conduct to prepare polymer blends of the exact same composition with gradually increased phase domain in a broad range via morphological evolution in time scale driven by phase separation.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_027",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_STU_Q004",
+      "question": "What was the saturation time used for the PS60/PMMA40 blend samples in the CO2 atmosphere?",
+      "expected_answer": "The samples were kept in CO2 atmosphere for 48h.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_028",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_STU_GAP002",
+      "question": "Why was the PS60/PMMA40 blend specifically chosen for this study on phase domain size?",
+      "expected_answer": "It was chosen because the dispersed phase domains (PMMA phase) can grow across a much wider range—from less than 2μm before annealing to around 15μm after 100-min annealing—compared to PS20/PMMA80 and PS80/PMMA20 blends.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_029",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_PHD_Q001",
+      "question": "Why was thermal annealing at the melt state selected as the method to tune the phase domain size for the PS60/PMMA40 blend?",
+      "expected_answer": "Thermal annealing was chosen because it is a feasible approach that is easy to conduct and allows for the preparation of polymer blends of the exact same composition with gradually increased phase domains in a broad range via morphological evolution in a time scale driven by phase separation.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_030",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_PHD_Q002",
+      "question": "How does the increase in phase domain size and higher saturation pressure affect the foaming temperature window of the PS60/PMMA40 blend?",
+      "expected_answer": "The combination of large phase domains and high saturation pressure leads to a much narrower suitable foaming temperature window, as both the upper and lower foaming temperatures decrease, with the upper foaming temperature being particularly vulnerable.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Abstract",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_031",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_PHD_Q003",
+      "question": "How does the gas desorption diffusion coefficient of the PS60/PMMA40 blend interface compare to the coefficients of pure PS and pure PMMA?",
+      "expected_answer": "The desorption diffusion coefficient for the interface of the PS60/PMMA40 blend is significantly higher than those of pure PS (1.04 x 10^-12 m2/s) and pure PMMA (1.19 x 10^-12 m2/s), starting from 2.47 x 10^-11 m2/s.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_032",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_PHD_Q004",
+      "question": "What quantitative research gap regarding phase morphology does this paper aim to address compared to previous qualitative understandings?",
+      "expected_answer": "While it is qualitatively accepted that phase morphology determines foaming behavior, it was not quantitatively clear how the phase domain size specifically affects the foamability and the foaming window of a polymer blend.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Liu2019_DEDUP_033",
+      "paper_id": "Liu2019",
+      "source_id": "Liu2019_PHD_GAP002",
+      "question": "Why was the PS60/PMMA40 blend specifically selected for this study to investigate the relationship between phase structure and foaming behavior?",
+      "expected_answer": "The PS60/PMMA40 blend was chosen because its dispersed phase domains (PMMA phase) can grow from less than 2μm before annealing to around 15μm after 100-min annealing, providing a much wider range of phase domain sizes than PS20/PMMA80 and PS80/PMMA20 blends.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    }
+  ],
+  "discarded_questions": [
+    {
+      "id": "Liu2019_CHAR_Q001",
+      "paper_id": "Liu2019",
+      "question": "Which analytical techniques were used to study the phase morphological changes of the PS60/PMMA40 blend?",
+      "expected_answer": "Phase contrast optical microscopy (PCOM) and scanning electron microscopy (SEM).",
+      "persona_code": "CHAR",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Section",
+      "absorbed_into": "Liu2019_DEDUP_020"
+    },
+    {
+      "id": "Liu2019_CHAR_GAP001",
+      "paper_id": "Liu2019",
+      "question": "Which analytical techniques were used to study the phase morphological changes of the PS60/PMMA40 blend?",
+      "expected_answer": "Phase contrast optical microscope (PCOM) and scanning electron microscopy (SEM).",
+      "persona_code": "CHAR",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Abstract",
+      "absorbed_into": "Liu2019_DEDUP_001"
+    },
+    {
+      "id": "Liu2019_CHAR_GAP002",
+      "paper_id": "Liu2019",
+      "question": "What were the measured values for the average domain size and domain density of the PS60/PMMA40 blend after 100 minutes of annealing?",
+      "expected_answer": "The average domain size was 10.97 μm and the domain density was 3.54 x 10^8 domains/cm3.",
+      "persona_code": "CHAR",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Results and discussion",
+      "absorbed_into": "Liu2019_DEDUP_012"
+    },
+    {
+      "id": "Liu2019_PROC_Q002",
+      "paper_id": "Liu2019",
+      "question": "How does increasing the saturation pressure affect the upper (TU) and lower (TL) limits of the foaming temperature window for the PS60/PMMA40 blend?",
+      "expected_answer": "Both the upper and lower foaming temperatures decrease as the saturation pressure increases from 1.5 MPa to 4 MPa, with the upper limit (TU) being more sensitive to the pressure increase.",
+      "persona_code": "PROC",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "absorbed_into": "Liu2019_DEDUP_004"
+    },
+    {
+      "id": "Liu2019_PROC_Q003",
+      "paper_id": "Liu2019",
+      "question": "How does the foaming temperature window of a PS60/PMMA40 blend with a long annealing time (100 min) compare to one with a short annealing time (2 min) under high saturation pressures?",
+      "expected_answer": "The suitable foaming temperature window for the 100-min annealed sample becomes much narrower (decreasing from 30°C to 5°C) compared to the 2-min annealed sample (decreasing from 30°C to 25°C) as saturation pressure increases.",
+      "persona_code": "PROC",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "absorbed_into": "Liu2019_DEDUP_010"
+    },
+    {
+      "id": "Liu2019_PROC_Q004",
+      "paper_id": "Liu2019",
+      "question": "What is the effect of increasing the phase domain size (via annealing) on the expansion ratio of the PS60/PMMA40 blend foams?",
+      "expected_answer": "Increasing the phase domain size via longer annealing increases the gas desorption diffusion coefficient at the interface, which results in a decreased expansion ratio after foaming.",
+      "persona_code": "PROC",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Abstract",
+      "absorbed_into": "Liu2019_DEDUP_003"
+    },
+    {
+      "id": "Liu2019_COMP_Q001",
+      "paper_id": "Liu2019",
+      "question": "How does increasing the saturation pressure affect the upper and lower foaming temperature limits (TU and TL) of the PS60/PMMA40 blend?",
+      "expected_answer": "Both the upper (TU) and lower (TL) foaming temperatures decrease as the saturation pressure increases from 1.5 MPa to 4 MPa, with the upper foaming temperature (TU) being more sensitive to the pressure increase.",
+      "persona_code": "COMP",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "absorbed_into": "Liu2019_DEDUP_004"
+    },
+    {
+      "id": "Liu2019_COMP_Q004",
+      "paper_id": "Liu2019",
+      "question": "What saturation pressures were used as input parameters to study the foaming window of the PS60/PMMA40 blend?",
+      "expected_answer": "The saturation pressures were set at 1.5, 2, 3, 3.5, and 4 MPa.",
+      "persona_code": "COMP",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "absorbed_into": "Liu2019_DEDUP_002"
+    },
+    {
+      "id": "Liu2019_COMP_Q005",
+      "paper_id": "Liu2019",
+      "question": "Which experimental characterization methods were used to analyze the phase morphological changes and cell structure of the blends?",
+      "expected_answer": "Phase contrast optical microscope (PCOM) and scanning electron microscopy (SEM) were used for phase morphological changes, and SEM was used for cell structure observation.",
+      "persona_code": "COMP",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "source_section": "Abstract",
+      "absorbed_into": "Liu2019_DEDUP_011"
+    },
+    {
+      "id": "Liu2019_COMP_GAP002",
+      "paper_id": "Liu2019",
+      "question": "What quantitative criteria were used to define a 'well foamed' sample to determine the lower foaming temperature (TL) and upper foaming temperature (TU)?",
+      "expected_answer": "Well foamed samples were defined as those with an expansion ratio of more than 3 with no thick cell walls.",
+      "persona_code": "COMP",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "absorbed_into": "Liu2019_DEDUP_012"
+    },
+    {
+      "id": "Liu2019_ONTO_GAP001",
+      "paper_id": "Liu2019",
+      "question": "Which triple represents the relationship between the PS60/PMMA40 blend and the batch foaming process used in the study?",
+      "expected_answer": "(PS60/PMMA40 blend, producedBy, batch foaming process)",
+      "persona_code": "ONTO",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Abstract",
+      "absorbed_into": "Liu2019_DEDUP_019"
+    },
+    {
+      "id": "Liu2019_STU_Q002",
+      "paper_id": "Liu2019",
+      "question": "Which methods were used to study the phase morphological changes of the PS/PMMA blend?",
+      "expected_answer": "The phase contrast optical microscope (PCOM) and scanning electron microscopy (SEM) were used.",
+      "persona_code": "STU",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "source_section": "Abstract",
+      "absorbed_into": "Liu2019_DEDUP_020"
+    },
+    {
+      "id": "Liu2019_STU_Q005",
+      "paper_id": "Liu2019",
+      "question": "What is the effect of an increased gas desorption diffusion coefficient at the interface with the phase domain on the resulting foam?",
+      "expected_answer": "An increased gas desorption diffusion coefficient results in a decreased expansion ratio after foaming.",
+      "persona_code": "STU",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Abstract",
+      "absorbed_into": "Liu2019_DEDUP_013"
+    },
+    {
+      "id": "Liu2019_STU_GAP001",
+      "paper_id": "Liu2019",
+      "question": "By which process were the polystyrene/poly(methyl methacrylate) blend samples produced?",
+      "expected_answer": "The blend samples were produced using a compression molding machine.",
+      "persona_code": "STU",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "source_section": "Abstract",
+      "absorbed_into": "Liu2019_DEDUP_023"
+    },
+    {
+      "id": "Liu2019_PHD_Q005",
+      "paper_id": "Liu2019",
+      "question": "What is the proposed cause for the detachment of the dispersed phase from the matrix during foaming in binary polymer blends?",
+      "expected_answer": "The detachment is attributed to the difference in viscoelasticity between the dispersed phase and the matrix, which prevents the dispersed phase from coordinating well with the matrix during foaming.",
+      "persona_code": "PHD",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "absorbed_into": "Liu2019_DEDUP_005"
+    },
+    {
+      "id": "Liu2019_PHD_GAP001",
+      "paper_id": "Liu2019",
+      "question": "How does the increase in phase domain size during thermal annealing affect the gas desorption diffusion coefficient and the resulting expansion ratio of the PS60/PMMA40 blend?",
+      "expected_answer": "An increase in phase domain size increases the gas desorption diffusion coefficient for the interface, which facilitates easier gas escape and results in a decreased expansion ratio after foaming.",
+      "persona_code": "PHD",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Liu2019_DEDUP_017"
+    }
+  ]
+}

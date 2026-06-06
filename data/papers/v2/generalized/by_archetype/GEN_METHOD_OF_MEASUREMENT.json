@@ -1,0 +1,1802 @@
+{
+  "archetype": "METHOD_OF_MEASUREMENT",
+  "pipeline_step": "cross_paper_generalization",
+  "pipeline_version": "v2",
+  "step_version": "step2_v1.0",
+  "generalize_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "generalize_prompt_v1.0",
+    "source_dir": "data/papers/v2/dedup/"
+  },
+  "arch_stats": {
+    "n_input_cqs": 49,
+    "n_gen_cqs": 62,
+    "n_papers": 14,
+    "wall_time": "4m 14s 850ms"
+  },
+  "generalized_cqs": [
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_001",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which analytical technique was used to determine the weight-average molecular weight (Mw) of the copolymer?",
+      "abstraction_reasoning": "PATTERN: Which method measures Mw? | ENTITY MAPPING: poly(styrene-co-acrylonitrile) -> copolymer, size exclusion chromatography -> Mw measurement technique | WHY BROAD: Covers multiple papers using different copolymers and techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_008",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_CHAR_Q001",
+          "question": "Which analytical technique was used to determine the weight-average molecular weight (Mw) and dispersity of the poly(styrene-co-acrylonitrile) (SAN)?",
+          "expected_answer": "Size exclusion chromatography (SEC) using THF as solvent and narrowly distributed PS standards.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        },
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_027",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_ONTO_GAP002",
+          "question": "Which method was used to measure the weight-average molecular weight (Mw) of poly(styrene-co-acrylonitrile) (SAN)?",
+          "expected_answer": "Size exclusion chromatography (SEC) using THF as solvent and narrowly distributed PS standards.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_002",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to measure the glass transition temperature (Tg) of the polymer?",
+      "abstraction_reasoning": "PATTERN: Which technique measures Tg? | ENTITY MAPPING: cross-linked PB core -> polymer, modulated DSC -> Tg measurement technique | WHY BROAD: Multiple papers use different polymers and techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Bärwinkel2016_DEDUP_023",
+          "paper_id": "Bärwinkel2016",
+          "source_id": "Bärwinkel2016_ONTO_Q002",
+          "question": "Which method was used to measure the glass transition temperature (Tg) of the cross-linked PB core in Janus particles?",
+          "expected_answer": "modulated DSC",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        },
+        {
+          "step1_id": "Guo2015_DEDUP_024",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_ONTO_Q002",
+          "question": "Which method was used to measure the glass transition temperature (Tg) of the PMMA material?",
+          "expected_answer": "Differential scanning calorimeter (DSC)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_003",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which microscopy method was used to determine the polymer composition throughout the foam specimen?",
+      "abstraction_reasoning": "PATTERN: Which microscopy determines polymer composition? | ENTITY MAPPING: SAN and acrylic polymers -> copolymers, STXM -> microscopy technique | WHY BROAD: Covers different polymers and techniques across papers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_030",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_STU_Q004",
+          "question": "Which microscopy method was used to determine polymer composition throughout the foam specimen by measuring the intensity of peaks corresponding to aromatic C-C bonds of SAN and C-O bonds of acrylic polymers?",
+          "expected_answer": "Scanning transmission x-ray microscopy (STXM) was used to determine polymer composition by measuring the intensity of peaks corresponding to aromatic C-C bonds of SAN and C-O bonds of acrylic polymers.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_004",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which instrument was used to measure the density of the polymer and foam?",
+      "abstraction_reasoning": "PATTERN: Which tool measures density? | ENTITY MAPPING: polymer -> material, microbalance -> density measurement tool | WHY BROAD: Multiple papers use different materials and tools.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2013",
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_032",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_STU_GAP001",
+          "question": "Which tools were used to determine the density of the polymer and the resulting nanofoam?",
+          "expected_answer": "The density was determined using a density determination kit (Sartorius YDK 01) and a microbalance (Mettler AE 160).",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Section"
+        },
+        {
+          "step1_id": "Shah2025_DEDUP_003",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_CHAR_Q001",
+          "question": "Which method was used to determine the density of the PA 12 bead foams?",
+          "expected_answer": "The Archimedes principle using a precision density balance, where samples were weighed in air and then submerged in water.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Density measurement"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_005",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which analytical technique was used to characterize the cellular structure of the foams?",
+      "abstraction_reasoning": "PATTERN: Which technique characterizes foam structure? | ENTITY MAPPING: foams -> materials, SEM -> characterization technique | WHY BROAD: Common across multiple papers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Dumon2012",
+        "Reglero2011",
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_007",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_CHAR_Q001",
+          "question": "Which analytical technique was used to characterize the cellular structure of the foams?",
+          "expected_answer": "Scanning Electron Microscopy (SEM) on liquid nitrogen fractured samples.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Reglero2011_DEDUP_027",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_ONTO_Q003",
+          "question": "Which method was used to characterize the foamed structures of the polymers?",
+          "expected_answer": "SEM (Scanning Electron Microscopy)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_031",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_STU_Q002",
+          "question": "Which method was used to analyze the cellular structure and measure cell sizes of the foams?",
+          "expected_answer": "The cellular structure was analysed by means of Scanning Electron Microscopy (SEM).",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_006",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which method was used to determine the glass transition temperature (Tg) of the polymer/CO2 system?",
+      "abstraction_reasoning": "PATTERN: Which technique measures Tg under CO2? | ENTITY MAPPING: PMMA-CO2 -> polymer/CO2 system, minimum foaming temperature approach -> Tg measurement method | WHY BROAD: Covers different polymers and methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_030",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_STU_Q002",
+          "question": "Which method was used to determine the glass transition temperature of the PMMA-CO2 mixture?",
+          "expected_answer": "The glass transition temperature was determined by a minimum foaming temperature approach.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_007",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which instrument was used to determine the CO2 solubility of the polymer?",
+      "abstraction_reasoning": "PATTERN: Which tool measures CO2 solubility? | ENTITY MAPPING: polymers -> materials, magnetic suspension balance -> CO2 solubility measurement tool | WHY BROAD: Multiple papers use different polymers and tools.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2013",
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_011",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_CHAR_Q004",
+          "question": "Which instrument was used to measure the CO2 solubility of the polymers at pressures below 14 MPa?",
+          "expected_answer": "A magnetic suspension balance (MSB, Rubotherm, Germany).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        },
+        {
+          "step1_id": "Jacobs2007_DEDUP_023",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_GAP001",
+          "question": "Which instrument or method was used to determine the CO2 solubility (sorption) of the SMMA polymer?",
+          "expected_answer": "A magnetic suspension balance (MSB) from Rubotherm, Germany.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_008",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to determine the molecular weight distribution of the polymer blends?",
+      "abstraction_reasoning": "PATTERN: Which technique measures molecular weight distribution? | ENTITY MAPPING: PS/PMMA -> polymer blend, GPC -> molecular weight measurement technique | WHY BROAD: Covers different polymers and techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_007",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_CHAR_Q001",
+          "question": "Which analytical technique was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+          "expected_answer": "Gel Permeation Chromatography (GPC) using a RID-10A/SPD-20A from Shimadzu.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Part"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_024",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_ONTO_Q002",
+          "question": "Which method was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+          "expected_answer": "GPC (Gel Permeation Chromatography)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_009",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which method was used to observe the phase morphology of the polymer blends?",
+      "abstraction_reasoning": "PATTERN: Which technique observes phase morphology? | ENTITY MAPPING: polymer blends -> materials, SPM -> phase morphology observation technique | WHY BROAD: Common across multiple papers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_010",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_CHAR_Q004",
+          "question": "Which instrument and mode were used to observe the phase morphology and cellular structure of the polymer blends?",
+          "expected_answer": "Scanning probe microscopy (SPM, SPM-9500J3, Shimadzu) in tapping mode, following dry-etching with oxygen plasma.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Part"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_033",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_STU_Q004",
+          "question": "Which method was used to observe the cellular structure and phase morphology of the polymer blends?",
+          "expected_answer": "The cellular structure and phase morphology were observed using scanning probe microscopy (SPM) in tapping mode after dry-etching with oxygen plasma.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_010",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which method was used to determine the expansion ratio of the polymer foam?",
+      "abstraction_reasoning": "PATTERN: Which technique measures expansion ratio? | ENTITY MAPPING: PS60/PMMA40 -> polymer foam, water displacement method -> expansion ratio measurement technique | WHY BROAD: Covers different polymers and methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_009",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_CHAR_Q003",
+          "question": "How was the expansion ratio of the PS60/PMMA40 foam samples determined?",
+          "expected_answer": "The expansion ratio was calculated using the mass density of the unfoamed and foamed samples, which were obtained through the water displacement method according to ISO 1183–1987.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_011",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical technique was used to visualize the worm-like micelles of the copolymer?",
+      "abstraction_reasoning": "PATTERN: Which technique visualizes micelles? | ENTITY MAPPING: MAM copolymer -> copolymer, AFM -> visualization technique | WHY BROAD: Covers different polymers and techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_011",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_CHAR_Q005",
+          "question": "Which technique was used to visualize the worm-like micelles of the MAM copolymer in the PMMA matrix of the unfoamed material?",
+          "expected_answer": "Atomic Force Microscopy (AFM)",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_012",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to determine the density of the polymer/CO2 single-phase solutions?",
+      "abstraction_reasoning": "PATTERN: Which technique measures solution density? | ENTITY MAPPING: polymer/CO2 -> solution, gravimetric method -> density measurement technique | WHY BROAD: Covers different polymers and methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_027",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_ONTO_Q004",
+          "question": "Which measurement method is identified as being used for the determination of the density of polymer/CO2 single-phase solutions?",
+          "expected_answer": "The gravimetric method.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_013",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which instrument was used to assess CO2 sorption in the polymer?",
+      "abstraction_reasoning": "PATTERN: Which tool measures CO2 sorption? | ENTITY MAPPING: polymers -> materials, Rubotherm magnetic suspension balance -> CO2 sorption assessment tool | WHY BROAD: Multiple papers use different polymers and tools.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Di Maio2018",
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_033",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_STU_Q003",
+          "question": "Which instrument is commonly employed to assess CO2 sorption in polymers?",
+          "expected_answer": "The Rubotherm magnetic suspension balance is a versatile instrument commonly employed to assess CO2 sorption.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Shieh2002_DEDUP_023",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_STU_Q003",
+          "question": "Which equipment was used to perform the CO2 sorption measurements for the PMMA and PS samples?",
+          "expected_answer": "The measurements were performed in a supercritical extractor supplied by ISCO, model SFX 2-10.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_014",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to determine the chain length of the polymer chains?",
+      "abstraction_reasoning": "PATTERN: Which technique measures chain length? | ENTITY MAPPING: PP and PS -> polymers, molecular dynamic simulation -> chain length measurement technique | WHY BROAD: Covers different polymers and methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_008",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_CHAR_Q001",
+          "question": "Which method was used to determine the chain length of the polypropylene (PP) and polystyrene (PS) chains in this study?",
+          "expected_answer": "Molecular dynamic (MD) simulation.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Wu2021_DEDUP_023",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_ONTO_Q002",
+          "question": "Which method was used to determine the chain length of the polypropylene (PP) and polystyrene (PS) chains in the theoretical model?",
+          "expected_answer": "molecular dynamic (MD) simulation",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_015",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which method was used to determine the glass transition temperature (Tg) of the polymer using DSC?",
+      "abstraction_reasoning": "PATTERN: Which DSC-based technique measures Tg? | ENTITY MAPPING: SMMA -> polymer, DSC -> Tg measurement technique | WHY BROAD: Covers different polymers and techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Jacobs2007",
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_010",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_CHAR_GAP002",
+          "question": "Which analytical technique and standard were used to determine the molecular weight properties of the SMMA polymer?",
+          "expected_answer": "GPC analysis with polystyrene standard was used.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_008",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_CHAR_Q001",
+          "question": "Which analytical techniques were used to measure the molecular weight (Mw) and the glass transition temperature (Tg0) of the polymers before foaming?",
+          "expected_answer": "Molecular weight (Mw) was measured by SEC (Size-Exclusion Chromatography) and the glass transition temperature (Tg0) was measured by DSC (Differential Scanning Calorimetry).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_016",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to determine the molecular weight properties of the copolymer?",
+      "abstraction_reasoning": "PATTERN: Which technique measures molecular weight? | ENTITY MAPPING: SMMA -> copolymer, GPC with polystyrene standard -> molecular weight measurement technique | WHY BROAD: Covers different polymers and methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_019",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_Q002",
+          "question": "Which method was used to measure the number-average molecular weight (Mn) of the poly(styrene-co-methyl methacrylate) copolymer?",
+          "expected_answer": "GPC",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_017",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which method was used to determine the diffusivity of CO2 from sorption plots?",
+      "abstraction_reasoning": "PATTERN: Which technique measures CO2 diffusivity? | ENTITY MAPPING: PMMA-CO2 -> polymer/CO2 system, hybrid method -> diffusivity measurement technique | WHY BROAD: Covers different polymers and methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_033",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_STU_Q005",
+          "question": "Which method was used to determine the diffusivity of CO2 from the sorption plots?",
+          "expected_answer": "The hybrid method was used to determine diffusivity because it is more accurate, fitting data from the whole sorption curve including both short-time and long-time data.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_018",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical technique was used to determine the glass transition temperature (Tg) of the polymer using DSC?",
+      "abstraction_reasoning": "PATTERN: Which DSC-based technique measures Tg? | ENTITY MAPPING: SMMA -> polymer, DSC -> Tg measurement technique | WHY BROAD: Covers different polymers and techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Jacobs2007",
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_010",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_CHAR_GAP002",
+          "question": "Which analytical technique and standard were used to determine the molecular weight properties of the SMMA polymer?",
+          "expected_answer": "GPC analysis with polystyrene standard was used.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_008",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_CHAR_Q001",
+          "question": "Which analytical techniques were used to measure the molecular weight (Mw) and the glass transition temperature (Tg0) of the polymers before foaming?",
+          "expected_answer": "Molecular weight (Mw) was measured by SEC (Size-Exclusion Chromatography) and the glass transition temperature (Tg0) was measured by DSC (Differential Scanning Calorimetry).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_019",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to determine the molecular weight distribution of the polymer blends?",
+      "abstraction_reasoning": "PATTERN: Which technique measures molecular weight distribution? | ENTITY MAPPING: PS/PMMA -> polymer blend, GPC -> molecular weight measurement technique | WHY BROAD: Covers different polymers and techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_007",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_CHAR_Q001",
+          "question": "Which analytical technique was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+          "expected_answer": "Gel Permeation Chromatography (GPC) using a RID-10A/SPD-20A from Shimadzu.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Part"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_024",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_ONTO_Q002",
+          "question": "Which method was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+          "expected_answer": "GPC (Gel Permeation Chromatography)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_020",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which method was used to observe the phase morphology of the polymer blends?",
+      "abstraction_reasoning": "PATTERN: Which technique observes phase morphology? | ENTITY MAPPING: polymer blends -> materials, SPM -> phase morphology observation technique | WHY BROAD: Common across multiple papers.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_010",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_CHAR_Q004",
+          "question": "Which instrument and mode were used to observe the phase morphology and cellular structure of the polymer blends?",
+          "expected_answer": "Scanning probe microscopy (SPM, SPM-9500J3, Shimadzu) in tapping mode, following dry-etching with oxygen plasma.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Part"
+        },
+        {
+          "step1_id": "Otsuka2008_DEDUP_033",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_STU_Q004",
+          "question": "Which method was used to observe the cellular structure and phase morphology of the polymer blends?",
+          "expected_answer": "The cellular structure and phase morphology were observed using scanning probe microscopy (SPM) in tapping mode after dry-etching with oxygen plasma.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_021",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which method was used to determine the expansion ratio of the polymer foam?",
+      "abstraction_reasoning": "PATTERN: Which technique measures expansion ratio? | ENTITY MAPPING: PS60/PMMA40 -> polymer foam, water displacement method -> expansion ratio measurement technique | WHY BROAD: Covers different polymers and methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_009",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_CHAR_Q003",
+          "question": "How was the expansion ratio of the PS60/PMMA40 foam samples determined?",
+          "expected_answer": "The expansion ratio was calculated using the mass density of the unfoamed and foamed samples, which were obtained through the water displacement method according to ISO 1183–1987.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_022",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical technique was used to visualize the worm-like micelles of the copolymer?",
+      "abstraction_reasoning": "PATTERN: Which technique visualizes micelles? | ENTITY MAPPING: MAM copolymer -> copolymer, AFM -> visualization technique | WHY BROAD: Covers different polymers and techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_011",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_CHAR_Q005",
+          "question": "Which technique was used to visualize the worm-like micelles of the MAM copolymer in the PMMA matrix of the unfoamed material?",
+          "expected_answer": "Atomic Force Microscopy (AFM)",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_023",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to determine the density of the polymer/CO2 single-phase solutions?",
+      "abstraction_reasoning": "PATTERN: Which technique measures solution density? | ENTITY MAPPING: polymer/CO2 -> solution, gravimetric method -> density measurement technique | WHY BROAD: Covers different polymers and methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_027",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_ONTO_Q004",
+          "question": "Which measurement method is identified as being used for the determination of the density of polymer/CO2 single-phase solutions?",
+          "expected_answer": "The gravimetric method.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_024",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which instrument was used to assess CO2 sorption in the polymer?",
+      "abstraction_reasoning": "PATTERN: Which tool measures CO2 sorption? | ENTITY MAPPING: polymers -> materials, Rubotherm magnetic suspension balance -> CO2 sorption assessment tool | WHY BROAD: Multiple papers use different polymers and tools.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Di Maio2018",
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_033",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_STU_Q003",
+          "question": "Which instrument is commonly employed to assess CO2 sorption in polymers?",
+          "expected_answer": "The Rubotherm magnetic suspension balance is a versatile instrument commonly employed to assess CO2 sorption.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Shieh2002_DEDUP_023",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_STU_Q003",
+          "question": "Which equipment was used to perform the CO2 sorption measurements for the PMMA and PS samples?",
+          "expected_answer": "The measurements were performed in a supercritical extractor supplied by ISCO, model SFX 2-10.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_025",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to determine the chain length of the polymer chains?",
+      "abstraction_reasoning": "PATTERN: Which technique measures chain length? | ENTITY MAPPING: PP and PS -> polymers, molecular dynamic simulation -> chain length measurement technique | WHY BROAD: Covers different polymers and methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_008",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_CHAR_Q001",
+          "question": "Which method was used to determine the chain length of the polypropylene (PP) and polystyrene (PS) chains in this study?",
+          "expected_answer": "Molecular dynamic (MD) simulation.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        },
+        {
+          "step1_id": "Wu2021_DEDUP_023",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_ONTO_Q002",
+          "question": "Which method was used to determine the chain length of the polypropylene (PP) and polystyrene (PS) chains in the theoretical model?",
+          "expected_answer": "molecular dynamic (MD) simulation",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_026",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which method was used to determine the glass transition temperature (Tg) of the polymer using DSC?",
+      "abstraction_reasoning": "PATTERN: Which DSC-based technique measures Tg? | ENTITY MAPPING: SMMA -> polymer, DSC -> Tg measurement technique | WHY BROAD: Covers different polymers and techniques.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Jacobs2007",
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_010",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_CHAR_GAP002",
+          "question": "Which analytical technique and standard were used to determine the molecular weight properties of the SMMA polymer?",
+          "expected_answer": "GPC analysis with polystyrene standard was used.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        },
+        {
+          "step1_id": "Ruiz2011_DEDUP_008",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_CHAR_Q001",
+          "question": "Which analytical techniques were used to measure the molecular weight (Mw) and the glass transition temperature (Tg0) of the polymers before foaming?",
+          "expected_answer": "Molecular weight (Mw) was measured by SEC (Size-Exclusion Chromatography) and the glass transition temperature (Tg0) was measured by DSC (Differential Scanning Calorimetry).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_027",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to determine the molecular weight properties of the copolymer?",
+      "abstraction_reasoning": "PATTERN: Which technique measures molecular weight? | ENTITY MAPPING: SMMA -> copolymer, GPC with polystyrene standard -> molecular weight measurement technique | WHY BROAD: Covers different polymers and methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_019",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_Q002",
+          "question": "Which method was used to measure the number-average molecular weight (Mn) of the poly(styrene-co-methyl methacrylate) copolymer?",
+          "expected_answer": "GPC",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_028",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which method was used to determine the diffusivity of CO2 from sorption plots?",
+      "abstraction_reasoning": "PATTERN: Which technique measures CO2 diffusivity? | ENTITY MAPPING: PMMA-CO2 -> polymer/CO2 system, hybrid method -> diffusivity measurement technique | WHY BROAD: Covers different polymers and methods.",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_033",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_STU_Q005",
+          "question": "Which method was used to determine the diffusivity of CO2 from the sorption plots?",
+          "expected_answer": "The hybrid method was used to determine diffusivity because it is more accurate, fitting data from the whole sorption curve including both short-time and long-time data.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_029",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical techniques were used by Condo et al. and Handa et al. to experimentally confirm the retrograde vitrification behavior of PMMA/CO2?",
+      "abstraction_reasoning": "PATTERN: Which techniques confirm retrograde vitrification? | ENTITY MAPPING: PMMA/CO2 -> polymer/CO2 system, creep compliance measurements and step-wise DSC experiments -> confirmation techniques | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_008",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_CHAR_Q002",
+          "question": "Which analytical techniques were used by Condo et al. and Handa et al. to experimentally confirm the retrograde vitrification behavior of PMMA/CO2?",
+          "expected_answer": "Condo et al. used creep compliance measurements and Handa et al. used step-wise DSC experiments.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_030",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which instrument was used by Dutriez et al. to observe the Tg behavior of PMMA/CO2, and what was the resulting Tg value compared to polystyrene (PS)?",
+      "abstraction_reasoning": "PATTERN: Which instrument observes Tg behavior? | ENTITY MAPPING: PMMA/CO2 -> polymer/CO2 system, quartz crystal resonator -> Tg observation tool | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2014_DEDUP_010",
+          "paper_id": "Costeux2014",
+          "source_id": "Costeux2014_CHAR_Q005",
+          "question": "Which instrument was used by Dutriez et al. to observe the Tg behavior of PMMA/CO2, and what was the resulting Tg value compared to polystyrene (PS)?",
+          "expected_answer": "A quartz crystal resonator (QCM) was used; the Tg for PMMA/CO2 was depressed to about 10 °C, compared to about 35 °C for PS.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_031",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which technique is specifically reported for providing swelling ratios for thin films (150–300 nm) solution cast on silicon wafers?",
+      "abstraction_reasoning": "PATTERN: Which technique provides swelling ratios? | ENTITY MAPPING: thin films -> materials, in situ thickness measurement using spectroscopic reflectometer -> swelling ratio technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_011",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_CHAR_Q005",
+          "question": "Which technique is specifically reported for providing swelling ratios for thin films (150–300 nm) solution cast on silicon wafers?",
+          "expected_answer": "A technique based on in situ thickness measurement using a spectroscopic reflectometer.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_032",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which method was used to determine the glass transition temperature (Tg) of the PMMA-CO2 system, and what specific visual criteria were used to identify the minimum foaming temperature?",
+      "abstraction_reasoning": "PATTERN: Which method determines Tg with visual criteria? | ENTITY MAPPING: PMMA-CO2 -> polymer/CO2 system, minimum foaming temperature approach -> Tg determination method | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_008",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_CHAR_Q001",
+          "question": "Which method was used to determine the glass transition temperature (Tg) of the PMMA-CO2 system, and what specific visual criteria were used to identify the minimum foaming temperature?",
+          "expected_answer": "The minimum foaming temperature approach was used. The Tg was identified as the average of two adjacent foaming temperatures where the sample remains transparent at the lower temperature and becomes opaque (indicating bubble formation) at the higher temperature.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_033",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to determine the glass transition temperature of the PMMA material?",
+      "abstraction_reasoning": "PATTERN: Which technique measures Tg? | ENTITY MAPPING: PMMA -> polymer, DSC -> Tg measurement technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_024",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_ONTO_Q002",
+          "question": "Which method was used to measure the glass transition temperature (Tg) of the PMMA material?",
+          "expected_answer": "Differential scanning calorimeter (DSC)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_034",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which method was used to determine the glass transition temperature of the PMMA-CO2 mixture?",
+      "abstraction_reasoning": "PATTERN: Which technique measures Tg under CO2? | ENTITY MAPPING: PMMA-CO2 -> polymer/CO2 system, minimum foaming temperature approach -> Tg measurement method | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_030",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_STU_Q002",
+          "question": "Which method was used to determine the glass transition temperature of the PMMA-CO2 mixture?",
+          "expected_answer": "The glass transition temperature was determined by a minimum foaming temperature approach.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_035",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which method was used to determine the diffusivity of CO2 from sorption plots?",
+      "abstraction_reasoning": "PATTERN: Which technique measures CO2 diffusivity? | ENTITY MAPPING: PMMA-CO2 -> polymer/CO2 system, hybrid method -> diffusivity measurement technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Guo2015_DEDUP_033",
+          "paper_id": "Guo2015",
+          "source_id": "Guo2015_STU_Q005",
+          "question": "Which method was used to determine the diffusivity of CO2 from the sorption plots?",
+          "expected_answer": "The hybrid method was used to determine diffusivity because it is more accurate, fitting data from the whole sorption curve including both short-time and long-time data.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_036",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical technique was used to determine the glass transition temperature (Tg) of the SMMA polymer, and what was the resulting value?",
+      "abstraction_reasoning": "PATTERN: Which technique measures Tg? | ENTITY MAPPING: SMMA -> polymer, DSC analysis -> Tg measurement technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_008",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_CHAR_Q002",
+          "question": "Which analytical technique was used to determine the glass transition temperature (Tg) of the SMMA polymer, and what was the resulting value?",
+          "expected_answer": "DSC analysis (Perkin Elmer Pyris Diamond DSC) was used, revealing a Tg of 101 °C.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_037",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical technique and standard were used to determine the molecular weight properties of the SMMA polymer?",
+      "abstraction_reasoning": "PATTERN: Which technique measures molecular weight? | ENTITY MAPPING: SMMA -> polymer, GPC with polystyrene standard -> molecular weight measurement technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_010",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_CHAR_GAP002",
+          "question": "Which analytical technique and standard were used to determine the molecular weight properties of the SMMA polymer?",
+          "expected_answer": "GPC analysis with polystyrene standard was used.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_038",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to determine the number-average molecular weight (Mn) of the poly(styrene-co-methyl methacrylate) copolymer?",
+      "abstraction_reasoning": "PATTERN: Which technique measures Mn? | ENTITY MAPPING: SMMA -> copolymer, GPC -> Mn measurement technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_019",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_Q002",
+          "question": "Which method was used to measure the number-average molecular weight (Mn) of the poly(styrene-co-methyl methacrylate) copolymer?",
+          "expected_answer": "GPC",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_039",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which instrument or method was used to determine the CO2 solubility (sorption) of the SMMA polymer?",
+      "abstraction_reasoning": "PATTERN: Which tool measures CO2 solubility? | ENTITY MAPPING: SMMA -> polymer, magnetic suspension balance -> CO2 solubility measurement tool | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_023",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_ONTO_GAP001",
+          "question": "Which instrument or method was used to determine the CO2 solubility (sorption) of the SMMA polymer?",
+          "expected_answer": "A magnetic suspension balance (MSB) from Rubotherm, Germany.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_040",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which method was used to determine the cell structure and morphology of the SMMA foams?",
+      "abstraction_reasoning": "PATTERN: Which technique determines foam structure? | ENTITY MAPPING: SMMA -> polymer, SEM -> structure determination technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Jacobs2007_DEDUP_027",
+          "paper_id": "Jacobs2007",
+          "source_id": "Jacobs2007_STU_GAP001",
+          "question": "Which method was used to determine the cell structure and morphology of the SMMA foams?",
+          "expected_answer": "Scanning Electron Microscopy (SEM) was used to determine the cell structure, and the resulting pictures were converted into Voronoi diagrams to analyze cell area and homogeneity.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_041",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which instruments or methods were used to characterize the phase morphological changes of the polymer blend?",
+      "abstraction_reasoning": "PATTERN: Which techniques observe phase morphology? | ENTITY MAPPING: polymer blends -> materials, PCOM and SEM -> observation techniques | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Liu2019_DEDUP_020",
+          "paper_id": "Liu2019",
+          "source_id": "Liu2019_ONTO_Q002",
+          "question": "Which instruments or methods were used to characterize the phase morphological changes of the polymer blend?",
+          "expected_answer": "Phase contrast optical microscope (PCOM) and scanning electron microscopy (SEM)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Abstract"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_042",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical technique was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+      "abstraction_reasoning": "PATTERN: Which technique measures molecular weight distribution? | ENTITY MAPPING: PS/PMMA -> polymer blend, GPC using RID-10A/SPD-20A -> measurement technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_007",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_CHAR_Q001",
+          "question": "Which analytical technique was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+          "expected_answer": "Gel Permeation Chromatography (GPC) using a RID-10A/SPD-20A from Shimadzu.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_043",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which instrument and mode were used to observe the phase morphology and cellular structure of the polymer blends?",
+      "abstraction_reasoning": "PATTERN: Which tool observes phase and cellular structures? | ENTITY MAPPING: polymer blends -> materials, SPM in tapping mode -> observation technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_010",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_CHAR_Q004",
+          "question": "Which instrument and mode were used to observe the phase morphology and cellular structure of the polymer blends?",
+          "expected_answer": "Scanning probe microscopy (SPM, SPM-9500J3, Shimadzu) in tapping mode, following dry-etching with oxygen plasma.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_044",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+      "abstraction_reasoning": "PATTERN: Which technique measures molecular weight distribution? | ENTITY MAPPING: PS/PMMA -> polymer blend, GPC -> measurement technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_024",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_ONTO_Q002",
+          "question": "Which method was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+          "expected_answer": "GPC (Gel Permeation Chromatography)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_045",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which method was used to observe the cellular structure and phase morphology of the polymer blends?",
+      "abstraction_reasoning": "PATTERN: Which technique observes cellular and phase structures? | ENTITY MAPPING: polymer blends -> materials, SPM in tapping mode -> observation technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Otsuka2008_DEDUP_033",
+          "paper_id": "Otsuka2008",
+          "source_id": "Otsuka2008_STU_Q004",
+          "question": "Which method was used to observe the cellular structure and phase morphology of the polymer blends?",
+          "expected_answer": "The cellular structure and phase morphology were observed using scanning probe microscopy (SPM) in tapping mode after dry-etching with oxygen plasma.",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Part"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_046",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical techniques were used to measure the molecular weight (Mw) and the glass transition temperature (Tg0) of the polymers before foaming?",
+      "abstraction_reasoning": "PATTERN: Which techniques measure Mw and Tg? | ENTITY MAPPING: polymers -> materials, SEC and DSC -> measurement techniques | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_008",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_CHAR_Q001",
+          "question": "Which analytical techniques were used to measure the molecular weight (Mw) and the glass transition temperature (Tg0) of the polymers before foaming?",
+          "expected_answer": "Molecular weight (Mw) was measured by SEC (Size-Exclusion Chromatography) and the glass transition temperature (Tg0) was measured by DSC (Differential Scanning Calorimetry).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_047",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "What method was used to determine the foam density of the produced samples, and what was the underlying physical principle?",
+      "abstraction_reasoning": "PATTERN: Which method determines foam density? | ENTITY MAPPING: foams -> materials, water-displacement method based on Archimedes principle -> density determination technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_011",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_CHAR_Q004",
+          "question": "What method was used to determine the foam density of the produced samples, and what was the underlying physical principle?",
+          "expected_answer": "Foam density was determined by the water-displacement method, based on Archimedes principle.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_048",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which specific analytical technique, instrument model, solvent, and detection method were used to determine the average molar masses (Mw) of the polymers and copolymers?",
+      "abstraction_reasoning": "PATTERN: Which technique measures Mw with specifics? | ENTITY MAPPING: polymers -> materials, SEC/GPC using PL-GPC50Plus device, THF solvent, UV detection at 254 nm -> measurement technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_013",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_CHAR_GAP001",
+          "question": "Which specific analytical technique, instrument model, solvent, and detection method were used to determine the average molar masses (Mw) of the polymers and copolymers?",
+          "expected_answer": "Size exclusion chromatography (SEC/GPC) using a PL-GPC50Plus device with THF as the solvent and UV detection at 254 nm.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_049",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method and instrument were used to measure the average molar mass (Mw) of the materials?",
+      "abstraction_reasoning": "PATTERN: Which technique measures Mw? | ENTITY MAPPING: materials -> polymers, SEC using PL-GPC50Plus device -> measurement technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_025",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_ONTO_Q002",
+          "question": "Which method and instrument were used to measure the average molar mass (Mw) of the materials?",
+          "expected_answer": "Size exclusion chromatography (SEC) using a PL-GPC50Plus device.",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_050",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which method was used to analyze the cellular structure and measure cell sizes of the foams?",
+      "abstraction_reasoning": "PATTERN: Which technique analyzes foam structure? | ENTITY MAPPING: foams -> materials, SEM -> analysis technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Ruiz2011_DEDUP_031",
+          "paper_id": "Ruiz2011",
+          "source_id": "Ruiz2011_STU_Q002",
+          "question": "Which method was used to analyze the cellular structure and measure cell sizes of the foams?",
+          "expected_answer": "The cellular structure was analysed by means of Scanning Electron Microscopy (SEM).",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_051",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which method was used to determine the density of the PA 12 bead foams?",
+      "abstraction_reasoning": "PATTERN: Which technique measures foam density? | ENTITY MAPPING: PA 12 beads -> materials, Archimedes principle using precision density balance -> density measurement technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_003",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_CHAR_Q001",
+          "question": "Which method was used to determine the density of the PA 12 bead foams?",
+          "expected_answer": "The Archimedes principle using a precision density balance, where samples were weighed in air and then submerged in water.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Density measurement"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_052",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical technique was used to examine the cell morphology and structure of the PA 12 beads?",
+      "abstraction_reasoning": "PATTERN: Which technique examines cell structure? | ENTITY MAPPING: PA 12 beads -> materials, SEM with JEOL JSM 6510 and ImageJ software -> examination technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shah2025_DEDUP_005",
+          "paper_id": "Shah2025",
+          "source_id": "Shah2025_CHAR_Q003",
+          "question": "Which analytical technique was used to examine the cell morphology and structure of the PA 12 beads?",
+          "expected_answer": "Scanning electron microscope (SEM), specifically a JEOL JSM 6510, with ImageJ software used for subsequent analysis.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Morphology"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_053",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical technique was cited in the Introduction as being used to investigate the interactions of CO2 with polymers?",
+      "abstraction_reasoning": "PATTERN: Which technique investigates CO2-polymer interactions? | ENTITY MAPPING: polymers -> materials, FTIR spectroscopy -> interaction investigation technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_007",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_CHAR_GAP002",
+          "question": "Which analytical technique was cited in the Introduction as being used to investigate the interactions of CO2 with polymers?",
+          "expected_answer": "Fourier transform infrared (FTIR) spectroscopy",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Introduction"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_054",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to determine the physisorption transition temperature of PS?",
+      "abstraction_reasoning": "PATTERN: Which technique measures physisorption transition? | ENTITY MAPPING: PS -> polymer, CO2 sorption isobars -> measurement technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Shieh2002_DEDUP_017",
+          "paper_id": "Shieh2002",
+          "source_id": "Shieh2002_ONTO_Q002",
+          "question": "Which method was used to determine the physisorption transition temperature of PS?",
+          "expected_answer": "CO2 sorption isobars",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_055",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "generalized_question": "Which theoretical approach was constructed to investigate the foaming mechanism of the PP/PS/CO2 blend system?",
+      "abstraction_reasoning": "PATTERN: Which theory investigates foaming mechanisms? | ENTITY MAPPING: PP/PS/CO2 -> polymer blend, 3D-DFT -> investigation technique | WHY NARROW: Specific to this study.",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Wu2021_DEDUP_029",
+          "paper_id": "Wu2021",
+          "source_id": "Wu2021_STU_Q002",
+          "question": "Which theoretical approach was constructed to investigate the foaming mechanism of the PP/PS/CO2 blend system?",
+          "expected_answer": "Three-dimensional density functional theory (3D-DFT)",
+          "persona_code": "STU",
+          "bloom_level": "recall",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_056",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical technique was used to acquire high resolution images of the foam morphology?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Costeux2013_DEDUP_008",
+          "paper_id": "Costeux2013",
+          "source_id": "Costeux2013_CHAR_Q001",
+          "question": "Which analytical technique was used to acquire high resolution images of the foam morphology?",
+          "expected_answer": "Scanning electron microscope (SEM, FEI Nova NanoSEM 600) equipped with a secondary electron detector in immersion mode.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_057",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical instruments or techniques are used to determine the glass transition temperature (Tg) and melting temperature (Tm) of polymers under CO2 pressure?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Di Maio2018_DEDUP_009",
+          "paper_id": "Di Maio2018",
+          "source_id": "Di Maio2018_CHAR_Q002",
+          "question": "Which analytical instruments or techniques are used to determine the glass transition temperature (Tg) and melting temperature (Tm) of polymers under CO2 pressure?",
+          "expected_answer": "Measurements are based on high-pressure differential scanning calorimeter (DSC) units, assessments of changes in transmitted light intensity, mechanical properties, or monitoring frequency shift using quartz crystal resonators (QCR).",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_058",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "What technique was used to observe the dense solid nanostructures of the copolymers and blends, and how were the samples prepared?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_008",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_CHAR_Q002",
+          "question": "What technique was used to observe the dense solid nanostructures of the copolymers and blends, and how were the samples prepared?",
+          "expected_answer": "Transmission Electron Microscopy (TEM) was used on ultra microtomed thin films (≈80 nm) treated with either RuO4 or phosphotungstic acid.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_059",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical technique was used to observe the nanostructures, such as micelles and lamellas, in the MAM copolymer and its blends?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_012",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_CHAR_GAP001",
+          "question": "Which analytical technique was used to observe the nanostructures, such as micelles and lamellas, in the MAM copolymer and its blends?",
+          "expected_answer": "Transmission Electron Microscopy (TEM) on ultra microtomed thin films (≈80 nm) treated with RuO4 or phosphotungstic acid.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Results"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_060",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "generalized_question": "Which method was used to characterize the cellular structure (cell size) of the foams?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Dumon2012_DEDUP_027",
+          "paper_id": "Dumon2012",
+          "source_id": "Dumon2012_ONTO_Q002",
+          "question": "Which method was used to characterize the cellular structure (cell size) of the foams?",
+          "expected_answer": "Scanning Electron Microscopy (SEM)",
+          "persona_code": "ONTO",
+          "bloom_level": "synthesis",
+          "source_section": "Experimental Section"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_061",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which analytical technique was used to characterize the cellular structure of the foamed materials?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_008",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_CHAR_Q002",
+          "question": "Which analytical technique was used to characterize the cellular structure of the foamed materials?",
+          "expected_answer": "Scanning Electron Microscopy (SEM), specifically using a model HITACHI S-3000N on liquid nitrogen fractured samples.",
+          "persona_code": "CHAR",
+          "bloom_level": "comprehension",
+          "source_section": "Experimental"
+        }
+      ]
+    },
+    {
+      "gen_id": "GEN_METHOD_OF_MEASUREMENT_062",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "generalized_question": "Which method was used to visualize and analyze the final foamed structures of the polymers?",
+      "abstraction_reasoning": "FALLBACK: not mentioned by LLM; original question used",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "original_cqs": [
+        {
+          "step1_id": "Reglero2011_DEDUP_033",
+          "paper_id": "Reglero2011",
+          "source_id": "Reglero2011_STU_Q002",
+          "question": "Which method was used to visualize and analyze the final foamed structures of the polymers?",
+          "expected_answer": "SEM (Scanning Electron Microscopy) micrographs were used to show the foamed structures.",
+          "persona_code": "STU",
+          "bloom_level": "comprehension",
+          "source_section": "Body"
+        }
+      ]
+    }
+  ],
+  "reverse_index": {
+    "Bärwinkel2016_DEDUP_008": "GEN_METHOD_OF_MEASUREMENT_001",
+    "Bärwinkel2016_DEDUP_027": "GEN_METHOD_OF_MEASUREMENT_001",
+    "Bärwinkel2016_DEDUP_023": "GEN_METHOD_OF_MEASUREMENT_002",
+    "Guo2015_DEDUP_024": "GEN_METHOD_OF_MEASUREMENT_033",
+    "Costeux2013_DEDUP_030": "GEN_METHOD_OF_MEASUREMENT_003",
+    "Costeux2013_DEDUP_032": "GEN_METHOD_OF_MEASUREMENT_004",
+    "Shah2025_DEDUP_003": "GEN_METHOD_OF_MEASUREMENT_051",
+    "Dumon2012_DEDUP_007": "GEN_METHOD_OF_MEASUREMENT_005",
+    "Reglero2011_DEDUP_027": "GEN_METHOD_OF_MEASUREMENT_005",
+    "Ruiz2011_DEDUP_031": "GEN_METHOD_OF_MEASUREMENT_050",
+    "Guo2015_DEDUP_030": "GEN_METHOD_OF_MEASUREMENT_034",
+    "Costeux2013_DEDUP_011": "GEN_METHOD_OF_MEASUREMENT_007",
+    "Jacobs2007_DEDUP_023": "GEN_METHOD_OF_MEASUREMENT_039",
+    "Otsuka2008_DEDUP_007": "GEN_METHOD_OF_MEASUREMENT_042",
+    "Otsuka2008_DEDUP_024": "GEN_METHOD_OF_MEASUREMENT_044",
+    "Otsuka2008_DEDUP_010": "GEN_METHOD_OF_MEASUREMENT_043",
+    "Otsuka2008_DEDUP_033": "GEN_METHOD_OF_MEASUREMENT_045",
+    "Liu2019_DEDUP_009": "GEN_METHOD_OF_MEASUREMENT_021",
+    "Reglero2011_DEDUP_011": "GEN_METHOD_OF_MEASUREMENT_022",
+    "Di Maio2018_DEDUP_027": "GEN_METHOD_OF_MEASUREMENT_023",
+    "Di Maio2018_DEDUP_033": "GEN_METHOD_OF_MEASUREMENT_024",
+    "Shieh2002_DEDUP_023": "GEN_METHOD_OF_MEASUREMENT_024",
+    "Wu2021_DEDUP_008": "GEN_METHOD_OF_MEASUREMENT_025",
+    "Wu2021_DEDUP_023": "GEN_METHOD_OF_MEASUREMENT_025",
+    "Jacobs2007_DEDUP_010": "GEN_METHOD_OF_MEASUREMENT_037",
+    "Ruiz2011_DEDUP_008": "GEN_METHOD_OF_MEASUREMENT_046",
+    "Jacobs2007_DEDUP_019": "GEN_METHOD_OF_MEASUREMENT_038",
+    "Guo2015_DEDUP_033": "GEN_METHOD_OF_MEASUREMENT_035",
+    "Costeux2014_DEDUP_008": "GEN_METHOD_OF_MEASUREMENT_029",
+    "Costeux2014_DEDUP_010": "GEN_METHOD_OF_MEASUREMENT_030",
+    "Di Maio2018_DEDUP_011": "GEN_METHOD_OF_MEASUREMENT_031",
+    "Guo2015_DEDUP_008": "GEN_METHOD_OF_MEASUREMENT_032",
+    "Jacobs2007_DEDUP_008": "GEN_METHOD_OF_MEASUREMENT_036",
+    "Jacobs2007_DEDUP_027": "GEN_METHOD_OF_MEASUREMENT_040",
+    "Liu2019_DEDUP_020": "GEN_METHOD_OF_MEASUREMENT_041",
+    "Ruiz2011_DEDUP_011": "GEN_METHOD_OF_MEASUREMENT_047",
+    "Ruiz2011_DEDUP_013": "GEN_METHOD_OF_MEASUREMENT_048",
+    "Ruiz2011_DEDUP_025": "GEN_METHOD_OF_MEASUREMENT_049",
+    "Shah2025_DEDUP_005": "GEN_METHOD_OF_MEASUREMENT_052",
+    "Shieh2002_DEDUP_007": "GEN_METHOD_OF_MEASUREMENT_053",
+    "Shieh2002_DEDUP_017": "GEN_METHOD_OF_MEASUREMENT_054",
+    "Wu2021_DEDUP_029": "GEN_METHOD_OF_MEASUREMENT_055",
+    "Costeux2013_DEDUP_008": "GEN_METHOD_OF_MEASUREMENT_056",
+    "Di Maio2018_DEDUP_009": "GEN_METHOD_OF_MEASUREMENT_057",
+    "Dumon2012_DEDUP_008": "GEN_METHOD_OF_MEASUREMENT_058",
+    "Dumon2012_DEDUP_012": "GEN_METHOD_OF_MEASUREMENT_059",
+    "Dumon2012_DEDUP_027": "GEN_METHOD_OF_MEASUREMENT_060",
+    "Reglero2011_DEDUP_008": "GEN_METHOD_OF_MEASUREMENT_061",
+    "Reglero2011_DEDUP_033": "GEN_METHOD_OF_MEASUREMENT_062"
+  }
+}

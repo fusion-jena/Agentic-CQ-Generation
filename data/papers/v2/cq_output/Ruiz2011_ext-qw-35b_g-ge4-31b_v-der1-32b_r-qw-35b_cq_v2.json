@@ -1,0 +1,3527 @@
+{
+  "paper_id": "Ruiz2011",
+  "paper_metadata": {
+    "title": "Micro and nano cellular amorphous polymers (PMMA, PS) in supercritical CO2 assisted by nanostructured CO2-philic block copolymers – One step foaming process",
+    "first_author_lastname": "Ruiz",
+    "year": 2011,
+    "journal": "The Journal of Supercritical Fluids",
+    "doi": null,
+    "keywords": [
+      "Ultra microcellular foaming",
+      "Polymers",
+      "Supercritical carbon dioxide",
+      "Block copolymers",
+      "Nanostructures"
+    ],
+    "polymer_systems": [
+      "PMMA",
+      "PS",
+      "SBM triblock copolymer",
+      "MAM triblock copolymer"
+    ],
+    "polymerization_methods": [],
+    "paper_type": "research article",
+    "paper_id": "Ruiz2011",
+    "source_filename": "Micro and nano cellular amorphous polymers (PMMA, PS) in supercritical CO2 assisted by nanostructured CO2-philic block copolymers –One step foaming process.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 9,
+    "n_figures": 10,
+    "n_tables": 1,
+    "file_size_kb": 1584.2,
+    "char_count": 46511,
+    "estimated_tokens": 11627,
+    "n_sections": 0
+  },
+  "pipeline_config": {
+    "pipeline_version": "v2.1",
+    "extraction_method": "plain",
+    "metadata_extractor": "qwen3.5:27b",
+    "iterative_extractor": "qwen3.6:35b-a3b",
+    "cq_generator": "gemma4:31b",
+    "cq_validator": "deepseek-r1:32b",
+    "cq_refiner": "qwen3.5:35b",
+    "embedding_model": "BAAI/bge-small-en-v1.5"
+  },
+  "execution_stats": {
+    "text_extraction_secs": 8.17,
+    "total_wall_secs": 1313.19,
+    "stage_seconds": {
+      "chunk": 0.0,
+      "index": 0.44,
+      "extract": 492.72,
+      "retrieve": 0.2,
+      "generate": 449.4,
+      "validate": 293.63,
+      "refine": 68.34,
+      "evaluate": 0.21
+    }
+  },
+  "pipeline_version": "v2.1",
+  "n_personas": 7,
+  "n_questions": 49,
+  "was_refined": true,
+  "persona_questions": {
+    "SYNTH": [
+      {
+        "id": "Ruiz2011_SYNTH_Q001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "By which process were the PS + SBM and PMMA + MAM blends produced?",
+        "expected_answer": "Blending by extrusion using a Scamex CE02 extruder.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "extrusion"
+          },
+          {
+            "role": "individual",
+            "term": "PS + SBM blend"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_SYNTH_Q002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What was the temperature profile and screw velocity used during the extrusion blending of the polymer blends?",
+        "expected_answer": "A temperature profile from 165 °C to 225 °C and a screw velocity of 60 rpm.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "screw velocity"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_SYNTH_Q003",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the saturation temperature from 25 °C to 80 °C affect the weight gain ratio of CO2 in PMMA samples saturated at 300 bar for 16 hours?",
+        "expected_answer": "The weight gain ratio (w) decreased as the saturation temperature increased; for example, PMMA uptake dropped from 16.9% at 25 °C to 15.6% at 80 °C.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          },
+          {
+            "role": "property",
+            "term": "weight gain ratio"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to specify the material (PMMA), the exact saturation conditions (300 bar, 16 h), and the temperature range to ensure the answer is explicitly supported by the data in Table 3 and the accompanying text."
+      },
+      {
+        "id": "Ruiz2011_SYNTH_Q004",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why were the SBM and MAM block copolymers selected as additives for the PS and PMMA matrices in the foaming process?",
+        "expected_answer": "They provide CO2-philic blocks that create nanostructured domains, which offer advantages over classical blends in terms of cell size control and reduction of cell size.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "block copolymer"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_SYNTH_Q005",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the monomer composition and the molar mass of the PS block for the SBM triblock copolymer?",
+        "expected_answer": "The composition is 52 wt% styrene, 30 wt% butadiene, and 18 wt% methylmethacrylate, with a PS block molar mass of 30,000 g/mol.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SBM"
+          },
+          {
+            "role": "property",
+            "term": "molar mass"
+          },
+          {
+            "role": "property",
+            "term": "monomer composition"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_SYNTH_GAP001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the temperature profile and screw velocity used during the extrusion blending of the PS + SBM and PMMA + MAM blends?",
+        "expected_answer": "The temperature profile ranged from 165 °C to 225 °C and the screw velocity was 60 rpm.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "temperature"
+          },
+          {
+            "role": "property",
+            "term": "screw velocity"
+          },
+          {
+            "role": "class",
+            "term": "extrusion"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_SYNTH_GAP002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the addition of the MAM triblock copolymer affect the cell size of PMMA foams compared to the addition of the SBM terpolymer in PS foams when using a one-step supercritical CO2 process?",
+        "expected_answer": "The addition of MAM to PMMA significantly improves the foaming process, allowing for ultra-microcellular structures with cell sizes as low as 0.3 µm, whereas the addition of SBM to PS primarily increases the number of nucleation sites (cell density) with only small variations in the average cell size.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "methylmethacrylate-co-butylacrylate-co-methylmethacrylate MAM"
+          },
+          {
+            "role": "individual",
+            "term": "triblock (styrene-co-butadiene-co-methylmethacrylate SBM)"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      }
+    ],
+    "CHAR": [
+      {
+        "id": "Ruiz2011_CHAR_Q001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which analytical techniques were used to measure the molecular weight (Mw) and the glass transition temperature (Tg0) of the polymers before foaming?",
+        "expected_answer": "Molecular weight (Mw) was measured by SEC (Size-Exclusion Chromatography) and the glass transition temperature (Tg0) was measured by DSC (Differential Scanning Calorimetry).",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "molecular weight"
+          },
+          {
+            "role": "property",
+            "term": "glass transition temperature"
+          },
+          {
+            "role": "class",
+            "term": "SEC"
+          },
+          {
+            "role": "class",
+            "term": "DSC"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_CHAR_Q002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the reported molecular weight (Mw) for the SBM triblock copolymer?",
+        "expected_answer": "The molecular weight for SBM was 30,000 g/mol.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SBM"
+          },
+          {
+            "role": "property",
+            "term": "molecular weight"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_CHAR_Q003",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "COMPARATIVE",
+        "question": "How does the CO2 uptake (w) of the MAM triblock copolymer compare to that of the SBM triblock copolymer at a saturation temperature of 40 °C?",
+        "expected_answer": "The MAM triblock copolymer has a significantly higher CO2 uptake (22.9%) compared to the SBM triblock copolymer (8.1%).",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "MAM"
+          },
+          {
+            "role": "individual",
+            "term": "SBM"
+          },
+          {
+            "role": "property",
+            "term": "CO2 uptake"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_CHAR_Q004",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "What method was used to determine the foam density of the produced samples, and what was the underlying physical principle?",
+        "expected_answer": "Foam density was determined by the water-displacement method, based on Archimedes principle.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foam density"
+          },
+          {
+            "role": "class",
+            "term": "water-displacement method"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_CHAR_Q005",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the depressed glass transition temperature (Tg) predicted for the PS + SBM blend under saturation conditions of 300 bar and 40 °C?",
+        "expected_answer": "The depressed glass transition temperature for PS + SBM was 39 °C.",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PS + SBM"
+          },
+          {
+            "role": "property",
+            "term": "depressed glass transition temperature"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_CHAR_GAP001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which specific analytical technique, instrument model, solvent, and detection method were used to determine the average molar masses (Mw) of the polymers and copolymers?",
+        "expected_answer": "Size exclusion chromatography (SEC/GPC) using a PL-GPC50Plus device with THF as the solvent and UV detection at 254 nm.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "molecular weight"
+          },
+          {
+            "role": "class",
+            "term": "size exclusion chromatography"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly request the instrument model, solvent, and detection method, which are all detailed in the evidence passages, thereby removing the vagueness flagged by the validator."
+      },
+      {
+        "id": "Ruiz2011_CHAR_GAP002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the reported glass transition temperature (Tg0) for the MAM terpolymer as detected by DSC?",
+        "expected_answer": "95 °C",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "methylmethacrylate-co-butylacrylate-co-methylmethacrylate MAM"
+          },
+          {
+            "role": "property",
+            "term": "glass transition temperature"
+          }
+        ]
+      }
+    ],
+    "PROC": [
+      {
+        "id": "Ruiz2011_PROC_Q001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "Under what saturation pressure and time conditions were the PMMA and PS samples processed to ensure CO2 equilibrium?",
+        "expected_answer": "The samples were saturated at a pressure of 300 bar for 16 hours.",
+        "source_section": "2.3. scCO2 foaming",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation pressure"
+          },
+          {
+            "role": "property",
+            "term": "saturation time"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_PROC_Q002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the saturation temperature affect the average cell size of PMMA foams when the depressurization rate is held constant at 60 bar/min?",
+        "expected_answer": "Increasing the saturation temperature leads to bigger cell sizes because it results in a higher plasticized state.",
+        "source_section": "3.2.1. Behaviour of homopolymers – PMMA and PS",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_PROC_Q003",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "COMPARATIVE",
+        "question": "How does the CO2 uptake (weight gain ratio) of the PMMA + MAM blend compare to that of the PS + SBM blend at a saturation temperature of 40 °C?",
+        "expected_answer": "The PMMA + MAM blend has a higher CO2 uptake of 21.2% compared to the PS + SBM blend which has an uptake of 10.9%.",
+        "source_section": "3.1. Sorption of CO2/swelling and Tg depression vs. vitriﬁcation",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          },
+          {
+            "role": "individual",
+            "term": "PS + SBM"
+          },
+          {
+            "role": "property",
+            "term": "CO2 uptake"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_PROC_Q004",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of the depressurization rate on the cellular structure of PMMA + MAM blends at a fixed saturation temperature of 40 °C?",
+        "expected_answer": "Lowering the depressurization rate increases the average cell size; for example, at 150 bar/min the cell size is 0.3 µm, whereas at 12 bar/min it increases to 80 µm.",
+        "source_section": "3.2.2. Behaviour of blends/role of CO2 philic nano dispersed copolymers",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Ruiz2011_PROC_Q005",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "MOTIVATION",
+        "question": "Why is the presence of a dense outer skin suppressed in foams produced at saturation temperatures above 50 °C?",
+        "expected_answer": "At higher initial temperatures, the material takes longer to enter the glassy zone (vitrification), allowing more time for CO2 to diffuse out of the sample while generating cells, rather than escaping by diffusion without nucleation and growth.",
+        "source_section": "3.2.1. Behaviour of homopolymers – PMMA and PS",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          },
+          {
+            "role": "class",
+            "term": "vitrification"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_PROC_GAP001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the extrusion parameters used to produce the PS + SBM and PMMA + MAM blends?",
+        "expected_answer": "The blends were produced using a Scamex CE02 extruder with a temperature profile from 165 °C to 225 °C and a screw velocity of 60 rpm.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "extrusion parameters"
+          },
+          {
+            "role": "individual",
+            "term": "PS + SBM"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages describe the foaming process (saturation pressure, depressurization rates, temperatures) but contain no information regarding the specific extrusion parameters (equipment model, temperature profile, screw velocity) used to create the initial blends.",
+        "unrepairable": true
+      },
+      {
+        "id": "Ruiz2011_PROC_GAP002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does the depressurization rate affect the cell size of PMMA + MAM foams when the saturation temperature is fixed at 40 °C?",
+        "expected_answer": "A high depressurization rate of 150 bar/min produces an ultra-microcellular material with an average cell size of 0.3 µm, whereas a low depressurization rate of 12 bar/min results in an inhomogeneous cellular structure with cell sizes ranging from 10 µm to 50 µm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question and answer are fully supported by the evidence passages which explicitly state the cell size of 0.3 µm at 150 bar/min and the range of 10-50 µm at 12 bar/min for PMMA + MAM blends at 40 °C."
+      }
+    ],
+    "COMP": [
+      {
+        "id": "Ruiz2011_COMP_Q001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does varying the saturation temperature affect the CO2 weight gain ratio in PS and PMMA?",
+        "expected_answer": "The weight gain ratio (w) decreased as the saturation temperature increased; for example, in PS, it decreased from 10.4% at 25 °C to 8.9% at 80 °C, and in PMMA from 16.9% at 25 °C to 15.6% at 80 °C.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          },
+          {
+            "role": "property",
+            "term": "CO2 uptake"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_COMP_Q002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How does the CO2 uptake of the PMMA + MAM blend compare to that of pure PMMA at a saturation temperature of 25 °C?",
+        "expected_answer": "The PMMA + MAM blend has a higher CO2 uptake of 22.3% compared to 16.9% for pure PMMA at 25 °C.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA"
+          },
+          {
+            "role": "property",
+            "term": "CO2 uptake"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_COMP_Q003",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the depressed glass transition temperature of the PS + SBM blend under saturation conditions of 300 bar and 40 °C?",
+        "expected_answer": "The depressed glass transition temperature for PS + SBM is 39 °C.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PS + SBM"
+          },
+          {
+            "role": "property",
+            "term": "depressed glass transition temperature"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_COMP_Q004",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the depressurization rate affect the cell size of PMMA + MAM foams when the saturation temperature is fixed at 40 °C?",
+        "expected_answer": "Increasing the depressurization rate reduces the cell size; for example, at 150 bar/min the cell size is 0.3 µm, while at 12 bar/min it increases to 80 µm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_COMP_Q005",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENUMERATION",
+        "question": "Which quantitative metrics were used to characterize the cellular structure of the produced foams?",
+        "expected_answer": "The metrics used were average cell size (RS), foam density (SUBf), and cell density (Nc).",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "foam density"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_COMP_GAP001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the depressurization rate affect the average cell size in PMMA + MAM blends when the saturation temperature is fixed at 40 °C?",
+        "expected_answer": "At a high depressurization rate of 150 bar/min, an ultra-microcellular material is obtained with an average cell size of 0.3 µm, whereas at the lowest depressurization rate of 12 bar/min, the structure becomes inhomogeneous with an average cell size ranging from 10 µm to 50 µm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_COMP_GAP002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How does the CO2 uptake (weight gain ratio) of the PMMA + MAM blend compare to that of the neat PMMA homopolymer at a saturation temperature of 25 °C?",
+        "expected_answer": "The PMMA + MAM blend has a CO2 uptake of 22.3%, which is higher than the 16.9% uptake observed for the neat PMMA homopolymer at 25 °C.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "CO2 uptake"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA"
+          }
+        ]
+      }
+    ],
+    "ONTO": [
+      {
+        "id": "Ruiz2011_ONTO_Q001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the SBM triblock copolymer and its constituent monomers?",
+        "expected_answer": "(SBM, hasComonomer, styrene), (SBM, hasComonomer, butadiene), (SBM, hasComonomer, methylmethacrylate)",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Material"
+          },
+          {
+            "role": "property",
+            "term": "hasComonomer"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_ONTO_Q002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method and instrument were used to measure the average molar mass (Mw) of the materials?",
+        "expected_answer": "Size exclusion chromatography (SEC) using a PL-GPC50Plus device.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Method"
+          },
+          {
+            "role": "class",
+            "term": "Instrument"
+          },
+          {
+            "role": "property",
+            "term": "characterisedBy"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_ONTO_Q003",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What ontology class should 'depressurization rate' be assigned to, and what is its reported value for the foaming process?",
+        "expected_answer": "It should be assigned to the class Condition; the reported value is 60 bar/min.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Condition"
+          },
+          {
+            "role": "property",
+            "term": "hasDepressurizationRate"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_ONTO_Q004",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENUMERATION",
+        "question": "Which materials are identified as 'homopolymers' and which as 'block copolymers' in the study?",
+        "expected_answer": "Homopolymers: PMMA and PS. Block copolymers: SBM and MAM.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Homopolymer"
+          },
+          {
+            "role": "class",
+            "term": "BlockCopolymer"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_ONTO_Q005",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple captures the relationship between the blending process and the resulting material form for the PS + SBM and PMMA + MAM blends?",
+        "expected_answer": "(PS+SBM/PMMA+MAM, producedBy, extrusion), (PS+SBM/PMMA+MAM, hasForm, pellets)",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Process"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          },
+          {
+            "role": "individual",
+            "term": "extrusion"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_ONTO_GAP001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the 'one-step scCO2 process' and 'supercritical carbon dioxide' as described in the study of amorphous commodity polymers?",
+        "expected_answer": "(one-step scCO2 process, usesMaterial, supercritical carbon dioxide)",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Process"
+          },
+          {
+            "role": "property",
+            "term": "usesMaterial"
+          },
+          {
+            "role": "individual",
+            "term": "supercritical carbon dioxide"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to use the specific term 'one-step scCO2 process' found in the text, which explicitly links the method to supercritical carbon dioxide, correcting the validator's concern about an implicit link."
+      },
+      {
+        "id": "Ruiz2011_ONTO_GAP002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What ontology class should the 'swelling and plasticization' phenomenon be assigned to, and which property would link it to the 'supercritical carbon dioxide' that induces it in the one-step process?",
+        "expected_answer": "The 'swelling and plasticization' phenomenon should be a subclass of Property (or Phenomenon), and the property linking it to supercritical carbon dioxide would be 'inducedBy' or 'causedBy'.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Property"
+          },
+          {
+            "role": "property",
+            "term": "inducedBy"
+          },
+          {
+            "role": "individual",
+            "term": "plasticization effect"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to reference 'swelling and plasticization' which is explicitly mentioned in the text as a result of CO2 saturation, replacing the non-existent 'plasticization effect' term."
+      }
+    ],
+    "STU": [
+      {
+        "id": "Ruiz2011_STU_Q001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the average cell size of the ultra-microcellular PMMA + MAM foam produced at a depressurization rate of 150 bar/min?",
+        "expected_answer": "The average cell size is 0.3 µm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question was too vague as cell size varies by condition; the revised question specifies the high depressurization rate condition where the text explicitly states the 0.3 µm value."
+      },
+      {
+        "id": "Ruiz2011_STU_Q002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which method was used to analyze the cellular structure and measure cell sizes of the foams?",
+        "expected_answer": "The cellular structure was analysed by means of Scanning Electron Microscopy (SEM).",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "individual",
+            "term": "Scanning Electron Microscopy"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_STU_Q003",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "How were the triblock copolymers blended with the PMMA and PS matrices?",
+        "expected_answer": "The triblock copolymers were blended to the PMMA and PS matrices by extrusion.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PS + SBM"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          },
+          {
+            "role": "individual",
+            "term": "extrusion"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question was borderline because the method was not in the experimental section excerpts; the revised question targets the Abstract where 'extrusion' is explicitly mentioned as the blending method."
+      },
+      {
+        "id": "Ruiz2011_STU_Q004",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was the use of triblock copolymers (SBM and MAM) in PS or PMMA considered advantageous compared to classical PS-PMMA polymer blends?",
+        "expected_answer": "They showed advantages in terms of cell size control and the reduction of cell size.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "triblock copolymers"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_STU_Q005",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What are the three components that make up the SBM triblock copolymer?",
+        "expected_answer": "The SBM triblock copolymer consists of styrene, butadiene, and methylmethacrylate.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SBM"
+          },
+          {
+            "role": "property",
+            "term": "hasComonomer"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question was borderline because the components were not listed in the experimental section excerpts; the revised question targets the Abstract where the full name 'styrene-co-butadiene-co-methylmethacrylate' is provided."
+      },
+      {
+        "id": "Ruiz2011_STU_GAP001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "How were the triblock copolymers blended with the PMMA and PS matrices?",
+        "expected_answer": "The triblock copolymers were blended to the PMMA and PS matrices by extrusion.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PS + SBM"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "This duplicate question is revised to target the Abstract where the blending method 'extrusion' is explicitly stated, resolving the issue of the answer not being in the experimental section excerpts."
+      },
+      {
+        "id": "Ruiz2011_STU_GAP002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was a one-step supercritical CO2 process used instead of a two-step process in this study?",
+        "expected_answer": "The one-step process was used to investigate the possibility of enlarging the accessible cell-size range towards ultramicro-cellular or nano-cellular polymers using nano dispersed CO2-philic additives.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "batch one-step process"
+          },
+          {
+            "role": "class",
+            "term": "supercritical carbon dioxide"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      }
+    ],
+    "PHD": [
+      {
+        "id": "Ruiz2011_PHD_Q001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "COMPARATIVE",
+        "question": "How does the use of triblock copolymers (SBM and MAM) in PS or PMMA blends compare to classical PS-PMMA polymer blends regarding cell size control?",
+        "expected_answer": "Triblock copolymers (SBM and MAM) blended to PS or PMMA via extrusion show advantages over classical PS-PMMA polymer blends in terms of cell size control and reduction of cell size.",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SBM"
+          },
+          {
+            "role": "individual",
+            "term": "MAM"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_PHD_Q002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "How does the initial saturation temperature (Tsat) specifically affect the presence of an outer dense skin in PMMA foams produced via the one-step CO2 process?",
+        "expected_answer": "Dense skins are observed at saturation temperatures below 40 °C, while the skin is suppressed at temperatures above 50 °C.",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          },
+          {
+            "role": "property",
+            "term": "outer dense skin"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly specify the material (PMMA) and the process (one-step CO2) to align with the specific evidence in the text regarding skin formation thresholds."
+      },
+      {
+        "id": "Ruiz2011_PHD_Q003",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "MOTIVATION",
+        "question": "What specific justification did the authors provide for applying Hwang's model to multiphase polymer blends despite the model omitting the glass transition temperature of soft blocks?",
+        "expected_answer": "The authors justified the application by stating that the model provides reasonable data due to the low content of copolymer (10%) in the blends.",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressed glass transition temperature"
+          },
+          {
+            "role": "class",
+            "term": "multiphase materials"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly ask for the specific justification (low copolymer content) found in the text, removing the generic reference to 'Hwang's model' without context."
+      },
+      {
+        "id": "Ruiz2011_PHD_Q004",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "GAP_OR_LIMITATION",
+        "question": "What limitation regarding the experimental determination of the depressed glass transition temperature (Tg) is acknowledged in the study, and what alternative method is cited as necessary for direct measurement?",
+        "expected_answer": "The study acknowledges that the depressed Tg derived from Hwang's model is only an estimation, and states that direct measurement can only be performed using magnetic suspension balances.",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressed glass transition temperature"
+          },
+          {
+            "role": "individual",
+            "term": "magnetic suspension balances"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly request the specific alternative method (magnetic suspension balances) mentioned in the text to address the limitation of the model's estimation."
+      },
+      {
+        "id": "Ruiz2011_PHD_Q005",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "How does the CO2 affinity (w) of the triblock copolymer MAM compare to SBM, and what is the resulting effect on the depressed glass transition temperature (Tg) at 300 bar and 40 °C?",
+        "expected_answer": "MAM presents the highest CO2 affinity (w = 22.9%) compared to SBM (w = 8.1%), resulting in a depressed Tg of 40 °C for MAM and 34 °C for SBM.",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "CO2 affinity"
+          },
+          {
+            "role": "property",
+            "term": "depressed glass transition temperature"
+          },
+          {
+            "role": "individual",
+            "term": "MAM"
+          },
+          {
+            "role": "individual",
+            "term": "SBM"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_PHD_GAP001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How does the effect of adding the SBM triblock copolymer to poly(styrene) compare to the effect of adding the MAM triblock copolymer to poly(methyl methacrylate) regarding the reduction of cell size?",
+        "expected_answer": "The addition of SBM to PS primarily increases the number of nucleation sites and cell density with only small variations in average cell size (e.g., 20 µm in blend vs 15 µm in neat PS at 40°C), whereas the addition of MAM to PMMA significantly improves the foaming process, enabling a substantial reduction in cell size down to ultra-microcellular levels (0.3 µm).",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "triblock (styrene-co-butadiene-co-methylmethacrylate SBM)"
+          },
+          {
+            "role": "individual",
+            "term": "methylmethacrylate-co-butylacrylate-co-methylmethacrylate MAM"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      },
+      {
+        "id": "Ruiz2011_PHD_GAP002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "In the one-step supercritical CO2 foaming process, how does the depressurization rate influence the resulting cellular structure of PMMA + MAM blends?",
+        "expected_answer": "High depressurization rates (e.g., 150 bar/min) combined with low saturation temperatures produce ultra-microcellular materials with an average cell size of 0.3 µm, while low depressurization rates (e.g., 12 bar/min) result in an inhomogeneous cellular structure with larger average cell sizes ranging from 10 µm to 50 µm due to a long growth phase and secondary nucleation.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "individual",
+            "term": "methylmethacrylate-co-butylacrylate-co-methylmethacrylate MAM"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ]
+      }
+    ]
+  },
+  "final_questions": [
+    {
+      "id": "Ruiz2011_SYNTH_Q001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "By which process were the PS + SBM and PMMA + MAM blends produced?",
+      "expected_answer": "Blending by extrusion using a Scamex CE02 extruder.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "extrusion"
+        },
+        {
+          "role": "individual",
+          "term": "PS + SBM blend"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_SYNTH_Q002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What was the temperature profile and screw velocity used during the extrusion blending of the polymer blends?",
+      "expected_answer": "A temperature profile from 165 °C to 225 °C and a screw velocity of 60 rpm.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "screw velocity"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_SYNTH_Q003",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the saturation temperature from 25 °C to 80 °C affect the weight gain ratio of CO2 in PMMA samples saturated at 300 bar for 16 hours?",
+      "expected_answer": "The weight gain ratio (w) decreased as the saturation temperature increased; for example, PMMA uptake dropped from 16.9% at 25 °C to 15.6% at 80 °C.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation temperature"
+        },
+        {
+          "role": "property",
+          "term": "weight gain ratio"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to specify the material (PMMA), the exact saturation conditions (300 bar, 16 h), and the temperature range to ensure the answer is explicitly supported by the data in Table 3 and the accompanying text."
+    },
+    {
+      "id": "Ruiz2011_SYNTH_Q004",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why were the SBM and MAM block copolymers selected as additives for the PS and PMMA matrices in the foaming process?",
+      "expected_answer": "They provide CO2-philic blocks that create nanostructured domains, which offer advantages over classical blends in terms of cell size control and reduction of cell size.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "block copolymer"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_SYNTH_Q005",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the monomer composition and the molar mass of the PS block for the SBM triblock copolymer?",
+      "expected_answer": "The composition is 52 wt% styrene, 30 wt% butadiene, and 18 wt% methylmethacrylate, with a PS block molar mass of 30,000 g/mol.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SBM"
+        },
+        {
+          "role": "property",
+          "term": "molar mass"
+        },
+        {
+          "role": "property",
+          "term": "monomer composition"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_SYNTH_GAP001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What were the temperature profile and screw velocity used during the extrusion blending of the PS + SBM and PMMA + MAM blends?",
+      "expected_answer": "The temperature profile ranged from 165 °C to 225 °C and the screw velocity was 60 rpm.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "temperature"
+        },
+        {
+          "role": "property",
+          "term": "screw velocity"
+        },
+        {
+          "role": "class",
+          "term": "extrusion"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_SYNTH_GAP002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the addition of the MAM triblock copolymer affect the cell size of PMMA foams compared to the addition of the SBM terpolymer in PS foams when using a one-step supercritical CO2 process?",
+      "expected_answer": "The addition of MAM to PMMA significantly improves the foaming process, allowing for ultra-microcellular structures with cell sizes as low as 0.3 µm, whereas the addition of SBM to PS primarily increases the number of nucleation sites (cell density) with only small variations in the average cell size.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "methylmethacrylate-co-butylacrylate-co-methylmethacrylate MAM"
+        },
+        {
+          "role": "individual",
+          "term": "triblock (styrene-co-butadiene-co-methylmethacrylate SBM)"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_CHAR_Q001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which analytical techniques were used to measure the molecular weight (Mw) and the glass transition temperature (Tg0) of the polymers before foaming?",
+      "expected_answer": "Molecular weight (Mw) was measured by SEC (Size-Exclusion Chromatography) and the glass transition temperature (Tg0) was measured by DSC (Differential Scanning Calorimetry).",
+      "source_section": "Results and discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "molecular weight"
+        },
+        {
+          "role": "property",
+          "term": "glass transition temperature"
+        },
+        {
+          "role": "class",
+          "term": "SEC"
+        },
+        {
+          "role": "class",
+          "term": "DSC"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_CHAR_Q002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the reported molecular weight (Mw) for the SBM triblock copolymer?",
+      "expected_answer": "The molecular weight for SBM was 30,000 g/mol.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SBM"
+        },
+        {
+          "role": "property",
+          "term": "molecular weight"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_CHAR_Q003",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "COMPARATIVE",
+      "question": "How does the CO2 uptake (w) of the MAM triblock copolymer compare to that of the SBM triblock copolymer at a saturation temperature of 40 °C?",
+      "expected_answer": "The MAM triblock copolymer has a significantly higher CO2 uptake (22.9%) compared to the SBM triblock copolymer (8.1%).",
+      "source_section": "Results and discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "MAM"
+        },
+        {
+          "role": "individual",
+          "term": "SBM"
+        },
+        {
+          "role": "property",
+          "term": "CO2 uptake"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_CHAR_Q004",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "What method was used to determine the foam density of the produced samples, and what was the underlying physical principle?",
+      "expected_answer": "Foam density was determined by the water-displacement method, based on Archimedes principle.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foam density"
+        },
+        {
+          "role": "class",
+          "term": "water-displacement method"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_CHAR_Q005",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the depressed glass transition temperature (Tg) predicted for the PS + SBM blend under saturation conditions of 300 bar and 40 °C?",
+      "expected_answer": "The depressed glass transition temperature for PS + SBM was 39 °C.",
+      "source_section": "Results and discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PS + SBM"
+        },
+        {
+          "role": "property",
+          "term": "depressed glass transition temperature"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_CHAR_GAP001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which specific analytical technique, instrument model, solvent, and detection method were used to determine the average molar masses (Mw) of the polymers and copolymers?",
+      "expected_answer": "Size exclusion chromatography (SEC/GPC) using a PL-GPC50Plus device with THF as the solvent and UV detection at 254 nm.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "molecular weight"
+        },
+        {
+          "role": "class",
+          "term": "size exclusion chromatography"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to explicitly request the instrument model, solvent, and detection method, which are all detailed in the evidence passages, thereby removing the vagueness flagged by the validator."
+    },
+    {
+      "id": "Ruiz2011_CHAR_GAP002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the reported glass transition temperature (Tg0) for the MAM terpolymer as detected by DSC?",
+      "expected_answer": "95 °C",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "methylmethacrylate-co-butylacrylate-co-methylmethacrylate MAM"
+        },
+        {
+          "role": "property",
+          "term": "glass transition temperature"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_PROC_Q001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "Under what saturation pressure and time conditions were the PMMA and PS samples processed to ensure CO2 equilibrium?",
+      "expected_answer": "The samples were saturated at a pressure of 300 bar for 16 hours.",
+      "source_section": "2.3. scCO2 foaming",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation pressure"
+        },
+        {
+          "role": "property",
+          "term": "saturation time"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_PROC_Q002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How does increasing the saturation temperature affect the average cell size of PMMA foams when the depressurization rate is held constant at 60 bar/min?",
+      "expected_answer": "Increasing the saturation temperature leads to bigger cell sizes because it results in a higher plasticized state.",
+      "source_section": "3.2.1. Behaviour of homopolymers – PMMA and PS",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation temperature"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_PROC_Q003",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "COMPARATIVE",
+      "question": "How does the CO2 uptake (weight gain ratio) of the PMMA + MAM blend compare to that of the PS + SBM blend at a saturation temperature of 40 °C?",
+      "expected_answer": "The PMMA + MAM blend has a higher CO2 uptake of 21.2% compared to the PS + SBM blend which has an uptake of 10.9%.",
+      "source_section": "3.1. Sorption of CO2/swelling and Tg depression vs. vitriﬁcation",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PMMA + MAM"
+        },
+        {
+          "role": "individual",
+          "term": "PS + SBM"
+        },
+        {
+          "role": "property",
+          "term": "CO2 uptake"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_PROC_Q004",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "What is the effect of the depressurization rate on the cellular structure of PMMA + MAM blends at a fixed saturation temperature of 40 °C?",
+      "expected_answer": "Lowering the depressurization rate increases the average cell size; for example, at 150 bar/min the cell size is 0.3 µm, whereas at 12 bar/min it increases to 80 µm.",
+      "source_section": "3.2.2. Behaviour of blends/role of CO2 philic nano dispersed copolymers",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "depressurization rate"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+    },
+    {
+      "id": "Ruiz2011_PROC_Q005",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "MOTIVATION",
+      "question": "Why is the presence of a dense outer skin suppressed in foams produced at saturation temperatures above 50 °C?",
+      "expected_answer": "At higher initial temperatures, the material takes longer to enter the glassy zone (vitrification), allowing more time for CO2 to diffuse out of the sample while generating cells, rather than escaping by diffusion without nucleation and growth.",
+      "source_section": "3.2.1. Behaviour of homopolymers – PMMA and PS",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation temperature"
+        },
+        {
+          "role": "class",
+          "term": "vitrification"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_PROC_GAP001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What were the extrusion parameters used to produce the PS + SBM and PMMA + MAM blends?",
+      "expected_answer": "The blends were produced using a Scamex CE02 extruder with a temperature profile from 165 °C to 225 °C and a screw velocity of 60 rpm.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "extrusion parameters"
+        },
+        {
+          "role": "individual",
+          "term": "PS + SBM"
+        },
+        {
+          "role": "individual",
+          "term": "PMMA + MAM"
+        }
+      ],
+      "refiner_action": "unrepairable",
+      "revise_reason": "The provided evidence passages describe the foaming process (saturation pressure, depressurization rates, temperatures) but contain no information regarding the specific extrusion parameters (equipment model, temperature profile, screw velocity) used to create the initial blends.",
+      "unrepairable": true
+    },
+    {
+      "id": "Ruiz2011_PROC_GAP002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How does the depressurization rate affect the cell size of PMMA + MAM foams when the saturation temperature is fixed at 40 °C?",
+      "expected_answer": "A high depressurization rate of 150 bar/min produces an ultra-microcellular material with an average cell size of 0.3 µm, whereas a low depressurization rate of 12 bar/min results in an inhomogeneous cellular structure with cell sizes ranging from 10 µm to 50 µm.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "depressurization rate"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "individual",
+          "term": "PMMA + MAM"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "The question and answer are fully supported by the evidence passages which explicitly state the cell size of 0.3 µm at 150 bar/min and the range of 10-50 µm at 12 bar/min for PMMA + MAM blends at 40 °C."
+    },
+    {
+      "id": "Ruiz2011_COMP_Q001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does varying the saturation temperature affect the CO2 weight gain ratio in PS and PMMA?",
+      "expected_answer": "The weight gain ratio (w) decreased as the saturation temperature increased; for example, in PS, it decreased from 10.4% at 25 °C to 8.9% at 80 °C, and in PMMA from 16.9% at 25 °C to 15.6% at 80 °C.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation temperature"
+        },
+        {
+          "role": "property",
+          "term": "CO2 uptake"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_COMP_Q002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "COMPARATIVE",
+      "question": "How does the CO2 uptake of the PMMA + MAM blend compare to that of pure PMMA at a saturation temperature of 25 °C?",
+      "expected_answer": "The PMMA + MAM blend has a higher CO2 uptake of 22.3% compared to 16.9% for pure PMMA at 25 °C.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PMMA + MAM"
+        },
+        {
+          "role": "individual",
+          "term": "PMMA"
+        },
+        {
+          "role": "property",
+          "term": "CO2 uptake"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_COMP_Q003",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the depressed glass transition temperature of the PS + SBM blend under saturation conditions of 300 bar and 40 °C?",
+      "expected_answer": "The depressed glass transition temperature for PS + SBM is 39 °C.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PS + SBM"
+        },
+        {
+          "role": "property",
+          "term": "depressed glass transition temperature"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_COMP_Q004",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the depressurization rate affect the cell size of PMMA + MAM foams when the saturation temperature is fixed at 40 °C?",
+      "expected_answer": "Increasing the depressurization rate reduces the cell size; for example, at 150 bar/min the cell size is 0.3 µm, while at 12 bar/min it increases to 80 µm.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "depressurization rate"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_COMP_Q005",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENUMERATION",
+      "question": "Which quantitative metrics were used to characterize the cellular structure of the produced foams?",
+      "expected_answer": "The metrics used were average cell size (RS), foam density (SUBf), and cell density (Nc).",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "foam density"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_COMP_GAP001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the depressurization rate affect the average cell size in PMMA + MAM blends when the saturation temperature is fixed at 40 °C?",
+      "expected_answer": "At a high depressurization rate of 150 bar/min, an ultra-microcellular material is obtained with an average cell size of 0.3 µm, whereas at the lowest depressurization rate of 12 bar/min, the structure becomes inhomogeneous with an average cell size ranging from 10 µm to 50 µm.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "depressurization rate"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "individual",
+          "term": "PMMA + MAM"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_COMP_GAP002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "COMPARATIVE",
+      "question": "How does the CO2 uptake (weight gain ratio) of the PMMA + MAM blend compare to that of the neat PMMA homopolymer at a saturation temperature of 25 °C?",
+      "expected_answer": "The PMMA + MAM blend has a CO2 uptake of 22.3%, which is higher than the 16.9% uptake observed for the neat PMMA homopolymer at 25 °C.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "CO2 uptake"
+        },
+        {
+          "role": "individual",
+          "term": "PMMA + MAM"
+        },
+        {
+          "role": "individual",
+          "term": "PMMA"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_ONTO_Q001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between the SBM triblock copolymer and its constituent monomers?",
+      "expected_answer": "(SBM, hasComonomer, styrene), (SBM, hasComonomer, butadiene), (SBM, hasComonomer, methylmethacrylate)",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Material"
+        },
+        {
+          "role": "property",
+          "term": "hasComonomer"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_ONTO_Q002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method and instrument were used to measure the average molar mass (Mw) of the materials?",
+      "expected_answer": "Size exclusion chromatography (SEC) using a PL-GPC50Plus device.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Method"
+        },
+        {
+          "role": "class",
+          "term": "Instrument"
+        },
+        {
+          "role": "property",
+          "term": "characterisedBy"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_ONTO_Q003",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What ontology class should 'depressurization rate' be assigned to, and what is its reported value for the foaming process?",
+      "expected_answer": "It should be assigned to the class Condition; the reported value is 60 bar/min.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Condition"
+        },
+        {
+          "role": "property",
+          "term": "hasDepressurizationRate"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_ONTO_Q004",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENUMERATION",
+      "question": "Which materials are identified as 'homopolymers' and which as 'block copolymers' in the study?",
+      "expected_answer": "Homopolymers: PMMA and PS. Block copolymers: SBM and MAM.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Homopolymer"
+        },
+        {
+          "role": "class",
+          "term": "BlockCopolymer"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_ONTO_Q005",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple captures the relationship between the blending process and the resulting material form for the PS + SBM and PMMA + MAM blends?",
+      "expected_answer": "(PS+SBM/PMMA+MAM, producedBy, extrusion), (PS+SBM/PMMA+MAM, hasForm, pellets)",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Process"
+        },
+        {
+          "role": "property",
+          "term": "producedBy"
+        },
+        {
+          "role": "individual",
+          "term": "extrusion"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_ONTO_GAP001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between the 'one-step scCO2 process' and 'supercritical carbon dioxide' as described in the study of amorphous commodity polymers?",
+      "expected_answer": "(one-step scCO2 process, usesMaterial, supercritical carbon dioxide)",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Process"
+        },
+        {
+          "role": "property",
+          "term": "usesMaterial"
+        },
+        {
+          "role": "individual",
+          "term": "supercritical carbon dioxide"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to use the specific term 'one-step scCO2 process' found in the text, which explicitly links the method to supercritical carbon dioxide, correcting the validator's concern about an implicit link."
+    },
+    {
+      "id": "Ruiz2011_ONTO_GAP002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What ontology class should the 'swelling and plasticization' phenomenon be assigned to, and which property would link it to the 'supercritical carbon dioxide' that induces it in the one-step process?",
+      "expected_answer": "The 'swelling and plasticization' phenomenon should be a subclass of Property (or Phenomenon), and the property linking it to supercritical carbon dioxide would be 'inducedBy' or 'causedBy'.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Property"
+        },
+        {
+          "role": "property",
+          "term": "inducedBy"
+        },
+        {
+          "role": "individual",
+          "term": "plasticization effect"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to reference 'swelling and plasticization' which is explicitly mentioned in the text as a result of CO2 saturation, replacing the non-existent 'plasticization effect' term."
+    },
+    {
+      "id": "Ruiz2011_STU_Q001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the average cell size of the ultra-microcellular PMMA + MAM foam produced at a depressurization rate of 150 bar/min?",
+      "expected_answer": "The average cell size is 0.3 µm.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PMMA + MAM"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question was too vague as cell size varies by condition; the revised question specifies the high depressurization rate condition where the text explicitly states the 0.3 µm value."
+    },
+    {
+      "id": "Ruiz2011_STU_Q002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which method was used to analyze the cellular structure and measure cell sizes of the foams?",
+      "expected_answer": "The cellular structure was analysed by means of Scanning Electron Microscopy (SEM).",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "individual",
+          "term": "Scanning Electron Microscopy"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_STU_Q003",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "How were the triblock copolymers blended with the PMMA and PS matrices?",
+      "expected_answer": "The triblock copolymers were blended to the PMMA and PS matrices by extrusion.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PS + SBM"
+        },
+        {
+          "role": "individual",
+          "term": "PMMA + MAM"
+        },
+        {
+          "role": "individual",
+          "term": "extrusion"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question was borderline because the method was not in the experimental section excerpts; the revised question targets the Abstract where 'extrusion' is explicitly mentioned as the blending method."
+    },
+    {
+      "id": "Ruiz2011_STU_Q004",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was the use of triblock copolymers (SBM and MAM) in PS or PMMA considered advantageous compared to classical PS-PMMA polymer blends?",
+      "expected_answer": "They showed advantages in terms of cell size control and the reduction of cell size.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "triblock copolymers"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_STU_Q005",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What are the three components that make up the SBM triblock copolymer?",
+      "expected_answer": "The SBM triblock copolymer consists of styrene, butadiene, and methylmethacrylate.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SBM"
+        },
+        {
+          "role": "property",
+          "term": "hasComonomer"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The original question was borderline because the components were not listed in the experimental section excerpts; the revised question targets the Abstract where the full name 'styrene-co-butadiene-co-methylmethacrylate' is provided."
+    },
+    {
+      "id": "Ruiz2011_STU_GAP001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "How were the triblock copolymers blended with the PMMA and PS matrices?",
+      "expected_answer": "The triblock copolymers were blended to the PMMA and PS matrices by extrusion.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PS + SBM"
+        },
+        {
+          "role": "individual",
+          "term": "PMMA + MAM"
+        },
+        {
+          "role": "property",
+          "term": "producedBy"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "This duplicate question is revised to target the Abstract where the blending method 'extrusion' is explicitly stated, resolving the issue of the answer not being in the experimental section excerpts."
+    },
+    {
+      "id": "Ruiz2011_STU_GAP002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was a one-step supercritical CO2 process used instead of a two-step process in this study?",
+      "expected_answer": "The one-step process was used to investigate the possibility of enlarging the accessible cell-size range towards ultramicro-cellular or nano-cellular polymers using nano dispersed CO2-philic additives.",
+      "source_section": "Introduction",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "batch one-step process"
+        },
+        {
+          "role": "class",
+          "term": "supercritical carbon dioxide"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_PHD_Q001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "COMPARATIVE",
+      "question": "How does the use of triblock copolymers (SBM and MAM) in PS or PMMA blends compare to classical PS-PMMA polymer blends regarding cell size control?",
+      "expected_answer": "Triblock copolymers (SBM and MAM) blended to PS or PMMA via extrusion show advantages over classical PS-PMMA polymer blends in terms of cell size control and reduction of cell size.",
+      "source_section": "Results and discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SBM"
+        },
+        {
+          "role": "individual",
+          "term": "MAM"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_PHD_Q002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "CAUSAL",
+      "question": "How does the initial saturation temperature (Tsat) specifically affect the presence of an outer dense skin in PMMA foams produced via the one-step CO2 process?",
+      "expected_answer": "Dense skins are observed at saturation temperatures below 40 °C, while the skin is suppressed at temperatures above 50 °C.",
+      "source_section": "Results and discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "saturation temperature"
+        },
+        {
+          "role": "property",
+          "term": "outer dense skin"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to explicitly specify the material (PMMA) and the process (one-step CO2) to align with the specific evidence in the text regarding skin formation thresholds."
+    },
+    {
+      "id": "Ruiz2011_PHD_Q003",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "MOTIVATION",
+      "question": "What specific justification did the authors provide for applying Hwang's model to multiphase polymer blends despite the model omitting the glass transition temperature of soft blocks?",
+      "expected_answer": "The authors justified the application by stating that the model provides reasonable data due to the low content of copolymer (10%) in the blends.",
+      "source_section": "Results and discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "depressed glass transition temperature"
+        },
+        {
+          "role": "class",
+          "term": "multiphase materials"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to explicitly ask for the specific justification (low copolymer content) found in the text, removing the generic reference to 'Hwang's model' without context."
+    },
+    {
+      "id": "Ruiz2011_PHD_Q004",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "GAP_OR_LIMITATION",
+      "question": "What limitation regarding the experimental determination of the depressed glass transition temperature (Tg) is acknowledged in the study, and what alternative method is cited as necessary for direct measurement?",
+      "expected_answer": "The study acknowledges that the depressed Tg derived from Hwang's model is only an estimation, and states that direct measurement can only be performed using magnetic suspension balances.",
+      "source_section": "Results and discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "depressed glass transition temperature"
+        },
+        {
+          "role": "individual",
+          "term": "magnetic suspension balances"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question was revised to explicitly request the specific alternative method (magnetic suspension balances) mentioned in the text to address the limitation of the model's estimation."
+    },
+    {
+      "id": "Ruiz2011_PHD_Q005",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "CAUSAL",
+      "question": "How does the CO2 affinity (w) of the triblock copolymer MAM compare to SBM, and what is the resulting effect on the depressed glass transition temperature (Tg) at 300 bar and 40 °C?",
+      "expected_answer": "MAM presents the highest CO2 affinity (w = 22.9%) compared to SBM (w = 8.1%), resulting in a depressed Tg of 40 °C for MAM and 34 °C for SBM.",
+      "source_section": "Results and discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "CO2 affinity"
+        },
+        {
+          "role": "property",
+          "term": "depressed glass transition temperature"
+        },
+        {
+          "role": "individual",
+          "term": "MAM"
+        },
+        {
+          "role": "individual",
+          "term": "SBM"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_PHD_GAP001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "analysis",
+      "archetype": "COMPARATIVE",
+      "question": "How does the effect of adding the SBM triblock copolymer to poly(styrene) compare to the effect of adding the MAM triblock copolymer to poly(methyl methacrylate) regarding the reduction of cell size?",
+      "expected_answer": "The addition of SBM to PS primarily increases the number of nucleation sites and cell density with only small variations in average cell size (e.g., 20 µm in blend vs 15 µm in neat PS at 40°C), whereas the addition of MAM to PMMA significantly improves the foaming process, enabling a substantial reduction in cell size down to ultra-microcellular levels (0.3 µm).",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "triblock (styrene-co-butadiene-co-methylmethacrylate SBM)"
+        },
+        {
+          "role": "individual",
+          "term": "methylmethacrylate-co-butylacrylate-co-methylmethacrylate MAM"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    },
+    {
+      "id": "Ruiz2011_PHD_GAP002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "In the one-step supercritical CO2 foaming process, how does the depressurization rate influence the resulting cellular structure of PMMA + MAM blends?",
+      "expected_answer": "High depressurization rates (e.g., 150 bar/min) combined with low saturation temperatures produce ultra-microcellular materials with an average cell size of 0.3 µm, while low depressurization rates (e.g., 12 bar/min) result in an inhomogeneous cellular structure with larger average cell sizes ranging from 10 µm to 50 µm due to a long growth phase and secondary nucleation.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "depressurization rate"
+        },
+        {
+          "role": "individual",
+          "term": "methylmethacrylate-co-butylacrylate-co-methylmethacrylate MAM"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "quality_score": 0.89,
+    "pass_score_threshold": 0.75,
+    "active_checks": [
+      "persona_coverage",
+      "question_count",
+      "answerability",
+      "specificity",
+      "section_validity",
+      "concept_usage",
+      "redundancy"
+    ],
+    "issues": [
+      "Near-duplicate questions: Ruiz2011_SYNTH_Q001 ~ Ruiz2011_STU_Q003 (cos=1.00)",
+      "Near-duplicate questions: Ruiz2011_SYNTH_Q001 ~ Ruiz2011_STU_GAP001 (cos=1.00)",
+      "Near-duplicate questions: Ruiz2011_SYNTH_GAP001 ~ Ruiz2011_PROC_GAP001 (cos=0.92)",
+      "Near-duplicate questions: Ruiz2011_CHAR_Q005 ~ Ruiz2011_COMP_Q003 (cos=0.97)",
+      "Near-duplicate questions: Ruiz2011_PROC_Q002 ~ Ruiz2011_PROC_GAP002 (cos=0.96)",
+      "Near-duplicate questions: Ruiz2011_PROC_Q002 ~ Ruiz2011_COMP_Q004 (cos=0.96)",
+      "Near-duplicate questions: Ruiz2011_PROC_Q003 ~ Ruiz2011_COMP_Q002 (cos=0.92)",
+      "Near-duplicate questions: Ruiz2011_PROC_Q003 ~ Ruiz2011_COMP_GAP002 (cos=0.92)",
+      "Near-duplicate questions: Ruiz2011_PROC_Q004 ~ Ruiz2011_PROC_GAP002 (cos=0.93)",
+      "Near-duplicate questions: Ruiz2011_PROC_Q004 ~ Ruiz2011_COMP_Q004 (cos=0.93)",
+      "[SYNTH] Ruiz2011_SYNTH_Q003: borderline (score=0.50) - The answer can be derived from the passages with a short inference (source_section: Results and Discussion).",
+      "[CHAR] Ruiz2011_CHAR_GAP001: borderline (score=0.50) - The answer can be derived from the passages with a short inference (SEC/GPC was used).",
+      "[PROC] Ruiz2011_PROC_Q004: borderline (score=0.50) - The answer can be derived from the passages with a short inference (lower depressurization rate increases cell size).",
+      "[PROC] Ruiz2011_PROC_GAP001: fail (score=0.00) - The answer requires outside knowledge as extrusion parameters are not mentioned in the passages.",
+      "[PROC] Ruiz2011_PROC_GAP002: borderline (score=0.50) - The answer can be derived from the passages with a short inference (depressurization rate affects cell size).",
+      "[ONTO] Ruiz2011_ONTO_GAP001: borderline (score=0.50) - 'Batch one-step process' is mentioned in passage 4, but not explicitly linked to supercritical CO2.",
+      "[ONTO] Ruiz2011_ONTO_GAP002: fail (score=0.30) - 'Plasticization effect' is not mentioned in the evidence passages.",
+      "[STU] Ruiz2011_STU_Q001: borderline (score=0.50) - The average cell size for PMMA + MAM is not explicitly stated in the passages but can be inferred from Table 4 and Table 5 where cell sizes are mentioned.",
+      "[STU] Ruiz2011_STU_Q003: borderline (score=0.50) - The method of production is not explicitly stated in the passages but can be inferred from the context where blends are mentioned.",
+      "[STU] Ruiz2011_STU_Q005: borderline (score=0.50) - The comonomers of SBM are not explicitly listed in the passages but can be inferred from the context where triblock copolymers are discussed.",
+      "[STU] Ruiz2011_STU_GAP001: borderline (score=0.50) - The method of production is not explicitly stated in the passages but can be inferred from the context where blends are mentioned.",
+      "[PHD] Ruiz2011_PHD_Q002: borderline (score=0.50) - The answer can be derived from the passages with a short inference (e.g., 'dense skins observed at Tsat < 40°C').",
+      "[PHD] Ruiz2011_PHD_Q003: borderline (score=0.50) - The answer can be derived from the passages with a short inference (e.g., 'model provides reasonable data due to low copolymer content').",
+      "[PHD] Ruiz2011_PHD_Q004: borderline (score=0.50) - The answer can be derived from the passages with a short inference (e.g., 'depressed Tg is only an estimation')."
+    ],
+    "issues_by_persona": {
+      "SYNTH": [
+        "[SYNTH] Ruiz2011_SYNTH_Q003: borderline (score=0.50) - The answer can be derived from the passages with a short inference (source_section: Results and Discussion)."
+      ],
+      "CHAR": [
+        "[CHAR] Ruiz2011_CHAR_GAP001: borderline (score=0.50) - The answer can be derived from the passages with a short inference (SEC/GPC was used)."
+      ],
+      "PROC": [
+        "[PROC] Ruiz2011_PROC_Q004: borderline (score=0.50) - The answer can be derived from the passages with a short inference (lower depressurization rate increases cell size).",
+        "[PROC] Ruiz2011_PROC_GAP001: fail (score=0.00) - The answer requires outside knowledge as extrusion parameters are not mentioned in the passages.",
+        "[PROC] Ruiz2011_PROC_GAP002: borderline (score=0.50) - The answer can be derived from the passages with a short inference (depressurization rate affects cell size)."
+      ],
+      "ONTO": [
+        "[ONTO] Ruiz2011_ONTO_GAP001: borderline (score=0.50) - 'Batch one-step process' is mentioned in passage 4, but not explicitly linked to supercritical CO2.",
+        "[ONTO] Ruiz2011_ONTO_GAP002: fail (score=0.30) - 'Plasticization effect' is not mentioned in the evidence passages."
+      ],
+      "STU": [
+        "[STU] Ruiz2011_STU_Q001: borderline (score=0.50) - The average cell size for PMMA + MAM is not explicitly stated in the passages but can be inferred from Table 4 and Table 5 where cell sizes are mentioned.",
+        "[STU] Ruiz2011_STU_Q003: borderline (score=0.50) - The method of production is not explicitly stated in the passages but can be inferred from the context where blends are mentioned.",
+        "[STU] Ruiz2011_STU_Q005: borderline (score=0.50) - The comonomers of SBM are not explicitly listed in the passages but can be inferred from the context where triblock copolymers are discussed.",
+        "[STU] Ruiz2011_STU_GAP001: borderline (score=0.50) - The method of production is not explicitly stated in the passages but can be inferred from the context where blends are mentioned."
+      ],
+      "PHD": [
+        "[PHD] Ruiz2011_PHD_Q002: borderline (score=0.50) - The answer can be derived from the passages with a short inference (e.g., 'dense skins observed at Tsat < 40°C').",
+        "[PHD] Ruiz2011_PHD_Q003: borderline (score=0.50) - The answer can be derived from the passages with a short inference (e.g., 'model provides reasonable data due to low copolymer content').",
+        "[PHD] Ruiz2011_PHD_Q004: borderline (score=0.50) - The answer can be derived from the passages with a short inference (e.g., 'depressed Tg is only an estimation')."
+      ]
+    },
+    "per_question": {
+      "Ruiz2011_SYNTH_Q001": {
+        "id": "Ruiz2011_SYNTH_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the passages (source_section: Experimental).",
+          "The question is specific, naming the process and equipment used."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_SYNTH_Q002": {
+        "id": "Ruiz2011_SYNTH_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the passages (source_section: Experimental).",
+          "The question is specific, asking about temperature and screw velocity."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_SYNTH_Q003": {
+        "id": "Ruiz2011_SYNTH_Q003",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (source_section: Results and Discussion).",
+          "The question is somewhat specific but uses generic terms like 'weight gain ratio'."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_SYNTH_Q004": {
+        "id": "Ruiz2011_SYNTH_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (source_section: Experimental).",
+          "The question is specific, asking about the selection of copolymers."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_SYNTH_Q005": {
+        "id": "Ruiz2011_SYNTH_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the passages (source_section: Experimental).",
+          "The question is specific, asking about monomer composition and molar mass."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_SYNTH_GAP001": {
+        "id": "Ruiz2011_SYNTH_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the passages (source_section: Experimental).",
+          "The question is specific, asking about temperature and screw velocity."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_SYNTH_GAP002": {
+        "id": "Ruiz2011_SYNTH_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (source_section: Results and Discussion).",
+          "The question is specific, comparing the effects of MAM and SBM."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_CHAR_Q001": {
+        "id": "Ruiz2011_CHAR_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., SEC for Mw and DSC for Tg0).",
+          "The question is specific, naming techniques and properties."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23603
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_CHAR_Q002": {
+        "id": "Ruiz2011_CHAR_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the passages (Mw of SBM is 30,000 g/mol).",
+          "The question is specific, naming the material and property."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23603
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_CHAR_Q003": {
+        "id": "Ruiz2011_CHAR_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (comparing w values of MAM and SBM).",
+          "The question is specific, naming materials and conditions."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23603
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_CHAR_Q004": {
+        "id": "Ruiz2011_CHAR_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the passages (water-displacement method based on Archimedes principle).",
+          "The question is specific, naming the method and principle."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23603
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_CHAR_Q005": {
+        "id": "Ruiz2011_CHAR_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the passages (Tg of PS + SBM is 39 °C).",
+          "The question is specific, naming the material and conditions."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23603
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_CHAR_GAP001": {
+        "id": "Ruiz2011_CHAR_GAP001",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (SEC/GPC was used).",
+          "The question is somewhat specific but uses generic terms like 'analytical technique'."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23603
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_CHAR_GAP002": {
+        "id": "Ruiz2011_CHAR_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the passages (Tg0 of MAM is 95 °C).",
+          "The question is specific, naming the material and property."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23603
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_PROC_Q001": {
+        "id": "Ruiz2011_PROC_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer is explicitly stated in the passages (300 bar, 16 h).",
+          "The question is specific about PMMA and PS samples."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22129
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_PROC_Q002": {
+        "id": "Ruiz2011_PROC_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (higher saturation temperature leads to bigger cell sizes).",
+          "The question is specific about PMMA foams and depressurization rate."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22129
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_PROC_Q003": {
+        "id": "Ruiz2011_PROC_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (PMMA + MAM has higher CO2 uptake).",
+          "The question is specific about the blends and saturation temperature."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22129
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_PROC_Q004": {
+        "id": "Ruiz2011_PROC_Q004",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (lower depressurization rate increases cell size).",
+          "The question is somewhat specific but uses generic terms."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22129
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_PROC_Q005": {
+        "id": "Ruiz2011_PROC_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (higher temperatures delay vitrification).",
+          "The question is specific about dense outer skin suppression."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22129
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_PROC_GAP001": {
+        "id": "Ruiz2011_PROC_GAP001",
+        "score": 0.0,
+        "reasons": [
+          "The answer requires outside knowledge as extrusion parameters are not mentioned in the passages.",
+          "The question is somewhat specific but lacks evidence support."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22129
+        },
+        "verdict": "fail"
+      },
+      "Ruiz2011_PROC_GAP002": {
+        "id": "Ruiz2011_PROC_GAP002",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (depressurization rate affects cell size).",
+          "The question is somewhat specific but uses generic terms."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22129
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_COMP_Q001": {
+        "id": "Ruiz2011_COMP_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The question asks about the effect of varying saturation temperature on CO2 weight gain ratio in PS and PMMA, which is explicitly stated in Table 3 of passage 1."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22127
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_COMP_Q002": {
+        "id": "Ruiz2011_COMP_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The question compares the CO2 uptake of PMMA + MAM blend to pure PMMA at 25°C, which is explicitly stated in Table 3 of passage 1."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22127
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_COMP_Q003": {
+        "id": "Ruiz2011_COMP_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The question asks for the depressed glass transition temperature of PS + SBM blend under specific conditions, which is explicitly stated in Table 2 of passage 3."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22127
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_COMP_Q004": {
+        "id": "Ruiz2011_COMP_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The question asks about the effect of depressurization rate on cell size of PMMA + MAM foams at fixed saturation temperature, which is explicitly stated in passage 5."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22127
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_COMP_Q005": {
+        "id": "Ruiz2011_COMP_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The question asks about the quantitative metrics used to characterize cellular structure, which are explicitly listed in passage 4."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22127
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_COMP_GAP001": {
+        "id": "Ruiz2011_COMP_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The question asks about the effect of depressurization rate on average cell size in PMMA + MAM blends at fixed saturation temperature, which is explicitly stated in passage 5."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22127
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_COMP_GAP002": {
+        "id": "Ruiz2011_COMP_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The question compares the CO2 uptake of PMMA + MAM blend to neat PMMA at 25°C, which is explicitly stated in Table 3 of passage 1."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 22127
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_ONTO_Q001": {
+        "id": "Ruiz2011_ONTO_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from passage 1, which lists the monomers of SBM as styrene, butadiene, and methylmethacrylate.",
+          "The question is specific by naming SBM and its components."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23402
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_ONTO_Q002": {
+        "id": "Ruiz2011_ONTO_Q002",
+        "score": 1.0,
+        "reasons": [
+          "Explicitly stated in passage 1: 'Size exclusion chromatography (SEC) using a PL-GPC50Plus device.'",
+          "Specific method and instrument are named."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23402
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_ONTO_Q003": {
+        "id": "Ruiz2011_ONTO_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The term 'depressurization rate' is mentioned in passage 2 with a value of 60 bar/min.",
+          "The question specifies the class and value, making it useful for ontology."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23402
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_ONTO_Q004": {
+        "id": "Ruiz2011_ONTO_Q004",
+        "score": 1.0,
+        "reasons": [
+          "Passage 1 clearly lists homopolymers (PMMA, PS) and block copolymers (SBM, MAM).",
+          "The question is specific with clear categories."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23402
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_ONTO_Q005": {
+        "id": "Ruiz2011_ONTO_Q005",
+        "score": 0.75,
+        "reasons": [
+          "Passage 1 mentions extrusion blending and resulting pellets.",
+          "The question links process to outcome specifically."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23402
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_ONTO_GAP001": {
+        "id": "Ruiz2011_ONTO_GAP001",
+        "score": 0.5,
+        "reasons": [
+          "'Batch one-step process' is mentioned in passage 4, but not explicitly linked to supercritical CO2.",
+          "The question assumes a link that isn't directly stated."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23402
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_ONTO_GAP002": {
+        "id": "Ruiz2011_ONTO_GAP002",
+        "score": 0.3,
+        "reasons": [
+          "'Plasticization effect' is not mentioned in the evidence passages.",
+          "Cannot be answered from provided text."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 23402
+        },
+        "verdict": "fail"
+      },
+      "Ruiz2011_STU_Q001": {
+        "id": "Ruiz2011_STU_Q001",
+        "score": 0.5,
+        "reasons": [
+          "The average cell size for PMMA + MAM is not explicitly stated in the passages but can be inferred from Table 4 and Table 5 where cell sizes are mentioned."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21929
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_STU_Q002": {
+        "id": "Ruiz2011_STU_Q002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21929
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_STU_Q003": {
+        "id": "Ruiz2011_STU_Q003",
+        "score": 0.5,
+        "reasons": [
+          "The method of production is not explicitly stated in the passages but can be inferred from the context where blends are mentioned."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21929
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_STU_Q004": {
+        "id": "Ruiz2011_STU_Q004",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21929
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_STU_Q005": {
+        "id": "Ruiz2011_STU_Q005",
+        "score": 0.5,
+        "reasons": [
+          "The comonomers of SBM are not explicitly listed in the passages but can be inferred from the context where triblock copolymers are discussed."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21929
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_STU_GAP001": {
+        "id": "Ruiz2011_STU_GAP001",
+        "score": 0.5,
+        "reasons": [
+          "The method of production is not explicitly stated in the passages but can be inferred from the context where blends are mentioned."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21929
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_STU_GAP002": {
+        "id": "Ruiz2011_STU_GAP002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21929
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_PHD_Q001": {
+        "id": "Ruiz2011_PHD_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., 'advantages compared to classical PS-PMMA blends').",
+          "The question is specific, mentioning triblock copolymers and their effect on cell size control."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_PHD_Q002": {
+        "id": "Ruiz2011_PHD_Q002",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., 'dense skins observed at Tsat < 40°C').",
+          "The question is somewhat specific but uses generic terms ('initial saturation temperature')."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_PHD_Q003": {
+        "id": "Ruiz2011_PHD_Q003",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., 'model provides reasonable data due to low copolymer content').",
+          "The question is somewhat specific but uses generic terms ('Hwang's model')."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_PHD_Q004": {
+        "id": "Ruiz2011_PHD_Q004",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., 'depressed Tg is only an estimation').",
+          "The question is somewhat specific but uses generic terms ('direct measurement')."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "borderline"
+      },
+      "Ruiz2011_PHD_Q005": {
+        "id": "Ruiz2011_PHD_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., 'MAM has higher CO2 affinity than SBM').",
+          "The question is specific, mentioning CO2 affinity and depressed Tg."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_PHD_GAP001": {
+        "id": "Ruiz2011_PHD_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., 'SBM increases nucleation sites, MAM reduces cell size').",
+          "The question is specific, mentioning SBM and MAM copolymers."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "pass"
+      },
+      "Ruiz2011_PHD_GAP002": {
+        "id": "Ruiz2011_PHD_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (e.g., 'high depressurization rates produce ultra-microcellular materials').",
+          "The question is specific, mentioning PMMA + MAM blends and depressurization rates."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 14,
+          "evidence_chars": 21945
+        },
+        "verdict": "pass"
+      }
+    },
+    "questions_to_refine": [
+      "Ruiz2011_SYNTH_Q003",
+      "Ruiz2011_CHAR_GAP001",
+      "Ruiz2011_PROC_Q004",
+      "Ruiz2011_PROC_GAP001",
+      "Ruiz2011_PROC_GAP002",
+      "Ruiz2011_ONTO_GAP001",
+      "Ruiz2011_ONTO_GAP002",
+      "Ruiz2011_STU_Q001",
+      "Ruiz2011_STU_Q003",
+      "Ruiz2011_STU_Q005",
+      "Ruiz2011_STU_GAP001",
+      "Ruiz2011_PHD_Q002",
+      "Ruiz2011_PHD_Q003",
+      "Ruiz2011_PHD_Q004"
+    ],
+    "n_total": 49,
+    "n_pass": 35,
+    "n_borderline": 12,
+    "n_fail": 2
+  },
+  "refined_questions": {
+    "SYNTH": [
+      {
+        "id": "Ruiz2011_SYNTH_Q003",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "How does increasing the saturation temperature from 25 °C to 80 °C affect the weight gain ratio of CO2 in PMMA samples saturated at 300 bar for 16 hours?",
+        "expected_answer": "The weight gain ratio (w) decreased as the saturation temperature increased; for example, PMMA uptake dropped from 16.9% at 25 °C to 15.6% at 80 °C.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          },
+          {
+            "role": "property",
+            "term": "weight gain ratio"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to specify the material (PMMA), the exact saturation conditions (300 bar, 16 h), and the temperature range to ensure the answer is explicitly supported by the data in Table 3 and the accompanying text."
+      }
+    ],
+    "CHAR": [
+      {
+        "id": "Ruiz2011_CHAR_GAP001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which specific analytical technique, instrument model, solvent, and detection method were used to determine the average molar masses (Mw) of the polymers and copolymers?",
+        "expected_answer": "Size exclusion chromatography (SEC/GPC) using a PL-GPC50Plus device with THF as the solvent and UV detection at 254 nm.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "molecular weight"
+          },
+          {
+            "role": "class",
+            "term": "size exclusion chromatography"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly request the instrument model, solvent, and detection method, which are all detailed in the evidence passages, thereby removing the vagueness flagged by the validator."
+      }
+    ],
+    "PROC": [
+      {
+        "id": "Ruiz2011_PROC_Q004",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of the depressurization rate on the cellular structure of PMMA + MAM blends at a fixed saturation temperature of 40 °C?",
+        "expected_answer": "Lowering the depressurization rate increases the average cell size; for example, at 150 bar/min the cell size is 0.3 µm, whereas at 12 bar/min it increases to 80 µm.",
+        "source_section": "3.2.2. Behaviour of blends/role of CO2 philic nano dispersed copolymers",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Ruiz2011_PROC_GAP001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the extrusion parameters used to produce the PS + SBM and PMMA + MAM blends?",
+        "expected_answer": "The blends were produced using a Scamex CE02 extruder with a temperature profile from 165 °C to 225 °C and a screw velocity of 60 rpm.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "extrusion parameters"
+          },
+          {
+            "role": "individual",
+            "term": "PS + SBM"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages describe the foaming process (saturation pressure, depressurization rates, temperatures) but contain no information regarding the specific extrusion parameters (equipment model, temperature profile, screw velocity) used to create the initial blends.",
+        "unrepairable": true
+      },
+      {
+        "id": "Ruiz2011_PROC_GAP002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does the depressurization rate affect the cell size of PMMA + MAM foams when the saturation temperature is fixed at 40 °C?",
+        "expected_answer": "A high depressurization rate of 150 bar/min produces an ultra-microcellular material with an average cell size of 0.3 µm, whereas a low depressurization rate of 12 bar/min results in an inhomogeneous cellular structure with cell sizes ranging from 10 µm to 50 µm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressurization rate"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The question and answer are fully supported by the evidence passages which explicitly state the cell size of 0.3 µm at 150 bar/min and the range of 10-50 µm at 12 bar/min for PMMA + MAM blends at 40 °C."
+      }
+    ],
+    "ONTO": [
+      {
+        "id": "Ruiz2011_ONTO_GAP001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the 'one-step scCO2 process' and 'supercritical carbon dioxide' as described in the study of amorphous commodity polymers?",
+        "expected_answer": "(one-step scCO2 process, usesMaterial, supercritical carbon dioxide)",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Process"
+          },
+          {
+            "role": "property",
+            "term": "usesMaterial"
+          },
+          {
+            "role": "individual",
+            "term": "supercritical carbon dioxide"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to use the specific term 'one-step scCO2 process' found in the text, which explicitly links the method to supercritical carbon dioxide, correcting the validator's concern about an implicit link."
+      },
+      {
+        "id": "Ruiz2011_ONTO_GAP002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What ontology class should the 'swelling and plasticization' phenomenon be assigned to, and which property would link it to the 'supercritical carbon dioxide' that induces it in the one-step process?",
+        "expected_answer": "The 'swelling and plasticization' phenomenon should be a subclass of Property (or Phenomenon), and the property linking it to supercritical carbon dioxide would be 'inducedBy' or 'causedBy'.",
+        "source_section": "Introduction",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Property"
+          },
+          {
+            "role": "property",
+            "term": "inducedBy"
+          },
+          {
+            "role": "individual",
+            "term": "plasticization effect"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to reference 'swelling and plasticization' which is explicitly mentioned in the text as a result of CO2 saturation, replacing the non-existent 'plasticization effect' term."
+      }
+    ],
+    "STU": [
+      {
+        "id": "Ruiz2011_STU_Q001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the average cell size of the ultra-microcellular PMMA + MAM foam produced at a depressurization rate of 150 bar/min?",
+        "expected_answer": "The average cell size is 0.3 µm.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question was too vague as cell size varies by condition; the revised question specifies the high depressurization rate condition where the text explicitly states the 0.3 µm value."
+      },
+      {
+        "id": "Ruiz2011_STU_Q003",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "How were the triblock copolymers blended with the PMMA and PS matrices?",
+        "expected_answer": "The triblock copolymers were blended to the PMMA and PS matrices by extrusion.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PS + SBM"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          },
+          {
+            "role": "individual",
+            "term": "extrusion"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question was borderline because the method was not in the experimental section excerpts; the revised question targets the Abstract where 'extrusion' is explicitly mentioned as the blending method."
+      },
+      {
+        "id": "Ruiz2011_STU_Q005",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What are the three components that make up the SBM triblock copolymer?",
+        "expected_answer": "The SBM triblock copolymer consists of styrene, butadiene, and methylmethacrylate.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SBM"
+          },
+          {
+            "role": "property",
+            "term": "hasComonomer"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The original question was borderline because the components were not listed in the experimental section excerpts; the revised question targets the Abstract where the full name 'styrene-co-butadiene-co-methylmethacrylate' is provided."
+      },
+      {
+        "id": "Ruiz2011_STU_GAP001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "How were the triblock copolymers blended with the PMMA and PS matrices?",
+        "expected_answer": "The triblock copolymers were blended to the PMMA and PS matrices by extrusion.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PS + SBM"
+          },
+          {
+            "role": "individual",
+            "term": "PMMA + MAM"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "This duplicate question is revised to target the Abstract where the blending method 'extrusion' is explicitly stated, resolving the issue of the answer not being in the experimental section excerpts."
+      }
+    ],
+    "PHD": [
+      {
+        "id": "Ruiz2011_PHD_Q002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "How does the initial saturation temperature (Tsat) specifically affect the presence of an outer dense skin in PMMA foams produced via the one-step CO2 process?",
+        "expected_answer": "Dense skins are observed at saturation temperatures below 40 °C, while the skin is suppressed at temperatures above 50 °C.",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "saturation temperature"
+          },
+          {
+            "role": "property",
+            "term": "outer dense skin"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly specify the material (PMMA) and the process (one-step CO2) to align with the specific evidence in the text regarding skin formation thresholds."
+      },
+      {
+        "id": "Ruiz2011_PHD_Q003",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "MOTIVATION",
+        "question": "What specific justification did the authors provide for applying Hwang's model to multiphase polymer blends despite the model omitting the glass transition temperature of soft blocks?",
+        "expected_answer": "The authors justified the application by stating that the model provides reasonable data due to the low content of copolymer (10%) in the blends.",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressed glass transition temperature"
+          },
+          {
+            "role": "class",
+            "term": "multiphase materials"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly ask for the specific justification (low copolymer content) found in the text, removing the generic reference to 'Hwang's model' without context."
+      },
+      {
+        "id": "Ruiz2011_PHD_Q004",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "GAP_OR_LIMITATION",
+        "question": "What limitation regarding the experimental determination of the depressed glass transition temperature (Tg) is acknowledged in the study, and what alternative method is cited as necessary for direct measurement?",
+        "expected_answer": "The study acknowledges that the depressed Tg derived from Hwang's model is only an estimation, and states that direct measurement can only be performed using magnetic suspension balances.",
+        "source_section": "Results and discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "depressed glass transition temperature"
+          },
+          {
+            "role": "individual",
+            "term": "magnetic suspension balances"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question was revised to explicitly request the specific alternative method (magnetic suspension balances) mentioned in the text to address the limitation of the model's estimation."
+      }
+    ]
+  },
+  "evaluation": {
+    "status": "reference_free",
+    "schema_version": "v2.1",
+    "paper_id": "Ruiz2011",
+    "n_questions": 49,
+    "overall_score": 0.669,
+    "weights": {
+      "coverage": 0.38,
+      "question_faithfulness": 0.44,
+      "diversity": 0.12,
+      "triplifiability": 0.06
+    },
+    "families": {
+      "coverage": {
+        "score": 0.422,
+        "concepts": {
+          "total": 79,
+          "referenced": 41,
+          "ratio": 0.519
+        },
+        "properties": {
+          "total": 56,
+          "referenced": 19,
+          "ratio": 0.339
+        },
+        "relations": {
+          "total": 59,
+          "referenced": 18,
+          "ratio": 0.305
+        },
+        "uncovered_concept_examples": [
+          "argon atmosphere",
+          "batch one-step process",
+          "co2 saturation",
+          "diblock copolymer sm",
+          "dscq100",
+          "dsm xplore injection moulding machine",
+          "emscope sc 500",
+          "fluorinated ethylene–propylene copolymers",
+          "foaming temperature",
+          "foaming time"
+        ]
+      },
+      "question_faithfulness": {
+        "score": 0.98,
+        "mean_cosine": 0.809,
+        "min_cosine": 0.684,
+        "n_well_faithful": 47,
+        "n_weak": 2,
+        "n_off_paper": 0,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        },
+        "weakest_example": {
+          "question_id": "Ruiz2011_ONTO_Q002",
+          "question": "Which method and instrument were used to measure the average molar mass (Mw) of the materials?",
+          "max_cosine": 0.6840537190437317
+        }
+      },
+      "diversity": {
+        "score": 0.308,
+        "mean_pairwise_cos": 0.692,
+        "max_pairwise_cos": 1.0,
+        "n_near_duplicates": 16,
+        "dup_threshold": 0.92
+      },
+      "triplifiability": {
+        "score": 0.673,
+        "pct_full_triples": 0.347,
+        "pct_partial": 0.653
+      }
+    },
+    "diagnostics": {
+      "answer_verifiability": {
+        "mean_cosine": 0.722,
+        "min_cosine": 0.521,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        }
+      },
+      "specificity": {
+        "score": 0.83,
+        "avg_question_chars": 128.1,
+        "pct_with_numeric_value": 0.612,
+        "pct_with_unit": 0.408,
+        "pct_referencing_concept": 1.0
+      }
+    },
+    "reproducibility": {
+      "pipeline_version": "v2.1",
+      "models": {
+        "metadata_extractor": "qwen3.5:27b",
+        "iterative_extractor": "qwen3.6:35b-a3b",
+        "cq_generator": "gemma4:31b",
+        "cq_validator": "deepseek-r1:32b",
+        "cq_refiner": "qwen3.5:35b",
+        "_embedding_model": "BAAI/bge-small-en-v1.5",
+        "_embedding_backend": "local (sentence-transformers)",
+        "_embedding_dim": 384,
+        "_note": "Three distinct LLM families (Qwen / Gemma / DeepSeek) across stages for cross-family diversity. Embeddings via LOCAL sentence-transformers (deterministic, no network) because the shared Ollama bge-m3 endpoint is unreliable from inside long-running pipeline processes (see history v1.3). All LLM calls use think=false + format=json on the client.",
+        "_history": [
+          "v0: cq_generator=llama4:scout -> failed to produce JSON output; switched to qwen3:32b + format=json.",
+          "v0.5: all stages on qwen3:32b/deepseek-r1:32b; embedder local BAAI/bge-small-en-v1.5.",
+          "v1.0: per-stage model selection, bge-m3 via Ollama, refiner added, evaluator reduced to 5 reference-free families.",
+          "v1.1: reverted embedder to local BAAI/bge-small-en-v1.5 because the shared Ollama bge-m3 endpoint was returning 500s. Added per-question evidence retrieval in validator + refiner to fix a truncation bug (was capping evidence at 7000 chars regardless of how many passages were available).",
+          "v1.2: switched embedder back to bge-m3 via Ollama after a probe showed the endpoint was responsive when called with proper exponential-backoff retry. Added 1s process-wide throttling between embed calls.",
+          "v1.3 (this version): reverted to local BAAI/bge-small-en-v1.5. The bge-m3 Ollama path stays healthy in isolation (standalone curl + Python) but the long-running pipeline process gets sustained 500s in stages 5-6, even with exponential backoff, 1s throttling, AND Connection: close to force fresh TCP per call. Most likely cause is the shared upstream evicting bge-m3 from memory while the heavy LLMs (gemma4:31b, deepseek-r1:32b) are loaded, with the eviction window outlasting our 230s retry budget. Local sentence-transformers is slightly lower quality (384-dim vs 1024) but always finishes."
+        ]
+      },
+      "validator_pass_threshold_per_question": null,
+      "coverage_gap_pass": {
+        "enabled": true,
+        "max_gap_concepts": 8
+      },
+      "rolling_state_caps": {
+        "concepts": 80,
+        "relations": 60,
+        "properties": 60,
+        "findings": 40
+      },
+      "embedder_dim": 384
+    }
+  }
+}

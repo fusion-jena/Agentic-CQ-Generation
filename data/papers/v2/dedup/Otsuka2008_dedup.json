@@ -1,0 +1,979 @@
+{
+  "paper_id": "Otsuka2008",
+  "pipeline_step": "intra_paper_dedup",
+  "pipeline_version": "v2",
+  "step_version": "step1_v1.0",
+  "dedup_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "dedup_prompt_v1.0",
+    "source_file": "papers/v2/cq_output/Otsuka2008_ext-qw-35b_g-ge4-31b_v-der1-32b_r-qw-35b_cq_v2.json",
+    "source_pipeline_version": "v2.1"
+  },
+  "paper_metadata": {
+    "title": "Nanocellular Foams of PS/PMMA Polymer Blends",
+    "first_author_lastname": "Otsuka",
+    "year": 2008,
+    "journal": "Macromolecular Materials and Engineering",
+    "doi": "10.1002/mame.200700257",
+    "keywords": [
+      "nanocellular foams",
+      "PS/PMMA blend",
+      "CO2 foaming",
+      "bubble nucleation",
+      "polymerization in matrix"
+    ],
+    "polymer_systems": [
+      "PS",
+      "PMMA",
+      "PS/PMMA blend"
+    ],
+    "polymerization_methods": [
+      "free radical polymerization"
+    ],
+    "paper_type": "research article",
+    "paper_id": "Otsuka2008",
+    "source_filename": "Nanocellular Foams of PS:PMMA Polymer Blends.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 5,
+    "n_figures": 11,
+    "n_tables": 1,
+    "file_size_kb": 267.1,
+    "char_count": 18571,
+    "estimated_tokens": 4642,
+    "n_sections": 0
+  },
+  "dedup_stats": {
+    "n_input_personas": 7,
+    "n_input_cqs": 49,
+    "n_representative_cqs": 40,
+    "n_merged_groups": 7,
+    "n_singletons": 30,
+    "n_discarded": 9,
+    "reduction_rate": 0.184,
+    "archetype_breakdown": {
+      "CAUSAL": {
+        "n_input": 11,
+        "n_output": 8
+      },
+      "COMPARATIVE": {
+        "n_input": 4,
+        "n_output": 2
+      },
+      "CONDITION_FOR_PROCESS": {
+        "n_input": 6,
+        "n_output": 5
+      },
+      "ENTITY_LOOKUP": {
+        "n_input": 7,
+        "n_output": 6
+      },
+      "ENUMERATION": {
+        "n_input": 3,
+        "n_output": 3
+      },
+      "GAP_OR_LIMITATION": {
+        "n_input": 2,
+        "n_output": 2
+      },
+      "METHOD_OF_MEASUREMENT": {
+        "n_input": 5,
+        "n_output": 4
+      },
+      "MOTIVATION": {
+        "n_input": 4,
+        "n_output": 4
+      },
+      "ONTOLOGY_TRIPLE": {
+        "n_input": 3,
+        "n_output": 3
+      },
+      "PROCESS_FOR_MATERIAL": {
+        "n_input": 4,
+        "n_output": 3
+      }
+    },
+    "parse_fallback_used": false,
+    "accounting_ok": true,
+    "grouping_ok": false,
+    "vague_answer_warnings": [
+      {
+        "id": "Otsuka2008_CHAR_Q002",
+        "persona_code": "CHAR",
+        "expected_answer": "2.20 x 10^6 g/mol.",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Otsuka2008_ONTO_Q001",
+        "persona_code": "ONTO",
+        "expected_answer": "(PS/PMMA polymer blend, producedBy, diffusion mixing)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Otsuka2008_ONTO_Q002",
+        "persona_code": "ONTO",
+        "expected_answer": "GPC (Gel Permeation Chromatography)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Otsuka2008_ONTO_Q005",
+        "persona_code": "ONTO",
+        "expected_answer": "(nanocellular foam, producedBy, pressure quench method)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Otsuka2008_ONTO_GAP001",
+        "persona_code": "ONTO",
+        "expected_answer": "(high pressure autoclave, usedIn, pressure quench method)",
+        "flags": [
+          "answer_too_short"
+        ]
+      }
+    ]
+  },
+  "execution_stats": {
+    "total_wall_time": "54s 236ms",
+    "llm_calls": [
+      {
+        "model": "deepseek-r1:32b",
+        "think": true,
+        "wall_time": "54s 233ms",
+        "prompt_tokens": 6157,
+        "generated_tokens": 1158,
+        "thinking_chars": 0
+      }
+    ]
+  },
+  "representative_questions": [
+    {
+      "id": "Otsuka2008_DEDUP_001",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_SYNTH_Q001",
+      "question": "By what method was the PS/PMMA polymer blend with dispersed nanoscale PMMA islands synthesized?",
+      "expected_answer": "The blend was prepared by polymerizing MMA monomers in a PS matrix via diffusion mixing, where MMA monomers were dissolved into PS pellets before polymerization.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Part",
+      "is_singleton": false,
+      "why_kept": "This question has the highest Bloom level (comprehension) and provides a detailed expected answer.",
+      "merged_from": [
+        {
+          "id": "Otsuka2008_STU_GAP002",
+          "paper_id": "Otsuka2008",
+          "persona_code": "STU",
+          "question": "By which method was the nanocellular foam produced in this study?",
+          "expected_answer": "The nanocellular foam was produced by a pressure quench method using carbon dioxide (CO2).",
+          "reason_discarded": "This question has the highest Bloom level (comprehension) and provides a detailed expected answer."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the method used to produce the nanocellular foam, just phrased differently."
+    },
+    {
+      "id": "Otsuka2008_DEDUP_002",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_SYNTH_Q002",
+      "question": "What initiator and concentration were used for the polymerization of MMA within the PS matrix?",
+      "expected_answer": "2,2'-Azoisobutyronitrile (AIBN) at a concentration of 1 wt.-%.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_003",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_SYNTH_Q003",
+      "question": "How does the PS/PMMA weight ratio affect the average size of the PMMA domains in the resulting blend?",
+      "expected_answer": "As the ratio of PS to PMMA increases, the average size of the PMMA domains becomes smaller.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_004",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_SYNTH_Q005",
+      "question": "How does the molecular weight of PMMA polymerized within the PS matrix compare to PMMA produced via bulk polymerization under the same temperature conditions?",
+      "expected_answer": "The PMMA polymerized in the PS matrix has a higher weight averaged molecular weight (2.20 x 10^6 g/mol) than that of PMMA made by bulk polymerization (1.50 x 10^5 g/mol).",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_005",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_SYNTH_GAP001",
+      "question": "What initiator and temperature conditions were used for the polymerization of MMA monomers within the PS matrix?",
+      "expected_answer": "1 wt.-% AIBN was used as the initiator, with the mold heated to 80 °C for 1 h, followed by incubation at 90 °C for 24 h and vacuum annealing at 170 °C for 24 h.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_006",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_SYNTH_GAP002",
+      "question": "How does the weight ratio of PS to PMMA in the blend affect the average size of the PMMA domains?",
+      "expected_answer": "As the ratio of PS to PMMA increases, the average size of the PMMA domains becomes smaller; for example, domains varied from 100 to 500 nm at a 1/1 ratio, while they became invisible at SEM at a 3/1 ratio.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_007",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_CHAR_Q001",
+      "question": "Which analytical technique was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+      "expected_answer": "Gel Permeation Chromatography (GPC) using a RID-10A/SPD-20A from Shimadzu.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Part",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides specific details about the instrument used.",
+      "merged_from": [
+        {
+          "id": "Otsuka2008_CHAR_GAP001",
+          "paper_id": "Otsuka2008",
+          "persona_code": "CHAR",
+          "question": "Which analytical technique was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+          "expected_answer": "Gel Permeation Chromatography (GPC) using a RID-10A/SPD-20A instrument from Shimadzu.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific details about the instrument used."
+        }
+      ],
+      "merge_reasoning": "Both questions inquire about the analytical technique for molecular weight distribution."
+    },
+    {
+      "id": "Otsuka2008_DEDUP_008",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_CHAR_Q002",
+      "question": "What was the calculated weight averaged molecular weight of the PMMA polymerized within the PS matrix?",
+      "expected_answer": "2.20 x 10^6 g/mol.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_009",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_CHAR_Q003",
+      "question": "How does the weight averaged molecular weight of PMMA polymerized in the PS matrix compare to PMMA produced by bulk polymerization?",
+      "expected_answer": "The PMMA polymerized in the PS matrix has a higher weight averaged molecular weight (2.20 x 10^6 g/mol) than that of PMMA made by bulk polymerization (1.50 x 10^5 g/mol).",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides comparative data.",
+      "merged_from": [
+        {
+          "id": "Otsuka2008_COMP_Q005",
+          "paper_id": "Otsuka2008",
+          "persona_code": "COMP",
+          "question": "How does the PS/PMMA blend ratio influence the bubble density of the resulting nanocellular foam?",
+          "expected_answer": "A higher PS composition in the blend results in a larger bubble density.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides comparative data."
+        }
+      ],
+      "merge_reasoning": "Both questions compare the molecular weight of PMMA in different polymerization contexts."
+    },
+    {
+      "id": "Otsuka2008_DEDUP_010",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_CHAR_Q004",
+      "question": "Which instrument and mode were used to observe the phase morphology and cellular structure of the polymer blends?",
+      "expected_answer": "Scanning probe microscopy (SPM, SPM-9500J3, Shimadzu) in tapping mode, following dry-etching with oxygen plasma.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_011",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_CHAR_Q005",
+      "question": "What is the effect of CO2 sorption pressure of 8.6 MPa on the glass transition temperature (Tg) of PMMA compared to PS?",
+      "expected_answer": "At 8.6 MPa, the Tg of PMMA decreases to 0 °C, while the Tg of PS levels out at 30 °C.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (comprehension) and provides specific Tg values.",
+      "merged_from": [
+        {
+          "id": "Otsuka2008_STU_Q005",
+          "paper_id": "Otsuka2008",
+          "persona_code": "STU",
+          "question": "What is the effect of a higher depressurization rate and lower foaming temperature on the bubble characteristics of the nanocellular foam?",
+          "expected_answer": "A higher depressurization rate at lower foaming temperature makes the bubble diameter smaller and the bubble density larger.",
+          "reason_discarded": "This question has a higher Bloom level (comprehension) and provides specific Tg values."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss the effect of CO2 pressure on Tg of PMMA and PS."
+    },
+    {
+      "id": "Otsuka2008_DEDUP_012",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_CHAR_GAP002",
+      "question": "What chemical agent was used to treat the surface of the non-foamed samples to enable the observation of the phase morphology of the blended polymer?",
+      "expected_answer": "Acetic acid was used to remove the PMMA domains in the PS matrix.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_013",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PROC_Q001",
+      "question": "What were the saturation pressure and temperature conditions used to dissolve CO2 into the PS/PMMA blend before foaming?",
+      "expected_answer": "The samples were heated up to 40 °C and pressurized by CO2 up to 8.6 MPa for 2 hours.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_014",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PROC_Q002",
+      "question": "How does the depressurization rate affect the cell diameter and cell density of the nanocellular foam?",
+      "expected_answer": "A higher depressurization rate results in a smaller bubble diameter and a larger bubble density.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (application) and provides specific effects on cell characteristics.",
+      "merged_from": [
+        {
+          "id": "Otsuka2008_COMP_Q001",
+          "paper_id": "Otsuka2008",
+          "persona_code": "COMP",
+          "question": "How does the depressurization rate affect the average cell diameter and cell density in the nanocellular foam?",
+          "expected_answer": "A higher depressurization rate (e.g., increasing from 0.1 to 0.5 MPa/min) reduces the average cell diameter and increases the cell density.",
+          "reason_discarded": "This question has a higher Bloom level (application) and provides specific effects on cell characteristics."
+        },
+        {
+          "id": "Otsuka2008_COMP_GAP001",
+          "paper_id": "Otsuka2008",
+          "persona_code": "COMP",
+          "question": "How does the depressurization rate affect the average cell diameter and cell density in the nanocellular foam?",
+          "expected_answer": "A higher depressurization rate (e.g., increasing from 0.1 to 0.5 MPa/min) reduces the average cell diameter (down to 50 nm) and increases the cell density.",
+          "reason_discarded": "This question has a higher Bloom level (application) and provides specific effects on cell characteristics."
+        }
+      ],
+      "merge_reasoning": "All questions discuss the effect of depressurization rate on cell diameter and density."
+    },
+    {
+      "id": "Otsuka2008_DEDUP_015",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PROC_Q003",
+      "question": "How does the effect of foaming temperature on cell size differ between a PS/PMMA ratio of 1/1 and ratios of 2/1 or 3/1?",
+      "expected_answer": "For a 1/1 ratio, cell size increased as temperature rose from 20 to 40 °C due to bubble coalescence in larger PMMA domains; however, for 2/1 and 3/1 ratios, the smaller PMMA domains confined bubble growth and suppressed coalescence, making cell size insensitive to the temperature increase.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (application) and provides detailed comparative effects.",
+      "merged_from": [
+        {
+          "id": "Otsuka2008_COMP_Q002",
+          "paper_id": "Otsuka2008",
+          "persona_code": "COMP",
+          "question": "How does the effect of foaming temperature on cell size differ between PS/PMMA blend ratios of 1/1 and 2/1 or 3/1?",
+          "expected_answer": "For a 1/1 ratio, decreasing the foaming temperature from 40 to 20 °C caused a large change in cell diameter and density; however, for 2/1 and 3/1 ratios, the increase in temperature did not change cell size because the PMMA domains were small enough to confine bubble growth.",
+          "reason_discarded": "This question has a higher Bloom level (application) and provides detailed comparative effects."
+        },
+        {
+          "id": "Otsuka2008_PHD_Q003",
+          "paper_id": "Otsuka2008",
+          "persona_code": "PHD",
+          "question": "How does the effect of foaming temperature on cell size differ between PS/PMMA blends with a 1/1 ratio versus those with 2/1 and 3/1 ratios?",
+          "expected_answer": "For the 1/1 ratio, decreasing the foaming temperature from 40 to 20 °C caused a large change in average cell diameter and density because bubbles coalesced in the larger PMMA domains at higher temperatures. For 2/1 and 3/1 ratios, the PMMA domains were small enough to confine bubble growth and suppress coalescence, so temperature changes did not significantly affect cell size.",
+          "reason_discarded": "This question has a higher Bloom level (application) and provides detailed comparative effects."
+        }
+      ],
+      "merge_reasoning": "All questions explore how foaming temperature affects cell size based on blend ratios."
+    },
+    {
+      "id": "Otsuka2008_DEDUP_016",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PROC_Q004",
+      "question": "Why was the foaming temperature set to 20 °C to achieve localized bubble nucleation in the PMMA domains?",
+      "expected_answer": "At 20 °C, the foaming temperature is lower than the glass transition temperature (Tg) of PS (which levels out at 30 °C under 8.6 MPa CO2), ensuring the PS phase has high viscoelasticity while nucleation and growth are localized in the PMMA domains.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_017",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PROC_Q005",
+      "question": "What annealing process was applied to the PS/PMMA blend to ensure complete polymerization of MMA monomers?",
+      "expected_answer": "The samples were kept at 90 °C for 24 h in a temperature-controlled incubator, followed by annealing at 170 °C in a vacuum for 24 h.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Experimental Part",
+      "is_singleton": false,
+      "why_kept": "This question has a higher Bloom level (application) and provides detailed annealing conditions.",
+      "merged_from": [
+        {
+          "id": "Otsuka2008_SYNTH_Q004",
+          "paper_id": "Otsuka2008",
+          "persona_code": "SYNTH",
+          "question": "What thermal treatment was applied to the molded samples after the initial polymerization at 80 °C to ensure complete polymerization of remaining MMA monomers?",
+          "expected_answer": "The samples were kept at 90 °C for 24 h in a temperature-controlled incubator, followed by annealing at 170 °C in a vacuum for 24 h.",
+          "reason_discarded": "This question has a higher Bloom level (application) and provides detailed annealing conditions."
+        }
+      ],
+      "merge_reasoning": "Both questions ask about the thermal treatment applied after polymerization."
+    },
+    {
+      "id": "Otsuka2008_DEDUP_018",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PROC_GAP001",
+      "question": "Under what temperature and pressure conditions was the PS/PMMA blend saturated with CO2 in the high pressure autoclave prior to foaming?",
+      "expected_answer": "The sample was heated up to 40 °C and pressurized by CO2 up to 8.6 MPa for 2 hours.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "application",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_019",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PROC_GAP002",
+      "question": "How does the depressurization rate affect the cell diameter and cell density of the nanocellular foam when foaming is conducted at a lower temperature?",
+      "expected_answer": "A higher depressurization rate at lower foaming temperature makes the bubble diameter smaller and the bubble density larger.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_020",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_COMP_Q003",
+      "question": "What quantitative method was used to calculate the average cell diameter and cell density from the SPM images?",
+      "expected_answer": "The calculation method proposed by Kumar et al. [9] was employed.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_021",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_COMP_Q004",
+      "question": "Which specific foaming conditions (temperature and depressurization rate) were tested in the batch foaming experiments?",
+      "expected_answer": "Four conditions were tested: (A) 40 °C at 0.1 MPa/min, (B) 20 °C at 0.1 MPa/min, (C) 20 °C at 0.5 MPa/min, and (D) 40 °C at 0.5 MPa/min.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_022",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_COMP_GAP002",
+      "question": "Which experimental conditions (temperature and depressurization rate) were used to evaluate the cellular structure of the PS/PMMA blends?",
+      "expected_answer": "Four conditions were used: (A) 40 °C and 0.1 MPa/min, (B) 20 °C and 0.1 MPa/min, (C) 20 °C and 0.5 MPa/min, and (D) 40 °C and 0.5 MPa/min.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_023",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_ONTO_Q001",
+      "question": "Which triple represents the relationship between the PS/PMMA polymer blend and the method used to create its dispersed morphology?",
+      "expected_answer": "(PS/PMMA polymer blend, producedBy, diffusion mixing)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Abstract",
+      "is_singleton": false,
+      "why_kept": "This is an ONTO question, which takes priority as per rule 3.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this specific ontology triple."
+    },
+    {
+      "id": "Otsuka2008_DEDUP_024",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_ONTO_Q002",
+      "question": "Which method was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+      "expected_answer": "GPC (Gel Permeation Chromatography)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_025",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_ONTO_Q003",
+      "question": "What ontology class should 'depressurization rate' be assigned to, and what data property would capture its value?",
+      "expected_answer": "It should be a subclass of Condition, and its value would be captured by a data property such as hasDepressurizationRate.",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "source_section": "Abstract",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_026",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_ONTO_Q004",
+      "question": "Which Material entities are identified as components or agents in the preparation of the nanocellular foam?",
+      "expected_answer": "PS (polystyrene), PMMA (poly(methyl methacrylate)), MMA monomer, AIBN (initiator), and CO2 (foaming agent).",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Part",
+      "is_singleton": false,
+      "why_kept": "This is an ONTO question, which takes priority as per rule 3.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this specific enumeration."
+    },
+    {
+      "id": "Otsuka2008_DEDUP_027",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_ONTO_Q005",
+      "question": "Which triple captures the relationship between the nanocellular foam and the specific process used to induce its cellular structure?",
+      "expected_answer": "(nanocellular foam, producedBy, pressure quench method)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Part",
+      "is_singleton": false,
+      "why_kept": "This is an ONTO question, which takes priority as per rule 3.",
+      "merged_from": [],
+      "merge_reasoning": "No duplicates found for this specific ontology triple."
+    },
+    {
+      "id": "Otsuka2008_DEDUP_028",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_ONTO_GAP001",
+      "question": "Which triple represents the relationship between the high pressure autoclave and the pressure quench method used to prepare the nanocellular foam?",
+      "expected_answer": "(high pressure autoclave, usedIn, pressure quench method)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_029",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_ONTO_GAP002",
+      "question": "What ontology class should 'acetic acid' be assigned to, given its use in removing PMMA domains to observe phase morphology?",
+      "expected_answer": "It should be represented as a subclass of Material, specifically as a ChemicalAgent or Solvent, linked to the morphology observation process via a property such as 'usedForTreatment'.",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_030",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_STU_Q001",
+      "question": "By which process was the PS/PMMA polymer blend produced to ensure highly dispersed PMMA domains?",
+      "expected_answer": "The PS/PMMA polymer blend was prepared by polymerizing MMA monomers in a PS matrix using diffusion mixing.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_031",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_STU_Q002",
+      "question": "Which method was used to produce the nanocellular foam from the annealed polymer blend?",
+      "expected_answer": "The nanocellular foam was produced using a pressure quench method with carbon dioxide (CO2).",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_032",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_STU_Q003",
+      "question": "Why was a foaming temperature of 20 °C chosen to localize bubble nucleation in the PMMA domains?",
+      "expected_answer": "Foaming at 20 °C was chosen because this temperature is lower than the glass transition temperature (Tg) of PS, meaning the viscoelasticity of the PS phase remained high, which confined nucleation and growth to the PMMA domains.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_033",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_STU_Q004",
+      "question": "Which method was used to observe the cellular structure and phase morphology of the polymer blends?",
+      "expected_answer": "The cellular structure and phase morphology were observed using scanning probe microscopy (SPM) in tapping mode after dry-etching with oxygen plasma.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "source_section": "Experimental Part",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_034",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_STU_GAP001",
+      "question": "Why was acetic acid used during the characterization of the PS/PMMA polymer blend?",
+      "expected_answer": "Acetic acid was used to remove the PMMA domains from the PS matrix, allowing the phase morphology (the size and distribution of PMMA domains) to be observed as holes via scanning electron microscopy.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "recall",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_035",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PHD_Q001",
+      "question": "Why did the authors choose to use a polymer blend of PS/PMMA instead of the self-assembled block copolymers used in prior nanocellular foaming research?",
+      "expected_answer": "The authors argue that the morphology of self-assembled block copolymers is very sensitive to molecular weight distribution, surface energy, and film thickness, making it difficult to use for creating industrial products. Additionally, they wanted to incorporate viscoelasticity differences between the disperse domain and the matrix into the foaming mechanism.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_036",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PHD_Q002",
+      "question": "How does the depressurization rate affect the bubble diameter and bubble density in the resulting nanocellular foam?",
+      "expected_answer": "A higher depressurization rate results in a smaller bubble diameter and a larger bubble density.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_037",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PHD_Q004",
+      "question": "What limitation does the paper identify regarding the previous mechanism of nanocellular foaming based on diblock copolymers?",
+      "expected_answer": "The previous mechanism relied only on the difference in affinity of the polymers for the foaming agent (CO2) and missed the important factor of viscoelasticity differences between the disperse domain and the matrix.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_038",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PHD_Q005",
+      "question": "How does the PS composition in the polymer blend influence the bubble density of the nanocellular foam?",
+      "expected_answer": "A higher PS composition in the blend results in a larger bubble density.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Abstract",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_039",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PHD_GAP001",
+      "question": "What limitation does the paper acknowledge regarding the use of self-assembled block copolymers, such as polystyrene-block-poly(perfluorooctylethyl methacrylate), for the industrial production of nanocellular foams?",
+      "expected_answer": "The authors state that the morphology of block copolymers is very sensitive to molecular weight distribution, surface energy between substrates and polymer, and film thickness, making it very difficult to use for creating nanocellular foams as industrial products.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Introduction",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Otsuka2008_DEDUP_040",
+      "paper_id": "Otsuka2008",
+      "source_id": "Otsuka2008_PHD_GAP002",
+      "question": "How does the interaction between foaming temperature and the glass transition temperatures (Tg) of PS and PMMA affect the localization of bubble nucleation in the resulting nanocellular foam?",
+      "expected_answer": "When foamed at 40 °C, bubble growth and coalescence are enhanced in both phases because the temperature is higher than the Tg of both polymers. However, when foamed at 20 °C, bubble nucleation and growth are localized in the PMMA domains because the foaming temperature is lower than the Tg of PS, meaning the viscoelasticity of the PS phase remains high.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    }
+  ],
+  "discarded_questions": [
+    {
+      "id": "Otsuka2008_SYNTH_Q004",
+      "paper_id": "Otsuka2008",
+      "question": "What thermal treatment was applied to the molded samples after the initial polymerization at 80 °C to ensure complete polymerization of remaining MMA monomers?",
+      "expected_answer": "The samples were kept at 90 °C for 24 h in a temperature-controlled incubator, followed by annealing at 170 °C in a vacuum for 24 h.",
+      "persona_code": "SYNTH",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Part",
+      "absorbed_into": "Otsuka2008_DEDUP_017"
+    },
+    {
+      "id": "Otsuka2008_CHAR_GAP001",
+      "paper_id": "Otsuka2008",
+      "question": "Which analytical technique was used to measure the molecular weight distribution of the PS/PMMA polymer blends?",
+      "expected_answer": "Gel Permeation Chromatography (GPC) using a RID-10A/SPD-20A instrument from Shimadzu.",
+      "persona_code": "CHAR",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Experimental Part",
+      "absorbed_into": "Otsuka2008_DEDUP_007"
+    },
+    {
+      "id": "Otsuka2008_COMP_Q001",
+      "paper_id": "Otsuka2008",
+      "question": "How does the depressurization rate affect the average cell diameter and cell density in the nanocellular foam?",
+      "expected_answer": "A higher depressurization rate (e.g., increasing from 0.1 to 0.5 MPa/min) reduces the average cell diameter and increases the cell density.",
+      "persona_code": "COMP",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Otsuka2008_DEDUP_014"
+    },
+    {
+      "id": "Otsuka2008_COMP_Q002",
+      "paper_id": "Otsuka2008",
+      "question": "How does the effect of foaming temperature on cell size differ between PS/PMMA blend ratios of 1/1 and 2/1 or 3/1?",
+      "expected_answer": "For a 1/1 ratio, decreasing the foaming temperature from 40 to 20 °C caused a large change in cell diameter and density; however, for 2/1 and 3/1 ratios, the increase in temperature did not change cell size because the PMMA domains were small enough to confine bubble growth.",
+      "persona_code": "COMP",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Otsuka2008_DEDUP_015"
+    },
+    {
+      "id": "Otsuka2008_COMP_Q005",
+      "paper_id": "Otsuka2008",
+      "question": "How does the PS/PMMA blend ratio influence the bubble density of the resulting nanocellular foam?",
+      "expected_answer": "A higher PS composition in the blend results in a larger bubble density.",
+      "persona_code": "COMP",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "absorbed_into": "Otsuka2008_DEDUP_009"
+    },
+    {
+      "id": "Otsuka2008_COMP_GAP001",
+      "paper_id": "Otsuka2008",
+      "question": "How does the depressurization rate affect the average cell diameter and cell density in the nanocellular foam?",
+      "expected_answer": "A higher depressurization rate (e.g., increasing from 0.1 to 0.5 MPa/min) reduces the average cell diameter (down to 50 nm) and increases the cell density.",
+      "persona_code": "COMP",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Otsuka2008_DEDUP_014"
+    },
+    {
+      "id": "Otsuka2008_STU_Q005",
+      "paper_id": "Otsuka2008",
+      "question": "What is the effect of a higher depressurization rate and lower foaming temperature on the bubble characteristics of the nanocellular foam?",
+      "expected_answer": "A higher depressurization rate at lower foaming temperature makes the bubble diameter smaller and the bubble density larger.",
+      "persona_code": "STU",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Abstract",
+      "absorbed_into": "Otsuka2008_DEDUP_011"
+    },
+    {
+      "id": "Otsuka2008_STU_GAP002",
+      "paper_id": "Otsuka2008",
+      "question": "By which method was the nanocellular foam produced in this study?",
+      "expected_answer": "The nanocellular foam was produced by a pressure quench method using carbon dioxide (CO2).",
+      "persona_code": "STU",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "bloom_level": "recall",
+      "source_section": "Experimental Part",
+      "absorbed_into": "Otsuka2008_DEDUP_001"
+    },
+    {
+      "id": "Otsuka2008_PHD_Q003",
+      "paper_id": "Otsuka2008",
+      "question": "How does the effect of foaming temperature on cell size differ between PS/PMMA blends with a 1/1 ratio versus those with 2/1 and 3/1 ratios?",
+      "expected_answer": "For the 1/1 ratio, decreasing the foaming temperature from 40 to 20 °C caused a large change in average cell diameter and density because bubbles coalesced in the larger PMMA domains at higher temperatures. For 2/1 and 3/1 ratios, the PMMA domains were small enough to confine bubble growth and suppress coalescence, so temperature changes did not significantly affect cell size.",
+      "persona_code": "PHD",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "source_section": "Results and Discussion",
+      "absorbed_into": "Otsuka2008_DEDUP_015"
+    }
+  ]
+}

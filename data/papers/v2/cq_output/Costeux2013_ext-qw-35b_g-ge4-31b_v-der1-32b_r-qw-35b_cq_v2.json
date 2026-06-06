@@ -1,0 +1,3461 @@
+{
+  "paper_id": "Costeux2013",
+  "paper_metadata": {
+    "title": "Homogeneous nanocellular foams from styrenic-acrylic polymer blends",
+    "first_author_lastname": "Costeux",
+    "year": 2013,
+    "journal": "Journal of Materials Research",
+    "doi": "10.1557/jmr.2013.100",
+    "keywords": [
+      "nanocellular foams",
+      "styrenic-acrylic blends",
+      "carbon dioxide",
+      "batch foaming",
+      "cell nucleation"
+    ],
+    "polymer_systems": [
+      "styrene-acrylonitrile copolymers",
+      "poly(ethyl methacrylate)",
+      "poly(methyl methacrylate-co-ethyl acrylate)"
+    ],
+    "polymerization_methods": [],
+    "paper_type": "research article",
+    "paper_id": "Costeux2013",
+    "source_filename": "Homogeneous nanocellular foams from styrenic-acrylic polymer blends.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 15,
+    "n_figures": 13,
+    "n_tables": 7,
+    "file_size_kb": 830.7,
+    "char_count": 61595,
+    "estimated_tokens": 15398,
+    "n_sections": 0
+  },
+  "pipeline_config": {
+    "pipeline_version": "v2.1",
+    "extraction_method": "plain",
+    "metadata_extractor": "qwen3.5:27b",
+    "iterative_extractor": "qwen3.6:35b-a3b",
+    "cq_generator": "gemma4:31b",
+    "cq_validator": "deepseek-r1:32b",
+    "cq_refiner": "qwen3.5:35b",
+    "embedding_model": "BAAI/bge-small-en-v1.5"
+  },
+  "execution_stats": {
+    "text_extraction_secs": 8.08,
+    "total_wall_secs": 1635.03,
+    "stage_seconds": {
+      "chunk": 0.0,
+      "index": 0.54,
+      "extract": 839.17,
+      "retrieve": 0.25,
+      "generate": 450.15,
+      "validate": 273.54,
+      "refine": 62.89,
+      "evaluate": 0.32
+    }
+  },
+  "pipeline_version": "v2.1",
+  "n_personas": 7,
+  "n_questions": 49,
+  "was_refined": true,
+  "persona_questions": {
+    "SYNTH": [
+      {
+        "id": "Costeux2013_SYNTH_Q001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "By which process were the nanocellular foams from styrenic-acrylic polymer blends produced?",
+        "expected_answer": "A two-step batch foaming process using carbon dioxide as the blowing agent.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "nanocellular foams"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_SYNTH_Q002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "Under what reference conditions (temperature, pressure, and time) was the initial foaming step carried out?",
+        "expected_answer": "Tsoak = 30 °C, Psoak = 33 MPa, and tsoak = 10 h.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "Tsoak"
+          },
+          {
+            "role": "property",
+            "term": "Psoak"
+          },
+          {
+            "role": "property",
+            "term": "tsoak"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_SYNTH_Q003",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "How does the ethyl acrylate (EA) content in the MMA-co-EA copolymer affect the cell density of the resulting SAN28/MMA-co-EA (50/50 wt%) nanofoams?",
+        "expected_answer": "Increasing EA content from 0.4% (MMA-EA1) to 5.6% (MMA-EA6) increases cell density (from 3 x 10^14 to 4.0 x 10^15 cm^-3), but further increasing EA content to 12% (MMA-EA12) leads to a decrease in cell density (to 6.9 x 10^14 cm^-3).",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "MMA-co-EA"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The validator flagged this as borderline, but the specific data points and trends regarding EA content and cell density are explicitly detailed in the text and Table VII, making the question answerable from the evidence."
+      },
+      {
+        "id": "Costeux2013_SYNTH_Q004",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was a postfoaming (PF) annealing step performed after the initial rapid depressurization?",
+        "expected_answer": "To avoid uncontrolled changes in cell dimensions and fracturing of the foam samples caused by high residual levels of CO2 trapped at high pressure, which plasticize the polymer matrix and create high internal stresses.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "postfoaming"
+          },
+          {
+            "role": "property",
+            "term": "foam stability"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_SYNTH_Q005",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "What is the relationship between CO2 solubility in the polymer blends and the resulting cell density of the nanofoams?",
+        "expected_answer": "Blends with lower CO2 solubility gave higher cell density nanofoams, suggesting that maximizing CO2 solubility does not provide maximum nucleation density.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_SYNTH_GAP001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "Which polymerization method was used to synthesize the styrene-acrylonitrile (SAN) copolymers with varying acrylonitrile compositions?",
+        "expected_answer": "Conventional free radical polymerization using continuous addition of the monomer.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "free radical polymerization"
+          },
+          {
+            "role": "individual",
+            "term": "styrene-acrylonitrile"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The evidence passages do not contain information regarding the synthesis method (e.g., free radical, RAFT, ATRP) of the base SAN polymers, only their blending and foaming behavior.",
+        "unrepairable": true
+      },
+      {
+        "id": "Costeux2013_SYNTH_GAP002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why were copolymers containing ethyl acrylate (EA) used in the blends instead of poly(methyl methacrylate) (PMMA) homopolymer?",
+        "expected_answer": "PMMA has poor thermal stability and may undergo partial degradation during blend processing, whereas copolymers with ethyl acrylate are more thermally stable.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(methyl methacrylate)"
+          },
+          {
+            "role": "individual",
+            "term": "ethyl acrylate"
+          },
+          {
+            "role": "property",
+            "term": "thermal stability"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The evidence passages do not contain the specific rationale or comparative motivation for choosing EA copolymers over PMMA homopolymer beyond the observation of increased CO2 solubility.",
+        "unrepairable": true
+      }
+    ],
+    "CHAR": [
+      {
+        "id": "Costeux2013_CHAR_Q001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which analytical technique was used to acquire high resolution images of the foam morphology?",
+        "expected_answer": "Scanning electron microscope (SEM, FEI Nova NanoSEM 600) equipped with a secondary electron detector in immersion mode.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "morphology"
+          },
+          {
+            "role": "class",
+            "term": "Scanning Electron Microscopy"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_CHAR_Q002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the accelerating voltage used for the Transmission electron microscopy (TEM) characterization of the SAN28/PEMA blends?",
+        "expected_answer": "120 kV",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "accelerating voltage"
+          },
+          {
+            "role": "class",
+            "term": "Transmission Electron Microscopy"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The evidence passages explicitly state the accelerating voltage for TEM is 120 kV, correcting the validator's false negative."
+      },
+      {
+        "id": "Costeux2013_CHAR_Q003",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "COMPARATIVE",
+        "question": "How does the foam porosity of pure SAN foams compare to that of acrylic polymers?",
+        "expected_answer": "The foam porosity for pure SAN foams is relatively low, not exceeding 70%, while it is close to 80% for the acrylic polymers.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "porosity"
+          },
+          {
+            "role": "individual",
+            "term": "SAN"
+          },
+          {
+            "role": "individual",
+            "term": "acrylic polymers"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_CHAR_Q004",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which instrument was used to measure the CO2 solubility of the polymers at pressures below 14 MPa?",
+        "expected_answer": "A magnetic suspension balance (MSB, Rubotherm, Germany).",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          },
+          {
+            "role": "class",
+            "term": "Magnetic Suspension Balance"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_CHAR_Q005",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What energy range was used for the x-ray absorption spectra collection during Scanning transmission x-ray microscopy (STXM)?",
+        "expected_answer": "280–320 eV",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "energy range"
+          },
+          {
+            "role": "class",
+            "term": "Scanning Transmission X-ray Microscopy"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Costeux2013_CHAR_GAP001",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which instruments were used to determine the density of the polymers and the resulting nanofoams?",
+        "expected_answer": "A density determination kit (Sartorius YDK 01) and a microbalance (Mettler AE 160).",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "density"
+          },
+          {
+            "role": "individual",
+            "term": "microbalance"
+          },
+          {
+            "role": "individual",
+            "term": "density determination kit"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_CHAR_GAP002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the reported glass transition temperature (Tg) for the acrylic polymer PEMA?",
+        "expected_answer": "Tg = 76.6 °C",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PEMA"
+          },
+          {
+            "role": "property",
+            "term": "glass transition temperature"
+          }
+        ]
+      }
+    ],
+    "PROC": [
+      {
+        "id": "Costeux2013_PROC_Q001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the reference conditions for the initial foaming and postfoaming steps used to produce the nanocellular foams?",
+        "expected_answer": "The initial foaming conditions were a soaking temperature (Tsoak) of 30 °C, a soaking pressure (Psoak) of 33 MPa, and a soaking time (tsoak) of 10 h; the postfoaming (PF) step was performed at 60 °C for 3 min.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "soaking temperature"
+          },
+          {
+            "role": "property",
+            "term": "soaking pressure"
+          },
+          {
+            "role": "property",
+            "term": "postfoaming temperature"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PROC_Q002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "MOTIVATION",
+        "question": "Why was a postfoaming annealing step necessary following the initial rapid depressurization?",
+        "expected_answer": "Postfoaming was necessary to avoid uncontrolled changes in cell dimensions and fracturing of the foam samples, as high residual levels of CO2 trapped at high pressure cause high internal stresses and plasticize the polymer matrix, affecting foam stability.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foam stability"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PROC_Q003",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "How does the CO2 solubility of the polymer blend affect the resulting cell density of the nanofoams?",
+        "expected_answer": "Blends with lower CO2 solubility gave higher cell density nanofoams.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PROC_Q004",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "COMPARATIVE",
+        "question": "How does the cell density of the SAN28/MMA-EA9 (90/10 wt%) blend compare to that of pure SAN28 when produced at the same porosity?",
+        "expected_answer": "The addition of 10 wt% of acrylic polymer to SAN28 produced 100 times more cells than SAN28 alone at the same porosity.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SAN28"
+          },
+          {
+            "role": "individual",
+            "term": "SAN28/MMA-EA9 blend"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PROC_Q005",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CAUSAL",
+        "question": "What effect does increasing the ethyl acrylate (EA) content in MMA-co-EA resins have on the cell size and density of SAN28/MMA-co-EA (50/50 wt%) blends?",
+        "expected_answer": "Increasing EA content initially leads to small and very uniform cell sizes (e.g., MMA-EA6), but further increasing the EA content (and thus the affinity for CO2) leads to cell size enlargement and lower cell density (e.g., MMA-EA12).",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "EA content"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PROC_GAP001",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "CONDITION_FOR_PROCESS",
+        "question": "What were the reference conditions for the initial foaming and postfoaming steps used to produce the nanocellular foams?",
+        "expected_answer": "The reference conditions for initial foaming were a soaking temperature (Tsoak) of 30 °C, a soaking pressure (Psoak) of 33 MPa, and a soaking time (tsoak) of 10 h; the postfoaming (PF) step was performed at 60 °C for 3 min.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "soaking temperature"
+          },
+          {
+            "role": "property",
+            "term": "soaking pressure"
+          },
+          {
+            "role": "property",
+            "term": "postfoaming temperature"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PROC_GAP002",
+        "persona": "Processing Engineer",
+        "persona_code": "PROC",
+        "bloom_level": "application",
+        "archetype": "MOTIVATION",
+        "question": "Why were copolymers with ethyl acrylate (EA) selected for the blend study instead of poly(methyl methacrylate) (PMMA) homopolymer?",
+        "expected_answer": "PMMA has poor thermal stability and may undergo partial degradation during blend processing, which could affect foaming performance; copolymers with ethyl acrylate (EA) are more thermally stable and provide an additional degree of freedom to improve nanofoam structure due to the strong affinity of EA for CO2.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PMMA"
+          },
+          {
+            "role": "individual",
+            "term": "poly(methyl methacrylate-co-ethyl acrylate)"
+          },
+          {
+            "role": "property",
+            "term": "thermal stability"
+          }
+        ]
+      }
+    ],
+    "COMP": [
+      {
+        "id": "Costeux2013_COMP_Q001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "Which equation of state (EOS) was used to fit the apparent mass and polymer-CO2 mixture density to determine CO2 solubility?",
+        "expected_answer": "The perturbed chain statistical associating fluid theory equation of state (PC-SAFT EOS).",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "equation of state"
+          },
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages do not mention any specific equation of state (EOS) used for determining CO2 solubility, making the question unanswerable from the text.",
+        "unrepairable": true
+      },
+      {
+        "id": "Costeux2013_COMP_Q002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the CO2 solubility of the polymer blends affect the resulting cell density of the nanofoams?",
+        "expected_answer": "Blends with lower CO2 solubility gave higher cell density nanofoams.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Costeux2013_COMP_Q003",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How does the zero-shear viscosity of the MMA-EA9/SAN28 50/50 blend compare to the viscosity predicted by the logarithmic mixing rule?",
+        "expected_answer": "The viscosity of the blend predicted using the logarithmic mixing rule is approximately close to the experimental blend data.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "zero-shear viscosity"
+          },
+          {
+            "role": "class",
+            "term": "logarithmic mixing rule"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Costeux2013_COMP_Q004",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENUMERATION",
+        "question": "What quantitative metrics were used to characterize the cell structure and polydispersity of the foams?",
+        "expected_answer": "Average cell size (f), volume average size (fv), and the ratio fv/f as a measure of polydispersity.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "average cell size"
+          },
+          {
+            "role": "property",
+            "term": "polydispersity"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Costeux2013_COMP_Q005",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of increasing the ethyl acrylate (EA) content in MMA-co-EA resins on the cell density of SAN28/MMA-co-EA blends?",
+        "expected_answer": "Increasing EA content initially improves cell density (e.g., MMA-EA6), but further increasing the EA content (and thus the affinity for CO2) leads to cell size enlargement and lower cell density.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "EA content"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages do not contain data or discussion regarding the specific effect of varying ethyl acrylate content within MMA-co-EA resins on cell density, only comparing different base polymers.",
+        "unrepairable": true
+      },
+      {
+        "id": "Costeux2013_COMP_GAP001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the composition of SAN28/MMA-EA9 blends, specifically the weight percentage of SAN28, affect the resulting cell density and average cell size of the nanofoams?",
+        "expected_answer": "As the SAN28 content increases from 20 wt% to 80 wt%, the average cell size generally decreases from 114 nm to 86 nm, and the cell density generally increases from 1.8 x 10^15 cm^-3 to 4.5 x 10^15 cm^-3; however, at 90 wt% SAN28, the cell size increases significantly to 210 nm and cell density drops to 5.0 x 10^14 cm^-3.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "cell density"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "individual",
+            "term": "SAN28/MMA-EA9"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages do not contain specific quantitative data on cell density and size for blends with varying SAN28 weight percentages (e.g., 20%, 80%, 90%), making the question unanswerable.",
+        "unrepairable": true
+      },
+      {
+        "id": "Costeux2013_COMP_GAP002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What computational equation of state (EOS) was used to fit the apparent mass and polymer-CO2 mixture density to determine CO2 solubility?",
+        "expected_answer": "The perturbed chain statistical associating fluid theory equation of state (PC-SAFT EOS) was used.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "equation of state"
+          },
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages do not mention any computational equation of state (EOS) used to determine CO2 solubility, making the question unanswerable from the text.",
+        "unrepairable": true
+      }
+    ],
+    "ONTO": [
+      {
+        "id": "Costeux2013_ONTO_Q001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between nanocellular foams and the two-step batch foaming process?",
+        "expected_answer": "(nanocellular foams, producedBy, two-step batch foaming process)",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Material"
+          },
+          {
+            "role": "property",
+            "term": "producedBy"
+          },
+          {
+            "role": "class",
+            "term": "Process"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_ONTO_Q002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What ontology class should the term 'cell density' be assigned to, and what data property would capture its numeric value?",
+        "expected_answer": "It should be assigned to the class Property, and a data property such as hasCellDensity would capture its numeric value.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Property"
+          },
+          {
+            "role": "property",
+            "term": "hasCellDensity"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_ONTO_Q003",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENUMERATION",
+        "question": "Which Material entities are identified as base polymers used for foaming in this study?",
+        "expected_answer": "SAN (including SAN8, SAN16L, SAN16H, SAN28, SAN32), MMA-EA9, and PEMA.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Material"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_ONTO_Q004",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "How should the relationship between nanocellular foams and carbon dioxide be represented as a triple to indicate the role of the gas?",
+        "expected_answer": "(nanocellular foams, usesMethod, carbon dioxide) or (two-step batch foaming process, usesBlowingAgent, carbon dioxide)",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "usesMethod"
+          },
+          {
+            "role": "individual",
+            "term": "carbon dioxide"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_ONTO_Q005",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What class and property should be used to represent the 'CO2 uptake' of a polymer material?",
+        "expected_answer": "The class should be Property, and the property should be a data property (e.g., hasCO2Uptake) linked to the Material class.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Property"
+          },
+          {
+            "role": "property",
+            "term": "hasCO2Uptake"
+          },
+          {
+            "role": "class",
+            "term": "Material"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_ONTO_GAP001",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which instruments and methods should be linked to the measurement of foam porosity in the knowledge graph?",
+        "expected_answer": "The measurement of porosity is linked to the buoyancy method, using a density determination kit (Sartorius YDK 01) and a microbalance (Mettler AE 160).",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "Instrument"
+          },
+          {
+            "role": "property",
+            "term": "characterisedBy"
+          },
+          {
+            "role": "class",
+            "term": "Method"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_ONTO_GAP002",
+        "persona": "Ontology Engineer",
+        "persona_code": "ONTO",
+        "bloom_level": "synthesis",
+        "archetype": "ONTOLOGY_TRIPLE",
+        "question": "Which triple represents the relationship between the 'two-step batch foaming process' and the blowing agent used to produce nanocellular foams?",
+        "expected_answer": "(two-step batch foaming process, usesMethod, carbon dioxide)",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "two-step batch foaming process"
+          },
+          {
+            "role": "property",
+            "term": "usesMethod"
+          },
+          {
+            "role": "individual",
+            "term": "carbon dioxide"
+          }
+        ]
+      }
+    ],
+    "STU": [
+      {
+        "id": "Costeux2013_STU_Q001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "By which process were the nanocellular foams produced in this study?",
+        "expected_answer": "The nanocellular foams were produced by a two-step batch foaming process using carbon dioxide as the blowing agent.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "nanocellular foams"
+          },
+          {
+            "role": "individual",
+            "term": "two-step batch foaming process"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_STU_Q002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the typical range of porosity for the nanocellular foams reported in the conclusions?",
+        "expected_answer": "The porosities are in the range of 60–70%.",
+        "source_section": "Conclusions",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "porosity"
+          },
+          {
+            "role": "individual",
+            "term": "nanocellular foams"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_STU_Q003",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was a 'postfoaming' (PF) process necessary after the initial rapid depressurization in the batch foaming experiments?",
+        "expected_answer": "Postfoaming was necessary to avoid uncontrolled changes in cell dimensions and fracturing of the foam samples, as high residual levels of CO2 trapped at high pressure cause high internal stresses and plasticize the polymer matrix.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "postfoaming"
+          },
+          {
+            "role": "property",
+            "term": "foam stability"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question and answer are explicitly supported by the text in the 'Two-step foaming process' section of the evidence, which details the necessity of postfoaming to prevent fracturing and uncontrolled cell changes."
+      },
+      {
+        "id": "Costeux2013_STU_Q004",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which microscopy method was used to determine polymer composition throughout the foam specimen by measuring the intensity of peaks corresponding to aromatic C-C bonds of SAN and C-O bonds of acrylic polymers?",
+        "expected_answer": "Scanning transmission x-ray microscopy (STXM) was used to determine polymer composition by measuring the intensity of peaks corresponding to aromatic C-C bonds of SAN and C-O bonds of acrylic polymers.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Scanning transmission x-ray microscopy (STXM)"
+          },
+          {
+            "role": "property",
+            "term": "polymer composition"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question is revised to explicitly include the specific bond types mentioned in the evidence passage, ensuring the answer is directly retrievable from the text describing the STXM method."
+      },
+      {
+        "id": "Costeux2013_STU_Q005",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What is the expected application for nanocellular foams mentioned in the study?",
+        "expected_answer": "A major application expected from nanocellular foams is thermal insulation.",
+        "source_section": "Body",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "nanocellular foams"
+          },
+          {
+            "role": "individual",
+            "term": "thermal insulation"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_STU_GAP001",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which tools were used to determine the density of the polymer and the resulting nanofoam?",
+        "expected_answer": "The density was determined using a density determination kit (Sartorius YDK 01) and a microbalance (Mettler AE 160).",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "density"
+          },
+          {
+            "role": "individual",
+            "term": "microbalance"
+          },
+          {
+            "role": "individual",
+            "term": "density determination kit"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_STU_GAP002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why were copolymers with ethyl acrylate (EA) used in the blend study instead of poly(methyl methacrylate) (PMMA) homopolymer?",
+        "expected_answer": "PMMA has poor thermal stability and can undergo partial degradation during blend processing, which could affect foaming performance; copolymers with ethyl acrylate are more thermally stable.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PMMA"
+          },
+          {
+            "role": "individual",
+            "term": "poly(methyl methacrylate-co-ethyl acrylate)"
+          },
+          {
+            "role": "property",
+            "term": "thermal stability"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      }
+    ],
+    "PHD": [
+      {
+        "id": "Costeux2013_PHD_Q001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "COMPARATIVE",
+        "question": "How does the relationship between CO2 solubility and cell density in SAN-acrylic blends compare to the trends observed in previous studies on acrylic polymers?",
+        "expected_answer": "Contrary to previous studies on acrylic polymers, which showed that increased CO2 solubility leads to smaller cells and higher nucleation rates, the SAN-acrylic blends showed that blends with lower CO2 solubility yielded higher cell density nanofoams.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PHD_Q002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of adding a low level (10 wt%) of a miscible polymer like MMA-EA to SAN28 on the resulting foam's cell density compared to pure SAN28?",
+        "expected_answer": "The addition of 10 wt% MMA-EA increases the cell density by two orders of magnitude compared to pure SAN28 foam, while maintaining the same porosity.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "SAN28"
+          },
+          {
+            "role": "individual",
+            "term": "MMA-EA9"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PHD_Q003",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "GAP_OR_LIMITATION",
+        "question": "What limitation does the paper acknowledge regarding the use of high-temperature viscosity measurements to represent the behavior of polymer/CO2 mixtures during foaming?",
+        "expected_answer": "The authors acknowledge that high temperature viscosity measurements are not a direct representation of the low temperature viscosity of polymer/CO2 mixtures.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "viscosity"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PHD_Q004",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "MOTIVATION",
+        "question": "Why was a 'postfoaming' (PF) annealing step necessary in the two-step batch foaming process?",
+        "expected_answer": "Postfoaming was necessary to avoid uncontrolled changes in cell dimensions and fracturing of the foam samples, as high residual levels of CO2 trapped at high pressure cause high internal stresses and plasticize the polymer matrix, affecting stability.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "foam stability"
+          },
+          {
+            "role": "individual",
+            "term": "two-step batch foaming process"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PHD_Q005",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "CAUSAL",
+        "question": "How does the miscibility of the blend (e.g., SAN28/MMA-EA9 vs SAN28/PEMA) influence the cell density of the resulting nanofoams under standard conditions?",
+        "expected_answer": "More compatible (miscible) blends enhance cell nucleation; specifically, the miscible SAN28/MMA-EA9 blend produced a higher cell density than the marginally miscible SAN28/PEMA blend, despite MMA-EA9 having lower CO2 affinity than PEMA.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "miscibility"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PHD_GAP001",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How does the cell size and cell size distribution of foams produced from styrenic-acrylic blends compare to those produced from the individual polymers?",
+        "expected_answer": "The addition of poly(ethyl methacrylate) or poly(methyl methacrylate-co-ethyl acrylate) to styrene-acrylonitrile copolymers results in foams with smaller cell size and a narrower cell size distribution compared to the individual polymers.",
+        "source_section": "Abstract",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "property",
+            "term": "cell size distribution"
+          },
+          {
+            "role": "class",
+            "term": "styrenic-acrylic polymer blends"
+          }
+        ]
+      },
+      {
+        "id": "Costeux2013_PHD_GAP002",
+        "persona": "Doctoral Researcher / PhD Student",
+        "persona_code": "PHD",
+        "bloom_level": "evaluation",
+        "archetype": "GAP_OR_LIMITATION",
+        "question": "What limitation is identified regarding the use of PMMA in blends with SAN for the production of nanofoams?",
+        "expected_answer": "PMMA has poor thermal stability, which can lead to partial degradation during blend processing and potentially affect the foaming performance.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PMMA"
+          },
+          {
+            "role": "property",
+            "term": "thermal stability"
+          }
+        ]
+      }
+    ]
+  },
+  "final_questions": [
+    {
+      "id": "Costeux2013_SYNTH_Q001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "By which process were the nanocellular foams from styrenic-acrylic polymer blends produced?",
+      "expected_answer": "A two-step batch foaming process using carbon dioxide as the blowing agent.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "nanocellular foams"
+        },
+        {
+          "role": "property",
+          "term": "producedBy"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_SYNTH_Q002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "Under what reference conditions (temperature, pressure, and time) was the initial foaming step carried out?",
+      "expected_answer": "Tsoak = 30 °C, Psoak = 33 MPa, and tsoak = 10 h.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "Tsoak"
+        },
+        {
+          "role": "property",
+          "term": "Psoak"
+        },
+        {
+          "role": "property",
+          "term": "tsoak"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_SYNTH_Q003",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CAUSAL",
+      "question": "How does the ethyl acrylate (EA) content in the MMA-co-EA copolymer affect the cell density of the resulting SAN28/MMA-co-EA (50/50 wt%) nanofoams?",
+      "expected_answer": "Increasing EA content from 0.4% (MMA-EA1) to 5.6% (MMA-EA6) increases cell density (from 3 x 10^14 to 4.0 x 10^15 cm^-3), but further increasing EA content to 12% (MMA-EA12) leads to a decrease in cell density (to 6.9 x 10^14 cm^-3).",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "MMA-co-EA"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "The validator flagged this as borderline, but the specific data points and trends regarding EA content and cell density are explicitly detailed in the text and Table VII, making the question answerable from the evidence."
+    },
+    {
+      "id": "Costeux2013_SYNTH_Q004",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was a postfoaming (PF) annealing step performed after the initial rapid depressurization?",
+      "expected_answer": "To avoid uncontrolled changes in cell dimensions and fracturing of the foam samples caused by high residual levels of CO2 trapped at high pressure, which plasticize the polymer matrix and create high internal stresses.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "postfoaming"
+        },
+        {
+          "role": "property",
+          "term": "foam stability"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_SYNTH_Q005",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "CAUSAL",
+      "question": "What is the relationship between CO2 solubility in the polymer blends and the resulting cell density of the nanofoams?",
+      "expected_answer": "Blends with lower CO2 solubility gave higher cell density nanofoams, suggesting that maximizing CO2 solubility does not provide maximum nucleation density.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_SYNTH_GAP001",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "Which polymerization method was used to synthesize the styrene-acrylonitrile (SAN) copolymers with varying acrylonitrile compositions?",
+      "expected_answer": "Conventional free radical polymerization using continuous addition of the monomer.",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "free radical polymerization"
+        },
+        {
+          "role": "individual",
+          "term": "styrene-acrylonitrile"
+        }
+      ],
+      "refiner_action": "unrepairable",
+      "revise_reason": "The evidence passages do not contain information regarding the synthesis method (e.g., free radical, RAFT, ATRP) of the base SAN polymers, only their blending and foaming behavior.",
+      "unrepairable": true
+    },
+    {
+      "id": "Costeux2013_SYNTH_GAP002",
+      "persona": "Polymer / Synthesis Chemist",
+      "persona_code": "SYNTH",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why were copolymers containing ethyl acrylate (EA) used in the blends instead of poly(methyl methacrylate) (PMMA) homopolymer?",
+      "expected_answer": "PMMA has poor thermal stability and may undergo partial degradation during blend processing, whereas copolymers with ethyl acrylate are more thermally stable.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "poly(methyl methacrylate)"
+        },
+        {
+          "role": "individual",
+          "term": "ethyl acrylate"
+        },
+        {
+          "role": "property",
+          "term": "thermal stability"
+        }
+      ],
+      "refiner_action": "unrepairable",
+      "revise_reason": "The evidence passages do not contain the specific rationale or comparative motivation for choosing EA copolymers over PMMA homopolymer beyond the observation of increased CO2 solubility.",
+      "unrepairable": true
+    },
+    {
+      "id": "Costeux2013_CHAR_Q001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which analytical technique was used to acquire high resolution images of the foam morphology?",
+      "expected_answer": "Scanning electron microscope (SEM, FEI Nova NanoSEM 600) equipped with a secondary electron detector in immersion mode.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "morphology"
+        },
+        {
+          "role": "class",
+          "term": "Scanning Electron Microscopy"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_CHAR_Q002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the accelerating voltage used for the Transmission electron microscopy (TEM) characterization of the SAN28/PEMA blends?",
+      "expected_answer": "120 kV",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "accelerating voltage"
+        },
+        {
+          "role": "class",
+          "term": "Transmission Electron Microscopy"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The evidence passages explicitly state the accelerating voltage for TEM is 120 kV, correcting the validator's false negative."
+    },
+    {
+      "id": "Costeux2013_CHAR_Q003",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "COMPARATIVE",
+      "question": "How does the foam porosity of pure SAN foams compare to that of acrylic polymers?",
+      "expected_answer": "The foam porosity for pure SAN foams is relatively low, not exceeding 70%, while it is close to 80% for the acrylic polymers.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "porosity"
+        },
+        {
+          "role": "individual",
+          "term": "SAN"
+        },
+        {
+          "role": "individual",
+          "term": "acrylic polymers"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_CHAR_Q004",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which instrument was used to measure the CO2 solubility of the polymers at pressures below 14 MPa?",
+      "expected_answer": "A magnetic suspension balance (MSB, Rubotherm, Germany).",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        },
+        {
+          "role": "class",
+          "term": "Magnetic Suspension Balance"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_CHAR_Q005",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What energy range was used for the x-ray absorption spectra collection during Scanning transmission x-ray microscopy (STXM)?",
+      "expected_answer": "280–320 eV",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "energy range"
+        },
+        {
+          "role": "class",
+          "term": "Scanning Transmission X-ray Microscopy"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+    },
+    {
+      "id": "Costeux2013_CHAR_GAP001",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which instruments were used to determine the density of the polymers and the resulting nanofoams?",
+      "expected_answer": "A density determination kit (Sartorius YDK 01) and a microbalance (Mettler AE 160).",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "density"
+        },
+        {
+          "role": "individual",
+          "term": "microbalance"
+        },
+        {
+          "role": "individual",
+          "term": "density determination kit"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_CHAR_GAP002",
+      "persona": "Materials Characterisation Scientist",
+      "persona_code": "CHAR",
+      "bloom_level": "comprehension",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What was the reported glass transition temperature (Tg) for the acrylic polymer PEMA?",
+      "expected_answer": "Tg = 76.6 °C",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PEMA"
+        },
+        {
+          "role": "property",
+          "term": "glass transition temperature"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PROC_Q001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What were the reference conditions for the initial foaming and postfoaming steps used to produce the nanocellular foams?",
+      "expected_answer": "The initial foaming conditions were a soaking temperature (Tsoak) of 30 °C, a soaking pressure (Psoak) of 33 MPa, and a soaking time (tsoak) of 10 h; the postfoaming (PF) step was performed at 60 °C for 3 min.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "soaking temperature"
+        },
+        {
+          "role": "property",
+          "term": "soaking pressure"
+        },
+        {
+          "role": "property",
+          "term": "postfoaming temperature"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PROC_Q002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "MOTIVATION",
+      "question": "Why was a postfoaming annealing step necessary following the initial rapid depressurization?",
+      "expected_answer": "Postfoaming was necessary to avoid uncontrolled changes in cell dimensions and fracturing of the foam samples, as high residual levels of CO2 trapped at high pressure cause high internal stresses and plasticize the polymer matrix, affecting foam stability.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foam stability"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PROC_Q003",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "How does the CO2 solubility of the polymer blend affect the resulting cell density of the nanofoams?",
+      "expected_answer": "Blends with lower CO2 solubility gave higher cell density nanofoams.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PROC_Q004",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "COMPARATIVE",
+      "question": "How does the cell density of the SAN28/MMA-EA9 (90/10 wt%) blend compare to that of pure SAN28 when produced at the same porosity?",
+      "expected_answer": "The addition of 10 wt% of acrylic polymer to SAN28 produced 100 times more cells than SAN28 alone at the same porosity.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SAN28"
+        },
+        {
+          "role": "individual",
+          "term": "SAN28/MMA-EA9 blend"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PROC_Q005",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CAUSAL",
+      "question": "What effect does increasing the ethyl acrylate (EA) content in MMA-co-EA resins have on the cell size and density of SAN28/MMA-co-EA (50/50 wt%) blends?",
+      "expected_answer": "Increasing EA content initially leads to small and very uniform cell sizes (e.g., MMA-EA6), but further increasing the EA content (and thus the affinity for CO2) leads to cell size enlargement and lower cell density (e.g., MMA-EA12).",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "EA content"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PROC_GAP001",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "question": "What were the reference conditions for the initial foaming and postfoaming steps used to produce the nanocellular foams?",
+      "expected_answer": "The reference conditions for initial foaming were a soaking temperature (Tsoak) of 30 °C, a soaking pressure (Psoak) of 33 MPa, and a soaking time (tsoak) of 10 h; the postfoaming (PF) step was performed at 60 °C for 3 min.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "soaking temperature"
+        },
+        {
+          "role": "property",
+          "term": "soaking pressure"
+        },
+        {
+          "role": "property",
+          "term": "postfoaming temperature"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PROC_GAP002",
+      "persona": "Processing Engineer",
+      "persona_code": "PROC",
+      "bloom_level": "application",
+      "archetype": "MOTIVATION",
+      "question": "Why were copolymers with ethyl acrylate (EA) selected for the blend study instead of poly(methyl methacrylate) (PMMA) homopolymer?",
+      "expected_answer": "PMMA has poor thermal stability and may undergo partial degradation during blend processing, which could affect foaming performance; copolymers with ethyl acrylate (EA) are more thermally stable and provide an additional degree of freedom to improve nanofoam structure due to the strong affinity of EA for CO2.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PMMA"
+        },
+        {
+          "role": "individual",
+          "term": "poly(methyl methacrylate-co-ethyl acrylate)"
+        },
+        {
+          "role": "property",
+          "term": "thermal stability"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_COMP_Q001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "Which equation of state (EOS) was used to fit the apparent mass and polymer-CO2 mixture density to determine CO2 solubility?",
+      "expected_answer": "The perturbed chain statistical associating fluid theory equation of state (PC-SAFT EOS).",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "equation of state"
+        },
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        }
+      ],
+      "refiner_action": "unrepairable",
+      "revise_reason": "The provided evidence passages do not mention any specific equation of state (EOS) used for determining CO2 solubility, making the question unanswerable from the text.",
+      "unrepairable": true
+    },
+    {
+      "id": "Costeux2013_COMP_Q002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the CO2 solubility of the polymer blends affect the resulting cell density of the nanofoams?",
+      "expected_answer": "Blends with lower CO2 solubility gave higher cell density nanofoams.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+    },
+    {
+      "id": "Costeux2013_COMP_Q003",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "COMPARATIVE",
+      "question": "How does the zero-shear viscosity of the MMA-EA9/SAN28 50/50 blend compare to the viscosity predicted by the logarithmic mixing rule?",
+      "expected_answer": "The viscosity of the blend predicted using the logarithmic mixing rule is approximately close to the experimental blend data.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "zero-shear viscosity"
+        },
+        {
+          "role": "class",
+          "term": "logarithmic mixing rule"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+    },
+    {
+      "id": "Costeux2013_COMP_Q004",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENUMERATION",
+      "question": "What quantitative metrics were used to characterize the cell structure and polydispersity of the foams?",
+      "expected_answer": "Average cell size (f), volume average size (fv), and the ratio fv/f as a measure of polydispersity.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "average cell size"
+        },
+        {
+          "role": "property",
+          "term": "polydispersity"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+    },
+    {
+      "id": "Costeux2013_COMP_Q005",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "What is the effect of increasing the ethyl acrylate (EA) content in MMA-co-EA resins on the cell density of SAN28/MMA-co-EA blends?",
+      "expected_answer": "Increasing EA content initially improves cell density (e.g., MMA-EA6), but further increasing the EA content (and thus the affinity for CO2) leads to cell size enlargement and lower cell density.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "EA content"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ],
+      "refiner_action": "unrepairable",
+      "revise_reason": "The provided evidence passages do not contain data or discussion regarding the specific effect of varying ethyl acrylate content within MMA-co-EA resins on cell density, only comparing different base polymers.",
+      "unrepairable": true
+    },
+    {
+      "id": "Costeux2013_COMP_GAP001",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "CAUSAL",
+      "question": "How does the composition of SAN28/MMA-EA9 blends, specifically the weight percentage of SAN28, affect the resulting cell density and average cell size of the nanofoams?",
+      "expected_answer": "As the SAN28 content increases from 20 wt% to 80 wt%, the average cell size generally decreases from 114 nm to 86 nm, and the cell density generally increases from 1.8 x 10^15 cm^-3 to 4.5 x 10^15 cm^-3; however, at 90 wt% SAN28, the cell size increases significantly to 210 nm and cell density drops to 5.0 x 10^14 cm^-3.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "cell density"
+        },
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "individual",
+          "term": "SAN28/MMA-EA9"
+        }
+      ],
+      "refiner_action": "unrepairable",
+      "revise_reason": "The provided evidence passages do not contain specific quantitative data on cell density and size for blends with varying SAN28 weight percentages (e.g., 20%, 80%, 90%), making the question unanswerable.",
+      "unrepairable": true
+    },
+    {
+      "id": "Costeux2013_COMP_GAP002",
+      "persona": "Computational / Data Scientist",
+      "persona_code": "COMP",
+      "bloom_level": "analysis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What computational equation of state (EOS) was used to fit the apparent mass and polymer-CO2 mixture density to determine CO2 solubility?",
+      "expected_answer": "The perturbed chain statistical associating fluid theory equation of state (PC-SAFT EOS) was used.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "equation of state"
+        },
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        }
+      ],
+      "refiner_action": "unrepairable",
+      "revise_reason": "The provided evidence passages do not mention any computational equation of state (EOS) used to determine CO2 solubility, making the question unanswerable from the text.",
+      "unrepairable": true
+    },
+    {
+      "id": "Costeux2013_ONTO_Q001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between nanocellular foams and the two-step batch foaming process?",
+      "expected_answer": "(nanocellular foams, producedBy, two-step batch foaming process)",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Material"
+        },
+        {
+          "role": "property",
+          "term": "producedBy"
+        },
+        {
+          "role": "class",
+          "term": "Process"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_ONTO_Q002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What ontology class should the term 'cell density' be assigned to, and what data property would capture its numeric value?",
+      "expected_answer": "It should be assigned to the class Property, and a data property such as hasCellDensity would capture its numeric value.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Property"
+        },
+        {
+          "role": "property",
+          "term": "hasCellDensity"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_ONTO_Q003",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENUMERATION",
+      "question": "Which Material entities are identified as base polymers used for foaming in this study?",
+      "expected_answer": "SAN (including SAN8, SAN16L, SAN16H, SAN28, SAN32), MMA-EA9, and PEMA.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Material"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_ONTO_Q004",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "How should the relationship between nanocellular foams and carbon dioxide be represented as a triple to indicate the role of the gas?",
+      "expected_answer": "(nanocellular foams, usesMethod, carbon dioxide) or (two-step batch foaming process, usesBlowingAgent, carbon dioxide)",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "usesMethod"
+        },
+        {
+          "role": "individual",
+          "term": "carbon dioxide"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_ONTO_Q005",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What class and property should be used to represent the 'CO2 uptake' of a polymer material?",
+      "expected_answer": "The class should be Property, and the property should be a data property (e.g., hasCO2Uptake) linked to the Material class.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Property"
+        },
+        {
+          "role": "property",
+          "term": "hasCO2Uptake"
+        },
+        {
+          "role": "class",
+          "term": "Material"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_ONTO_GAP001",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which instruments and methods should be linked to the measurement of foam porosity in the knowledge graph?",
+      "expected_answer": "The measurement of porosity is linked to the buoyancy method, using a density determination kit (Sartorius YDK 01) and a microbalance (Mettler AE 160).",
+      "source_section": "Experimental",
+      "ontology_hints": [
+        {
+          "role": "class",
+          "term": "Instrument"
+        },
+        {
+          "role": "property",
+          "term": "characterisedBy"
+        },
+        {
+          "role": "class",
+          "term": "Method"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_ONTO_GAP002",
+      "persona": "Ontology Engineer",
+      "persona_code": "ONTO",
+      "bloom_level": "synthesis",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "question": "Which triple represents the relationship between the 'two-step batch foaming process' and the blowing agent used to produce nanocellular foams?",
+      "expected_answer": "(two-step batch foaming process, usesMethod, carbon dioxide)",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "two-step batch foaming process"
+        },
+        {
+          "role": "property",
+          "term": "usesMethod"
+        },
+        {
+          "role": "individual",
+          "term": "carbon dioxide"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_STU_Q001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "question": "By which process were the nanocellular foams produced in this study?",
+      "expected_answer": "The nanocellular foams were produced by a two-step batch foaming process using carbon dioxide as the blowing agent.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "nanocellular foams"
+        },
+        {
+          "role": "individual",
+          "term": "two-step batch foaming process"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_STU_Q002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the typical range of porosity for the nanocellular foams reported in the conclusions?",
+      "expected_answer": "The porosities are in the range of 60–70%.",
+      "source_section": "Conclusions",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "porosity"
+        },
+        {
+          "role": "individual",
+          "term": "nanocellular foams"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_STU_Q003",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why was a 'postfoaming' (PF) process necessary after the initial rapid depressurization in the batch foaming experiments?",
+      "expected_answer": "Postfoaming was necessary to avoid uncontrolled changes in cell dimensions and fracturing of the foam samples, as high residual levels of CO2 trapped at high pressure cause high internal stresses and plasticize the polymer matrix.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "postfoaming"
+        },
+        {
+          "role": "property",
+          "term": "foam stability"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question and answer are explicitly supported by the text in the 'Two-step foaming process' section of the evidence, which details the necessity of postfoaming to prevent fracturing and uncontrolled cell changes."
+    },
+    {
+      "id": "Costeux2013_STU_Q004",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which microscopy method was used to determine polymer composition throughout the foam specimen by measuring the intensity of peaks corresponding to aromatic C-C bonds of SAN and C-O bonds of acrylic polymers?",
+      "expected_answer": "Scanning transmission x-ray microscopy (STXM) was used to determine polymer composition by measuring the intensity of peaks corresponding to aromatic C-C bonds of SAN and C-O bonds of acrylic polymers.",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "Scanning transmission x-ray microscopy (STXM)"
+        },
+        {
+          "role": "property",
+          "term": "polymer composition"
+        }
+      ],
+      "refiner_action": "revise",
+      "revise_reason": "The question is revised to explicitly include the specific bond types mentioned in the evidence passage, ensuring the answer is directly retrievable from the text describing the STXM method."
+    },
+    {
+      "id": "Costeux2013_STU_Q005",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "ENTITY_LOOKUP",
+      "question": "What is the expected application for nanocellular foams mentioned in the study?",
+      "expected_answer": "A major application expected from nanocellular foams is thermal insulation.",
+      "source_section": "Body",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "nanocellular foams"
+        },
+        {
+          "role": "individual",
+          "term": "thermal insulation"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_STU_GAP001",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "recall",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "question": "Which tools were used to determine the density of the polymer and the resulting nanofoam?",
+      "expected_answer": "The density was determined using a density determination kit (Sartorius YDK 01) and a microbalance (Mettler AE 160).",
+      "source_section": "Experimental Section",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "density"
+        },
+        {
+          "role": "individual",
+          "term": "microbalance"
+        },
+        {
+          "role": "individual",
+          "term": "density determination kit"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_STU_GAP002",
+      "persona": "Student",
+      "persona_code": "STU",
+      "bloom_level": "comprehension",
+      "archetype": "MOTIVATION",
+      "question": "Why were copolymers with ethyl acrylate (EA) used in the blend study instead of poly(methyl methacrylate) (PMMA) homopolymer?",
+      "expected_answer": "PMMA has poor thermal stability and can undergo partial degradation during blend processing, which could affect foaming performance; copolymers with ethyl acrylate are more thermally stable.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PMMA"
+        },
+        {
+          "role": "individual",
+          "term": "poly(methyl methacrylate-co-ethyl acrylate)"
+        },
+        {
+          "role": "property",
+          "term": "thermal stability"
+        }
+      ],
+      "refiner_action": "keep",
+      "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+    },
+    {
+      "id": "Costeux2013_PHD_Q001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "COMPARATIVE",
+      "question": "How does the relationship between CO2 solubility and cell density in SAN-acrylic blends compare to the trends observed in previous studies on acrylic polymers?",
+      "expected_answer": "Contrary to previous studies on acrylic polymers, which showed that increased CO2 solubility leads to smaller cells and higher nucleation rates, the SAN-acrylic blends showed that blends with lower CO2 solubility yielded higher cell density nanofoams.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "CO2 solubility"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PHD_Q002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "CAUSAL",
+      "question": "What is the effect of adding a low level (10 wt%) of a miscible polymer like MMA-EA to SAN28 on the resulting foam's cell density compared to pure SAN28?",
+      "expected_answer": "The addition of 10 wt% MMA-EA increases the cell density by two orders of magnitude compared to pure SAN28 foam, while maintaining the same porosity.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "SAN28"
+        },
+        {
+          "role": "individual",
+          "term": "MMA-EA9"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PHD_Q003",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "GAP_OR_LIMITATION",
+      "question": "What limitation does the paper acknowledge regarding the use of high-temperature viscosity measurements to represent the behavior of polymer/CO2 mixtures during foaming?",
+      "expected_answer": "The authors acknowledge that high temperature viscosity measurements are not a direct representation of the low temperature viscosity of polymer/CO2 mixtures.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "viscosity"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PHD_Q004",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "MOTIVATION",
+      "question": "Why was a 'postfoaming' (PF) annealing step necessary in the two-step batch foaming process?",
+      "expected_answer": "Postfoaming was necessary to avoid uncontrolled changes in cell dimensions and fracturing of the foam samples, as high residual levels of CO2 trapped at high pressure cause high internal stresses and plasticize the polymer matrix, affecting stability.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "foam stability"
+        },
+        {
+          "role": "individual",
+          "term": "two-step batch foaming process"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PHD_Q005",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "CAUSAL",
+      "question": "How does the miscibility of the blend (e.g., SAN28/MMA-EA9 vs SAN28/PEMA) influence the cell density of the resulting nanofoams under standard conditions?",
+      "expected_answer": "More compatible (miscible) blends enhance cell nucleation; specifically, the miscible SAN28/MMA-EA9 blend produced a higher cell density than the marginally miscible SAN28/PEMA blend, despite MMA-EA9 having lower CO2 affinity than PEMA.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "miscibility"
+        },
+        {
+          "role": "property",
+          "term": "cell density"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PHD_GAP001",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "analysis",
+      "archetype": "COMPARATIVE",
+      "question": "How does the cell size and cell size distribution of foams produced from styrenic-acrylic blends compare to those produced from the individual polymers?",
+      "expected_answer": "The addition of poly(ethyl methacrylate) or poly(methyl methacrylate-co-ethyl acrylate) to styrene-acrylonitrile copolymers results in foams with smaller cell size and a narrower cell size distribution compared to the individual polymers.",
+      "source_section": "Abstract",
+      "ontology_hints": [
+        {
+          "role": "property",
+          "term": "cell size"
+        },
+        {
+          "role": "property",
+          "term": "cell size distribution"
+        },
+        {
+          "role": "class",
+          "term": "styrenic-acrylic polymer blends"
+        }
+      ]
+    },
+    {
+      "id": "Costeux2013_PHD_GAP002",
+      "persona": "Doctoral Researcher / PhD Student",
+      "persona_code": "PHD",
+      "bloom_level": "evaluation",
+      "archetype": "GAP_OR_LIMITATION",
+      "question": "What limitation is identified regarding the use of PMMA in blends with SAN for the production of nanofoams?",
+      "expected_answer": "PMMA has poor thermal stability, which can lead to partial degradation during blend processing and potentially affect the foaming performance.",
+      "source_section": "Results and Discussion",
+      "ontology_hints": [
+        {
+          "role": "individual",
+          "term": "PMMA"
+        },
+        {
+          "role": "property",
+          "term": "thermal stability"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "quality_score": 0.89,
+    "pass_score_threshold": 0.75,
+    "active_checks": [
+      "persona_coverage",
+      "question_count",
+      "answerability",
+      "specificity",
+      "section_validity",
+      "concept_usage",
+      "redundancy"
+    ],
+    "issues": [
+      "[SYNTH] Costeux2013_SYNTH_Q002: question does not reference any extracted concept (possible hallucination)",
+      "Near-duplicate questions: Costeux2013_SYNTH_Q004 ~ Costeux2013_PROC_Q002 (cos=0.96)",
+      "Near-duplicate questions: Costeux2013_SYNTH_Q005 ~ Costeux2013_PROC_Q003 (cos=0.98)",
+      "Near-duplicate questions: Costeux2013_SYNTH_Q005 ~ Costeux2013_COMP_Q002 (cos=0.98)",
+      "Near-duplicate questions: Costeux2013_SYNTH_GAP002 ~ Costeux2013_PROC_GAP002 (cos=0.96)",
+      "Near-duplicate questions: Costeux2013_SYNTH_GAP002 ~ Costeux2013_STU_GAP002 (cos=0.97)",
+      "Near-duplicate questions: Costeux2013_CHAR_GAP001 ~ Costeux2013_STU_GAP001 (cos=0.95)",
+      "Near-duplicate questions: Costeux2013_PROC_Q001 ~ Costeux2013_PROC_GAP001 (cos=1.00)",
+      "Near-duplicate questions: Costeux2013_PROC_Q003 ~ Costeux2013_COMP_Q002 (cos=1.00)",
+      "Near-duplicate questions: Costeux2013_PROC_Q005 ~ Costeux2013_COMP_Q005 (cos=0.99)",
+      "Near-duplicate questions: Costeux2013_PROC_GAP002 ~ Costeux2013_STU_GAP002 (cos=0.99)",
+      "[SYNTH] Costeux2013_SYNTH_Q003: borderline (score=0.50) - The effect of EA content is discussed but not fully detailed in the passages.",
+      "[SYNTH] Costeux2013_SYNTH_GAP001: fail (score=0.00) - No information on polymerization methods is provided in the passages.",
+      "[SYNTH] Costeux2013_SYNTH_GAP002: fail (score=0.00) - The reasons for using EA copolymers are not discussed in the passages.",
+      "[CHAR] Costeux2013_CHAR_Q002: fail (score=0.00) - The accelerating voltage for TEM is not mentioned in the evidence passages.",
+      "[CHAR] Costeux2013_CHAR_Q005: fail (score=0.00) - The energy range for STXM is not mentioned in the evidence passages.",
+      "[COMP] Costeux2013_COMP_Q001: fail (score=0.00) - The passages do not mention any equation of state (EOS) used to determine CO2 solubility.",
+      "[COMP] Costeux2013_COMP_Q002: borderline (score=0.50) - The answer can be derived from the passages with a short inference, but it is not explicitly stated.",
+      "[COMP] Costeux2013_COMP_Q003: fail (score=0.00) - The passages do not mention any logarithmic mixing rule or viscosity comparison for the blend.",
+      "[COMP] Costeux2013_COMP_Q004: borderline (score=0.50) - The answer can be derived from the passages with a short inference, but it is not explicitly stated.",
+      "[COMP] Costeux2013_COMP_Q005: fail (score=0.00) - The passages do not mention any effect of increasing EA content on cell density.",
+      "[COMP] Costeux2013_COMP_GAP001: fail (score=0.00) - The passages do not provide data on how the composition affects cell density and size.",
+      "[COMP] Costeux2013_COMP_GAP002: fail (score=0.00) - The passages do not mention any computational equation of state (EOS) used to determine CO2 solubility.",
+      "[STU] Costeux2013_STU_Q003: borderline (score=0.50) - The necessity of postfoaming is inferred from passage 3 but not explicitly stated.",
+      "[STU] Costeux2013_STU_Q004: borderline (score=0.50) - STXM is mentioned in passage 4, but its use for polymer composition isn't detailed.",
+      "[STU] Costeux2013_STU_GAP002: borderline (score=0.50) - Thermal stability of PMMA isn't discussed, so this answer can't be derived from the passages."
+    ],
+    "issues_by_persona": {
+      "SYNTH": [
+        "[SYNTH] Costeux2013_SYNTH_Q002: question does not reference any extracted concept (possible hallucination)",
+        "[SYNTH] Costeux2013_SYNTH_Q003: borderline (score=0.50) - The effect of EA content is discussed but not fully detailed in the passages.",
+        "[SYNTH] Costeux2013_SYNTH_GAP001: fail (score=0.00) - No information on polymerization methods is provided in the passages.",
+        "[SYNTH] Costeux2013_SYNTH_GAP002: fail (score=0.00) - The reasons for using EA copolymers are not discussed in the passages."
+      ],
+      "CHAR": [
+        "[CHAR] Costeux2013_CHAR_Q002: fail (score=0.00) - The accelerating voltage for TEM is not mentioned in the evidence passages.",
+        "[CHAR] Costeux2013_CHAR_Q005: fail (score=0.00) - The energy range for STXM is not mentioned in the evidence passages."
+      ],
+      "COMP": [
+        "[COMP] Costeux2013_COMP_Q001: fail (score=0.00) - The passages do not mention any equation of state (EOS) used to determine CO2 solubility.",
+        "[COMP] Costeux2013_COMP_Q002: borderline (score=0.50) - The answer can be derived from the passages with a short inference, but it is not explicitly stated.",
+        "[COMP] Costeux2013_COMP_Q003: fail (score=0.00) - The passages do not mention any logarithmic mixing rule or viscosity comparison for the blend.",
+        "[COMP] Costeux2013_COMP_Q004: borderline (score=0.50) - The answer can be derived from the passages with a short inference, but it is not explicitly stated.",
+        "[COMP] Costeux2013_COMP_Q005: fail (score=0.00) - The passages do not mention any effect of increasing EA content on cell density.",
+        "[COMP] Costeux2013_COMP_GAP001: fail (score=0.00) - The passages do not provide data on how the composition affects cell density and size.",
+        "[COMP] Costeux2013_COMP_GAP002: fail (score=0.00) - The passages do not mention any computational equation of state (EOS) used to determine CO2 solubility."
+      ],
+      "STU": [
+        "[STU] Costeux2013_STU_Q003: borderline (score=0.50) - The necessity of postfoaming is inferred from passage 3 but not explicitly stated.",
+        "[STU] Costeux2013_STU_Q004: borderline (score=0.50) - STXM is mentioned in passage 4, but its use for polymer composition isn't detailed.",
+        "[STU] Costeux2013_STU_GAP002: borderline (score=0.50) - Thermal stability of PMMA isn't discussed, so this answer can't be derived from the passages."
+      ]
+    },
+    "per_question": {
+      "Costeux2013_SYNTH_Q001": {
+        "id": "Costeux2013_SYNTH_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The process is explicitly mentioned in passage 1.",
+          "The question is specific about the materials and process."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24831
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_SYNTH_Q002": {
+        "id": "Costeux2013_SYNTH_Q002",
+        "score": 0.75,
+        "reasons": [
+          "Reference conditions are clearly stated in passage 2.",
+          "The question specifies the exact parameters needed."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24831
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_SYNTH_Q003": {
+        "id": "Costeux2013_SYNTH_Q003",
+        "score": 0.5,
+        "reasons": [
+          "The effect of EA content is discussed but not fully detailed in the passages.",
+          "The question uses specific terms but requires some inference."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24831
+        },
+        "verdict": "borderline"
+      },
+      "Costeux2013_SYNTH_Q004": {
+        "id": "Costeux2013_SYNTH_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The purpose of PF annealing is explained in passage 4.",
+          "The question is clear and specific about the step."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24831
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_SYNTH_Q005": {
+        "id": "Costeux2013_SYNTH_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The relationship between CO2 solubility and cell density is explicitly discussed in passage 4.",
+          "The question is specific about the factors involved."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24831
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_SYNTH_GAP001": {
+        "id": "Costeux2013_SYNTH_GAP001",
+        "score": 0.0,
+        "reasons": [
+          "No information on polymerization methods is provided in the passages.",
+          "The answer requires outside knowledge."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24831
+        },
+        "verdict": "fail"
+      },
+      "Costeux2013_SYNTH_GAP002": {
+        "id": "Costeux2013_SYNTH_GAP002",
+        "score": 0.0,
+        "reasons": [
+          "The reasons for using EA copolymers are not discussed in the passages.",
+          "The answer cannot be derived from the evidence provided."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24831
+        },
+        "verdict": "fail"
+      },
+      "Costeux2013_CHAR_Q001": {
+        "id": "Costeux2013_CHAR_Q001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21916
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_CHAR_Q002": {
+        "id": "Costeux2013_CHAR_Q002",
+        "score": 0.0,
+        "reasons": [
+          "The accelerating voltage for TEM is not mentioned in the evidence passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21916
+        },
+        "verdict": "fail"
+      },
+      "Costeux2013_CHAR_Q003": {
+        "id": "Costeux2013_CHAR_Q003",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21916
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_CHAR_Q004": {
+        "id": "Costeux2013_CHAR_Q004",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21916
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_CHAR_Q005": {
+        "id": "Costeux2013_CHAR_Q005",
+        "score": 0.0,
+        "reasons": [
+          "The energy range for STXM is not mentioned in the evidence passages."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21916
+        },
+        "verdict": "fail"
+      },
+      "Costeux2013_CHAR_GAP001": {
+        "id": "Costeux2013_CHAR_GAP001",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21916
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_CHAR_GAP002": {
+        "id": "Costeux2013_CHAR_GAP002",
+        "score": 1.0,
+        "reasons": [],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21916
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PROC_Q001": {
+        "id": "Costeux2013_PROC_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The question asks about specific conditions, which are explicitly stated in the passages (passage 3).",
+          "The answer is concrete and useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24820
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PROC_Q002": {
+        "id": "Costeux2013_PROC_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The question asks about the necessity of a postfoaming step, which is explained in the passages (passage 4).",
+          "The answer is specific and relevant."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24820
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PROC_Q003": {
+        "id": "Costeux2013_PROC_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The question asks about CO2 solubility affecting cell density, which is discussed in the passages (passage 4).",
+          "The answer is specific and useful."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24820
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PROC_Q004": {
+        "id": "Costeux2013_PROC_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The question compares cell densities of blends vs pure SAN28, which is detailed in the passages (passage 6).",
+          "The answer is specific and relevant."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24820
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PROC_Q005": {
+        "id": "Costeux2013_PROC_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The question asks about EA content effects, which are explained in the passages (passage 6).",
+          "The answer is specific and useful."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24820
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PROC_GAP001": {
+        "id": "Costeux2013_PROC_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The question asks about reference conditions, which are explicitly stated in the passages (passage 3).",
+          "The answer is concrete and useful."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24820
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PROC_GAP002": {
+        "id": "Costeux2013_PROC_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The question asks about selecting EA copolymers, which is explained in the passages (passage 6).",
+          "The answer is specific and relevant."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24820
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_COMP_Q001": {
+        "id": "Costeux2013_COMP_Q001",
+        "score": 0.0,
+        "reasons": [
+          "The passages do not mention any equation of state (EOS) used to determine CO2 solubility."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 22139
+        },
+        "verdict": "fail"
+      },
+      "Costeux2013_COMP_Q002": {
+        "id": "Costeux2013_COMP_Q002",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference, but it is not explicitly stated."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 22139
+        },
+        "verdict": "borderline"
+      },
+      "Costeux2013_COMP_Q003": {
+        "id": "Costeux2013_COMP_Q003",
+        "score": 0.0,
+        "reasons": [
+          "The passages do not mention any logarithmic mixing rule or viscosity comparison for the blend."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 22139
+        },
+        "verdict": "fail"
+      },
+      "Costeux2013_COMP_Q004": {
+        "id": "Costeux2013_COMP_Q004",
+        "score": 0.5,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference, but it is not explicitly stated."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 22139
+        },
+        "verdict": "borderline"
+      },
+      "Costeux2013_COMP_Q005": {
+        "id": "Costeux2013_COMP_Q005",
+        "score": 0.0,
+        "reasons": [
+          "The passages do not mention any effect of increasing EA content on cell density."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 22139
+        },
+        "verdict": "fail"
+      },
+      "Costeux2013_COMP_GAP001": {
+        "id": "Costeux2013_COMP_GAP001",
+        "score": 0.0,
+        "reasons": [
+          "The passages do not provide data on how the composition affects cell density and size."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 22139
+        },
+        "verdict": "fail"
+      },
+      "Costeux2013_COMP_GAP002": {
+        "id": "Costeux2013_COMP_GAP002",
+        "score": 0.0,
+        "reasons": [
+          "The passages do not mention any computational equation of state (EOS) used to determine CO2 solubility."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 22139
+        },
+        "verdict": "fail"
+      },
+      "Costeux2013_ONTO_Q001": {
+        "id": "Costeux2013_ONTO_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (Answerability: 0.5). The question is specific enough to be useful for ontology construction (Specificity: 1.0)."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24824
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_ONTO_Q002": {
+        "id": "Costeux2013_ONTO_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (Answerability: 0.5). The question is specific enough to be useful for ontology construction (Specificity: 1.0)."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24824
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_ONTO_Q003": {
+        "id": "Costeux2013_ONTO_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (Answerability: 0.5). The question is specific enough to be useful for ontology construction (Specificity: 1.0)."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24824
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_ONTO_Q004": {
+        "id": "Costeux2013_ONTO_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (Answerability: 0.5). The question is specific enough to be useful for ontology construction (Specificity: 1.0)."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24824
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_ONTO_Q005": {
+        "id": "Costeux2013_ONTO_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (Answerability: 0.5). The question is specific enough to be useful for ontology construction (Specificity: 1.0)."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24824
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_ONTO_GAP001": {
+        "id": "Costeux2013_ONTO_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (Answerability: 0.5). The question is specific enough to be useful for ontology construction (Specificity: 1.0)."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24824
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_ONTO_GAP002": {
+        "id": "Costeux2013_ONTO_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference (Answerability: 0.5). The question is specific enough to be useful for ontology construction (Specificity: 1.0)."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24824
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_STU_Q001": {
+        "id": "Costeux2013_STU_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The process is explicitly mentioned in passage 1.",
+          "The question is specific about the method and materials used."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24819
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_STU_Q002": {
+        "id": "Costeux2013_STU_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The porosity range is clearly stated in the conclusions section.",
+          "The question targets a specific value from the study."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24819
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_STU_Q003": {
+        "id": "Costeux2013_STU_Q003",
+        "score": 0.5,
+        "reasons": [
+          "The necessity of postfoaming is inferred from passage 3 but not explicitly stated.",
+          "The question uses somewhat generic terms like 'postfoaming'."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24819
+        },
+        "verdict": "borderline"
+      },
+      "Costeux2013_STU_Q004": {
+        "id": "Costeux2013_STU_Q004",
+        "score": 0.5,
+        "reasons": [
+          "STXM is mentioned in passage 4, but its use for polymer composition isn't detailed.",
+          "The question is specific about the method."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24819
+        },
+        "verdict": "borderline"
+      },
+      "Costeux2013_STU_Q005": {
+        "id": "Costeux2013_STU_Q005",
+        "score": 0.75,
+        "reasons": [
+          "Thermal insulation is explicitly mentioned in passage 1 as an application.",
+          "The question targets a specific application."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24819
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_STU_GAP001": {
+        "id": "Costeux2013_STU_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The tools are explicitly listed in passage 6.",
+          "The question is specific about the measurement methods."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24819
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_STU_GAP002": {
+        "id": "Costeux2013_STU_GAP002",
+        "score": 0.5,
+        "reasons": [
+          "Thermal stability of PMMA isn't discussed, so this answer can't be derived from the passages.",
+          "The question uses somewhat generic terms."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 7,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 24819
+        },
+        "verdict": "borderline"
+      },
+      "Costeux2013_PHD_Q001": {
+        "id": "Costeux2013_PHD_Q001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference.",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21932
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PHD_Q002": {
+        "id": "Costeux2013_PHD_Q002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference.",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21932
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PHD_Q003": {
+        "id": "Costeux2013_PHD_Q003",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference.",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21932
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PHD_Q004": {
+        "id": "Costeux2013_PHD_Q004",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference.",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21932
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PHD_Q005": {
+        "id": "Costeux2013_PHD_Q005",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference.",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21932
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PHD_GAP001": {
+        "id": "Costeux2013_PHD_GAP001",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference.",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21932
+        },
+        "verdict": "pass"
+      },
+      "Costeux2013_PHD_GAP002": {
+        "id": "Costeux2013_PHD_GAP002",
+        "score": 0.75,
+        "reasons": [
+          "The answer can be derived from the passages with a short inference.",
+          "The question is specific enough to be useful for ontology construction."
+        ],
+        "evidence_used": {
+          "n_passages_selected": 6,
+          "n_passages_in_pool": 18,
+          "evidence_chars": 21932
+        },
+        "verdict": "pass"
+      }
+    },
+    "questions_to_refine": [
+      "Costeux2013_SYNTH_Q003",
+      "Costeux2013_SYNTH_GAP001",
+      "Costeux2013_SYNTH_GAP002",
+      "Costeux2013_CHAR_Q002",
+      "Costeux2013_CHAR_Q005",
+      "Costeux2013_COMP_Q001",
+      "Costeux2013_COMP_Q002",
+      "Costeux2013_COMP_Q003",
+      "Costeux2013_COMP_Q004",
+      "Costeux2013_COMP_Q005",
+      "Costeux2013_COMP_GAP001",
+      "Costeux2013_COMP_GAP002",
+      "Costeux2013_STU_Q003",
+      "Costeux2013_STU_Q004",
+      "Costeux2013_STU_GAP002"
+    ],
+    "n_total": 49,
+    "n_pass": 34,
+    "n_borderline": 6,
+    "n_fail": 9
+  },
+  "refined_questions": {
+    "SYNTH": [
+      {
+        "id": "Costeux2013_SYNTH_Q003",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "CAUSAL",
+        "question": "How does the ethyl acrylate (EA) content in the MMA-co-EA copolymer affect the cell density of the resulting SAN28/MMA-co-EA (50/50 wt%) nanofoams?",
+        "expected_answer": "Increasing EA content from 0.4% (MMA-EA1) to 5.6% (MMA-EA6) increases cell density (from 3 x 10^14 to 4.0 x 10^15 cm^-3), but further increasing EA content to 12% (MMA-EA12) leads to a decrease in cell density (to 6.9 x 10^14 cm^-3).",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "MMA-co-EA"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "The validator flagged this as borderline, but the specific data points and trends regarding EA content and cell density are explicitly detailed in the text and Table VII, making the question answerable from the evidence."
+      },
+      {
+        "id": "Costeux2013_SYNTH_GAP001",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "PROCESS_FOR_MATERIAL",
+        "question": "Which polymerization method was used to synthesize the styrene-acrylonitrile (SAN) copolymers with varying acrylonitrile compositions?",
+        "expected_answer": "Conventional free radical polymerization using continuous addition of the monomer.",
+        "source_section": "Experimental",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "free radical polymerization"
+          },
+          {
+            "role": "individual",
+            "term": "styrene-acrylonitrile"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The evidence passages do not contain information regarding the synthesis method (e.g., free radical, RAFT, ATRP) of the base SAN polymers, only their blending and foaming behavior.",
+        "unrepairable": true
+      },
+      {
+        "id": "Costeux2013_SYNTH_GAP002",
+        "persona": "Polymer / Synthesis Chemist",
+        "persona_code": "SYNTH",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why were copolymers containing ethyl acrylate (EA) used in the blends instead of poly(methyl methacrylate) (PMMA) homopolymer?",
+        "expected_answer": "PMMA has poor thermal stability and may undergo partial degradation during blend processing, whereas copolymers with ethyl acrylate are more thermally stable.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "poly(methyl methacrylate)"
+          },
+          {
+            "role": "individual",
+            "term": "ethyl acrylate"
+          },
+          {
+            "role": "property",
+            "term": "thermal stability"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The evidence passages do not contain the specific rationale or comparative motivation for choosing EA copolymers over PMMA homopolymer beyond the observation of increased CO2 solubility.",
+        "unrepairable": true
+      }
+    ],
+    "CHAR": [
+      {
+        "id": "Costeux2013_CHAR_Q002",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What was the accelerating voltage used for the Transmission electron microscopy (TEM) characterization of the SAN28/PEMA blends?",
+        "expected_answer": "120 kV",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "accelerating voltage"
+          },
+          {
+            "role": "class",
+            "term": "Transmission Electron Microscopy"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The evidence passages explicitly state the accelerating voltage for TEM is 120 kV, correcting the validator's false negative."
+      },
+      {
+        "id": "Costeux2013_CHAR_Q005",
+        "persona": "Materials Characterisation Scientist",
+        "persona_code": "CHAR",
+        "bloom_level": "comprehension",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What energy range was used for the x-ray absorption spectra collection during Scanning transmission x-ray microscopy (STXM)?",
+        "expected_answer": "280–320 eV",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "energy range"
+          },
+          {
+            "role": "class",
+            "term": "Scanning Transmission X-ray Microscopy"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      }
+    ],
+    "COMP": [
+      {
+        "id": "Costeux2013_COMP_Q001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "Which equation of state (EOS) was used to fit the apparent mass and polymer-CO2 mixture density to determine CO2 solubility?",
+        "expected_answer": "The perturbed chain statistical associating fluid theory equation of state (PC-SAFT EOS).",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "equation of state"
+          },
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages do not mention any specific equation of state (EOS) used for determining CO2 solubility, making the question unanswerable from the text.",
+        "unrepairable": true
+      },
+      {
+        "id": "Costeux2013_COMP_Q002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the CO2 solubility of the polymer blends affect the resulting cell density of the nanofoams?",
+        "expected_answer": "Blends with lower CO2 solubility gave higher cell density nanofoams.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Costeux2013_COMP_Q003",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "COMPARATIVE",
+        "question": "How does the zero-shear viscosity of the MMA-EA9/SAN28 50/50 blend compare to the viscosity predicted by the logarithmic mixing rule?",
+        "expected_answer": "The viscosity of the blend predicted using the logarithmic mixing rule is approximately close to the experimental blend data.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "zero-shear viscosity"
+          },
+          {
+            "role": "class",
+            "term": "logarithmic mixing rule"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Costeux2013_COMP_Q004",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENUMERATION",
+        "question": "What quantitative metrics were used to characterize the cell structure and polydispersity of the foams?",
+        "expected_answer": "Average cell size (f), volume average size (fv), and the ratio fv/f as a measure of polydispersity.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "average cell size"
+          },
+          {
+            "role": "property",
+            "term": "polydispersity"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      },
+      {
+        "id": "Costeux2013_COMP_Q005",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "What is the effect of increasing the ethyl acrylate (EA) content in MMA-co-EA resins on the cell density of SAN28/MMA-co-EA blends?",
+        "expected_answer": "Increasing EA content initially improves cell density (e.g., MMA-EA6), but further increasing the EA content (and thus the affinity for CO2) leads to cell size enlargement and lower cell density.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "EA content"
+          },
+          {
+            "role": "property",
+            "term": "cell density"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages do not contain data or discussion regarding the specific effect of varying ethyl acrylate content within MMA-co-EA resins on cell density, only comparing different base polymers.",
+        "unrepairable": true
+      },
+      {
+        "id": "Costeux2013_COMP_GAP001",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "CAUSAL",
+        "question": "How does the composition of SAN28/MMA-EA9 blends, specifically the weight percentage of SAN28, affect the resulting cell density and average cell size of the nanofoams?",
+        "expected_answer": "As the SAN28 content increases from 20 wt% to 80 wt%, the average cell size generally decreases from 114 nm to 86 nm, and the cell density generally increases from 1.8 x 10^15 cm^-3 to 4.5 x 10^15 cm^-3; however, at 90 wt% SAN28, the cell size increases significantly to 210 nm and cell density drops to 5.0 x 10^14 cm^-3.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "property",
+            "term": "cell density"
+          },
+          {
+            "role": "property",
+            "term": "cell size"
+          },
+          {
+            "role": "individual",
+            "term": "SAN28/MMA-EA9"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages do not contain specific quantitative data on cell density and size for blends with varying SAN28 weight percentages (e.g., 20%, 80%, 90%), making the question unanswerable.",
+        "unrepairable": true
+      },
+      {
+        "id": "Costeux2013_COMP_GAP002",
+        "persona": "Computational / Data Scientist",
+        "persona_code": "COMP",
+        "bloom_level": "analysis",
+        "archetype": "ENTITY_LOOKUP",
+        "question": "What computational equation of state (EOS) was used to fit the apparent mass and polymer-CO2 mixture density to determine CO2 solubility?",
+        "expected_answer": "The perturbed chain statistical associating fluid theory equation of state (PC-SAFT EOS) was used.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "class",
+            "term": "equation of state"
+          },
+          {
+            "role": "property",
+            "term": "CO2 solubility"
+          }
+        ],
+        "refiner_action": "unrepairable",
+        "revise_reason": "The provided evidence passages do not mention any computational equation of state (EOS) used to determine CO2 solubility, making the question unanswerable from the text.",
+        "unrepairable": true
+      }
+    ],
+    "STU": [
+      {
+        "id": "Costeux2013_STU_Q003",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why was a 'postfoaming' (PF) process necessary after the initial rapid depressurization in the batch foaming experiments?",
+        "expected_answer": "Postfoaming was necessary to avoid uncontrolled changes in cell dimensions and fracturing of the foam samples, as high residual levels of CO2 trapped at high pressure cause high internal stresses and plasticize the polymer matrix.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "postfoaming"
+          },
+          {
+            "role": "property",
+            "term": "foam stability"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question and answer are explicitly supported by the text in the 'Two-step foaming process' section of the evidence, which details the necessity of postfoaming to prevent fracturing and uncontrolled cell changes."
+      },
+      {
+        "id": "Costeux2013_STU_Q004",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "recall",
+        "archetype": "METHOD_OF_MEASUREMENT",
+        "question": "Which microscopy method was used to determine polymer composition throughout the foam specimen by measuring the intensity of peaks corresponding to aromatic C-C bonds of SAN and C-O bonds of acrylic polymers?",
+        "expected_answer": "Scanning transmission x-ray microscopy (STXM) was used to determine polymer composition by measuring the intensity of peaks corresponding to aromatic C-C bonds of SAN and C-O bonds of acrylic polymers.",
+        "source_section": "Experimental Section",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "Scanning transmission x-ray microscopy (STXM)"
+          },
+          {
+            "role": "property",
+            "term": "polymer composition"
+          }
+        ],
+        "refiner_action": "revise",
+        "revise_reason": "The question is revised to explicitly include the specific bond types mentioned in the evidence passage, ensuring the answer is directly retrievable from the text describing the STXM method."
+      },
+      {
+        "id": "Costeux2013_STU_GAP002",
+        "persona": "Student",
+        "persona_code": "STU",
+        "bloom_level": "comprehension",
+        "archetype": "MOTIVATION",
+        "question": "Why were copolymers with ethyl acrylate (EA) used in the blend study instead of poly(methyl methacrylate) (PMMA) homopolymer?",
+        "expected_answer": "PMMA has poor thermal stability and can undergo partial degradation during blend processing, which could affect foaming performance; copolymers with ethyl acrylate are more thermally stable.",
+        "source_section": "Results and Discussion",
+        "ontology_hints": [
+          {
+            "role": "individual",
+            "term": "PMMA"
+          },
+          {
+            "role": "individual",
+            "term": "poly(methyl methacrylate-co-ethyl acrylate)"
+          },
+          {
+            "role": "property",
+            "term": "thermal stability"
+          }
+        ],
+        "refiner_action": "keep",
+        "revise_reason": "refiner returned unchanged or empty question — treated as keep"
+      }
+    ]
+  },
+  "evaluation": {
+    "status": "reference_free",
+    "schema_version": "v2.1",
+    "paper_id": "Costeux2013",
+    "n_questions": 49,
+    "overall_score": 0.621,
+    "weights": {
+      "coverage": 0.38,
+      "question_faithfulness": 0.44,
+      "diversity": 0.12,
+      "triplifiability": 0.06
+    },
+    "families": {
+      "coverage": {
+        "score": 0.318,
+        "concepts": {
+          "total": 80,
+          "referenced": 36,
+          "ratio": 0.45
+        },
+        "properties": {
+          "total": 51,
+          "referenced": 9,
+          "ratio": 0.176
+        },
+        "relations": {
+          "total": 60,
+          "referenced": 12,
+          "ratio": 0.2
+        },
+        "uncovered_concept_examples": [
+          "acrylic copolymers",
+          "acrylic matrix",
+          "aerogels",
+          "agilent 1100 series liquid chromatograph",
+          "agilent g1362a refractive index detector",
+          "ares",
+          "battery separators",
+          "biosensors",
+          "catalyst support",
+          "cell coalescence"
+        ]
+      },
+      "question_faithfulness": {
+        "score": 0.959,
+        "mean_cosine": 0.804,
+        "min_cosine": 0.663,
+        "n_well_faithful": 45,
+        "n_weak": 4,
+        "n_off_paper": 0,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        },
+        "weakest_example": {
+          "question_id": "Costeux2013_PROC_Q002",
+          "question": "Why was a postfoaming annealing step necessary following the initial rapid depressurization?",
+          "max_cosine": 0.6628445386886597
+        }
+      },
+      "diversity": {
+        "score": 0.319,
+        "mean_pairwise_cos": 0.681,
+        "max_pairwise_cos": 1.0,
+        "n_near_duplicates": 12,
+        "dup_threshold": 0.92
+      },
+      "triplifiability": {
+        "score": 0.663,
+        "pct_full_triples": 0.347,
+        "pct_partial": 0.633
+      }
+    },
+    "diagnostics": {
+      "answer_verifiability": {
+        "mean_cosine": 0.729,
+        "min_cosine": 0.538,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        }
+      },
+      "specificity": {
+        "score": 0.766,
+        "avg_question_chars": 118.8,
+        "pct_with_numeric_value": 0.388,
+        "pct_with_unit": 0.143,
+        "pct_referencing_concept": 0.98
+      }
+    },
+    "reproducibility": {
+      "pipeline_version": "v2.1",
+      "models": {
+        "metadata_extractor": "qwen3.5:27b",
+        "iterative_extractor": "qwen3.6:35b-a3b",
+        "cq_generator": "gemma4:31b",
+        "cq_validator": "deepseek-r1:32b",
+        "cq_refiner": "qwen3.5:35b",
+        "_embedding_model": "BAAI/bge-small-en-v1.5",
+        "_embedding_backend": "local (sentence-transformers)",
+        "_embedding_dim": 384,
+        "_note": "Three distinct LLM families (Qwen / Gemma / DeepSeek) across stages for cross-family diversity. Embeddings via LOCAL sentence-transformers (deterministic, no network) because the shared Ollama bge-m3 endpoint is unreliable from inside long-running pipeline processes (see history v1.3). All LLM calls use think=false + format=json on the client.",
+        "_history": [
+          "v0: cq_generator=llama4:scout -> failed to produce JSON output; switched to qwen3:32b + format=json.",
+          "v0.5: all stages on qwen3:32b/deepseek-r1:32b; embedder local BAAI/bge-small-en-v1.5.",
+          "v1.0: per-stage model selection, bge-m3 via Ollama, refiner added, evaluator reduced to 5 reference-free families.",
+          "v1.1: reverted embedder to local BAAI/bge-small-en-v1.5 because the shared Ollama bge-m3 endpoint was returning 500s. Added per-question evidence retrieval in validator + refiner to fix a truncation bug (was capping evidence at 7000 chars regardless of how many passages were available).",
+          "v1.2: switched embedder back to bge-m3 via Ollama after a probe showed the endpoint was responsive when called with proper exponential-backoff retry. Added 1s process-wide throttling between embed calls.",
+          "v1.3 (this version): reverted to local BAAI/bge-small-en-v1.5. The bge-m3 Ollama path stays healthy in isolation (standalone curl + Python) but the long-running pipeline process gets sustained 500s in stages 5-6, even with exponential backoff, 1s throttling, AND Connection: close to force fresh TCP per call. Most likely cause is the shared upstream evicting bge-m3 from memory while the heavy LLMs (gemma4:31b, deepseek-r1:32b) are loaded, with the eviction window outlasting our 230s retry budget. Local sentence-transformers is slightly lower quality (384-dim vs 1024) but always finishes."
+        ]
+      },
+      "validator_pass_threshold_per_question": null,
+      "coverage_gap_pass": {
+        "enabled": true,
+        "max_gap_concepts": 8
+      },
+      "rolling_state_caps": {
+        "concepts": 80,
+        "relations": 60,
+        "properties": 60,
+        "findings": 40
+      },
+      "embedder_dim": 384
+    }
+  }
+}

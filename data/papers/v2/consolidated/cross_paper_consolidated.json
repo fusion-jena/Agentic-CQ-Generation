@@ -1,0 +1,4731 @@
+{
+  "pipeline_step": "cq_consolidation_schema",
+  "pipeline_version": "v2",
+  "step_version": "step4_v2.4",
+  "generalize_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "consolidate_prompt_v5.0",
+    "source_dir": "data/papers/v2/dedup/",
+    "consolidation_model": "llama4:128x17b",
+    "output_validation": "pydantic-v2",
+    "fed_field": "generalized_question_only",
+    "pipeline_mode": "two_stage_batched",
+    "n_stage_a_batches": 10
+  },
+  "run_stats": {
+    "n_input_papers": 14,
+    "papers": [
+      "Bärwinkel2016",
+      "Costeux2013",
+      "Costeux2014",
+      "Di Maio2018",
+      "Dumon2012",
+      "Guo2015",
+      "Jacobs2007",
+      "Liu2019",
+      "Otsuka2008",
+      "Reglero2011",
+      "Ruiz2011",
+      "Shah2025",
+      "Shieh2002",
+      "Wu2021"
+    ],
+    "n_input_cqs": 536,
+    "n_gen_cqs": 490,
+    "reduction_rate": 0.755,
+    "coverage_breadth_counts": {
+      "narrow": 91,
+      "medium": 21,
+      "broad": 8
+    },
+    "archetype_breakdown": {
+      "CAUSAL": {
+        "n_input_cqs": 114,
+        "n_gen_cqs": 90,
+        "n_papers": 14,
+        "wall_time": "21m 20s 812ms"
+      },
+      "COMPARATIVE": {
+        "n_input_cqs": 44,
+        "n_gen_cqs": 44,
+        "n_papers": 14,
+        "wall_time": "3m 25s 790ms"
+      },
+      "CONDITION_FOR_PROCESS": {
+        "n_input_cqs": 46,
+        "n_gen_cqs": 23,
+        "n_papers": 14,
+        "wall_time": "1m 46s 3ms"
+      },
+      "ENTITY_LOOKUP": {
+        "n_input_cqs": 93,
+        "n_gen_cqs": 96,
+        "n_papers": 14,
+        "wall_time": "5m 54s 350ms"
+      },
+      "ENUMERATION": {
+        "n_input_cqs": 32,
+        "n_gen_cqs": 23,
+        "n_papers": 14,
+        "wall_time": "1m 56s 658ms"
+      },
+      "GAP_OR_LIMITATION": {
+        "n_input_cqs": 25,
+        "n_gen_cqs": 20,
+        "n_papers": 14,
+        "wall_time": "1m 23s 476ms"
+      },
+      "METHOD_OF_MEASUREMENT": {
+        "n_input_cqs": 49,
+        "n_gen_cqs": 62,
+        "n_papers": 14,
+        "wall_time": "4m 14s 850ms"
+      },
+      "MOTIVATION": {
+        "n_input_cqs": 68,
+        "n_gen_cqs": 59,
+        "n_papers": 14,
+        "wall_time": "59s 761ms"
+      },
+      "ONTOLOGY_TRIPLE": {
+        "n_input_cqs": 38,
+        "n_gen_cqs": 48,
+        "n_papers": 14,
+        "wall_time": "2m 57s 522ms"
+      },
+      "PROCESS_FOR_MATERIAL": {
+        "n_input_cqs": 27,
+        "n_gen_cqs": 25,
+        "n_papers": 12,
+        "wall_time": "1m 30s 7ms"
+      }
+    },
+    "n_input_generalized_cqs": 490,
+    "n_consolidated_cqs": 120
+  },
+  "execution_stats": {
+    "total_wall_time_s": 3961.9,
+    "n_llm_calls": 11,
+    "stage_a_calls": 10,
+    "stage_b_calls": 1,
+    "model": "llama4:128x17b"
+  },
+  "generalized_cqs": [
+    {
+      "gen_id": "CQ_001",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?property of a specific ?material?",
+      "variables": [
+        "property",
+        "material"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "characterisedBy",
+          "object": "?property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 10,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013",
+        "Dumon2012",
+        "Guo2015",
+        "Jacobs2007",
+        "Otsuka2008",
+        "Reglero2011",
+        "Ruiz2011",
+        "Shieh2002",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs with same triple pattern and different variable bindings.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_002",
+        "GEN_ENTITY_LOOKUP_009",
+        "GEN_ENTITY_LOOKUP_024",
+        "GEN_ENTITY_LOOKUP_027",
+        "GEN_ENTITY_LOOKUP_034",
+        "GEN_ENTITY_LOOKUP_042",
+        "GEN_ENTITY_LOOKUP_049",
+        "GEN_ENTITY_LOOKUP_051",
+        "GEN_ENTITY_LOOKUP_057",
+        "GEN_ENTITY_LOOKUP_071",
+        "GEN_ENTITY_LOOKUP_077",
+        "GEN_ENTITY_LOOKUP_058",
+        "GEN_ENTITY_LOOKUP_096",
+        "GEN_ENTITY_LOOKUP_030"
+      ]
+    },
+    {
+      "gen_id": "CQ_002",
+      "archetype": "CAUSAL",
+      "source_archetypes": [
+        "CAUSAL"
+      ],
+      "generalized_question": "How does ?entity affect ?property?",
+      "variables": [
+        "entity",
+        "property"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?entity",
+          "predicate": "affects",
+          "object": "?property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 12,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013",
+        "Costeux2014",
+        "Di Maio2018",
+        "Dumon2012",
+        "Guo2015",
+        "Jacobs2007",
+        "Otsuka2008",
+        "Reglero2011",
+        "Ruiz2011",
+        "Shieh2002",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to causal relationships between entities and properties.",
+      "merged_from": [
+        "GEN_CAUSAL_001",
+        "GEN_CAUSAL_002",
+        "GEN_CAUSAL_019",
+        "GEN_CAUSAL_040",
+        "GEN_CAUSAL_004",
+        "GEN_CAUSAL_008",
+        "GEN_CAUSAL_014",
+        "GEN_CAUSAL_046",
+        "GEN_CAUSAL_055",
+        "GEN_CAUSAL_057",
+        "GEN_CAUSAL_058",
+        "GEN_CAUSAL_060",
+        "GEN_CAUSAL_067",
+        "GEN_CAUSAL_073",
+        "GEN_CAUSAL_074",
+        "GEN_CAUSAL_075",
+        "GEN_CAUSAL_080",
+        "GEN_CAUSAL_017",
+        "GEN_CAUSAL_038",
+        "GEN_CAUSAL_039",
+        "GEN_CAUSAL_085",
+        "GEN_CAUSAL_087",
+        "GEN_CAUSAL_090",
+        "GEN_CAUSAL_005",
+        "GEN_CAUSAL_007",
+        "GEN_CAUSAL_025",
+        "GEN_CAUSAL_052",
+        "GEN_CAUSAL_053",
+        "GEN_CAUSAL_054",
+        "GEN_CAUSAL_064",
+        "GEN_CAUSAL_012",
+        "GEN_CAUSAL_023",
+        "GEN_CAUSAL_035",
+        "GEN_CAUSAL_078"
+      ]
+    },
+    {
+      "gen_id": "CQ_003",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?property of ?material related to ?task?",
+      "variables": [
+        "property",
+        "material",
+        "task"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "characterisedBy",
+          "object": "?property"
+        },
+        {
+          "subject": "?property",
+          "predicate": "relatedTo",
+          "object": "?task"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "consolidation_reasoning": "Merged CQs related to material properties and their relation to tasks or applications.",
+      "merged_from": [
+        "SA_EL_018",
+        "GEN_ENTITY_LOOKUP_017"
+      ]
+    },
+    {
+      "gen_id": "CQ_004",
+      "archetype": "ENUMERATION",
+      "source_archetypes": [
+        "ENUMERATION"
+      ],
+      "generalized_question": "Which ?entities are categorized as '?category'?",
+      "variables": [
+        "entities",
+        "category"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?entities",
+          "predicate": "rdf:type",
+          "object": "?category"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 9,
+      "papers_covered": [
+        "Costeux2013",
+        "Costeux2014",
+        "Di Maio2018",
+        "Otsuka2008",
+        "Reglero2011",
+        "Ruiz2011",
+        "Shah2025",
+        "Shieh2002",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to categorization of entities.",
+      "merged_from": [
+        "GEN_ENUMERATION_003",
+        "GEN_ENUMERATION_010",
+        "GEN_ENUMERATION_013",
+        "GEN_ENUMERATION_017",
+        "GEN_ENUMERATION_018",
+        "GEN_ENUMERATION_020",
+        "GEN_ENUMERATION_015"
+      ]
+    },
+    {
+      "gen_id": "CQ_005",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "source_archetypes": [
+        "PROCESS_FOR_MATERIAL"
+      ],
+      "generalized_question": "What process was used to produce the ?material?",
+      "variables": [
+        "material"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "producedBy",
+          "object": "?process"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 11,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013",
+        "Costeux2014",
+        "Dumon2012",
+        "Guo2015",
+        "Jacobs2007",
+        "Liu2019",
+        "Otsuka2008",
+        "Reglero2011",
+        "Ruiz2011",
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "Merged CQs related to material production processes.",
+      "merged_from": [
+        "GEN_PROCESS_FOR_MATERIAL_002",
+        "GEN_PROCESS_FOR_MATERIAL_004",
+        "GEN_PROCESS_FOR_MATERIAL_006",
+        "GEN_PROCESS_FOR_MATERIAL_010",
+        "GEN_PROCESS_FOR_MATERIAL_011",
+        "GEN_PROCESS_FOR_MATERIAL_016",
+        "GEN_PROCESS_FOR_MATERIAL_017",
+        "GEN_PROCESS_FOR_MATERIAL_020",
+        "GEN_PROCESS_FOR_MATERIAL_021",
+        "GEN_PROCESS_FOR_MATERIAL_025",
+        "GEN_PROCESS_FOR_MATERIAL_018",
+        "GEN_PROCESS_FOR_MATERIAL_019",
+        "GEN_PROCESS_FOR_MATERIAL_023",
+        "GEN_PROCESS_FOR_MATERIAL_022"
+      ]
+    },
+    {
+      "gen_id": "CQ_006",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENTITY_LOOKUP",
+        "CAUSAL"
+      ],
+      "generalized_question": "What is the effect of CO2 on the ?property of ?material?",
+      "variables": [
+        "property",
+        "material"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "CO2",
+          "predicate": "affects",
+          "object": "?property"
+        },
+        {
+          "subject": "?material",
+          "predicate": "characterisedBy",
+          "object": "?property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Di Maio2018",
+        "Guo2015",
+        "Otsuka2008"
+      ],
+      "consolidation_reasoning": "Merged CQs related to the effect of CO2 on material properties.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_008",
+        "GEN_ENTITY_LOOKUP_022",
+        "GEN_ENTITY_LOOKUP_043",
+        "GEN_CAUSAL_005",
+        "GEN_CAUSAL_007",
+        "GEN_CAUSAL_025",
+        "GEN_CAUSAL_052",
+        "GEN_CAUSAL_053",
+        "GEN_CAUSAL_054",
+        "GEN_CAUSAL_064"
+      ]
+    },
+    {
+      "gen_id": "CQ_007",
+      "archetype": "COMPARATIVE",
+      "source_archetypes": [
+        "COMPARATIVE"
+      ],
+      "generalized_question": "How does the ?property of ?material1 compare to that of ?material2?",
+      "variables": [
+        "property",
+        "material1",
+        "material2"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material1",
+          "predicate": "characterisedBy",
+          "object": "?property"
+        },
+        {
+          "subject": "?material2",
+          "predicate": "characterisedBy",
+          "object": "?property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 10,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013",
+        "Costeux2014",
+        "Di Maio2018",
+        "Dumon2012",
+        "Guo2015",
+        "Reglero2011",
+        "Ruiz2011",
+        "Shieh2002",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to comparative analysis of material properties.",
+      "merged_from": [
+        "GEN_COMPARATIVE_001",
+        "GEN_COMPARATIVE_003",
+        "GEN_COMPARATIVE_004",
+        "GEN_COMPARATIVE_005",
+        "GEN_COMPARATIVE_009",
+        "GEN_COMPARATIVE_012",
+        "GEN_COMPARATIVE_013",
+        "GEN_COMPARATIVE_014",
+        "GEN_COMPARATIVE_016",
+        "GEN_COMPARATIVE_024",
+        "GEN_COMPARATIVE_026",
+        "GEN_COMPARATIVE_027",
+        "GEN_COMPARATIVE_030",
+        "GEN_COMPARATIVE_031",
+        "GEN_COMPARATIVE_035",
+        "GEN_COMPARATIVE_037",
+        "GEN_COMPARATIVE_002",
+        "GEN_COMPARATIVE_010",
+        "GEN_COMPARATIVE_011",
+        "GEN_COMPARATIVE_028",
+        "GEN_COMPARATIVE_029",
+        "GEN_COMPARATIVE_032",
+        "GEN_COMPARATIVE_033",
+        "GEN_COMPARATIVE_036",
+        "GEN_COMPARATIVE_043",
+        "GEN_COMPARATIVE_008",
+        "GEN_COMPARATIVE_044"
+      ]
+    },
+    {
+      "gen_id": "CQ_008",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?property of ?material under ?condition?",
+      "variables": [
+        "property",
+        "material",
+        "condition"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "characterisedBy",
+          "object": "?property"
+        },
+        {
+          "subject": "?material",
+          "predicate": "performedUnder",
+          "object": "?condition"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Guo2015",
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to material properties under specific conditions.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_058",
+        "GEN_ENTITY_LOOKUP_096",
+        "GEN_ENTITY_LOOKUP_030"
+      ]
+    },
+    {
+      "gen_id": "CQ_009",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "source_archetypes": [
+        "METHOD_OF_MEASUREMENT"
+      ],
+      "generalized_question": "Which method was used to determine the ?property?",
+      "variables": [
+        "property"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?property",
+          "predicate": "measuredBy",
+          "object": "?method"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 10,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013",
+        "Di Maio2018",
+        "Dumon2012",
+        "Guo2015",
+        "Jacobs2007",
+        "Reglero2011",
+        "Ruiz2011",
+        "Shah2025",
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "Merged CQs related to measurement methods for properties.",
+      "merged_from": [
+        "GEN_METHOD_OF_MEASUREMENT_002",
+        "GEN_METHOD_OF_MEASUREMENT_006",
+        "GEN_METHOD_OF_MEASUREMENT_015",
+        "GEN_METHOD_OF_MEASUREMENT_018",
+        "GEN_METHOD_OF_MEASUREMENT_026",
+        "GEN_METHOD_OF_MEASUREMENT_032",
+        "GEN_METHOD_OF_MEASUREMENT_033",
+        "GEN_METHOD_OF_MEASUREMENT_034",
+        "GEN_METHOD_OF_MEASUREMENT_036",
+        "GEN_METHOD_OF_MEASUREMENT_005",
+        "GEN_METHOD_OF_MEASUREMENT_040",
+        "GEN_METHOD_OF_MEASUREMENT_050",
+        "GEN_METHOD_OF_MEASUREMENT_052",
+        "GEN_METHOD_OF_MEASUREMENT_056",
+        "GEN_METHOD_OF_MEASUREMENT_060",
+        "GEN_METHOD_OF_MEASUREMENT_061",
+        "GEN_METHOD_OF_MEASUREMENT_062",
+        "GEN_METHOD_OF_MEASUREMENT_007",
+        "GEN_METHOD_OF_MEASUREMENT_013",
+        "GEN_METHOD_OF_MEASUREMENT_024",
+        "GEN_METHOD_OF_MEASUREMENT_039"
+      ]
+    },
+    {
+      "gen_id": "CQ_010",
+      "archetype": "GAP_OR_LIMITATION",
+      "source_archetypes": [
+        "GAP_OR_LIMITATION"
+      ],
+      "generalized_question": "What is the limitation of ?entity?",
+      "variables": [
+        "entity"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?entity",
+          "predicate": "hasLimitation",
+          "object": "?limitation"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 6,
+      "papers_covered": [
+        "Costeux2013",
+        "Costeux2014",
+        "Di Maio2018",
+        "Guo2015",
+        "Reglero2011",
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to limitations of entities.",
+      "merged_from": [
+        "GEN_GAP_OR_LIMITATION_001",
+        "GEN_GAP_OR_LIMITATION_011",
+        "GEN_GAP_OR_LIMITATION_002",
+        "GEN_GAP_OR_LIMITATION_006",
+        "GEN_GAP_OR_LIMITATION_005",
+        "GEN_GAP_OR_LIMITATION_012"
+      ]
+    },
+    {
+      "gen_id": "CQ_011",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why is ?entity suitable for ?application?",
+      "variables": [
+        "entity",
+        "application"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?entity",
+          "predicate": "suitableFor",
+          "object": "?application"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 5,
+      "papers_covered": [
+        "Di Maio2018",
+        "Dumon2012",
+        "Liu2019",
+        "Otsuka2008",
+        "Reglero2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to the suitability of entities for applications.",
+      "merged_from": [
+        "GEN_MOTIVATION_020",
+        "GEN_MOTIVATION_024",
+        "GEN_MOTIVATION_027",
+        "GEN_MOTIVATION_042",
+        "GEN_MOTIVATION_008",
+        "GEN_MOTIVATION_037",
+        "GEN_MOTIVATION_039"
+      ]
+    },
+    {
+      "gen_id": "CQ_012",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "COMPARATIVE",
+        "GAP_OR_LIMITATION"
+      ],
+      "generalized_question": "What is the relationship between ?variable1 and ?variable2?",
+      "variables": [
+        "variable1",
+        "variable2"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?variable1",
+          "predicate": "relatedTo",
+          "object": "?variable2"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Costeux2013",
+        "Liu2019",
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "Merged CQs related to relationships between variables.",
+      "merged_from": [
+        "GEN_COMPARATIVE_007",
+        "GEN_COMPARATIVE_034",
+        "GEN_GAP_OR_LIMITATION_008"
+      ]
+    },
+    {
+      "gen_id": "CQ_013",
+      "archetype": "ENUMERATION",
+      "source_archetypes": [
+        "ENUMERATION"
+      ],
+      "generalized_question": "Which ?models were used to predict ?property?",
+      "variables": [
+        "models",
+        "property"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?models",
+          "predicate": "usedToPredict",
+          "object": "?property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Di Maio2018",
+        "Guo2015",
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "Merged CQs related to predictive models for properties.",
+      "merged_from": [
+        "GEN_ENUMERATION_006",
+        "GEN_ENUMERATION_008",
+        "GEN_ENUMERATION_022"
+      ]
+    },
+    {
+      "gen_id": "CQ_014",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "What is the ?property of ?material related to ?process?",
+      "variables": [
+        "property",
+        "material",
+        "process"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "characterisedBy",
+          "object": "?property"
+        },
+        {
+          "subject": "?property",
+          "predicate": "relatedTo",
+          "object": "?process"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "consolidation_reasoning": "Merged CQs related to material properties and their relation to processes.",
+      "merged_from": [
+        "SA_EL_018",
+        "GEN_ONTOLOGY_TRIPLE_007",
+        "GEN_ONTOLOGY_TRIPLE_025"
+      ]
+    },
+    {
+      "gen_id": "CQ_015",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENUMERATION",
+        "METHOD_OF_MEASUREMENT"
+      ],
+      "generalized_question": "Which ?techniques were used to analyze ?morphology?",
+      "variables": [
+        "techniques",
+        "morphology"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?techniques",
+          "predicate": "usedToAnalyze",
+          "object": "?morphology"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 6,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013",
+        "Costeux2014",
+        "Liu2019",
+        "Otsuka2008",
+        "Reglero2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to analytical techniques for morphology.",
+      "merged_from": [
+        "GEN_ENUMERATION_001",
+        "GEN_METHOD_OF_MEASUREMENT_011",
+        "GEN_METHOD_OF_MEASUREMENT_022",
+        "GEN_METHOD_OF_MEASUREMENT_009",
+        "GEN_METHOD_OF_MEASUREMENT_020",
+        "GEN_METHOD_OF_MEASUREMENT_041",
+        "GEN_METHOD_OF_MEASUREMENT_043",
+        "GEN_METHOD_OF_MEASUREMENT_045"
+      ]
+    },
+    {
+      "gen_id": "CQ_016",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "CAUSAL",
+        "COMPARATIVE"
+      ],
+      "generalized_question": "What is the effect of varying ?condition on ?property?",
+      "variables": [
+        "condition",
+        "property"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?condition",
+          "predicate": "affects",
+          "object": "?property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 10,
+      "papers_covered": [
+        "Costeux2014",
+        "Di Maio2018",
+        "Dumon2012",
+        "Guo2015",
+        "Jacobs2007",
+        "Liu2019",
+        "Otsuka2008",
+        "Reglero2011",
+        "Ruiz2011",
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "Merged CQs related to the effect of varying conditions on properties.",
+      "merged_from": [
+        "GEN_CAUSAL_011",
+        "GEN_CAUSAL_013",
+        "GEN_CAUSAL_056",
+        "GEN_CAUSAL_059",
+        "GEN_CAUSAL_062",
+        "GEN_CAUSAL_068",
+        "GEN_CAUSAL_069",
+        "GEN_CAUSAL_077",
+        "GEN_CAUSAL_079",
+        "GEN_CAUSAL_036",
+        "GEN_CAUSAL_044",
+        "GEN_CAUSAL_045",
+        "GEN_CAUSAL_050",
+        "GEN_CAUSAL_081",
+        "GEN_CAUSAL_082",
+        "GEN_CAUSAL_083",
+        "GEN_CAUSAL_084",
+        "GEN_COMPARATIVE_017",
+        "GEN_COMPARATIVE_018",
+        "GEN_COMPARATIVE_019",
+        "GEN_COMPARATIVE_020",
+        "GEN_COMPARATIVE_023"
+      ]
+    },
+    {
+      "gen_id": "CQ_017",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENTITY_LOOKUP",
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "What is the ?component of ?material?",
+      "variables": [
+        "component",
+        "material"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "hasComponent",
+          "object": "?component"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Dumon2012",
+        "Reglero2011",
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to material components.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_048",
+        "GEN_ENTITY_LOOKUP_056",
+        "GEN_ONTOLOGY_TRIPLE_001",
+        "GEN_ONTOLOGY_TRIPLE_042"
+      ]
+    },
+    {
+      "gen_id": "CQ_018",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "PROCESS_FOR_MATERIAL",
+        "CONDITION_FOR_PROCESS"
+      ],
+      "generalized_question": "Which ?processes were used to prepare ?samples?",
+      "variables": [
+        "processes",
+        "samples"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?processes",
+          "predicate": "usedToPrepare",
+          "object": "?samples"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Di Maio2018",
+        "Liu2019"
+      ],
+      "consolidation_reasoning": "Merged CQs related to sample preparation processes.",
+      "merged_from": [
+        "GEN_PROCESS_FOR_MATERIAL_024",
+        "GEN_CONDITION_FOR_PROCESS_019"
+      ]
+    },
+    {
+      "gen_id": "CQ_019",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENTITY_LOOKUP",
+        "CONDITION_FOR_PROCESS"
+      ],
+      "generalized_question": "What is the ?parameter used in ?process?",
+      "variables": [
+        "parameter",
+        "process"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?process",
+          "predicate": "hasParameter",
+          "object": "?parameter"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 5,
+      "papers_covered": [
+        "Guo2015",
+        "Liu2019",
+        "Reglero2011",
+        "Shah2025",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to process parameters.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_010",
+        "GEN_ENTITY_LOOKUP_037",
+        "GEN_ENTITY_LOOKUP_041",
+        "GEN_ENTITY_LOOKUP_028",
+        "GEN_ENTITY_LOOKUP_033",
+        "GEN_ENTITY_LOOKUP_070",
+        "GEN_CONDITION_FOR_PROCESS_014"
+      ]
+    },
+    {
+      "gen_id": "CQ_020",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?model used to ?task?",
+      "variables": [
+        "model",
+        "task"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?model",
+          "predicate": "usedTo",
+          "object": "?task"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 8,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Di Maio2018",
+        "Guo2015",
+        "Jacobs2007",
+        "Reglero2011",
+        "Shah2025",
+        "Shieh2002",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to models used for tasks.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_012",
+        "GEN_ENTITY_LOOKUP_029",
+        "GEN_ENTITY_LOOKUP_035",
+        "GEN_ENTITY_LOOKUP_052",
+        "GEN_ENTITY_LOOKUP_067",
+        "GEN_ENTITY_LOOKUP_073",
+        "GEN_ENTITY_LOOKUP_093",
+        "GEN_ENTITY_LOOKUP_053",
+        "GEN_ENTITY_LOOKUP_074",
+        "GEN_ENTITY_LOOKUP_078",
+        "GEN_ENTITY_LOOKUP_080",
+        "GEN_ENTITY_LOOKUP_090"
+      ]
+    },
+    {
+      "gen_id": "CQ_021",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "PROCESS_FOR_MATERIAL",
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which ?blowing agents were used in ?process?",
+      "variables": [
+        "blowing",
+        "process"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?process",
+          "predicate": "hasBlowingAgent",
+          "object": "?blowingAgent"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Costeux2013",
+        "Costeux2014",
+        "Guo2015"
+      ],
+      "consolidation_reasoning": "Merged CQs related to blowing agents used in processes.",
+      "merged_from": [
+        "GEN_PROCESS_FOR_MATERIAL_005",
+        "GEN_ONTOLOGY_TRIPLE_013",
+        "GEN_ONTOLOGY_TRIPLE_029"
+      ]
+    },
+    {
+      "gen_id": "CQ_022",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENTITY_LOOKUP",
+        "MOTIVATION"
+      ],
+      "generalized_question": "What is the ?property of ?material in ?state?",
+      "variables": [
+        "property",
+        "material",
+        "state"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "characterisedBy",
+          "object": "?property"
+        },
+        {
+          "subject": "?material",
+          "predicate": "inState",
+          "object": "?state"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Guo2015",
+        "Jacobs2007",
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to material properties in specific states.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_030",
+        "GEN_MOTIVATION_028",
+        "GEN_MOTIVATION_033",
+        "GEN_MOTIVATION_044"
+      ]
+    },
+    {
+      "gen_id": "CQ_023",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why was ?material chosen for ?study?",
+      "variables": [
+        "material",
+        "study"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "chosenFor",
+          "object": "?study"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 4,
+      "papers_covered": [
+        "Liu2019",
+        "Otsuka2008",
+        "Reglero2011",
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to material selection for studies.",
+      "merged_from": [
+        "GEN_MOTIVATION_008",
+        "GEN_MOTIVATION_037",
+        "GEN_MOTIVATION_039",
+        "GEN_MOTIVATION_040",
+        "GEN_MOTIVATION_045"
+      ]
+    },
+    {
+      "gen_id": "CQ_024",
+      "archetype": "GAP_OR_LIMITATION",
+      "source_archetypes": [
+        "GAP_OR_LIMITATION"
+      ],
+      "generalized_question": "What is the ?limitation of ?model?",
+      "variables": [
+        "limitation",
+        "model"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?model",
+          "predicate": "hasLimitation",
+          "object": "?limitation"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Guo2015",
+        "Ruiz2011",
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "Merged CQs related to model limitations.",
+      "merged_from": [
+        "GEN_GAP_OR_LIMITATION_005",
+        "GEN_GAP_OR_LIMITATION_012",
+        "GEN_GAP_OR_LIMITATION_013"
+      ]
+    },
+    {
+      "gen_id": "CQ_025",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "METHOD_OF_MEASUREMENT",
+        "ENUMERATION"
+      ],
+      "generalized_question": "Which ?instruments were used to measure ?property?",
+      "variables": [
+        "instruments",
+        "property"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?instruments",
+          "predicate": "usedToMeasure",
+          "object": "?property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 4,
+      "papers_covered": [
+        "Costeux2013",
+        "Di Maio2018",
+        "Ruiz2011",
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "Merged CQs related to measurement instruments for properties.",
+      "merged_from": [
+        "GEN_METHOD_OF_MEASUREMENT_004",
+        "GEN_METHOD_OF_MEASUREMENT_012",
+        "GEN_METHOD_OF_MEASUREMENT_023",
+        "GEN_METHOD_OF_MEASUREMENT_047",
+        "GEN_METHOD_OF_MEASUREMENT_051",
+        "GEN_ENUMERATION_021"
+      ]
+    },
+    {
+      "gen_id": "CQ_026",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENTITY_LOOKUP",
+        "MOTIVATION"
+      ],
+      "generalized_question": "What is the ?application of ?material?",
+      "variables": [
+        "application",
+        "material"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "suitableFor",
+          "object": "?application"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 4,
+      "papers_covered": [
+        "Costeux2013",
+        "Di Maio2018",
+        "Dumon2012",
+        "Reglero2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to material applications.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_017",
+        "GEN_MOTIVATION_020",
+        "GEN_MOTIVATION_024",
+        "GEN_MOTIVATION_027",
+        "GEN_MOTIVATION_042"
+      ]
+    },
+    {
+      "gen_id": "CQ_027",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENTITY_LOOKUP",
+        "ENUMERATION"
+      ],
+      "generalized_question": "What is the ?theoretical framework describing ?phenomenon?",
+      "variables": [
+        "theoretical",
+        "phenomenon"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?theoreticalFramework",
+          "predicate": "describes",
+          "object": "?phenomenon"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2014",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to theoretical frameworks for phenomena.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_018",
+        "GEN_ENTITY_LOOKUP_018",
+        "GEN_ENUMERATION_009"
+      ]
+    },
+    {
+      "gen_id": "CQ_028",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENUMERATION",
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "Which ?polymers are cited as having frequently reported ?properties?",
+      "variables": [
+        "polymers",
+        "properties"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?polymers",
+          "predicate": "hasProperty",
+          "object": "?properties"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "consolidation_reasoning": "Merged CQs related to polymers and their properties.",
+      "merged_from": [
+        "GEN_ENUMERATION_011",
+        "GEN_ENTITY_LOOKUP_088",
+        "GEN_ENTITY_LOOKUP_091"
+      ]
+    },
+    {
+      "gen_id": "CQ_029",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENTITY_LOOKUP",
+        "GAP_OR_LIMITATION"
+      ],
+      "generalized_question": "What is the ?range of ?property?",
+      "variables": [
+        "range",
+        "property"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?property",
+          "predicate": "hasRange",
+          "object": "?range"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2013",
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "Merged CQs related to property ranges.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_005",
+        "GEN_ENTITY_LOOKUP_016",
+        "GEN_GAP_OR_LIMITATION_014"
+      ]
+    },
+    {
+      "gen_id": "CQ_030",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENTITY_LOOKUP",
+        "CAUSAL"
+      ],
+      "generalized_question": "What is the ?chemical group influencing ?property?",
+      "variables": [
+        "chemical",
+        "property"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?chemicalGroup",
+          "predicate": "influences",
+          "object": "?property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Shieh2002",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to chemical groups influencing properties.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_075",
+        "GEN_ENTITY_LOOKUP_085",
+        "GEN_CAUSAL_017",
+        "GEN_CAUSAL_038",
+        "GEN_CAUSAL_039",
+        "GEN_CAUSAL_085",
+        "GEN_CAUSAL_087",
+        "GEN_CAUSAL_090"
+      ]
+    },
+    {
+      "gen_id": "CQ_031",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENUMERATION",
+        "METHOD_OF_MEASUREMENT"
+      ],
+      "generalized_question": "Which ?modeling approaches were used to predict ?morphology?",
+      "variables": [
+        "modeling",
+        "morphology"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?modelingApproaches",
+          "predicate": "usedToPredict",
+          "object": "?morphology"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Di Maio2018",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to modeling approaches for morphology prediction.",
+      "merged_from": [
+        "GEN_ENUMERATION_022",
+        "GEN_METHOD_OF_MEASUREMENT_055"
+      ]
+    },
+    {
+      "gen_id": "CQ_032",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENTITY_LOOKUP",
+        "ENUMERATION"
+      ],
+      "generalized_question": "What is the ?specific polymer reported in the literature?",
+      "variables": [
+        "specific"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?polymer",
+          "predicate": "reportedIn",
+          "object": "literature"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "consolidation_reasoning": "Merged CQs related to specific polymers reported in literature.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_088",
+        "GEN_ENTITY_LOOKUP_091",
+        "GEN_ENUMERATION_011"
+      ]
+    },
+    {
+      "gen_id": "CQ_033",
+      "archetype": "MULTI",
+      "source_archetypes": [
+        "ENUMERATION",
+        "CAUSAL"
+      ],
+      "generalized_question": "Which ?processing parameters were varied to identify optimal conditions?",
+      "variables": [
+        "processing"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?processingParameters",
+          "predicate": "variedToIdentify",
+          "object": "optimalConditions"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 5,
+      "papers_covered": [
+        "Costeux2013",
+        "Costeux2014",
+        "Jacobs2007",
+        "Otsuka2008",
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "Merged CQs related to processing parameters and optimal conditions.",
+      "merged_from": [
+        "GEN_ENUMERATION_014",
+        "GEN_CAUSAL_003",
+        "GEN_CAUSAL_010",
+        "GEN_CAUSAL_016",
+        "GEN_CAUSAL_024",
+        "GEN_CAUSAL_026",
+        "GEN_CAUSAL_030",
+        "GEN_CAUSAL_033",
+        "GEN_CAUSAL_041",
+        "GEN_CAUSAL_042",
+        "GEN_CAUSAL_043",
+        "GEN_CAUSAL_045",
+        "GEN_CAUSAL_047",
+        "GEN_CAUSAL_066"
+      ]
+    },
+    {
+      "gen_id": "CQ_034",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?task performed by ?entity?",
+      "variables": [
+        "task",
+        "entity"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?entity",
+          "predicate": "performs",
+          "object": "?task"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "consolidation_reasoning": "Merged CQs related to tasks performed by entities.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_023",
+        "GEN_ENTITY_LOOKUP_089"
+      ]
+    },
+    {
+      "gen_id": "FB_001",
+      "archetype": "CAUSAL",
+      "source_archetypes": [
+        "CAUSAL"
+      ],
+      "generalized_question": "How does the annealing time or temperature affect a particular property of a polymer blend or foam?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "AnnealingTimeOrTemperature",
+          "predicate": "affects",
+          "object": "PolymerBlendOrFoamProperty"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "consolidation_reasoning": "These CQs explore the effect of annealing time or temperature on properties of polymer blends or foams.",
+      "merged_from": [
+        "GEN_CAUSAL_009",
+        "GEN_CAUSAL_031",
+        "GEN_CAUSAL_070",
+        "GEN_CAUSAL_072"
+      ]
+    },
+    {
+      "gen_id": "FB_002",
+      "archetype": "CAUSAL",
+      "source_archetypes": [
+        "CAUSAL"
+      ],
+      "generalized_question": "How does the molecular weight or structure of a polymer affect its properties or behavior?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "PolymerMolecularWeightOrStructure",
+          "predicate": "affects",
+          "object": "PolymerPropertyOrBehavior"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Di Maio2018",
+        "Otsuka2008",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "These CQs investigate how the molecular weight or structure of polymers influences their properties or behavior.",
+      "merged_from": [
+        "GEN_CAUSAL_018",
+        "GEN_CAUSAL_032",
+        "GEN_CAUSAL_048",
+        "GEN_CAUSAL_049"
+      ]
+    },
+    {
+      "gen_id": "FB_003",
+      "archetype": "CAUSAL",
+      "source_archetypes": [
+        "CAUSAL"
+      ],
+      "generalized_question": "What is the effect of varying a specific process condition on the resulting cellular structure of a polymer foam?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "ProcessCondition",
+          "predicate": "affects",
+          "object": "CellularStructure"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "broad",
+      "n_papers_covered": 4,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Dumon2012",
+        "Reglero2011",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "These CQs all explore how varying specific process conditions influences the cellular structure of polymer foams.",
+      "merged_from": [
+        "GEN_CAUSAL_020",
+        "GEN_CAUSAL_021",
+        "GEN_CAUSAL_027",
+        "GEN_CAUSAL_061",
+        "GEN_CAUSAL_076",
+        "GEN_CAUSAL_088",
+        "GEN_CAUSAL_089"
+      ]
+    },
+    {
+      "gen_id": "FB_004",
+      "archetype": "COMPARATIVE",
+      "source_archetypes": [
+        "COMPARATIVE"
+      ],
+      "generalized_question": "How does the ?property of ?material compare to ?other_value when ?condition is applied?",
+      "variables": [
+        "property",
+        "material",
+        "other_value",
+        "condition"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "Material",
+          "predicate": "characterisedBy",
+          "object": "Property"
+        },
+        {
+          "subject": "Property",
+          "predicate": "hasValue",
+          "object": "xsd literal"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 4,
+      "papers_covered": [
+        "Costeux2013",
+        "Guo2015",
+        "Liu2019",
+        "Otsuka2008"
+      ],
+      "consolidation_reasoning": "These CQs compare properties of materials to other values under specific conditions.",
+      "merged_from": [
+        "GEN_COMPARATIVE_006",
+        "GEN_COMPARATIVE_015",
+        "GEN_COMPARATIVE_021",
+        "GEN_COMPARATIVE_022"
+      ]
+    },
+    {
+      "gen_id": "FB_005",
+      "archetype": "COMPARATIVE",
+      "source_archetypes": [
+        "COMPARATIVE"
+      ],
+      "generalized_question": "How do ?characteristic of bubbles in ?region compare to those in ?other_region?",
+      "variables": [
+        "characteristic",
+        "region",
+        "other_region"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "Region",
+          "predicate": "characterisedBy",
+          "object": "Characteristic"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "These CQs compare characteristics of bubbles in different regions.",
+      "merged_from": [
+        "GEN_COMPARATIVE_038",
+        "GEN_COMPARATIVE_039",
+        "GEN_COMPARATIVE_040",
+        "GEN_COMPARATIVE_041",
+        "GEN_COMPARATIVE_042"
+      ]
+    },
+    {
+      "gen_id": "FB_006",
+      "archetype": "COMPARATIVE",
+      "source_archetypes": [
+        "COMPARATIVE"
+      ],
+      "generalized_question": "How does the foaming temperature threshold for ?material1 compare to that of ?material2?",
+      "variables": [
+        "material1",
+        "material2"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "Material",
+          "predicate": "characterisedBy",
+          "object": "Property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "consolidation_reasoning": "This CQ compares the foaming temperature threshold for different materials.",
+      "merged_from": [
+        "GEN_COMPARATIVE_025"
+      ]
+    },
+    {
+      "gen_id": "FB_007",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "source_archetypes": [
+        "CONDITION_FOR_PROCESS"
+      ],
+      "generalized_question": "Under what conditions was the process performed?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Process",
+          "predicate": "performedUnder",
+          "object": "ProcessCondition"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "broad",
+      "n_papers_covered": 14,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013",
+        "Costeux2014",
+        "Di Maio2018",
+        "Dumon2012",
+        "Guo2015",
+        "Jacobs2007",
+        "Liu2019",
+        "Otsuka2008",
+        "Reglero2011",
+        "Ruiz2011",
+        "Shah2025",
+        "Shieh2002",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs with same triple signature but different specific conditions and processes.",
+      "merged_from": [
+        "GEN_CONDITION_FOR_PROCESS_001",
+        "GEN_CONDITION_FOR_PROCESS_002",
+        "GEN_CONDITION_FOR_PROCESS_007",
+        "GEN_CONDITION_FOR_PROCESS_008",
+        "GEN_CONDITION_FOR_PROCESS_009",
+        "GEN_CONDITION_FOR_PROCESS_010",
+        "GEN_CONDITION_FOR_PROCESS_017",
+        "GEN_CONDITION_FOR_PROCESS_018",
+        "GEN_CONDITION_FOR_PROCESS_021",
+        "GEN_CONDITION_FOR_PROCESS_023"
+      ]
+    },
+    {
+      "gen_id": "FB_008",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "source_archetypes": [
+        "CONDITION_FOR_PROCESS"
+      ],
+      "generalized_question": "What were the molecular weight and dispersity of the polymer?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Polymer",
+          "predicate": "characterisedBy",
+          "object": "Property"
+        },
+        {
+          "subject": "Property",
+          "predicate": "hasValue",
+          "object": "xsd literal"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Jacobs2007",
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "Merged CQs related to polymer properties.",
+      "merged_from": [
+        "GEN_CONDITION_FOR_PROCESS_005",
+        "GEN_CONDITION_FOR_PROCESS_006",
+        "GEN_CONDITION_FOR_PROCESS_011"
+      ]
+    },
+    {
+      "gen_id": "FB_009",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "source_archetypes": [
+        "CONDITION_FOR_PROCESS"
+      ],
+      "generalized_question": "What was the composition of the polymer?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Polymer",
+          "predicate": "hasComponent",
+          "object": "Material"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Dumon2012",
+        "Otsuka2008"
+      ],
+      "consolidation_reasoning": "Merged CQs related to polymer composition.",
+      "merged_from": [
+        "GEN_CONDITION_FOR_PROCESS_003",
+        "GEN_CONDITION_FOR_PROCESS_004"
+      ]
+    },
+    {
+      "gen_id": "FB_010",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "source_archetypes": [
+        "CONDITION_FOR_PROCESS"
+      ],
+      "generalized_question": "At what temperature was the interfacial tension examined?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "InterfacialTension",
+          "predicate": "hasValue",
+          "object": "xsd literal"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "No merge partners found.",
+      "merged_from": [
+        "GEN_CONDITION_FOR_PROCESS_015"
+      ]
+    },
+    {
+      "gen_id": "FB_011",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "source_archetypes": [
+        "CONDITION_FOR_PROCESS"
+      ],
+      "generalized_question": "What was the exposure time required for equilibrium CO2 sorption concentration?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Polymer",
+          "predicate": "affects",
+          "object": "Property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "No merge partners found.",
+      "merged_from": [
+        "GEN_CONDITION_FOR_PROCESS_012"
+      ]
+    },
+    {
+      "gen_id": "FB_012",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "source_archetypes": [
+        "CONDITION_FOR_PROCESS"
+      ],
+      "generalized_question": "What post-sorption heat treatment was applied to the samples?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Sample",
+          "predicate": "performedUnder",
+          "object": "ProcessCondition"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "No merge partners found.",
+      "merged_from": [
+        "GEN_CONDITION_FOR_PROCESS_013"
+      ]
+    },
+    {
+      "gen_id": "FB_013",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "source_archetypes": [
+        "CONDITION_FOR_PROCESS"
+      ],
+      "generalized_question": "Under what pressure conditions is the glass transition temperature reduced?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "GlassTransitionTemperature",
+          "predicate": "hasValue",
+          "object": "xsd literal"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "consolidation_reasoning": "No merge partners found.",
+      "merged_from": [
+        "GEN_CONDITION_FOR_PROCESS_020"
+      ]
+    },
+    {
+      "gen_id": "FB_014",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "source_archetypes": [
+        "CONDITION_FOR_PROCESS"
+      ],
+      "generalized_question": "What method was used to determine the minimum foaming temperature?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Property",
+          "predicate": "measuredBy",
+          "object": "Method"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "consolidation_reasoning": "No merge partners found.",
+      "merged_from": [
+        "GEN_CONDITION_FOR_PROCESS_022"
+      ]
+    },
+    {
+      "gen_id": "FB_015",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "source_archetypes": [
+        "CONDITION_FOR_PROCESS"
+      ],
+      "generalized_question": "At what temperature was the bubble nucleation process analyzed?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "BubbleNucleationProcess",
+          "predicate": "performedUnder",
+          "object": "ProcessCondition"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "No merge partners found.",
+      "merged_from": [
+        "GEN_CONDITION_FOR_PROCESS_016"
+      ]
+    },
+    {
+      "gen_id": "FB_016",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?property of ?material used in ?application?",
+      "variables": [
+        "property",
+        "material",
+        "application"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "characterisedBy",
+          "object": "?property"
+        },
+        {
+          "subject": "?material",
+          "predicate": "suitableFor",
+          "object": "?application"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2013"
+      ],
+      "consolidation_reasoning": "Merged CQs related to material properties and their applications.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_006",
+        "GEN_ENTITY_LOOKUP_017"
+      ]
+    },
+    {
+      "gen_id": "FB_017",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?morphology of ?material?",
+      "variables": [
+        "morphology",
+        "material"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "characterisedBy",
+          "object": "?morphology"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Di Maio2018",
+        "Reglero2011",
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to material morphology.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_021",
+        "GEN_ENTITY_LOOKUP_055",
+        "GEN_ENTITY_LOOKUP_063"
+      ]
+    },
+    {
+      "gen_id": "FB_018",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?limitation of ?entity?",
+      "variables": [
+        "limitation",
+        "entity"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?entity",
+          "predicate": "hasLimitation",
+          "object": "?limitation"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "CQ related to entity limitations.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_084"
+      ]
+    },
+    {
+      "gen_id": "FB_019",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?method used to ?task?",
+      "variables": [
+        "method",
+        "task"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?method",
+          "predicate": "usedFor",
+          "object": "?task"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Liu2019",
+        "Otsuka2008"
+      ],
+      "consolidation_reasoning": "Merged CQs related to methods used for various tasks.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_038",
+        "GEN_ENTITY_LOOKUP_045"
+      ]
+    },
+    {
+      "gen_id": "FB_020",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?class of ?entity?",
+      "variables": [
+        "class",
+        "entity"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?entity",
+          "predicate": "rdf:type",
+          "object": "?class"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "broad",
+      "n_papers_covered": 11,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2014",
+        "Dumon2012",
+        "Guo2015",
+        "Jacobs2007",
+        "Liu2019",
+        "Otsuka2008",
+        "Reglero2011",
+        "Ruiz2011",
+        "Shah2025",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to entity classification.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_013",
+        "GEN_ENTITY_LOOKUP_020",
+        "GEN_ENTITY_LOOKUP_031",
+        "GEN_ENTITY_LOOKUP_036",
+        "GEN_ENTITY_LOOKUP_039",
+        "GEN_ENTITY_LOOKUP_040",
+        "GEN_ENTITY_LOOKUP_046",
+        "GEN_ENTITY_LOOKUP_047",
+        "GEN_ENTITY_LOOKUP_050",
+        "GEN_ENTITY_LOOKUP_054",
+        "GEN_ENTITY_LOOKUP_060",
+        "GEN_ENTITY_LOOKUP_069",
+        "GEN_ENTITY_LOOKUP_082",
+        "GEN_ENTITY_LOOKUP_083",
+        "GEN_ENTITY_LOOKUP_092"
+      ]
+    },
+    {
+      "gen_id": "FB_021",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?phenomenon of ?entity?",
+      "variables": [
+        "phenomenon",
+        "entity"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?entity",
+          "predicate": "exhibits",
+          "object": "?phenomenon"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "CQ related to entity phenomena.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_061"
+      ]
+    },
+    {
+      "gen_id": "FB_022",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?definition of ?term?",
+      "variables": [
+        "definition",
+        "term"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?term",
+          "predicate": "hasDefinition",
+          "object": "?definition"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2014",
+        "Dumon2012"
+      ],
+      "consolidation_reasoning": "Merged CQs related to term definitions.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_019",
+        "GEN_ENTITY_LOOKUP_025"
+      ]
+    },
+    {
+      "gen_id": "FB_023",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?condition used in ?process?",
+      "variables": [
+        "condition",
+        "process"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?process",
+          "predicate": "performedUnder",
+          "object": "?condition"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Dumon2012",
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "Merged CQs related to process conditions.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_026",
+        "GEN_ENTITY_LOOKUP_072",
+        "GEN_ENTITY_LOOKUP_076"
+      ]
+    },
+    {
+      "gen_id": "FB_024",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?property of ?material related to ?task?",
+      "variables": [
+        "property",
+        "material",
+        "task"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "characterisedBy",
+          "object": "?property"
+        },
+        {
+          "subject": "?property",
+          "predicate": "relatedTo",
+          "object": "?task"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "broad",
+      "n_papers_covered": 4,
+      "papers_covered": [
+        "Costeux2014",
+        "Liu2019",
+        "Ruiz2011",
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "Merged CQs related to material properties and their relation to various tasks.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_007",
+        "GEN_ENTITY_LOOKUP_011",
+        "GEN_ENTITY_LOOKUP_062",
+        "GEN_ENTITY_LOOKUP_064",
+        "GEN_ENTITY_LOOKUP_065",
+        "GEN_ENTITY_LOOKUP_066"
+      ]
+    },
+    {
+      "gen_id": "FB_025",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?EOS used to ?task?",
+      "variables": [
+        "EOS",
+        "task"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?EOS",
+          "predicate": "usedFor",
+          "object": "?task"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2013",
+        "Jacobs2007"
+      ],
+      "consolidation_reasoning": "Merged CQs related to EOS used for various tasks.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_004",
+        "GEN_ENTITY_LOOKUP_086",
+        "GEN_ENTITY_LOOKUP_093"
+      ]
+    },
+    {
+      "gen_id": "FB_026",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?method used to ?task?",
+      "variables": [
+        "method",
+        "task"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?method",
+          "predicate": "usedFor",
+          "object": "?task"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Otsuka2008",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to methods used for various tasks.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_044",
+        "GEN_ENTITY_LOOKUP_081"
+      ]
+    },
+    {
+      "gen_id": "FB_027",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?surrogate model used in ?task?",
+      "variables": [
+        "surrogate",
+        "task"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?surrogateModel",
+          "predicate": "usedIn",
+          "object": "?task"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "CQ related to surrogate models used in tasks.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_067"
+      ]
+    },
+    {
+      "gen_id": "FB_028",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?acquisition function used?",
+      "variables": [
+        "acquisition"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?acquisitionFunction",
+          "predicate": "used",
+          "object": ""
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "CQ related to acquisition functions used.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_068"
+      ]
+    },
+    {
+      "gen_id": "FB_029",
+      "archetype": "ENTITY_LOOKUP",
+      "source_archetypes": [
+        "ENTITY_LOOKUP"
+      ],
+      "generalized_question": "What is the ?chain length used in ?simulation?",
+      "variables": [
+        "chain",
+        "simulation"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?simulation",
+          "predicate": "uses",
+          "object": "?chainLength"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "CQ related to chain lengths used in simulations.",
+      "merged_from": [
+        "GEN_ENTITY_LOOKUP_079"
+      ]
+    },
+    {
+      "gen_id": "FB_030",
+      "archetype": "ENUMERATION",
+      "source_archetypes": [
+        "ENUMERATION"
+      ],
+      "generalized_question": "Which properties are used to characterize the cellular structure of polymer blend foams?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Material",
+          "predicate": "characterisedBy",
+          "object": "Property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 5,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2014",
+        "Jacobs2007",
+        "Liu2019",
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to property characterization.",
+      "merged_from": [
+        "GEN_ENUMERATION_002",
+        "GEN_ENUMERATION_012"
+      ]
+    },
+    {
+      "gen_id": "FB_031",
+      "archetype": "ENUMERATION",
+      "source_archetypes": [
+        "ENUMERATION"
+      ],
+      "generalized_question": "Which block copolymers were used in the study?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Material",
+          "predicate": "rdf:type",
+          "object": "BlockCopolymer"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "consolidation_reasoning": "Merged CQs related to block copolymer identification.",
+      "merged_from": [
+        "GEN_ENUMERATION_004",
+        "GEN_ENUMERATION_023"
+      ]
+    },
+    {
+      "gen_id": "FB_032",
+      "archetype": "ENUMERATION",
+      "source_archetypes": [
+        "ENUMERATION"
+      ],
+      "generalized_question": "Which foaming conditions were tested in batch foaming experiments?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Process",
+          "predicate": "performedUnder",
+          "object": "ProcessCondition"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "consolidation_reasoning": "Single CQ related to foaming conditions.",
+      "merged_from": [
+        "GEN_ENUMERATION_007"
+      ]
+    },
+    {
+      "gen_id": "FB_033",
+      "archetype": "ENUMERATION",
+      "source_archetypes": [
+        "ENUMERATION"
+      ],
+      "generalized_question": "Which types of depressurization methods are reported?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Process",
+          "predicate": "rdf:type",
+          "object": "Depressurization"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "consolidation_reasoning": "Single CQ related to depressurization methods.",
+      "merged_from": [
+        "GEN_ENUMERATION_019"
+      ]
+    },
+    {
+      "gen_id": "FB_034",
+      "archetype": "ENUMERATION",
+      "source_archetypes": [
+        "ENUMERATION"
+      ],
+      "generalized_question": "Which feature normalization was applied to dissolved-CO2 concentration data?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Data",
+          "predicate": "hasParameter",
+          "object": "Normalization"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "Single CQ related to data normalization.",
+      "merged_from": [
+        "GEN_ENUMERATION_016"
+      ]
+    },
+    {
+      "gen_id": "FB_035",
+      "archetype": "ENUMERATION",
+      "source_archetypes": [
+        "ENUMERATION"
+      ],
+      "generalized_question": "Which nanostructures are generated in block copolymers?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "BlockCopolymer",
+          "predicate": "hasComponent",
+          "object": "Nanostructure"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "consolidation_reasoning": "Single CQ related to nanostructure generation.",
+      "merged_from": [
+        "GEN_ENUMERATION_005"
+      ]
+    },
+    {
+      "gen_id": "FB_036",
+      "archetype": "GAP_OR_LIMITATION",
+      "source_archetypes": [
+        "GAP_OR_LIMITATION"
+      ],
+      "generalized_question": "What limitations are identified regarding the scalability or analysis of batch foaming processes or foam structures?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Process",
+          "predicate": "hasLimitation",
+          "object": "Limitation"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2014",
+        "Jacobs2007"
+      ],
+      "consolidation_reasoning": "These CQs are merged as they both concern limitations related to the scalability or analysis of processes or structures.",
+      "merged_from": [
+        "GEN_GAP_OR_LIMITATION_003",
+        "GEN_GAP_OR_LIMITATION_007"
+      ]
+    },
+    {
+      "gen_id": "FB_037",
+      "archetype": "GAP_OR_LIMITATION",
+      "source_archetypes": [
+        "GAP_OR_LIMITATION"
+      ],
+      "generalized_question": "What knowledge gaps exist regarding the use of nanometric fillers or other additives as nucleating agents in polymer foaming?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Material",
+          "predicate": "affects",
+          "object": "Property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "consolidation_reasoning": "This CQ remains separate as it specifically inquires about knowledge gaps related to nanometric fillers.",
+      "merged_from": [
+        "GEN_GAP_OR_LIMITATION_004"
+      ]
+    },
+    {
+      "gen_id": "FB_038",
+      "archetype": "GAP_OR_LIMITATION",
+      "source_archetypes": [
+        "GAP_OR_LIMITATION"
+      ],
+      "generalized_question": "What limitations are identified regarding the use of self-assembled block copolymers or other materials for industrial production of nanocellular foams?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Material",
+          "predicate": "suitableFor",
+          "object": "Application"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "consolidation_reasoning": "These CQs are merged as they both deal with limitations related to the use of specific materials for industrial applications.",
+      "merged_from": [
+        "GEN_GAP_OR_LIMITATION_009",
+        "GEN_GAP_OR_LIMITATION_010"
+      ]
+    },
+    {
+      "gen_id": "FB_039",
+      "archetype": "GAP_OR_LIMITATION",
+      "source_archetypes": [
+        "GAP_OR_LIMITATION"
+      ],
+      "generalized_question": "What physical phenomena or mechanisms are acknowledged as reasons for deviations between theoretical predictions and experimental measurements?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Phenomenon",
+          "predicate": "affects",
+          "object": "Measurement"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "This CQ remains separate as it specifically concerns the reasons for deviations between predictions and measurements.",
+      "merged_from": [
+        "GEN_GAP_OR_LIMITATION_015"
+      ]
+    },
+    {
+      "gen_id": "FB_040",
+      "archetype": "GAP_OR_LIMITATION",
+      "source_archetypes": [
+        "GAP_OR_LIMITATION"
+      ],
+      "generalized_question": "What is identified as the primary current limitation in the modeling of the polymer foaming process or other related processes?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Process",
+          "predicate": "hasLimitation",
+          "object": "Limitation"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Di Maio2018"
+      ],
+      "consolidation_reasoning": "This CQ remains separate as it specifically inquires about the primary current limitation in process modeling.",
+      "merged_from": [
+        "GEN_GAP_OR_LIMITATION_016"
+      ]
+    },
+    {
+      "gen_id": "FB_041",
+      "archetype": "GAP_OR_LIMITATION",
+      "source_archetypes": [
+        "GAP_OR_LIMITATION"
+      ],
+      "generalized_question": "What specific relationships between initial structures and resulting foams are identified as still being under study or requiring further research?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Structure",
+          "predicate": "affects",
+          "object": "Foam"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "consolidation_reasoning": "These CQs are merged as they both concern the relationship between initial structures and resulting foams.",
+      "merged_from": [
+        "GEN_GAP_OR_LIMITATION_017",
+        "GEN_GAP_OR_LIMITATION_018"
+      ]
+    },
+    {
+      "gen_id": "FB_042",
+      "archetype": "GAP_OR_LIMITATION",
+      "source_archetypes": [
+        "GAP_OR_LIMITATION"
+      ],
+      "generalized_question": "What technical limitations are acknowledged regarding various measurement techniques or other experimental methods?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Method",
+          "predicate": "hasLimitation",
+          "object": "Limitation"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013"
+      ],
+      "consolidation_reasoning": "These CQs are merged as they both deal with technical limitations related to measurement techniques or experimental methods.",
+      "merged_from": [
+        "GEN_GAP_OR_LIMITATION_019",
+        "GEN_GAP_OR_LIMITATION_020"
+      ]
+    },
+    {
+      "gen_id": "FB_043",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "source_archetypes": [
+        "METHOD_OF_MEASUREMENT"
+      ],
+      "generalized_question": "Which method was used to determine the molecular weight distribution of the polymer blends?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Property",
+          "predicate": "measuredBy",
+          "object": "Method"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "consolidation_reasoning": "Merged CQs related to determining molecular weight distribution of polymer blends.",
+      "merged_from": [
+        "GEN_METHOD_OF_MEASUREMENT_008",
+        "GEN_METHOD_OF_MEASUREMENT_019",
+        "GEN_METHOD_OF_MEASUREMENT_042",
+        "GEN_METHOD_OF_MEASUREMENT_044"
+      ]
+    },
+    {
+      "gen_id": "FB_044",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "source_archetypes": [
+        "METHOD_OF_MEASUREMENT"
+      ],
+      "generalized_question": "Which method was used to determine the diffusivity of CO2 from sorption plots?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Property",
+          "predicate": "measuredBy",
+          "object": "Method"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "consolidation_reasoning": "Merged CQs related to determining CO2 diffusivity.",
+      "merged_from": [
+        "GEN_METHOD_OF_MEASUREMENT_017",
+        "GEN_METHOD_OF_MEASUREMENT_028",
+        "GEN_METHOD_OF_MEASUREMENT_035"
+      ]
+    },
+    {
+      "gen_id": "FB_045",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "source_archetypes": [
+        "METHOD_OF_MEASUREMENT"
+      ],
+      "generalized_question": "Which method was used to determine the expansion ratio of the polymer foam?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Property",
+          "predicate": "measuredBy",
+          "object": "Method"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "consolidation_reasoning": "Merged CQs related to determining expansion ratio.",
+      "merged_from": [
+        "GEN_METHOD_OF_MEASUREMENT_010",
+        "GEN_METHOD_OF_MEASUREMENT_021"
+      ]
+    },
+    {
+      "gen_id": "FB_046",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "source_archetypes": [
+        "METHOD_OF_MEASUREMENT"
+      ],
+      "generalized_question": "Which analytical technique was used to determine the molecular weight properties of the copolymer?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Property",
+          "predicate": "measuredBy",
+          "object": "Method"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "broad",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Jacobs2007",
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to determining molecular weight properties.",
+      "merged_from": [
+        "GEN_METHOD_OF_MEASUREMENT_001",
+        "GEN_METHOD_OF_MEASUREMENT_016",
+        "GEN_METHOD_OF_MEASUREMENT_027",
+        "GEN_METHOD_OF_MEASUREMENT_037",
+        "GEN_METHOD_OF_MEASUREMENT_038",
+        "GEN_METHOD_OF_MEASUREMENT_048",
+        "GEN_METHOD_OF_MEASUREMENT_049"
+      ]
+    },
+    {
+      "gen_id": "FB_047",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "source_archetypes": [
+        "METHOD_OF_MEASUREMENT"
+      ],
+      "generalized_question": "Which method was used to determine the chain length of the polymer chains?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Property",
+          "predicate": "measuredBy",
+          "object": "Method"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to determining chain length.",
+      "merged_from": [
+        "GEN_METHOD_OF_MEASUREMENT_014",
+        "GEN_METHOD_OF_MEASUREMENT_025"
+      ]
+    },
+    {
+      "gen_id": "FB_048",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "source_archetypes": [
+        "METHOD_OF_MEASUREMENT"
+      ],
+      "generalized_question": "Which analytical techniques were used to investigate the interactions of CO2 with polymers?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Property",
+          "predicate": "measuredBy",
+          "object": "Method"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "broad",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Costeux2014",
+        "Di Maio2018",
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "Merged CQs related to investigating CO2 interactions with polymers.",
+      "merged_from": [
+        "GEN_METHOD_OF_MEASUREMENT_029",
+        "GEN_METHOD_OF_MEASUREMENT_030",
+        "GEN_METHOD_OF_MEASUREMENT_053",
+        "GEN_METHOD_OF_MEASUREMENT_054",
+        "GEN_METHOD_OF_MEASUREMENT_057"
+      ]
+    },
+    {
+      "gen_id": "FB_049",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "source_archetypes": [
+        "METHOD_OF_MEASUREMENT"
+      ],
+      "generalized_question": "Which technique was used to observe the dense solid nanostructures of the copolymers and blends?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Property",
+          "predicate": "measuredBy",
+          "object": "Method"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2013",
+        "Dumon2012"
+      ],
+      "consolidation_reasoning": "Merged CQs related to observing nanostructures.",
+      "merged_from": [
+        "GEN_METHOD_OF_MEASUREMENT_003",
+        "GEN_METHOD_OF_MEASUREMENT_058",
+        "GEN_METHOD_OF_MEASUREMENT_059"
+      ]
+    },
+    {
+      "gen_id": "FB_050",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why was a specific ?polymerProperty chosen for the ?process?",
+      "variables": [
+        "polymerProperty",
+        "process"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?polymer",
+          "predicate": "characterisedBy",
+          "object": "?polymerProperty"
+        },
+        {
+          "subject": "?process",
+          "predicate": "affects",
+          "object": "?polymerProperty"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "broad",
+      "n_papers_covered": 8,
+      "papers_covered": [
+        "Costeux2013",
+        "Di Maio2018",
+        "Dumon2012",
+        "Jacobs2007",
+        "Liu2019",
+        "Reglero2011",
+        "Ruiz2011",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "These CQs all relate to the selection or use of specific polymer properties or additives in a process, with varying specifics.",
+      "merged_from": [
+        "GEN_MOTIVATION_002",
+        "GEN_MOTIVATION_004",
+        "GEN_MOTIVATION_007",
+        "GEN_MOTIVATION_022",
+        "GEN_MOTIVATION_023",
+        "GEN_MOTIVATION_026",
+        "GEN_MOTIVATION_032",
+        "GEN_MOTIVATION_043",
+        "GEN_MOTIVATION_057",
+        "GEN_MOTIVATION_058"
+      ]
+    },
+    {
+      "gen_id": "FB_051",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why was a specific ?processParameter chosen for the ?process?",
+      "variables": [
+        "processParameter",
+        "process"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?process",
+          "predicate": "hasParameter",
+          "object": "?processParameter"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "broad",
+      "n_papers_covered": 5,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013",
+        "Guo2015",
+        "Otsuka2008",
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "These CQs all relate to the selection of specific process parameters.",
+      "merged_from": [
+        "GEN_MOTIVATION_001",
+        "GEN_MOTIVATION_003",
+        "GEN_MOTIVATION_005",
+        "GEN_MOTIVATION_006",
+        "GEN_MOTIVATION_010",
+        "GEN_MOTIVATION_029",
+        "GEN_MOTIVATION_030",
+        "GEN_MOTIVATION_031"
+      ]
+    },
+    {
+      "gen_id": "FB_052",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why is ?processCondition necessary for ?process?",
+      "variables": [
+        "processCondition",
+        "process"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?process",
+          "predicate": "performedUnder",
+          "object": "?processCondition"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 3,
+      "papers_covered": [
+        "Costeux2013",
+        "Costeux2014",
+        "Di Maio2018"
+      ],
+      "consolidation_reasoning": "These CQs all relate to the necessity of specific process conditions.",
+      "merged_from": [
+        "GEN_MOTIVATION_011",
+        "GEN_MOTIVATION_013",
+        "GEN_MOTIVATION_016",
+        "GEN_MOTIVATION_021"
+      ]
+    },
+    {
+      "gen_id": "FB_053",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "What is the effect of ?entity on ?property?",
+      "variables": [
+        "entity",
+        "property"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?entity",
+          "predicate": "affects",
+          "object": "?property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 4,
+      "papers_covered": [
+        "Costeux2014",
+        "Di Maio2018",
+        "Dumon2012",
+        "Liu2019"
+      ],
+      "consolidation_reasoning": "These CQs all relate to the effect of some entity on a property.",
+      "merged_from": [
+        "GEN_MOTIVATION_012",
+        "GEN_MOTIVATION_015",
+        "GEN_MOTIVATION_019",
+        "GEN_MOTIVATION_025",
+        "GEN_MOTIVATION_035",
+        "GEN_MOTIVATION_036"
+      ]
+    },
+    {
+      "gen_id": "FB_054",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why is ?method considered vital for ?process?",
+      "variables": [
+        "method",
+        "process"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?method",
+          "predicate": "measuredBy",
+          "object": "?process"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Di Maio2018",
+        "Reglero2011"
+      ],
+      "consolidation_reasoning": "These CQs relate to the importance of specific methods.",
+      "merged_from": [
+        "GEN_MOTIVATION_018",
+        "GEN_MOTIVATION_041"
+      ]
+    },
+    {
+      "gen_id": "FB_055",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why was ?specificTechnique used in the characterization of ?material?",
+      "variables": [
+        "specificTechnique",
+        "material"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?material",
+          "predicate": "characterisedBy",
+          "object": "?specificTechnique"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Otsuka2008",
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "These CQs relate to the use of specific techniques in material characterization.",
+      "merged_from": [
+        "GEN_MOTIVATION_038",
+        "GEN_MOTIVATION_048"
+      ]
+    },
+    {
+      "gen_id": "FB_056",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why is ?phenomenon considered a challenge in ?process?",
+      "variables": [
+        "phenomenon",
+        "process"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?phenomenon",
+          "predicate": "hasLimitation",
+          "object": "?process"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2014",
+        "Di Maio2018"
+      ],
+      "consolidation_reasoning": "These CQs relate to challenges in specific processes.",
+      "merged_from": [
+        "GEN_MOTIVATION_014",
+        "GEN_MOTIVATION_017"
+      ]
+    },
+    {
+      "gen_id": "FB_057",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why was ?computationalMethod selected for ?task?",
+      "variables": [
+        "computationalMethod",
+        "task"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?computationalMethod",
+          "predicate": "suitableFor",
+          "object": "?task"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "These CQs relate to the selection of computational methods for specific tasks.",
+      "merged_from": [
+        "GEN_MOTIVATION_049",
+        "GEN_MOTIVATION_050",
+        "GEN_MOTIVATION_051"
+      ]
+    },
+    {
+      "gen_id": "FB_058",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why did the authors propose using ?mathematicalModel instead of ?alternativeModel?",
+      "variables": [
+        "mathematicalModel",
+        "alternativeModel"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?mathematicalModel",
+          "predicate": "suitableFor",
+          "object": "?data"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Ruiz2011",
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "These CQs relate to the choice of mathematical models.",
+      "merged_from": [
+        "GEN_MOTIVATION_047",
+        "GEN_MOTIVATION_054",
+        "GEN_MOTIVATION_055",
+        "GEN_MOTIVATION_056"
+      ]
+    },
+    {
+      "gen_id": "FB_059",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why was ?processStep necessary after the initial ?process?",
+      "variables": [
+        "processStep",
+        "process"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?processStep",
+          "predicate": "performedAfter",
+          "object": "?process"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "These CQs relate to the necessity of specific process steps.",
+      "merged_from": [
+        "GEN_MOTIVATION_009",
+        "GEN_MOTIVATION_046"
+      ]
+    },
+    {
+      "gen_id": "FB_060",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "What research gap does ?study aim to address?",
+      "variables": [
+        "study"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?study",
+          "predicate": "addresses",
+          "object": "?researchGap"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Jacobs2007",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "These CQs relate to research gaps addressed by studies.",
+      "merged_from": [
+        "GEN_MOTIVATION_034",
+        "GEN_MOTIVATION_059"
+      ]
+    },
+    {
+      "gen_id": "FB_061",
+      "archetype": "MOTIVATION",
+      "source_archetypes": [
+        "MOTIVATION"
+      ],
+      "generalized_question": "Why is ?temperature considered important for ?process?",
+      "variables": [
+        "temperature",
+        "process"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "?temperature",
+          "predicate": "affects",
+          "object": "?process"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "These CQs relate to the importance of temperature in specific processes.",
+      "merged_from": [
+        "GEN_MOTIVATION_052",
+        "GEN_MOTIVATION_053"
+      ]
+    },
+    {
+      "gen_id": "FB_062",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple represents the relationship between a polymer and its property?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Polymer",
+          "predicate": "characterisedBy",
+          "object": "Property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 5,
+      "papers_covered": [
+        "Costeux2014",
+        "Di Maio2018",
+        "Guo2015",
+        "Jacobs2007",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "Merged CQs related to polymer properties.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_002",
+        "GEN_ONTOLOGY_TRIPLE_006",
+        "GEN_ONTOLOGY_TRIPLE_014",
+        "GEN_ONTOLOGY_TRIPLE_030"
+      ]
+    },
+    {
+      "gen_id": "FB_063",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple represents the relationship between a polymer and its interaction with CO2?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Polymer",
+          "predicate": "affects",
+          "object": "CO2Interaction"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "Merged CQs related to polymer and CO2 interaction.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_010",
+        "GEN_ONTOLOGY_TRIPLE_026"
+      ]
+    },
+    {
+      "gen_id": "FB_064",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple captures the relationship between a process and its method of production?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Process",
+          "predicate": "producedBy",
+          "object": "ProductionMethod"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2014",
+        "Otsuka2008"
+      ],
+      "consolidation_reasoning": "Merged CQs related to process production method.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_011",
+        "GEN_ONTOLOGY_TRIPLE_021",
+        "GEN_ONTOLOGY_TRIPLE_027",
+        "GEN_ONTOLOGY_TRIPLE_037"
+      ]
+    },
+    {
+      "gen_id": "FB_065",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple represents the relationship between a polymer blend and its production method?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "PolymerBlend",
+          "predicate": "producedBy",
+          "object": "ProductionMethod"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Otsuka2008"
+      ],
+      "consolidation_reasoning": "Merged CQs related to polymer blend production method.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_016",
+        "GEN_ONTOLOGY_TRIPLE_022",
+        "GEN_ONTOLOGY_TRIPLE_032",
+        "GEN_ONTOLOGY_TRIPLE_038"
+      ]
+    },
+    {
+      "gen_id": "FB_066",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple captures the relationship between a process and its resulting foam structure?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Process",
+          "predicate": "affects",
+          "object": "FoamStructure"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "medium",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Costeux2013"
+      ],
+      "consolidation_reasoning": "Merged CQs related to process and foam structure.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_015",
+        "GEN_ONTOLOGY_TRIPLE_023",
+        "GEN_ONTOLOGY_TRIPLE_031",
+        "GEN_ONTOLOGY_TRIPLE_039"
+      ]
+    },
+    {
+      "gen_id": "FB_067",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple represents the relationship between a polymer and its characterization technique?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Polymer",
+          "predicate": "characterisedBy",
+          "object": "CharacterizationTechnique"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "consolidation_reasoning": "Merged CQs related to polymer characterization technique.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_020",
+        "GEN_ONTOLOGY_TRIPLE_036"
+      ]
+    },
+    {
+      "gen_id": "FB_068",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple captures the relationship between a design approach and its optimization method?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "DesignApproach",
+          "predicate": "hasParameter",
+          "object": "OptimizationMethod"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Shah2025"
+      ],
+      "consolidation_reasoning": "Merged CQs related to design approach optimization.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_009",
+        "GEN_ONTOLOGY_TRIPLE_047"
+      ]
+    },
+    {
+      "gen_id": "FB_069",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple captures the relationship between a blowing agent and its property related to sorption?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "BlowingAgent",
+          "predicate": "affects",
+          "object": "SorptionProperty"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Guo2015",
+        "Shieh2002"
+      ],
+      "consolidation_reasoning": "No merge partners.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_004"
+      ]
+    },
+    {
+      "gen_id": "FB_070",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple represents the relationship between a polymer blending process and the resulting blend?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "PolymerBlendingProcess",
+          "predicate": "produces",
+          "object": "PolymerBlend"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Liu2019",
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "No merge partners.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_005"
+      ]
+    },
+    {
+      "gen_id": "FB_071",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple represents the relationship between a polymer blend and its form after blending?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "PolymerBlend",
+          "predicate": "hasProperty",
+          "object": "BlendForm"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "Merged CQs related to polymer blend form.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_012",
+        "GEN_ONTOLOGY_TRIPLE_028"
+      ]
+    },
+    {
+      "gen_id": "FB_072",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple captures the relationship between a process and its resulting nanofoams?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Process",
+          "predicate": "produces",
+          "object": "Nanofoams"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Guo2015"
+      ],
+      "consolidation_reasoning": "Merged CQs related to process nanofoams.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_018",
+        "GEN_ONTOLOGY_TRIPLE_034"
+      ]
+    },
+    {
+      "gen_id": "FB_073",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple represents the relationship between a polymer and its core composition?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Polymer",
+          "predicate": "hasComponent",
+          "object": "CoreComposition"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "consolidation_reasoning": "Merged CQs related to polymer core composition.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_017",
+        "GEN_ONTOLOGY_TRIPLE_033"
+      ]
+    },
+    {
+      "gen_id": "FB_074",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple captures the relationship between a polymer and its reference material during analysis?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Polymer",
+          "predicate": "comparedTo",
+          "object": "ReferenceMaterial"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Jacobs2007"
+      ],
+      "consolidation_reasoning": "Merged CQs related to polymer reference material.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_019",
+        "GEN_ONTOLOGY_TRIPLE_035"
+      ]
+    },
+    {
+      "gen_id": "FB_075",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple represents the relationship between a polymer and its production method?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "Polymer",
+          "predicate": "producedBy",
+          "object": "ProductionMethod"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Dumon2012"
+      ],
+      "consolidation_reasoning": "Merged CQs related to polymer production method.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_024",
+        "GEN_ONTOLOGY_TRIPLE_040"
+      ]
+    },
+    {
+      "gen_id": "FB_076",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple captures the relationship between the '3D-DFT approach' and the 'nucleation number density' of the polymer blend?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "3D-DFTApproach",
+          "predicate": "affects",
+          "object": "NucleationNumberDensity"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Wu2021"
+      ],
+      "consolidation_reasoning": "No merge partners.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_048"
+      ]
+    },
+    {
+      "gen_id": "FB_077",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple represents the relationship between the MAM triblock copolymer and its specific weight percentage of butylacrylate?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "MAMTriblockCopolymer",
+          "predicate": "hasProperty",
+          "object": "ButylacrylateWeightPercentage"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "consolidation_reasoning": "No merge partners.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_045"
+      ]
+    },
+    {
+      "gen_id": "FB_078",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple represents the relationship between the 'batch one-step scCO2 process' and the 'supercritical CO2' used in the foaming procedure?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "BatchOneStepScCO2Process",
+          "predicate": "uses",
+          "object": "SupercriticalCO2"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Reglero2011"
+      ],
+      "consolidation_reasoning": "No merge partners.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_046"
+      ]
+    },
+    {
+      "gen_id": "FB_079",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple captures the relationship between the PS60/PMMA40 blend and the thermal annealing process?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "PS60PMMA40Blend",
+          "predicate": "processedBy",
+          "object": "ThermalAnnealingProcess"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Liu2019"
+      ],
+      "consolidation_reasoning": "No merge partners.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_043"
+      ]
+    },
+    {
+      "gen_id": "FB_080",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple represents the relationship between polymeric nanocellular foams and the process of physical foaming with CO2?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "PolymericNanocellularFoams",
+          "predicate": "producedBy",
+          "object": "PhysicalFoamingWithCO2"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Costeux2014"
+      ],
+      "consolidation_reasoning": "No merge partners.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_041"
+      ]
+    },
+    {
+      "gen_id": "FB_081",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "source_archetypes": [
+        "ONTOLOGY_TRIPLE"
+      ],
+      "generalized_question": "Which triple captures the relationship between the nanocellular foam and the specific process used to induce its cellular structure?",
+      "variables": [],
+      "triple_pattern": [
+        {
+          "subject": "NanocellularFoam",
+          "predicate": "hasProperty",
+          "object": "CellularStructure"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Otsuka2008"
+      ],
+      "consolidation_reasoning": "No merge partners.",
+      "merged_from": [
+        "GEN_ONTOLOGY_TRIPLE_044"
+      ]
+    },
+    {
+      "gen_id": "FB_082",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "source_archetypes": [
+        "PROCESS_FOR_MATERIAL"
+      ],
+      "generalized_question": "What polymerization method was used to synthesize the ?copolymers?",
+      "variables": [
+        "copolymers"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "Copolymer",
+          "predicate": "producedBy",
+          "object": "PolymerizationMethod"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Costeux2013",
+        "Dumon2012"
+      ],
+      "consolidation_reasoning": "No merge partner found.",
+      "merged_from": [
+        "GEN_PROCESS_FOR_MATERIAL_003"
+      ]
+    },
+    {
+      "gen_id": "FB_083",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "source_archetypes": [
+        "PROCESS_FOR_MATERIAL"
+      ],
+      "generalized_question": "What process was used to cross-link the ?polymer during synthesis?",
+      "variables": [
+        "polymer"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "Polymer",
+          "predicate": "producedBy",
+          "object": "Cross-linkingProcess"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "consolidation_reasoning": "No merge partner found.",
+      "merged_from": [
+        "GEN_PROCESS_FOR_MATERIAL_008"
+      ]
+    },
+    {
+      "gen_id": "FB_084",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "source_archetypes": [
+        "PROCESS_FOR_MATERIAL"
+      ],
+      "generalized_question": "What was the precursor ?material used to synthesize the ?product?",
+      "variables": [
+        "material",
+        "product"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "Product",
+          "predicate": "hasComponent",
+          "object": "PrecursorMaterial"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": true,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 1,
+      "papers_covered": [
+        "Bärwinkel2016"
+      ],
+      "consolidation_reasoning": "No merge partner found.",
+      "merged_from": [
+        "GEN_PROCESS_FOR_MATERIAL_009"
+      ]
+    },
+    {
+      "gen_id": "FB_085",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "source_archetypes": [
+        "PROCESS_FOR_MATERIAL"
+      ],
+      "generalized_question": "What was the ?property of the precursor ?material used?",
+      "variables": [
+        "property",
+        "material"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "PrecursorMaterial",
+          "predicate": "characterisedBy",
+          "object": "Property"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Bärwinkel2016",
+        "Jacobs2007"
+      ],
+      "consolidation_reasoning": "Merged CQs with same triple signature (Material, characterisedBy, Property) but different property and papers covered.",
+      "merged_from": [
+        "GEN_PROCESS_FOR_MATERIAL_012",
+        "GEN_PROCESS_FOR_MATERIAL_013"
+      ]
+    },
+    {
+      "gen_id": "FB_086",
+      "archetype": "PROCESS_FOR_MATERIAL",
+      "source_archetypes": [
+        "PROCESS_FOR_MATERIAL"
+      ],
+      "generalized_question": "How were the ?additives blended into the ?polymer?",
+      "variables": [
+        "additives",
+        "polymer"
+      ],
+      "triple_pattern": [
+        {
+          "subject": "Polymer",
+          "predicate": "hasComponent",
+          "object": "Additive"
+        }
+      ],
+      "sparql_sketch": "",
+      "is_singleton_group": false,
+      "coverage_breadth": "narrow",
+      "n_papers_covered": 2,
+      "papers_covered": [
+        "Reglero2011",
+        "Ruiz2011"
+      ],
+      "consolidation_reasoning": "Merged CQs with same triple signature (Polymer, hasComponent, Additive) but different additive and papers covered.",
+      "merged_from": [
+        "GEN_PROCESS_FOR_MATERIAL_014",
+        "GEN_PROCESS_FOR_MATERIAL_015"
+      ]
+    }
+  ],
+  "reverse_index": {
+    "GEN_ENTITY_LOOKUP_002": "CQ_001",
+    "GEN_ENTITY_LOOKUP_009": "CQ_001",
+    "GEN_ENTITY_LOOKUP_024": "CQ_001",
+    "GEN_ENTITY_LOOKUP_027": "CQ_001",
+    "GEN_ENTITY_LOOKUP_034": "CQ_001",
+    "GEN_ENTITY_LOOKUP_042": "CQ_001",
+    "GEN_ENTITY_LOOKUP_049": "CQ_001",
+    "GEN_ENTITY_LOOKUP_051": "CQ_001",
+    "GEN_ENTITY_LOOKUP_057": "CQ_001",
+    "GEN_ENTITY_LOOKUP_071": "CQ_001",
+    "GEN_ENTITY_LOOKUP_077": "CQ_001",
+    "GEN_ENTITY_LOOKUP_058": "CQ_008",
+    "GEN_ENTITY_LOOKUP_096": "CQ_008",
+    "GEN_ENTITY_LOOKUP_030": "CQ_022",
+    "GEN_CAUSAL_001": "CQ_002",
+    "GEN_CAUSAL_002": "CQ_002",
+    "GEN_CAUSAL_019": "CQ_002",
+    "GEN_CAUSAL_040": "CQ_002",
+    "GEN_CAUSAL_004": "CQ_002",
+    "GEN_CAUSAL_008": "CQ_002",
+    "GEN_CAUSAL_014": "CQ_002",
+    "GEN_CAUSAL_046": "CQ_002",
+    "GEN_CAUSAL_055": "CQ_002",
+    "GEN_CAUSAL_057": "CQ_002",
+    "GEN_CAUSAL_058": "CQ_002",
+    "GEN_CAUSAL_060": "CQ_002",
+    "GEN_CAUSAL_067": "CQ_002",
+    "GEN_CAUSAL_073": "CQ_002",
+    "GEN_CAUSAL_074": "CQ_002",
+    "GEN_CAUSAL_075": "CQ_002",
+    "GEN_CAUSAL_080": "CQ_002",
+    "GEN_CAUSAL_017": "CQ_030",
+    "GEN_CAUSAL_038": "CQ_030",
+    "GEN_CAUSAL_039": "CQ_030",
+    "GEN_CAUSAL_085": "CQ_030",
+    "GEN_CAUSAL_087": "CQ_030",
+    "GEN_CAUSAL_090": "CQ_030",
+    "GEN_CAUSAL_005": "CQ_006",
+    "GEN_CAUSAL_007": "CQ_006",
+    "GEN_CAUSAL_025": "CQ_006",
+    "GEN_CAUSAL_052": "CQ_006",
+    "GEN_CAUSAL_053": "CQ_006",
+    "GEN_CAUSAL_054": "CQ_006",
+    "GEN_CAUSAL_064": "CQ_006",
+    "GEN_CAUSAL_012": "CQ_002",
+    "GEN_CAUSAL_023": "CQ_002",
+    "GEN_CAUSAL_035": "CQ_002",
+    "GEN_CAUSAL_078": "CQ_002",
+    "SA_EL_018": "CQ_014",
+    "GEN_ENTITY_LOOKUP_017": "FB_016",
+    "GEN_ENUMERATION_003": "CQ_004",
+    "GEN_ENUMERATION_010": "CQ_004",
+    "GEN_ENUMERATION_013": "CQ_004",
+    "GEN_ENUMERATION_017": "CQ_004",
+    "GEN_ENUMERATION_018": "CQ_004",
+    "GEN_ENUMERATION_020": "CQ_004",
+    "GEN_ENUMERATION_015": "CQ_004",
+    "GEN_PROCESS_FOR_MATERIAL_002": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_004": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_006": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_010": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_011": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_016": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_017": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_020": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_021": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_025": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_018": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_019": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_023": "CQ_005",
+    "GEN_PROCESS_FOR_MATERIAL_022": "CQ_005",
+    "GEN_ENTITY_LOOKUP_008": "CQ_006",
+    "GEN_ENTITY_LOOKUP_022": "CQ_006",
+    "GEN_ENTITY_LOOKUP_043": "CQ_006",
+    "GEN_COMPARATIVE_001": "CQ_007",
+    "GEN_COMPARATIVE_003": "CQ_007",
+    "GEN_COMPARATIVE_004": "CQ_007",
+    "GEN_COMPARATIVE_005": "CQ_007",
+    "GEN_COMPARATIVE_009": "CQ_007",
+    "GEN_COMPARATIVE_012": "CQ_007",
+    "GEN_COMPARATIVE_013": "CQ_007",
+    "GEN_COMPARATIVE_014": "CQ_007",
+    "GEN_COMPARATIVE_016": "CQ_007",
+    "GEN_COMPARATIVE_024": "CQ_007",
+    "GEN_COMPARATIVE_026": "CQ_007",
+    "GEN_COMPARATIVE_027": "CQ_007",
+    "GEN_COMPARATIVE_030": "CQ_007",
+    "GEN_COMPARATIVE_031": "CQ_007",
+    "GEN_COMPARATIVE_035": "CQ_007",
+    "GEN_COMPARATIVE_037": "CQ_007",
+    "GEN_COMPARATIVE_002": "CQ_007",
+    "GEN_COMPARATIVE_010": "CQ_007",
+    "GEN_COMPARATIVE_011": "CQ_007",
+    "GEN_COMPARATIVE_028": "CQ_007",
+    "GEN_COMPARATIVE_029": "CQ_007",
+    "GEN_COMPARATIVE_032": "CQ_007",
+    "GEN_COMPARATIVE_033": "CQ_007",
+    "GEN_COMPARATIVE_036": "CQ_007",
+    "GEN_COMPARATIVE_043": "CQ_007",
+    "GEN_COMPARATIVE_008": "CQ_007",
+    "GEN_COMPARATIVE_044": "CQ_007",
+    "GEN_METHOD_OF_MEASUREMENT_002": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_006": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_015": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_018": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_026": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_032": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_033": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_034": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_036": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_005": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_040": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_050": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_052": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_056": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_060": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_061": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_062": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_007": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_013": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_024": "CQ_009",
+    "GEN_METHOD_OF_MEASUREMENT_039": "CQ_009",
+    "GEN_GAP_OR_LIMITATION_001": "CQ_010",
+    "GEN_GAP_OR_LIMITATION_011": "CQ_010",
+    "GEN_GAP_OR_LIMITATION_002": "CQ_010",
+    "GEN_GAP_OR_LIMITATION_006": "CQ_010",
+    "GEN_GAP_OR_LIMITATION_005": "CQ_024",
+    "GEN_GAP_OR_LIMITATION_012": "CQ_024",
+    "GEN_MOTIVATION_020": "CQ_026",
+    "GEN_MOTIVATION_024": "CQ_026",
+    "GEN_MOTIVATION_027": "CQ_026",
+    "GEN_MOTIVATION_042": "CQ_026",
+    "GEN_MOTIVATION_008": "CQ_023",
+    "GEN_MOTIVATION_037": "CQ_023",
+    "GEN_MOTIVATION_039": "CQ_023",
+    "GEN_COMPARATIVE_007": "CQ_012",
+    "GEN_COMPARATIVE_034": "CQ_012",
+    "GEN_GAP_OR_LIMITATION_008": "CQ_012",
+    "GEN_ENUMERATION_006": "CQ_013",
+    "GEN_ENUMERATION_008": "CQ_013",
+    "GEN_ENUMERATION_022": "CQ_031",
+    "GEN_ONTOLOGY_TRIPLE_007": "CQ_014",
+    "GEN_ONTOLOGY_TRIPLE_025": "CQ_014",
+    "GEN_ENUMERATION_001": "CQ_015",
+    "GEN_METHOD_OF_MEASUREMENT_011": "CQ_015",
+    "GEN_METHOD_OF_MEASUREMENT_022": "CQ_015",
+    "GEN_METHOD_OF_MEASUREMENT_009": "CQ_015",
+    "GEN_METHOD_OF_MEASUREMENT_020": "CQ_015",
+    "GEN_METHOD_OF_MEASUREMENT_041": "CQ_015",
+    "GEN_METHOD_OF_MEASUREMENT_043": "CQ_015",
+    "GEN_METHOD_OF_MEASUREMENT_045": "CQ_015",
+    "GEN_CAUSAL_011": "CQ_016",
+    "GEN_CAUSAL_013": "CQ_016",
+    "GEN_CAUSAL_056": "CQ_016", 
+    "GEN_CAUSAL_059": "CQ_016",
+    "GEN_CAUSAL_062": "CQ_016",
+    "GEN_CAUSAL_068": "CQ_016",
+    "GEN_CAUSAL_069": "CQ_016",
+    "GEN_CAUSAL_077": "CQ_016",
+    "GEN_CAUSAL_079": "CQ_016",
+    "GEN_CAUSAL_036": "CQ_016",
+    "GEN_CAUSAL_044": "CQ_016",
+    "GEN_CAUSAL_045": "CQ_033",
+    "GEN_CAUSAL_050": "CQ_016",
+    "GEN_CAUSAL_081": "CQ_016",
+    "GEN_CAUSAL_082": "CQ_016",
+    "GEN_CAUSAL_083": "CQ_016",
+    "GEN_CAUSAL_084": "CQ_016",
+    "GEN_COMPARATIVE_017": "CQ_016",
+    "GEN_COMPARATIVE_018": "CQ_016",
+    "GEN_COMPARATIVE_019": "CQ_016",
+    "GEN_COMPARATIVE_020": "CQ_016",
+    "GEN_COMPARATIVE_023": "CQ_016",
+    "GEN_ENTITY_LOOKUP_048": "CQ_017",
+    "GEN_ENTITY_LOOKUP_056": "CQ_017",
+    "GEN_ONTOLOGY_TRIPLE_001": "CQ_017",
+    "GEN_ONTOLOGY_TRIPLE_042": "CQ_017",
+    "GEN_PROCESS_FOR_MATERIAL_024": "CQ_018",
+    "GEN_CONDITION_FOR_PROCESS_019": "CQ_018",
+    "GEN_ENTITY_LOOKUP_010": "CQ_019",
+    "GEN_ENTITY_LOOKUP_037": "CQ_019",
+    "GEN_ENTITY_LOOKUP_041": "CQ_019",
+    "GEN_ENTITY_LOOKUP_028": "CQ_019",
+    "GEN_ENTITY_LOOKUP_033": "CQ_019",
+    "GEN_ENTITY_LOOKUP_070": "CQ_019",
+    "GEN_CONDITION_FOR_PROCESS_014": "CQ_019",
+    "GEN_ENTITY_LOOKUP_012": "CQ_020",
+    "GEN_ENTITY_LOOKUP_029": "CQ_020",
+    "GEN_ENTITY_LOOKUP_035": "CQ_020",
+    "GEN_ENTITY_LOOKUP_052": "CQ_020",
+    "GEN_ENTITY_LOOKUP_067": "FB_027",
+    "GEN_ENTITY_LOOKUP_073": "CQ_020",
+    "GEN_ENTITY_LOOKUP_093": "FB_025",
+    "GEN_ENTITY_LOOKUP_053": "CQ_020",
+    "GEN_ENTITY_LOOKUP_074": "CQ_020",
+    "GEN_ENTITY_LOOKUP_078": "CQ_020",
+    "GEN_ENTITY_LOOKUP_080": "CQ_020",
+    "GEN_ENTITY_LOOKUP_090": "CQ_020",
+    "GEN_PROCESS_FOR_MATERIAL_005": "CQ_021",
+    "GEN_ONTOLOGY_TRIPLE_013": "CQ_021",
+    "GEN_ONTOLOGY_TRIPLE_029": "CQ_021",
+    "GEN_MOTIVATION_028": "CQ_022",
+    "GEN_MOTIVATION_033": "CQ_022",
+    "GEN_MOTIVATION_044": "CQ_022",
+    "GEN_MOTIVATION_040": "CQ_023",
+    "GEN_MOTIVATION_045": "CQ_023",
+    "GEN_GAP_OR_LIMITATION_013": "CQ_024",
+    "GEN_METHOD_OF_MEASUREMENT_004": "CQ_025",
+    "GEN_METHOD_OF_MEASUREMENT_012": "CQ_025",
+    "GEN_METHOD_OF_MEASUREMENT_023": "CQ_025",
+    "GEN_METHOD_OF_MEASUREMENT_047": "CQ_025",
+    "GEN_METHOD_OF_MEASUREMENT_051": "CQ_025",
+    "GEN_ENUMERATION_021": "CQ_025",
+    "GEN_ENTITY_LOOKUP_018": "CQ_027",
+    "GEN_ENUMERATION_009": "CQ_027",
+    "GEN_ENUMERATION_011": "CQ_032",
+    "GEN_ENTITY_LOOKUP_088": "CQ_032",
+    "GEN_ENTITY_LOOKUP_091": "CQ_032",
+    "GEN_ENTITY_LOOKUP_005": "CQ_029",
+    "GEN_ENTITY_LOOKUP_016": "CQ_029",
+    "GEN_GAP_OR_LIMITATION_014": "CQ_029",
+    "GEN_ENTITY_LOOKUP_075": "CQ_030",
+    "GEN_ENTITY_LOOKUP_085": "CQ_030",
+    "GEN_METHOD_OF_MEASUREMENT_055": "CQ_031",
+    "GEN_ENUMERATION_014": "CQ_033",
+    "GEN_CAUSAL_003": "CQ_033",
+    "GEN_CAUSAL_010": "CQ_033",
+    "GEN_CAUSAL_016": "CQ_033",
+    "GEN_CAUSAL_024": "CQ_033",
+    "GEN_CAUSAL_026": "CQ_033",
+    "GEN_CAUSAL_030": "CQ_033",
+    "GEN_CAUSAL_033": "CQ_033",
+    "GEN_CAUSAL_041": "CQ_033",
+    "GEN_CAUSAL_042": "CQ_033",
+    "GEN_CAUSAL_043": "CQ_033",
+    "GEN_CAUSAL_047": "CQ_033",
+    "GEN_CAUSAL_066": "CQ_033",
+    "GEN_ENTITY_LOOKUP_023": "CQ_034",
+    "GEN_ENTITY_LOOKUP_089": "CQ_034",
+    "GEN_CAUSAL_009": "FB_001",
+    "GEN_CAUSAL_031": "FB_001",
+    "GEN_CAUSAL_070": "FB_001",
+    "GEN_CAUSAL_072": "FB_001",
+    "GEN_CAUSAL_018": "FB_002",
+    "GEN_CAUSAL_032": "FB_002",
+    "GEN_CAUSAL_048": "FB_002",
+    "GEN_CAUSAL_049": "FB_002",
+    "GEN_CAUSAL_020": "FB_003",
+    "GEN_CAUSAL_021": "FB_003",
+    "GEN_CAUSAL_027": "FB_003",
+    "GEN_CAUSAL_061": "FB_003",
+    "GEN_CAUSAL_076": "FB_003",
+    "GEN_CAUSAL_088": "FB_003",
+    "GEN_CAUSAL_089": "FB_003",
+    "GEN_COMPARATIVE_006": "FB_004",
+    "GEN_COMPARATIVE_015": "FB_004",
+    "GEN_COMPARATIVE_021": "FB_004",
+    "GEN_COMPARATIVE_022": "FB_004",
+    "GEN_COMPARATIVE_038": "FB_005",
+    "GEN_COMPARATIVE_039": "FB_005",
+    "GEN_COMPARATIVE_040": "FB_005",
+    "GEN_COMPARATIVE_041": "FB_005",
+    "GEN_COMPARATIVE_042": "FB_005",
+    "GEN_COMPARATIVE_025": "FB_006",
+    "GEN_CONDITION_FOR_PROCESS_001": "FB_007",
+    "GEN_CONDITION_FOR_PROCESS_002": "FB_007",
+    "GEN_CONDITION_FOR_PROCESS_007": "FB_007",
+    "GEN_CONDITION_FOR_PROCESS_008": "FB_007",
+    "GEN_CONDITION_FOR_PROCESS_009": "FB_007",
+    "GEN_CONDITION_FOR_PROCESS_010": "FB_007",
+    "GEN_CONDITION_FOR_PROCESS_017": "FB_007",
+    "GEN_CONDITION_FOR_PROCESS_018": "FB_007",
+    "GEN_CONDITION_FOR_PROCESS_021": "FB_007",
+    "GEN_CONDITION_FOR_PROCESS_023": "FB_007",
+    "GEN_CONDITION_FOR_PROCESS_005": "FB_008",
+    "GEN_CONDITION_FOR_PROCESS_006": "FB_008",
+    "GEN_CONDITION_FOR_PROCESS_011": "FB_008",
+    "GEN_CONDITION_FOR_PROCESS_003": "FB_009",
+    "GEN_CONDITION_FOR_PROCESS_004": "FB_009",
+    "GEN_CONDITION_FOR_PROCESS_015": "FB_010",
+    "GEN_CONDITION_FOR_PROCESS_012": "FB_011",
+    "GEN_CONDITION_FOR_PROCESS_013": "FB_012",
+    "GEN_CONDITION_FOR_PROCESS_020": "FB_013",
+    "GEN_CONDITION_FOR_PROCESS_022": "FB_014",
+    "GEN_CONDITION_FOR_PROCESS_016": "FB_015",
+    "GEN_ENTITY_LOOKUP_006": "FB_016",
+    "GEN_ENTITY_LOOKUP_021": "FB_017",
+    "GEN_ENTITY_LOOKUP_055": "FB_017",
+    "GEN_ENTITY_LOOKUP_063": "FB_017",
+    "GEN_ENTITY_LOOKUP_084": "FB_018",
+    "GEN_ENTITY_LOOKUP_038": "FB_019",
+    "GEN_ENTITY_LOOKUP_045": "FB_019",
+    "GEN_ENTITY_LOOKUP_013": "FB_020",
+    "GEN_ENTITY_LOOKUP_020": "FB_020",
+    "GEN_ENTITY_LOOKUP_031": "FB_020",
+    "GEN_ENTITY_LOOKUP_036": "FB_020",
+    "GEN_ENTITY_LOOKUP_039": "FB_020",
+    "GEN_ENTITY_LOOKUP_040": "FB_020",
+    "GEN_ENTITY_LOOKUP_046": "FB_020",
+    "GEN_ENTITY_LOOKUP_047": "FB_020",
+    "GEN_ENTITY_LOOKUP_050": "FB_020",
+    "GEN_ENTITY_LOOKUP_054": "FB_020",
+    "GEN_ENTITY_LOOKUP_060": "FB_020",
+    "GEN_ENTITY_LOOKUP_069": "FB_020",
+    "GEN_ENTITY_LOOKUP_082": "FB_020",
+    "GEN_ENTITY_LOOKUP_083": "FB_020",
+    "GEN_ENTITY_LOOKUP_092": "FB_020",
+    "GEN_ENTITY_LOOKUP_061": "FB_021",
+    "GEN_ENTITY_LOOKUP_019": "FB_022",
+    "GEN_ENTITY_LOOKUP_025": "FB_022",
+    "GEN_ENTITY_LOOKUP_026": "FB_023",
+    "GEN_ENTITY_LOOKUP_072": "FB_023",
+    "GEN_ENTITY_LOOKUP_076": "FB_023",
+    "GEN_ENTITY_LOOKUP_007": "FB_024",
+    "GEN_ENTITY_LOOKUP_011": "FB_024",
+    "GEN_ENTITY_LOOKUP_062": "FB_024",
+    "GEN_ENTITY_LOOKUP_064": "FB_024",
+    "GEN_ENTITY_LOOKUP_065": "FB_024",
+    "GEN_ENTITY_LOOKUP_066": "FB_024",
+    "GEN_ENTITY_LOOKUP_004": "FB_025",
+    "GEN_ENTITY_LOOKUP_086": "FB_025",
+    "GEN_ENTITY_LOOKUP_044": "FB_026",
+    "GEN_ENTITY_LOOKUP_081": "FB_026",
+    "GEN_ENTITY_LOOKUP_068": "FB_028",
+    "GEN_ENTITY_LOOKUP_079": "FB_029",
+    "GEN_ENUMERATION_002": "FB_030",
+    "GEN_ENUMERATION_012": "FB_030",
+    "GEN_ENUMERATION_004": "FB_031",
+    "GEN_ENUMERATION_023": "FB_031",
+    "GEN_ENUMERATION_007": "FB_032",
+    "GEN_ENUMERATION_019": "FB_033",
+    "GEN_ENUMERATION_016": "FB_034",
+    "GEN_ENUMERATION_005": "FB_035",
+    "GEN_GAP_OR_LIMITATION_003": "FB_036",
+    "GEN_GAP_OR_LIMITATION_007": "FB_036",
+    "GEN_GAP_OR_LIMITATION_004": "FB_037",
+    "GEN_GAP_OR_LIMITATION_009": "FB_038",
+    "GEN_GAP_OR_LIMITATION_010": "FB_038",
+    "GEN_GAP_OR_LIMITATION_015": "FB_039",
+    "GEN_GAP_OR_LIMITATION_016": "FB_040",
+    "GEN_GAP_OR_LIMITATION_017": "FB_041",
+    "GEN_GAP_OR_LIMITATION_018": "FB_041",
+    "GEN_GAP_OR_LIMITATION_019": "FB_042",
+    "GEN_GAP_OR_LIMITATION_020": "FB_042",
+    "GEN_METHOD_OF_MEASUREMENT_008": "FB_043",
+    "GEN_METHOD_OF_MEASUREMENT_019": "FB_043",
+    "GEN_METHOD_OF_MEASUREMENT_042": "FB_043",
+    "GEN_METHOD_OF_MEASUREMENT_044": "FB_043",
+    "GEN_METHOD_OF_MEASUREMENT_017": "FB_044",
+    "GEN_METHOD_OF_MEASUREMENT_028": "FB_044",
+    "GEN_METHOD_OF_MEASUREMENT_035": "FB_044",
+    "GEN_METHOD_OF_MEASUREMENT_010": "FB_045",
+    "GEN_METHOD_OF_MEASUREMENT_021": "FB_045",
+    "GEN_METHOD_OF_MEASUREMENT_001": "FB_046",
+    "GEN_METHOD_OF_MEASUREMENT_016": "FB_046",
+    "GEN_METHOD_OF_MEASUREMENT_027": "FB_046",
+    "GEN_METHOD_OF_MEASUREMENT_037": "FB_046",
+    "GEN_METHOD_OF_MEASUREMENT_038": "FB_046",
+    "GEN_METHOD_OF_MEASUREMENT_048": "FB_046",
+    "GEN_METHOD_OF_MEASUREMENT_049": "FB_046",
+    "GEN_METHOD_OF_MEASUREMENT_014": "FB_047",
+    "GEN_METHOD_OF_MEASUREMENT_025": "FB_047",
+    "GEN_METHOD_OF_MEASUREMENT_029": "FB_048",
+    "GEN_METHOD_OF_MEASUREMENT_030": "FB_048",
+    "GEN_METHOD_OF_MEASUREMENT_053": "FB_048",
+    "GEN_METHOD_OF_MEASUREMENT_054": "FB_048",
+    "GEN_METHOD_OF_MEASUREMENT_057": "FB_048",
+    "GEN_METHOD_OF_MEASUREMENT_003": "FB_049",
+    "GEN_METHOD_OF_MEASUREMENT_058": "FB_049",
+    "GEN_METHOD_OF_MEASUREMENT_059": "FB_049",
+    "GEN_MOTIVATION_002": "FB_050",
+    "GEN_MOTIVATION_004": "FB_050",
+    "GEN_MOTIVATION_007": "FB_050",
+    "GEN_MOTIVATION_022": "FB_050",
+    "GEN_MOTIVATION_023": "FB_050",
+    "GEN_MOTIVATION_026": "FB_050",
+    "GEN_MOTIVATION_032": "FB_050",
+    "GEN_MOTIVATION_043": "FB_050",
+    "GEN_MOTIVATION_057": "FB_050",
+    "GEN_MOTIVATION_058": "FB_050",
+    "GEN_MOTIVATION_001": "FB_051",
+    "GEN_MOTIVATION_003": "FB_051",
+    "GEN_MOTIVATION_005": "FB_051",
+    "GEN_MOTIVATION_006": "FB_051",
+    "GEN_MOTIVATION_010": "FB_051",
+    "GEN_MOTIVATION_029": "FB_051",
+    "GEN_MOTIVATION_030": "FB_051",
+    "GEN_MOTIVATION_031": "FB_051",
+    "GEN_MOTIVATION_011": "FB_052",
+    "GEN_MOTIVATION_013": "FB_052",
+    "GEN_MOTIVATION_016": "FB_052",
+    "GEN_MOTIVATION_021": "FB_052",
+    "GEN_MOTIVATION_012": "FB_053",
+    "GEN_MOTIVATION_015": "FB_053",
+    "GEN_MOTIVATION_019": "FB_053",
+    "GEN_MOTIVATION_025": "FB_053",
+    "GEN_MOTIVATION_035": "FB_053",
+    "GEN_MOTIVATION_036": "FB_053",
+    "GEN_MOTIVATION_018": "FB_054",
+    "GEN_MOTIVATION_041": "FB_054",
+    "GEN_MOTIVATION_038": "FB_055",
+    "GEN_MOTIVATION_048": "FB_055",
+    "GEN_MOTIVATION_014": "FB_056",
+    "GEN_MOTIVATION_017": "FB_056",
+    "GEN_MOTIVATION_049": "FB_057",
+    "GEN_MOTIVATION_050": "FB_057",
+    "GEN_MOTIVATION_051": "FB_057",
+    "GEN_MOTIVATION_047": "FB_058",
+    "GEN_MOTIVATION_054": "FB_058",
+    "GEN_MOTIVATION_055": "FB_058",
+    "GEN_MOTIVATION_056": "FB_058",
+    "GEN_MOTIVATION_009": "FB_059",
+    "GEN_MOTIVATION_046": "FB_059",
+    "GEN_MOTIVATION_034": "FB_060",
+    "GEN_MOTIVATION_059": "FB_060",
+    "GEN_MOTIVATION_052": "FB_061",
+    "GEN_MOTIVATION_053": "FB_061",
+    "GEN_ONTOLOGY_TRIPLE_002": "FB_062",
+    "GEN_ONTOLOGY_TRIPLE_006": "FB_062",
+    "GEN_ONTOLOGY_TRIPLE_014": "FB_062",
+    "GEN_ONTOLOGY_TRIPLE_030": "FB_062",
+    "GEN_ONTOLOGY_TRIPLE_010": "FB_063",
+    "GEN_ONTOLOGY_TRIPLE_026": "FB_063",
+    "GEN_ONTOLOGY_TRIPLE_011": "FB_064",
+    "GEN_ONTOLOGY_TRIPLE_021": "FB_064",
+    "GEN_ONTOLOGY_TRIPLE_027": "FB_064",
+    "GEN_ONTOLOGY_TRIPLE_037": "FB_064",
+    "GEN_ONTOLOGY_TRIPLE_016": "FB_065",
+    "GEN_ONTOLOGY_TRIPLE_022": "FB_065",
+    "GEN_ONTOLOGY_TRIPLE_032": "FB_065",
+    "GEN_ONTOLOGY_TRIPLE_038": "FB_065",
+    "GEN_ONTOLOGY_TRIPLE_015": "FB_066",
+    "GEN_ONTOLOGY_TRIPLE_023": "FB_066",
+    "GEN_ONTOLOGY_TRIPLE_031": "FB_066",
+    "GEN_ONTOLOGY_TRIPLE_039": "FB_066",
+    "GEN_ONTOLOGY_TRIPLE_020": "FB_067",
+    "GEN_ONTOLOGY_TRIPLE_036": "FB_067",
+    "GEN_ONTOLOGY_TRIPLE_009": "FB_068",
+    "GEN_ONTOLOGY_TRIPLE_047": "FB_068",
+    "GEN_ONTOLOGY_TRIPLE_004": "FB_069",
+    "GEN_ONTOLOGY_TRIPLE_005": "FB_070",
+    "GEN_ONTOLOGY_TRIPLE_012": "FB_071",
+    "GEN_ONTOLOGY_TRIPLE_028": "FB_071",
+    "GEN_ONTOLOGY_TRIPLE_018": "FB_072",
+    "GEN_ONTOLOGY_TRIPLE_034": "FB_072",
+    "GEN_ONTOLOGY_TRIPLE_017": "FB_073",
+    "GEN_ONTOLOGY_TRIPLE_033": "FB_073",
+    "GEN_ONTOLOGY_TRIPLE_019": "FB_074",
+    "GEN_ONTOLOGY_TRIPLE_035": "FB_074",
+    "GEN_ONTOLOGY_TRIPLE_024": "FB_075",
+    "GEN_ONTOLOGY_TRIPLE_040": "FB_075",
+    "GEN_ONTOLOGY_TRIPLE_048": "FB_076",
+    "GEN_ONTOLOGY_TRIPLE_045": "FB_077",
+    "GEN_ONTOLOGY_TRIPLE_046": "FB_078",
+    "GEN_ONTOLOGY_TRIPLE_043": "FB_079",
+    "GEN_ONTOLOGY_TRIPLE_041": "FB_080",
+    "GEN_ONTOLOGY_TRIPLE_044": "FB_081",
+    "GEN_PROCESS_FOR_MATERIAL_003": "FB_082",
+    "GEN_PROCESS_FOR_MATERIAL_008": "FB_083",
+    "GEN_PROCESS_FOR_MATERIAL_009": "FB_084",
+    "GEN_PROCESS_FOR_MATERIAL_012": "FB_085",
+    "GEN_PROCESS_FOR_MATERIAL_013": "FB_085",
+    "GEN_PROCESS_FOR_MATERIAL_014": "FB_086",
+    "GEN_PROCESS_FOR_MATERIAL_015": "FB_086"
+  },
+  "_audit": {
+    "unaccounted_input_gen_ids": [
+      "GEN_CAUSAL_006",
+      "GEN_CAUSAL_015",
+      "GEN_CAUSAL_022",
+      "GEN_CAUSAL_028",
+      "GEN_CAUSAL_029",
+      "GEN_CAUSAL_034",
+      "GEN_CAUSAL_037",
+      "GEN_CAUSAL_051",
+      "GEN_CAUSAL_063",
+      "GEN_CAUSAL_065",
+      "GEN_CAUSAL_071",
+      "GEN_CAUSAL_086",
+      "GEN_ENTITY_LOOKUP_001",
+      "GEN_ENTITY_LOOKUP_003",
+      "GEN_ENTITY_LOOKUP_014",
+      "GEN_ENTITY_LOOKUP_015",
+      "GEN_ENTITY_LOOKUP_032",
+      "GEN_ENTITY_LOOKUP_059",
+      "GEN_ENTITY_LOOKUP_087",
+      "GEN_ENTITY_LOOKUP_094",
+      "GEN_ENTITY_LOOKUP_095",
+      "GEN_METHOD_OF_MEASUREMENT_031",
+      "GEN_METHOD_OF_MEASUREMENT_046",
+      "GEN_ONTOLOGY_TRIPLE_003",
+      "GEN_ONTOLOGY_TRIPLE_008",
+      "GEN_PROCESS_FOR_MATERIAL_001",
+      "GEN_PROCESS_FOR_MATERIAL_007"
+    ],
+    "hallucinated_gen_ids": [
+      "SA_EL_018"
+    ],
+    "duplicate_consolidated_questions": [
+      "what is the ?property of ?material related to ?task?",
+      "what is the ?method used to ?task?"
+    ]
+  }
+}

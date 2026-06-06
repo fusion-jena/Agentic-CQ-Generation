@@ -1,0 +1,138 @@
+{
+  "paper_id": "Ruiz2011",
+  "pipeline_config": {
+    "pipeline_version": "v2.1",
+    "extraction_method": "plain",
+    "metadata_extractor": "qwen3.5:27b",
+    "iterative_extractor": "qwen3.6:35b-a3b",
+    "cq_generator": "gemma4:31b",
+    "cq_validator": "deepseek-r1:32b",
+    "cq_refiner": "qwen3.5:35b",
+    "embedding_model": "BAAI/bge-small-en-v1.5"
+  },
+  "evaluation": {
+    "status": "reference_free",
+    "schema_version": "v2.1",
+    "paper_id": "Ruiz2011",
+    "n_questions": 49,
+    "overall_score": 0.669,
+    "weights": {
+      "coverage": 0.38,
+      "question_faithfulness": 0.44,
+      "diversity": 0.12,
+      "triplifiability": 0.06
+    },
+    "families": {
+      "coverage": {
+        "score": 0.422,
+        "concepts": {
+          "total": 79,
+          "referenced": 41,
+          "ratio": 0.519
+        },
+        "properties": {
+          "total": 56,
+          "referenced": 19,
+          "ratio": 0.339
+        },
+        "relations": {
+          "total": 59,
+          "referenced": 18,
+          "ratio": 0.305
+        },
+        "uncovered_concept_examples": [
+          "argon atmosphere",
+          "batch one-step process",
+          "co2 saturation",
+          "diblock copolymer sm",
+          "dscq100",
+          "dsm xplore injection moulding machine",
+          "emscope sc 500",
+          "fluorinated ethylene–propylene copolymers",
+          "foaming temperature",
+          "foaming time"
+        ]
+      },
+      "question_faithfulness": {
+        "score": 0.98,
+        "mean_cosine": 0.809,
+        "min_cosine": 0.684,
+        "n_well_faithful": 47,
+        "n_weak": 2,
+        "n_off_paper": 0,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        },
+        "weakest_example": {
+          "question_id": "Ruiz2011_ONTO_Q002",
+          "question": "Which method and instrument were used to measure the average molar mass (Mw) of the materials?",
+          "max_cosine": 0.6840537190437317
+        }
+      },
+      "diversity": {
+        "score": 0.308,
+        "mean_pairwise_cos": 0.692,
+        "max_pairwise_cos": 1.0,
+        "n_near_duplicates": 16,
+        "dup_threshold": 0.92
+      },
+      "triplifiability": {
+        "score": 0.673,
+        "pct_full_triples": 0.347,
+        "pct_partial": 0.653
+      }
+    },
+    "diagnostics": {
+      "answer_verifiability": {
+        "mean_cosine": 0.722,
+        "min_cosine": 0.521,
+        "thresholds": {
+          "ok": 0.55,
+          "good": 0.7
+        }
+      },
+      "specificity": {
+        "score": 0.83,
+        "avg_question_chars": 128.1,
+        "pct_with_numeric_value": 0.612,
+        "pct_with_unit": 0.408,
+        "pct_referencing_concept": 1.0
+      }
+    },
+    "reproducibility": {
+      "pipeline_version": "v2.1",
+      "models": {
+        "metadata_extractor": "qwen3.5:27b",
+        "iterative_extractor": "qwen3.6:35b-a3b",
+        "cq_generator": "gemma4:31b",
+        "cq_validator": "deepseek-r1:32b",
+        "cq_refiner": "qwen3.5:35b",
+        "_embedding_model": "BAAI/bge-small-en-v1.5",
+        "_embedding_backend": "local (sentence-transformers)",
+        "_embedding_dim": 384,
+        "_note": "Three distinct LLM families (Qwen / Gemma / DeepSeek) across stages for cross-family diversity. Embeddings via LOCAL sentence-transformers (deterministic, no network) because the shared Ollama bge-m3 endpoint is unreliable from inside long-running pipeline processes (see history v1.3). All LLM calls use think=false + format=json on the client.",
+        "_history": [
+          "v0: cq_generator=llama4:scout -> failed to produce JSON output; switched to qwen3:32b + format=json.",
+          "v0.5: all stages on qwen3:32b/deepseek-r1:32b; embedder local BAAI/bge-small-en-v1.5.",
+          "v1.0: per-stage model selection, bge-m3 via Ollama, refiner added, evaluator reduced to 5 reference-free families.",
+          "v1.1: reverted embedder to local BAAI/bge-small-en-v1.5 because the shared Ollama bge-m3 endpoint was returning 500s. Added per-question evidence retrieval in validator + refiner to fix a truncation bug (was capping evidence at 7000 chars regardless of how many passages were available).",
+          "v1.2: switched embedder back to bge-m3 via Ollama after a probe showed the endpoint was responsive when called with proper exponential-backoff retry. Added 1s process-wide throttling between embed calls.",
+          "v1.3 (this version): reverted to local BAAI/bge-small-en-v1.5. The bge-m3 Ollama path stays healthy in isolation (standalone curl + Python) but the long-running pipeline process gets sustained 500s in stages 5-6, even with exponential backoff, 1s throttling, AND Connection: close to force fresh TCP per call. Most likely cause is the shared upstream evicting bge-m3 from memory while the heavy LLMs (gemma4:31b, deepseek-r1:32b) are loaded, with the eviction window outlasting our 230s retry budget. Local sentence-transformers is slightly lower quality (384-dim vs 1024) but always finishes."
+        ]
+      },
+      "validator_pass_threshold_per_question": null,
+      "coverage_gap_pass": {
+        "enabled": true,
+        "max_gap_concepts": 8
+      },
+      "rolling_state_caps": {
+        "concepts": 80,
+        "relations": 60,
+        "properties": 60,
+        "findings": 40
+      },
+      "embedder_dim": 384
+    }
+  }
+}

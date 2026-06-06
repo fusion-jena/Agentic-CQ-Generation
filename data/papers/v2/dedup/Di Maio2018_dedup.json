@@ -1,0 +1,989 @@
+{
+  "paper_id": "Di Maio2018",
+  "pipeline_step": "intra_paper_dedup",
+  "pipeline_version": "v2",
+  "step_version": "step1_v1.0",
+  "dedup_config": {
+    "llm_model": "deepseek-r1:32b",
+    "think": true,
+    "format": "json",
+    "prompt_version": "dedup_prompt_v1.0",
+    "source_file": "papers/v2/cq_output/Di Maio2018_ext-qw-35b_g-ge4-31b_v-der1-32b_r-qw-35b_cq_v2.json",
+    "source_pipeline_version": "v2.1"
+  },
+  "paper_metadata": {
+    "title": "Foaming of polymers with supercritical fluids and perspectives on the current knowledge gaps and challenges",
+    "first_author_lastname": "Di Maio",
+    "year": 2018,
+    "journal": "The Journal of Supercritical Fluids",
+    "doi": "10.1016/j.supflu.2017.11.013",
+    "keywords": [
+      "Foams",
+      "Supercritical fluids",
+      "Polymers",
+      "Blends",
+      "Copolymers",
+      "Carbon dioxide"
+    ],
+    "polymer_systems": [
+      "Polyurethanes",
+      "Polystyrene",
+      "Polypropylene",
+      "Polyethylene",
+      "Poly(lactic acid)",
+      "Cellulose",
+      "Starch",
+      "Amorphous polymers",
+      "Semi-crystalline polymers",
+      "Thermosetting polymers"
+    ],
+    "polymerization_methods": [],
+    "paper_type": "review article",
+    "paper_id": "Di Maio2018",
+    "source_filename": "Foaming of polymers with supercritical fluids and perspectives on the current knowledge gaps and challenges.pdf"
+  },
+  "paper_stats": {
+    "n_pages": 10,
+    "n_figures": 10,
+    "n_tables": 0,
+    "file_size_kb": 2667.7,
+    "char_count": 74724,
+    "estimated_tokens": 18681,
+    "n_sections": 0
+  },
+  "dedup_stats": {
+    "n_input_personas": 7,
+    "n_input_cqs": 48,
+    "n_representative_cqs": 44,
+    "n_merged_groups": 6,
+    "n_singletons": 38,
+    "n_discarded": 4,
+    "reduction_rate": 0.083,
+    "archetype_breakdown": {
+      "CAUSAL": {
+        "n_input": 13,
+        "n_output": 12
+      },
+      "COMPARATIVE": {
+        "n_input": 1,
+        "n_output": 1
+      },
+      "CONDITION_FOR_PROCESS": {
+        "n_input": 3,
+        "n_output": 3
+      },
+      "ENTITY_LOOKUP": {
+        "n_input": 9,
+        "n_output": 7
+      },
+      "ENUMERATION": {
+        "n_input": 5,
+        "n_output": 4
+      },
+      "GAP_OR_LIMITATION": {
+        "n_input": 3,
+        "n_output": 3
+      },
+      "METHOD_OF_MEASUREMENT": {
+        "n_input": 4,
+        "n_output": 4
+      },
+      "MOTIVATION": {
+        "n_input": 7,
+        "n_output": 7
+      },
+      "ONTOLOGY_TRIPLE": {
+        "n_input": 3,
+        "n_output": 3
+      }
+    },
+    "parse_fallback_used": false,
+    "accounting_ok": true,
+    "grouping_ok": true,
+    "vague_answer_warnings": [
+      {
+        "id": "Di Maio2018_CHAR_GAP001",
+        "persona_code": "CHAR",
+        "expected_answer": "Poly(ethylene oxide) (PEO).",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Di Maio2018_CHAR_GAP002",
+        "persona_code": "CHAR",
+        "expected_answer": "Carbon nanotubes, nanoclays, and graphene.",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Di Maio2018_COMP_Q001",
+        "persona_code": "COMP",
+        "expected_answer": "The Sanchez-Lacombe model.",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Di Maio2018_ONTO_Q002",
+        "persona_code": "ONTO",
+        "expected_answer": "(poly(methyl methacrylate), hasProperty, Glass transition temperature (Tg))",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Di Maio2018_ONTO_Q004",
+        "persona_code": "ONTO",
+        "expected_answer": "The gravimetric method.",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Di Maio2018_ONTO_Q005",
+        "persona_code": "ONTO",
+        "expected_answer": "(Polymeric foams, appliedIn, Thermal insulation)",
+        "flags": [
+          "answer_too_short"
+        ]
+      },
+      {
+        "id": "Di Maio2018_ONTO_GAP001",
+        "persona_code": "ONTO",
+        "expected_answer": "(extrusion foaming, resultsIn, expanded melt processing window)",
+        "flags": [
+          "answer_too_short"
+        ]
+      }
+    ]
+  },
+  "execution_stats": {
+    "total_wall_time": "42s 440ms",
+    "llm_calls": [
+      {
+        "model": "deepseek-r1:32b",
+        "think": true,
+        "wall_time": "42s 437ms",
+        "prompt_tokens": 5942,
+        "generated_tokens": 885,
+        "thinking_chars": 0
+      }
+    ]
+  },
+  "representative_questions": [
+    {
+      "id": "Di Maio2018_DEDUP_001",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_SYNTH_Q001",
+      "question": "How does altering the norbornene content in a copolymer of ethylene and norbornene affect the glass transition temperature (Tg) and the crystallization of the resulting polymer?",
+      "expected_answer": "Altering the norbornene content allows for the creation of polymers with both low and high Tg, and the incorporation of norbornene prevents the crystallization of polyethylene.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_002",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_SYNTH_Q002",
+      "question": "Why is a triblock copolymer of poly(methyl methacrylate)-b-poly(butyl acrylate)-b-poly(methyl methacrylate) used as a nucleation agent in PMMA foams?",
+      "expected_answer": "It is used because of its high CO2-philicity, lowered surface tension, and morphology, where the poly(butyl acrylate) block acts as the effective nucleation agent in a core-shell structure.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_003",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_SYNTH_Q003",
+      "question": "In the foaming of epoxy resins, what synthesis parameter must be maintained at a minimum level to allow for bubble nucleation?",
+      "expected_answer": "A minimum molecular weight between crosslinks (Mc) is needed to allow the bubble to nucleate.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_004",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_SYNTH_Q004",
+      "question": "What is the effect of carbon dioxide exposure at approximately 50 bar on the glass transition temperature (Tg) of polystyrene?",
+      "expected_answer": "The glass transition temperature of polystyrene is reduced by about 50 °C from its neat, ambient Tg.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question has a specific pressure condition (50 bar) and provides a quantitative answer about the Tg reduction.",
+      "merged_from": [
+        {
+          "id": "Di Maio2018_CHAR_GAP001",
+          "paper_id": "Di Maio2018",
+          "persona_code": "CHAR",
+          "question": "Which specific polymer is mentioned as a CO2-philic block in a di-block copolymer with polyethylene that can lead to open cell structures when the domains are aligned lamellar?",
+          "expected_answer": "Poly(ethylene oxide) (PEO).",
+          "reason_discarded": "This question has a specific pressure condition (50 bar) and provides a quantitative answer about the Tg reduction."
+        },
+        {
+          "id": "Di Maio2018_PROC_Q001",
+          "paper_id": "Di Maio2018",
+          "persona_code": "PROC",
+          "question": "How does the exposure of polymers such as polystyrene to dissolved carbon dioxide affect their glass transition temperature (Tg) and the effective processing window?",
+          "expected_answer": "The presence of dissolved carbon dioxide lowers the glass transition temperature (Tg) and the crystallization/melting temperature (Tc/Tm), thereby expanding the effective processing window for foaming.",
+          "reason_discarded": "This question has a specific pressure condition (50 bar) and provides a quantitative answer about the Tg reduction."
+        }
+      ],
+      "merge_reasoning": "All questions discuss how CO2 affects polymer properties, specifically Tg."
+    },
+    {
+      "id": "Di Maio2018_DEDUP_005",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_SYNTH_Q005",
+      "question": "For thermosetting polymers like epoxies, how can the polymerization reaction be manipulated to ensure complete CO2 sorption occurs before curing?",
+      "expected_answer": "By reducing the curing temperature, it is possible to slow down the polymerization reaction to provide sufficient time for sorption.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question is from the SYNTH persona and has a specific answer about reducing curing temperature.",
+      "merged_from": [
+        {
+          "id": "Di Maio2018_CHAR_Q004",
+          "paper_id": "Di Maio2018",
+          "persona_code": "CHAR",
+          "question": "What is the relationship between the initial CO2 concentration and the rate of homogeneous nucleation (N_hom) as described in the classical nucleation theory section?",
+          "expected_answer": "The rate of homogeneous nucleation is proportional to the concentration of gas molecules (C_o), expressed as N_hom ~ C_o exp[-ΔG*_hom/k_BT].",
+          "reason_discarded": "This question is from the SYNTH persona and has a specific answer about reducing curing temperature."
+        }
+      ],
+      "merge_reasoning": "Both questions relate to CO2 sorption and polymerization."
+    },
+    {
+      "id": "Di Maio2018_DEDUP_006",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_SYNTH_GAP001",
+      "question": "How does the incorporation of norbornene into a copolymer of ethylene affect the crystallization and foaming properties of the resulting material?",
+      "expected_answer": "The incorporation of norbornene prevents the crystallization of polyethylene, which allows for improved foaming.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CAUSAL",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_007",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_SYNTH_GAP002",
+      "question": "Under what pressure conditions is the glass transition temperature (Tg) of polystyrene reduced by approximately 50 °C when exposed to carbon dioxide?",
+      "expected_answer": "The Tg is reduced by about 50 °C when polystyrene is exposed to CO2 at about 50 bar.",
+      "persona_code": "SYNTH",
+      "persona_full": "Polymer / Synthesis Chemist",
+      "archetype": "CONDITION_FOR_PROCESS",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_008",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_CHAR_Q001",
+      "question": "Which specific polymers are frequently reported in the literature as having Tg and Tm values available as a function of temperature and pressure in the presence of CO2?",
+      "expected_answer": "Poly(methyl methacrylate), polystyrene, and polyesters such as poly(ε-caprolactone) and poly(lactic acid).",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_009",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_CHAR_Q002",
+      "question": "Which analytical instruments or techniques are used to determine the glass transition temperature (Tg) and melting temperature (Tm) of polymers under CO2 pressure?",
+      "expected_answer": "Measurements are based on high-pressure differential scanning calorimeter (DSC) units, assessments of changes in transmitted light intensity, mechanical properties, or monitoring frequency shift using quartz crystal resonators (QCR).",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_010",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_CHAR_Q003",
+      "question": "Which instruments are mentioned for assessing CO2 sorption and the resulting swelling of polymers?",
+      "expected_answer": "The Rubotherm magnetic suspension balance (often modified with a cathetometer or camera) and a spectroscopic reflectometer for thin films.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENUMERATION",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_011",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_CHAR_Q005",
+      "question": "Which technique is specifically reported for providing swelling ratios for thin films (150–300 nm) solution cast on silicon wafers?",
+      "expected_answer": "A technique based on in situ thickness measurement using a spectroscopic reflectometer.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question is more specific about the technique for thin films.",
+      "merged_from": [
+        {
+          "id": "Di Maio2018_COMP_GAP002",
+          "paper_id": "Di Maio2018",
+          "persona_code": "COMP",
+          "question": "Which experimental techniques are identified in the text for determining the glass transition temperature (Tg) and melting temperature (Tm) of polymers under CO2 pressure?",
+          "expected_answer": "The techniques identified are determinations using a high-pressure differential scanning calorimeter (DSC), assessments of changes in transmitted light intensity, monitoring of mechanical properties, and monitoring frequency shift using quartz crystal resonators (QCR).",
+          "reason_discarded": "This question is more specific about the technique for thin films."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss measurement techniques for Tg and Tm under CO2."
+    },
+    {
+      "id": "Di Maio2018_DEDUP_012",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_CHAR_GAP002",
+      "question": "Which specific nanometric fillers are mentioned as gaining increased attention as nucleating agents for gas foaming?",
+      "expected_answer": "Carbon nanotubes, nanoclays, and graphene.",
+      "persona_code": "CHAR",
+      "persona_full": "Materials Characterisation Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_013",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PROC_Q002",
+      "question": "In semi-crystalline polymers, how does plasticization with carbon dioxide influence the effective processing window for foaming?",
+      "expected_answer": "Plasticization with carbon dioxide expands the effective processing window, which is the temperature range between the glass transition temperature (Tg) and the crystallization or melting temperature (Tc/Tm).",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_014",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PROC_Q003",
+      "question": "Why must the viscosity of the polymer matrix be sufficiently high during the decompression process of foaming?",
+      "expected_answer": "The viscosity must be sufficiently high to prevent the escape of CO2 from the outer boundaries, which would otherwise lead to cell collapse, and to prevent surface protrusions (blisters) from rupturing.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_015",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PROC_Q004",
+      "question": "What is the effect of a large difference between the foaming temperature (Tfoaming) and the crystallization temperature (Tc) on the final foam density in semi-crystalline polymers?",
+      "expected_answer": "If the difference (Tfoaming - Tc) is large, solidification is slowed down, allowing for CO2 loss through extended diffusion, which leads to densification of the foam.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_016",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PROC_Q005",
+      "question": "How does the rate of decompression affect the resulting pore size in polymeric foams?",
+      "expected_answer": "At a given temperature, faster decompression leads to smaller pore sizes or higher cell number densities.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_017",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PROC_GAP001",
+      "question": "How does the exposure of polymers such as polystyrene to dissolved carbon dioxide affect their glass transition temperature (Tg) and the effective processing window?",
+      "expected_answer": "The presence of dissolved carbon dioxide lowers the glass transition temperature (Tg) and the crystallization/melting temperature (Tc/Tm), thereby expanding the effective processing window for foaming.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_018",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PROC_GAP002",
+      "question": "Why is accurate determination of CO2 sorption in polymers considered an outstanding problem requiring a broadly usable solution?",
+      "expected_answer": "It is an outstanding problem because swelling accompanies CO2 sorption, making buoyancy corrections difficult, and existing techniques like magnetic suspension balances face complications such as non-uniform shape changes, potential extraction of low molecular weight fractions, and the need for independent verification of modeling.",
+      "persona_code": "PROC",
+      "persona_full": "Processing Engineer",
+      "archetype": "MOTIVATION",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_019",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_COMP_Q001",
+      "question": "Which thermodynamic model was used to estimate the swelling of polymers for buoyancy corrections in CO2 sorption measurements?",
+      "expected_answer": "The Sanchez-Lacombe model.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_020",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_COMP_Q002",
+      "question": "How does the presence of dissolved carbon dioxide affect the glass transition temperature (Tg) of polymers such as poly(methyl methacrylate), polystyrene, and polyesters?",
+      "expected_answer": "The presence of dissolved carbon dioxide lowers the glass transition temperature (Tg) of the polymer, thereby expanding the effective processing window for foaming.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_021",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_COMP_Q003",
+      "question": "Which specific modeling approaches are mentioned for predicting cell wall morphology and bubble nucleation in polymer foaming?",
+      "expected_answer": "Tammaro et al. developed a model to predict cell wall morphology (and open/closed cells) based on polymer viscoelasticity, while Taki employed experimental nucleation results to extrapolate and predict other cases in lieu of a practical nucleation model.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_022",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_COMP_Q004",
+      "question": "What is the effect of carbon dioxide plasticization on the processing window of semi-crystalline polymers?",
+      "expected_answer": "Plasticization with carbon dioxide expands the effective processing window, which is the temperature range between the glass transition temperature (Tg) and the crystallization or melting temperature (Tc/Tm).",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_023",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_COMP_GAP001",
+      "question": "How does the presence of dissolved carbon dioxide affect the glass transition temperature (Tg) of polymers such as poly(methyl methacrylate), polystyrene, and polyesters?",
+      "expected_answer": "The presence of dissolved carbon dioxide lowers the glass transition temperature (Tg) of the polymer, thereby expanding the effective processing window for foaming.",
+      "persona_code": "COMP",
+      "persona_full": "Computational / Data Scientist",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_024",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_ONTO_Q001",
+      "question": "Which materials mentioned in the paper should be categorized as subclasses of the 'Material' class, specifically distinguishing between petroleum-based polymers and biopolymers?",
+      "expected_answer": "Petroleum-based polymers: polystyrene, polypropylene, and polyethylene; Biopolymers: poly(lactic acid).",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_025",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_ONTO_Q002",
+      "question": "Which triple represents the relationship between the material 'poly(methyl methacrylate)' and its 'Glass transition temperature (Tg)' as mentioned in the context of CO2 sorption data?",
+      "expected_answer": "(poly(methyl methacrylate), hasProperty, Glass transition temperature (Tg))",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_026",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_ONTO_Q003",
+      "question": "According to the text, what specific attributes constitute 'pore morphology' that influence final foam properties?",
+      "expected_answer": "The attributes are: size distribution, shape, number density, interconnectivity, the shape of the strut among the pores, and the shape of the wall between two pores.",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_027",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_ONTO_Q004",
+      "question": "Which measurement method is identified as being used for the determination of the density of polymer/CO2 single-phase solutions?",
+      "expected_answer": "The gravimetric method.",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_028",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_ONTO_Q005",
+      "question": "How should the relationship between 'Polymeric foams' and their application in 'Thermal insulation' be represented as a KG triple?",
+      "expected_answer": "(Polymeric foams, appliedIn, Thermal insulation)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This is an ONTOLOGY_TRIPLE archetype, which takes priority.",
+      "merged_from": [
+        {
+          "id": "Di Maio2018_CHAR_Q004",
+          "paper_id": "Di Maio2018",
+          "persona_code": "CHAR",
+          "question": "What is the relationship between the initial CO2 concentration and the rate of homogeneous nucleation (N_hom) as described in the classical nucleation theory section?",
+          "expected_answer": "The rate of homogeneous nucleation is proportional to the concentration of gas molecules (C_o), expressed as N_hom ~ C_o exp[-ΔG*_hom/k_BT].",
+          "reason_discarded": "This is an ONTOLOGY_TRIPLE archetype, which takes priority."
+        }
+      ],
+      "merge_reasoning": "Both questions relate to the relationship between materials and their properties."
+    },
+    {
+      "id": "Di Maio2018_DEDUP_029",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_ONTO_GAP001",
+      "question": "Which triple represents the relationship between the process 'extrusion foaming' and the resulting material property 'expanded melt processing window' described in the text?",
+      "expected_answer": "(extrusion foaming, resultsIn, expanded melt processing window)",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ONTOLOGY_TRIPLE",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_030",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_ONTO_GAP002",
+      "question": "Which specific polymers are cited in the text as having frequently reported Tg and Tm data as a function of temperature and pressure in the presence of CO2?",
+      "expected_answer": "The polymers are: poly(methyl methacrylate), polystyrene, poly(ε-caprolactone), and poly(lactic acid).",
+      "persona_code": "ONTO",
+      "persona_full": "Ontology Engineer",
+      "archetype": "ENUMERATION",
+      "bloom_level": "synthesis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_031",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_STU_Q001",
+      "question": "How does the presence of dissolved carbon dioxide affect the glass transition temperature (Tg) and melting temperature (Tm) of polymers?",
+      "expected_answer": "The presence of dissolved carbon dioxide lowers (depresses) both the glass transition temperature (Tg) and the melting temperature (Tm) of the polymer.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_032",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_STU_Q002",
+      "question": "Why is the use of nucleating agents considered vital in the industrial practice of thermoplastic foaming?",
+      "expected_answer": "Nucleating agents are used to control the final foam morphology by providing heterogeneities that reduce the free energy threshold required to form nuclei.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question is from the STU persona with a clear Bloom level.",
+      "merged_from": [
+        {
+          "id": "Di Maio2018_CHAR_Q004",
+          "paper_id": "Di Maio2018",
+          "persona_code": "CHAR",
+          "question": "What is the relationship between the initial CO2 concentration and the rate of homogeneous nucleation (N_hom) as described in the classical nucleation theory section?",
+          "expected_answer": "The rate of homogeneous nucleation is proportional to the concentration of gas molecules (C_o), expressed as N_hom ~ C_o exp[-ΔG*_hom/k_BT].",
+          "reason_discarded": "This question is from the STU persona with a clear Bloom level."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss nucleation agents and their role in foaming."
+    },
+    {
+      "id": "Di Maio2018_DEDUP_033",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_STU_Q003",
+      "question": "Which instrument is commonly employed to assess CO2 sorption in polymers?",
+      "expected_answer": "The Rubotherm magnetic suspension balance is a versatile instrument commonly employed to assess CO2 sorption.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "METHOD_OF_MEASUREMENT",
+      "bloom_level": "recall",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_034",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_STU_Q004",
+      "question": "Which three foaming operations are identified as the most common methods for producing polymeric foams?",
+      "expected_answer": "The three most common foaming operations are batch foaming, extrusion foaming, and injection molding foaming.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_035",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_STU_Q005",
+      "question": "What are the detrimental consequences of cell coalescence and foam collapse on the final foam properties?",
+      "expected_answer": "Cell coalescence and foam collapse lead to morphology coarsening and densification, which are generally detrimental to the foam properties and represent major causes of foaming failure.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_036",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_STU_GAP001",
+      "question": "Why is injection molding foaming considered a practical method for fabricating polymer foams?",
+      "expected_answer": "It is regarded as a cost-effective and practical method for fabricating foams with complex, three-dimensional geometries.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "recall",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_037",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_STU_GAP002",
+      "question": "Which specific polymers are frequently cited in the literature as having their glass transition and melting temperatures measured as a function of CO2 pressure?",
+      "expected_answer": "Poly(methyl methacrylate), polystyrene, and polyesters such as poly(ε-caprolactone) and poly(lactic acid) are frequently reported.",
+      "persona_code": "STU",
+      "persona_full": "Student",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "recall",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_038",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PHD_Q001",
+      "question": "What is identified as the primary current limitation in the modeling of the polymer foaming process?",
+      "expected_answer": "The main actual limitation is the current lack of a full understanding of bubble nucleation, as nucleation drives the whole foam evolution.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Modeling",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_039",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PHD_Q002",
+      "question": "How does the plasticization of semi-crystalline polymers with carbon dioxide affect their effective processing window for foaming?",
+      "expected_answer": "Plasticization with carbon dioxide expands the effective processing window, which is the temperature range between the glass transition temperature (Tg) and the crystallization or melting temperature (Tc/Tm).",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_040",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PHD_Q003",
+      "question": "How does the effect of carbon dioxide sorption on the glass transition temperature differ between amorphous polymers and semi-crystalline polymers?",
+      "expected_answer": "In amorphous polymers, carbon dioxide sorption simply lowers the glass transition temperature (Tg), whereas in semi-crystalline polymers, it expands the effective processing window between Tg and Tc/Tm.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "COMPARATIVE",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "is_singleton": false,
+      "why_kept": "This question is from the PHD persona with a higher Bloom level.",
+      "merged_from": [
+        {
+          "id": "Di Maio2018_CHAR_Q004",
+          "paper_id": "Di Maio2018",
+          "persona_code": "CHAR",
+          "question": "What is the relationship between the initial CO2 concentration and the rate of homogeneous nucleation (N_hom) as described in the classical nucleation theory section?",
+          "expected_answer": "The rate of homogeneous nucleation is proportional to the concentration of gas molecules (C_o), expressed as N_hom ~ C_o exp[-ΔG*_hom/k_BT].",
+          "reason_discarded": "This question is from the PHD persona with a higher Bloom level."
+        }
+      ],
+      "merge_reasoning": "Both questions discuss the effect of CO2 on different polymer types."
+    },
+    {
+      "id": "Di Maio2018_DEDUP_041",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PHD_Q004",
+      "question": "Why is the use of crosslinking or blending with hard domains proposed for the foaming of rubbery polymers with Tg below room temperature?",
+      "expected_answer": "These strategies are used to bring rigidity and dimensional stability to the polymer matrix and the resulting foam, preventing the coalescence of growing bubbles and hindering post-expansion or post-foaming shrinkage.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "MOTIVATION",
+      "bloom_level": "evaluation",
+      "source_section": "Foaming of polymers with low glass transition temperatures",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_042",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PHD_Q005",
+      "question": "What specific rheological property of the polymer + CO2 system is currently lacking both an instrumental technique and a theoretical model for assessment?",
+      "expected_answer": "The biaxial extensional viscoelasticity of the polymer + CO2 system at large deformations in the non-linear regime at high pressures.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Modeling",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_043",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PHD_GAP001",
+      "question": "What specific knowledge gaps does the paper identify regarding the use of nanometric fillers as nucleating agents in polymer foaming?",
+      "expected_answer": "The paper identifies that a profound understanding is missing regarding the nucleating mechanisms, the interaction among particles and the polymer in the presence of the blowing agent, concurrent nucleation phenomena of polymer crystals or other phases, and how particle shape, size, and surface treatments affect nucleation. Additionally, there is disagreement on the efficiency of nanofillers, with the number of nucleated cells often orders of magnitude less than expected due to dispersion problems and specific polymer/nanoparticle interactions.",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "GAP_OR_LIMITATION",
+      "bloom_level": "evaluation",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    },
+    {
+      "id": "Di Maio2018_DEDUP_044",
+      "paper_id": "Di Maio2018",
+      "source_id": "Di Maio2018_PHD_GAP002",
+      "question": "How does the use of carbon dioxide as a plasticizing agent affect the processing window for foaming in semi-crystalline polymers?",
+      "expected_answer": "Plasticization with carbon dioxide expands the effective processing window, which is the temperature range between the glass transition temperature (Tg) and the crystallization or melting temperature (Tc/Tm).",
+      "persona_code": "PHD",
+      "persona_full": "Doctoral Researcher / PhD Student",
+      "archetype": "CAUSAL",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "is_singleton": true,
+      "why_kept": "Only question of this type; no merge",
+      "merged_from": [],
+      "merge_reasoning": null
+    }
+  ],
+  "discarded_questions": [
+    {
+      "id": "Di Maio2018_CHAR_Q004",
+      "paper_id": "Di Maio2018",
+      "question": "What is the relationship between the initial CO2 concentration and the rate of homogeneous nucleation (N_hom) as described in the classical nucleation theory section?",
+      "expected_answer": "The rate of homogeneous nucleation is proportional to the concentration of gas molecules (C_o), expressed as N_hom ~ C_o exp[-ΔG*_hom/k_BT].",
+      "persona_code": "CHAR",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "absorbed_into": "Di Maio2018_DEDUP_040"
+    },
+    {
+      "id": "Di Maio2018_CHAR_GAP001",
+      "paper_id": "Di Maio2018",
+      "question": "Which specific polymer is mentioned as a CO2-philic block in a di-block copolymer with polyethylene that can lead to open cell structures when the domains are aligned lamellar?",
+      "expected_answer": "Poly(ethylene oxide) (PEO).",
+      "persona_code": "CHAR",
+      "archetype": "ENTITY_LOOKUP",
+      "bloom_level": "comprehension",
+      "source_section": "Body",
+      "absorbed_into": "Di Maio2018_DEDUP_004"
+    },
+    {
+      "id": "Di Maio2018_PROC_Q001",
+      "paper_id": "Di Maio2018",
+      "question": "How does the exposure of polymers such as polystyrene to dissolved carbon dioxide affect their glass transition temperature (Tg) and the effective processing window?",
+      "expected_answer": "The presence of dissolved carbon dioxide lowers the glass transition temperature (Tg) and the crystallization/melting temperature (Tc/Tm), thereby expanding the effective processing window for foaming.",
+      "persona_code": "PROC",
+      "archetype": "CAUSAL",
+      "bloom_level": "application",
+      "source_section": "Body",
+      "absorbed_into": "Di Maio2018_DEDUP_004"
+    },
+    {
+      "id": "Di Maio2018_COMP_GAP002",
+      "paper_id": "Di Maio2018",
+      "question": "Which experimental techniques are identified in the text for determining the glass transition temperature (Tg) and melting temperature (Tm) of polymers under CO2 pressure?",
+      "expected_answer": "The techniques identified are determinations using a high-pressure differential scanning calorimeter (DSC), assessments of changes in transmitted light intensity, monitoring of mechanical properties, and monitoring frequency shift using quartz crystal resonators (QCR).",
+      "persona_code": "COMP",
+      "archetype": "ENUMERATION",
+      "bloom_level": "analysis",
+      "source_section": "Body",
+      "absorbed_into": "Di Maio2018_DEDUP_011"
+    }
+  ]
+}
