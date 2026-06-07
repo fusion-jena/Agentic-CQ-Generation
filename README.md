@@ -7,11 +7,7 @@ literature for copolymer knowledge graph and ontology development.
 Applied to 14 expert-curated papers on supercritical-CO₂ polymer foaming,
 the pipeline produced 682 CQs with a mean question faithfulness of **0.98**
 and **zero off-paper questions**, consolidated into **120 domain-level CQs**
-— a 77.6% reduction.
-
-> **Paper:** *An Agentic Pipeline for Grounded Competency Question Generation
-> from Scientific Literature* — SEMANTiCS 2026 (Poster)
-> [`https://github.com/[your-repo]/copolymer-cq-pipeline`](https://github.com/[your-repo]/copolymer-cq-pipeline)
+- a 77.6% reduction.
 
 ---
 
@@ -34,7 +30,7 @@ and **zero off-paper questions**, consolidated into **120 domain-level CQs**
 
 The pipeline operates in two phases.
 
-### Phase A — Per-paper CQ generation (v2.1 LangGraph)
+### Phase A - Per-paper CQ generation (v2.1 LangGraph)
 
 Each paper is processed independently through a LangGraph state machine
 with the following stages:
@@ -63,7 +59,7 @@ All per-paper CQ sets are pooled and narrowed in four sequential steps:
 | **Step 1 · Dedup** | `cq_dedup_agent.py` | Merges near-equivalent questions *within* each paper. Merges only within the same archetype (a causal question is never merged into a definitional one). Prefers the version at the higher Bloom level. Every removed question is logged with a pointer to the question that absorbed it |
 | **Step 2 · Generalise** | `cq_generalizer_agent.py` | Groups functionally equivalent questions *across* papers and replaces paper-specific entity names with their domain role — for example, a question about a specific amorphous polymer is generalised to refer to "amorphous polymer" so it applies to the whole domain |
 | **Step 3 · Validate (RAG)** | `cq_validator_agent.py` | Checks each generalised CQ against the existing FAISS indexes (no re-indexing). Retrieves the most relevant passages, generates a candidate answer, judges fidelity, and assigns a quality flag: `STRONG`, `PARTIAL`, `OVER_GENERALISED`, `PAPER_SPECIFIC`, or `UNDER_ANSWERED` |
-| **Step 4 · Consolidate** | `cq_consolidation_agent.py` | Two-stage merge. **Stage A** merges questions sharing the same triple signature (subject-class, predicate, object-class) within each archetype, replacing differing fillers with typed variables. **Stage B** merges across archetypes wherever the same signature still appears. Every consolidated CQ carries a `triple_pattern`, `sparql_sketch`, typed `variables`, and `merged_from` provenance. A semantic audit flags any unaccounted or hallucinated identifiers |
+| **Step 4 · Consolidate** | `cq_consolidation_agent.py` | Two-stage merge. **Stage 1** merges questions sharing the same triple signature (subject-class, predicate, object-class) within each archetype, replacing differing fillers with typed variables. **Stage 2** merges across archetypes wherever the same signature still appears. Every consolidated CQ carries a `triple_pattern`, `sparql_sketch`, typed `variables`, and `merged_from` provenance. A semantic audit flags any unaccounted or hallucinated identifiers |
 
 **Output:** `data/papers/v2/consolidated/cross_paper_consolidated.json`
 
@@ -91,7 +87,7 @@ self-preference effects in LLM-based evaluation.
 ## Repository structure
 
 ```
-copolymer-cq-pipeline/
+Agentic-CQ-Generation/
 │
 ├── main_paper_persona_cq_v2.py   # Phase A entry point
 ├── main_cq_dedup.py              # Phase B Step 1
@@ -165,8 +161,8 @@ copolymer-cq-pipeline/
 
 ```bash
 # 1. Clone
-git clone https://github.com/[your-repo]/copolymer-cq-pipeline.git
-cd copolymer-cq-pipeline
+git clone https://github.com/fusion-jena/Agentic-CQ-Generation.git
+cd Agentic-CQ-Generation
 
 # 2. Install dependencies
 uv sync
@@ -283,17 +279,6 @@ score = mean over questions of {1.0, 0.5, 0.0}
 overall = weighted_mean(coverage, faithfulness, diversity, triplifiability)
         = 0.38×coverage + 0.44×faithfulness + 0.12×diversity + 0.06×triplifiability
 ```
-
-### Diagnostics (recorded but not scored)
-
-Two additional signals are computed and stored in each evaluation file
-but do **not** contribute to the composite:
-
-- **Specificity** — presence of numeric values, units, and concept names
-  in question text. Moved to diagnostics because it systematically
-  penalises valid non-numeric archetypes.
-- **Answer verifiability** — cosine similarity between expected answer
-  text and retrieved passages. A sanity check on answer quality.
 
 ### Corpus results (14-paper run)
 
