@@ -21,8 +21,7 @@ and **zero off-paper questions**, consolidated into **120 domain-level CQs**
 6. [Reproducing the results](#reproducing-the-results)
 7. [Data](#data)
 8. [Reproducibility](#reproducibility)
-9. [Citation](#citation)
-10. [License](#license)
+9. [License](#license)
 
 ---
 
@@ -50,7 +49,7 @@ with the following stages:
 
 ---
 
-### Phase B — Cross-paper CQ narrowing
+### Phase B - Cross-paper CQ narrowing
 
 All per-paper CQ sets are pooled and narrowed in four sequential steps:
 
@@ -209,14 +208,14 @@ python main_paper_persona_cq_v2.py Jacobs2007
 
 ## Evaluation metrics
 
-Phase A closes with a **reference-free evaluation** — the deliverable is the
+Phase A closes with a **reference-free evaluation** - the deliverable is the
 set of questions, not their answers, so the primary metric is *question*
 faithfulness rather than answer groundedness.
 
 Four metric families form the composite score
 (weights shown in parentheses):
 
-### 1. Question Faithfulness (weight: 0.44) — primary metric
+### 1. Question Faithfulness (weight: 0.44) - primary metric
 
 Measures whether the question text aligns semantically with content
 actually present in the paper.
@@ -356,4 +355,4 @@ No proprietary API access is required.
 
 Code: [MIT License](LICENSE)
 Data outputs (CQs, evaluation): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-Raw PDFs: not redistributed — obtain via publisher DOIs.
+Raw PDFs: not redistributed - obtain via publisher DOIs.
