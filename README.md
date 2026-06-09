@@ -353,6 +353,6 @@ No proprietary API access is required.
 
 ## License
 
-Code: [MIT License](LICENSE)
+Code: [Apache License 2.0](LICENSE)
 Data outputs (CQs, evaluation): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-Raw PDFs: not redistributed - obtain via publisher DOIs.
+Raw PDFs: not redistributed, obtain via publisher DOIs.
