@@ -38,26 +38,26 @@ with the following stages:
 |---|---|---|
 | **Chunk** | `paper_chunker.py` | Splits paper text into overlapping chunks (~3,500 chars, 200-char overlap) using a recursive character splitter that prefers natural boundaries (section → paragraph → sentence) |
 | **Index** | `paper_indexer.py` | Embeds each chunk with BGE-small and stores in a per-paper FAISS index for later retrieval |
-| **Iterative extraction** | `paper_iterative_extractor.py` | Reads chunks one at a time while maintaining a bounded **rolling knowledge state** — a structured, evidence-bearing summary of what the paper says so far. Each chunk's output is merged into four categories: *concepts*, *relations*, *properties*, *findings*. Every item carries a verbatim evidence sentence, surrounding context, and a calibrated confidence (high / medium / low). Category caps (80 / 60 / 60 / 40) keep the state compact regardless of paper length |
-| **Retrieve** | `paper_retriever.py` | Queries the FAISS index with the top-K most-mentioned concepts to fetch the most relevant passages — these ground the generator |
+| **Iterative extraction** | `paper_iterative_extractor.py` | Reads chunks one at a time while maintaining a bounded **rolling knowledge state** - a structured, evidence-bearing summary of what the paper says so far. Each chunk's output is merged into four categories: *concepts*, *relations*, *properties*, *findings*. Every item carries a verbatim evidence sentence, surrounding context, and a calibrated confidence (high / medium / low). Category caps (80 / 60 / 60 / 40) keep the state compact regardless of paper length |
+| **Retrieve** | `paper_retriever.py` | Queries the FAISS index with the top-K most-mentioned concepts to fetch the most relevant passages - these ground the generator |
 | **Generate** | `paper_persona_cq_generator_v2.py` | For each of **seven domain personas** (Synthesis Chemist, Characterisation Scientist, Processing Engineer, Computational Scientist, Ontology Engineer, Student, PhD Researcher), generates persona-conditioned CQs from the knowledge state plus retrieved passages. A coverage-gap pass generates additional questions for any extracted concepts left untouched by the first round |
 | **Validate** | `paper_persona_cq_validator_v2.py` | Two-layer check: (1) cheap rule checks (persona coverage, concept-usage hallucination guard, near-duplicate detection); (2) per-question LLM judge scoring answerability and specificity against semantically selected evidence |
-| **Refine** | `paper_persona_cq_refiner_v2.py` | Failing/borderline questions are passed to a refiner that receives the judge's diagnosis and revises, keeps, or flags each question as unrepairable — nothing is silently dropped |
+| **Refine** | `paper_persona_cq_refiner_v2.py` | Failing/borderline questions are passed to a refiner that receives the judge's diagnosis and revises, keeps, or flags each question as unrepairable - nothing is silently dropped |
 | **Evaluate** | `cq_evaluator.py` | Reference-free quality evaluation (see [Evaluation metrics](#evaluation-metrics)) |
 
-**Output:** `data/papers/v2/cq_output/{paper_id}_cq_v2.json` — one file per paper.
+**Output:** `data/papers/v2/cq_output/{paper_id}_cq_v2.json` - one file per paper.
 
 <details>
-<summary><strong>Validator pass threshold — why 0.75?</strong></summary>
+<summary><strong>Validator pass threshold - why 0.75?</strong></summary>
 <br>
 
 The LLM judge scores each question on two independent dimensions, each on a three-point scale:
 
-- **Answerability** — can the question be answered using only the retrieved evidence passages?
+- **Answerability** - can the question be answered using only the retrieved evidence passages?
   - `1.0` the answer is explicitly stated in the passages
   - `0.5` the answer can be derived with a short inference
   - `0.0` the passages do not contain the answer
-- **Specificity** — is the question concrete enough to be useful for ontology construction?
+- **Specificity** - is the question concrete enough to be useful for ontology construction?
   - `1.0` names a specific material, method, property, or value
   - `0.5` somewhat specific but uses generic terms
   - `0.0` vague catch-all question with no anchor
@@ -76,7 +76,7 @@ The per-question score is the mean of the two dimensions. Because each dimension
 | 0.0 | 0.5 | 0.25 | fail - sent to refiner |
 | 0.0 | 0.0 | 0.00 | fail - sent to refiner |
 
-**0.75 is the natural breakpoint**, not an arbitrary cut-off. It is the lowest score achievable when at least one dimension is fully satisfied. A question scoring 0.75 is perfect on one dimension and partial on the other — good enough to be useful without rewriting. A question scoring 0.50 has a real problem on at least one dimension and genuinely needs the refiner.
+**0.75 is the natural breakpoint**, not an arbitrary cut-off. It is the lowest score achievable when at least one dimension is fully satisfied. A question scoring 0.75 is perfect on one dimension and partial on the other - good enough to be useful without rewriting. A question scoring 0.50 has a real problem on at least one dimension and genuinely needs the refiner.
 
 Questions scoring below 0.75 are sent to the refiner with the judge's exact diagnosis. The refiner can revise, keep, or flag each question as unrepairable. Nothing is silently dropped.
 
@@ -93,7 +93,7 @@ All per-paper CQ sets are pooled and narrowed in four sequential steps:
 | Step | Agent | What it does |
 |---|---|---|
 | **Step 1 · Dedup** | `cq_dedup_agent.py` | Merges near-equivalent questions *within* each paper. Merges only within the same archetype (a causal question is never merged into a definitional one). Prefers the version at the higher Bloom level. Every removed question is logged with a pointer to the question that absorbed it |
-| **Step 2 · Generalise** | `cq_generalizer_agent.py` | Groups functionally equivalent questions *across* papers and replaces paper-specific entity names with their domain role — for example, a question about a specific amorphous polymer is generalised to refer to "amorphous polymer" so it applies to the whole domain |
+| **Step 2 · Generalise** | `cq_generalizer_agent.py` | Groups functionally equivalent questions *across* papers and replaces paper-specific entity names with their domain role - for example, a question about a specific amorphous polymer is generalised to refer to "amorphous polymer" so it applies to the whole domain |
 | **Step 3 · Validate (RAG)** | `cq_validator_agent.py` | Checks each generalised CQ against the existing FAISS indexes (no re-indexing). Retrieves the most relevant passages, generates a candidate answer, judges fidelity, and assigns a quality flag: `STRONG`, `PARTIAL`, `OVER_GENERALISED`, `PAPER_SPECIFIC`, or `UNDER_ANSWERED` |
 | **Step 4 · Consolidate** | `cq_consolidation_agent.py` | Two-stage merge. **Stage 1** merges questions sharing the same triple signature (subject-class, predicate, object-class) within each archetype, replacing differing fillers with typed variables. **Stage 2** merges across archetypes wherever the same signature still appears. Every consolidated CQ carries a `triple_pattern`, `sparql_sketch`, typed `variables`, and `merged_from` provenance. A semantic audit flags any unaccounted or hallucinated identifiers |
 
@@ -219,19 +219,19 @@ Run the five stages in order. Each stage skips already-processed outputs
 by default — add `--overwrite` to re-run.
 
 ```bash
-# Phase A — per-paper CQ generation
+# Phase A - per-paper CQ generation
 python main_paper_persona_cq_v2.py
 
-# Phase B — Step 1: intra-paper deduplication
+# Phase B - Step 1: intra-paper deduplication
 python main_cq_dedup.py
 
-# Phase B — Step 2: cross-paper generalisation
+# Phase B - Step 2: cross-paper generalisation
 python main_cq_generalize.py
 
-# Phase B — Step 3: RAG-based validation
+# Phase B - Step 3: RAG-based validation
 python main_cq_validate.py
 
-# Phase B — Step 4: consolidation + ontology schema
+# Phase B - Step 4: consolidation + ontology schema
 python main_cq_consolidate.py
 ```
 
@@ -289,7 +289,7 @@ question set touches only part of what the pipeline extracted from the paper.
 Measures how semantically distinct the questions are from one another.
 
 ```
-score = 1 − mean_pairwise_cosine(all question embeddings)
+score = 1 - mean_pairwise_cosine(all question embeddings)
 ```
 
 A pair of questions with cosine ≥ 0.92 is counted as a near-duplicate.
@@ -298,7 +298,7 @@ Lower diversity indicates redundant questions that should be merged or removed.
 ### 4. Triplifiability (weight: 0.06)
 
 A heuristic measuring whether each question asks about a
-subject–predicate–object relationship between extracted entities,
+subject-predicate-object relationship between extracted entities,
 making it directly usable for ontology construction.
 
 A question scores 1.0 if both (a) its phrasing matches a triple pattern
@@ -320,13 +320,11 @@ overall = weighted_mean(coverage, faithfulness, diversity, triplifiability)
 
 | Metric | Mean | SD | Range |
 |---|---|---|---|
-| Overall score | 0.69 | 0.03 | 0.62–0.76 |
-| **Question faithfulness** | **0.98** | **0.01** | **0.96–1.00** |
-| Coverage | 0.48 | 0.08 | 0.32–0.65 |
-| Diversity | 0.29 | 0.02 | 0.25–0.32 |
-| Triplifiability | 0.68 | 0.04 | 0.63–0.76 |
-| Off-paper questions | **0** | — | — |
-| Mean Q→evidence cosine | 0.81 | — | — |
+| Overall score | 0.69 | 0.03 | 0.62-0.76 |
+| **Question faithfulness** | **0.98** | **0.01** | **0.96-1.00** |
+| Coverage | 0.48 | 0.08 | 0.32-0.65 |
+| Diversity | 0.29 | 0.02 | 0.25-0.32 |
+| Triplifiability | 0.68 | 0.04 | 0.63-0.76 |
 
 ---
 
