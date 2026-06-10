@@ -1,5 +1,5 @@
 [project]
-name = "copolymer-cq-pipeline"
+name = "Agentic-cq-generation"
 version = "1.0.0"
 description = "Agentic pipeline for grounded competency question generation from scientific literature"
 readme = "README.md"
