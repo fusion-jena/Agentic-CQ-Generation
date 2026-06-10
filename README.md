@@ -216,7 +216,7 @@ uv sync
 ## Running the pipeline
 
 Run the five stages in order. Each stage skips already-processed outputs
-by default — add `--overwrite` to re-run.
+by default - add `--overwrite` to re-run.
 
 ```bash
 # Phase A - per-paper CQ generation
