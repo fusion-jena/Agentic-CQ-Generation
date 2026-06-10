@@ -47,6 +47,43 @@ with the following stages:
 
 **Output:** `data/papers/v2/cq_output/{paper_id}_cq_v2.json` — one file per paper.
 
+<details>
+<summary><strong>Validator pass threshold — why 0.75?</strong></summary>
+<br>
+
+The LLM judge scores each question on two independent dimensions, each on a three-point scale:
+
+- **Answerability** — can the question be answered using only the retrieved evidence passages?
+  - `1.0` the answer is explicitly stated in the passages
+  - `0.5` the answer can be derived with a short inference
+  - `0.0` the passages do not contain the answer
+- **Specificity** — is the question concrete enough to be useful for ontology construction?
+  - `1.0` names a specific material, method, property, or value
+  - `0.5` somewhat specific but uses generic terms
+  - `0.0` vague catch-all question with no anchor
+
+The per-question score is the mean of the two dimensions. Because each dimension can only be 0.0, 0.5, or 1.0, only a small number of combined scores are possible:
+
+| Answerability | Specificity | Score | Verdict |
+|---|---|---|---|
+| 1.0 | 1.0 | 1.00 | pass |
+| 1.0 | 0.5 | **0.75** | pass |
+| 0.5 | 1.0 | **0.75** | pass |
+| 0.5 | 0.5 | 0.50 | borderline - sent to refiner |
+| 1.0 | 0.0 | 0.50 | borderline - sent to refiner |
+| 0.0 | 1.0 | 0.50 | borderline - sent to refiner |
+| 0.5 | 0.0 | 0.25 | fail - sent to refiner |
+| 0.0 | 0.5 | 0.25 | fail - sent to refiner |
+| 0.0 | 0.0 | 0.00 | fail - sent to refiner |
+
+**0.75 is the natural breakpoint**, not an arbitrary cut-off. It is the lowest score achievable when at least one dimension is fully satisfied. A question scoring 0.75 is perfect on one dimension and partial on the other — good enough to be useful without rewriting. A question scoring 0.50 has a real problem on at least one dimension and genuinely needs the refiner.
+
+Questions scoring below 0.75 are sent to the refiner with the judge's exact diagnosis. The refiner can revise, keep, or flag each question as unrepairable. Nothing is silently dropped.
+
+> Note: this threshold governs individual question survival during generation. It is separate from the corpus-level evaluation metrics (faithfulness, coverage, diversity, triplifiability) which measure the quality of the final question set after all questions have passed through the validator and refiner.
+
+</details>
+
 ---
 
 ### Phase B - Cross-paper CQ narrowing
