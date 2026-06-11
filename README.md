@@ -1,4 +1,4 @@
-# Copolymer CQ Pipeline
+# Agentic-CQ-Generation Pipeline 
 
 An agentic, retrieval-augmented pipeline that automatically generates,
 validates, and consolidates **competency questions (CQs)** from scientific
