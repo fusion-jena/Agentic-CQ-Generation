@@ -386,6 +386,12 @@ HPC infrastructure (Ollama on the Draco endpoint, University of Jena).
 Exact model tags are specified in `config/models.json`.
 No proprietary API access is required.
 
+## Publication
+
+This work has been submitted as a poster paper to **[SEMANTiCS 2026](https://2026-eu.semantics.cc/)** - the 22nd International Conference on Semantic Systems.
+
+> Citation details will be added upon acceptance.
+
 ## License
 
 Code: [Apache License 2.0](LICENSE)
