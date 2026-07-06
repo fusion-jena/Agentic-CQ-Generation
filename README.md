@@ -354,7 +354,7 @@ included at `data/papers/v2/evaluation_summary.json`.
 
 The 14 input papers cover supercritical-CO₂ foaming of amorphous polymers
 and blends. The corpus was curated by a domain expert within the
-[COIN project](https://www.coin-project.eu) (group C1).
+[COIN project]([https://www.coin-project.eu](https://www.coin.uni-jena.de/en/253/project-c1)) (group C1).
 
 **Raw PDFs are not committed** to this repository due to publisher copyright.
 Obtain them via DOI through institutional library access.
