@@ -7,7 +7,7 @@ literature for copolymer knowledge graph and ontology development.
 Applied to 14 expert-curated papers on supercritical-CO₂ polymer foaming,
 the pipeline produced 682 CQs with a mean question faithfulness of **0.98**
 and **zero off-paper questions**, consolidated into **120 domain-level CQs**
-- a 77.6% reduction.
+- a 82.4% reduction.
 
 ---
 
@@ -344,8 +344,8 @@ included at `data/papers/v2/evaluation_summary.json`.
 **Narrowing funnel (corpus-wide):**
 
 ```
-536 per-paper CQs  →  490 generalised CQs  →  120 consolidated domain CQs
-                                                    (77.6% reduction, 11 LLM calls)
+682 generated CQs  →  536 deduplicated  →  490 generalised  →  120 consolidated domain CQs
+                                                                  (82.4% reduction, 11 LLM calls)
 ```
 
 ---
